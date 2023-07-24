@@ -14,6 +14,8 @@ SHIFT_BSS DisplayContext D_80164000[2];
 s8 gGameStepDelayAmount = 1;
 s8 gGameStepDelayCount = 5;
 
+void mod_main_func(void);
+
 GameStatus gGameStatus = {
     .currentButtons = {0},
     .pressedButtons = {0},
@@ -234,6 +236,8 @@ void gfx_draw_frame(void) {
                 break;
         }
     }
+
+    mod_main_func();
 
     ASSERT((s32)(((u32)(gMainGfxPos - gDisplayContext->mainGfx) << 3) >> 3) < ARRAY_COUNT(gDisplayContext->mainGfx));
 
