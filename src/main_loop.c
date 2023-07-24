@@ -14,6 +14,8 @@ SHIFT_BSS DisplayContext D_80164000[2];
 s8 gGameStepDelayAmount = 1;
 s8 gGameStepDelayCount = 5;
 
+void mod_main_func(void);
+
 GameStatus gGameStatus = {
     .currentButtons = {0},
     .pressedButtons = {0},
@@ -178,6 +180,8 @@ void gfx_draw_frame(void) {
         gCurrentDisplayContextIndex = gCurrentDisplayContextIndex ^ 1;
         return;
     }
+        
+    
 
     gSPMatrix(gMainGfxPos++, &MasterIdentityMtx, G_MTX_NOPUSH | G_MTX_LOAD | G_MTX_MODELVIEW);
 
@@ -216,7 +220,8 @@ void gfx_draw_frame(void) {
     }
 
     render_curtains();
-
+    
+    
     if (gOverrideFlags & GLOBAL_OVERRIDES_MESSAGES_IN_FRONT_OF_CURTAINS) {
         render_messages();
     }
@@ -234,6 +239,8 @@ void gfx_draw_frame(void) {
                 break;
         }
     }
+
+    mod_main_func();
 
     ASSERT((s32)(((u32)(gMainGfxPos - gDisplayContext->mainGfx) << 3) >> 3) < ARRAY_COUNT(gDisplayContext->mainGfx));
 
