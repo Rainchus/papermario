@@ -26,9 +26,9 @@ BSS f32 D_8029EFB0;
 BSS f32 D_8029EFB4;
 BSS f32 D_8029EFB8;
 BSS s32 D_8029EFBC;
-BSS s32 D_8029EFC0[10];
-BSS s32 D_8029EFE8[10];
-BSS s32 D_8029F010[10];
+BSS s32 BtlStarPointTensHIDs[10];
+BSS s32 BtlStarPointShinesHIDs[10];
+BSS s32 BtlStarPointOnesHIDs[10];
 BSS PAL_BIN gTattleBgPalette[0x100];
 
 extern HudScript HES_HPDigit0;
@@ -112,7 +112,7 @@ void get_dpad_input_radial(f32* angle, f32* magnitude) {
     f32 maxMagnitude = 60.0f;
     f32 stickX = battleStatus->stickX;
     f32 stickY = battleStatus->stickY;
-    u16 currentButtonsDown = battleStatus->currentButtonsDown;
+    u16 currentButtonsDown = battleStatus->curButtonsDown;
     f32 mag;
 
     if (currentButtonsDown & (BUTTON_D_UP | BUTTON_D_DOWN | BUTTON_D_LEFT | BUTTON_D_RIGHT)) {
@@ -204,20 +204,20 @@ void initialize_battle(void) {
     D_8029EFBC = hud_element_create(&HES_HPBar);
     hud_element_set_flags(D_8029EFBC, HUD_ELEMENT_FLAG_80);
 
-    for (i = 0; i < ARRAY_COUNT(D_8029EFC0); i++) {
-        hudElemID = D_8029EFC0[i] = hud_element_create(&HES_Item_StarPoint);
+    for (i = 0; i < ARRAY_COUNT(BtlStarPointTensHIDs); i++) {
+        hudElemID = BtlStarPointTensHIDs[i] = hud_element_create(&HES_Item_StarPoint);
         hud_element_set_flags(hudElemID, HUD_ELEMENT_FLAG_80 | HUD_ELEMENT_FLAG_DISABLED);
         hud_element_set_render_depth(hudElemID, 20);
     }
 
-    for (i = 0; i < ARRAY_COUNT(D_8029EFE8); i++) {
-        hudElemID = D_8029EFE8[i] = hud_element_create(&HES_StatusSPShine);
+    for (i = 0; i < ARRAY_COUNT(BtlStarPointShinesHIDs); i++) {
+        hudElemID = BtlStarPointShinesHIDs[i] = hud_element_create(&HES_StatusSPShine);
         hud_element_set_flags(hudElemID, HUD_ELEMENT_FLAG_80 | HUD_ELEMENT_FLAG_DISABLED);
         hud_element_set_render_depth(hudElemID, 20);
     }
 
-    for (i = 0; i < ARRAY_COUNT(D_8029F010); i++) {
-        hudElemID = D_8029F010[i] = hud_element_create(&HES_Item_SmallStarPoint);
+    for (i = 0; i < ARRAY_COUNT(BtlStarPointOnesHIDs); i++) {
+        hudElemID = BtlStarPointOnesHIDs[i] = hud_element_create(&HES_Item_SmallStarPoint);
         hud_element_set_flags(hudElemID, HUD_ELEMENT_FLAG_80 | HUD_ELEMENT_FLAG_DISABLED);
         hud_element_set_render_depth(hudElemID, 20);
     }
@@ -229,9 +229,9 @@ void initialize_battle(void) {
         playerData->battlesCount++;
     }
 
-    bSavedPartner = playerData->currentPartner;
+    bSavedPartner = playerData->curPartner;
     if (gBattleStatus.flags2 & BS_FLAGS2_PEACH_BATTLE) {
-        playerData->currentPartner = PARTNER_TWINK;
+        playerData->curPartner = PARTNER_TWINK;
     }
 }
 
@@ -257,17 +257,17 @@ void btl_update(void) {
         if ((battleStatus->flags1 & BS_FLAGS1_PARTNER_ACTING) && gGameStatusPtr->multiplayerEnabled != 0) {
             s32 inputBitmask = battleStatus->inputBitmask;
 
-            battleStatus->currentButtonsDown = gGameStatusPtr->currentButtons[1] & inputBitmask;
-            battleStatus->currentButtonsPressed = gGameStatusPtr->pressedButtons[1] & inputBitmask;
-            battleStatus->currentButtonsHeld = gGameStatusPtr->heldButtons[1] & inputBitmask;
+            battleStatus->curButtonsDown = gGameStatusPtr->curButtons[1] & inputBitmask;
+            battleStatus->curButtonsPressed = gGameStatusPtr->pressedButtons[1] & inputBitmask;
+            battleStatus->curButtonsHeld = gGameStatusPtr->heldButtons[1] & inputBitmask;
             battleStatus->stickX = gGameStatusPtr->stickX[1];
             battleStatus->stickY = gGameStatusPtr->stickY[1];
         } else {
             s32 inputBitmask2 = battleStatus->inputBitmask;
 
-            battleStatus->currentButtonsDown = gGameStatusPtr->currentButtons[0] & inputBitmask2;
-            battleStatus->currentButtonsPressed = gGameStatusPtr->pressedButtons[0] & inputBitmask2;
-            battleStatus->currentButtonsHeld = gGameStatusPtr->heldButtons[0] & inputBitmask2;
+            battleStatus->curButtonsDown = gGameStatusPtr->curButtons[0] & inputBitmask2;
+            battleStatus->curButtonsPressed = gGameStatusPtr->pressedButtons[0] & inputBitmask2;
+            battleStatus->curButtonsHeld = gGameStatusPtr->heldButtons[0] & inputBitmask2;
             battleStatus->stickX = gGameStatusPtr->stickX[0];
             battleStatus->stickY = gGameStatusPtr->stickY[0];
         }
@@ -276,8 +276,8 @@ void btl_update(void) {
     get_dpad_input_radial(&dpadAngle, &dpadMagnitude);
     battleStatus->dpadX = dpadAngle;
     battleStatus->dpadY = dpadMagnitude;
-    battleStatus->pushInputBuffer[battleStatus->inputBufferPos] = battleStatus->currentButtonsPressed;
-    battleStatus->holdInputBuffer[battleStatus->inputBufferPos] = battleStatus->currentButtonsDown;
+    battleStatus->pushInputBuffer[battleStatus->inputBufferPos] = battleStatus->curButtonsPressed;
+    battleStatus->holdInputBuffer[battleStatus->inputBufferPos] = battleStatus->curButtonsDown;
 
     battleStatus->inputBufferPos++;
     if (battleStatus->inputBufferPos >= ARRAY_COUNT(battleStatus->pushInputBuffer)) {
@@ -422,7 +422,7 @@ void btl_update(void) {
             set_screen_overlay_color(SCREEN_LAYER_BACK, 0, 0, 0);
             if (partner == NULL) {
                 set_screen_overlay_params_back(OVERLAY_SCREEN_COLOR, 215.0f);
-            } else if (playerData->currentPartner == PARTNER_WATT) {
+            } else if (playerData->curPartner == PARTNER_WATT) {
                 paramAmount -= 10.0f;
                 if (paramAmount < 0.0f) {
                     paramAmount = 0.0f;
@@ -636,14 +636,14 @@ void btl_render_actors(void) {
                     if (actor != NULL && !(actor->flags & ACTOR_FLAG_DISABLED)) {
                         renderTaskPtr->appendGfxArg = (void*)i;
                         renderTaskPtr->appendGfx = appendGfx_enemy_actor;
-                        renderTaskPtr->distance = actor->currentPos.z;
+                        renderTaskPtr->dist = actor->curPos.z;
                         renderTaskPtr->renderMode = actor->renderMode;
                         queue_render_task(renderTaskPtr);
 
                         if (actor->flags & ACTOR_FLAG_BLUR_ENABLED) {
                             renderTaskPtr->appendGfxArg = actor;
                             renderTaskPtr->appendGfx = appendGfx_enemy_actor_blur;
-                            renderTaskPtr->distance = actor->currentPos.z;
+                            renderTaskPtr->dist = actor->curPos.z;
                             renderTaskPtr->renderMode = RENDER_MODE_SURFACE_XLU_LAYER3;
                             queue_render_task(renderTaskPtr);
                         }
@@ -651,7 +651,7 @@ void btl_render_actors(void) {
                         if (battleStatus->reflectFlags & BS_REFLECT_FLOOR) {
                             renderTaskPtr->appendGfxArg = actor;
                             renderTaskPtr->appendGfx = appendGfx_enemy_actor_reflection;
-                            renderTaskPtr->distance = actor->currentPos.z;
+                            renderTaskPtr->dist = actor->curPos.z;
                             renderTaskPtr->renderMode = actor->renderMode;
                             queue_render_task(renderTaskPtr);
                         }
@@ -662,14 +662,14 @@ void btl_render_actors(void) {
                 if (actor != NULL && !(actor->flags & ACTOR_FLAG_DISABLED)) {
                     renderTaskPtr->appendGfxArg = NULL;
                     renderTaskPtr->appendGfx = appendGfx_partner_actor;
-                    renderTaskPtr->distance = actor->currentPos.z;
+                    renderTaskPtr->dist = actor->curPos.z;
                     renderTaskPtr->renderMode = actor->renderMode;
                     queue_render_task(renderTaskPtr);
 
                     if (actor->flags & ACTOR_FLAG_BLUR_ENABLED) {
                         renderTaskPtr->appendGfxArg = actor;
                         renderTaskPtr->appendGfx = appendGfx_partner_actor_blur;
-                        renderTaskPtr->distance = actor->currentPos.z;
+                        renderTaskPtr->dist = actor->curPos.z;
                         renderTaskPtr->renderMode = RENDER_MODE_SURFACE_XLU_LAYER3;
                         queue_render_task(renderTaskPtr);
                     }
@@ -677,7 +677,7 @@ void btl_render_actors(void) {
                     if (battleStatus->reflectFlags & BS_REFLECT_FLOOR) {
                         renderTaskPtr->appendGfxArg = NULL;
                         renderTaskPtr->appendGfx = appendGfx_partner_actor_reflection;
-                        renderTaskPtr->distance = actor->currentPos.z;
+                        renderTaskPtr->dist = actor->curPos.z;
                         renderTaskPtr->renderMode = actor->renderMode;
                         queue_render_task(renderTaskPtr);
                     }
@@ -687,14 +687,14 @@ void btl_render_actors(void) {
                 if (actor != NULL && !(actor->flags & ACTOR_FLAG_DISABLED)) {
                     renderTaskPtr->appendGfxArg = NULL;
                     renderTaskPtr->appendGfx = appendGfx_player_actor;
-                    renderTaskPtr->distance = actor->currentPos.z;
+                    renderTaskPtr->dist = actor->curPos.z;
                     renderTaskPtr->renderMode = actor->renderMode;
                     queue_render_task(renderTaskPtr);
 
                     if (actor->flags & ACTOR_FLAG_BLUR_ENABLED) {
                         renderTaskPtr->appendGfxArg = actor;
                         renderTaskPtr->appendGfx = (void (*) (void*)) appendGfx_player_actor_blur;
-                        renderTaskPtr->distance = actor->currentPos.z;
+                        renderTaskPtr->dist = actor->curPos.z;
                         renderTaskPtr->renderMode = RENDER_MODE_SURFACE_XLU_LAYER3;
                         queue_render_task(renderTaskPtr);
                     }
@@ -702,7 +702,7 @@ void btl_render_actors(void) {
                     if (battleStatus->reflectFlags & BS_REFLECT_FLOOR) {
                         renderTaskPtr->appendGfxArg = NULL;
                         renderTaskPtr->appendGfx = appendGfx_player_actor_reflection;
-                        renderTaskPtr->distance = actor->currentPos.z;
+                        renderTaskPtr->dist = actor->curPos.z;
                         renderTaskPtr->renderMode = actor->renderMode;
                         queue_render_task(renderTaskPtr);
                     }
@@ -868,7 +868,7 @@ void btl_draw_enemy_health_bars(void) {
                     s32 temp;
                     s32 ones;
 
-                    currentHP = enemy->currentHP;
+                    currentHP = enemy->curHP;
                     temp = (currentHP * 25) / enemy->maxHP;
 
                     if (temp < enemy->healthFraction) {
@@ -1012,7 +1012,7 @@ void btl_update_starpoints_display(void) {
             ones = battleStatus->totalStarPoints % 10;
 
             for (i = 0; i < tens; i++) {
-                id = D_8029EFC0[i];
+                id = BtlStarPointTensHIDs[i];
                 if (hud_element_get_script(id) != &HES_Item_StarPoint) {
                     hud_element_set_script(id, &HES_Item_StarPoint);
                 }
@@ -1020,7 +1020,7 @@ void btl_update_starpoints_display(void) {
                 hud_element_set_render_pos(id, posX, posY);
                 hud_element_draw_clipped(id);
 
-                id = D_8029EFE8[i];
+                id = BtlStarPointShinesHIDs[i];
                 if (hud_element_get_script(id) != &HES_StatusSPShine) {
                     hud_element_set_script(id, &HES_StatusSPShine);
                 }
@@ -1030,9 +1030,9 @@ void btl_update_starpoints_display(void) {
                 posX -= (one * 20.0f);
             }
 
-           for (; i < ARRAY_COUNT(D_8029EFC0); i++) {
-                hud_element_set_flags(D_8029EFC0[i], HUD_ELEMENT_FLAG_DISABLED);
-                hud_element_set_flags(D_8029EFE8[i], HUD_ELEMENT_FLAG_DISABLED);
+           for (; i < ARRAY_COUNT(BtlStarPointTensHIDs); i++) {
+                hud_element_set_flags(BtlStarPointTensHIDs[i], HUD_ELEMENT_FLAG_DISABLED);
+                hud_element_set_flags(BtlStarPointShinesHIDs[i], HUD_ELEMENT_FLAG_DISABLED);
             }
 
             posX = D_8029DA40;
@@ -1045,7 +1045,7 @@ void btl_update_starpoints_display(void) {
             }
 
             for (i = 0; i < ones; i++) {
-                id = D_8029F010[i];
+                id = BtlStarPointOnesHIDs[i];
                 if (hud_element_get_script(id) != &HES_Item_SmallStarPoint) {
                     hud_element_set_script(id, &HES_Item_SmallStarPoint);
                 }
@@ -1055,8 +1055,8 @@ void btl_update_starpoints_display(void) {
                 posX -= one * 10.0f;
             }
 
-            for (; i < ARRAY_COUNT(D_8029F010); i++) {
-                hud_element_set_flags(D_8029F010[i], HUD_ELEMENT_FLAG_DISABLED);
+            for (; i < ARRAY_COUNT(BtlStarPointOnesHIDs); i++) {
+                hud_element_set_flags(BtlStarPointOnesHIDs[i], HUD_ELEMENT_FLAG_DISABLED);
             }
         }
     }
@@ -1070,12 +1070,12 @@ void btl_save_world_cameras(void) {
         D_8029DA50[i] = gCameras[i];
     }
 
-    D_8029EFB0 = playerStatus->position.x;
-    D_8029EFB4 = playerStatus->position.y;
-    D_8029EFB8 = playerStatus->position.z;
-    playerStatus->position.x = NPC_DISPOSE_POS_X;
-    playerStatus->position.y = NPC_DISPOSE_POS_Y;
-    playerStatus->position.z = NPC_DISPOSE_POS_Z;
+    D_8029EFB0 = playerStatus->pos.x;
+    D_8029EFB4 = playerStatus->pos.y;
+    D_8029EFB8 = playerStatus->pos.z;
+    playerStatus->pos.x = NPC_DISPOSE_POS_X;
+    playerStatus->pos.y = NPC_DISPOSE_POS_Y;
+    playerStatus->pos.z = NPC_DISPOSE_POS_Z;
 }
 
 void btl_restore_world_cameras(void) {
@@ -1088,9 +1088,9 @@ void btl_restore_world_cameras(void) {
     }
 
     gCurrentCameraID = CAM_DEFAULT;
-    playerStatus->position.x = D_8029EFB0;
-    playerStatus->position.y = D_8029EFB4;
-    playerStatus->position.z = D_8029EFB8;
+    playerStatus->pos.x = D_8029EFB0;
+    playerStatus->pos.y = D_8029EFB4;
+    playerStatus->pos.z = D_8029EFB8;
 
     if (bSavedOverrideFlags & GLOBAL_OVERRIDES_ENABLE_FLOOR_REFLECTION) {
         gOverrideFlags |= GLOBAL_OVERRIDES_ENABLE_FLOOR_REFLECTION;
@@ -1099,7 +1099,7 @@ void btl_restore_world_cameras(void) {
     }
 
     if (gBattleStatus.flags2 & BS_FLAGS2_PEACH_BATTLE) {
-        playerData->currentPartner = bSavedPartner;
+        playerData->curPartner = bSavedPartner;
     }
 }
 

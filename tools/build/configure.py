@@ -254,7 +254,27 @@ def write_ninja_rules(
 
     ninja.rule(
         "icons",
-        command=f"$python {BUILD_TOOLS}/pm_icons.py $out $list_path $header_path $asset_stack",
+        command=f"$python {BUILD_TOOLS}/icons.py $out $list_path $header_path $asset_stack",
+    )
+
+    ninja.rule(
+        "move_data",
+        command=f"$python {BUILD_TOOLS}/move_data.py $out $in",
+    )
+
+    ninja.rule(
+        "item_data",
+        command=f"$python {BUILD_TOOLS}/item_data.py $out $in",
+    )
+
+    ninja.rule(
+        "world_map",
+        command=f"$python {BUILD_TOOLS}/world_map.py $in $out",
+    )
+
+    ninja.rule(
+        "recipes",
+        command=f"$python {BUILD_TOOLS}/recipes.py $in $out",
     )
 
     ninja.rule(
@@ -301,7 +321,7 @@ def write_ninja_rules(
 
     ninja.rule("effect_data", command=f"$python {BUILD_TOOLS}/effects.py $in_yaml $out_dir")
 
-    ninja.rule("pm_sbn", command=f"$python {BUILD_TOOLS}/audio/sbn.py $out $in")
+    ninja.rule("pm_sbn", command=f"$python {BUILD_TOOLS}/audio/sbn.py $out $asset_stack")
 
     with Path("tools/permuter_settings.toml").open("w") as f:
         f.write(f"compiler_command = \"{cc} {CPPFLAGS.replace('$version', 'pal')} {cflags} -DPERMUTER -fforce-addr\"\n")
@@ -477,7 +497,7 @@ class Configure:
         assert self.linker_entries is not None
 
         built_objects = set()
-        generated_headers = []
+        generated_code = []
 
         def build(
             object_paths: Union[Path, List[Path]],
@@ -496,8 +516,8 @@ class Configure:
             for object_path in object_paths:
                 if object_path.suffixes[-1] == ".o":
                     built_objects.add(str(object_path))
-                elif object_path.suffixes[-1] == ".h" or task == "bin_inc_c" or task == "pal_inc_c":
-                    generated_headers.append(str(object_path))
+                elif object_path.suffix.endswith(".h") or object_path.suffix.endswith(".c"):
+                    generated_code.append(str(object_path))
 
                 # don't rebuild objects if we've already seen all of them
                 if not str(object_path) in skip_outputs:
@@ -505,7 +525,7 @@ class Configure:
 
             for i_output in implicit_outputs:
                 if i_output.endswith(".h"):
-                    generated_headers.append(i_output)
+                    generated_code.append(i_output)
 
             if needs_build:
                 skip_outputs.update(object_strs)
@@ -516,7 +536,7 @@ class Configure:
                 if task == "yay0":
                     implicit.append(YAY0_COMPRESS_TOOL)
                 elif task in ["cc", "cxx", "cc_modern"]:
-                    order_only.append("generated_headers_" + self.version)
+                    order_only.append("generated_code_" + self.version)
 
                 inputs = self.resolve_src_paths(src_paths)
                 for dir in asset_deps:
@@ -546,6 +566,40 @@ class Configure:
                 "in_yaml": str(effect_yaml),
                 "out_dir": str(effect_data_outdir),
             },
+        )
+
+        build(
+            self.build_path() / "include/world_map.inc.c",
+            [Path("src/world_map.xml")],
+            "world_map",
+        )
+
+        build(
+            self.build_path() / "include/recipes.inc.c",
+            [Path("src/recipes.yaml")],
+            "recipes",
+        )
+
+        build(
+            [
+                self.build_path() / "include/move_data.inc.c",
+                self.build_path() / "include/move_enum.h",
+            ],
+            [Path("src/move_table.yaml")],
+            "move_data",
+        )
+
+        build(
+            [
+                self.build_path() / "include/item_data.inc.c",
+                self.build_path() / "include/item_enum.h",
+            ],
+            [
+                Path("src/item_table.yaml"),
+                Path("src/item_entity_scripts.yaml"),
+                Path("src/item_hud_scripts.yaml"),
+            ],
+            "item_data",
         )
 
         # Build objects
@@ -1060,7 +1114,15 @@ class Configure:
                 build(entry.object_path, [entry.object_path.with_suffix("")], "bin")
             elif seg.type == "pm_sbn":
                 sbn_path = entry.object_path.with_suffix("")
-                build(sbn_path, entry.src_paths, "pm_sbn")  # could have non-yaml inputs be implicit
+                build(
+                    sbn_path,
+                    entry.src_paths,
+                    "pm_sbn",
+                    variables={
+                        "asset_stack": ",".join(self.asset_stack),
+                    },
+                    asset_deps=entry.src_paths,
+                )
                 build(entry.object_path, [sbn_path], "bin")
             elif seg.type == "linker" or seg.type == "linker_offset":
                 pass
@@ -1123,7 +1185,7 @@ class Configure:
                 implicit=[str(self.rom_path())],
             )
 
-        ninja.build("generated_headers_" + self.version, "phony", generated_headers)
+        ninja.build("generated_code_" + self.version, "phony", generated_code)
 
     def make_current(self, ninja: ninja_syntax.Writer):
         current = Path("ver/current")
@@ -1218,7 +1280,7 @@ if __name__ == "__main__":
         if version < PIGMENT_REQ_VERSION:
             print(f"error: {PIGMENT} version {PIGMENT_REQ_VERSION} or newer is required, system version is {version}\n")
             exit(1)
-    except FileNotFoundError:
+    except (FileNotFoundError, PermissionError):
         print(f"error: {PIGMENT} is not installed\n")
         print("To build and install it, obtain cargo:\n\tcurl https://sh.rustup.rs -sSf | sh")
         print(f"and then run:\n\tcargo install {PIGMENT}")

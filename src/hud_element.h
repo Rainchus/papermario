@@ -136,7 +136,11 @@ typedef struct PopupMenu {
     /* 0x32C */ s16 result;
     /* 0x32E */ char unk_32E[0x2];
 #if VERSION_PAL
-    /* 0x330 */ char unk_330[0x14];
+    /* 0x330 */ s32 unk_330; // message ID
+    /* 0x334 */ s32 unk_334; // x offset
+    /* 0x338 */ s32 unk_338;
+    /* 0x33C */ s32 unk_33C; // message ID
+    /* 0x340 */ s32 unk_340;
 #endif
 } PopupMenu; // size = 0x330
 
@@ -145,7 +149,7 @@ typedef struct Shop {
     /* 0x002 */ s16 numItems;
     /* 0x004 */ s16 numSpecialPrices;
     /* 0x006 */ char unk_06[0x2];
-    /* 0x008 */ s32 currentItemSlot;
+    /* 0x008 */ s32 curItemSlot;
     /* 0x00C */ s32 selectedStoreItemSlot;
     /* 0x010 */ ShopOwner* owner;
     /* 0x014 */ ShopItemLocation* itemDataPositions;
@@ -168,8 +172,8 @@ typedef struct VtxRect {
 
 typedef struct HudTransform {
     /* 0x00 */ s32 imgfxIdx;
-    /* 0x04 */ Vec3f position;
-    /* 0x10 */ Vec3f rotation;
+    /* 0x04 */ Vec3f pos;
+    /* 0x10 */ Vec3f rot;
     /* 0x1C */ Vec3f scale;
     /* 0x28 */ Vec2s pivot;
     /* 0x30 */ VtxRect unk_30[3];
@@ -284,13 +288,167 @@ extern HudScript* wPartnerHudScripts[];
         hs_End \
     }
 
-#define STANDARD_ITEM_HUD_SCRIPT(icon) \
+// hud script templates used to generate scripts via src/item_hud_scripts.yaml
+
+#define HES_TEMPLATE_STANDARD_ITEM(icon) \
     { \
         hs_SetVisible \
         hs_SetTileSize(HUD_ELEMENT_SIZE_32x32) \
         hs_Loop \
             hs_SetIcon(60, icon) \
         hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_HEART_PIECE() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_24x24) \
+        hs_Loop \
+            hs_SetIcon(60, anim_heart_piece) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_HEART() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_24x24) \
+        hs_Loop \
+            hs_SetIcon(10, anim_heart_0) \
+            hs_SetIcon(6, anim_heart_1) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_STAR_POINT() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_24x24) \
+        hs_Loop \
+            hs_SetIcon(2, anim_sp_0) \
+            hs_SetIcon(2, anim_sp_1) \
+            hs_SetIcon(2, anim_sp_2) \
+            hs_SetIcon(2, anim_sp_3) \
+            hs_SetIcon(2, anim_sp_4) \
+            hs_SetIcon(2, anim_sp_5) \
+            hs_SetIcon(2, anim_sp_6) \
+            hs_SetIcon(2, anim_sp_7) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_SMALL_STAR_POINT() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_8x8) \
+        hs_Loop \
+            hs_SetIcon(2, anim_sp_small_0) \
+            hs_SetIcon(2, anim_sp_small_1) \
+            hs_SetIcon(2, anim_sp_small_2) \
+            hs_SetIcon(2, anim_sp_small_3) \
+            hs_SetIcon(2, anim_sp_small_4) \
+            hs_SetIcon(2, anim_sp_small_5) \
+            hs_SetIcon(2, anim_sp_small_6) \
+            hs_SetIcon(2, anim_sp_small_7) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_HEART_POINT() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_32x32) \
+        hs_Loop \
+            hs_SetIcon(8, anim_hp_0) \
+            hs_SetIcon(5, anim_hp_1) \
+            hs_SetIcon(8, anim_hp_2) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_FLOWER_POINT() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_32x32) \
+        hs_Loop \
+            hs_SetIcon(8, anim_fp_0) \
+            hs_SetIcon(5, anim_fp_1) \
+            hs_SetIcon(8, anim_fp_2) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_STAR_PIECE() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_32x32) \
+        hs_Loop \
+            hs_SetIcon(12, anim_star_piece_0) \
+            hs_SetIcon(4, anim_star_piece_1) \
+            hs_SetIcon(12, anim_star_piece_2) \
+            hs_SetIcon(4, anim_star_piece_1) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_COIN() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_24x24) \
+        hs_Loop \
+            hs_op_15(0) \
+            hs_SetIcon(3, anim_coin_0) \
+            hs_SetIcon(3, anim_coin_1) \
+            hs_SetIcon(3, anim_coin_4) \
+            hs_SetIcon(3, anim_coin_5) \
+            hs_SetIcon(3, anim_coin_6) \
+            hs_SetIcon(3, anim_coin_7) \
+            hs_SetIcon(3, anim_coin_8) \
+            hs_SetIcon(3, anim_coin_9) \
+            hs_RandomRestart(100, 70) \
+            hs_op_15(1) \
+            hs_SetIcon(3, anim_coin_0) \
+            hs_SetIcon(2, anim_coin_1) \
+            hs_SetIcon(1, anim_coin_2) \
+            hs_SetIcon(1, anim_coin_3) \
+            hs_SetIcon(2, anim_coin_4) \
+            hs_SetIcon(3, anim_coin_5) \
+            hs_SetIcon(3, anim_coin_6) \
+            hs_SetIcon(3, anim_coin_7) \
+            hs_SetIcon(3, anim_coin_8) \
+            hs_SetIcon(3, anim_coin_9) \
+        hs_Restart \
+        hs_End \
+    }
+
+#define HES_COIN_SPARKLE(dx, dy) \
+    { \
+        hs_SetTexelOffset(dx, dy) \
+        hs_SetIcon(1, anim_shimmer_0) \
+        hs_SetIcon(1, anim_shimmer_1) \
+        hs_SetIcon(1, anim_shimmer_2) \
+        hs_SetIcon(2, anim_shimmer_6) \
+        hs_SetIcon(1, anim_shimmer_2) \
+        hs_SetIcon(1, anim_shimmer_3) \
+        hs_SetIcon(1, anim_shimmer_6) \
+        hs_SetIcon(1, anim_shimmer_4) \
+        hs_SetIcon(1, anim_shimmer_6) \
+        hs_SetIcon(1, anim_shimmer_5) \
+        hs_SetIcon(16, anim_shimmer_6) \
+        hs_End \
+    }
+
+#define HES_TEMPLATE_COIN_SPARKLE() \
+    { \
+        hs_SetVisible \
+        hs_SetTileSize(HUD_ELEMENT_SIZE_8x8) \
+        hs_RandomBranch( \
+            HS_PTR(HES_Item_CoinSparkleA), \
+            HS_PTR(HES_Item_CoinSparkleB), \
+            HS_PTR(HES_Item_CoinSparkleC), \
+            HS_PTR(HES_Item_CoinSparkleD), \
+            HS_PTR(HES_Item_CoinSparkleE)) \
         hs_End \
     }
 

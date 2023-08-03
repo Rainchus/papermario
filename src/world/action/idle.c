@@ -3,26 +3,25 @@
 #include "sprite/player.h"
 
 AnimID IdlePeachAnims[] = {
-    ANIM_Peach1_Idle, // none
-    ANIM_Peach1_HoldCream, // cream
-    ANIM_Peach1_HoldStrawberry, // strawberry
-    ANIM_Peach1_HoldButter, // butter
-    ANIM_Peach1_HoldCleanser, // cleanser
-    ANIM_Peach1_HoldWater, // water
-    ANIM_Peach1_HoldMilk, // milk
-    ANIM_Peach1_HoldFlour, // flour
-    ANIM_Peach1_HoldEgg, // egg
-    ANIM_Peach1_HoldCompleteCake, // complete cake
-    ANIM_Peach1_HoldCakeBowl, // cake bowl
-    ANIM_Peach1_HoldCakeMixed, // cake mixed
-    ANIM_Peach1_HoldCakePan, // cake pan
-    ANIM_Peach1_HoldCakeBatter, // cake batter
-    ANIM_Peach1_HoldBareCake, // cake bare
-    ANIM_Peach1_HoldSalt, // salt
-    ANIM_Peach1_HoldSugar, // sugar
-    ANIM_Peach1_HoldIcingCake, // cake with icing
-    ANIM_Peach1_HoldBerryCake, // cake with berries
-    0x00000000,
+    [PEACH_BAKING_NONE]                 ANIM_Peach1_Idle,
+    [PEACH_BAKING_CREAM]                ANIM_Peach1_HoldCream,
+    [PEACH_BAKING_STRAWBERRY]           ANIM_Peach1_HoldStrawberry,
+    [PEACH_BAKING_BUTTER]               ANIM_Peach1_HoldButter,
+    [PEACH_BAKING_CLEANSER]             ANIM_Peach1_HoldCleanser,
+    [PEACH_BAKING_WATER]                ANIM_Peach1_HoldWater,
+    [PEACH_BAKING_MILK]                 ANIM_Peach1_HoldMilk,
+    [PEACH_BAKING_FLOUR]                ANIM_Peach1_HoldFlour,
+    [PEACH_BAKING_EGG]                  ANIM_Peach1_HoldEgg,
+    [PEACH_BAKING_COMPLETE_CAKE]        ANIM_Peach1_HoldCompleteCake,
+    [PEACH_BAKING_CAKE_BOWL]            ANIM_Peach1_HoldCakeBowl,
+    [PEACH_BAKING_CAKE_MIXED]           ANIM_Peach1_HoldCakeMixed,
+    [PEACH_BAKING_CAKE_PAN]             ANIM_Peach1_HoldCakePan,
+    [PEACH_BAKING_CAKE_BATTER]          ANIM_Peach1_HoldCakeBatter,
+    [PEACH_BAKING_CAKE_BARE]            ANIM_Peach1_HoldBareCake,
+    [PEACH_BAKING_SALT]                 ANIM_Peach1_HoldSalt,
+    [PEACH_BAKING_SUGAR]                ANIM_Peach1_HoldSugar,
+    [PEACH_BAKING_CAKE_WITH_ICING]      ANIM_Peach1_HoldIcingCake,
+    [PEACH_BAKING_CAKE_WITH_BERRIES]    ANIM_Peach1_HoldBerryCake,
 };
 
 enum {
@@ -46,16 +45,16 @@ void action_update_idle(void) {
         return;
     }
 
-    playerStatus->currentStateTime++;
+    playerStatus->curStateTime++;
 
     if (playerStatus->flags & PS_FLAG_ACTION_STATE_CHANGED) {
         playerStatus->flags &= ~(PS_FLAG_ACTION_STATE_CHANGED | PS_FLAG_ARMS_RAISED | PS_FLAG_AIRBORNE);
         wasMoving = TRUE;
         playerStatus->actionSubstate = SUBSTATE_IDLE_DEFAULT;
-        playerStatus->currentStateTime = 0;
+        playerStatus->curStateTime = 0;
         playerStatus->timeInAir = 0;
         playerStatus->peakJumpTime = 0;
-        playerStatus->currentSpeed = 0.0f;
+        playerStatus->curSpeed = 0.0f;
         playerStatus->pitch = 0.0f;
 
         if (playerStatus->animFlags & PA_FLAG_8BIT_MARIO) {
@@ -84,7 +83,7 @@ void action_update_idle(void) {
             if (magnitude == 0.0f) {
                 playerData->idleFrameCounter++;
             } else {
-                playerStatus->currentStateTime = 0;
+                playerStatus->curStateTime = 0;
                 set_action_state(ACTION_STATE_WALK);
                 if (magnitude != 0.0f) {
                     playerStatus->targetYaw = angle;
@@ -103,10 +102,10 @@ void action_update_idle_peach(void) {
     if (playerStatus->flags & PS_FLAG_ACTION_STATE_CHANGED) {
         playerStatus->flags &= ~PS_FLAG_ACTION_STATE_CHANGED;
         playerStatus->actionSubstate = SUBSTATE_IDLE_DEFAULT;
-        playerStatus->currentStateTime = 0;
+        playerStatus->curStateTime = 0;
         playerStatus->timeInAir = 0;
         playerStatus->peakJumpTime = 0;
-        playerStatus->currentSpeed = 0.0f;
+        playerStatus->curSpeed = 0.0f;
         playerStatus->flags &= ~PS_FLAG_AIRBORNE;
 
         if (!(playerStatus->animFlags & PA_FLAG_INVISIBLE)) {
@@ -125,27 +124,27 @@ void action_update_idle_peach(void) {
             case SUBSTATE_IDLE_DEFAULT:
                 if (!(playerStatus->flags & (PS_FLAG_NO_STATIC_COLLISION | PS_FLAG_INPUT_DISABLED))
                     && (playerStatus->peachItemHeld == 0)) {
-                    if (playerStatus->currentStateTime > 1800) {
+                    if (playerStatus->curStateTime > 1800) {
                         // begin first yawm
                         playerStatus->actionSubstate++;
                         suggest_player_anim_allow_backward(ANIM_Peach2_Yawn);
                         return;
                     }
-                    playerStatus->currentStateTime++;
+                    playerStatus->curStateTime++;
                 }
                 break;
             case SUBSTATE_IDLE_STRETCH:
                 // waiting for yawn to finish
                 if (playerStatus->animNotifyValue != 0) {
                     playerStatus->actionSubstate++;
-                    playerStatus->currentStateTime = 0;
+                    playerStatus->curStateTime = 0;
                     suggest_player_anim_allow_backward(ANIM_Peach1_Idle);
                 }
                 break;
             case SUBSTATE_DELAY_SLEEP:
                 // delay before next yawn and sleep
-                playerStatus->currentStateTime++;
-                if (playerStatus->currentStateTime > 200) {
+                playerStatus->curStateTime++;
+                if (playerStatus->curStateTime > 200) {
                     playerStatus->actionSubstate++;
                     suggest_player_anim_allow_backward(ANIM_Peach2_Yawn);
                 }
@@ -166,7 +165,7 @@ void action_update_idle_peach(void) {
     phys_update_interact_collider();
 
     if (magnitude != 0.0f) {
-        playerStatus->currentStateTime = 0;
+        playerStatus->curStateTime = 0;
         playerStatus->targetYaw = angle;
         set_action_state(ACTION_STATE_WALK);
     }
