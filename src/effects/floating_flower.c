@@ -134,7 +134,7 @@ void floating_flower_render(EffectInstance* effect) {
     renderTask.appendGfx = floating_flower_appendGfx;
     renderTask.appendGfxArg = effect;
     renderTask.dist = 0;
-    renderTask.renderMode = RENDER_MODE_2D;
+    renderTask.renderMode = RENDER_MODE_CLOUD_NO_ZCMP;
 
     retTask = queue_render_task(&renderTask);
     retTask->renderMode |= RENDER_TASK_FLAG_REFLECT_FLOOR;
@@ -157,8 +157,8 @@ void floating_flower_appendGfx(void* effect) {
 
     gSPMatrix(gMainGfxPos++, &gDisplayContext->matrixStack[gMatrixListPos++], G_MTX_PUSH | G_MTX_MUL | G_MTX_MODELVIEW);
 
-    if (*gBackgroundFogModePtr == FOG_MODE_1) {
-        get_background_color_blend(&rgb, &rgb, &rgb, &a);
+    if (*gBackgroundTintModePtr == ENV_TINT_SHROUD) {
+        mdl_get_shroud_tint_params(&rgb, &rgb, &rgb, &a);
         alpha -= a;
     }
 

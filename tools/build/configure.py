@@ -58,6 +58,8 @@ def write_ninja_rules(
     cc_ido = f"{BUILD_TOOLS}/cc/ido5.3/cc"
     cc_272_dir = f"{BUILD_TOOLS}/cc/gcc2.7.2/"
     cc_272 = f"{cc_272_dir}/gcc"
+    cc_egcs_dir = f"{BUILD_TOOLS}/cc/egcs/"
+    cc_egcs = f"{cc_egcs_dir}/gcc"
     cxx = f"{BUILD_TOOLS}/cc/gcc/g++"
 
     ICONV = "iconv --from UTF-8 --to $encoding"
@@ -69,6 +71,8 @@ def write_ninja_rules(
 
     CPPFLAGS_272 = CPPFLAGS_COMMON + " -nostdinc"
 
+    CPPFLAGS_EGCS = CPPFLAGS_COMMON + " -D__USE_ISOC99 -DBBPLAYER -nostdinc"
+
     CPPFLAGS = "-w " + CPPFLAGS_COMMON + " -nostdinc"
 
     cflags = f"-c -G0 -O2 -gdwarf-2 -x c -B {BUILD_TOOLS}/cc/gcc/ {extra_cflags}"
@@ -77,6 +81,8 @@ def write_ninja_rules(
 
     cflags_272 = f"-c -G0 -mgp32 -mfp32 -mips3 {extra_cflags}"
     cflags_272 = cflags_272.replace("-ggdb3", "-g1")
+
+    cflags_egcs = f"-c -fno-PIC -mno-abicalls -mcpu=4300 -G 0 -x c -B {cc_egcs_dir} {extra_cflags}"
 
     ninja.variable("python", sys.executable)
 
@@ -158,6 +164,12 @@ def write_ninja_rules(
         "cc_272",
         description="cc_272 $in",
         command=f"bash -o pipefail -c 'COMPILER_PATH={cc_272_dir} {cc_272} {CPPFLAGS_272} {extra_cppflags} $cppflags {cflags_272} $cflags $in -o $out && mips-linux-gnu-objcopy -N $in $out'",
+    )
+
+    ninja.rule(
+        "cc_egcs",
+        description="cc_egcs $in",
+        command=f"bash -o pipefail -c '{cc_egcs} {CPPFLAGS_EGCS} {extra_cppflags} $cppflags {cflags_egcs} $cflags $in -o $out && mips-linux-gnu-objcopy -N $in $out && python3 ./tools/patch_64bit_compile.py $out'",
     )
 
     ninja.rule(
@@ -268,6 +280,11 @@ def write_ninja_rules(
     )
 
     ninja.rule(
+        "actor_types",
+        command=f"$python {BUILD_TOOLS}/actor_types.py $out $in",
+    )
+
+    ninja.rule(
         "world_map",
         command=f"$python {BUILD_TOOLS}/world_map.py $in $out",
     )
@@ -368,6 +385,8 @@ class Configure:
             modes.extend(
                 [
                     "bin",
+                    "rodatabin",
+                    "textbin",
                     "yay0",
                     "img",
                     "vtx",
@@ -484,11 +503,13 @@ class Configure:
         c_maps: bool = False,
     ):
         import segtypes
-        import segtypes.common.c
+        import segtypes.common.asm
         import segtypes.common.bin
+        import segtypes.common.c
         import segtypes.common.data
         import segtypes.common.group
-        import segtypes.common.asm
+        import segtypes.common.rodatabin
+        import segtypes.common.textbin
         import segtypes.n64.header
         import segtypes.n64.img
         import segtypes.n64.palette
@@ -602,6 +623,17 @@ class Configure:
             "item_data",
         )
 
+        build(
+            [
+                self.build_path() / "include/battle/actor_types.inc.c",
+                self.build_path() / "include/battle/actor_types.h",
+            ],
+            [
+                Path("src/battle/actors.yaml"),
+            ],
+            "actor_types",
+        )
+
         # Build objects
         for entry in self.linker_entries:
             seg = entry.segment
@@ -650,6 +682,9 @@ class Configure:
                 elif "gcc_272" in cflags:
                     task = "cc_272"
                     cflags = cflags.replace("gcc_272", "")
+                elif "egcs" in cflags:
+                    task = "cc_egcs"
+                    cflags = cflags.replace("egcs", "")
 
                 encoding = "CP932"  # similar to SHIFT-JIS, but includes backslash and tilde
                 if version == "ique":
@@ -770,7 +805,11 @@ class Configure:
                                 "pal_inc_c",
                                 vars,
                             )
-            elif isinstance(seg, segtypes.common.bin.CommonSegBin):
+            elif (
+                isinstance(seg, segtypes.common.bin.CommonSegBin)
+                or isinstance(seg, segtypes.common.textbin.CommonSegTextbin)
+                or isinstance(seg, segtypes.common.rodatabin.CommonSegRodatabin)
+            ):
                 build(entry.object_path, entry.src_paths, "bin")
             elif isinstance(seg, segtypes.n64.yay0.N64SegYay0):
                 compressed_path = entry.object_path.with_suffix("")  # remove .o

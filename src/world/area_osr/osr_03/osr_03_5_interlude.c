@@ -2,7 +2,7 @@
 #include "effects.h"
 
 API_CALLABLE(N(SetPlayerAsPeach)) {
-    gGameStatusPtr->peachFlags |= PEACH_STATUS_FLAG_IS_PEACH;
+    gGameStatusPtr->peachFlags |= PEACH_FLAG_IS_PEACH;
     script->varTable[0] = gPlayerData.curPartner;
     gPlayerData.curPartner = PARTNER_TWINK;
     return ApiStatus_DONE2;
@@ -37,7 +37,7 @@ EvtScript N(EVS_PlayKammyFlightFX) = {
     EVT_CHILD_THREAD
         EVT_SET(LVar0, 110)
         EVT_LOOP(0)
-            EVT_CALL(PlaySoundWithVolume, SOUND_295, LVar0)
+            EVT_CALL(PlaySoundWithVolume, SOUND_FLIGHT, LVar0)
             EVT_ADD(LVar0, -2)
             EVT_IF_LT(LVar0, 10)
                 EVT_SET(LVar0, 10)

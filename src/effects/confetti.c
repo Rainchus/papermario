@@ -239,7 +239,7 @@ void confetti_render(EffectInstance* effect) {
     renderTask.appendGfx = confetti_appendGfx;
     renderTask.appendGfxArg = effect;
     renderTask.dist = 0;
-    renderTask.renderMode = RENDER_MODE_2D;
+    renderTask.renderMode = RENDER_MODE_CLOUD_NO_ZCMP;
 
     retTask = queue_render_task(&renderTask);
 }
@@ -290,13 +290,13 @@ void confetti_appendGfx(void* effect) {
 
             switch ((unk_24 + i) % 3) {
                 case 0:
-                    gDPSetCombineLERP(gMainGfxPos++, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, TEXEL0, ENVIRONMENT, PRIMITIVE, 0, PRIMITIVE, 0, TEXEL0, 0);
+                    gDPSetCombineMode(gMainGfxPos++, PM_CC_45, PM_CC_46);
                     break;
                 case 1:
-                    gDPSetCombineLERP(gMainGfxPos++, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0);
+                    gDPSetCombineMode(gMainGfxPos++, PM_CC_45, PM_CC_45);
                     break;
                 case 2:
-                    gDPSetCombineLERP(gMainGfxPos++, TEXEL0, 0, PRIMITIVE, ENVIRONMENT, PRIMITIVE, 0, TEXEL0, 0, TEXEL0, 0, PRIMITIVE, 0, PRIMITIVE, 0, TEXEL0, 0);
+                    gDPSetCombineMode(gMainGfxPos++, PM_CC_45, PM_CC_47);
                     break;
             }
             uly = ((i + D_E0088D00[unk_24 % 6]) & 0xF) * 16;

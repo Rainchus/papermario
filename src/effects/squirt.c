@@ -147,7 +147,7 @@ void squirt_render(EffectInstance* effect) {
     renderTask.appendGfx = squirt_appendGfx;
     renderTask.appendGfxArg = effect;
     renderTask.dist = 10;
-    renderTask.renderMode = RENDER_MODE_2D;
+    renderTask.renderMode = RENDER_MODE_CLOUD_NO_ZCMP;
 
     retTask = queue_render_task(&renderTask);
     retTask->renderMode |= RENDER_TASK_FLAG_REFLECT_FLOOR;
@@ -209,7 +209,7 @@ void squirt_appendGfx(void* effect) {
         } else {
             var_f22 = ((f32) data->unk_1A8[i] * 0.5) + 1.0;
             if (var_f22 > 30.0f) {
-                do { } while (0); // TODO required to match
+                do {} while (0); // TODO required to match
                 var_f22 = 30.0f;
             }
             cnA = (D_E00B2BA0[i] * data->unk_1D8[i]) / 255;

@@ -2,6 +2,7 @@
 #include "../src/world/partners.h"
 #include "sprite/npc/WorldKooper.h"
 #include "sprite/player.h"
+#include "effects.h"
 
 #define NAMESPACE world_kooper
 
@@ -72,7 +73,7 @@ s32 N(check_for_item_collision)(Npc* kooper) {
 void N(init)(Npc* kooper) {
     kooper->collisionHeight = 37;
     kooper->collisionDiameter = 24;
-    kooper->collisionChannel = COLLISION_CHANNEL_10000;
+    kooper->collisionChannel = COLLIDER_FLAG_IGNORE_PLAYER;
     N(TriggeredBattle) = FALSE;
 }
 
@@ -130,7 +131,7 @@ API_CALLABLE(N(Update)) {
             N(TweesterPhysicsPtr)->angularVel = 6.0f;
             N(TweesterPhysicsPtr)->liftoffVelPhase = 50.0f;
             N(TweesterPhysicsPtr)->countdown = 120;
-            kooper->flags |= NPC_FLAG_IGNORE_CAMERA_FOR_YAW | NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_WORLD_COLLISION | NPC_FLAG_8;
+            kooper->flags |= NPC_FLAG_IGNORE_CAMERA_FOR_YAW | NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_WORLD_COLLISION | NPC_FLAG_FLYING;
             kooper->flags &= ~NPC_FLAG_GRAVITY;
         case TWEESTER_PARTNER_ATTRACT:
             sin_cos_rad(DEG_TO_RAD(N(TweesterPhysicsPtr)->angle), &sinAngle, &cosAngle);
@@ -267,7 +268,7 @@ API_CALLABLE(N(UseAbility)) {
             N(LockingPlayerInput) = TRUE;
             ShellTossHitboxState = SHELL_TOSS_HITBOX_DISABLED;
             N(HasItem) = FALSE;
-            kooper->flags &= ~(NPC_FLAG_GRAVITY | NPC_FLAG_JUMPING | NPC_FLAG_8);
+            kooper->flags &= ~(NPC_FLAG_GRAVITY | NPC_FLAG_JUMPING | NPC_FLAG_FLYING);
             kooper->flags |= (NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_WORLD_COLLISION);
             partnerStatus->actingPartner = PARTNER_KOOPER;
             partnerStatus->partnerActionState = PARTNER_ACTION_KOOPER_GATHER;
@@ -340,7 +341,7 @@ API_CALLABLE(N(UseAbility)) {
 
             suggest_player_anim_allow_backward(ANIM_Mario1_Jump);
             N(ShellTossKickFalling) = FALSE;
-            sfx_play_sound_at_npc(SOUND_JUMP_2081, SOUND_SPACE_MODE_0, NPC_PARTNER);
+            sfx_play_sound_at_npc(SOUND_QUICK_PLAYER_JUMP, SOUND_SPACE_DEFAULT, NPC_PARTNER);
             script->USE_STATE = SHELL_TOSS_STATE_JUMP;
             // fallthrough
 
@@ -367,7 +368,7 @@ API_CALLABLE(N(UseAbility)) {
             posZ = playerStatus->pos.z;
             testLength = hitLength = playerStatus->colliderHeight / 2;
 
-            if ((npc_raycast_up(COLLISION_CHANNEL_10000, &posX, &posY, &posZ, &hitLength)) && (hitLength < testLength)) {
+            if ((npc_raycast_up(COLLIDER_FLAG_IGNORE_PLAYER, &posX, &posY, &posZ, &hitLength)) && (hitLength < testLength)) {
                 collisionStatus->curCeiling = NpcHitQueryColliderID;
                 playerStatus->pos.y = posY - playerStatus->colliderHeight;
                 N(vertical_hit_interactable_entity)(kooper);
@@ -383,7 +384,7 @@ API_CALLABLE(N(UseAbility)) {
                 kooper->moveSpeed = 8.0f;
                 kooper->curAnim = ANIM_WorldKooper_SpinShell;
                 ShellTossHitboxState = SHELL_TOSS_HITBOX_ENABLED;
-                fx_damage_stars(3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
+                fx_damage_stars(FX_DAMAGE_STARS_3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
                         sin_deg(playerStatus->targetYaw), -1.0f, -cos_deg(playerStatus->targetYaw), 3);
                 start_bounce_b();
 
@@ -395,8 +396,8 @@ API_CALLABLE(N(UseAbility)) {
                 script->USE_STATE = SHELL_TOSS_STATE_KICK;
                 N(ShellTossKickFalling) = FALSE;
                 gCameras[CAM_DEFAULT].moveFlags |= CAMERA_MOVE_IGNORE_PLAYER_Y;
-                sfx_play_sound_at_npc(SOUND_283, SOUND_SPACE_MODE_0, NPC_PARTNER);
-                sfx_play_sound_at_npc(SOUND_284, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_KOOPER_SHELL_KICK, SOUND_SPACE_DEFAULT, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_KOOPER_SHELL_SWIRL, SOUND_SPACE_DEFAULT, NPC_PARTNER);
             }
             break;
 
@@ -414,43 +415,43 @@ API_CALLABLE(N(UseAbility)) {
                 posX = kooper->pos.x, \
                 posY = kooper->pos.y, \
                 posZ = kooper->pos.z, \
-                npc_test_move_taller_with_slipping(COLLISION_CHANNEL_8000, \
+                npc_test_move_taller_with_slipping(COLLIDER_FLAG_IGNORE_SHELL, \
                     &posX, &posY, &posZ, kooper->moveSpeed, testAngle,  \
                     kooper->collisionHeight, kooper->collisionDiameter / 2) \
                 )
 
             if (TEST_COLLISION_AT_ANGLE(kooper->yaw - 20.0f)) {
                 if (!N(lateral_hit_interactable_entity)(kooper)) {
-                    sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                    sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 }
 
-                fx_damage_stars(3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
+                fx_damage_stars(FX_DAMAGE_STARS_3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
                         sin_deg(kooper->yaw), -1.0f, -cos_deg(kooper->yaw), 1);
-                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 script->USE_STATE = SHELL_TOSS_STATE_RETURN;
                 break;
             }
 
             if (TEST_COLLISION_AT_ANGLE(kooper->yaw + 20.0f)) {
                 if (!N(lateral_hit_interactable_entity)(kooper)) {
-                    sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                    sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 }
 
-                fx_damage_stars(3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
+                fx_damage_stars(FX_DAMAGE_STARS_3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
                         sin_deg(kooper->yaw), -1.0f, -cos_deg(kooper->yaw), 1);
-                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 script->USE_STATE = SHELL_TOSS_STATE_RETURN;
                 break;
             }
 
              if (TEST_COLLISION_AT_ANGLE(kooper->yaw)) {
                 if (!N(lateral_hit_interactable_entity)(kooper)) {
-                    sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                    sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 }
 
-                fx_damage_stars(3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
+                fx_damage_stars(FX_DAMAGE_STARS_3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
                         sin_deg(kooper->yaw), -1.0f, -cos_deg(kooper->yaw), 1);
-                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 script->USE_STATE = SHELL_TOSS_STATE_RETURN;
                 break;
             }
@@ -475,15 +476,15 @@ API_CALLABLE(N(UseAbility)) {
             if ((kooper->flags & NPC_FLAG_COLLIDING_WITH_NPC)) {
                 script->USE_STATE = SHELL_TOSS_STATE_RETURN;
                 kooper->moveSpeed = 0.0f;
-                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 break;
             }
 
             if (N(check_for_item_collision)(kooper)) {
-                sfx_play_sound_at_npc(SOUND_286, SOUND_SPACE_MODE_0, NPC_PARTNER);
-                fx_damage_stars(3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
+                sfx_play_sound_at_npc(SOUND_KOOPER_PICKUP, SOUND_SPACE_DEFAULT, NPC_PARTNER);
+                fx_damage_stars(FX_DAMAGE_STARS_3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
                     sin_deg(kooper->yaw), -1.0f, -cos_deg(kooper->yaw), 1);
-                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 script->USE_STATE = SHELL_TOSS_STATE_PICKUP;
                 N(ShellTossHoldTime) = 8;
                 kooper->moveSpeed -= 4.0;
@@ -492,7 +493,7 @@ API_CALLABLE(N(UseAbility)) {
                     kooper->planarFlyDist += 1.0;
                 }
             } else if (ShellTossHitboxState == SHELL_TOSS_HITBOX_HIT_ENEMY) {
-                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 script->USE_STATE = SHELL_TOSS_STATE_HOLD;
                 N(ShellTossHoldTime) = 30;
                 kooper->moveSpeed = 0.0f;
@@ -501,7 +502,7 @@ API_CALLABLE(N(UseAbility)) {
                     label2:
                     script->USE_STATE = SHELL_TOSS_STATE_RETURN;
                     kooper->moveSpeed = 0.0f;
-                    sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                    sfx_play_sound_at_npc(SOUND_NONE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 } else if (kooper->planarFlyDist > 105.0f) {
                     kooper->moveSpeed -= 4.0;
                     if (kooper->moveSpeed < 0.01) {
@@ -517,7 +518,7 @@ API_CALLABLE(N(UseAbility)) {
             posY = kooper->pos.y;
             posZ = kooper->pos.z;
 
-            npc_test_move_taller_with_slipping(COLLISION_CHANNEL_8000,
+            npc_test_move_taller_with_slipping(COLLIDER_FLAG_IGNORE_SHELL,
                 &posX, &posY, &posZ, kooper->moveSpeed, kooper->yaw,
                 kooper->collisionHeight, ( kooper->collisionDiameter / 2));
 
@@ -575,16 +576,16 @@ API_CALLABLE(N(UseAbility)) {
             posY = kooper->pos.y;
             posZ = kooper->pos.z;
 
-            if (npc_test_move_taller_with_slipping(COLLISION_CHANNEL_8000,
+            if (npc_test_move_taller_with_slipping(COLLIDER_FLAG_IGNORE_SHELL,
                 &posX, &posY, &posZ, kooper->moveSpeed, clamp_angle(kooper->yaw + 180.0f),
                 kooper->collisionHeight, kooper->collisionDiameter)
             ) {
                 kooper->pos.x = posX;
                 kooper->pos.y = posY;
                 kooper->pos.z = posZ;
-                sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_MODE_0, NPC_PARTNER);
+                sfx_play_sound_at_npc(SOUND_IMMUNE, SOUND_SPACE_DEFAULT, NPC_PARTNER);
                 testLength = sin_deg(kooper->yaw + 180.0f);
-                fx_damage_stars(3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
+                fx_damage_stars(FX_DAMAGE_STARS_3, kooper->pos.x, kooper->pos.y + kooper->collisionHeight, kooper->pos.z,
                         testLength, -1.0f, -cos_deg(kooper->yaw + 180.0f), 1);
                 script->USE_STATE = SHELL_TOSS_STATE_FINISH;
             } else {
@@ -628,7 +629,7 @@ API_CALLABLE(N(UseAbility)) {
         kooper->jumpVel = 0.0f;
         kooper->collisionHeight = 24;
         kooper->curAnim = ANIM_WorldKooper_Walk;
-        sfx_stop_sound(SOUND_284);
+        sfx_stop_sound(SOUND_KOOPER_SHELL_SWIRL);
         disable_npc_blur(kooper);
 
         if (N(HasItem)) {
@@ -749,7 +750,7 @@ void N(pre_battle)(Npc* kooper) {
         kooper->flags &= ~NPC_FLAG_JUMPING;
         kooper->flags &= ~NPC_FLAG_IGNORE_WORLD_COLLISION;
 
-        sfx_stop_sound(SOUND_284);
+        sfx_stop_sound(SOUND_KOOPER_SHELL_SWIRL);
         set_action_state(ACTION_STATE_IDLE);
         partner_clear_player_tracking(kooper);
         disable_npc_blur(kooper);

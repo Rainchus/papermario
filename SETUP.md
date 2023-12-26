@@ -6,7 +6,7 @@ This repository supports:
 - [macOS](#unix)
 - [Windows Subsystem for Linux 2](#wsl-2)
 
-If you encounter any issues setting up the repo, please feel free to [reach out to us on Discord](https://discord.gg/urUm3VG).
+If you encounter any issues setting up the repo, please feel free to [reach out to us on Discord](https://discord.gg/PgcMpQTzh5).
 
 ## Common
 
@@ -15,6 +15,13 @@ Clone the repository:
 git clone https://github.com/pmret/papermario
 cd papermario
 ```
+
+Install pigment64 (our image-processing tool)
+```sh
+curl https://sh.rustup.rs -sSf | sh
+cargo install pigment64
+```
+and make sure pigment64 is in your system path.
 
 ## Unix
 

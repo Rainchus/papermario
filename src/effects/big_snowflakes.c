@@ -86,7 +86,7 @@ void big_snowflakes_update(EffectInstance* effect) {
         data->unk_14 += -0.05f;
         data->unk_10 *= 0.92;
         data->unk_14 += -0.05f;
-        data->unk_1C += func_E0200044(50, unk_28 + (i * 20)) - 25;
+        data->unk_1C += effect_simple_rand(50, unk_28 + (i * 20)) - 25;
         data->unk_18 += sin_deg(data->unk_1C) * 10.0f;
         data->unk_20 += cos_deg(data->unk_1C * 0.5f) * 10.0f;
         data->unk_04 += data->unk_10;
@@ -101,7 +101,7 @@ void big_snowflakes_render(EffectInstance* effect) {
     renderTask.appendGfx = big_snowflakes_appendGfx;
     renderTask.appendGfxArg = effect;
     renderTask.dist = 0;
-    renderTask.renderMode = RENDER_MODE_2D;
+    renderTask.renderMode = RENDER_MODE_CLOUD_NO_ZCMP;
 
     retTask = queue_render_task(&renderTask);
     retTask->renderMode |= RENDER_TASK_FLAG_REFLECT_FLOOR;

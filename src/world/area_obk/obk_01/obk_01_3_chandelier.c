@@ -2,8 +2,8 @@
 #include "model.h"
 #include "sprite/player.h"
 
-#include "world/common/todo/UnsetCamera0MoveFlag1.inc.c"
-#include "world/common/todo/SetCamera0MoveFlag1.inc.c"
+#include "world/common/EnableCameraFollowPlayerY.inc.c"
+#include "world/common/DisableCameraFollowPlayerY.inc.c"
 
 extern EvtScript N(EVS_LaunchFromCouch_Crash);
 
@@ -207,7 +207,7 @@ API_CALLABLE(N(UpdateChandelier)) {
         }
         // detect direction reversal
         if (nextSwingAngle * chandelier->swingAngle <= 0.0f) {
-            sfx_play_sound_at_player(SOUND_9D, SOUND_SPACE_MODE_0);
+            sfx_play_sound_at_player(SOUND_OBK_CHANDELIER_SWING, SOUND_SPACE_DEFAULT);
         }
         chandelier->swingAngle = nextSwingAngle;
     }
@@ -216,13 +216,13 @@ API_CALLABLE(N(UpdateChandelier)) {
     if (!script->functionTemp[2]) {
         // is chain moving?
         if (chandelier->dropDistance != lastDropDistance) {
-            sfx_play_sound_at_position(SOUND_8000000F, SOUND_SPACE_MODE_0, 440.0f, chandelier->dropDistance, 271.0f);
+            sfx_play_sound_at_position(SOUND_LOOP_OBK_LOWER_CHAIN, SOUND_SPACE_DEFAULT, 440.0f, chandelier->dropDistance, 271.0f);
             script->functionTemp[2] = TRUE;
         }
     } else {
         // is chain done moving?
         if (chandelier->dropDistance == lastDropDistance) {
-            sfx_stop_sound(SOUND_8000000F);
+            sfx_stop_sound(SOUND_LOOP_OBK_LOWER_CHAIN);
             script->functionTemp[2] = FALSE;
         }
     }
@@ -235,13 +235,13 @@ API_CALLABLE(N(UpdateChandelier)) {
             f32 x, y, z;
 
             get_collider_center(COLLIDER_o557, &x, &y, &z);
-            sfx_play_sound_at_position(SOUND_80000010, SOUND_SPACE_MODE_0, x, y, z);
+            sfx_play_sound_at_position(SOUND_LOOP_MOVE_STATUE, SOUND_SPACE_DEFAULT, x, y, z);
             script->functionTemp[3] = TRUE;
         }
     } else {
         // is cabinet done moving?
         if (cabinetPos == script->varTable[1]) {
-            sfx_stop_sound(SOUND_80000010);
+            sfx_stop_sound(SOUND_LOOP_MOVE_STATUE);
             script->functionTemp[3] = FALSE;
         }
     }
@@ -419,12 +419,12 @@ EvtScript N(EVS_LaunchFromCouch_GrabChandelier) = {
     EVT_SET(CONTROL_DATA_8, FALSE)
     EVT_SET(LVar8, MODEL_tobu1)
     EVT_EXEC(N(EVS_Couch_AnimateCushion))
-    EVT_CALL(PlaySoundAtCollider, COLLIDER_o567, SOUND_2086, SOUND_SPACE_MODE_0)
+    EVT_CALL(PlaySoundAtCollider, COLLIDER_o567, SOUND_SPRING, SOUND_SPACE_DEFAULT)
     EVT_SET(LVar8, MODEL_bane1)
     EVT_EXEC(N(EVS_Couch_AnimateSpring))
     EVT_CALL(SetPlayerActionState, ACTION_STATE_JUMP)
     EVT_WAIT(1)
-    EVT_CALL(N(UnsetCamera0MoveFlag1))
+    EVT_CALL(N(EnableCameraFollowPlayerY))
     EVT_CALL(GetPlayerPos, LVar2, LVar3, LVar4)
     EVT_SUB(LVar3, 1)
     EVT_CALL(SetPlayerPos, LVar2, LVar3, LVar4)
@@ -554,7 +554,7 @@ EvtScript N(EVS_LaunchFromCouch_Crash) = {
     EVT_CALL(DisablePlayerPhysics, TRUE)
     EVT_SET(LVar8, MODEL_tobu1)
     EVT_EXEC(N(EVS_Couch_AnimateCushion))
-    EVT_CALL(PlaySoundAtCollider, COLLIDER_o567, SOUND_2086, SOUND_SPACE_MODE_0)
+    EVT_CALL(PlaySoundAtCollider, COLLIDER_o567, SOUND_SPRING, SOUND_SPACE_DEFAULT)
     EVT_SET(LVar8, MODEL_bane1)
     EVT_EXEC(N(EVS_Couch_AnimateSpring))
     EVT_CALL(SetPlayerActionState, ACTION_STATE_JUMP)
@@ -570,16 +570,16 @@ EvtScript N(EVS_LaunchFromCouch_Crash) = {
     EVT_CALL(PlayerJump, 51, -210, 87, 60)
     EVT_CALL(GetPlayerPos, LVar0, LVar1, LVar2)
     EVT_CALL(SetNpcPos, NPC_PARTNER, LVar0, LVar1, LVar2)
-    EVT_CALL(PlaySoundAtPlayer, SOUND_162, SOUND_SPACE_MODE_0)
+    EVT_CALL(PlaySoundAtPlayer, SOUND_TRIP, SOUND_SPACE_DEFAULT)
     EVT_CALL(SetPlayerAnimation, ANIM_MarioW2_Collapse)
     EVT_WAIT(30)
     EVT_CALL(SetPlayerAnimation, ANIM_Mario1_GetUp)
     EVT_WAIT(20)
     EVT_CALL(SetPlayerAnimation, ANIM_Mario1_DustOff)
     EVT_WAIT(7)
-    EVT_CALL(PlaySoundAtPlayer, SOUND_DUST_OFF, SOUND_SPACE_MODE_0)
+    EVT_CALL(PlaySoundAtPlayer, SOUND_DUST_OFF, SOUND_SPACE_DEFAULT)
     EVT_WAIT(8)
-    EVT_CALL(PlaySoundAtPlayer, SOUND_DUST_OFF, SOUND_SPACE_MODE_0)
+    EVT_CALL(PlaySoundAtPlayer, SOUND_DUST_OFF, SOUND_SPACE_DEFAULT)
     EVT_WAIT(15)
     EVT_CALL(SetPlayerActionState, ACTION_STATE_IDLE)
     EVT_KILL_THREAD(LVarA)

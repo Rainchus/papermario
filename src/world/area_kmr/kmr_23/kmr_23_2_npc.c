@@ -24,7 +24,7 @@ typedef struct EndChapter {
 NpcSettings N(NpcSettings_StarSpirit) = {
     .height = 24,
     .radius = 24,
-    .level = 99,
+    .level = ACTOR_LEVEL_NONE,
 };
 
 AnimID N(StarSpiritAnimations)[][2] = {
@@ -65,8 +65,8 @@ WindowStyleCustom D_802417D8_909208 = {
         .size3 = { 8, 8 },
         .size4 = { 8, 8 },
     },
-    .opaqueCombineMode = gsDPSetCombineLERP(PRIMITIVE, 0, TEXEL1, 0, 0, 0, 0, TEXEL1, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
-    .transparentCombineMode = gsDPSetCombineLERP(PRIMITIVE, 0, TEXEL1, 0, TEXEL1, 0, PRIMITIVE, 0, 0, 0, 0, COMBINED, 0, 0, 0, COMBINED),
+    .opaqueCombineMode = gsDPSetCombineMode(PM_CC_2B, G_CC_PASS2),
+    .transparentCombineMode = gsDPSetCombineMode(PM_CC_2C, G_CC_PASS2),
     .color1 = { 224, 224, 224, 255 },
     .color2 = { 0, 0, 0, 255},
 };
@@ -389,14 +389,14 @@ API_CALLABLE(N(func_80240CA8_9086D8)) {
 API_CALLABLE(N(ShowMessagesInFrontOfCurtains)) {
     EndChapter* data = (EndChapter*) evt_get_variable(NULL, MV_EndChapterDataPtr);
     data->unk1E = TRUE;
-    gOverrideFlags |= GLOBAL_OVERRIDES_MESSAGES_IN_FRONT_OF_CURTAINS;
+    gOverrideFlags |= GLOBAL_OVERRIDES_MESSAGES_OVER_CURTAINS;
     return ApiStatus_DONE2;
 }
 
 API_CALLABLE(N(ShowMessagesBehindCurtains)) {
     EndChapter* data = (EndChapter*) evt_get_variable(NULL, MV_EndChapterDataPtr);
     data->unk1E = FALSE;
-    gOverrideFlags &= ~GLOBAL_OVERRIDES_MESSAGES_IN_FRONT_OF_CURTAINS;
+    gOverrideFlags &= ~GLOBAL_OVERRIDES_MESSAGES_OVER_CURTAINS;
     return ApiStatus_DONE2;
 }
 
@@ -542,7 +542,7 @@ NpcData N(NpcData_Eldstar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = ELDSTAR_ANIMS,
     },
@@ -552,7 +552,7 @@ NpcData N(NpcData_Eldstar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = ELDSTAR_ANIMS,
     },
@@ -565,7 +565,7 @@ NpcData N(NpcData_Mamar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = MAMAR_ANIMS,
     },
@@ -575,7 +575,7 @@ NpcData N(NpcData_Mamar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = MAMAR_ANIMS,
     },
@@ -588,7 +588,7 @@ NpcData N(NpcData_Skolar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = SKOLAR_ANIMS,
     },
@@ -598,7 +598,7 @@ NpcData N(NpcData_Skolar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = SKOLAR_ANIMS,
     },
@@ -611,7 +611,7 @@ NpcData N(NpcData_Muskular)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = MUSKULAR_ANIMS,
     },
@@ -621,7 +621,7 @@ NpcData N(NpcData_Muskular)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = MUSKULAR_ANIMS,
     },
@@ -634,7 +634,7 @@ NpcData N(NpcData_Misstar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = MISSTAR_ANIMS,
     },
@@ -644,7 +644,7 @@ NpcData N(NpcData_Misstar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = MISSTAR_ANIMS,
     },
@@ -657,7 +657,7 @@ NpcData N(NpcData_Klevar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = KLEVAR_ANIMS,
     },
@@ -667,7 +667,7 @@ NpcData N(NpcData_Klevar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = KLEVAR_ANIMS,
     },
@@ -680,7 +680,7 @@ NpcData N(NpcData_Kalmar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_01),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = KALMAR_ANIMS,
     },
@@ -690,7 +690,7 @@ NpcData N(NpcData_Kalmar)[] = {
         .yaw = 270,
         .init = &N(EVS_NpcInit_Eldstar_02),
         .settings = &N(NpcSettings_StarSpirit),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_PLAYER_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = KALMAR_ANIMS,
     },

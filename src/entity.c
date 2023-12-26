@@ -2,25 +2,16 @@
 #include "ld_addrs.h"
 #include "entity.h"
 #include "model.h"
-
-#if VERSION_IQUE
-// TODO: remove if sections are split in iQue release
-extern Addr entity_jan_iwa_ROM_START;
-extern Addr entity_jan_iwa_ROM_END;
-extern Addr entity_default_ROM_START;
-extern Addr entity_default_ROM_END;
-extern Addr entity_sbk_omo_ROM_START;
-extern Addr entity_sbk_omo_ROM_END;
-#endif
+#include "sprite/player.h"
 
 #ifdef SHIFT
 extern Addr WorldEntityHeapBottom;
 extern Addr WorldEntityHeapBase;
 #define WORLD_ENTITY_HEAP_BOTTOM (s32) WorldEntityHeapBottom
 #define WORLD_ENTITY_HEAP_BASE (s32) WorldEntityHeapBase
-#define entity_jan_iwa_VRAM (s32) entity_jan_iwa_VRAM
-#define entity_sbk_omo_VRAM (s32) entity_sbk_omo_VRAM
-#define entity_default_VRAM (s32) entity_default_VRAM
+#define entity_jan_iwa_VRAM (void*) entity_jan_iwa_VRAM
+#define entity_sbk_omo_VRAM (void*) entity_sbk_omo_VRAM
+#define entity_default_VRAM (void*) entity_default_VRAM
 #else
 #define WORLD_ENTITY_HEAP_BOTTOM 0x80250000
 #define WORLD_ENTITY_HEAP_BASE 0x80267FF0
@@ -153,7 +144,7 @@ void update_entities(void) {
                     entity->rot.y = -gCameras[gCurrentCameraID].curYaw;
                 }
 
-                if (!gGameStatusPtr->disableScripts) {
+                if (gGameStatusPtr->debugScripts == DEBUG_SCRIPTS_NONE) {
                     if (entity->updateScriptCallback != NULL) {
                         entity->updateScriptCallback(entity);
                     }
@@ -332,7 +323,7 @@ void func_8010FE44(void* arg0) {
 void entity_model_set_shadow_color(void* data) {
     s32 alpha = (s32)data;
 
-    gDPSetCombineLERP(gMainGfxPos++, 0, 0, 0, 0, PRIMITIVE, 0, TEXEL0, 0, 0, 0, 0, 0, TEXEL0, 0, PRIMITIVE, 0);
+    gDPSetCombineMode(gMainGfxPos++, PM_CC1_SHADOW, PM_CC2_SHADOW);
     gDPSetPrimColor(gMainGfxPos++, 0, 0, 0, 0, 0, alpha);
 }
 
@@ -784,7 +775,7 @@ void load_area_specific_entity_data(void) {
     }
 }
 
-void clear_entity_data(s32 arg0) {
+void clear_entity_data(b32 arg0) {
     s32 i;
 
     D_801516FC = 1;
@@ -1301,7 +1292,7 @@ s32 create_entity(EntityBlueprint* bp, ...) {
         case ENTITY_TYPE_RED_SWITCH:
         case ENTITY_TYPE_SIMPLE_SPRING:
         case ENTITY_TYPE_SCRIPT_SPRING:
-        case ENTITY_TYPE_STAR_BOX_LAUCHER:
+        case ENTITY_TYPE_STAR_BOX_LAUNCHER:
             entity->flags |= ENTITY_FLAG_4000;
             break;
     }
@@ -1516,18 +1507,14 @@ ApiStatus AssignCrateFlag(Evt* script, s32 isInitialCall) {
 }
 
 s32 create_entity_shadow(Entity* entity, f32 x, f32 y, f32 z) {
-    u16 staticFlags = entity->blueprint->flags;
+    u16 bpFlags = entity->blueprint->flags;
     s32 type;
     s16 shadowIndex;
 
-    if (staticFlags & ENTITY_FLAG_FIXED_SHADOW_SIZE) {
-        if (staticFlags & ENTITY_FLAG_SQUARE_SHADOW) {
-            type = 2;
-        } else {
-            type = 3;
-        }
+    if (bpFlags & ENTITY_FLAG_FIXED_SHADOW_SIZE) {
+        type = (bpFlags & ENTITY_FLAG_CIRCULAR_SHADOW) ? SHADOW_FIXED_CIRCLE : SHADOW_FIXED_SQUARE;
     } else {
-        type = ((staticFlags >> 11) ^ 1) & 1;
+        type = (bpFlags & ENTITY_FLAG_CIRCULAR_SHADOW) ? SHADOW_VARYING_CIRCLE : SHADOW_VARYING_SQUARE;
     }
 
     shadowIndex = create_shadow_type(type, x, y, z);
@@ -1544,19 +1531,19 @@ s32 create_shadow_type(s32 type, f32 x, f32 y, f32 z) {
     s32 shadowIndex;
 
     switch (type) {
-        case 2:
+        case SHADOW_FIXED_CIRCLE:
             isFixedSize = TRUE;
-        case 0:
+        case SHADOW_VARYING_CIRCLE:
             bp = &CircularShadowA;
             break;
-        case 3:
+        case SHADOW_FIXED_SQUARE:
             isFixedSize = TRUE;
-        case 1:
+        case SHADOW_VARYING_SQUARE:
             bp = &SquareShadow;
             break;
-        case 5:
+        case SHADOW_FIXED_ALT_CIRCLE:
             isFixedSize = TRUE;
-        case 4:
+        case SHADOW_VARYING_ALT_CIRCLE:
             bp = &CircularShadowB;
             break;
     }
@@ -1670,7 +1657,7 @@ s32 entity_raycast_down(f32* x, f32* y, f32* z, f32* hitYaw, f32* hitPitch, f32*
         hitID = entityID | COLLISION_WITH_ENTITY_BIT;
     }
 
-    colliderID = test_ray_colliders(0x10000, *x, *y, *z, 0.0f, -1.0f, 0.0f, &hitX, &hitY, &hitZ, &hitDepth, &hitNx,
+    colliderID = test_ray_colliders(COLLIDER_FLAG_IGNORE_PLAYER, *x, *y, *z, 0.0f, -1.0f, 0.0f, &hitX, &hitY, &hitZ, &hitDepth, &hitNx,
                                     &hitNy, &hitNz);
     if (colliderID >= 0) {
         hitID = colliderID;
@@ -1726,11 +1713,10 @@ void set_peach_shadow_scale(Shadow* shadow, f32 scale) {
 
     if (!gGameStatusPtr->isBattle) {
         switch (playerStatus->anim) {
-            //TODO raw player anims
-            case 0xC0018:
-            case 0xC0019:
-            case 0xC001A:
-            case 0xD0008:
+            case ANIM_Peach2_Carried:
+            case ANIM_Peach2_Thrown:
+            case ANIM_Peach2_Land:
+            case ANIM_Peach3_TiedSideways:
                 shadow->scale.x = 0.26f - (scale / 2600.0f);
                 if (shadow->scale.x < 0.01) {
                     shadow->scale.x = 0.01f;

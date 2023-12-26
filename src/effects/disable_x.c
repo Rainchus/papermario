@@ -151,7 +151,7 @@ void disable_x_update(EffectInstance* effect) {
                     data[1].unk_28 = 0;
                     data->unk_38++;
                     if (data->pos.y > -500.0f) {
-                        sfx_play_sound_at_position(SOUND_2107, SOUND_SPACE_MODE_0, data->pos.x, data->pos.y, data->pos.z);
+                        sfx_play_sound_at_position(SOUND_INFLICT_KO, SOUND_SPACE_DEFAULT, data->pos.x, data->pos.y, data->pos.z);
                     }
                 } else if (unk_3C < unk_38) {
                     load_effect(EFFECT_DISABLE_X);
@@ -248,7 +248,7 @@ void func_E00826C4(DisableXFXData* data) {
         gDPSetCombineMode(gMainGfxPos++, G_CC_MODULATEIDECALA, G_CC_MODULATEIDECALA);
     } else {
         gDPSetRenderMode(gMainGfxPos++, G_RM_CLD_SURF, G_RM_CLD_SURF2);
-        gDPSetCombineLERP(gMainGfxPos++, TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, TEXEL0, 0, TEXEL0, 0, SHADE, 0, PRIMITIVE, 0, TEXEL0, 0);
+        gDPSetCombineMode(gMainGfxPos++, PM_CC_49, PM_CC_49);
     }
 }
 

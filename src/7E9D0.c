@@ -163,9 +163,9 @@ s32 phys_adjust_cam_on_landing(void) {
             gCameras[CAM_DEFAULT].moveFlags &= ~CAMERA_MOVE_IGNORE_PLAYER_Y;
         }
     } else if (partnerStatus->partnerActionState != PARTNER_ACTION_NONE && partnerStatus->actingPartner == PARTNER_PARAKARRY) {
-        gCameras[CAM_DEFAULT].moveFlags |= CAMERA_MOVE_FLAG_2;
+        gCameras[CAM_DEFAULT].moveFlags |= CAMERA_MOVE_NO_INTERP_Y;
     } else {
-        gCameras[CAM_DEFAULT].moveFlags &= ~CAMERA_MOVE_FLAG_2;
+        gCameras[CAM_DEFAULT].moveFlags &= ~CAMERA_MOVE_NO_INTERP_Y;
     }
 
     return ret;
@@ -233,7 +233,7 @@ void phys_update_action_state(void) {
     if (playerStatus->camResetDelay != 0) {
         playerStatus->camResetDelay--;
         if (playerStatus->camResetDelay == 0) {
-            gCameras[CAM_DEFAULT].moveFlags |= CAMERA_MOVE_FLAG_4;
+            gCameras[CAM_DEFAULT].moveFlags |= CAMERA_MOVE_ACCEL_INTERP_Y;
         }
     }
 
@@ -245,7 +245,7 @@ void phys_update_action_state(void) {
         LastMidairPlayerVelY = playerStatus->gravityIntegrator[0];
     }
 
-    func_800E24F8();
+    calculate_camera_yinterp_rate();
     if (playerSpinState->stopSoundTimer != 0) {
         playerSpinState->stopSoundTimer--;
         if (playerSpinState->stopSoundTimer == 0) {
@@ -289,7 +289,7 @@ void phys_update_action_state(void) {
 void phys_peach_update(void) {
     PlayerStatus* playerStatus = &gPlayerStatus;
 
-    func_800E24F8();
+    calculate_camera_yinterp_rate();
 
     do {
         if (!(playerStatus->flags & PS_FLAG_PAUSED) && check_conversation_trigger()) {
@@ -448,7 +448,7 @@ void start_bounce_b(void) {
     playerStatus->flags |= PS_FLAG_SCRIPTED_FALL;
 }
 
-s32 check_input_hammer(void) {
+b32 check_input_hammer(void) {
     PlayerStatus* playerStatus = &gPlayerStatus;
     PlayerData* playerData = &gPlayerData;
 
@@ -471,7 +471,7 @@ s32 check_input_hammer(void) {
     return FALSE;
 }
 
-s32 check_input_jump(void) {
+b32 check_input_jump(void) {
     PlayerStatus* playerStatus = &gPlayerStatus;
     CollisionStatus* collisionStatus = &gCollisionStatus;
     s32 surfaceType;
@@ -564,7 +564,7 @@ void peach_force_disguise_action(s32 useParasol) {
         set_action_state(ACTION_STATE_USE_SNEAKY_PARASOL);
     } else {
         playerStatus->animFlags &= ~PA_FLAG_INVISIBLE;
-        gGameStatusPtr->peachFlags &= ~PEACH_STATUS_FLAG_DISGUISED;
+        gGameStatusPtr->peachFlags &= ~PEACH_FLAG_DISGUISED;
         playerStatus->peachDisguise = PEACH_DISGUISE_NONE;
         free_npc_by_index(PeachDisguiseNpcIndex);
         set_action_state(ACTION_STATE_IDLE);
@@ -582,9 +582,9 @@ void peach_check_for_parasol_input(void) {
         if (D_8010C92C != 0) {
             D_8010C92C--;
             if (D_8010C92C == 0) {
-                if (gGameStatusPtr->peachFlags & PEACH_STATUS_FLAG_DISGUISED) {
+                if (gGameStatusPtr->peachFlags & PEACH_FLAG_DISGUISED) {
                     playerStatus->animFlags |= PA_FLAG_INVISIBLE;
-                    gGameStatusPtr->peachFlags |= PEACH_STATUS_FLAG_DISGUISED;
+                    gGameStatusPtr->peachFlags |= PEACH_FLAG_DISGUISED;
 
                     disguiseNpc = peach_make_disguise_npc(gGameStatusPtr->peachDisguise);
                     if (disguiseNpc != NULL) {
@@ -592,7 +592,7 @@ void peach_check_for_parasol_input(void) {
                     }
                 }
             }
-        } else if (gGameStatusPtr->peachFlags & PEACH_STATUS_FLAG_HAS_PARASOL && playerStatus->pressedButtons & BUTTON_B) {
+        } else if (gGameStatusPtr->peachFlags & PEACH_FLAG_HAS_PARASOL && playerStatus->pressedButtons & BUTTON_B) {
             set_action_state(ACTION_STATE_USE_SNEAKY_PARASOL);
         }
     }
@@ -632,7 +632,7 @@ Npc* peach_make_disguise_npc(s32 peachDisguise) {
     playerStatus->peachDisguise = peachDisguise;
     gGameStatusPtr->peachDisguise = peachDisguise;
 
-    bpPtr->flags = NPC_FLAG_8 | NPC_FLAG_IGNORE_WORLD_COLLISION | NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_CAMERA_FOR_YAW;
+    bpPtr->flags = NPC_FLAG_FLYING | NPC_FLAG_IGNORE_WORLD_COLLISION | NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_CAMERA_FOR_YAW;
     bpPtr->initialAnim = BasicPeachDisguiseAnims[playerStatus->peachDisguise].idle;
     bpPtr->onUpdate = NULL;
     bpPtr->onRender = NULL;
@@ -676,7 +676,7 @@ s32 peach_disguise_check_overlaps(void) {
         f32 x = playerStatus->pos.x + (dx * radius);
         f32 y = playerStatus->pos.y + 4.0f;
         f32 z = playerStatus->pos.z - (dy * radius);
-        hitID = player_test_lateral_overlap(3, playerStatus, &x, &y, &z, 4.0f, yaw);
+        hitID = player_test_lateral_overlap(PLAYER_COLLISION_3, playerStatus, &x, &y, &z, 4.0f, yaw);
         if (hitID >= 0) {
             break;
         }

@@ -31,7 +31,7 @@ API_CALLABLE(N(init)) {
     actionCommandStatus->barFillWidth = 0;
     actionCommandStatus->isBarFilled = FALSE;
     battleStatus->actionSuccess = 0;
-    battleStatus->unk_86 = 0;
+    battleStatus->actionResult = ACTION_RESULT_FAIL;
     actionCommandStatus->hudPrepareTime = 30;
     actionCommandStatus->hudPosX = -48;
     actionCommandStatus->hudPosY = 80;
@@ -79,7 +79,7 @@ API_CALLABLE(N(start)) {
     actionCommandStatus->barFillWidth = 0;
     battleStatus->actionSuccess = 0;
     actionCommandStatus->state = 10;
-    battleStatus->flags1 &= ~BS_FLAGS1_8000;
+    battleStatus->flags1 &= ~BS_FLAGS1_FREE_ACTION_COMMAND;
 
     func_80269118();
 
@@ -140,7 +140,7 @@ void N(update)(void) {
             actionCommandStatus->unk_5C = 0;
             D_802A98C0 = 0;
             actionCommandStatus->frameCounter = actionCommandStatus->duration;
-            sfx_play_sound_with_params(SOUND_80000041, 0, 0, 0);
+            sfx_play_sound_with_params(SOUND_LOOP_CHARGE_BAR, 0, 0, 0);
             actionCommandStatus->state = 11;
 
             // fallthrough
@@ -192,9 +192,9 @@ void N(update)(void) {
             }
             battleStatus->actionSuccess = actionCommandStatus->barFillLevel / 100;
             D_802A98C0 = battleStatus->curButtonsDown;
-            battleStatus->actionResult = actionCommandStatus->unk_5C;
+            battleStatus->actionQuality = actionCommandStatus->unk_5C;
 
-            sfx_adjust_env_sound_params(SOUND_80000041, 0, 0, battleStatus->actionSuccess * 12);
+            sfx_adjust_env_sound_params(SOUND_LOOP_CHARGE_BAR, 0, 0, battleStatus->actionSuccess * 12);
 
             if (actionCommandStatus->frameCounter != 0) {
                 actionCommandStatus->frameCounter--;
@@ -209,9 +209,9 @@ void N(update)(void) {
 
             cutoff = actionCommandStatus->mashMeterCutoffs[actionCommandStatus->mashMeterIntervals - 1];
             if (cutoff >= battleStatus->actionSuccess) {
-                battleStatus->unk_86 = -2;
+                battleStatus->actionResult = ACTION_RESULT_MINUS_2;
             } else {
-                battleStatus->unk_86 = 1;
+                battleStatus->actionResult = ACTION_RESULT_SUCCESS;
             }
 
             if (battleStatus->actionSuccess == 100) {
@@ -219,7 +219,7 @@ void N(update)(void) {
             }
 
             btl_set_popup_duration(0);
-            sfx_stop_sound(SOUND_80000041);
+            sfx_stop_sound(SOUND_LOOP_CHARGE_BAR);
             actionCommandStatus->frameCounter = 5;
             actionCommandStatus->state = 12;
             break;

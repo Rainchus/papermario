@@ -3,6 +3,7 @@
 #include "message_ids.h"
 #include "hud_element.h"
 #include "ld_addrs.h"
+#include "game_modes.h"
 
 extern HudScript HES_Spirit1;
 
@@ -299,7 +300,7 @@ void filemenu_selectlanguage_handle_input(MenuPanel* menu) {
     menu->selected = MENU_PANEL_SELECTED_GRID_DATA(menu);
     if (originalSelected != menu->selected) {
         if (var_a1 == 0) {
-            sfx_play_sound(SOUND_2101);
+            sfx_play_sound(SOUND_FILE_MENU_MOVE_CURSOR);
         }
         switch (menu->selected) {                          /* irregular */
             case 0:
@@ -324,9 +325,9 @@ void filemenu_selectlanguage_handle_input(MenuPanel* menu) {
         set_window_update(WINDOW_ID_FILEMENU_FILE3_INFO, (s32) &filemenu_selectlanguage_80248018);
         set_window_update(WINDOW_ID_FILEMENU_TITLE, (s32) filemenu_update_hidden_title);
         if (var_s1 == 0) {
-            sfx_play_sound(SOUND_F1);
+            sfx_play_sound(SOUND_PLANTS_BELL);
         } else {
-            sfx_play_sound(SOUND_D6);
+            sfx_play_sound(SOUND_FILE_MENU_OUT);
         }
         set_game_mode(GAME_MODE_END_LANGUAGE_SELECT);
     }

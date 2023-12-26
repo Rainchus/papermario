@@ -4,8 +4,8 @@
 #include "common_structs.h"
 #include "macros.h"
 
-ApiStatus FadeBackgroundToBlack(Evt* script, s32 isInitialCall);
-ApiStatus UnfadeBackgroundFromBlack(Evt* script, s32 isInitialCall);
+ApiStatus FadeBackgroundDarken(Evt* script, s32 isInitialCall);
+ApiStatus FadeBackgroundLighten(Evt* script, s32 isInitialCall);
 ApiStatus GetCamLookAtObjVector(Evt* script, s32 isInitialCall);
 ApiStatus HasMerleeCasts(Evt* script, s32 isInitialCall);
 ApiStatus OnDefeatEnemy(Evt* script, s32 isInitialCall);
@@ -91,7 +91,7 @@ ApiStatus SetRenderMode(Evt* script, s32 isInitialCall);
 ApiStatus PlaySoundAtModel(Evt* script, s32 isInitialCall);
 ApiStatus PlaySoundAtCollider(Evt* script, s32 isInitialCall);
 ApiStatus SetCamEnabled(Evt* script, s32 isInitialCall);
-ApiStatus SetCamFlag80(Evt* script, s32 isInitialCall);
+ApiStatus SetCamNoDraw(Evt* script, s32 isInitialCall);
 ApiStatus SetCamPerspective(Evt* script, s32 isInitialCall);
 ApiStatus SetCamViewport(Evt* script, s32 isInitialCall);
 ApiStatus func_802CABE8(Evt* script, s32 isInitialCall);
@@ -124,6 +124,7 @@ ApiStatus AdjustCam(Evt* script, s32 isInitialCall);
 ApiStatus ResetCam(Evt* script, s32 isInitialCall);
 ApiStatus LoadAnimatedModel(Evt* script, s32 isInitialCall);
 ApiStatus PlayModelAnimation(Evt* script, s32 isInitialCall);
+ApiStatus SetAnimatorFlags(Evt* script, s32 isInitialCall);
 ApiStatus SetAnimatedModelRootPosition(Evt* script, s32 isInitialCall);
 ApiStatus ChangeModelAnimation(Evt* script, s32 isInitialCall);
 ApiStatus DeleteNpc(Evt* script, s32 isInitialCall);
@@ -331,7 +332,7 @@ ApiStatus SetPlayerImgFXFlags(Evt* script, s32 isInitialCall);
 ApiStatus UpdatePlayerImgFX(Evt* script, s32 isInitialCall);
 ApiStatus PushSong(Evt* script, s32 isInitialCall);
 ApiStatus PopSong(Evt* script, s32 isInitialCall);
-ApiStatus func_802D62E4(Evt* script, s32 isInitialCall);
+ApiStatus StopTrackingSoundPos(Evt* script, s32 isInitialCall);
 ApiStatus func_80044238(Evt* script, s32 isInitialCall);
 ApiStatus MakeLocalVertexCopy(Evt* script, s32 isInitialCall);
 ApiStatus SetCustomGfx(Evt* script, s32 isInitialCall);

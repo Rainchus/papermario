@@ -80,8 +80,8 @@ void entity_HiddenPanel_idle(Entity* entity) {
                     Npc* npc = get_npc_by_index(npcIndex);
                     dist2D(entity->pos.x, entity->pos.z, npc->pos.x, npc->pos.z);
                     data->standingNpcIndex = npcIndex;
-                    data->npcFlags = npc->flags & (NPC_FLAG_GRAVITY | NPC_FLAG_8);
-                    npc->flags &= ~NPC_FLAG_8;
+                    data->npcFlags = npc->flags & (NPC_FLAG_GRAVITY | NPC_FLAG_FLYING);
+                    npc->flags &= ~NPC_FLAG_FLYING;
                     npc->flags |= NPC_FLAG_GRAVITY;
                     data->riseVel = 0.5f;
                     exec_entity_commandlist(entity);
@@ -118,7 +118,7 @@ void entity_HiddenPanel_flip_over(Entity* entity) {
 
     switch (data->state) {
         case 0:
-            sfx_play_sound(SOUND_20AB);
+            sfx_play_sound(SOUND_FLIP_PANEL);
             data->state = 1;
             data->unk_02 = TRUE;
             data->riseInterpPhase = 90.0f;
@@ -199,7 +199,7 @@ void entity_HiddenPanel_flip_over(Entity* entity) {
                 rotAngle = 0.0f;
                 data->timer = 10;
                 exec_ShakeCamX(CAM_DEFAULT, CAM_SHAKE_DECAYING_VERTICAL, 1, 0.2f);
-                sfx_play_sound(SOUND_20AC);
+                sfx_play_sound(SOUND_CLOSE_PANEL);
             }
             break;
         case 4:
@@ -239,7 +239,7 @@ void entity_HiddenPanel_flip_over(Entity* entity) {
                 entity->flags &= ~ENTITY_FLAG_DISABLE_COLLISION;
                 if (data->standingNpcIndex >= 0) {
                     Npc* npc = get_npc_by_index(data->standingNpcIndex);
-                    npc->flags &= ~(NPC_FLAG_GRAVITY | NPC_FLAG_8);
+                    npc->flags &= ~(NPC_FLAG_GRAVITY | NPC_FLAG_FLYING);
                     npc->flags |= data->npcFlags;
                 }
             }

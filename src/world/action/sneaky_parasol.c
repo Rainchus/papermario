@@ -48,17 +48,17 @@ Npc* parasol_get_npc(void) {
     Npc* ret = NULL;
     do {                // TODO fix this do...while
         if (playerStatus->availableDisguiseType != PEACH_DISGUISE_NONE) {
-            if (gGameStatusPtr->peachFlags & PEACH_STATUS_FLAG_8) {
-                gGameStatusPtr->peachFlags &= ~PEACH_STATUS_FLAG_8;
+            if (gGameStatusPtr->peachFlags & PEACH_FLAG_BLOCK_NEXT_DISGUISE) {
+                gGameStatusPtr->peachFlags &= ~PEACH_FLAG_BLOCK_NEXT_DISGUISE;
             } else {
                 ret = npc_find_closest(playerStatus->pos.x, playerStatus->pos.y, playerStatus->pos.z, 100.0f);
                 if (ret != 0) {
                     if (fabs(ret->pos.y - playerStatus->pos.y) - 1.0 > 0.0) {
-                        ret = 0;
+                        ret = NULL;
                     } else {
                         angle = clamp_angle(atan2(playerStatus->pos.x, playerStatus->pos.z, ret->pos.x, ret->pos.z));
                         if (fabs(angle - func_800E5348()) > 30.0) {
-                            ret = 0;
+                            ret = NULL;
                         }
                     }
                 }
@@ -112,7 +112,7 @@ void action_update_parasol(void) {
             disguiseNpc = get_npc_by_index(PeachDisguiseNpcIndex);
             disguiseNpc->flags |= NPC_FLAG_IGNORE_CAMERA_FOR_YAW;
             playerStatus->flags |= PS_FLAG_ROTATION_LOCKED;
-            sfx_play_sound_at_player(SOUND_FD, SOUND_SPACE_MODE_0);
+            sfx_play_sound_at_player(SOUND_SNEAKY_PARASOL_COPY, SOUND_SPACE_DEFAULT);
         }
     }
 
@@ -121,7 +121,7 @@ void action_update_parasol(void) {
             if (playerStatus->flipYaw[CAM_DEFAULT] == 0) {
                 if (peach_disguise_check_overlaps() < 0) {
                     suggest_player_anim_allow_backward(ANIM_Peach2_UseParasol);
-                    sfx_play_sound_at_player(SOUND_92, SOUND_SPACE_MODE_0);
+                    sfx_play_sound_at_player(SOUND_KKJ_USE_SNEAKY_PARASOL, SOUND_SPACE_DEFAULT);
                     playerStatus->actionSubstate++; // SUBSTATE_USE_PARASOL
                 } else {
                     suggest_player_anim_allow_backward(ANIM_Peach2_CantFitParasol);
@@ -146,7 +146,7 @@ void action_update_parasol(void) {
                 playerStatus->curStateTime = 12;
                 playerStatus->flags |= PS_FLAG_ROTATION_LOCKED;
                 playerStatus->actionSubstate++; // SUBSTATE_DISGUISE_BEGIN
-                sfx_play_sound_at_player(SOUND_FD, SOUND_SPACE_MODE_0);
+                sfx_play_sound_at_player(SOUND_SNEAKY_PARASOL_COPY, SOUND_SPACE_DEFAULT);
             }
             break;
         case SUBSTATE_DISGUISE_BEGIN:
@@ -189,7 +189,7 @@ void action_update_parasol(void) {
         case SUBSTATE_DISGUISE_MAKE_NPC:
             gameStatus = gGameStatusPtr;
             playerStatus->animFlags |= PA_FLAG_INVISIBLE;
-            gameStatus->peachFlags |= PEACH_STATUS_FLAG_DISGUISED;
+            gameStatus->peachFlags |= PEACH_FLAG_DISGUISED;
             playerStatus->actionSubstate++; // SUBSTATE_DISGUISE_SPIN_DOWN
         case SUBSTATE_DISGUISE_SPIN_DOWN:
             if (--playerStatus->curStateTime == 0) {
@@ -265,7 +265,7 @@ void action_update_parasol(void) {
                     playerStatus->actionSubstate++; // SUBSTATE_SPIN_DOWN
                     gameStatus2 = gGameStatusPtr;
                     playerStatus->animFlags &= ~PA_FLAG_INVISIBLE;
-                    gameStatus2->peachFlags &= ~PEACH_STATUS_FLAG_DISGUISED;
+                    gameStatus2->peachFlags &= ~PEACH_FLAG_DISGUISED;
                     playerStatus->peachDisguise = 0;
                     free_npc_by_index(PeachDisguiseNpcIndex);
                     playerStatus->colliderHeight = 55;
@@ -385,7 +385,7 @@ void action_update_parasol(void) {
     if (transformation->revertTime != 0) {
         if (transformation->revertTime <= 10) {
             if (transformation->revertTime == 10) {
-                sfx_play_sound_at_player(SOUND_FE, SOUND_SPACE_MODE_0);
+                sfx_play_sound_at_player(SOUND_SNEAKY_PARASOL_TRANSFORM, SOUND_SPACE_DEFAULT);
             }
             if ((transformation->revertTime & 3) == 0) {
                 fx_stars_shimmer(4,

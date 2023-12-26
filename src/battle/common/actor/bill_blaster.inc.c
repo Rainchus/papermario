@@ -6,16 +6,16 @@
 
 #define NAMESPACE A(bill_blaster)
 
+extern s32 N(DefaultAnims)[];
 extern EvtScript N(EVS_Init);
 extern EvtScript N(EVS_Idle);
 extern EvtScript N(EVS_TakeTurn);
 extern EvtScript N(EVS_HandleEvent);
 extern EvtScript N(EVS_Move_FireBullet);
 extern EvtScript N(EVS_Move_CheckForBullet);
-extern s32 N(DefaultAnims)[];
 
 extern ActorBlueprint A(bullet_bill);
-extern Formation N(BulletBillSummon);
+extern Formation N(BulletFormation);
 
 enum N(ActorPartIDs) {
     PRT_MAIN            = 1,
@@ -71,7 +71,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, -9 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_MULTI_TARGET | ACTOR_PART_FLAG_80000000,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_PRIMARY_TARGET | ACTOR_PART_FLAG_SKIP_MOVEMENT_ALLOC,
         .index = PRT_TARGET,
         .posOffset = { 100, 0, 0 },
         .targetOffset = { -106, 29 },
@@ -87,9 +87,9 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_BILL_BLASTER,
-    .level = 10,
+    .level = ACTOR_LEVEL_BILL_BLASTER,
     .maxHP = 4,
-    .partCount = ARRAY_COUNT( N(ActorParts)),
+    .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
     .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
@@ -131,7 +131,7 @@ EvtScript N(EVS_Idle) = {
 
 EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(EVENT_HIT_COMBO)
@@ -185,7 +185,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_RETURN
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -193,7 +193,7 @@ EvtScript N(EVS_HandleEvent) = {
 
 EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_HasBullet, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(0)
@@ -201,15 +201,15 @@ EvtScript N(EVS_TakeTurn) = {
         EVT_CASE_EQ(1)
             EVT_EXEC_WAIT(N(EVS_Move_CheckForBullet))
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
 };
 
 API_CALLABLE(N(SetBulletInitVars)) {
-    N(BulletBillSummon)[0].var0 = TRUE;
-    N(BulletBillSummon)[0].var1 = script->owner1.actorID;
+    N(BulletFormation)[0].var0 = TRUE;
+    N(BulletFormation)[0].var1 = script->owner1.actorID;
 
     return ApiStatus_DONE2;
 }
@@ -220,8 +220,8 @@ EvtScript N(EVS_Move_FireBullet) = {
     EVT_THREAD
         EVT_CALL(ShakeCam, CAM_BATTLE, 0, 10, EVT_FLOAT(1.0))
     EVT_END_THREAD
-    EVT_CALL(StartRumble, 9)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_2C8)
+    EVT_CALL(StartRumble, BTL_RUMBLE_PLAYER_HEAVY)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_BULLET_BILL_FIRE)
     EVT_CALL(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)
     EVT_SUB(LVar0, 33)
     EVT_ADD(LVar1, 19)
@@ -230,7 +230,7 @@ EvtScript N(EVS_Move_FireBullet) = {
     EVT_PLAY_EFFECT(EFFECT_00, LVar0, LVar1, LVar2, 2, 5, 2, 2, 0)
     EVT_WAIT(2)
     EVT_CALL(N(SetBulletInitVars))
-    EVT_CALL(SummonEnemy, EVT_PTR(N(BulletBillSummon)), FALSE)
+    EVT_CALL(SummonEnemy, EVT_PTR(N(BulletFormation)), FALSE)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_BulletID, LVar0)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_HasBullet, TRUE)
     EVT_RETURN
@@ -247,8 +247,8 @@ EvtScript N(EVS_Move_CheckForBullet) = {
     EVT_END
 };
 
-Vec3i N(DefaultPos) = { NPC_DISPOSE_LOCATION };
+Vec3i N(SummonPos) = { NPC_DISPOSE_LOCATION };
 
-Formation N(BulletBillSummon) = {
-    ACTOR_BY_POS(A(bullet_bill), N(DefaultPos), 100),
+Formation N(BulletFormation) = {
+    ACTOR_BY_POS(A(bullet_bill), N(SummonPos), 100),
 };

@@ -139,12 +139,12 @@ void entity_SpinningFlower_init(Entity* entity) {
 }
 
 void func_802BB314_E2DC44(Entity* entity) {
-    sfx_play_sound_at_position(SOUND_8000006A, SOUND_SPACE_MODE_0, entity->pos.x, entity->pos.y, entity->pos.z);
+    sfx_play_sound_at_position(SOUND_LOOP_SPINNING_FLOWER, SOUND_SPACE_DEFAULT, entity->pos.x, entity->pos.y, entity->pos.z);
 }
 
 void func_802BB34C_E2DC7C(void) {
-    sfx_play_sound(SOUND_391 | SOUND_ID_TRIGGER_CHANGE_SOUND);
-    snd_stop_tracking_env_sound_pos(SOUND_391, TRUE);
+    sfx_play_sound(SOUND_LRAW_SPINNING_FLOWER | SOUND_ID_TRIGGER_CHANGE_SOUND);
+    snd_stop_tracking_env_sound_pos(SOUND_LRAW_SPINNING_FLOWER, TRUE);
 }
 
 void entity_PinkFlowerLight_setupGfx(s32 entityIndex) {
@@ -287,7 +287,7 @@ void entity_CymbalPlant_idle(Entity* entity) {
                 disable_player_input();
                 set_action_state(ACTION_STATE_IDLE);
                 play_model_animation(entity->virtualModelIndex, Entity_CymbalPlant_AnimationGrab);
-                sfx_play_sound(SOUND_F2);
+                sfx_play_sound(SOUND_PLANTS_CYMBAL_CRASH);
                 func_802BB8D4_E2E204(entity);
             } else {
                 data->unk_01 = 0;
@@ -355,7 +355,7 @@ EntityScript Entity_SpinningFlower_Script = {
 
 EntityScript Entity_PinkFlower_Script = {
     es_SetCallback(entity_PinkFlower_idle, 0)
-    es_PlaySound(SOUND_F4)
+    es_PlaySound(SOUND_PLANTS_LIGHT_UP)
     es_SetCallback(NULL, 50)
     es_SetFlags(ENTITY_FLAG_SHOWS_INSPECT_PROMPT)
     es_Restart
@@ -380,7 +380,7 @@ DmaEntry Entity_CymbalPlant_dma[] = { ENTITY_ROM(CymbalPlant_gfx), ENTITY_ROM(Cy
 DmaEntry Entity_PinkFlower_dma[] = { ENTITY_ROM(PinkFlower_gfx), ENTITY_ROM(PinkFlower_anim) };
 
 EntityBlueprint Entity_CymbalPlant = {
-    .flags = ENTITY_FLAG_SQUARE_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_ANIMATED_MODEL,
+    .flags = ENTITY_FLAG_CIRCULAR_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_ANIMATED_MODEL,
     .typeDataSize = sizeof(CymbalPlantData),
     .renderCommandList = Entity_CymbalPlant_AnimationIdle,
     .modelAnimationNodes = Entity_CymbalPlant_Mesh,
@@ -393,7 +393,7 @@ EntityBlueprint Entity_CymbalPlant = {
 };
 
 EntityBlueprint Entity_PinkFlower = {
-    .flags = ENTITY_FLAG_SHOWS_INSPECT_PROMPT | ENTITY_FLAG_SQUARE_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_ANIMATED_MODEL,
+    .flags = ENTITY_FLAG_SHOWS_INSPECT_PROMPT | ENTITY_FLAG_CIRCULAR_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_ANIMATED_MODEL,
     .typeDataSize = sizeof(PinkFlowerData),
     .renderCommandList = Entity_PinkFlower_AnimationIdle,
     .modelAnimationNodes = Entity_PinkFlower_Mesh,

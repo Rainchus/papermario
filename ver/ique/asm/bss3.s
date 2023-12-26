@@ -55,7 +55,7 @@ dlabel gCurrentCustomModelGfxPtr
 dlabel gLastCreatedEntityIndex
 .space 4
 
-dlabel gBackgroundFogModePtr
+dlabel gBackgroundTintModePtr
 .space 4
 
 dlabel gMsgVarImages
@@ -168,7 +168,7 @@ dlabel bEntityBlueprint
 dlabel D_801516FC
 .space 4
 
-dlabel gMainGameState
+dlabel gMainGameMode
 .space 0x00000040
 
 dlabel gCurrentTextureHeader
@@ -216,16 +216,16 @@ dlabel bModelTreeRoot
 dlabel D_8015221C
 .space 4
 
-dlabel D_80152220
+dlabel wModelTreeNodeInfo
 .space 0x00000800
 
-dlabel D_80152A20
+dlabel bModelTreeNodeInfo
 .space 0x00000800
 
-dlabel wBackgroundFogMode
+dlabel wBackgroundTintMode
 .space 1
 
-dlabel bBackgroundFogMode
+dlabel bBackgroundTintMode
 .space 1
 
 dlabel D_80153222
@@ -234,7 +234,7 @@ dlabel D_80153222
 dlabel D_80153223
 .space 1
 
-dlabel mdl_treeIterPos
+dlabel TreeIterPos
 .space 4
 
 dlabel wFogSettings
@@ -243,7 +243,7 @@ dlabel wFogSettings
 dlabel bFogSettings
 .space 0x0000001c
 
-dlabel gCurrentFogSettings
+dlabel gFogSettings
 .space 4
 
 dlabel texPannerMainU
@@ -279,16 +279,16 @@ dlabel mtg_MaxChild
 dlabel D_80153378
 .space 8
 
-dlabel depthCopyBuffer
+dlabel DepthCopyBuffer
 .space 0x00000020
 
-dlabel mdl_renderTaskLists
+dlabel RenderTaskLists
 .space 0x0000000c
 
-dlabel mdl_renderTaskQueueIdx
+dlabel RenderTaskListIdx
 .space 4
 
-dlabel mdl_renderTaskCount
+dlabel RenderTaskCount
 .space 0x00000010
 
 dlabel D_801533C0
@@ -428,7 +428,7 @@ dlabel msg_drawState
 dlabel D_8015DD78
 .space 8
 
-dlabel D_80155D80
+dlabel UnusedItemPhysicsScriptID
 .space 4
 
 dlabel ItemEntityAlternatingSpawn
@@ -437,13 +437,13 @@ dlabel ItemEntityAlternatingSpawn
 dlabel ItemEntityRenderGroup
 .space 4
 
-dlabel D_80155D8C
+dlabel CoinSparkleCenterX
 .space 2
 
-dlabel D_80155D8E
+dlabel CoinSparkleCenterY
 .space 2
 
-dlabel D_80155D90
+dlabel CoinSparkleCenterZ
 .space 2
 
 dlabel pad_ItemEntity
@@ -461,7 +461,7 @@ dlabel gCurrentItemEntities
 dlabel isPickingUpItem
 .space 2
 
-dlabel D_801565A6
+dlabel ItemSpawnWithinPlayerPickupDelay
 .space 2
 
 dlabel D_801565A8
@@ -470,7 +470,7 @@ dlabel D_801565A8
 dlabel D_801565AC
 .space 4
 
-dlabel D_801565B0
+dlabel ItemPickupMenu
 .space 0x00000330
 
 dlabel ItemPickupIconID
@@ -479,10 +479,10 @@ dlabel ItemPickupIconID
 dlabel ItemPickupStateDelay
 .space 4
 
-dlabel D_801568E8
+dlabel ThrowAwayMenuIdx
 .space 4
 
-dlabel D_801568EC
+dlabel ThrowAwayItemID
 .space 4
 
 dlabel ItemPickupGotOutline
@@ -664,7 +664,7 @@ dlabel gCurrentHiddenPanels
 
 .space 8
 
-dlabel mdl_textureHandles
+dlabel TextureHandles
 .space 0x00002200
 
 dlabel ScreenOverlays

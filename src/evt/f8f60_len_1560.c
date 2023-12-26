@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_modes.h"
 
 // args: start, end, duration, EasingType
 ApiStatus MakeLerp(Evt* script, s32 isInitialCall) {
@@ -461,6 +462,8 @@ ApiStatus GetDist2D(Evt* script, s32 isInitialCall) {
 
     return ApiStatus_DONE2;
 }
+
+//TODO code split? math_api from ???
 
 ApiStatus SetTimeFreezeMode(Evt* script, s32 initialCall) {
     Bytecode* args = script->ptrReadPos;

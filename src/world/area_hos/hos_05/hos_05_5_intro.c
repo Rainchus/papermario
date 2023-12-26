@@ -217,7 +217,7 @@ API_CALLABLE(N(SetWorldFogParams)) {
     s32 fogStart = evt_get_variable(script, *args++);
     s32 fogEnd = evt_get_variable(script, *args++);
 
-    set_model_fog_color_parameters(primR, primG, primB, primA, fogR, fogG, fogB, fogStart, fogEnd);
+    mdl_set_depth_tint_params(primR, primG, primB, primA, fogR, fogG, fogB, fogStart, fogEnd);
     return ApiStatus_DONE2;
 }
 
@@ -231,7 +231,7 @@ API_CALLABLE(N(SetWorldColorParams)) {
 
     args = script->ptrReadPos;
     if (isInitialCall) {
-        get_model_env_color_parameters(&oldPrimR, &oldPrimG, &oldPrimB, &oldEnvR, &oldEnvG, &oldEnvB);
+        mdl_get_remap_tint_params(&oldPrimR, &oldPrimG, &oldPrimB, &oldEnvR, &oldEnvG, &oldEnvB);
         newPrimR = evt_get_variable(script, *args++);
         newPrimG = evt_get_variable(script, *args++);
         newPrimB = evt_get_variable(script, *args++);
@@ -247,7 +247,7 @@ API_CALLABLE(N(SetWorldColorParams)) {
             return ApiStatus_DONE2;
         }
         time++;
-        set_model_env_color_parameters(
+        mdl_set_remap_tint_params(
             (oldPrimR + ((newPrimR - oldPrimR) * time) / duration),
             (oldPrimG + ((newPrimG - oldPrimG) * time) / duration),
             (oldPrimB + ((newPrimB - oldPrimB) * time) / duration),
@@ -258,7 +258,7 @@ API_CALLABLE(N(SetWorldColorParams)) {
             return ApiStatus_DONE2;
         }
     } else {
-        set_model_env_color_parameters(newPrimR, newPrimG, newPrimB, newEnvR, newEnvG, newEnvB);
+        mdl_set_remap_tint_params(newPrimR, newPrimG, newPrimB, newEnvR, newEnvG, newEnvB);
         return ApiStatus_DONE2;
     }
     return ApiStatus_BLOCK;
@@ -280,15 +280,15 @@ API_CALLABLE(N(AdjustCamVfov)) {
 
 API_CALLABLE(N(ResumeIntro)) {
     GameStatus* gameStatus = gGameStatusPtr;
-    if (gameStatus->creditsViewportMode < 5U) {
-        gameStatus->creditsViewportMode++;
+    if (gameStatus->introPart > INTRO_PART_NONE && gameStatus->introPart < INTRO_PART_5) {
+        gameStatus->introPart++;
         state_init_intro();
     }
     return ApiStatus_DONE1;
 }
 
-API_CALLABLE(N(InitWorldFogMode)) {
-    mdl_set_all_fog_mode(FOG_MODE_3);
+API_CALLABLE(N(InitWorldTintMode)) {
+    mdl_set_all_tint_type(ENV_TINT_REMAP);
     return ApiStatus_DONE2;
 }
 
@@ -1442,7 +1442,7 @@ void N(worker_draw_story_graphics)(void) {
     }
     get_screen_overlay_params(SCREEN_LAYER_BACK, &overlayType, &overlayAlpha);
     if (overlayAlpha != 0.0f) {
-        gDPSetCombineLERP(gMainGfxPos++, PRIMITIVE, TEXEL0, PRIMITIVE_ALPHA, TEXEL0, 0, 0, 0, 1, PRIMITIVE, TEXEL0, PRIMITIVE_ALPHA, TEXEL0, 0, 0, 0, 1);
+        gDPSetCombineMode(gMainGfxPos++, PM_CC_43, PM_CC_43);
         gDPSetPrimColor(gMainGfxPos++, 0, 0, 208, 208, 208, (s32) overlayAlpha);
     }
 
@@ -1708,7 +1708,7 @@ API_CALLABLE(N(AnimateStorybookPages)) {
             } else {
                 N(CurrentStoryPageTime) = ARRAY_COUNT(N(NextPageAnimOffsetsX));
                 N(StoryPageState)++;
-                sfx_play_sound(SOUND_B0);
+                sfx_play_sound(SOUND_INTRO_NEXT_PAGE);
             }
             break;
         case STORY_PAGE_STATE_NEXT:
@@ -1774,7 +1774,7 @@ API_CALLABLE(N(AnimateStorybookPages)) {
                 N(CurrentStoryPageTime) = ARRAY_COUNT(N(NextPageAnimOffsetsX));
                 N(StoryPageState)++;
                 N(StoryGraphicsPtr)->tapeAlpha = 255;
-                sfx_play_sound(SOUND_B0);
+                sfx_play_sound(SOUND_INTRO_NEXT_PAGE);
             }
             break;
         case STORY_PAGE_STATE_BOWSER_NEXT:
@@ -1882,7 +1882,7 @@ EvtScript N(EVS_Intro_Main) = {
     EVT_CALL(DisablePlayerInput, TRUE)
     EVT_CALL(DisablePlayerPhysics, TRUE)
     EVT_CALL(N(SetWorldFogParams), 0, 0, 0, 0, 0, 0, 0, 995, 1000)
-    EVT_CALL(N(InitWorldFogMode))
+    EVT_CALL(N(InitWorldTintMode))
     EVT_CALL(N(SetWorldColorParams), 255, 255, 255, 0, 0, 0, 0)
     EVT_CALL(SetCamLeadPlayer, CAM_DEFAULT, FALSE)
     EVT_CALL(N(AdjustCamVfov), 0, 62)
@@ -1974,15 +1974,15 @@ API_CALLABLE(N(func_80244934_A2EB74)) {
 }
 
 EvtScript N(EVS_Scene_IntroStory) = {
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_StarRod, 2)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_StarRod, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
     EVT_CALL(SetNpcPaletteSwapLower, NPC_StarRod, 0, 1, 20, 5)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Eldstar, 2)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Mamar, 2)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Skolar, 2)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Muskular, 2)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Misstar, 2)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Klevar, 2)
-    EVT_CALL(SetNpcPaletteSwapMode, NPC_Kalmar, 2)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Eldstar, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Mamar, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Skolar, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Muskular, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Misstar, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Klevar, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
+    EVT_CALL(SetNpcPaletteSwapMode, NPC_Kalmar, NPC_PAL_ADJUST_BLEND_PALETTES_UNIFORM_INTERVALS)
     EVT_CALL(SetNpcPaletteSwapping, NPC_Eldstar, 0, 1, 25, 12, 4, 18, 0, 0)
     EVT_CALL(SetNpcPaletteSwapping, NPC_Mamar, 0, 1, 25, 12, 4, 18, 0, 0)
     EVT_CALL(SetNpcPaletteSwapping, NPC_Skolar, 0, 1, 25, 12, 4, 18, 0, 0)
@@ -2387,19 +2387,19 @@ EvtScript N(EVS_Scene_IntroStory) = {
     EVT_CALL(SetNpcAnimation, NPC_Klevar, ANIM_WorldKlevar_Hurt)
     EVT_CALL(SetNpcAnimation, NPC_Kalmar, ANIM_WorldKalmar_Hurt)
     EVT_CALL(GetNpcPos, NPC_Eldstar, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(1))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(1))
     EVT_CALL(GetNpcPos, NPC_Mamar, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(2))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(2))
     EVT_CALL(GetNpcPos, NPC_Skolar, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(3))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(3))
     EVT_CALL(GetNpcPos, NPC_Muskular, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(4))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(4))
     EVT_CALL(GetNpcPos, NPC_Misstar, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(5))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(5))
     EVT_CALL(GetNpcPos, NPC_Klevar, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(6))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(6))
     EVT_CALL(GetNpcPos, NPC_Kalmar, LVar0, LVar1, LVar2)
-    EVT_PLAY_EFFECT(EFFECT_AURA, 0, LVar0, LVar1, LVar2, 1, ArrayVar(7))
+    EVT_PLAY_EFFECT(EFFECT_AURA, FX_AURA_CAPTURE, LVar0, LVar1, LVar2, 1, ArrayVar(7))
     EVT_CALL(N(SetWorldColorParams), 110, 110, 110, 255, 255, 255, 0)
     EVT_THREAD
         EVT_CALL(N(SetWorldColorParams), 230, 230, 230, 0, 0, 0, 30)

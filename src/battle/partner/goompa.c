@@ -4,20 +4,29 @@
 
 #define NAMESPACE battle_partner_goompa
 
-extern EvtScript N(init);
-extern EvtScript N(takeTurn);
-extern EvtScript N(idle);
-extern EvtScript N(handleEvent);
-extern EvtScript N(celebrate);
+extern EvtScript N(EVS_Init);
+extern EvtScript N(EVS_TakeTurn);
+extern EvtScript N(EVS_Idle);
+extern EvtScript N(EVS_HandleEvent);
+extern EvtScript N(EVS_Celebrate);
 extern EvtScript N(runAway);
 extern EvtScript N(runAwayFail);
-extern EvtScript N(executeAction);
+extern EvtScript N(EVS_ExecuteAction);
 
 enum N(ActorPartIDs) {
     PRT_MAIN            = 1,
 };
 
-s32 N(IdleAnimations)[] = {
+enum N(ActorVars) {
+    AVAR_Unk_0      = 0,
+    AVAR_Unk_1      = 1,
+};
+
+enum N(ActorParams) {
+    DMG_UNK         = 0,
+};
+
+s32 N(DefaultAnims)[] = {
     STATUS_KEY_NORMAL,    ANIM_Goompa_Walk,
     STATUS_END,
 };
@@ -56,18 +65,18 @@ ActorPartBlueprint N(ActorParts)[] = {
     {
         .index = PRT_MAIN,
         .opacity = 255,
-        .idleAnimations = N(IdleAnimations),
+        .idleAnimations = N(DefaultAnims),
         .defenseTable = N(DefenseTable),
     },
 };
 
 ActorBlueprint NAMESPACE = {
-    .flags = ACTOR_PART_FLAG_200000,
+    .flags = ACTOR_FLAG_NO_ATTACK,
     .type = ACTOR_TYPE_GOOMBARIO,
     .maxHP = 99,
     .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
-    .initScript = &N(init),
+    .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
     .spinSmashReq = 4,
     .powerBounceChance = 80,
@@ -76,22 +85,22 @@ ActorBlueprint NAMESPACE = {
     .statusTextOffset = { 10, 20 },
 };
 
-EvtScript N(init) = {
-    EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(takeTurn)))
-    EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(idle)))
-    EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(handleEvent)))
-    EVT_CALL(SetActorVar, ACTOR_SELF, 0, 0)
-    EVT_CALL(SetActorVar, ACTOR_SELF, 1, 0)
+EvtScript N(EVS_Init) = {
+    EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(EVS_TakeTurn)))
+    EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(EVS_Idle)))
+    EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(EVS_HandleEvent)))
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 0)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_1, 0)
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(idle) = {
+EvtScript N(EVS_Idle) = {
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(handleEvent) = {
+EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_PARTNER, FALSE)
     EVT_CALL(CloseActionCommandInfo)
     EVT_CALL(GetLastEvent, ACTOR_PARTNER, LVar0)
@@ -104,7 +113,7 @@ EvtScript N(handleEvent) = {
         EVT_END_CASE_GROUP
         EVT_CASE_OR_EQ(EVENT_ZERO_DAMAGE)
         EVT_CASE_OR_EQ(EVENT_IMMUNE)
-            EVT_CALL(PlaySound, SOUND_208C)
+            EVT_CALL(PlaySound, SOUND_NO_DAMGE)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_SET_CONST(LVar1, ANIM_Goompa_Injured)
             EVT_EXEC_WAIT(EVS_Enemy_NoDamageHit)
@@ -138,13 +147,13 @@ EvtScript N(handleEvent) = {
     EVT_END
 };
 
-EvtScript N(takeTurn) = {
+EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(GetBattlePhase, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(PHASE_EXECUTE_ACTION)
-            EVT_EXEC_WAIT(N(executeAction))
+            EVT_EXEC_WAIT(N(EVS_ExecuteAction))
         EVT_CASE_EQ(PHASE_CELEBRATE)
-            EVT_EXEC_WAIT(N(celebrate))
+            EVT_EXEC_WAIT(N(EVS_Celebrate))
         EVT_CASE_EQ(PHASE_RUN_AWAY_START)
             EVT_EXEC_WAIT(N(runAway))
         EVT_CASE_EQ(PHASE_RUN_AWAY_FAIL)
@@ -154,7 +163,7 @@ EvtScript N(takeTurn) = {
     EVT_END
 };
 
-EvtScript N(celebrate) = {
+EvtScript N(EVS_Celebrate) = {
     EVT_SET_CONST(LVar0, PRT_MAIN)
     EVT_SET_CONST(LVar1, ANIM_Goompa_Celebrate)
     EVT_SET_CONST(LVar2, ANIM_Goompa_Walk)
@@ -182,7 +191,7 @@ EvtScript N(runAwayFail) = {
     EVT_END
 };
 
-EvtScript N(executeAction) = {
+EvtScript N(EVS_ExecuteAction) = {
     EVT_RETURN
     EVT_END
 };

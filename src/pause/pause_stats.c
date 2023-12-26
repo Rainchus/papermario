@@ -308,9 +308,9 @@ void pause_stats_draw_contents(MenuPanel* menu, s32 baseX, s32 baseY, s32 width,
 
     // get number of full power increments
     playerData = &gPlayerData;
-    powFullBars = playerData->specialBarsFilled / 256;
-    powIncrements = playerData->specialBarsFilled % 256; // get remainder in unfilled bar
-    powIncrements /= 32; // subdivide unfilled bar into 8 segments (8 = 256/32)
+    powFullBars = playerData->starPower / SP_PER_BAR;
+    powIncrements = playerData->starPower % SP_PER_BAR; // get remainder in unfilled bar
+    powIncrements /= SP_PER_SEG; // subdivide unfilled bar into 8 segments (8 = 256/32)
     powIncrements += powFullBars * 8; // add 8 increments per full bar
 
     // draw filled bars
@@ -623,7 +623,7 @@ void pause_stats_handle_input(MenuPanel* panel) {
     s32 msgOffset;
 
     if (gPauseHeldButtons & BUTTON_STICK_LEFT) {
-        while (1) {
+        while (TRUE) {
             panel->col--;
             if (panel->col < 0) {
                 panel->col = 0;
@@ -635,7 +635,7 @@ void pause_stats_handle_input(MenuPanel* panel) {
     }
 
     if (gPauseHeldButtons & BUTTON_STICK_RIGHT) {
-        while (1) {
+        while (TRUE) {
             panel->col++;
             if (panel->col >= panel->numCols) {
                 panel->col = panel->numCols - 1;
@@ -647,7 +647,7 @@ void pause_stats_handle_input(MenuPanel* panel) {
     }
 
     if (gPauseHeldButtons & BUTTON_STICK_UP) {
-        while (1) {
+        while (TRUE) {
             panel->row--;
             if (panel->row < 0) {
                 panel->row = 0;
@@ -659,7 +659,7 @@ void pause_stats_handle_input(MenuPanel* panel) {
     }
 
     if (gPauseHeldButtons & BUTTON_STICK_DOWN) {
-        while (1) {
+        while (TRUE) {
             panel->row++;
             if (panel->row >= panel->numRows) {
                 panel->row = panel->numRows - 1;

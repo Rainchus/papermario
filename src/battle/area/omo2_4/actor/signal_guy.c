@@ -5,12 +5,12 @@
 
 #define NAMESPACE b_area_omo2_4_signal_guy
 
-extern s32 N(IdleAnimations)[];
+extern s32 N(DefaultAnims)[];
 
-extern EvtScript N(init);
-extern EvtScript N(takeTurn);
-extern EvtScript N(idle);
-extern EvtScript N(handleEvent);
+extern EvtScript N(EVS_Init);
+extern EvtScript N(EVS_Idle);
+extern EvtScript N(EVS_TakeTurn);
+extern EvtScript N(EVS_HandleEvent);
 
 enum N(ActorPartIDs) {
     PRT_MAIN            = 1,
@@ -48,12 +48,12 @@ s32 N(StatusTable)[] = {
 
 ActorPartBlueprint N(ActorParts)[] = {
     {
-        .flags = ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_MULTI_TARGET | ACTOR_PART_FLAG_20000000,
+        .flags = ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_PRIMARY_TARGET | ACTOR_PART_FLAG_NO_STATUS_ANIMS,
         .index = PRT_MAIN,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 24 },
         .opacity = 255,
-        .idleAnimations = N(IdleAnimations),
+        .idleAnimations = N(DefaultAnims),
         .defenseTable = N(DefenseTable),
         .eventFlags = 0,
         .elementImmunityFlags = 0,
@@ -64,11 +64,11 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = ACTOR_FLAG_NO_DMG_POPUP,
     .type = ACTOR_TYPE_SIGNAL_GUY,
-    .level = 0,
+    .level = ACTOR_LEVEL_SIGNAL_GUY,
     .maxHP = 8,
     .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
-    .initScript = &N(init),
+    .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
     .escapeChance = 0,
     .airLiftChance = 0,
@@ -84,15 +84,15 @@ ActorBlueprint NAMESPACE = {
     .statusTextOffset = { 10, 20 },
 };
 
-s32 N(IdleAnimations)[] = {
+s32 N(DefaultAnims)[] = {
     STATUS_KEY_NORMAL,    ANIM_MarshalGuy_Anim01,
     STATUS_END,
 };
 
-EvtScript N(init) = {
-    EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(takeTurn)))
-    EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(idle)))
-    EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(handleEvent)))
+EvtScript N(EVS_Init) = {
+    EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(EVS_TakeTurn)))
+    EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(EVS_Idle)))
+    EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(EVS_HandleEvent)))
     EVT_CALL(SetActorPos, ACTOR_SELF, 180, 0, 0)
     EVT_CALL(ForceHomePos, ACTOR_SELF, 180, 0, 0)
     EVT_CALL(HPBarToHome, ACTOR_SELF)
@@ -113,15 +113,15 @@ EvtScript N(init) = {
     EVT_END
 };
 
-EvtScript N(idle) = {
+EvtScript N(EVS_Idle) = {
     EVT_LABEL(0)
-    EVT_WAIT(1)
-    EVT_GOTO(0)
+        EVT_WAIT(1)
+        EVT_GOTO(0)
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(handleEvent) = {
+EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
@@ -154,7 +154,7 @@ EvtScript N(handleEvent) = {
                 EVT_PLAY_EFFECT(EFFECT_SWEAT, 0, LVar0, LVar1, LVar2, 10, 45, 4, 0)
                 EVT_WAIT(6)
             EVT_END_LOOP
-            EVT_CALL(SetActorSounds, ACTOR_SELF, ACTOR_SOUND_WALK, SOUND_20BA, SOUND_3B4)
+            EVT_CALL(SetActorSounds, ACTOR_SELF, ACTOR_SOUND_WALK, SOUND_ACTOR_STEP_A, SOUND_ACTOR_STEP_B)
             EVT_CALL(SetActorSounds, ACTOR_SELF, ACTOR_SOUND_WALK_INCREMENT, 10, 0)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_MarshalGuy_Anim0C)
             EVT_CALL(SetActorSpeed, ACTOR_SELF, EVT_FLOAT(6.0))
@@ -192,7 +192,7 @@ EvtScript N(handleEvent) = {
     EVT_END
 };
 
-EvtScript N(takeTurn) = {
+EvtScript N(EVS_TakeTurn) = {
     EVT_RETURN
     EVT_END
 };

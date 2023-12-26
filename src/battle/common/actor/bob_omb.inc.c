@@ -80,7 +80,7 @@ s32 N(StatusTable)[] = {
     STATUS_END,
 };
 
-s32 N(StatusTable_Ignited)[] = {
+s32 N(IgnitedStatusTable)[] = {
     STATUS_KEY_NORMAL,              0,
     STATUS_KEY_DEFAULT,             0,
     STATUS_KEY_SLEEP,               0,
@@ -107,7 +107,7 @@ s32 N(StatusTable_Ignited)[] = {
 
 ActorPartBlueprint N(ActorParts)[] = {
     {
-        .flags = ACTOR_PART_FLAG_MULTI_TARGET,
+        .flags = ACTOR_PART_FLAG_PRIMARY_TARGET,
         .index = PRT_MAIN,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 24 },
@@ -123,9 +123,9 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_BOB_OMB,
-    .level = 6,
+    .level = ACTOR_LEVEL_BOB_OMB,
     .maxHP = 3,
-    .partCount = ARRAY_COUNT( N(ActorParts)),
+    .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
     .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
@@ -168,16 +168,16 @@ EvtScript N(EVS_Ignite) = {
     EVT_CALL(SetIdleAnimations, ACTOR_SELF, PRT_MAIN, EVT_PTR(N(IgnitedAnims)))
     EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(EVS_HandleEvent_Ignited)))
     EVT_CALL(SetPartEventBits, ACTOR_SELF, PRT_MAIN, ACTOR_EVENT_FLAG_EXPLODE_ON_CONTACT, TRUE)
-    EVT_CALL(SetStatusTable, ACTOR_SELF, EVT_PTR(N(StatusTable_Ignited)))
-    EVT_CALL(PlayLoopingSoundAtActor, ACTOR_SELF, 0, SOUND_80000001)
+    EVT_CALL(SetStatusTable, ACTOR_SELF, EVT_PTR(N(IgnitedStatusTable)))
+    EVT_CALL(PlayLoopingSoundAtActor, ACTOR_SELF, 0, SOUND_LOOP_BOBOMB_FUSE)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bobomb_WalkLit)
     EVT_CALL(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)
     EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(2.0))
     EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, 0, LVar2)
     EVT_CALL(JumpToGoal, ACTOR_SELF, 5, FALSE, TRUE, FALSE)
-    EVT_CALL(func_8026ED20, ACTOR_SELF, PRT_MAIN, 1)
+    EVT_CALL(EnableActorPaletteEffects, ACTOR_SELF, PRT_MAIN, TRUE)
     EVT_CALL(SetActorPaletteSwapParams, ACTOR_SELF, PRT_MAIN, SPR_PAL_Bobomb, SPR_PAL_Bobomb_Burst, 0, 10, 0, 10, 0, 0)
-    EVT_CALL(SetActorPaletteEffect, ACTOR_SELF, PRT_MAIN, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+    EVT_CALL(SetActorPaletteEffect, ACTOR_SELF, PRT_MAIN, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
     EVT_WAIT(3)
     EVT_CALL(StopLoopingSoundAtActor, ACTOR_SELF, 0)
     EVT_RETURN
@@ -194,7 +194,7 @@ EvtScript N(EVS_Defuse) = {
     EVT_ADD(LVar2, 2)
     EVT_PLAY_EFFECT(EFFECT_LANDING_DUST, 3, LVar0, LVar1, LVar2, 0, 0)
     EVT_CALL(StopLoopingSoundAtActor, ACTOR_SELF, 0)
-    EVT_CALL(func_8026ED20, ACTOR_SELF, PRT_MAIN, 0)
+    EVT_CALL(EnableActorPaletteEffects, ACTOR_SELF, PRT_MAIN, FALSE)
     EVT_RETURN
     EVT_END
 };
@@ -203,7 +203,7 @@ EvtScript N(EVS_Cleanup) = {
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Ignited, LVar0)
     EVT_IF_EQ(LVar0, TRUE)
         EVT_CALL(StopLoopingSoundAtActor, ACTOR_SELF, 0)
-        EVT_CALL(func_8026ED20, ACTOR_SELF, PRT_MAIN, 0)
+        EVT_CALL(EnableActorPaletteEffects, ACTOR_SELF, PRT_MAIN, FALSE)
     EVT_END_IF
     EVT_RETURN
     EVT_END
@@ -211,7 +211,7 @@ EvtScript N(EVS_Cleanup) = {
 
 EvtScript N(EVS_Explode) = {
     EVT_EXEC_WAIT(N(EVS_Cleanup))
-    EVT_CALL(StartRumble, 11)
+    EVT_CALL(StartRumble, BTL_RUMBLE_PLAYER_MAX)
     EVT_THREAD
         EVT_CALL(ShakeCam, CAM_BATTLE, 0, 2, EVT_FLOAT(0.75))
         EVT_CALL(ShakeCam, CAM_BATTLE, 0, 5, EVT_FLOAT(3.0))
@@ -231,7 +231,7 @@ EvtScript N(EVS_Explode) = {
 
 EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(EVENT_HIT_COMBO)
@@ -371,7 +371,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_RETURN
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -379,7 +379,7 @@ EvtScript N(EVS_HandleEvent) = {
 
 EvtScript N(EVS_HandleEvent_Ignited) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(EVENT_HIT_COMBO)
@@ -503,7 +503,7 @@ EvtScript N(EVS_HandleEvent_Ignited) = {
             EVT_EXEC_WAIT(N(EVS_Defuse))
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -528,7 +528,7 @@ EvtScript N(EVS_Attack_Tackle) = {
     EVT_WAIT(5)
     EVT_CALL(SetActorDispOffset, ACTOR_SELF, 0, 0, 0)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bobomb_Run)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_10)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_MISS)
         EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
@@ -581,14 +581,14 @@ EvtScript N(EVS_Attack_Tackle) = {
             EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HIT_SHOCK)
             EVT_WAIT(20)
             EVT_EXEC_WAIT(N(EVS_Explode))
-            EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_BLAST, 0, 0, DMG_EXPLOSION, BS_FLAGS1_SP_EVT_ACTIVE)
+            EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_BLAST, 0, 0, DMG_EXPLOSION, BS_FLAGS1_TRIGGER_EVENTS)
             EVT_RETURN
     EVT_END_SWITCH
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.1))
     EVT_CALL(JumpToGoal, ACTOR_SELF, 20, FALSE, TRUE, FALSE)
     EVT_WAIT(2)
-    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_TACKLE, BS_FLAGS1_SP_EVT_ACTIVE)
+    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_TACKLE, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bobomb_Idle)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_HIT)
@@ -625,8 +625,8 @@ EvtScript N(EVS_Attack_Blast) = {
     EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     EVT_CALL(BattleCamTargetActor, ACTOR_SELF)
     EVT_CALL(func_8024ECF8, BTL_CAM_MODEY_MINUS_1, BTL_CAM_MODEX_1, FALSE)
-    EVT_CALL(PlayLoopingSoundAtActor, ACTOR_SELF, 0, SOUND_80000001)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_10)
+    EVT_CALL(PlayLoopingSoundAtActor, ACTOR_SELF, 0, SOUND_LOOP_BOBOMB_FUSE)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_MISS)
         EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
@@ -674,7 +674,7 @@ EvtScript N(EVS_Attack_Blast) = {
     EVT_EXEC_WAIT(N(EVS_Explode))
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bobomb_BurnStill)
     EVT_WAIT(2)
-    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_BLAST | DAMAGE_TYPE_NO_CONTACT, 0, 0, DMG_EXPLOSION, BS_FLAGS1_SP_EVT_ACTIVE)
+    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_BLAST | DAMAGE_TYPE_NO_CONTACT, 0, 0, DMG_EXPLOSION, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
     EVT_WAIT(15)
     EVT_SET_CONST(LVar0, PRT_MAIN)
@@ -687,7 +687,7 @@ EvtScript N(EVS_Attack_Blast) = {
 
 EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Ignited, LVar0)
     EVT_IF_FALSE(LVar0)
         EVT_EXEC_WAIT(N(EVS_Attack_Tackle))
@@ -695,7 +695,7 @@ EvtScript N(EVS_TakeTurn) = {
         EVT_EXEC_WAIT(N(EVS_Attack_Blast))
         EVT_RETURN
     EVT_END_IF
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END

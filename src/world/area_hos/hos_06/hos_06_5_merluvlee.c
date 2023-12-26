@@ -418,14 +418,14 @@ API_CALLABLE(N(RefundHintCoins)) {
 
 API_CALLABLE(N(func_802418E8_A3ADC8)) {
     if (isInitialCall) {
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o98)), -1, FOG_MODE_3);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o76)), -1, FOG_MODE_3);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o84)), -1, FOG_MODE_3);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o85)), -1, FOG_MODE_3);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o89)), -1, FOG_MODE_3);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o104)), -1, FOG_MODE_3);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o78)), -1, FOG_MODE_3);
-        set_model_env_color_parameters(255, 255, 255, 0, 0, 0);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o98)),  CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o76)),  CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o84)),  CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o85)),  CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o89)),  CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o104)), CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o78)),  CUSTOM_GFX_NONE, ENV_TINT_REMAP);
+        mdl_set_remap_tint_params(255, 255, 255, 0, 0, 0);
         script->functionTemp[0] = 255;
     }
 
@@ -433,7 +433,7 @@ API_CALLABLE(N(func_802418E8_A3ADC8)) {
     if (script->functionTemp[0] < 64) {
         script->functionTemp[0] = 64;
     }
-    set_model_env_color_parameters(script->functionTemp[0], script->functionTemp[0], script->functionTemp[0], 0, 0, 0);
+    mdl_set_remap_tint_params(script->functionTemp[0], script->functionTemp[0], script->functionTemp[0], 0, 0, 0);
     if (script->functionTemp[0] == 64) {
         return ApiStatus_DONE2;
     }
@@ -468,7 +468,7 @@ API_CALLABLE(N(func_80241A58_A3AF38)) {
             script->functionTemp[2] = 0;
         }
     }
-    set_model_env_color_parameters(
+    mdl_set_remap_tint_params(
         script->functionTemp[0], script->functionTemp[0], script->functionTemp[0],
         script->functionTemp[2], script->functionTemp[2], script->functionTemp[2]
     );
@@ -487,16 +487,16 @@ API_CALLABLE(N(func_80241B74_A3B054)) {
     if (script->functionTemp[0] > 255) {
         script->functionTemp[0] = 255;
     }
-    set_model_env_color_parameters(script->functionTemp[0], script->functionTemp[0], script->functionTemp[0], 0, 0, 0);
+    mdl_set_remap_tint_params(script->functionTemp[0], script->functionTemp[0], script->functionTemp[0], 0, 0, 0);
 
     if (script->functionTemp[0] == 255) {
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o98)), -1, FOG_MODE_0);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o76)), -1, FOG_MODE_0);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o84)), -1, FOG_MODE_0);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o85)), -1, FOG_MODE_0);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o89)), -1, FOG_MODE_0);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o104)), -1, FOG_MODE_0);
-        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o78)), -1, FOG_MODE_0);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o98)),  CUSTOM_GFX_NONE, ENV_TINT_NONE);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o76)),  CUSTOM_GFX_NONE, ENV_TINT_NONE);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o84)),  CUSTOM_GFX_NONE, ENV_TINT_NONE);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o85)),  CUSTOM_GFX_NONE, ENV_TINT_NONE);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o89)),  CUSTOM_GFX_NONE, ENV_TINT_NONE);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o104)), CUSTOM_GFX_NONE, ENV_TINT_NONE);
+        set_mdl_custom_gfx_set(get_model_from_list_index(get_model_list_index_from_tree_index(MODEL_o78)),  CUSTOM_GFX_NONE, ENV_TINT_NONE);
         return ApiStatus_DONE2;
     }
     return ApiStatus_BLOCK;
@@ -570,7 +570,7 @@ EvtScript N(EVS_PerformHintRitual) = {
     EVT_CALL(SetNpcAnimation, NPC_Merluvlee, ANIM_Merluvlee_Release)
     EVT_CALL(GetModelCenter, MODEL_o100)
     EVT_ADD(LVar1, 20)
-    EVT_CALL(PlaySoundAt, SOUND_207, 0, LVar0, LVar1, LVar2)
+    EVT_CALL(PlaySoundAt, SOUND_LRAW_CRYSTAL_BALL_GLOW, SOUND_SPACE_DEFAULT, LVar0, LVar1, LVar2)
     EVT_PLAY_EFFECT(EFFECT_ENERGY_ORB_WAVE, 1, LVar0, LVar1, LVar2, EVT_FLOAT(1.0), -1)
     EVT_SET(ArrayVar(1), LVarF)
     EVT_CALL(EnableModel, MODEL_o185, FALSE)
@@ -612,12 +612,12 @@ EvtScript N(EVS_PerformHintRitual) = {
     EVT_WAIT(50)
     EVT_CALL(GetModelCenter, MODEL_o100)
     EVT_ADD(LVar1, 20)
-    EVT_CALL(PlaySoundAt, SOUND_208, 0, LVar0, LVar1, LVar2)
+    EVT_CALL(PlaySoundAt, SOUND_CRYSTAL_BALL_WAVE, SOUND_SPACE_DEFAULT, LVar0, LVar1, LVar2)
     EVT_PLAY_EFFECT(EFFECT_ENERGY_ORB_WAVE, 5, LVar0, LVar1, LVar2, EVT_FLOAT(0.5), 20)
     EVT_WAIT(30)
     EVT_CALL(GetModelCenter, MODEL_o100)
     EVT_ADD(LVar1, 20)
-    EVT_CALL(PlaySoundAt, SOUND_208, 0, LVar0, LVar1, LVar2)
+    EVT_CALL(PlaySoundAt, SOUND_CRYSTAL_BALL_WAVE, SOUND_SPACE_DEFAULT, LVar0, LVar1, LVar2)
     EVT_PLAY_EFFECT(EFFECT_ENERGY_ORB_WAVE, 5, LVar0, LVar1, LVar2, EVT_FLOAT(0.5), 20)
     EVT_WAIT(30)
     EVT_THREAD
@@ -625,12 +625,12 @@ EvtScript N(EVS_PerformHintRitual) = {
     EVT_END_THREAD
     EVT_CALL(GetModelCenter, MODEL_o100)
     EVT_ADD(LVar1, 20)
-    EVT_CALL(PlaySoundAt, SOUND_208, 0, LVar0, LVar1, LVar2)
+    EVT_CALL(PlaySoundAt, SOUND_CRYSTAL_BALL_WAVE, SOUND_SPACE_DEFAULT, LVar0, LVar1, LVar2)
     EVT_PLAY_EFFECT(EFFECT_ENERGY_ORB_WAVE, 6, LVar0, LVar1, LVar2, EVT_FLOAT(0.5), 20)
     EVT_WAIT(70)
     EVT_CALL(DismissEffect, ArrayVar(2))
     EVT_WAIT(40)
-    EVT_CALL(PlaySoundAt, SOUND_207 | SOUND_ID_TRIGGER_CHANGE_SOUND, 0, LVar0, LVar1, LVar2)
+    EVT_CALL(PlaySoundAt, SOUND_LRAW_CRYSTAL_BALL_GLOW | SOUND_ID_TRIGGER_CHANGE_SOUND, 0, LVar0, LVar1, LVar2)
     EVT_CALL(N(func_80241F98_A3B478), ArrayVar(1))
     EVT_WAIT(15)
     EVT_CALL(EnableModel, MODEL_o185, TRUE)

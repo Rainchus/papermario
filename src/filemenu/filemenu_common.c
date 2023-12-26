@@ -3,6 +3,7 @@
 #include "hud_element.h"
 #include "fio.h"
 #include "ld_addrs.h"
+#include "game_modes.h"
 
 extern HudScript HES_AnimatedCursorHand;
 
@@ -1012,15 +1013,16 @@ void filemenu_draw_contents_copy_arrow(MenuPanel* menu, s32 baseX, s32 baseY, s3
     }
 }
 
-// TODO bad match, look into
 void func_PAL_8002B574(void); // TODO identify
 
+// TODO bad match, look into
 void filemenu_init(s32 arg0) {
     MenuPanel** panelIt;
     MenuPanel* menu;
     s32 i;
 
-    DMA_COPY_SEGMENT(ui_images);
+    DMA_COPY_SEGMENT(ui_images_filemenu_pause);
+
     for (i = 0; i < ARRAY_COUNT(filemenu_cursorHudElemID); i++) {
         filemenu_cursorHudElemID[i] = hud_element_create(filemenu_cursor_hudElemScripts[i]);
         hud_element_set_flags(filemenu_cursorHudElemID[i], HUD_ELEMENT_FLAG_DROP_SHADOW | HUD_ELEMENT_FLAG_80);
@@ -1040,11 +1042,11 @@ void filemenu_init(s32 arg0) {
         func_PAL_8002B574();
 
         if (menu->page == 0) {
-            fio_has_valid_backup();
-            if (D_800D95E8.saveCount >= 4) {
-                D_800D95E8.saveCount = 0;
+            fio_load_globals();
+            if (gSaveGlobals.lastFileSelected >= 4) {
+                gSaveGlobals.lastFileSelected = 0;
             }
-            gGameStatusPtr->saveSlot = D_800D95E8.saveCount;
+            gGameStatusPtr->saveSlot = gSaveGlobals.lastFileSelected;
         }
 
         filemenu_set_selected(menu, (gGameStatusPtr->saveSlot & 1) * 2, gGameStatusPtr->saveSlot >> 1);
@@ -1055,7 +1057,7 @@ void filemenu_init(s32 arg0) {
                 (*panelIt)->fpInit((*panelIt));
             }
         }
-        update_window_hierarchy(23, 64);
+        update_window_hierarchy(WINDOW_ID_PAUSE_DECRIPTION, 64);
     } else {
         filemenu_currentMenu = 4;
         filemenu_set_selected(filemenu_menus[4], 0, gCurrentLanguage);
@@ -1068,13 +1070,13 @@ void filemenu_init(s32 arg0) {
                 }
             }
         }
-        update_window_hierarchy(23, 64);
+        update_window_hierarchy(WINDOW_ID_PAUSE_DECRIPTION, 64);
     }
 #else
     menu = filemenu_menus[0];
     filemenu_currentMenu = 0;
 
-    if (!arg0) {
+    if (arg0 == 0) {
         menu->page = 0;
     } else {
         menu->page = 2;
@@ -1085,17 +1087,17 @@ void filemenu_init(s32 arg0) {
             if (!fio_load_game(i)) {
                 gSaveSlotHasData[i] = FALSE;
             } else {
-                gSaveSlotMetadata[i] = gCurrentSaveFile.unk_12EC;
+                gSaveSlotMetadata[i] = gCurrentSaveFile.metadata;
                 gSaveSlotHasData[i] = TRUE;
             }
         }
 
         if (menu->page == 0) {
-            fio_has_valid_backup();
-            if (D_800D95E8.saveCount >= 4) {
-                D_800D95E8.saveCount = 0;
+            fio_load_globals();
+            if (gSaveGlobals.lastFileSelected >= 4) {
+                gSaveGlobals.lastFileSelected = 0;
             }
-            gGameStatusPtr->saveSlot = D_800D95E8.saveCount;
+            gGameStatusPtr->saveSlot = gSaveGlobals.lastFileSelected;
         }
     }
 
@@ -1107,7 +1109,7 @@ void filemenu_init(s32 arg0) {
             (*panelIt)->fpInit((*panelIt));
         }
     }
-    update_window_hierarchy(23, 64);
+    update_window_hierarchy(WINDOW_ID_PAUSE_DECRIPTION, 64);
 #endif
 }
 

@@ -1,6 +1,7 @@
 #include "common.h"
 #include "filemenu.h"
 #include "fio.h"
+#include "game_modes.h"
 
 #if VERSION_IQUE
 #define DELETE_FILE_DELETE_X            20
@@ -315,9 +316,8 @@ void filemenu_yesno_handle_input(MenuPanel* menu) {
                     case 2:
                         clear_player_data();
                         clear_saved_variables();
-                        //TODO hardcoded area/map IDs
-                        gGameStatusPtr->areaID = 0;
-                        gGameStatusPtr->mapID = 11;
+                        gGameStatusPtr->areaID = AREA_KMR;
+                        gGameStatusPtr->mapID = 11; //TODO hardcoded area/map IDs
                         gGameStatusPtr->entryID = 0;
                         evt_set_variable(NULL, GB_StoryProgress, STORY_INTRO);
 
@@ -355,12 +355,12 @@ void filemenu_yesno_handle_input(MenuPanel* menu) {
                         break;
                     case 4:
                         slot3 = filemenu_menus[0]->selected;
-                        if (gGameStatusPtr->soundOutputMode != 1 - D_800D95E8.saveSlot ||
-                            slot3 != (u8)D_800D95E8.saveCount)
+                        if (gGameStatusPtr->soundOutputMode != 1 - gSaveGlobals.useMonoSound ||
+                            slot3 != (u8)gSaveGlobals.lastFileSelected)
                         {
-                            D_800D95E8.saveSlot = 1 - gGameStatusPtr->soundOutputMode;
-                            D_800D95E8.saveCount = slot3;
-                            fio_flush_backups();
+                            gSaveGlobals.useMonoSound = 1 - gGameStatusPtr->soundOutputMode;
+                            gSaveGlobals.lastFileSelected = slot3;
+                            fio_save_globals();
                         }
                         fio_load_game(slot3);
                         set_game_mode(GAME_MODE_END_FILE_SELECT);

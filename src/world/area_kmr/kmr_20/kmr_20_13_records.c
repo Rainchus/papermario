@@ -142,7 +142,7 @@ void N(appendGfx_records)(void* data) {
             records->unk_0A = 0;
             records->lerpTime = 0;
             records->state = RECORDS_STATE_FADING_IN;
-            snd_start_sound(SOUND_21C, 0, 0);
+            snd_start_sound(SOUND_APPROVE, 0, 0);
             // fallthrough
         case RECORDS_STATE_FADING_IN:
             records->lerpTime++;
@@ -182,7 +182,7 @@ void N(appendGfx_records)(void* data) {
 void N(worker_draw_game_records)(void) {
     RenderTask rt;
 
-    rt.renderMode = RENDER_MODE_2D;
+    rt.renderMode = RENDER_MODE_CLOUD_NO_ZCMP;
     rt.appendGfxArg = NULL;
     rt.appendGfx = N(appendGfx_records);
     rt.dist = 0;

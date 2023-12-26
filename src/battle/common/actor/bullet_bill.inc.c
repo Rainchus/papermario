@@ -8,13 +8,13 @@
 
 extern s32 N(DefaultAnims)[];
 extern EvtScript N(EVS_Init);
-extern EvtScript N(EVS_TakeTurn);
 extern EvtScript N(EVS_Idle);
+extern EvtScript N(EVS_TakeTurn);
 extern EvtScript N(EVS_HandleEvent);
 extern EvtScript N(EVS_MakeExplosionFX);
 
 enum N(ActorPartIDs) {
-    PRT_MAIN            = 1,
+    PRT_MAIN        = 1,
 };
 
 enum N(ActorVars) {
@@ -23,7 +23,7 @@ enum N(ActorVars) {
 };
 
 enum N(ActorParams) {
-    DMG_IMPACT          = 2,
+    DMG_IMPACT      = 2,
 };
 
 s32 N(DefenseTable)[] = {
@@ -58,7 +58,7 @@ s32 N(StatusTable)[] = {
 
 ActorPartBlueprint N(ActorParts)[] = {
     {
-        .flags = ACTOR_PART_FLAG_MULTI_TARGET,
+        .flags = ACTOR_PART_FLAG_PRIMARY_TARGET,
         .index = PRT_MAIN,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 16 },
@@ -74,9 +74,9 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = ACTOR_FLAG_FLYING,
     .type = ACTOR_TYPE_BULLET_BILL,
-    .level = 5,
+    .level = ACTOR_LEVEL_BULLET_BILL,
     .maxHP = 2,
-    .partCount = ARRAY_COUNT( N(ActorParts)),
+    .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
     .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
@@ -161,7 +161,7 @@ EvtScript N(EVS_Explode) = {
 
 EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(EVENT_HIT_COMBO)
@@ -233,7 +233,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_RETURN
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -241,7 +241,7 @@ EvtScript N(EVS_HandleEvent) = {
 
 EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
@@ -253,7 +253,7 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(SetActorDispOffset, ACTOR_SELF, 0, -2, 0)
     EVT_WAIT(15)
     EVT_CALL(UseBattleCamPresetImmediately, BTL_CAM_PRESET_19)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 2, BS_FLAGS1_10)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 2, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_MISS)
         EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
@@ -288,7 +288,7 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_EXEC_WAIT(N(EVS_MakeExplosionFX))
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_WAIT(2)
-    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_IGNORE_DEFENSE, 0, 0, DMG_IMPACT, BS_FLAGS1_SP_EVT_ACTIVE)
+    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_IGNORE_DEFENSE, 0, 0, DMG_IMPACT, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
     EVT_CALL(YieldTurn)
     EVT_SET_CONST(LVar0, PRT_MAIN)
@@ -306,8 +306,8 @@ EvtScript N(EVS_MakeExplosionFX) = {
     EVT_ADD(LVar1, 16)
     EVT_ADD(LVar2, 2)
     EVT_PLAY_EFFECT(EFFECT_BLAST, 0, LVar0, LVar1, LVar2, EVT_FLOAT(3.0), 30, 0)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_2078)
-    EVT_CALL(StartRumble, 11)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_BULLET_BILL_EXPLODE_A)
+    EVT_CALL(StartRumble, BTL_RUMBLE_PLAYER_MAX)
     EVT_THREAD
         EVT_CALL(ShakeCam, CAM_BATTLE, 0, 5, EVT_FLOAT(1.0))
     EVT_END_THREAD

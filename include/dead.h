@@ -74,13 +74,13 @@
 #define spawn_surface_effects dead_spawn_surface_effects
 #define get_item_entity dead_get_item_entity
 #define gOverrideFlags dead_gOverrideFlags
-#define set_message_msg dead_set_message_msg
+#define set_message_text_var dead_set_message_text_var
 #define gPlayerData dead_gPlayerData
 #define gPartnerPopupProperties dead_gPartnerPopupProperties
 #define increment_status_bar_disabled dead_increment_status_bar_disabled
 #define decrement_status_bar_disabled dead_decrement_status_bar_disabled
 #define sync_status_bar dead_sync_status_bar
-#define set_max_SP dead_set_max_SP
+#define set_max_star_power dead_set_max_star_power
 #define get_current_map_settings dead_get_current_map_settings
 #define gGameStatusPtr dead_gGameStatusPtr
 #define guTranslateF dead_guTranslateF
@@ -252,7 +252,7 @@
 #define AssignPanelFlag dead_AssignPanelFlag
 #define Entity_HiddenPanel dead_Entity_HiddenPanel
 #define ShakeCam dead_ShakeCam
-#define func_802D62E4 dead_func_802D62E4
+#define StopTrackingSoundPos dead_StopTrackingSoundPos
 #define IsStartingConversation dead_IsStartingConversation
 #define ModifyGlobalOverrideFlags dead_ModifyGlobalOverrideFlags
 #define FindKeyItem dead_FindKeyItem

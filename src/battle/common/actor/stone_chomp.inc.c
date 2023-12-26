@@ -5,8 +5,8 @@
 #define NAMESPACE A(stone_chomp)
 
 extern EvtScript N(EVS_Init);
-extern EvtScript N(EVS_TakeTurn);
 extern EvtScript N(EVS_Idle);
+extern EvtScript N(EVS_TakeTurn);
 extern EvtScript N(EVS_HandleEvent);
 extern EvtScript N(EVS_Chomp_HopToPos);
 extern EvtScript N(EVS_UpdateChain);
@@ -125,7 +125,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION | ACTOR_PART_FLAG_MULTI_TARGET,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION | ACTOR_PART_FLAG_PRIMARY_TARGET,
         .index = PRT_TARGET,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { -13, 40 },
@@ -137,7 +137,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, -14 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_1,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -149,7 +149,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_2,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -161,7 +161,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_3,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -173,7 +173,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_4,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -185,7 +185,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_5,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -197,7 +197,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_6,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -209,7 +209,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_7,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -221,7 +221,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_4000 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_TARGET_ONLY | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_CHAIN_8,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 12 },
@@ -237,9 +237,9 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_STONE_CHOMP,
-    .level = 14,
+    .level = ACTOR_LEVEL_STONE_CHOMP,
     .maxHP = 4,
-    .partCount = ARRAY_COUNT( N(ActorParts)),
+    .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
     .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
@@ -293,13 +293,13 @@ EvtScript N(EVS_Chomp_HopToPos) = {
             EVT_IF_LT(LVar4, 30)
                 EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
                 EVT_CALL(JumpToGoal, ACTOR_SELF, 5, FALSE, TRUE, FALSE)
-                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_ELSE
                 EVT_SET(LVar4, LVar3)
                 EVT_ADD(LVar3, 30)
                 EVT_CALL(SetGoalPos, ACTOR_SELF, LVar3, LVar1, LVar2)
                 EVT_CALL(JumpToGoal, ACTOR_SELF, 0, FALSE, TRUE, FALSE)
-                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_END_IF
         EVT_ELSE
             EVT_SET(LVar4, LVar3)
@@ -307,12 +307,12 @@ EvtScript N(EVS_Chomp_HopToPos) = {
             EVT_IF_LT(LVar4, 30)
                 EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
                 EVT_CALL(JumpToGoal, ACTOR_SELF, 5, FALSE, TRUE, FALSE)
-                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_ELSE
                 EVT_SUB(LVar3, 30)
                 EVT_CALL(SetGoalPos, ACTOR_SELF, LVar3, LVar1, LVar2)
                 EVT_CALL(JumpToGoal, ACTOR_SELF, 0, FALSE, TRUE, FALSE)
-                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+                EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_END_IF
         EVT_END_IF
         EVT_GOTO(0)
@@ -467,7 +467,7 @@ EvtScript N(EVS_UpdateChain) = {
 
 EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetActorScale, ACTOR_SELF, EVT_FLOAT(1.0), EVT_FLOAT(1.0), EVT_FLOAT(1.0))
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
@@ -528,21 +528,21 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.4))
             EVT_CALL(AddGoalPos, ACTOR_SELF, 30, 0, 0)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 15, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_CALL(AddGoalPos, ACTOR_SELF, 15, 0, 0)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 8, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_CALL(AddGoalPos, ACTOR_SELF, 5, 0, 0)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 5, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 5, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_SET_CONST(LVar1, ANIM_StoneChomp_SlowBite)
             EVT_EXEC_WAIT(N(EVS_Chomp_HopHome))
             EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.6))
             EVT_CALL(JumpToGoal, ACTOR_SELF, 5, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_THREAD
                 EVT_CALL(ShakeCam, CAM_BATTLE, 0, 1, EVT_FLOAT(0.5))
             EVT_END_THREAD
@@ -635,7 +635,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_CALL(FallToGoal, ACTOR_SELF, 11)
         EVT_END_IF
     EVT_END_IF
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -645,7 +645,7 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_EnableChainSounds, TRUE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     EVT_CALL(BattleCamTargetActor, ACTOR_SELF)
     EVT_CALL(func_8024ECF8, BTL_CAM_MODEY_MINUS_1, BTL_CAM_MODEX_1, FALSE)
@@ -655,11 +655,11 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_ADD(LVar0, 45)
     EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
     EVT_CALL(JumpToGoal, ACTOR_SELF, 15, FALSE, TRUE, FALSE)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_StoneChomp_SlowBite)
     EVT_WAIT(15)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_10F)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_10)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_ACTOR_HURT)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_MISS)
         EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
@@ -672,7 +672,7 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.8))
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 10, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_IF_EQ(LVarA, HIT_RESULT_LUCKY)
                 EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_TRIGGER_LUCKY, 0, 0, 0)
             EVT_END_IF
@@ -681,11 +681,11 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_SUB(LVar0, 25)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 6, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_SUB(LVar0, 15)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 4, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_StoneChomp_Bite)
             EVT_WAIT(20)
             EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
@@ -722,7 +722,7 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)
     EVT_CALL(SetPartPos, ACTOR_SELF, PRT_TARGET, LVar0, LVar1, LVar2)
     EVT_WAIT(2)
-    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_CHOMP_BITE, BS_FLAGS1_SP_EVT_ACTIVE)
+    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_CHOMP_BITE, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_HIT)
         EVT_CASE_OR_EQ(HIT_RESULT_NO_DAMAGE)
@@ -734,18 +734,18 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.8))
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 10, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_ADD(LVar0, 30)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 8, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_ADD(LVar0, 20)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 6, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_SUB(LVar0, 10)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 4, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3F9)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, STONE_STONE_CHOMP_STEP)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_StoneChomp_Idle)
             EVT_WAIT(8)
             EVT_CALL(YieldTurn)

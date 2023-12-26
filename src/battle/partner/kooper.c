@@ -9,14 +9,14 @@
 
 #define NAMESPACE battle_partner_kooper
 
-extern EvtScript N(init);
-extern EvtScript N(takeTurn);
-extern EvtScript N(idle);
-extern EvtScript N(handleEvent);
-extern EvtScript N(nextTurn);
+extern EvtScript N(EVS_Init);
+extern EvtScript N(EVS_TakeTurn);
+extern EvtScript N(EVS_Idle);
+extern EvtScript N(EVS_HandleEvent);
+extern EvtScript N(EVS_HandlePhase);
 extern EvtScript N(firstStrike);
-extern EvtScript N(executeAction);
-extern EvtScript N(celebrate);
+extern EvtScript N(EVS_ExecuteAction);
+extern EvtScript N(EVS_Celebrate);
 extern EvtScript N(runAway);
 extern EvtScript N(runAwayFail);
 extern EvtScript N(shellToss);
@@ -28,6 +28,15 @@ extern EvtScript N(shellTossOnFirstStrike);
 enum N(ActorPartIDs) {
     PRT_MAIN            = 1,
     PRT_ZERO            = 0,
+};
+
+enum N(ActorVars) {
+    AVAR_Unk_0      = 0,
+    AVAR_Unk_1      = 1,
+};
+
+enum N(ActorParams) {
+    DMG_UNK         = 0,
 };
 
 API_CALLABLE(N(SlowDown)) {
@@ -82,7 +91,7 @@ API_CALLABLE(N(SetTargetsYaw)) {
         for (i = 0; i < actor->targetListLength; i++) {
             x = actor->curPos.x;
             target = &actor->targetData[actor->targetIndexList[i]];
-            targetX = target->posA.x;
+            targetX = target->truePos.x;
             targetActor = get_actor(target->actorID);
 
             if (targetActor != NULL) {
@@ -182,7 +191,7 @@ API_CALLABLE(N(GetFireShellSpeedAndDamage)) {
     return ApiStatus_DONE2;
 }
 
-s32 N(IdleAnimations)[] = {
+s32 N(DefaultAnims)[] = {
     STATUS_KEY_NORMAL,    ANIM_BattleKooper_Walk,
     STATUS_KEY_STONE,     ANIM_BattleKooper_Still,
     STATUS_KEY_SLEEP,     ANIM_BattleKooper_Pray,
@@ -230,7 +239,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 8, 27 },
         .opacity = 255,
-        .idleAnimations = N(IdleAnimations),
+        .idleAnimations = N(DefaultAnims),
         .defenseTable = N(DefenseTable),
         .eventFlags = ACTOR_EVENT_FLAGS_NONE,
         .elementImmunityFlags = 0,
@@ -241,11 +250,11 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_KOOPER,
-    .level = 0,
+    .level = ACTOR_LEVEL_KOOPER,
     .maxHP = 99,
     .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
-    .initScript = &N(init),
+    .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
     .escapeChance = 0,
     .airLiftChance = 0,
@@ -261,21 +270,21 @@ ActorBlueprint NAMESPACE = {
     .statusTextOffset = { 10, 30 },
 };
 
-EvtScript N(init) = {
-    EVT_CALL(BindTakeTurn, ACTOR_PARTNER, EVT_PTR(N(takeTurn)))
-    EVT_CALL(BindIdle, ACTOR_PARTNER, EVT_PTR(N(idle)))
-    EVT_CALL(BindHandleEvent, ACTOR_PARTNER, EVT_PTR(N(handleEvent)))
-    EVT_CALL(BindNextTurn, ACTOR_PARTNER, EVT_PTR(N(nextTurn)))
+EvtScript N(EVS_Init) = {
+    EVT_CALL(BindTakeTurn, ACTOR_PARTNER, EVT_PTR(N(EVS_TakeTurn)))
+    EVT_CALL(BindIdle, ACTOR_PARTNER, EVT_PTR(N(EVS_Idle)))
+    EVT_CALL(BindHandleEvent, ACTOR_PARTNER, EVT_PTR(N(EVS_HandleEvent)))
+    EVT_CALL(BindHandlePhase, ACTOR_PARTNER, EVT_PTR(N(EVS_HandlePhase)))
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(idle) = {
+EvtScript N(EVS_Idle) = {
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(handleEvent) = {
+EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_PARTNER, FALSE)
     EVT_CALL(CloseActionCommandInfo)
     EVT_CALL(GetLastEvent, ACTOR_PARTNER, LVar0)
@@ -290,7 +299,7 @@ EvtScript N(handleEvent) = {
         EVT_END_CASE_GROUP
         EVT_CASE_OR_EQ(EVENT_ZERO_DAMAGE)
         EVT_CASE_OR_EQ(EVENT_IMMUNE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_208C)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NO_DAMGE)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_SET_CONST(LVar1, ANIM_BattleKooper_Hurt)
             EVT_EXEC_WAIT(EVS_Partner_NoDamageHit)
@@ -330,7 +339,7 @@ EvtScript N(handleEvent) = {
             EVT_EXEC_WAIT(EVS_Partner_Recover)
         EVT_CASE_OR_EQ(EVENT_18)
         EVT_CASE_OR_EQ(EVENT_BLOCK)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_208C)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NO_DAMGE)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_SET_CONST(LVar1, ANIM_BattleKooper_LowerShell)
             EVT_EXEC_WAIT(EVS_Partner_NoDamageHit)
@@ -344,15 +353,15 @@ EvtScript N(handleEvent) = {
     EVT_END
 };
 
-EvtScript N(takeTurn) = {
+EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(GetBattlePhase, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(PHASE_FIRST_STRIKE)
             EVT_EXEC_WAIT(N(firstStrike))
         EVT_CASE_EQ(PHASE_EXECUTE_ACTION)
-            EVT_EXEC_WAIT(N(executeAction))
+            EVT_EXEC_WAIT(N(EVS_ExecuteAction))
         EVT_CASE_EQ(PHASE_CELEBRATE)
-            EVT_EXEC_WAIT(N(celebrate))
+            EVT_EXEC_WAIT(N(EVS_Celebrate))
         EVT_CASE_EQ(PHASE_RUN_AWAY_START)
             EVT_EXEC_WAIT(N(runAway))
         EVT_CASE_EQ(PHASE_RUN_AWAY_FAIL)
@@ -362,7 +371,7 @@ EvtScript N(takeTurn) = {
     EVT_END
 };
 
-EvtScript N(celebrate) = {
+EvtScript N(EVS_Celebrate) = {
     EVT_SET_CONST(LVar0, PRT_MAIN)
     EVT_SET_CONST(LVar1, ANIM_BattleKooper_Celebrate)
     EVT_SET_CONST(LVar2, ANIM_BattleKooper_Walk)
@@ -393,17 +402,17 @@ EvtScript N(runAwayFail) = {
     EVT_END
 };
 
-EvtScript N(nextTurn) = {
+EvtScript N(EVS_HandlePhase) = {
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(executeAction) = {
+EvtScript N(EVS_ExecuteAction) = {
     EVT_CALL(ShowActionHud, TRUE)
     EVT_CALL(SetBattleFlagBits, BS_FLAGS1_4000, FALSE)
     EVT_CALL(GetMenuSelection, LVar0, LVar1, LVar2)
     EVT_SWITCH(LVar0)
-        EVT_CASE_EQ(8)
+        EVT_CASE_EQ(BTL_MENU_TYPE_STAR_POWERS)
             EVT_CALL(LoadStarPowerScript)
             EVT_EXEC_WAIT(LVar0)
             EVT_RETURN
@@ -489,7 +498,7 @@ EvtScript N(returnHomeOnMiss) = {
     EVT_END
 };
 
-EvtScript N(returnHome) = {
+EvtScript N(EVS_ReturnHome) = {
     EVT_CALL(ResetActorSounds, ACTOR_PARTNER, ACTOR_SOUND_WALK)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
     EVT_CALL(PartnerYieldTurn)
@@ -559,9 +568,9 @@ EvtScript N(shellToss) = {
         EVT_END_IF
     EVT_END_LOOP
     EVT_CALL(action_command_hammer_start, 0, 50 * DT - 3, 3)
-    EVT_CALL(SetActionResult, 0)
+    EVT_CALL(SetActionQuality, 0)
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ShellSpinSlowest)
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_200C)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_KOOPER_SHELL_SPINUP)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_59)
     EVT_SET(LVar9, 0)
     EVT_SET(LVar1, 0)
@@ -590,7 +599,7 @@ EvtScript N(shellToss) = {
                 EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 1, LVar4, LVar5, LVar6, 32, 4, 0, 10, 0)
         EVT_END_SWITCH
         EVT_ADD(LVar9, 1)
-        EVT_CALL(GetActionResult, LVar0)
+        EVT_CALL(GetActionQuality, LVar0)
         EVT_IF_NE(LVar0, 0)
             EVT_IF_NE(LVar1, TRUE)
                 EVT_SET(LVar1, 1)
@@ -623,7 +632,7 @@ EvtScript N(shellToss) = {
     EVT_IF_EQ(LVar0, 0)
         EVT_GOTO(0)
     EVT_END_IF
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_200A)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_PARAKARRY_AIR_RAID_1)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_03)
     EVT_CALL(MoveBattleCamOver, 15)
     EVT_EXEC_WAIT(N(getShellTossMoveTime))
@@ -632,7 +641,7 @@ EvtScript N(shellToss) = {
     EVT_CALL(SetActorSpeed, ACTOR_PARTNER, LVarA)
     EVT_CALL(SetActorSounds, ACTOR_PARTNER, ACTOR_SOUND_WALK, SOUND_NONE, SOUND_NONE)
     EVT_CALL(RunToGoal, ACTOR_PARTNER, 0)
-    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_BURN_CONTACT, 0, 2, BS_FLAGS1_10)
+    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_TEST, 0, 2, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_IF_EQ(LVar0, HIT_RESULT_MISS)
         EVT_THREAD
             EVT_CALL(N(SlowDown))
@@ -671,21 +680,21 @@ EvtScript N(shellToss) = {
         EVT_RETURN
     EVT_END_IF
     EVT_CALL(RemoveActorDecoration, ACTOR_SELF, PRT_ZERO, 0)
-    EVT_CALL(GetActionCommandResult, LVar0)
+    EVT_CALL(GetPartnerActionSuccess, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_GT(0)
-            EVT_CALL(PartnerDamageEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarF, BS_FLAGS1_40 | BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
+            EVT_CALL(PartnerDamageEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarF, BS_FLAGS1_NICE_HIT | BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
         EVT_CASE_DEFAULT
-            EVT_CALL(PartnerDamageEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarE, BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
+            EVT_CALL(PartnerDamageEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarE, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_END_SWITCH
     EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_HIT)
         EVT_CASE_OR_EQ(HIT_RESULT_NO_DAMAGE)
-            EVT_EXEC_WAIT(N(returnHome))
+            EVT_EXEC_WAIT(N(EVS_ReturnHome))
         EVT_END_CASE_GROUP
-        EVT_CASE_OR_EQ(HIT_RESULT_1)
-        EVT_CASE_OR_EQ(HIT_RESULT_3)
+        EVT_CASE_OR_EQ(HIT_RESULT_NICE)
+        EVT_CASE_OR_EQ(HIT_RESULT_NICE_NO_DAMAGE)
             EVT_EXEC_WAIT(N(returnHomeOnMiss))
         EVT_END_CASE_GROUP
     EVT_END_SWITCH
@@ -729,9 +738,9 @@ EvtScript N(powerShell) = {
     EVT_END_LOOP
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_59)
     EVT_CALL(action_command_hammer_start, 0, 47, 3)
-    EVT_CALL(SetActionResult, 0)
+    EVT_CALL(SetActionQuality, 0)
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ShellSpinSlowest)
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_200C)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_KOOPER_SHELL_SPINUP)
     EVT_SET(LVar9, 0)
     EVT_SET(LVar1, 0)
     EVT_LOOP(50)
@@ -759,7 +768,7 @@ EvtScript N(powerShell) = {
                 EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 1, LVar4, LVar5, LVar6, 32, 4, 0, 10, 0)
         EVT_END_SWITCH
         EVT_ADD(LVar9, 1)
-        EVT_CALL(GetActionResult, LVar0)
+        EVT_CALL(GetActionQuality, LVar0)
         EVT_IF_NE(LVar0, 0)
             EVT_IF_NE(LVar1, TRUE)
                 EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ShellSpinSlowest)
@@ -793,8 +802,8 @@ EvtScript N(powerShell) = {
     EVT_IF_EQ(LVar0, 0)
         EVT_GOTO(0)
     EVT_END_IF
-    EVT_CALL(SetActorVar, ACTOR_SELF, 0, 0)
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_200B)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 0)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_PARAKARRY_AIR_RAID_2)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_03)
     EVT_CALL(MoveBattleCamOver, 15)
     EVT_SET(LVarB, 260)
@@ -807,47 +816,47 @@ EvtScript N(powerShell) = {
         EVT_CALL(SetActorSpeed, ACTOR_PARTNER, LVarA)
         EVT_CALL(SetActorSounds, ACTOR_PARTNER, ACTOR_SOUND_WALK, SOUND_NONE, SOUND_NONE)
         EVT_CALL(RunToGoal, ACTOR_PARTNER, 0)
-        EVT_CALL(SetActorVar, ACTOR_SELF, 0, 1)
+        EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 1)
         EVT_CALL(RemoveActorDecoration, ACTOR_SELF, PRT_ZERO, 1)
     EVT_END_THREAD
     EVT_SET(LFlag0, FALSE)
-    EVT_LABEL(10)
-    EVT_WAIT(1)
-    EVT_CALL(SetGoalToTarget, ACTOR_PARTNER)
-    EVT_CALL(GetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
-    EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar3, LVar4, LVar5)
-    EVT_IF_GT(LVar0, LVar3)
-        EVT_GOTO(10)
-    EVT_END_IF
-    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_BURN_CONTACT, 0, 2, BS_FLAGS1_10)
-    EVT_IF_EQ(LVar0, 6)
-        EVT_GOTO(12)
-    EVT_END_IF
-    EVT_IF_EQ(LFlag0, FALSE)
-        EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_LABEL(10)
+        EVT_WAIT(1)
+        EVT_CALL(SetGoalToTarget, ACTOR_PARTNER)
+        EVT_CALL(GetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
+        EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar3, LVar4, LVar5)
+        EVT_IF_GT(LVar0, LVar3)
+            EVT_GOTO(10)
+        EVT_END_IF
+        EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_TEST, 0, 2, BS_FLAGS1_INCLUDE_POWER_UPS)
+        EVT_IF_EQ(LVar0, 6)
+            EVT_GOTO(12)
+        EVT_END_IF
+        EVT_IF_EQ(LFlag0, FALSE)
+            EVT_CALL(GetPartnerActionSuccess, LVar0)
+            EVT_SWITCH(LVar0)
+                EVT_CASE_GT(0)
+                    EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
+                EVT_CASE_DEFAULT
+                    EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
+            EVT_END_SWITCH
+        EVT_END_IF
+        EVT_SET(LFlag0, TRUE)
+        EVT_CALL(GetPartnerActionSuccess, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_GT(0)
-                EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
+                EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarF, BS_FLAGS1_NICE_HIT | BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
             EVT_CASE_DEFAULT
-                EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
+                EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarE, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
         EVT_END_SWITCH
-    EVT_END_IF
-    EVT_SET(LFlag0, TRUE)
-    EVT_CALL(GetActionCommandResult, LVar0)
-    EVT_SWITCH(LVar0)
-        EVT_CASE_GT(0)
-            EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarF, BS_FLAGS1_40 | BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-        EVT_CASE_DEFAULT
-            EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarE, BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-    EVT_END_SWITCH
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
-    EVT_LABEL(12)
-    EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar2)
-    EVT_IF_NE(LVar2, -1)
-        EVT_GOTO(10)
-    EVT_END_IF
+        EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
+        EVT_LABEL(12)
+        EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar2)
+        EVT_IF_NE(LVar2, ITER_NO_MORE)
+            EVT_GOTO(10)
+        EVT_END_IF
     EVT_IF_EQ(LFlag0, FALSE)
-        EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_CALL(GetPartnerActionSuccess, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_GT(0)
                 EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
@@ -856,15 +865,15 @@ EvtScript N(powerShell) = {
         EVT_END_SWITCH
     EVT_END_IF
     EVT_LABEL(11)
-    EVT_CALL(GetActorVar, ACTOR_SELF, 0, LVar0)
-    EVT_IF_EQ(LVar0, 0)
-        EVT_WAIT(1)
-        EVT_GOTO(11)
-    EVT_END_IF
-    EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Unk_0, LVar0)
+        EVT_IF_EQ(LVar0, 0)
+            EVT_WAIT(1)
+            EVT_GOTO(11)
+        EVT_END_IF
+    EVT_CALL(GetPartnerActionSuccess, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_GT(0)
-            EVT_EXEC_WAIT(N(returnHome))
+            EVT_EXEC_WAIT(N(EVS_ReturnHome))
         EVT_CASE_DEFAULT
             EVT_EXEC_WAIT(N(returnHomeOnMiss))
     EVT_END_SWITCH
@@ -895,18 +904,18 @@ EvtScript N(dizzyShell) = {
     EVT_ADD(LVarA, -3)
     EVT_CALL(battle_partner_kooper_AverageTargetDizzyChance)
     EVT_CALL(action_command_dizzy_shell_start, 0, LVarA, 3, LVar0)
-    EVT_CALL(SetActionResult, 0)
+    EVT_CALL(SetActionQuality, 0)
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ShellSpinSlowest)
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_200C)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_KOOPER_SHELL_SPINUP)
     EVT_SET(LVar9, 0)
     EVT_SET(LVarA, EVT_FLOAT(8.0))
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_2026)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_DIZZY_SHELL)
     EVT_CALL(AddActorDecoration, ACTOR_SELF, PRT_ZERO, 1, ACTOR_DECORATION_WHIRLWIND)
-    EVT_CALL(SetActorVar, ACTOR_SELF, 1, 1)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_1, 1)
     EVT_SET(LVar9, 1)
     EVT_LOOP(LVarD)
         EVT_WAIT(1)
-        EVT_CALL(GetActionResult, LVar0)
+        EVT_CALL(GetActionQuality, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_LT(20 * DT)
                 EVT_SET(LVarA, EVT_FLOAT(10.0))
@@ -936,14 +945,14 @@ EvtScript N(dizzyShell) = {
                 EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 1, LVar4, LVar5, LVar6, 32, 4, 0, 10, 0)
         EVT_END_SWITCH
     EVT_END_LOOP
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_290)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_DIZZY_SHELL_LAUNCH)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_03)
     EVT_CALL(MoveBattleCamOver, 15)
     EVT_SET(LVarB, 300)
     EVT_DIVF(LVarB, LVarA)
     EVT_THREAD
         EVT_CALL(AddActorDecoration, ACTOR_SELF, PRT_ZERO, 0, ACTOR_DECORATION_GREY_SMOKE_TRAIL)
-        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, IDLE_SCRIPT_DISABLE)
+        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, ACTOR_BLUR_ENABLE)
         EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
         EVT_ADD(LVar0, 350)
         EVT_CALL(SetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
@@ -958,65 +967,65 @@ EvtScript N(dizzyShell) = {
         EVT_CALL(AddGoalPos, ACTOR_PARTNER, 40, 0, 0)
         EVT_CALL(SetActorSpeed, ACTOR_PARTNER, EVT_FLOAT(12.0))
         EVT_CALL(FlyToGoal, ACTOR_PARTNER, 0, 0, EASING_QUARTIC_OUT)
-        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, IDLE_SCRIPT_ENABLE)
-        EVT_CALL(SetActorVar, ACTOR_SELF, 0, 1)
+        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, ACTOR_BLUR_DISABLE)
+        EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 1)
     EVT_END_THREAD
     EVT_THREAD
         EVT_CALL(N(SetTargetsYaw))
     EVT_END_THREAD
-    EVT_CALL(SetActorVar, ACTOR_SELF, 0, 0)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 0)
     EVT_SET(LFlag0, FALSE)
     EVT_LABEL(10)
-    EVT_WAIT(1)
-    EVT_CALL(SetGoalToTarget, ACTOR_PARTNER)
-    EVT_CALL(GetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
-    EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar3, LVar4, LVar5)
-    EVT_IF_GT(LVar0, LVar3)
-        EVT_GOTO(10)
-    EVT_END_IF
-    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_BURN_CONTACT, 0, 2, BS_FLAGS1_10)
-    EVT_IF_EQ(LVar0, HIT_RESULT_MISS)
-        EVT_GOTO(12)
-    EVT_END_IF
-    EVT_IF_EQ(LFlag0, FALSE)
-        EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_WAIT(1)
+        EVT_CALL(SetGoalToTarget, ACTOR_PARTNER)
+        EVT_CALL(GetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
+        EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar3, LVar4, LVar5)
+        EVT_IF_GT(LVar0, LVar3)
+            EVT_GOTO(10)
+        EVT_END_IF
+        EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_TEST, 0, 2, BS_FLAGS1_INCLUDE_POWER_UPS)
+        EVT_IF_EQ(LVar0, HIT_RESULT_MISS)
+            EVT_GOTO(12)
+        EVT_END_IF
+        EVT_IF_EQ(LFlag0, FALSE)
+            EVT_CALL(GetPartnerActionSuccess, LVar0)
+            EVT_SWITCH(LVar0)
+                EVT_CASE_GT(99)
+                    EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
+                EVT_CASE_DEFAULT
+                    EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
+            EVT_END_SWITCH
+        EVT_END_IF
+        EVT_SET(LFlag0, TRUE)
+        EVT_CALL(GetActionQuality, LVarF)
+        EVT_CALL(GetPartnerActionSuccess, LVar0)
         EVT_SWITCH(LVar0)
-            EVT_CASE_GT(99)
-                EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
-            EVT_CASE_DEFAULT
-                EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
-        EVT_END_SWITCH
-    EVT_END_IF
-    EVT_SET(LFlag0, TRUE)
-    EVT_CALL(GetActionResult, LVarF)
-    EVT_CALL(GetActionCommandResult, LVar0)
-    EVT_SWITCH(LVar0)
-        EVT_CASE_GT(0)
-            EVT_IF_EQ(LVar9, 1)
-                EVT_IF_EQ(LVarF, 100)
-                    EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS,
-                    SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), 254, 0, BS_FLAGS1_40 | BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
+            EVT_CASE_GT(0)
+                EVT_IF_EQ(LVar9, 1)
+                    EVT_IF_EQ(LVarF, 100)
+                        EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS,
+                        SUPPRESS_EVENTS_KOOPER_DAMAGE, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), 254, 0, BS_FLAGS1_NICE_HIT | BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
+                    EVT_ELSE
+                        EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENTS_KOOPER_DAMAGE, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), LVarF, 0, BS_FLAGS1_NICE_HIT | BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
+                    EVT_END_IF
                 EVT_ELSE
-                    EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), LVarF, 0, BS_FLAGS1_40 | BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
+                    EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENTS_KOOPER_DAMAGE, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), LVarF, 0, BS_FLAGS1_NICE_HIT | BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
                 EVT_END_IF
-            EVT_ELSE
-                EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), LVarF, 0, BS_FLAGS1_40 | BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-            EVT_END_IF
-        EVT_CASE_DEFAULT
-            EVT_IF_EQ(LVar9, 1)
-                EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), 255, 0, BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-            EVT_ELSE
-                EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), 255, 0, BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-            EVT_END_IF
-    EVT_END_SWITCH
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
-    EVT_LABEL(12)
-    EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar2)
-    EVT_IF_NE(LVar2, -1)
-        EVT_GOTO(10)
-    EVT_END_IF
+            EVT_CASE_DEFAULT
+                EVT_IF_EQ(LVar9, 1)
+                    EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENTS_KOOPER_DAMAGE, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), 255, 0, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
+                EVT_ELSE
+                    EVT_CALL(PartnerAfflictEnemy, LVar0, DAMAGE_TYPE_MULTIPLE_POPUPS | DAMAGE_TYPE_STATUS_ALWAYS_HITS, SUPPRESS_EVENTS_KOOPER_DAMAGE, DMG_STATUS_ALWAYS(STATUS_FLAG_DIZZY, 3), 255, 0, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
+                EVT_END_IF
+        EVT_END_SWITCH
+        EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
+        EVT_LABEL(12)
+        EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar2)
+        EVT_IF_NE(LVar2, ITER_NO_MORE)
+            EVT_GOTO(10)
+        EVT_END_IF
     EVT_IF_EQ(LFlag0, FALSE)
-        EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_CALL(GetPartnerActionSuccess, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_GT(99)
                 EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
@@ -1025,11 +1034,11 @@ EvtScript N(dizzyShell) = {
         EVT_END_SWITCH
     EVT_END_IF
     EVT_LABEL(11)
-    EVT_CALL(GetActorVar, ACTOR_SELF, 0, LVar0)
-    EVT_IF_EQ(LVar0, 0)
-        EVT_WAIT(1)
-        EVT_GOTO(11)
-    EVT_END_IF
+        EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Unk_0, LVar0)
+        EVT_IF_EQ(LVar0, 0)
+            EVT_WAIT(1)
+            EVT_GOTO(11)
+        EVT_END_IF
     EVT_WAIT(15)
     EVT_CALL(PartnerYieldTurn)
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ExitShell)
@@ -1066,32 +1075,32 @@ EvtScript N(fireShell) = {
     EVT_SET(LVarC, LVarD)
     EVT_ADD(LVarC, -3)
     EVT_CALL(action_command_fire_shell_start, 0, LVarC, 3)
-    EVT_CALL(SetActorVar, ACTOR_SELF, 1, 0)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_1, 0)
     EVT_SET(LVarA, EVT_FLOAT(8.0))
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ShellSpinSlowest)
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_200C)
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_28E)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_KOOPER_SHELL_SPINUP)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_ROARING_FIRE)
     EVT_CALL(AddActorDecoration, ACTOR_SELF, PRT_ZERO, 0, ACTOR_DECORATION_RED_FLAMES)
     EVT_WAIT(1)
     EVT_CALL(ModifyActorDecoration, ACTOR_PARTNER, -1, 0, 10, 10, 255, 0)
-    EVT_CALL(SetActorVar, ACTOR_SELF, 1, 1)
-    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_1, 1)
+    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
     EVT_CALL(SetActorPaletteSwapParams, ACTOR_PARTNER, -1, SPR_PAL_BattleKooper, SPR_PAL_BattleKooper, 1, 10, 1000, 10, 0, 0)
-    EVT_CALL(func_8026ED20, ACTOR_PARTNER, 0, 1)
+    EVT_CALL(EnableActorPaletteEffects, ACTOR_PARTNER, 0, TRUE)
     EVT_SET(LVar6, SPR_PAL_BattleKooper)
     EVT_SET(LVar7, SPR_PAL_BattleKooper)
     EVT_SET(LVar8, 30)
     EVT_SET(LVar9, 30)
     EVT_LOOP(LVarD)
         EVT_WAIT(1)
-        EVT_CALL(GetActionResult, LVar0)
+        EVT_CALL(GetActionQuality, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_GE(80 * DT)
                 EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ShellSpinFastest)
                 EVT_SET(LVar9, 80 * DT)
                 EVT_SET(LVar7, SPR_PAL_BattleKooper_Red4)
                 EVT_IF_NE(LVar6, LVar7)
-                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
                     EVT_CALL(SetActorPaletteSwapParams, ACTOR_PARTNER, -1, LVar6, LVar7, 1, 10, 1000, 10, 0, 0)
                     EVT_SET(LVar6, LVar7)
                 EVT_END_IF
@@ -1100,7 +1109,7 @@ EvtScript N(fireShell) = {
                 EVT_SET(LVar9, 60 * DT)
                 EVT_SET(LVar7, SPR_PAL_BattleKooper_Red3)
                 EVT_IF_NE(LVar6, LVar7)
-                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
                     EVT_CALL(SetActorPaletteSwapParams, ACTOR_PARTNER, -1, LVar6, LVar7, 1, 10, 1000, 10, 0, 0)
                     EVT_SET(LVar6, LVar7)
                 EVT_END_IF
@@ -1109,7 +1118,7 @@ EvtScript N(fireShell) = {
                 EVT_SET(LVar9, 40 * DT)
                 EVT_SET(LVar7, SPR_PAL_BattleKooper_Red2)
                 EVT_IF_NE(LVar6, LVar7)
-                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
                     EVT_CALL(SetActorPaletteSwapParams, ACTOR_PARTNER, -1, LVar6, LVar7, 1, 10, 1000, 10, 0, 0)
                     EVT_SET(LVar6, LVar7)
                 EVT_END_IF
@@ -1118,7 +1127,7 @@ EvtScript N(fireShell) = {
                 EVT_SET(LVar9, 35 * DT)
                 EVT_SET(LVar7, SPR_PAL_BattleKooper_Red1)
                 EVT_IF_NE(LVar6, LVar7)
-                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
                     EVT_CALL(SetActorPaletteSwapParams, ACTOR_PARTNER, -1, LVar6, LVar7, 1, 10, 1000, 10, 0, 0)
                     EVT_SET(LVar6, LVar7)
                 EVT_END_IF
@@ -1127,7 +1136,7 @@ EvtScript N(fireShell) = {
                 EVT_SET(LVar9, 30 * DT)
                 EVT_SET(LVar7, SPR_PAL_BattleKooper)
                 EVT_IF_NE(LVar6, LVar7)
-                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
+                    EVT_CALL(SetActorPaletteEffect, ACTOR_PARTNER, -1, ACTOR_PAL_ADJUST_BLEND_PALETTES_VARYING_INTERVALS)
                     EVT_CALL(SetActorPaletteSwapParams, ACTOR_PARTNER, -1, LVar6, LVar7, 1, 10, 1000, 10, 0, 0)
                     EVT_SET(LVar6, LVar7)
                 EVT_END_IF
@@ -1154,7 +1163,7 @@ EvtScript N(fireShell) = {
                 EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 1, LVar3, LVar4, LVar5, 32, 4, 0, 10, 0)
         EVT_END_SWITCH
     EVT_END_LOOP
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_28F)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_FIRE_SHELL_LAUNCH)
     EVT_CALL(N(GetFireShellSpeedAndDamage))
     EVT_SWITCH(LVarE)
         EVT_CASE_OR_EQ(0)
@@ -1191,7 +1200,7 @@ EvtScript N(fireShell) = {
             EVT_CASE_EQ(4)
                 EVT_CALL(ModifyActorDecoration, ACTOR_PARTNER, -1, 1, 300, 0, 0, 0)
         EVT_END_SWITCH
-        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, IDLE_SCRIPT_DISABLE)
+        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, ACTOR_BLUR_ENABLE)
         EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
         EVT_ADD(LVar0, 350)
         EVT_CALL(SetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
@@ -1201,55 +1210,55 @@ EvtScript N(fireShell) = {
         EVT_CALL(RemoveActorDecoration, ACTOR_SELF, PRT_ZERO, 1)
         EVT_WAIT(20)
         EVT_CALL(RemoveActorDecoration, ACTOR_SELF, PRT_ZERO, 0)
-        EVT_CALL(func_8026ED20, ACTOR_PARTNER, 0, 0)
+        EVT_CALL(EnableActorPaletteEffects, ACTOR_PARTNER, 0, FALSE)
         EVT_CALL(SetActorPos, ACTOR_PARTNER, -200, 0, 0)
         EVT_CALL(SetGoalToHome, ACTOR_PARTNER)
         EVT_CALL(AddGoalPos, ACTOR_PARTNER, 40, 0, 0)
         EVT_CALL(SetActorSpeed, ACTOR_PARTNER, EVT_FLOAT(12.0))
         EVT_CALL(FlyToGoal, ACTOR_PARTNER, 0, 0, EASING_QUARTIC_OUT)
-        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, IDLE_SCRIPT_ENABLE)
-        EVT_CALL(SetActorVar, ACTOR_SELF, 0, 1)
+        EVT_CALL(EnableActorBlur, ACTOR_PARTNER, ACTOR_BLUR_DISABLE)
+        EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 1)
     EVT_END_THREAD
-    EVT_CALL(SetActorVar, ACTOR_SELF, 0, 0)
+    EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Unk_0, 0)
     EVT_SET(LFlag0, FALSE)
     EVT_LABEL(10)
-    EVT_WAIT(1)
-    EVT_CALL(SetGoalToTarget, ACTOR_PARTNER)
-    EVT_CALL(GetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
-    EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar3, LVar4, LVar5)
-    EVT_IF_GT(LVar0, LVar3)
-        EVT_GOTO(10)
-    EVT_END_IF
-    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_BURN_CONTACT, 0, 2, BS_FLAGS1_10)
-    EVT_IF_EQ(LVar0, 6)
-        EVT_GOTO(12)
-    EVT_END_IF
-    EVT_IF_EQ(LFlag0, FALSE)
-        EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_WAIT(1)
+        EVT_CALL(SetGoalToTarget, ACTOR_PARTNER)
+        EVT_CALL(GetGoalPos, ACTOR_PARTNER, LVar0, LVar1, LVar2)
+        EVT_CALL(GetActorPos, ACTOR_PARTNER, LVar3, LVar4, LVar5)
+        EVT_IF_GT(LVar0, LVar3)
+            EVT_GOTO(10)
+        EVT_END_IF
+        EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_TEST, 0, 2, BS_FLAGS1_INCLUDE_POWER_UPS)
+        EVT_IF_EQ(LVar0, 6)
+            EVT_GOTO(12)
+        EVT_END_IF
+        EVT_IF_EQ(LFlag0, FALSE)
+            EVT_CALL(GetPartnerActionSuccess, LVar0)
+            EVT_SWITCH(LVar0)
+                EVT_CASE_GT(99)
+                    EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
+                EVT_CASE_DEFAULT
+                    EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
+            EVT_END_SWITCH
+        EVT_END_IF
+        EVT_SET(LFlag0, TRUE)
+        EVT_CALL(GetActionQuality, LVar0)
+        EVT_CALL(GetPartnerActionSuccess, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_GT(99)
-                EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
+                EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_FIRE | DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarF, BS_FLAGS1_NICE_HIT | BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
             EVT_CASE_DEFAULT
-                EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_51)
+                EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_FIRE | DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarF, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
         EVT_END_SWITCH
-    EVT_END_IF
-    EVT_SET(LFlag0, TRUE)
-    EVT_CALL(GetActionResult, LVar0)
-    EVT_CALL(GetActionCommandResult, LVar0)
-    EVT_SWITCH(LVar0)
-        EVT_CASE_GT(99)
-            EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_FIRE | DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarF, BS_FLAGS1_40 | BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-        EVT_CASE_DEFAULT
-            EVT_CALL(PartnerDamageEnemy, LVar0, DAMAGE_TYPE_FIRE | DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarF, BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
-    EVT_END_SWITCH
-    EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
-    EVT_LABEL(12)
-    EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar0)
-    EVT_IF_NE(LVar0, -1)
-        EVT_GOTO(10)
-    EVT_END_IF
+        EVT_CALL(PlaySoundAtActor, ACTOR_PARTNER, SOUND_NONE)
+        EVT_LABEL(12)
+        EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar0)
+        EVT_IF_NE(LVar0, ITER_NO_MORE)
+            EVT_GOTO(10)
+        EVT_END_IF
     EVT_IF_EQ(LFlag0, FALSE)
-        EVT_CALL(GetActionCommandResult, LVar0)
+        EVT_CALL(GetPartnerActionSuccess, LVar0)
         EVT_SWITCH(LVar0)
             EVT_CASE_GT(99)
                 EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_04)
@@ -1258,11 +1267,11 @@ EvtScript N(fireShell) = {
         EVT_END_SWITCH
     EVT_END_IF
     EVT_LABEL(11)
-    EVT_CALL(GetActorVar, ACTOR_SELF, 0, LVar0)
-    EVT_IF_EQ(LVar0, 0)
-        EVT_WAIT(1)
-        EVT_GOTO(11)
-    EVT_END_IF
+        EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Unk_0, LVar0)
+        EVT_IF_EQ(LVar0, 0)
+            EVT_WAIT(1)
+            EVT_GOTO(11)
+        EVT_END_IF
     EVT_WAIT(15)
     EVT_CALL(PartnerYieldTurn)
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_ExitShell)
@@ -1289,7 +1298,7 @@ EvtScript N(shellTossOnFirstStrike) = {
     EVT_CALL(SetActorSpeed, ACTOR_PARTNER, EVT_FLOAT(16.0))
     EVT_CALL(SetActorSounds, ACTOR_PARTNER, ACTOR_SOUND_WALK, SOUND_NONE, SOUND_NONE)
     EVT_CALL(RunToGoal, ACTOR_PARTNER, 0)
-    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_BURN_CONTACT, 0, 2, BS_FLAGS1_10)
+    EVT_CALL(PartnerTestEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_TEST, 0, 2, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_IF_EQ(LVar0, HIT_RESULT_MISS)
         EVT_THREAD
             EVT_CALL(N(SlowDown))
@@ -1337,7 +1346,7 @@ EvtScript N(shellTossOnFirstStrike) = {
         EVT_CASE_EQ(MOVE_SHELL_TOSS3)
             EVT_SET(LVarF, 3)
     EVT_END_SWITCH
-    EVT_CALL(PartnerDamageEnemy, LVar0, 0, SUPPRESS_EVENT_SPIKY_TOP | SUPPRESS_EVENT_EXPLODE_CONTACT | SUPPRESS_EVENT_SPIKY_FRONT | SUPPRESS_EVENT_SHOCK_CONTACT | SUPPRESS_EVENT_BURN_CONTACT | SUPPRESS_EVENT_FLAG_80, 0, LVarF, BS_FLAGS1_SP_EVT_ACTIVE | BS_FLAGS1_10)
+    EVT_CALL(PartnerDamageEnemy, LVar0, 0, SUPPRESS_EVENTS_KOOPER_DAMAGE, 0, LVarF, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_CALL(GetMenuSelection, LVar0, LVar1, LVar2)
     EVT_SWITCH(LVar2)
         EVT_CASE_EQ(MOVE_SHELL_TOSS1)
@@ -1370,7 +1379,7 @@ EvtScript N(shellTossOnFirstStrike) = {
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_Run)
     EVT_CALL(RunToGoal, ACTOR_PARTNER, 0)
     EVT_CALL(SetAnimation, ACTOR_PARTNER, -1, ANIM_BattleKooper_Idle)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END

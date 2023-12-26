@@ -479,7 +479,7 @@ void entity_HugeBlueSwitch_init(Entity* entity) {
 
 EntityScript Entity_RedSwitch_Script = {
     es_SetCallback(entity_small_switch_idle, 0)
-    es_PlaySound(SOUND_152)
+    es_PlaySound(SOUND_ACTIVATE_SWITCH)
     es_Call(entity_base_switch_start_bound_script)
     es_Call(entity_base_switch_anim_init)
     es_SetCallback(entity_RedSwitch_animate_scale, 0)
@@ -490,7 +490,7 @@ EntityScript Entity_RedSwitch_Script = {
 
 EntityScript Entity_HugeBlueSwitch_Script = {
     es_SetCallback(entity_HugeBlueSwitch_idle, 0)
-    es_PlaySound(SOUND_152)
+    es_PlaySound(SOUND_ACTIVATE_SWITCH)
     es_Call(entity_base_switch_start_bound_script)
     es_Call(entity_base_switch_anim_init)
     es_SetCallback(entity_base_switch_animate_scale, 0)
@@ -500,7 +500,7 @@ EntityScript Entity_HugeBlueSwitch_Script = {
 
 EntityScript Entity_BlueSwitch_Script = {
     es_SetCallback(entity_small_switch_idle, 0)
-    es_PlaySound(SOUND_152)
+    es_PlaySound(SOUND_ACTIVATE_SWITCH)
     es_Call(entity_base_switch_start_bound_script)
     es_Call(entity_base_switch_anim_init)
     es_SetCallback(entity_base_switch_animate_scale, 0)
@@ -511,7 +511,7 @@ EntityScript Entity_BlueSwitch_Script = {
 EntityScript Entity_GreenStompSwitch_Script = {
     es_SetCallback(entity_GreenStompSwitch_idle, 0)
     es_SetCallback(entity_GreenStompSwitch_retract, 0)
-    es_PlaySound(SOUND_152)
+    es_PlaySound(SOUND_ACTIVATE_SWITCH)
     es_SetCallback(NULL, 128)
     es_SetCallback(entity_GreenStompSwitch_extend, 0)
     es_Restart
@@ -539,7 +539,7 @@ EntityBlueprint Entity_RedSwitch = {
 };
 
 EntityBlueprint Entity_BlueSwitch = {
-    .flags = ENTITY_FLAG_8000 | ENTITY_FLAG_ALWAYS_FACE_CAMERA | ENTITY_FLAG_SQUARE_SHADOW | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_DYNAMIC_SHADOW,
+    .flags = ENTITY_FLAG_8000 | ENTITY_FLAG_ALWAYS_FACE_CAMERA | ENTITY_FLAG_CIRCULAR_SHADOW | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_DYNAMIC_SHADOW,
     .typeDataSize = sizeof(SwitchData),
     .renderCommandList = Entity_BlueSwitch_RenderScript,
     .modelAnimationNodes = 0,
@@ -552,7 +552,7 @@ EntityBlueprint Entity_BlueSwitch = {
 };
 
 EntityBlueprint Entity_HugeBlueSwitch = {
-    .flags = ENTITY_FLAG_8000 | ENTITY_FLAG_ALWAYS_FACE_CAMERA | ENTITY_FLAG_SQUARE_SHADOW | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_DYNAMIC_SHADOW,
+    .flags = ENTITY_FLAG_8000 | ENTITY_FLAG_ALWAYS_FACE_CAMERA | ENTITY_FLAG_CIRCULAR_SHADOW | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_DYNAMIC_SHADOW,
     .typeDataSize = sizeof(SwitchData),
     .renderCommandList = Entity_HugeBlueSwitch_RenderScript,
     .modelAnimationNodes = 0,

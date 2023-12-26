@@ -7,10 +7,10 @@
 #define NAMESPACE A(bandit)
 
 extern EvtScript N(EVS_Init);
-extern EvtScript N(EVS_Init_Coin);
 extern EvtScript N(EVS_Idle);
-extern EvtScript N(EVS_HandleEvent);
+extern EvtScript N(EVS_Init_Coin);
 extern EvtScript N(EVS_TakeTurn);
+extern EvtScript N(EVS_HandleEvent);
 
 BSS s32 N(DropCoinScript)[1];
 
@@ -92,7 +92,7 @@ s32 N(StatusTable)[] = {
 
 ActorPartBlueprint N(ActorParts)[] = {
     {
-        .flags = ACTOR_PART_FLAG_MULTI_TARGET,
+        .flags = ACTOR_PART_FLAG_PRIMARY_TARGET,
         .index = PRT_MAIN,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { -2, 28 },
@@ -135,7 +135,7 @@ ActorPartBlueprint N(CoinParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_BANDIT,
-    .level = 9,
+    .level = ACTOR_LEVEL_BANDIT,
     .maxHP = 5,
     .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
@@ -158,7 +158,7 @@ ActorBlueprint NAMESPACE = {
 ActorBlueprint N(coin) = {
     .flags = ACTOR_FLAG_NO_ATTACK | ACTOR_FLAG_NO_DMG_APPLY,
     .type = ACTOR_TYPE_BANDIT,
-    .level = 9,
+    .level = ACTOR_LEVEL_BANDIT,
     .maxHP = 5,
     .partCount = ARRAY_COUNT(N(CoinParts)),
     .partsData = N(CoinParts),
@@ -236,21 +236,21 @@ EvtScript N(EVS_DropCoin) = {
             EVT_CALL(AddVectorPolar, LVar1, LVar3, EVT_FLOAT(40.0), LVar0)
             EVT_CALL(SetGoalPos, LVarA, LVar1, 0, LVar3)
             EVT_CALL(JumpToGoal, LVarA, 20, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
             EVT_CALL(AddVectorPolar, LVar1, LVar3, EVT_FLOAT(20.0), LVar0)
             EVT_CALL(SetGoalPos, LVarA, LVar1, 0, LVar3)
             EVT_CALL(JumpToGoal, LVarA, 10, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
             EVT_CALL(AddVectorPolar, LVar1, LVar3, EVT_FLOAT(10.0), LVar0)
             EVT_CALL(SetGoalPos, LVarA, LVar1, 0, LVar3)
             EVT_CALL(JumpToGoal, LVarA, 5, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
             EVT_LOOP(0)
                 EVT_CALL(GetBattleFlags, LVar1)
                 EVT_IF_FLAG(LVar1, BS_FLAGS1_PARTNER_ACTING)
                     EVT_BREAK_LOOP
                 EVT_END_IF
-                EVT_IF_NOT_FLAG(LVar1, BS_FLAGS1_100)
+                EVT_IF_NOT_FLAG(LVar1, BS_FLAGS1_EXECUTING_MOVE)
                     EVT_BREAK_LOOP
                 EVT_END_IF
                 EVT_WAIT(1)
@@ -272,13 +272,13 @@ EvtScript N(EVS_DropCoin) = {
                 EVT_IF_LT(LVar4, 30)
                     EVT_CALL(SetGoalPos, LVarA, LVar0, LVar1, LVar2)
                     EVT_CALL(JumpToGoal, LVarA, 5, FALSE, TRUE, FALSE)
-                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
                 EVT_ELSE
                     EVT_SET(LVar4, LVar3)
                     EVT_ADD(LVar3, 30)
                     EVT_CALL(SetGoalPos, LVarA, LVar3, LVar1, LVar2)
                     EVT_CALL(JumpToGoal, LVarA, 0, FALSE, TRUE, FALSE)
-                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
                 EVT_END_IF
             EVT_ELSE
                 EVT_SET(LVar4, LVar3)
@@ -286,23 +286,23 @@ EvtScript N(EVS_DropCoin) = {
                 EVT_IF_LT(LVar4, 30)
                     EVT_CALL(SetGoalPos, LVarA, LVar0, LVar1, LVar2)
                     EVT_CALL(JumpToGoal, LVarA, 5, FALSE, TRUE, FALSE)
-                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
                 EVT_ELSE
                     EVT_SUB(LVar3, 30)
                     EVT_CALL(SetGoalPos, LVarA, LVar3, LVar1, LVar2)
                     EVT_CALL(JumpToGoal, LVarA, 0, FALSE, TRUE, FALSE)
-                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_212)
+                    EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_BOUNCE)
                 EVT_END_IF
             EVT_END_IF
             EVT_GOTO(5)
             EVT_LABEL(10)
-            EVT_CALL(EnableActorBlur, LVarA, IDLE_SCRIPT_DISABLE)
+            EVT_CALL(EnableActorBlur, LVarA, ACTOR_BLUR_ENABLE)
             EVT_CALL(SetTargetActor, LVarA, ACTOR_PLAYER)
             EVT_CALL(SetGoalToTarget, LVarA)
             EVT_CALL(JumpToGoal, LVarA, 15, FALSE, FALSE, FALSE)
             EVT_CALL(GetGoalPos, LVarA, LVar0, LVar1, LVar2)
             EVT_PLAY_EFFECT(EFFECT_SMALL_GOLD_SPARKLE, 0, LVar0, LVar1, LVar2, EVT_FLOAT(1.0), 0, 0)
-            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_211)
+            EVT_CALL(PlaySoundAtActor, LVarA, SOUND_COIN_PICKUP)
             EVT_CALL(GetActorVar, LVarA, AVAR_Coin_NumCoins, LVar0)
             EVT_CALL(AddCoin, LVar0)
             EVT_CALL(RemoveActor, LVarA)
@@ -314,7 +314,7 @@ EvtScript N(EVS_DropCoin) = {
 EvtScript N(EVS_HandleEvent) = {
     EVT_USE_ARRAY(EVT_PTR(N(DropCoinScript)))
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(EVENT_HIT_COMBO)
@@ -407,7 +407,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_EXEC_WAIT(EVS_Enemy_ShockHit)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_SET_CONST(LVar1, ANIM_Bandit_Hurt)
-            EVT_EXEC_WAIT(EVS_Enemy_JumpBack)
+            EVT_EXEC_WAIT(EVS_Enemy_Knockback)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_SET_CONST(LVar1, ANIM_Bandit_Run)
             EVT_EXEC_WAIT(EVS_Enemy_ReturnHome)
@@ -492,7 +492,7 @@ EvtScript N(EVS_HandleEvent) = {
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bandit_Idle)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -500,7 +500,7 @@ EvtScript N(EVS_HandleEvent) = {
 
 EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     // if carrying a coin, run away
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_HasCoin, LVar0)
@@ -540,9 +540,9 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(AddGoalPos, ACTOR_SELF, 35, 0, 0)
     EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20C2)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_BANDIT_STEAL)
     EVT_CALL(SetActorSounds, ACTOR_SELF, ACTOR_SOUND_WALK, SOUND_NONE, SOUND_NONE)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_10)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_MISS)
         EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
@@ -577,7 +577,7 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bandit_Idle)
             EVT_CALL(RemoveActorDecoration, ACTOR_SELF, PRT_MAIN, 0)
             EVT_CALL(SetActorYaw, ACTOR_SELF, 0)
-            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
             EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
             EVT_RETURN
         EVT_END_CASE_GROUP
@@ -588,7 +588,7 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
     EVT_CALL(ResetAllActorSounds, ACTOR_SELF)
     EVT_WAIT(2)
-    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_TACKLE, BS_FLAGS1_SP_EVT_ACTIVE)
+    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_TACKLE, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_HIT)
         EVT_CASE_OR_EQ(HIT_RESULT_NO_DAMAGE)
@@ -651,7 +651,7 @@ EvtScript N(EVS_TakeTurn) = {
                     EVT_CALL(JumpToGoal, ACTOR_SELF, 10, FALSE, TRUE, FALSE)
                     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bandit_LookUp)
                     EVT_WAIT(20)
-                    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20C3)
+                    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_DISAPPOINTED)
                     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bandit_Sleep)
                     EVT_WAIT(20)
                     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Bandit_Run)
@@ -677,7 +677,7 @@ EvtScript N(EVS_TakeTurn) = {
                     EVT_THREAD
                         EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_NumCoins, LVar0)
                         EVT_LOOP(LVar0)
-                            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_212)
+                            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_COIN_BOUNCE)
                             EVT_WAIT(1)
                         EVT_END_LOOP
                     EVT_END_THREAD
@@ -699,7 +699,7 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
         EVT_END_CASE_GROUP
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END

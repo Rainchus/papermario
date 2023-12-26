@@ -52,7 +52,7 @@ void N(ShyGuyWanderAI_17)(Evt* script, MobileAISettings* aiSettings, EnemyDetect
 
     npc->duration--;
     if (npc->duration == 0) {
-        npc->curAnim = *enemy->animList;
+        npc->curAnim = enemy->animList[ENEMY_ANIM_INDEX_IDLE];
         script->functionTemp[0] = 0;
     }
 }
@@ -86,10 +86,10 @@ API_CALLABLE(N(ShyGuyWanderAI_Main)) {
         npc->flags &= ~NPC_FLAG_JUMPING;
         if (!enemy->territory->wander.isFlying) {
             npc->flags |= NPC_FLAG_GRAVITY;
-            npc->flags &= ~NPC_FLAG_8;
+            npc->flags &= ~NPC_FLAG_FLYING;
         } else {
             npc->flags &= ~NPC_FLAG_GRAVITY;
-            npc->flags |= NPC_FLAG_8;
+            npc->flags |= NPC_FLAG_FLYING;
         }
 
         if (enemy->aiFlags & ENEMY_AI_FLAG_SUSPEND) {

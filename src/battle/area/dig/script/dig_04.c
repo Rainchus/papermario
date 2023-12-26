@@ -15,13 +15,13 @@ API_CALLABLE(N(SetupDemoPlayerMove)) {
     battleStatus->selectedMoveID = 0;
     battleStatus->curAttackElement = 0;
     playerData->invItems[0] = selectedItemID;
-    battleStatus->curTargetListFlags = gItemTable[playerData->invItems[0]].targetFlags | TARGET_FLAG_8000;
+    battleStatus->curTargetListFlags = gItemTable[selectedItemID].targetFlags | TARGET_FLAG_PRIMARY_ONLY;
 
-    player_create_target_list(player);
+    create_current_pos_target_list(player);
     player->selectedTargetIndex = 0;
     selectableTarget = &player->targetData[player->targetIndexList[player->selectedTargetIndex]];
     player->targetActorID = selectableTarget->actorID;
-    player->targetPartIndex = selectableTarget->partID;
+    player->targetPartID = selectableTarget->partID;
 
     return ApiStatus_DONE2;
 }

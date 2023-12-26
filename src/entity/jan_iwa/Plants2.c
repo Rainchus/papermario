@@ -191,14 +191,14 @@ void func_802BC3E4_E2ED14(Entity* entity) {
         data->unk_10 -= 360.0f;
     }
     if (data->unk_10 == 96.0f) {
-        sfx_play_sound(SOUND_392);
+        sfx_play_sound(SOUND_MUNCHLESIA_CHEW);
     }
 }
 
 EntityScript Entity_BellbellPlant_Script = {
     es_SetCallback(entity_BellbellPlant_idle, 0)
     es_ClearFlags(ENTITY_FLAG_SHOWS_INSPECT_PROMPT)
-    es_PlaySound(SOUND_F1)
+    es_PlaySound(SOUND_PLANTS_BELL)
     es_SetCallback(NULL, 60)
     es_SetFlags(ENTITY_FLAG_SHOWS_INSPECT_PROMPT)
     es_Restart
@@ -208,7 +208,7 @@ EntityScript Entity_BellbellPlant_Script = {
 EntityScript Entity_TrumpetPlant_Script = {
     es_SetCallback(entity_TrumpetPlant_idle, 0)
     es_ClearFlags(ENTITY_FLAG_SHOWS_INSPECT_PROMPT)
-    es_PlaySound(SOUND_F3)
+    es_PlaySound(SOUND_PLANTS_TRUMPET)
     es_SetCallback(NULL, 15)
     es_Call(entity_TrumpetPlant_create_effect)
     es_SetCallback(NULL, 3)
@@ -241,7 +241,7 @@ EntityScript Entity_MunchlesiaReset_Script = {
     es_Call(func_802BC0B8_E2E9E8)
     es_SetCallback(NULL, 7)
     es_Call(func_802BC250_E2EB80)
-    es_PlaySound(SOUND_209B)
+    es_PlaySound(SOUND_MUNCHLESIA_SUCTION)
     es_SetFlags(ENTITY_FLAG_HIDDEN)
     es_SetCallback(NULL, 3)
     es_SetFlags(ENTITY_FLAG_PENDING_INSTANCE_DELETE)
@@ -291,7 +291,7 @@ EntityScript Entity_MunchlesiaChewing_Script = {
 EntityScript Entity_MunchlesiaSpitOut_Script = {
     es_SetCallback(NULL, 4)
     es_Call(func_802BC3A0_E2ECD0)
-    es_PlaySound(SOUND_393)
+    es_PlaySound(SOUND_MUNCHLESIA_SPIT)
     es_SetCallback(NULL, 4)
     es_Call(entity_Munchlesia_create_child_reset1)
     es_SetFlags(ENTITY_FLAG_HIDDEN)
@@ -329,7 +329,7 @@ DmaEntry Entity_BellbellPlant_dma[] = { ENTITY_ROM(BellbellPlant_gfx), ENTITY_RO
 DmaEntry Entity_TrumpetPlant_dma[] = { ENTITY_ROM(TrumpetPlant_gfx), ENTITY_ROM(TrumpetPlant_anim) };
 
 EntityBlueprint Entity_BellbellPlant = {
-    .flags = ENTITY_FLAG_SHOWS_INSPECT_PROMPT | ENTITY_FLAG_SQUARE_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_ANIMATED_MODEL,
+    .flags = ENTITY_FLAG_SHOWS_INSPECT_PROMPT | ENTITY_FLAG_CIRCULAR_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE | ENTITY_FLAG_HAS_ANIMATED_MODEL,
     .typeDataSize = 0,
     .renderCommandList = Entity_BellbellPlant_AnimationIdle,
     .modelAnimationNodes = Entity_BellbellPlant_Mesh,
@@ -355,7 +355,7 @@ EntityBlueprint Entity_TrumpetPlant = {
 };
 
 EntityBlueprint Entity_Munchlesia = {
-    .flags = ENTITY_FLAG_SQUARE_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE,
+    .flags = ENTITY_FLAG_CIRCULAR_SHADOW | ENTITY_FLAG_400 | ENTITY_FLAG_FIXED_SHADOW_SIZE,
     .typeDataSize = sizeof(MunchlesiaData),
     .renderCommandList = Entity_RenderNone_Script,
     .modelAnimationNodes = 0,

@@ -67,7 +67,7 @@ void N(func_802A123C_73153C(void)) {
     }
 }
 
-s32 N(func_802A13E4_7316E4)(Evt* script, s32 isInitialCall) {
+API_CALLABLE(N(func_802A13E4_7316E4)) {
     BattleStatus* battleStatus = &gBattleStatus;
     s32 temp_a0_4;
     s32 temp_v1_3;
@@ -177,7 +177,7 @@ s32 N(func_802A13E4_7316E4)(Evt* script, s32 isInitialCall) {
     return ApiStatus_BLOCK;
 }
 
-API_CALLABLE(N(ShowHeartRecoveryFX)) {
+API_CALLABLE(N(SpawnHeartRecoveryFX)) {
     Bytecode* args = script->ptrReadPos;
     s32 a = evt_get_variable(script, *args++);
     s32 b = evt_get_variable(script, *args++);
@@ -188,7 +188,7 @@ API_CALLABLE(N(ShowHeartRecoveryFX)) {
     return ApiStatus_DONE2;
 }
 
-API_CALLABLE(N(ShowFlowerRecoveryFX)) {
+API_CALLABLE(N(SpawnFlowerRecoveryFX)) {
     Bytecode* args = script->ptrReadPos;
     s32 a = evt_get_variable(script, *args++);
     s32 b = evt_get_variable(script, *args++);
@@ -249,7 +249,7 @@ API_CALLABLE(N(func_802A1B14_731E14)) {
 
     inflict_status(player, STATUS_KEY_TRANSPARENT, 3);
     player->statusAfflicted = 0;
-    part->flags |= ACTOR_PART_FLAG_100;
+    part->flags |= ACTOR_PART_FLAG_TRANSPARENT;
 
     return ApiStatus_DONE2;
 }
@@ -279,7 +279,7 @@ EvtScript N(EVS_UseItem) = {
         EVT_CALL(GetActorPos, ACTOR_PLAYER, LVar0, LVar1, LVar2)
         EVT_ADD(LVar0, 20)
         EVT_ADD(LVar1, 25)
-        EVT_CALL(N(ShowFlowerRecoveryFX), LVar0, LVar1, LVar2, LVar3)
+        EVT_CALL(N(SpawnFlowerRecoveryFX), LVar0, LVar1, LVar2, LVar3)
         EVT_CALL(GetActorPos, ACTOR_PLAYER, LVar0, LVar1, LVar2)
         EVT_ADD(LVar1, 25)
         EVT_CALL(ShowStartRecoveryShimmer, LVar0, LVar1, LVar2, LVar3)
@@ -304,9 +304,9 @@ EvtScript N(EVS_UseItem) = {
     EVT_WAIT(10)
     EVT_THREAD
         EVT_WAIT(220)
-        EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_3F3)
+        EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_DING)
     EVT_END_THREAD
-    EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_368)
+    EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_MYSTERY_REEL)
     EVT_CALL(N(func_802A13E4_7316E4))
     EVT_WAIT(2)
     EVT_SWITCH(LVar0)

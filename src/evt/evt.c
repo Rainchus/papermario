@@ -1129,7 +1129,7 @@ s32 evt_trigger_on_activate_lock(Trigger* trigger) {
 
     if (!does_script_exist(trigger->runningScriptID)) {
         trigger->runningScript = NULL;
-        trigger->flags.flags &= ~TRIGGER_ACTIVATED;
+        trigger->flags &= ~TRIGGER_ACTIVATED;
     }
 }
 
@@ -1688,7 +1688,7 @@ s32 evt_execute_next_command(Evt* script) {
             // return 0
         } else if (status == ApiStatus_DONE2) {
             script->curOpcode = EVT_OP_INTERNAL_FETCH;
-            if (gGameStatusPtr->disableScripts != status) {
+            if (gGameStatusPtr->debugScripts != DEBUG_SCRIPTS_BLOCK_FUNC_DONE) {
                 continue;
             }
             // return 0

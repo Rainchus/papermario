@@ -25,7 +25,7 @@ Gfx N(setup_gfx_candle_lights)[] = {
 EvtScript N(EVS_EndPeachChapter4) = {
     EVT_SET(LVar0, GB_KKJ_LastPartner)
     EVT_CALL(N(RestoreFromPeachState))
-    EVT_CALL(PlaySound, SOUND_DC)
+    EVT_CALL(PlaySound, SOUND_SLIDE_WHISTLE_OUT)
     EVT_CALL(GotoMapSpecial, EVT_PTR("mac_04"), mac_04_ENTRY_5, TRANSITION_END_PEACH_INTERLUDE)
     EVT_WAIT(100)
 };
@@ -119,7 +119,7 @@ EvtScript N(EVS_Main) = {
         TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
         EVT_EXEC(N(EVS_UpdateTexturePan))
     EVT_END_THREAD
-    EVT_CALL(SetModelCustomGfx, MODEL_o56, CUSTOM_GFX_0, FOG_MODE_UNCHANGED)
+    EVT_CALL(SetModelCustomGfx, MODEL_o56, CUSTOM_GFX_0, ENV_TINT_UNCHANGED)
     EVT_CALL(SetCustomGfx, CUSTOM_GFX_0, EVT_PTR(N(setup_gfx_candle_lights)), NULL)
     EVT_EXEC(N(EVS_SetupMusic))
     EVT_CALL(UseDoorSounds, DOOR_SOUNDS_BASIC)

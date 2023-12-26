@@ -20,7 +20,7 @@ API_CALLABLE(N(ImprisonedCardSetup)) {
     card->rot.y = 0.0f;
     card->effect = fx_spirit_card(1, card->pos.x, card->pos.y, card->pos.z, 1.0f, 0);
     card->effect->data.spiritCard->chapter = 2;
-    card->shadowID = create_shadow_type(0, card->pos.x, card->pos.y, card->pos.z);
+    card->shadowID = create_shadow_type(SHADOW_VARYING_CIRCLE, card->pos.x, card->pos.y, card->pos.z);
     return ApiStatus_DONE2;
 }
 
@@ -138,7 +138,7 @@ NpcData N(NpcData_Default)[] = {
         .yaw = 0,
         .init = &N(EVS_NpcInit_Bow),
         .settings = &N(NpcSettings_Dummy),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = BOW_ANIMS,
     },
@@ -148,7 +148,7 @@ NpcData N(NpcData_Default)[] = {
         .yaw = 0,
         .init = &N(EVS_NpcInit_Bootler),
         .settings = &N(NpcSettings_Dummy),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = BOOTLER_ANIMS,
         .tattle = MSG_NpcTattle_Bootler,
@@ -159,7 +159,7 @@ NpcData N(NpcData_Default)[] = {
         .yaw = 0,
         .init = &N(EVS_NpcInit_Skolar),
         .settings = &N(NpcSettings_Dummy),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = SKOLAR_ANIMS,
     },
@@ -172,7 +172,7 @@ NpcData N(NpcData_Epilogue)[] = {
         .yaw = 0,
         .init = &N(EVS_NpcInit_Bow_Epilogue),
         .settings = &N(NpcSettings_Dummy),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = BOW_ANIMS,
     },
@@ -182,7 +182,7 @@ NpcData N(NpcData_Epilogue)[] = {
         .yaw = 0,
         .init = &N(EVS_NpcInit_Bootler_Epilogue),
         .settings = &N(NpcSettings_Dummy),
-        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_800,
+        .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_FLYING,
         .drops = NO_DROPS,
         .animations = BOOTLER_ANIMS,
         .tattle = MSG_NpcTattle_Bootler,

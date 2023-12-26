@@ -17,6 +17,17 @@
 #define i_spy_VRAM (void*)0x802B7000
 #endif
 
+#if VERSION_JP // TODO remove once segments are split
+extern Addr i_spy_ROM_START;
+extern Addr i_spy_ROM_END;
+extern Addr pulse_stone_ROM_START;
+extern Addr pulse_stone_ROM_END;
+extern Addr speech_bubble_ROM_START;
+extern Addr speech_bubble_ROM_END;
+extern Addr inspect_icon_ROM_START;
+extern Addr inspect_icon_ROM_END;
+#endif
+
 SHIFT_BSS UNK_FUN_PTR(ISpyNotificationCallback);
 SHIFT_BSS UNK_FUN_PTR(PulseStoneNotificationCallback);
 SHIFT_BSS UNK_FUN_PTR(TalkNotificationCallback);
@@ -45,7 +56,7 @@ void render_conversation_prompt(void);
 void clear_conversation_prompt(void);
 void check_for_interactables(void);
 void render_interact_prompt(void);
-void func_800E0B14(void);
+void clear_interact_prompt(void);
 void update_partner_timers(void);
 void player_update_sprite(void);
 s32 get_player_back_anim(s32 arg0);
@@ -210,7 +221,7 @@ s32 player_raycast_down(f32* x, f32* y, f32* z, f32* length) {
         }
     }
 
-    colliderID = test_ray_colliders(0x10000, *x, *y, *z, 0, -1.0f, 0, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
+    colliderID = test_ray_colliders(COLLIDER_FLAG_IGNORE_PLAYER, *x, *y, *z, 0, -1.0f, 0, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
     if (colliderID >= 0) {
         ret = colliderID;
     }
@@ -223,8 +234,8 @@ s32 player_raycast_down(f32* x, f32* y, f32* z, f32* length) {
         gGameStatusPtr->playerGroundTraceNormal.x = hitNx;
         gGameStatusPtr->playerGroundTraceNormal.y = hitNy;
         gGameStatusPtr->playerGroundTraceNormal.z = hitNz;
-        D_8010C938 = get_player_normal_yaw();
-        D_8010C990 = get_player_normal_pitch();
+        PlayerNormalYaw = get_player_normal_yaw();
+        PlayerNormalPitch = get_player_normal_pitch();
         gGameStatusPtr->playerGroundTraceAngles.x = atan2(0.0f, 0.0f, hitNz * 100.0, hitNy * 100.0);
         gGameStatusPtr->playerGroundTraceAngles.y = 0.0f;
         gGameStatusPtr->playerGroundTraceAngles.z = atan2(0.0f, 0.0f, hitNx * 100.0, hitNy * 100.0);
@@ -327,7 +338,7 @@ s32 player_raycast_up_corner(f32* x, f32* y, f32* z, f32* length) {
     sy2 = sy = *y;
     sz2 = sz = *z;
     hitDepth = *length;
-    hitID = test_ray_colliders(0x10000, sx, sy, sz, 0.0f, 1.0f, 0.0f, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
+    hitID = test_ray_colliders(COLLIDER_FLAG_IGNORE_PLAYER, sx, sy, sz, 0.0f, 1.0f, 0.0f, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
     if (hitID >= 0 && *length > hitDepth) {
         *length = hitDepth;
         ret = hitID;
@@ -438,17 +449,17 @@ s32 player_raycast_general(s32 mode, f32 startX, f32 startY, f32 startZ, f32 dir
         } else {
             ret = entityID | COLLISION_WITH_ENTITY_BIT;
         }
-    } else if (mode == 3) {
+    } else if (mode == PLAYER_COLLISION_3) {
         ret = test_ray_colliders(COLLIDER_FLAG_IGNORE_SHELL, startX, startY, startZ, dirX, dirY, dirZ,
             hitX, hitY, hitZ, hitDepth, hitNx, hitNy, hitNz);
     }
 
-    if (mode == 1 || mode == 3) {
+    if (mode == PLAYER_COLLISION_1 || mode == PLAYER_COLLISION_3) {
         return ret;
     }
 
-    if (mode == 4) {
-        ignoreFlags = COLLISION_CHANNEL_80000;
+    if (mode == PLAYER_COLLISION_4) {
+        ignoreFlags = COLLIDER_FLAG_DOCK_WALL;
     } else {
         ignoreFlags = COLLIDER_FLAG_IGNORE_PLAYER;
     }
@@ -464,8 +475,8 @@ s32 player_raycast_general(s32 mode, f32 startX, f32 startY, f32 startZ, f32 dir
         nAngleZ = 180.0f - atan2(0, 0, *hitNz * 100.0, *hitNy * 100.0);
         nAngleX = 180.0f - atan2(0, 0, *hitNx * 100.0, *hitNy * 100.0);
 
-        if (!(nAngleZ == 90.0f && nAngleX == 90.0f || fabs(nAngleZ) >= 30.0 || fabs(nAngleX) >= 30.0)) {
-            ret = -1;
+        if (!((nAngleZ == 90.0f && nAngleX == 90.0f) || fabs(nAngleZ) >= 30.0 || fabs(nAngleX) >= 30.0)) {
+            ret = NO_COLLIDER;
         }
     }
 
@@ -504,7 +515,7 @@ s32 player_test_move_without_slipping(PlayerStatus* playerStatus, f32* x, f32* y
     dx = radius * sinTheta;
     ret = NO_COLLIDER;
 
-    raycastID = player_raycast_general(0, *x, *y + 0.1, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
+    raycastID = player_raycast_general(PLAYER_COLLISION_0, *x, *y + 0.1, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
     if (raycastID >= 0 && hitDepth <= depth) {
         *hasClimbableStep = TRUE;
     }
@@ -513,7 +524,7 @@ s32 player_test_move_without_slipping(PlayerStatus* playerStatus, f32* x, f32* y
     hitDepth = depth;
     dz = radius * cosTheta;
 
-    raycastID = player_raycast_general(0, *x, *y + height, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
+    raycastID = player_raycast_general(PLAYER_COLLISION_0, *x, *y + height, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
 
     targetDx = 0.0f;
     targetDz = 0.0f;
@@ -572,7 +583,7 @@ s32 player_test_move_with_slipping(PlayerStatus* playerStatus, f32* x, f32* y, f
     targetDx = length * sinTheta;
     targetDz = length * cosTheta;
 
-    hitID = player_raycast_general(0, *x, *y + height, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
+    hitID = player_raycast_general(PLAYER_COLLISION_0, *x, *y + height, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
     if (hitID >= 0 && (depthDiff = hitDepth, depthDiff <= length + radius)) {
         depthDiff -= (length + radius);
         dx = depthDiff * sinTheta;
@@ -583,7 +594,7 @@ s32 player_test_move_with_slipping(PlayerStatus* playerStatus, f32* x, f32* y, f
         ret = hitID;
     } else {
         height = playerStatus->colliderHeight * 0.75;
-        hitID = player_raycast_general(0, *x, *y + height, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
+        hitID = player_raycast_general(PLAYER_COLLISION_0, *x, *y + height, *z, sinTheta, 0, cosTheta, &hitX, &hitY, &hitZ, &hitDepth, &hitNx, &hitNy, &hitNz);
         if (hitID >= 0 && (depthDiff = hitDepth, depthDiff <= length + radius)) {
             depthDiff -= (length + radius);
             dx = depthDiff * sinTheta;
@@ -600,6 +611,7 @@ s32 player_test_move_with_slipping(PlayerStatus* playerStatus, f32* x, f32* y, f
     return ret;
 }
 
+// main function for player physics called from state step functions
 void update_player(void) {
     PlayerStatus* playerStatus = &gPlayerStatus;
     CollisionStatus* collisionStatus = &gCollisionStatus;
@@ -640,7 +652,7 @@ void update_player(void) {
 
     if (playerStatus->flags & PS_FLAG_NO_STATIC_COLLISION) {
         phys_update_action_state();
-        if (!game_scripts_disabled()) {
+        if (!check_player_action_debug()) {
             collision_main_lateral();
         }
     } else if (playerStatus->actionState != ACTION_STATE_HIT_LAVA) {
@@ -675,6 +687,7 @@ void update_player(void) {
     }
 
     update_player_shadow();
+
     check_for_interactables();
     check_for_conversation_prompt();
     check_for_pulse_stone();
@@ -777,10 +790,10 @@ void player_reset_data(void) {
     mem_clear(playerStatus, sizeof(PlayerStatus));
     playerStatus->flags = PS_FLAG_HAS_REFLECTION;
     reset_player_status();
-    playerStatus->shadowID = create_shadow_type(0, playerStatus->pos.x, playerStatus->pos.y,
+    playerStatus->shadowID = create_shadow_type(SHADOW_VARYING_CIRCLE, playerStatus->pos.x, playerStatus->pos.y,
                              playerStatus->pos.z);
-    func_800E6B68();
-    func_800E0B14();
+    clear_world_menus();
+    clear_interact_prompt();
     clear_conversation_prompt();
     clear_pulse_stone_icon();
     clear_ispy_icon();
@@ -840,8 +853,9 @@ s32 get_overriding_player_anim(s32 anim) {
             return -1;
         }
     } else if (playerStatus->animFlags & PA_FLAG_USING_PEACH_PHYSICS) {
-        if ((playerStatus->peachItemHeld != 0)
-        && (anim == ANIM_Peach2_RaiseArms || anim == ANIM_Peach2_Talk || anim == ANIM_Peach2_LowerArms)) {
+        if (playerStatus->peachItemHeld != PEACH_BAKING_NONE
+            && (anim == ANIM_Peach2_RaiseArms || anim == ANIM_Peach2_Talk || anim == ANIM_Peach2_LowerArms)
+        ) {
             anim = ANIM_Peach3_PresentCompleteCake;
         }
     }
@@ -860,7 +874,7 @@ void suggest_player_anim_allow_backward(AnimID anim) {
     if (newAnim != -1) {
         playerStatus->anim = newAnim;
         playerStatus->animNotifyValue = 0;
-        playerStatus->flags &= ~PS_FLAG_FACE_FORWARDS;
+        playerStatus->flags &= ~PS_FLAG_FACE_FORWARD;
     }
 }
 
@@ -869,7 +883,7 @@ void force_player_anim(AnimID anim) {
 
     playerStatus->anim = anim;
     playerStatus->animNotifyValue = 0;
-    playerStatus->flags &= ~PS_FLAG_FACE_FORWARDS;
+    playerStatus->flags &= ~PS_FLAG_FACE_FORWARD;
 }
 
 void suggest_player_anim_always_forward(AnimID anim) {
@@ -879,7 +893,7 @@ void suggest_player_anim_always_forward(AnimID anim) {
     if (newAnim != -1) {
         playerStatus->anim = newAnim;
         playerStatus->animNotifyValue = 0;
-        playerStatus->flags |= PS_FLAG_FACE_FORWARDS;
+        playerStatus->flags |= PS_FLAG_FACE_FORWARD;
     }
 }
 
@@ -895,7 +909,7 @@ void update_player_blink(void) {
 
     if (playerStatus->blinkTimer > 0) {
         playerStatus->blinkTimer--;
-        alpha = &playerStatus->alpha1;
+        alpha = &playerStatus->curAlpha;
         if (!(gGameStatusPtr->frameCounter & 1)) {
             if (outtaSight) {
                 phi_v1 = 192;
@@ -909,10 +923,10 @@ void update_player_blink(void) {
 
         if (!playerStatus->blinkTimer) {
             if (outtaSight) {
-                playerStatus->alpha1 = 128;
+                playerStatus->curAlpha = 128;
                 playerStatus->flags |= PS_FLAG_HAZARD_INVINCIBILITY;
             } else {
-                playerStatus->alpha1 = 255;
+                playerStatus->curAlpha = 255;
                 playerStatus->flags &= ~PS_FLAG_HAZARD_INVINCIBILITY;
             }
         } else {
@@ -980,10 +994,10 @@ void func_800E01DC(void) {
     }
 }
 
-s32 game_scripts_disabled(void) {
-    s32 ret = FALSE;
+b32 check_player_action_debug(void) {
+    b32 ret = FALSE;
 
-    if (gGameStatusPtr->disableScripts && (gGameStatusPtr->curButtons[0] & BUTTON_R)) {
+    if (gGameStatusPtr->debugScripts != DEBUG_SCRIPTS_NONE && (gGameStatusPtr->curButtons[0] & BUTTON_R)) {
         if (gPartnerStatus.partnerActionState == PARTNER_ACTION_NONE) {
             set_action_state(ACTION_STATE_IDLE);
         }
@@ -1082,7 +1096,7 @@ s32 has_valid_conversation_npc(void) {
     s32 cond;
 
     if (npc != NULL && !(npc->flags & NPC_FLAG_10000000)) {
-        cond = (playerStatus->flags & (PS_FLAG_HAS_CONVERSATION_NPC | PS_FLAG_INPUT_DISABLED)) == PS_FLAG_HAS_CONVERSATION_NPC;
+        cond = !(playerStatus->flags & PS_FLAG_INPUT_DISABLED) && (playerStatus->flags & PS_FLAG_HAS_CONVERSATION_NPC);
         ret = cond;
     }
     return ret;
@@ -1216,7 +1230,8 @@ void check_for_interactables(void) {
                         break;
                 }
             } else if (
-                ((playerStatus->flags & (PS_FLAG_HAS_CONVERSATION_NPC | PS_FLAG_INPUT_DISABLED)) == PS_FLAG_HAS_CONVERSATION_NPC)
+                (!(playerStatus->flags & PS_FLAG_INPUT_DISABLED))
+                && (playerStatus->flags & PS_FLAG_HAS_CONVERSATION_NPC)
                 && (npc != NULL)
                 && (npc->flags & NPC_FLAG_10000000)
             ) {
@@ -1292,7 +1307,7 @@ void render_interact_prompt(void) {
     }
 }
 
-void func_800E0B14(void) {
+void clear_interact_prompt(void) {
     InteractNotificationCallback = NULL;
     gPlayerStatusPtr->animFlags &= ~PA_FLAG_INTERACT_PROMPT_AVAILABLE;
 }
@@ -1380,7 +1395,7 @@ void player_update_sprite(void) {
         if (playerStatus->actionState != ACTION_STATE_TORNADO_JUMP && !(playerStatus->flags & PS_FLAG_ROTATION_LOCKED)) {
             playerStatus->spriteFacingAngle = angle + D_800F7B48;
             trueAnim = playerStatus->anim;
-            if (!(playerStatus->flags & PS_FLAG_FACE_FORWARDS)
+            if (!(playerStatus->flags & PS_FLAG_FACE_FORWARD)
                 && (sprIndex == SPR_Mario1 || sprIndex == SPR_MarioW1 || sprIndex == SPR_Peach1)
                 && fabsf(get_clamped_angle_diff(cameraYaw, playerStatus->curYaw)) < 60.0f
             ) {
@@ -1390,7 +1405,7 @@ void player_update_sprite(void) {
             playerStatus->curYaw = playerStatus->targetYaw;
         } else {
             trueAnim = playerStatus->anim;
-            if (!(playerStatus->flags & PS_FLAG_FACE_FORWARDS)
+            if (!(playerStatus->flags & PS_FLAG_FACE_FORWARD)
                 && (sprIndex == SPR_Mario1 || sprIndex == SPR_MarioW1 || sprIndex == SPR_Peach1)
                 && playerStatus->spriteFacingAngle < 350.0f && playerStatus->spriteFacingAngle > 190.0f
             ) {
@@ -1459,7 +1474,7 @@ s32 get_player_back_anim(s32 anim) {
 }
 
 void render_player(void) {
-    if (!gGameStatusPtr->disableScripts) {
+    if (gGameStatusPtr->debugScripts == DEBUG_SCRIPTS_NONE) {
         render_player_model();
     }
 }
@@ -1477,8 +1492,8 @@ void render_player_model(void) {
         get_screen_coords(gCurrentCamID, playerStatus->pos.x, playerStatus->pos.y,
                           playerStatus->pos.z, &x, &y, &z);
         if (!(playerStatus->flags & PS_FLAG_SPINNING)) {
-            if (playerStatus->alpha1 != playerStatus->alpha2) {
-                if (playerStatus->alpha1 < 254) {
+            if (playerStatus->curAlpha != playerStatus->prevAlpha) {
+                if (playerStatus->curAlpha < 254) {
                     if (!(playerStatus->animFlags & PA_FLAG_MAP_HAS_SWITCH)) {
                         renderModeTemp = RENDER_MODE_SURFACE_XLU_LAYER1;
                     } else {
@@ -1486,7 +1501,7 @@ void render_player_model(void) {
                     }
 
                     playerStatus->renderMode = renderModeTemp;
-                    set_player_imgfx_comp(PLAYER_SPRITE_MAIN, -1, IMGFX_SET_ALPHA, 0, 0, 0, playerStatus->alpha1, 0);
+                    set_player_imgfx_comp(PLAYER_SPRITE_MAIN, -1, IMGFX_SET_ALPHA, 0, 0, 0, playerStatus->curAlpha, 0);
 
                 } else {
                     playerStatus->renderMode = RENDER_MODE_ALPHATEST;
@@ -1494,11 +1509,11 @@ void render_player_model(void) {
                 }
             }
 
-            playerStatus->alpha2 = playerStatus->alpha1;
+            playerStatus->prevAlpha = playerStatus->curAlpha;
 
         } else {
             playerStatus->renderMode = RENDER_MODE_SURFACE_XLU_LAYER1;
-            playerStatus->alpha2 = 0;
+            playerStatus->prevAlpha = 0;
         }
 
         if (!(playerStatus->animFlags & PA_FLAG_INVISIBLE)) {
@@ -1713,9 +1728,9 @@ void update_player_shadow(void) {
     }
 
     shadow->pos.y = y;
-    shadow->alpha = (f64)playerStatus->alpha1 / 2;
+    shadow->alpha = (f64)playerStatus->curAlpha / 2;
 
-    if (!(gGameStatusPtr->peachFlags & PEACH_STATUS_FLAG_IS_PEACH)) {
+    if (!(gGameStatusPtr->peachFlags & PEACH_FLAG_IS_PEACH)) {
         set_standard_shadow_scale(shadow, shadowScale);
     } else {
         set_peach_shadow_scale(shadow, shadowScale);

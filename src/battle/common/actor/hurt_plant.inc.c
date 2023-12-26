@@ -4,16 +4,20 @@
 
 #define NAMESPACE A(hurt_plant)
 
-extern EvtScript N(init_8021DA98);
-extern EvtScript N(takeTurn_8021E33C);
-extern EvtScript N(idle_8021DAE4);
-extern EvtScript N(handleEvent_8021DCF4);
+extern EvtScript N(EVS_Init);
+extern EvtScript N(EVS_Idle);
+extern EvtScript N(EVS_TakeTurn);
+extern EvtScript N(EVS_HandleEvent);
 
 enum N(ActorPartIDs) {
-    PRT_MAIN            = 1,
+    PRT_MAIN        = 1,
 };
 
-s32 N(IdleAnimations_8021D940)[] = {
+enum N(ActorParams) {
+    DMG_BITE        = 2,
+};
+
+s32 N(DefaultAnims)[] = {
     STATUS_KEY_NORMAL,    ANIM_HurtPlant_Anim02,
     STATUS_KEY_STONE,     ANIM_HurtPlant_Anim00,
     STATUS_KEY_SLEEP,     ANIM_HurtPlant_Anim0C,
@@ -26,13 +30,13 @@ s32 N(IdleAnimations_8021D940)[] = {
     STATUS_END,
 };
 
-s32 N(DefenseTable_8021D98C)[] = {
+s32 N(DefenseTable)[] = {
     ELEMENT_NORMAL,   0,
     ELEMENT_FIRE,     0,
     ELEMENT_END,
 };
 
-s32 N(StatusTable_8021D9A0)[] = {
+s32 N(StatusTable)[] = {
     STATUS_KEY_NORMAL,              0,
     STATUS_KEY_DEFAULT,             0,
     STATUS_KEY_SLEEP,              95,
@@ -59,13 +63,13 @@ s32 N(StatusTable_8021D9A0)[] = {
 
 ActorPartBlueprint N(ActorParts)[] = {
     {
-        .flags = ACTOR_PART_FLAG_MULTI_TARGET,
+        .flags = ACTOR_PART_FLAG_PRIMARY_TARGET,
         .index = PRT_MAIN,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { -10, 24 },
         .opacity = 255,
-        .idleAnimations = N(IdleAnimations_8021D940),
-        .defenseTable = N(DefenseTable_8021D98C),
+        .idleAnimations = N(DefaultAnims),
+        .defenseTable = N(DefenseTable),
         .eventFlags = ACTOR_EVENT_FLAGS_NONE,
         .elementImmunityFlags = 0,
         .projectileTargetOffset = { -8, -5 },
@@ -75,12 +79,12 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_HURT_PLANT,
-    .level = 16,
+    .level = ACTOR_LEVEL_HURT_PLANT,
     .maxHP = 8,
-    .partCount = ARRAY_COUNT( N(ActorParts)),
+    .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
-    .initScript = &N(init_8021DA98),
-    .statusTable = N(StatusTable_8021D9A0),
+    .initScript = &N(EVS_Init),
+    .statusTable = N(StatusTable),
     .escapeChance = 70,
     .airLiftChance = 20,
     .hurricaneChance = 20,
@@ -95,17 +99,17 @@ ActorBlueprint NAMESPACE = {
     .statusTextOffset = { 1, 20 },
 };
 
-EvtScript N(init_8021DA98) = {
-    EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(takeTurn_8021E33C)))
-    EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(idle_8021DAE4)))
-    EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(handleEvent_8021DCF4)))
+EvtScript N(EVS_Init) = {
+    EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(EVS_TakeTurn)))
+    EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(EVS_Idle)))
+    EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(EVS_HandleEvent)))
     EVT_RETURN
     EVT_END
 };
 
 #include "common/battle/SetAbsoluteStatusOffsets.inc.c"
 
-EvtScript N(idle_8021DAE4) = {
+EvtScript N(EVS_Idle) = {
     EVT_LABEL(0)
     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
@@ -124,7 +128,7 @@ EvtScript N(idle_8021DAE4) = {
     EVT_END
 };
 
-EvtScript N(8021DBFC) = {
+EvtScript N(EVS_ReturnHome) = {
     EVT_CALL(SetActorFlagBits, ACTOR_SELF, ACTOR_FLAG_NO_SHADOW, TRUE)
     EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_BURROW_DIG)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_HurtPlant_Anim04)
@@ -140,9 +144,9 @@ EvtScript N(8021DBFC) = {
     EVT_END
 };
 
-EvtScript N(handleEvent_8021DCF4) = {
+EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(EVENT_HIT_COMBO)
@@ -190,7 +194,7 @@ EvtScript N(handleEvent_8021DCF4) = {
             EVT_SET_CONST(LVar1, ANIM_HurtPlant_Anim0E)
             EVT_EXEC_WAIT(EVS_Enemy_ShockHit)
             EVT_CALL(SetActorSpeed, ACTOR_SELF, EVT_FLOAT(4.0))
-            EVT_EXEC_WAIT(N(8021DBFC))
+            EVT_EXEC_WAIT(N(EVS_ReturnHome))
         EVT_CASE_EQ(EVENT_SHOCK_DEATH)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_HurtPlant_Anim0D)
             EVT_WAIT(3)
@@ -248,15 +252,15 @@ EvtScript N(handleEvent_8021DCF4) = {
             EVT_RETURN
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
 };
 
-EvtScript N(takeTurn_8021E33C) = {
+EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(GetBattlePhase, LVar0)
     EVT_IF_EQ(LVar0, PHASE_FIRST_STRIKE)
@@ -304,10 +308,10 @@ EvtScript N(takeTurn_8021E33C) = {
     EVT_WAIT(10)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_HurtPlant_Anim05)
     EVT_WAIT(10)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_2C4)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HURT_PLANT_BITE)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_HurtPlant_Anim06)
     EVT_WAIT(6)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_10)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_MISS)
         EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
@@ -320,8 +324,8 @@ EvtScript N(takeTurn_8021E33C) = {
             EVT_WAIT(15)
             EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
             EVT_CALL(SetActorSpeed, ACTOR_SELF, EVT_FLOAT(4.0))
-            EVT_EXEC_WAIT(N(8021DBFC))
-            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+            EVT_EXEC_WAIT(N(EVS_ReturnHome))
+            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
             EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
             EVT_RETURN
         EVT_END_CASE_GROUP
@@ -330,9 +334,9 @@ EvtScript N(takeTurn_8021E33C) = {
     EVT_WAIT(2)
     EVT_CALL(GetStatusFlags, ACTOR_PLAYER, LVar0)
     EVT_IF_FLAG(LVar0, STATUS_FLAG_POISON)
-        EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, 2, BS_FLAGS1_SP_EVT_ACTIVE)
+        EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, 0, DMG_BITE, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_ELSE
-        EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, DMG_STATUS_KEY(STATUS_FLAG_POISON, 3, 100), 2, BS_FLAGS1_SP_EVT_ACTIVE)
+        EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, 0, DMG_STATUS_KEY(STATUS_FLAG_POISON, 3, 100), DMG_BITE, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_END_IF
     EVT_SWITCH(LVar0)
         EVT_CASE_OR_EQ(HIT_RESULT_HIT)
@@ -341,10 +345,10 @@ EvtScript N(takeTurn_8021E33C) = {
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_HurtPlant_Anim07)
             EVT_WAIT(5)
             EVT_CALL(SetActorSpeed, ACTOR_SELF, EVT_FLOAT(6.0))
-            EVT_EXEC_WAIT(N(8021DBFC))
+            EVT_EXEC_WAIT(N(EVS_ReturnHome))
         EVT_END_CASE_GROUP
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END

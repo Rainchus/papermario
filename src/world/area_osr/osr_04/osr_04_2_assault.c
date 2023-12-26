@@ -4,7 +4,7 @@ s32 N(map_init)(void) {
     gGameStatusPtr->playerSpriteSet = PLAYER_SPRITES_COMBINED_EPILOGUE;
     sprintf(wMapShapeName, "osr_03_shape");
     sprintf(wMapHitName, "osr_03_hit");
-    return ApiStatus_BLOCK;
+    return FALSE;
 }
 
 API_CALLABLE(N(MakeCastleChainAngle)) {
@@ -326,7 +326,7 @@ EvtScript N(EVS_LiftCastleUp) = {
 EvtScript N(EVS_RaiseSmokeClouds) = {
     EVT_SET(MV_SmokeVelY, 0)
     EVT_THREAD
-        EVT_CALL(PlaySound, SOUND_36)
+        EVT_CALL(PlaySound, SOUND_OSR_SMOKE_RISING_1)
         EVT_CALL(MakeLerp, 0, 650, 40 * DT, EASING_CUBIC_OUT)
         EVT_LOOP(0)
             EVT_CALL(UpdateLerp)
@@ -362,7 +362,7 @@ EvtScript N(EVS_RaiseSmokeClouds) = {
     EVT_END_THREAD
     EVT_THREAD
         EVT_WAIT(20 * DT)
-        EVT_CALL(PlaySound, SOUND_37)
+        EVT_CALL(PlaySound, SOUND_OSR_SMOKE_RISING_2)
         EVT_CALL(MakeLerp, 0, 400, 30 * DT, EASING_CUBIC_OUT)
         EVT_LOOP(0)
             EVT_CALL(UpdateLerp)
@@ -397,7 +397,7 @@ EvtScript N(EVS_RaiseSmokeClouds) = {
     EVT_END_THREAD
     EVT_THREAD
         EVT_WAIT(40)
-        EVT_CALL(PlaySound, SOUND_38)
+        EVT_CALL(PlaySound, SOUND_OSR_SMOKE_RISING_3)
         EVT_CALL(MakeLerp, 0, 200, 20 * DT, EASING_CUBIC_OUT)
         EVT_LOOP(0)
             EVT_CALL(UpdateLerp)
@@ -440,7 +440,7 @@ EvtScript N(EVS_Scene_BowsersAssault) = {
     EVT_CALL(EnableGroup, MODEL_yoru, FALSE)
     EVT_CALL(SetPlayerPos, 0, 0, 2000)
     EVT_THREAD
-        EVT_CALL(PlaySound, SOUND_80000057)
+        EVT_CALL(PlaySound, SOUND_LOOP_OSR_RUMBLING)
         EVT_CALL(ShakeCam, CAM_DEFAULT, 0, 450 * DT, EVT_FLOAT(2.0))
         EVT_CALL(ShakeCam, CAM_DEFAULT, 0, 100 * DT, EVT_FLOAT(1.0))
     EVT_END_THREAD
@@ -504,7 +504,7 @@ EvtScript N(EVS_Scene_BowsersAssault) = {
         EVT_END_LOOP
     EVT_END_THREAD
     EVT_THREAD
-        EVT_CALL(PlaySound, SOUND_35)
+        EVT_CALL(PlaySound, SOUND_OSR_GROUND_CRACKING)
         EVT_CALL(MakeLerp, 0, 30, 50 * DT, EASING_LINEAR)
         EVT_LOOP(0)
             EVT_CALL(UpdateLerp)

@@ -32,7 +32,7 @@ extern CollisionData gCollisionData;
 
 extern f32 GravityParamsStartFall[];
 extern s16 FootstepSoundSelector;
-extern u8* gBackgroundFogModePtr;
+extern u8* gBackgroundTintModePtr;
 extern s32 gEntityHideMode;
 
 extern s32 D_8010C92C;
@@ -40,8 +40,6 @@ extern s32 D_8010C950;
 extern HiddenPanelsData gCurrentHiddenPanels;
 
 extern BackgroundHeader gBackgroundImage;
-
-extern s32 CreateEntityVarArgBuffer[4];
 
 extern f32 D_800F7B74;
 
@@ -84,13 +82,13 @@ extern Entity* TweesterTouchingPlayer;
 
 extern s32 PrevPlayerDirection;
 extern s32 PeachDisguiseNpcIndex;
-extern s32 D_8010C980;
+extern s32 PlayerRunStateTime;
 extern s32 PrevPlayerCamRelativeYaw;
 extern s32 D_800F7B44;
-extern f32 D_8010C938;
-extern f32 D_8010C990;
+extern f32 PlayerNormalYaw;
+extern f32 PlayerNormalPitch;
 extern s32 NpcHitQueryColliderID;
-extern Vec3s btl_actorHomePositions[];
+extern Vec3s StandardActorHomePositions[];
 
 extern SaveData gCurrentSaveFile;
 
@@ -98,7 +96,7 @@ extern s32 gEncounterSubState;
 extern s32 timeFreezeMode;
 extern s32 D_8009A678;
 
-extern u8 D_800779B0;
+extern u8 IntroMessageIdx;
 extern s32 PartnerIDFromMenuIndex[12]; // partner IDs
 
 // Scripts
@@ -116,7 +114,7 @@ extern s32 gCurrentDisplayContextIndex;
 
 extern s16 gCurrentCamID;
 
-extern s32 D_8029C890[10][5];
+extern s32 PartnerWishAnims[][5];
 
 extern HeapNode heap_battleHead;
 
@@ -125,7 +123,7 @@ extern s32 bMarioDefendAnims[];
 extern s32 bPeachIdleAnims[];
 
 extern PartnerStatus gPartnerStatus;
-extern UiStatus gUIStatus;
+extern StatusBar gStatusBar;
 extern PlayerStatus gPlayerStatus;
 extern PlayerSpinState gPlayerSpinState;
 extern PlayerData gPlayerData;

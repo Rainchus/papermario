@@ -3,11 +3,6 @@
 #include "sprite.h"
 #include "imgfx.h"
 
-#if VERSION_IQUE
-// TODO: remove if section is split in iQue release
-extern Addr imgfx_data_ROM_START;
-#endif
-
 typedef union ImgFXIntVars {
     s32 raw[2][4];
     struct {
@@ -523,7 +518,7 @@ void imgfx_update(u32 idx, ImgFXType type, s32 imgfxArg1, s32 imgfxArg2, s32 img
             if (flags != 0) {
                 state->flags |= flags;
             } else {
-                state->flags |= flags; // required to match
+                state->flags |= 0; // required to match
             }
             return;
         case IMGFX_UNK_1:
@@ -915,9 +910,7 @@ void imgfx_appendGfx_mesh(ImgFXState* state, Matrix4f mtx) {
             case IMGFX_RENDER_MODULATE_PRIM_RGB:
                 // color: lerp from prim color to 1 based on texture intensity
                 // alpha: texture
-                gDPSetCombineLERP(gMainGfxPos++,
-                    1, PRIMITIVE, TEXEL0, PRIMITIVE, 0, 0, 0, TEXEL0,
-                    1, PRIMITIVE, TEXEL0, PRIMITIVE, 0, 0, 0, TEXEL0);
+                gDPSetCombineMode(gMainGfxPos++, PM_CC_5B, PM_CC_5B);
                 gDPSetPrimColor(gMainGfxPos++, 0, 0, state->ints.color.r, state->ints.color.g,
                                 state->ints.color.b, 0);
                 break;
@@ -927,9 +920,7 @@ void imgfx_appendGfx_mesh(ImgFXState* state, Matrix4f mtx) {
                 if (primAlpha <= 0) {
                     return;
                 }
-                gDPSetCombineLERP(gMainGfxPos++,
-                    1, 0, TEXEL0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0,
-                    1, 0, TEXEL0, PRIMITIVE, TEXEL0, 0, PRIMITIVE, 0);
+                gDPSetCombineMode(gMainGfxPos++, PM_CC_5C, PM_CC_5C);
                 gDPSetPrimColor(gMainGfxPos++, 0, 0, state->ints.color.r, state->ints.color.g,
                                 state->ints.color.b, primAlpha);
                 break;
@@ -943,16 +934,14 @@ void imgfx_appendGfx_mesh(ImgFXState* state, Matrix4f mtx) {
             case IMGFX_RENDER_MODULATE_SHADE_RGB:
                 // color: lerp from vtx color to 1 based on texture intensity
                 // alpha: texture
-                gDPSetCombineLERP(gMainGfxPos++,
-                    1, SHADE, TEXEL0, SHADE, 0, 0, 0, TEXEL0,
-                    1, SHADE, TEXEL0, SHADE, 0, 0, 0, TEXEL0);
+                gDPSetCombineMode(gMainGfxPos++, PM_CC_5D, PM_CC_5D);
                 gSPSetGeometryMode(gMainGfxPos++, G_SHADE | G_SHADING_SMOOTH);
                 gSPClearGeometryMode(gMainGfxPos++, G_LIGHTING);
                 break;
             case IMGFX_RENDER_MULTIPLY_SHADE_ALPHA:
                 // color: texture
                 // alpha: texture * vtx color
-                gDPSetCombineLERP(gMainGfxPos++, 0, 0, 0, TEXEL0, TEXEL0, 0, SHADE, 0, 0, 0, 0, TEXEL0, TEXEL0, 0, SHADE, 0);
+                gDPSetCombineMode(gMainGfxPos++, PM_CC_12, PM_CC_12);
                 gSPSetGeometryMode(gMainGfxPos++, G_SHADE | G_SHADING_SMOOTH);
                 gSPClearGeometryMode(gMainGfxPos++, G_LIGHTING);
                 break;
@@ -966,9 +955,7 @@ void imgfx_appendGfx_mesh(ImgFXState* state, Matrix4f mtx) {
             case IMGFX_RENDER_MODULATE_SHADE_RGBA:
                 // color: lerp from vtx color to 1 based on texture intensity
                 // alpha: vtx color * texture
-                gDPSetCombineLERP(gMainGfxPos++,
-                    1, SHADE, TEXEL0, SHADE, TEXEL0, 0, SHADE, 0,
-                    1, SHADE, TEXEL0, SHADE, TEXEL0, 0, SHADE, 0);
+                gDPSetCombineMode(gMainGfxPos++, PM_CC_5E, PM_CC_5E);
                 gSPSetGeometryMode(gMainGfxPos++, G_SHADE | G_SHADING_SMOOTH);
                 gSPClearGeometryMode(gMainGfxPos++, G_LIGHTING);
                 break;
@@ -1591,7 +1578,7 @@ void imgfx_appendGfx_mesh_basic(ImgFXState* state, Matrix4f mtx) {
                     }
 
                     if (alpha2 == -1) {
-                        gDPSetCombineLERP(gMainGfxPos++, 0, 0, 0, 0, SHADE, 0, TEXEL0, 0, 0, 0, 0, 0, SHADE, 0, TEXEL0, 0);
+                        gDPSetCombineMode(gMainGfxPos++, PM_CC_59, PM_CC_59);
                     } else {
                         gDPSetEnvColor(gMainGfxPos++, 0, 0, 0, alpha2);
                         gDPSetCombineMode(gMainGfxPos++, PM_CC_0A, PM_CC_0A);
@@ -1609,7 +1596,7 @@ void imgfx_appendGfx_mesh_basic(ImgFXState* state, Matrix4f mtx) {
 
                     gDPSetEnvColor(gMainGfxPos++, 100, 100, 100, 255);
                     gDPSetPrimColor(gMainGfxPos++, 0, 0, 0, 0, 0, alpha2);
-                    gDPSetCombineLERP(gMainGfxPos++, SHADE, ENVIRONMENT, TEXEL0, TEXEL0, 0, 0, 0, TEXEL0, SHADE, ENVIRONMENT, TEXEL0, TEXEL0, 0, 0, 0, TEXEL0);
+                    gDPSetCombineMode(gMainGfxPos++, PM_CC_5A, PM_CC_5A);
                     gDPSetColorDither(gMainGfxPos++, G_CD_MAGICSQ);
                 }
             }
@@ -1619,8 +1606,8 @@ void imgfx_appendGfx_mesh_basic(ImgFXState* state, Matrix4f mtx) {
             cam = &gCameras[gCurrentCamID];
             if (gGameStatusPtr->isBattle == 2) {
                 gSPViewport(gMainGfxPos++, &D_8014EE40);
-                D_8014EE50.vp.vtrans[0] = D_8014EE40.vp.vtrans[0] + gGameStatusPtr->unk_82;
-                D_8014EE50.vp.vtrans[1] = D_8014EE40.vp.vtrans[1] + gGameStatusPtr->unk_83;
+                D_8014EE50.vp.vtrans[0] = D_8014EE40.vp.vtrans[0] + gGameStatusPtr->altViewportOffset.x;
+                D_8014EE50.vp.vtrans[1] = D_8014EE40.vp.vtrans[1] + gGameStatusPtr->altViewportOffset.y;
             } else {
                 gSPViewport(gMainGfxPos++, &cam->vp);
             }

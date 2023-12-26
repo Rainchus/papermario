@@ -148,7 +148,7 @@ API_CALLABLE(N(Update)) {
                 N(TweesterPhysicsPtr)->angularVel = 6.0f;
                 N(TweesterPhysicsPtr)->liftoffVelPhase = 50.0f;
                 N(TweesterPhysicsPtr)->countdown = 120;
-                watt->flags |= NPC_FLAG_IGNORE_CAMERA_FOR_YAW | NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_WORLD_COLLISION | NPC_FLAG_8;
+                watt->flags |= NPC_FLAG_IGNORE_CAMERA_FOR_YAW | NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_IGNORE_WORLD_COLLISION | NPC_FLAG_FLYING;
                 watt->flags &= ~NPC_FLAG_GRAVITY;
             case TWEESTER_PARTNER_ATTRACT:
                 sin_cos_rad(DEG_TO_RAD(N(TweesterPhysicsPtr)->angle), &sinAngle, &cosAngle);
@@ -289,7 +289,7 @@ API_CALLABLE(N(UseAbility)) {
             if (gGameStatusPtr->keepUsingPartnerOnMapChange) {
                 playerStatus->animFlags |= PA_FLAG_USING_WATT;
                 N(IsPlayerHolding) = TRUE;
-                npc->flags |= NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_8;
+                npc->flags |= NPC_FLAG_IGNORE_PLAYER_COLLISION | NPC_FLAG_FLYING;
                 npc->flags &= ~(NPC_FLAG_JUMPING | NPC_FLAG_GRAVITY);
                 gGameStatusPtr->keepUsingPartnerOnMapChange = FALSE;
                 partnerStatus->partnerActionState = PARTNER_ACTION_USE;
@@ -303,7 +303,7 @@ API_CALLABLE(N(UseAbility)) {
                 npc->curAnim = ANIM_WorldWatt_Idle;
                 playerStatus->animFlags |= PA_FLAG_WATT_IN_HANDS;
                 N(update_player_carry_anim)();
-                npc_set_palswap_mode_A(npc, 1);
+                npc_set_palswap_mode_A(npc, NPC_PAL_ADJUST_WATT_IDLE);
                 script->functionTemp[1] = 2;
                 N(AbilityState) = SHINING_STATE_HOLDING;
             } else {
@@ -376,7 +376,7 @@ API_CALLABLE(N(UseAbility)) {
         partnerStatus->partnerActionState = PARTNER_ACTION_NONE;
         gGameStatusPtr->keepUsingPartnerOnMapChange = FALSE;
         N(AbilityState) = SHINING_STATE_BEGIN;
-        npc_set_palswap_mode_A(npc, 0);
+        npc_set_palswap_mode_A(npc, NPC_PAL_ADJUST_NONE);
         if (!(playerStatus->flags & PS_FLAG_HIT_FIRE)) {
             set_action_state(ACTION_STATE_IDLE);
         }

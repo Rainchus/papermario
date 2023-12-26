@@ -12,11 +12,11 @@ API_CALLABLE(N(SetupDemoPlayerMove)) {
     battleStatus->selectedMoveID = MOVE_SHELL_SHOT;
     battleStatus->curTargetListFlags = gMoveTable[MOVE_SHELL_SHOT].flags;
 
-    player_create_target_list(partner);
+    create_current_pos_target_list(partner);
     partner->selectedTargetIndex = 0;
     selectableTarget = &partner->targetData[partner->targetIndexList[partner->selectedTargetIndex]];
     partner->targetActorID = selectableTarget->actorID;
-    partner->targetPartIndex = selectableTarget->partID;
+    partner->targetPartID = selectableTarget->partID;
 
     return ApiStatus_DONE2;
 }

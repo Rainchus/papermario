@@ -117,7 +117,7 @@ s32 N(StatusTable)[] = {
 
 ActorPartBlueprint N(ActorParts)[] = {
     {
-        .flags = ACTOR_PART_FLAG_MULTI_TARGET,
+        .flags = ACTOR_PART_FLAG_PRIMARY_TARGET,
         .index = PRT_MAIN,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 60 },
@@ -153,7 +153,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_DUMMY_COIN_1,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 0 },
@@ -165,7 +165,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_DUMMY_COIN_2,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 0 },
@@ -177,7 +177,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_DUMMY_COIN_3,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 0 },
@@ -189,7 +189,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_DUMMY_COIN_4,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 0 },
@@ -201,7 +201,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_DUMMY_COIN_5,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 0 },
@@ -213,7 +213,7 @@ ActorPartBlueprint N(ActorParts)[] = {
         .projectileTargetOffset = { 0, 0 },
     },
     {
-        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_2 | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
+        .flags = ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_DECORATIONS | ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_USE_ABSOLUTE_POSITION,
         .index = PRT_DUMMY_COIN_6,
         .posOffset = { 0, 0, 0 },
         .targetOffset = { 0, 0 },
@@ -229,9 +229,9 @@ ActorPartBlueprint N(ActorParts)[] = {
 ActorBlueprint NAMESPACE = {
     .flags = 0,
     .type = ACTOR_TYPE_KENT_C_KOOPA,
-    .level = 55,
+    .level = ACTOR_LEVEL_KENT_C_KOOPA,
     .maxHP = 70,
-    .partCount = ARRAY_COUNT( N(ActorParts)),
+    .partCount = ARRAY_COUNT(N(ActorParts)),
     .partsData = N(ActorParts),
     .initScript = &N(EVS_Init),
     .statusTable = N(StatusTable),
@@ -250,12 +250,12 @@ ActorBlueprint NAMESPACE = {
 };
 
 EvtScript N(EVS_Init) = {
-    EVT_CALL(func_8027D434, ACTOR_SELF, 3, 70)
+    EVT_CALL(func_8027D434, ACTOR_SELF, PRT_WEAK_POINT, 70)
     EVT_CALL(SetPartSize, ACTOR_SELF, PRT_WEAK_POINT, 30, 30)
     EVT_CALL(BindTakeTurn, ACTOR_SELF, EVT_PTR(N(EVS_TakeTurn)))
     EVT_CALL(BindIdle, ACTOR_SELF, EVT_PTR(N(EVS_Idle)))
     EVT_CALL(BindHandleEvent, ACTOR_SELF, EVT_PTR(N(EVS_HandleEvent)))
-    EVT_CALL(BindNextTurn, ACTOR_SELF, EVT_PTR(N(EVS_HandlePhase)))
+    EVT_CALL(BindHandlePhase, ACTOR_SELF, EVT_PTR(N(EVS_HandlePhase)))
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_IsFlipped, FALSE)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_Anim_Hurt, ANIM_KentCKoopa_Anim1C)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_FlippedTurns, 0)
@@ -267,13 +267,13 @@ EvtScript N(EVS_Init) = {
 
 EvtScript N(EVS_HandlePhase) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetBattlePhase, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_EQ(PHASE_PLAYER_BEGIN)
             EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_FlipResistance, 2)
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -289,7 +289,7 @@ EvtScript N(EVS_Idle) = {
 
 EvtScript N(EVS_HandleEvent) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetLastElement, LVarE)
     EVT_CALL(GetLastEvent, ACTOR_SELF, LVarD)
     EVT_SWITCH(LVarD)
@@ -377,7 +377,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_EXEC_WAIT(EVS_Enemy_ShockHit)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Anim_Hurt, LVar1)
-            EVT_EXEC_WAIT(EVS_Enemy_JumpBack)
+            EVT_EXEC_WAIT(EVS_Enemy_Knockback)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Anim_Hurt, LVar1)
             EVT_EXEC_WAIT(EVS_Enemy_ReturnHome)
@@ -387,7 +387,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_EXEC_WAIT(EVS_Enemy_ShockHit)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Anim_Hurt, LVar1)
-            EVT_EXEC_WAIT(EVS_Enemy_JumpBack)
+            EVT_EXEC_WAIT(EVS_Enemy_Knockback)
             EVT_SET_CONST(LVar0, PRT_MAIN)
             EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Anim_Hurt, LVar1)
             EVT_EXEC_WAIT(EVS_Enemy_Death)
@@ -467,13 +467,13 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_FlipResistance, LVar0)
             EVT_IF_EQ(LVar0, 0)
                 EVT_CALL(GetBattleFlags, LVarD)
-                EVT_IF_FLAG(LVarD, BS_FLAGS1_SP_EVT_ACTIVE)
+                EVT_IF_FLAG(LVarD, BS_FLAGS1_TRIGGER_EVENTS)
                     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_FlipResistance, 2)
                 EVT_END_IF
                 EVT_EXEC_WAIT(N(EVS_FlipOver))
             EVT_ELSE
                 EVT_CALL(GetBattleFlags, LVarD)
-                EVT_IF_FLAG(LVarD, BS_FLAGS1_SP_EVT_ACTIVE)
+                EVT_IF_FLAG(LVarD, BS_FLAGS1_TRIGGER_EVENTS)
                     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_FlipResistance, 2)
                     EVT_CALL(GetLastDamage, ACTOR_SELF, LVar0)
                     EVT_IF_GT(LVar0, 0)
@@ -499,7 +499,7 @@ EvtScript N(EVS_HandleEvent) = {
             EVT_END_IF
         EVT_CASE_DEFAULT
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -513,7 +513,7 @@ EvtScript N(EVS_TakeTurn) = {
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_IsFlipped, LVar0)
     EVT_IF_EQ(LVar0, 1)
         EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-        EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+        EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
         EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_14)
         EVT_CALL(SetBattleCamZoom, 200)
         EVT_CALL(SetBattleCamOffsetZ, 20)
@@ -535,7 +535,7 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_CALL(SetAnimationRate, ACTOR_SELF, PRT_MAIN, EVT_FLOAT(1.0))
             EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
             EVT_CALL(MoveBattleCamOver, 20)
-            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
             EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
             EVT_RETURN
         EVT_ELSE
@@ -585,9 +585,9 @@ EvtScript N(EVS_TakeTurn) = {
             EVT_CALL(SetDefenseTable, ACTOR_SELF, PRT_MAIN, EVT_PTR(N(NormalDefense)))
             EVT_CALL(SetEnemyTargetOffset, ACTOR_SELF, PRT_MAIN, 0, 60)
             EVT_CALL(SetPartFlagBits, ACTOR_SELF, PRT_WEAK_POINT, ACTOR_PART_FLAG_NO_TARGET, TRUE)
-            EVT_CALL(SetPartFlagBits, ACTOR_SELF, PRT_WEAK_POINT, ACTOR_PART_FLAG_MULTI_TARGET, FALSE)
-            EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_FLIPPED, ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_4)
-            EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_MAIN, ACTOR_PART_FLAG_MULTI_TARGET | ACTOR_PART_FLAG_4)
+            EVT_CALL(SetPartFlagBits, ACTOR_SELF, PRT_WEAK_POINT, ACTOR_PART_FLAG_PRIMARY_TARGET, FALSE)
+            EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_FLIPPED, ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_NO_SHADOW)
+            EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_MAIN, ACTOR_PART_FLAG_PRIMARY_TARGET | ACTOR_PART_FLAG_NO_SHADOW)
             EVT_CALL(SetIdleAnimations, ACTOR_SELF, PRT_MAIN, EVT_PTR(N(DefaultAnims)))
             EVT_CALL(N(SetAbsoluteStatusOffsets), -26, 38, 2, 63)
             EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_IsFlipped, FALSE)
@@ -611,7 +611,7 @@ EvtScript N(EVS_TakeTurn) = {
 
 EvtScript N(EVS_Attack_ShellToss) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_14)
     EVT_CALL(SetBattleCamZoom, 200)
@@ -631,15 +631,15 @@ EvtScript N(EVS_Attack_ShellToss) = {
         EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 1, LVar0, LVar1, LVar2, 32, 4, 0, 10, 0)
     EVT_END_THREAD
     EVT_CALL(SetActorSounds, ACTOR_SELF, ACTOR_SOUND_WALK, SOUND_NONE, SOUND_NONE)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_370)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_KENT_C_SHELL_TOSS_LOOP)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim0A)
     EVT_WAIT(10)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVarA, 0, 0, 3, BS_FLAGS1_10)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVarA, 0, 0, 3, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVarA)
-        EVT_CASE_OR_EQ(6)
-        EVT_CASE_OR_EQ(5)
+        EVT_CASE_OR_EQ(HIT_RESULT_MISS)
+        EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
             EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PARTNER)
-            EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVarB, 0, 0, 3, BS_FLAGS1_10)
+            EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVarB, 0, 0, 3, BS_FLAGS1_INCLUDE_POWER_UPS)
             EVT_SWITCH(LVarB)
                 EVT_CASE_EQ(6)
                     EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
@@ -655,12 +655,12 @@ EvtScript N(EVS_Attack_ShellToss) = {
                     EVT_CALL(SetGoalToHome, ACTOR_SELF)
                     EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
                     EVT_CALL(ResetAllActorSounds, ACTOR_SELF)
-                    EVT_CALL(StopSound, SOUND_370)
+                    EVT_CALL(StopSound, SOUND_KENT_C_SHELL_TOSS_LOOP)
                     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim0C)
                     EVT_WAIT(8)
                     EVT_CALL(YieldTurn)
                     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim01)
-                    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+                    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
                     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
                     EVT_RETURN
                 EVT_CASE_DEFAULT
@@ -687,7 +687,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
                     EVT_CALL(SetActorSpeed, ACTOR_SELF, EVT_FLOAT(5.0))
                     EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
                     EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
-                    EVT_IF_EQ(LVarA, 5)
+                    EVT_IF_EQ(LVarA, HIT_RESULT_LUCKY)
                         EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_TRIGGER_LUCKY, 0, 0, 0)
                     EVT_END_IF
                     EVT_SET(LVarA, 1)
@@ -721,7 +721,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
             EVT_IF_NOT_FLAG(LVarE, STATUS_FLAG_SHRINK)
                 EVT_CALL(SetDamageSource, DMG_SRC_CRUSH)
             EVT_END_IF
-            EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVarF, 0, SUPPRESS_EVENT_ALL, 0, DMG_SHELL_TOSS_PLAYER, BS_FLAGS1_SP_EVT_ACTIVE)
+            EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVarF, 0, SUPPRESS_EVENT_ALL, 0, DMG_SHELL_TOSS_PLAYER, BS_FLAGS1_TRIGGER_EVENTS)
             EVT_SET(LVarA, 0)
             EVT_IF_NOT_FLAG(LVarE, STATUS_FLAG_SHRINK)
                 EVT_CALL(GetBattleFlags, LVar0)
@@ -743,7 +743,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
         EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
         EVT_CALL(SetGoalToTarget, ACTOR_SELF)
         EVT_CALL(SetDamageSource, DMG_SRC_CRUSH_PARTNER)
-        EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, SUPPRESS_EVENT_ALL, 0, DMG_SHELL_TOSS_PARTNER, BS_FLAGS1_SP_EVT_ACTIVE)
+        EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVar0, 0, SUPPRESS_EVENT_ALL, 0, DMG_SHELL_TOSS_PARTNER, BS_FLAGS1_TRIGGER_EVENTS)
         EVT_CALL(GetBattleFlags, LVar0)
         EVT_IF_NOT_FLAG(LVar0, BS_FLAGS1_ATK_BLOCKED)
             EVT_CALL(SetGoalToTarget, ACTOR_SELF)
@@ -756,12 +756,12 @@ EvtScript N(EVS_Attack_ShellToss) = {
             EVT_CALL(SetGoalToHome, ACTOR_SELF)
             EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
             EVT_CALL(ResetAllActorSounds, ACTOR_SELF)
-            EVT_CALL(StopSound, SOUND_370)
+            EVT_CALL(StopSound, SOUND_KENT_C_SHELL_TOSS_LOOP)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim0C)
             EVT_WAIT(8)
             EVT_CALL(YieldTurn)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim01)
-            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
             EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
             EVT_RETURN
         EVT_ELSE
@@ -806,7 +806,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
         EVT_END_IF
     EVT_END_THREAD
     EVT_CALL(ResetAllActorSounds, ACTOR_SELF)
-    EVT_CALL(StopSound, SOUND_370)
+    EVT_CALL(StopSound, SOUND_KENT_C_SHELL_TOSS_LOOP)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim0C)
     EVT_WAIT(8)
     EVT_CALL(YieldTurn)
@@ -816,7 +816,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
     EVT_SET_CONST(LVar1, ANIM_KentCKoopa_Anim04)
     EVT_EXEC_WAIT(EVS_Enemy_ReturnHome)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim01)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -824,7 +824,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
 
 EvtScript N(EVS_Attack_HeavyStomp) = {
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     EVT_CALL(SetBattleCamZoom, 280)
@@ -841,11 +841,11 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
     EVT_CALL(RunToGoal, ACTOR_SELF, 0, FALSE)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim01)
     EVT_WAIT(8)
-    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_3E7)
-    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_10)
+    EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_LARGE_ACTOR_JUMP)
+    EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     EVT_SWITCH(LVar0)
-        EVT_CASE_OR_EQ(6)
-        EVT_CASE_OR_EQ(5)
+        EVT_CASE_OR_EQ(HIT_RESULT_MISS)
+        EVT_CASE_OR_EQ(HIT_RESULT_LUCKY)
             EVT_SET(LVarA, LVar0)
             EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim06)
             EVT_THREAD
@@ -861,7 +861,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
             EVT_SET(LVar1, 0)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 20, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20EC)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HEAVY_NPC_STEP_A)
             EVT_THREAD
                 EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar3)
                 EVT_IF_NOT_FLAG(LVar3, STATUS_FLAG_SHRINK)
@@ -873,7 +873,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
             EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.0))
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 12, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20EC)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HEAVY_NPC_STEP_A)
             EVT_THREAD
                 EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar3)
                 EVT_IF_NOT_FLAG(LVar3, STATUS_FLAG_SHRINK)
@@ -885,7 +885,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
             EVT_SUB(LVar0, 10)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 8, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20EC)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HEAVY_NPC_STEP_A)
             EVT_THREAD
                 EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar3)
                 EVT_IF_NOT_FLAG(LVar3, STATUS_FLAG_SHRINK)
@@ -894,7 +894,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
                 EVT_END_IF
             EVT_END_THREAD
             EVT_WAIT(8)
-            EVT_IF_EQ(LVarA, 5)
+            EVT_IF_EQ(LVarA, HIT_RESULT_LUCKY)
                 EVT_CALL(EnemyTestTarget, ACTOR_SELF, LVar0, DAMAGE_TYPE_TRIGGER_LUCKY, 0, 0, 0)
             EVT_END_IF
             EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
@@ -920,7 +920,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
                 EVT_WAIT(1)
             EVT_END_LOOP
             EVT_CALL(SetActorYaw, ACTOR_SELF, 0)
-            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+            EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
             EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
             EVT_RETURN
         EVT_END_CASE_GROUP
@@ -941,7 +941,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
     EVT_IF_NOT_FLAG(LVarF, STATUS_FLAG_SHRINK)
         EVT_CALL(SetDamageSource, DMG_SRC_CRUSH)
     EVT_END_IF
-    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVarF, 0, SUPPRESS_EVENT_ALL, 0, DMG_HEAVY_STOMP, BS_FLAGS1_SP_EVT_ACTIVE)
+    EVT_CALL(EnemyDamageTarget, ACTOR_SELF, LVarF, 0, SUPPRESS_EVENT_ALL, 0, DMG_HEAVY_STOMP, BS_FLAGS1_TRIGGER_EVENTS)
     EVT_SWITCH(LVarF)
         EVT_CASE_OR_EQ(HIT_RESULT_HIT)
         EVT_CASE_OR_EQ(HIT_RESULT_NO_DAMAGE)
@@ -955,7 +955,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
                     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVarE)
                     EVT_IF_NOT_FLAG(LVarE, STATUS_FLAG_SHRINK)
                         EVT_CALL(LandJump, ACTOR_SELF)
-                        EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20EC)
+                        EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HEAVY_NPC_STEP_A)
                     EVT_END_IF
                 EVT_END_IF
             EVT_END_IF
@@ -977,7 +977,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
             EVT_CALL(SetActorJumpGravity, ACTOR_SELF, EVT_FLOAT(1.0))
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 12, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20EC)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HEAVY_NPC_STEP_A)
             EVT_THREAD
                 EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar3)
                 EVT_IF_NOT_FLAG(LVar3, STATUS_FLAG_SHRINK)
@@ -989,7 +989,7 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
             EVT_ADD(LVar0, 20)
             EVT_CALL(SetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
             EVT_CALL(JumpToGoal, ACTOR_SELF, 8, FALSE, TRUE, FALSE)
-            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_20EC)
+            EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_HEAVY_NPC_STEP_A)
             EVT_THREAD
                 EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar3)
                 EVT_IF_NOT_FLAG(LVar3, STATUS_FLAG_SHRINK)
@@ -1004,10 +1004,10 @@ EvtScript N(EVS_Attack_HeavyStomp) = {
             EVT_CALL(UseBattleCamPreset, BTL_CAM_DEFAULT)
             EVT_CALL(MoveBattleCamOver, 20)
             EVT_EXEC_WAIT(N(EVS_KentC_GoHome))
-        EVT_CASE_EQ(HIT_RESULT_3)
+        EVT_CASE_EQ(HIT_RESULT_NICE_NO_DAMAGE)
         EVT_END_CASE_GROUP
     EVT_END_SWITCH
-    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
+    EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_ENABLE)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, TRUE)
     EVT_RETURN
     EVT_END
@@ -1066,9 +1066,9 @@ EvtScript N(EVS_FlipOver) = {
     EVT_WAIT(1)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_KentCKoopa_Anim1E)
     EVT_CALL(SetPartFlagBits, ACTOR_SELF, PRT_WEAK_POINT, ACTOR_PART_FLAG_NO_TARGET, FALSE)
-    EVT_CALL(SetPartFlagBits, ACTOR_SELF, PRT_WEAK_POINT, ACTOR_PART_FLAG_MULTI_TARGET, TRUE)
-    EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_FLIPPED, ACTOR_PART_FLAG_4)
-    EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_MAIN, ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_4)
+    EVT_CALL(SetPartFlagBits, ACTOR_SELF, PRT_WEAK_POINT, ACTOR_PART_FLAG_PRIMARY_TARGET, TRUE)
+    EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_FLIPPED, ACTOR_PART_FLAG_NO_SHADOW)
+    EVT_CALL(SetPartFlags, ACTOR_SELF, PRT_MAIN, ACTOR_PART_FLAG_NO_TARGET | ACTOR_PART_FLAG_NO_SHADOW)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_FlippedTurns, 1)
     EVT_WAIT(8)
     EVT_RETURN
@@ -1171,7 +1171,7 @@ API_CALLABLE(N(UnusedFunc)) {
 }
 
 EvtScript N(EVS_DropDummyCoin) = {
-    EVT_CALL(PlaySoundAtPart, ACTOR_SELF, LVar5, SOUND_212)
+    EVT_CALL(PlaySoundAtPart, ACTOR_SELF, LVar5, SOUND_COIN_BOUNCE)
     EVT_CALL(GetActorPos, ACTOR_SELF, LVar6, LVar7, LVar8)
     EVT_CALL(SetPartPos, ACTOR_SELF, LVar5, LVar6, 35, LVar8)
     EVT_CALL(N(GetCoinTrajectory), LVar6, LVar8, LVar0, LVar1, LVar2, LVar3)
@@ -1188,7 +1188,7 @@ EvtScript N(EVS_DropDummyCoin) = {
         EVT_WAIT(1)
     EVT_END_LOOP
     // give coin to player
-    EVT_CALL(PlaySoundAtPart, ACTOR_SELF, LVar5, SOUND_211)
+    EVT_CALL(PlaySoundAtPart, ACTOR_SELF, LVar5, SOUND_COIN_PICKUP)
     EVT_CALL(AddCoin, 1)
     EVT_RETURN
     EVT_END

@@ -43,7 +43,7 @@ EvtScript N(EVS_CloseCrossingGates) = {
 };
 
 EvtScript N(EVS_SpawnSmoke) = {
-    EVT_CALL(PlaySoundAtModel, MODEL_07, SOUND_B000001A, SOUND_SPACE_MODE_0)
+    EVT_CALL(PlaySoundAtModel, MODEL_07, SOUND_SEQ_TRAIN_CHUG, SOUND_SPACE_DEFAULT)
     EVT_SETF(LVar0, MV_TrainMoveDist)
     EVT_IF_EQ(MF_TrainReverseDir, FALSE)
         EVT_ADDF(LVar0, -310)
@@ -196,7 +196,7 @@ EvtScript N(EVS_AnimateTrain) = {
             EVT_CALL(ScaleModel, MODEL_08, LVar1, LVar0, LVar1)
         EVT_END_IF
         EVT_IF_EQ(MF_TrainDepartDoorOpen, TRUE)
-            EVT_CALL(PlaySoundAt, SOUND_20A5, SOUND_SPACE_MODE_0, -435, 84, 37)
+            EVT_CALL(PlaySoundAt, SOUND_TRAIN_DOOR_OPEN, SOUND_SPACE_DEFAULT, -435, 84, 37)
             EVT_SET(LVar8, 10)
             EVT_SET(LFlag1, TRUE)
             EVT_SET(MF_TrainDepartDoorOpen, FALSE)
@@ -207,7 +207,7 @@ EvtScript N(EVS_AnimateTrain) = {
             EVT_SET(MF_TrainDepartPlayerBoard, FALSE)
         EVT_END_IF
         EVT_IF_EQ(MF_TrainArriveDoorOpen, TRUE)
-            EVT_CALL(PlaySoundAt, SOUND_20A5, SOUND_SPACE_MODE_0, -413, 84, 38)
+            EVT_CALL(PlaySoundAt, SOUND_TRAIN_DOOR_OPEN, SOUND_SPACE_DEFAULT, -413, 84, 38)
             EVT_SET(LVar8, 10)
             EVT_SET(LFlag2, TRUE)
             EVT_SET(MF_TrainArriveDoorOpen, FALSE)
@@ -226,7 +226,7 @@ EvtScript N(EVS_AnimateTrain) = {
             EVT_IF_LE(LVar9, 0)
                 EVT_SET(LVar9, 0)
                 EVT_SET(LFlag1, FALSE)
-                EVT_CALL(PlaySoundAt, SOUND_20A6, SOUND_SPACE_MODE_0, -435, 84, 37)
+                EVT_CALL(PlaySoundAt, SOUND_TRAIN_DOOR_CLOSE, SOUND_SPACE_DEFAULT, -435, 84, 37)
             EVT_END_IF
         EVT_END_IF
         EVT_IF_EQ(LFlag2, TRUE)
@@ -238,7 +238,7 @@ EvtScript N(EVS_AnimateTrain) = {
             EVT_IF_LE(LVarA, 0)
                 EVT_SET(LVarA, 0)
                 EVT_SET(LFlag2, FALSE)
-                EVT_CALL(PlaySoundAt, SOUND_20A6, SOUND_SPACE_MODE_0, -413, 84, 38)
+                EVT_CALL(PlaySoundAt, SOUND_TRAIN_DOOR_CLOSE, SOUND_SPACE_DEFAULT, -413, 84, 38)
             EVT_END_IF
         EVT_END_IF
         EVT_CALL(RotateModel, MODEL_omote, LVar9, 0, -1, 0)
@@ -409,7 +409,7 @@ EvtScript N(EVS_ArriveFromMtRugged) = {
     EVT_LABEL(1)
     EVT_SET(MV_TrainMoveDist, -90)
     EVT_SET(MV_TrainMoveSpeed, 0)
-    EVT_CALL(PlaySound, SOUND_1FD)
+    EVT_CALL(PlaySound, SOUND_TRAIN_RELEASE_STEAM)
     EVT_KILL_THREAD(LVarE)
     EVT_SET(MF_TrainMoving, FALSE)
     EVT_CALL(SetPlayerJumpscale, EVT_FLOAT(1.0))
@@ -543,7 +543,7 @@ EvtScript N(EVS_DepartForMtRugged) = {
     EVT_CALL(PanToTarget, CAM_DEFAULT, 0, 1)
     EVT_CALL(WaitForCam, CAM_DEFAULT, EVT_FLOAT(1.0))
     EVT_CALL(SpeakToPlayer, NPC_TrainToad_02, ANIM_TrainToad_Talk, ANIM_TrainToad_Still, 5, MSG_MAC_Station_0009)
-    EVT_CALL(PlaySound, SOUND_82)
+    EVT_CALL(PlaySound, SOUND_TRAIN_DEPARTURE)
     EVT_THREAD
         EVT_LOOP(1000)
             EVT_ADDF(MV_TrainMoveSpeed, EVT_FLOAT(0.031))

@@ -2,6 +2,7 @@
 #include "message_ids.h"
 #include "sprite.h"
 #include "pause_common.h"
+#include "game_modes.h"
 #include "sprite/npc/Goombaria.h"
 #include "sprite/npc/WorldGoombario.h"
 #include "sprite/npc/Goompa.h"
@@ -612,7 +613,7 @@ void pause_init(void) {
     MenuPanel** menuPanels;
     s32 i;
 
-    DMA_COPY_SEGMENT(ui_images);
+    DMA_COPY_SEGMENT(ui_images_filemenu_pause);
 
     for (i = 0; i < ARRAY_COUNT(gPauseIconScripts); i++) {
         gPauseCommonIconIDs[i] = hud_element_create(gPauseIconScripts[i]);
@@ -663,7 +664,7 @@ void pause_init(void) {
         sfx_play_sound(SOUND_MENU_SHOW_CHOICE);
     }
 
-    update_window_hierarchy(WINDOW_ID_PAUSE_CURSOR, 0x40);
+    update_window_hierarchy(WINDOW_ID_PAUSE_CURSOR, 64);
 }
 
 void pause_tutorial_input(s32 *pressed, s32 *held) {

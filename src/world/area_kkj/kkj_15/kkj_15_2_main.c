@@ -25,7 +25,7 @@ Gfx N(setup_gfx_candle_lights)[] = {
 EvtScript N(EVS_EndPeachChapter0) = {
     EVT_SET(LVar0, GB_KKJ_LastPartner)
     EVT_CALL(N(RestoreFromPeachState))
-    EVT_CALL(PlaySound, SOUND_DC)
+    EVT_CALL(PlaySound, SOUND_SLIDE_WHISTLE_OUT)
     EVT_CALL(GotoMapSpecial, EVT_PTR("kmr_10"), kmr_10_ENTRY_0, TRANSITION_END_PEACH_INTERLUDE)
     EVT_WAIT(100)
 }; //@bug script not properly terminated
@@ -33,7 +33,7 @@ EvtScript N(EVS_EndPeachChapter0) = {
 EvtScript N(EVS_EndPeachChapter1) = {
     EVT_SET(LVar0, GB_KKJ_LastPartner)
     EVT_CALL(N(RestoreFromPeachState))
-    EVT_CALL(PlaySound, SOUND_DC)
+    EVT_CALL(PlaySound, SOUND_SLIDE_WHISTLE_OUT)
     EVT_CALL(GotoMapSpecial, EVT_PTR("trd_00"), trd_00_ENTRY_5, TRANSITION_END_PEACH_INTERLUDE)
     EVT_WAIT(100)
 }; //@bug script not properly terminated
@@ -41,7 +41,7 @@ EvtScript N(EVS_EndPeachChapter1) = {
 EvtScript N(EVS_EndPeachChapter3) = {
     EVT_SET(LVar0, GB_KKJ_LastPartner)
     EVT_CALL(N(RestoreFromPeachState))
-    EVT_CALL(PlaySound, SOUND_DC)
+    EVT_CALL(PlaySound, SOUND_SLIDE_WHISTLE_OUT)
     EVT_CALL(GotoMapSpecial, EVT_PTR("arn_07"), arn_07_ENTRY_3, TRANSITION_END_PEACH_INTERLUDE)
     EVT_WAIT(100)
 }; //@bug script not properly terminated
@@ -126,7 +126,7 @@ EvtScript N(EVS_Main) = {
         TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
         EVT_EXEC(N(EVS_UpdateTexturePan))
     EVT_END_THREAD
-    EVT_CALL(SetModelCustomGfx, MODEL_o151, CUSTOM_GFX_0, FOG_MODE_UNCHANGED)
+    EVT_CALL(SetModelCustomGfx, MODEL_o151, CUSTOM_GFX_0, ENV_TINT_UNCHANGED)
     EVT_CALL(SetCustomGfx, CUSTOM_GFX_0, EVT_PTR(N(setup_gfx_candle_lights)), NULL)
     EVT_CALL(SetTexPanner, MODEL_o152, TEX_PANNER_0)
     EVT_THREAD
@@ -136,16 +136,16 @@ EvtScript N(EVS_Main) = {
         TEX_PAN_PARAMS_INIT(    0,    0,    0,    0)
         EVT_EXEC(N(EVS_UpdateTexturePan))
     EVT_END_THREAD
-    EVT_CALL(SetModelCustomGfx, MODEL_o152, CUSTOM_GFX_0, FOG_MODE_UNCHANGED)
+    EVT_CALL(SetModelCustomGfx, MODEL_o152, CUSTOM_GFX_0, ENV_TINT_UNCHANGED)
     EVT_CALL(SetCustomGfx, CUSTOM_GFX_0, EVT_PTR(N(setup_gfx_candle_lights)), NULL)
     EVT_CALL(UseDoorSounds, DOOR_SOUNDS_BASIC)
     EVT_EXEC(N(EVS_SetupMusic))
     EVT_CALL(GetEntryID, LVar0)
     EVT_IF_EQ(LVar0, kkj_15_ENTRY_1)
         EVT_IF_EQ(GB_StoryProgress, STORY_CH3_BEGAN_PEACH_MISSION)
-            EVT_CALL(StopSound, SOUND_93)
+            EVT_CALL(StopSound, SOUND_KKJ_ROTATING_WALL)
         EVT_ELSE
-            EVT_CALL(PlaySoundAt, SOUND_93, 0, 50, 5, -200)
+            EVT_CALL(PlaySoundAt, SOUND_KKJ_ROTATING_WALL, SOUND_SPACE_DEFAULT, 50, 5, -200)
         EVT_END_IF
         EVT_WAIT(10)
     EVT_END_IF

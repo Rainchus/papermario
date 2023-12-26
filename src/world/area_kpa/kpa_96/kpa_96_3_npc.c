@@ -92,7 +92,7 @@ EvtScript N(EVS_SetupShop) = {
 NpcSettings N(NpcSettings_SpikedGoomba) = {
     .height = 22,
     .radius = 24,
-    .level = 99,
+    .level = ACTOR_LEVEL_NONE,
     .actionFlags = AI_ACTION_LOOK_AROUND_DURING_LOITER,
 };
 
@@ -128,7 +128,7 @@ EvtScript N(EVS_NpcInteract_SpikedGoomba) = {
             EVT_CALL(ContinueSpeech, NPC_SELF, ANIM_SpikedGoomba_Walk, ANIM_SpikedGoomba_Idle, 0, MSG_CH8_0050)
         EVT_END_IF
     EVT_ELSE
-        EVT_EXEC_WAIT(ItemShopInteract)
+        EVT_EXEC_WAIT(EVS_ShopOwnerDialog)
     EVT_END_IF
     EVT_RETURN
     EVT_END

@@ -38,16 +38,15 @@ segments:
     type: code
     start: 0x71D80
     vram: 0x800D8C70
-    # vram_of_symbol: overlays_start # TODO once this symbol is implemented
     subsegments:
     - [auto, hasm, bss2]
     - [auto, c, npc_collision]
     - [auto, c, 77480]
     - [auto, c, 7B440]
-    - [auto, c, 7bb60_len_41b0]
+    - [auto, c, 7BB60]
     - [auto, c, 7E9D0]
-    - [auto, c, 7fd10_len_b40]
-    - [auto, c, 80850_len_3060]
+    - [auto, c, world/menus]
+    - [auto, c, inventory]
     - [auto, c, world/actions] # DUMMY ROM
     - [auto, c, world/partners]
     - [auto, hasm, bss2_2]
@@ -545,15 +544,68 @@ segments:
       - [0xA3878, vtx, vtx/drawbox1]
       - [0xA38B8]
     - [0xA3900]
-
-  - [0xA4520, bin]
-
+  - name: engine2
+    type: code
+    start: 0xA4520
+    vram: 0x8010E1D0
+    subsegments:
+    - [auto, hasm, bss3]
+    - [auto, c, entity]
+    - [auto, c, game_states]
+    - [auto, c, model]
+    - [auto, c, animator]
+    - [auto, c, entity_model]
+    - [auto, c, worker]
+    - [auto, c, msg]
+    - [auto, c, draw_img_util]
+    - [auto, c, item_entity]
+    - [auto, c, screen_overlays]
+    - [auto, c, screen_render_util]
+    - [auto, c, imgfx]
+    - [auto, c, hud_element]
+    - [auto, c, vars_access]
+    - [auto, c, trigger]
+    - [auto, c, background]
+    - [auto, c, audio/ambience]
+    - [auto, c, windows]
+    - [auto, c, sprite_shading]
+    - [auto, c, audio/sfx]
+    - [auto, c, audio/e0b30_len_b80]
+    - [auto, .data, entity]
+    - [auto, .data, game_states]
+    - [auto, .data, model]
+    - [auto, .data, animator]
+    - [auto, .data, entity_model]
+    - [auto, .data, msg]
+    - [auto, .data, draw_img_util]
+    - [auto, .data, item_entity]
+    - start: 0xE1610
+      type: .data
+      name: screen_overlays
+      subsegments:
+      - [0xE1610]
+      - [0xE1620, i4, ui/stencil/star, 32, 64]
+      - [0xE1A20, i4, ui/stencil/mario, 64, 64]
+      - [0xE2220, i4, ui/stencil/sharp_circle, 32, 32]
+      - [0xE2420, i8, ui/stencil/blurry_circle, 64, 64]
+      - [0xE3420, vtx, vtx/stencil1]
+      - [0xE34C0]
+      - [0xE3690, vtx, vtx/stencil2]
+      - [0xE3810]
+    - [auto, .data, screen_render_util]
+    - [auto, .data, imgfx]
+    - [auto, .data, hud_element]
+    - [auto, .data, background]
+    - [auto, .data, audio/ambience]
+    - [auto, .data, windows]
+    - [auto, .data, audio/sfx]
+    - [auto, .data, audio/e0b30_len_b80]
+    - [0xE61D0]
   - name: evt
     type: code
     dir: evt
     start: 0xE61D0
     vram: 0x802C6000
-    # follows_vram: world_use_item # TODO this causes the vram to be wrong
     subsegments:
     - [auto, c, script_list]
     - [auto, c, evt]
@@ -565,7 +617,8 @@ segments:
     - [auto, c, player_api]
     - [auto, c, virtual_entity]
     - [auto, c, f8f60_len_1560]
-    - [auto, c, fa4c0_len_3bf0]
+    - [auto, c, audio_api]
+    - [auto, c, item_api]
     - [auto, c, fx_api]
     - [auto, c, demo_api]
     - [auto, pm_effect_loads, effect_loads]
@@ -573,7 +626,6 @@ segments:
     type: code
     start: 0x100910
     vram: 0x802E2020
-    follows_vram: evt
     subsegments:
     - [auto, c, sprite]
     - [auto, c, 101b90_len_8f0]
@@ -581,7 +633,6 @@ segments:
     type: code
     start: 0x1040F0
     vram: 0x802E7070
-    follows_vram: engine4
     subsegments:
       - [auto, c, entity/Shadow]
       - [auto, c, entity/SaveBlock]
@@ -698,7 +749,7 @@ segments:
     - [0x132C28, palette, letter_content_12]
     - [0x132E28, bin] # length 0x18, non zero
 
-  - name: ui_images
+  - name: ui_images_filemenu_pause
     type: code
     start: 0x132E40
     vram: 0x8023E000
@@ -1056,6 +1107,32 @@ segments:
     # TODO: split into images
 
   - [0x2705A0, bin]
+
+  - start: 0x2705A0
+    type: pm_imgfx_data
+    name: imgfx_data
+    vram: 0
+    animations:
+    - ["shock", 0x14358]
+    - ["shiver", 0x18200]
+    - ["vertical_pipe_curl", 0x1A858]
+    - ["horizontal_pipe_curl", 0x1E830]
+    - ["startle", 0x29458]
+    - ["flutter_down", 0x314E0]
+    - ["unfurl", 0x33498]
+    - ["get_in_bed", 0x38988]
+    - ["spirit_capture", 0x39228]
+    - ["unused_1", 0x5B7A8]
+    - ["unused_2", 0x7CF10]
+    - ["unused_3", 0x86490]
+    - ["tutankoopa_gather", 0x96258]
+    - ["tutankoopa_swirl_2", 0xA1820]
+    - ["tutankoopa_swirl_1", 0xACDE8]
+    - ["shuffle_cards", 0xBBF68]
+    - ["flip_card_1", 0xC0490]
+    - ["flip_card_2", 0xC49B8]
+    - ["flip_card_3", 0xC6150]
+    - ["cymbal_crush", 0xCA380]
 
   - [0x33A930, pm_sprite_shading_profiles, sprite_shading_profiles]
 
@@ -5624,14 +5701,14 @@ segments:
     start: 0x5A59A0
     vram: 0x80231000
     subsegments:
-    - [0x5A59A0, c, actor/shy_squad_dup]
+    - [0x5A59A0, c, actor/shy_squad_redux]
     - [0x5A59A0]
   - dir: battle/area/omo2_6
     type: code
     start: 0x5A9A80
     vram: 0x80231000
     subsegments:
-    - [0x5A9A80, c, actor/shy_guy_dup]
+    - [0x5A9A80, c, actor/shy_squad_stub]
     - [0x5A9A80,]
   - dir: battle/area/omo3
     type: code
@@ -6037,11 +6114,11 @@ segments:
     start: 0x6F2090
     vram: 0x80218000
     subsegments:
-    - [0x6F2090, c, actor/bowser]
-    - [0x6F21B0, c, actor/bowser_intro]
-    - [0x6F2F90, c, actor/bowser_phase_1]
-    - [0x6F4350, c, actor/bowser_phase_2]
-    - [0x6F59E0, c, actor/bowser_phase_3]
+    - [0x6F2090, c, actor/unused_bowser]
+    - [0x6F21B0, c, actor/intro_bowser]
+    - [0x6F2F90, c, actor/hallway_bowser]
+    - [0x6F4350, c, actor/final_bowser_1]
+    - [0x6F59E0, c, actor/final_bowser_2]
     - [0x6F7320, c, stage/kpa_01]
     - [0x6F7320, c, stage/kkj_01]
     - [0x6F7320, c, stage/kkj_02]
@@ -6062,7 +6139,7 @@ segments:
     start: 0x71EF00
     vram: 0x80218000
     subsegments:
-    - [0x71EF00, c, actor/bombshell_bill_blaster]
+    - [0x71EF00, c, actor/bombshell_blaster]
     - [0x71EF20, c, actor/bombshell_bill]
     - [0x71EF20, c, actor/koopatrol]
     - [0x71F050, c, actor/magikoopa]
@@ -12106,7 +12183,6 @@ segments:
     start: 0xE8DEC0
     name: speech_bubble
     vram: 0x802B7000
-    #    vram_of_symbol: world_action_vram_end
     subsegments:
     - [auto, c, speech_bubble]
     - start: 0xE8E5D0
@@ -12122,7 +12198,6 @@ segments:
     start: 0xE8E880
     name: pulse_stone
     vram: 0x802B7000
-    #    vram_of_symbol: world_action_vram_end
     subsegments:
     - [auto, c, pulse_stone]
     - start: 0xE8EEC0
@@ -12139,7 +12214,6 @@ segments:
     start: 0xE8F5C0
     name: i_spy
     vram: 0x802B7000
-    #    vram_of_symbol: world_action_vram_end
     subsegments:
     - [auto, c, i_spy]
     - start: 0xE8FB40
@@ -12158,7 +12232,6 @@ segments:
     name: model_clear_render_tasks
     start: 0xE90270
     vram: 0x802B7E00
-#    vram_of_symbol: world_misc_vram_end
     subsegments:
     - [auto, c, model_clear_render_tasks]
   - type: code
@@ -12166,7 +12239,6 @@ segments:
     dir: world/action
     start: 0xE90270
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, idle]
   - type: code
@@ -12174,7 +12246,6 @@ segments:
     dir: world/action
     start: 0xE906F0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, walk]
   - type: code
@@ -12182,7 +12253,6 @@ segments:
     dir: world/action
     start: 0xE91050
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, jump]
   - type: code
@@ -12190,7 +12260,6 @@ segments:
     dir: world/action
     start: 0xE915E0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, step_up]
   - type: code
@@ -12198,7 +12267,6 @@ segments:
     dir: world/action
     start: 0xE91930
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, land]
   - type: code
@@ -12206,7 +12274,6 @@ segments:
     dir: world/action
     start: 0xE91EE0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, hammer]
   - type: code
@@ -12214,7 +12281,6 @@ segments:
     dir: world/action
     start: 0xE92D70
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, spin]
   - type: code
@@ -12222,7 +12288,6 @@ segments:
     dir: world/action
     start: 0xE93720
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, tornado_jump]
   - type: code
@@ -12230,7 +12295,6 @@ segments:
     dir: world/action
     start: 0xE93DF0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, spin_jump]
   - type: code
@@ -12238,7 +12302,6 @@ segments:
     dir: world/action
     start: 0xE94520
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, slide]
   - type: code
@@ -12246,7 +12309,6 @@ segments:
     dir: world/action
     start: 0xE94CA0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, hit_fire]
   - type: code
@@ -12254,7 +12316,6 @@ segments:
     dir: world/action
     start: 0xE94F50
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, hit_lava]
   - type: code
@@ -12262,7 +12323,6 @@ segments:
     dir: world/action
     start: 0xE95800
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, knockback]
   - type: code
@@ -12270,7 +12330,6 @@ segments:
     dir: world/action
     start: 0xE95A40
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, misc]
   - type: code
@@ -12278,7 +12337,6 @@ segments:
     dir: world/action
     start: 0xE961B0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, use_munchlesia]
   - type: code
@@ -12286,7 +12344,6 @@ segments:
     dir: world/action
     start: 0xE96480
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, use_spinning_flower]
   - type: code
@@ -12294,7 +12351,6 @@ segments:
     dir: world/action
     start: 0xE97350
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, use_tweester]
   - type: code
@@ -12302,14 +12358,12 @@ segments:
     dir: world/action
     start: 0xE976C0
     vram: 0x802B6000
-#    follows_vram: texture_memory
     subsegments:
     - [auto, c, sneaky_parasol]
   - type: code
     dir: entity/default
     start: 0xE98540
     vram: 0x802BAE00
-#    follows_vram: model_clear_render_tasks
     subsegments:
     - [auto, c, Padlock]
     - [auto, c, BoardedFloor]
@@ -12318,7 +12372,6 @@ segments:
     dir: entity/jan_iwa
     start: 0xE9A740
     vram: 0x802BAE00
-#    follows_vram: model_clear_render_tasks
     subsegments:
     - [auto, c, Plants1]
     - [auto, c, Plants2]
@@ -12327,7 +12380,6 @@ segments:
     dir: entity/sbk_omo
     start: 0xE9C760
     vram: 0x802BAE00
-#    follows_vram: model_clear_render_tasks
     subsegments:
     - [auto, c, Tweester]
     - [auto, c, StarBoxLauncher]
@@ -13461,9 +13513,15 @@ segments:
       - 2E_Credits
   - [0x2132440, bin]
 
-  - [0x21B0000, bin] # German
-  - [0x2330000, bin] # French
-  - [0x24B0000, bin] # Spanish
+  - start: 0x21B0000
+    name: msg_pal_de
+    type: bin # TODO: turn into pm_msg
+  - start: 0x2330000
+    name: msg_pal_fr
+    type: bin # TODO: turn into pm_msg
+  - start: 0x24B0000
+    name: msg_pal_es
+    type: bin # TODO: turn into pm_msg
 
   - [0x2600000, pm_map_data, mapfs]
   - [0x2FD7362, bin]

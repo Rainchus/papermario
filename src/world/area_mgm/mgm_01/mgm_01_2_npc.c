@@ -143,7 +143,7 @@ void N(appendGfx_score_display) (void* renderData) {
             } else {
                 data->curScore++;
             }
-            sfx_play_sound_with_params(SOUND_211, 0, 0x40, 0x32);
+            sfx_play_sound_with_params(SOUND_COIN_PICKUP, 0, 0x40, 0x32);
 
         }
         draw_number(data->curScore, data->scoreWindowPosX + 63, 32, DRAW_NUMBER_CHARSET_THIN, MSG_PAL_WHITE, 255, DRAW_NUMBER_STYLE_MONOSPACE | DRAW_NUMBER_STYLE_ALIGN_RIGHT);
@@ -153,7 +153,7 @@ void N(appendGfx_score_display) (void* renderData) {
 void N(worker_draw_score)(void) {
     RenderTask task;
 
-    task.renderMode = RENDER_MODE_2D;
+    task.renderMode = RENDER_MODE_CLOUD_NO_ZCMP;
     task.appendGfxArg = 0;
     task.appendGfx = &mgm_01_appendGfx_score_display;
     task.dist = 0;
@@ -384,7 +384,7 @@ API_CALLABLE(N(UpdateRecords)) {
     if (player->jumpGameRecord < data->curScore) {
         player->jumpGameRecord = data->curScore;
     }
-    set_message_value(data->curScore, 0);
+    set_message_int_var(data->curScore, 0);
 
     return ApiStatus_DONE2;
 }
@@ -413,7 +413,7 @@ API_CALLABLE(N(GiveCoinReward)) {
     data->curScore -= increment;
     add_coins(increment);
     data->targetScore = data->curScore;
-    sfx_play_sound(SOUND_211);
+    sfx_play_sound(SOUND_COIN_PICKUP);
 
     if (data->curScore > 0) {
         return ApiStatus_BLOCK;
@@ -477,7 +477,7 @@ API_CALLABLE(N(DestroyBlockEntities)) {
         }
     }
 
-    sfx_play_sound_with_params(SOUND_283, 0x50, 0, 0);
+    sfx_play_sound_with_params(SOUND_KOOPER_SHELL_KICK, 0x50, 0, 0);
 
     return ApiStatus_DONE2;
 }
@@ -573,7 +573,7 @@ API_CALLABLE(N(CreateBlockEntities)) {
             N(BlockPosY)[curBlockIdx] + 13,
             N(BlockPosZ)[curBlockIdx] + 5,
             23.0f);
-        sfx_play_sound(SOUND_213);
+        sfx_play_sound(SOUND_HEART_PICKUP);
         script->functionTemp[0] = 3;
         script->functionTemp[1]++;
     }
@@ -593,7 +593,7 @@ API_CALLABLE(N(TakeCoinCost)) {
         script->functionTemp[0] = 0;
     }
     add_coins(-1);
-    sfx_play_sound(SOUND_211);
+    sfx_play_sound(SOUND_COIN_PICKUP);
 
     script->functionTemp[0]++;
 
@@ -660,11 +660,11 @@ API_CALLABLE(N(SetMsgVars_BlocksRemaining)) {
     Enemy* scorekeeper = get_enemy(SCOREKEEPER_ENEMY_IDX);
     s32 remaining = (scorekeeper->varTable[TOTAL_BLOCKS_VAR_IDX] - scorekeeper->varTable[BROKEN_BLOCKS_VAR_IDX]) + 1;
 
-    set_message_value(remaining, 0);
+    set_message_int_var(remaining, 0);
 #if VERSION_PAL
     evt_set_variable(script, LVarD, remaining);
 #else
-    set_message_msg((remaining == 1) ? (s32)&MessageSingular : (s32)&MessagePlural, 1);
+    set_message_text_var((remaining == 1) ? (s32)&MessageSingular : (s32)&MessagePlural, 1);
 #endif
 
     return ApiStatus_DONE2;
@@ -795,9 +795,9 @@ EvtScript N(EVS_ManageMinigame) = {
     EVT_END_THREAD
     EVT_SWITCH(LVarB)
         EVT_CASE_EQ(1)
-            EVT_CALL(PlaySoundWithVolume, SOUND_CANNON2, 0)
+            EVT_CALL(PlaySoundWithVolume, SOUND_BOMBETTE_BLAST_LV2, 0)
             EVT_WAIT(10)
-            EVT_CALL(PlaySoundWithVolume, SOUND_CANNON2, 0)
+            EVT_CALL(PlaySoundWithVolume, SOUND_BOMBETTE_BLAST_LV2, 0)
             EVT_WAIT(10)
             EVT_CALL(N(EndBowserPanelAnimation))
             EVT_CALL(TranslateModel, LVar1, LVar5, LVar6, LVar7)
@@ -814,7 +814,7 @@ EvtScript N(EVS_ManageMinigame) = {
                 EVT_CASE_EQ(8)
                     EVT_CALL(SpeakToPlayer, NPC_Toad, ANIM_Toad_Red_Talk, ANIM_Toad_Red_Idle, 0, MSG_MGM_0037)
                     EVT_CALL(N(DoubleScore))
-                    EVT_CALL(PlaySoundWithVolume, SOUND_3FC, 0)
+                    EVT_CALL(PlaySoundWithVolume, SOUND_LUCKY, 0)
                     EVT_WAIT(30)
                     EVT_CALL(N(UpdateRecords))
                     EVT_CALL(SpeakToPlayer, NPC_Toad, ANIM_Toad_Red_Talk, ANIM_Toad_Red_Idle, 0, MSG_MGM_0038)
@@ -1025,7 +1025,7 @@ NpcData N(NpcData_Toad) = {
     .yaw = 270,
     .init = &N(EVS_NpcInit_Toad),
     .settings = &N(NpcSettings_Toad_Stationary),
-    .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_800 | ENEMY_FLAG_NO_SHADOW_RAYCAST,
+    .flags = ENEMY_FLAG_PASSIVE | ENEMY_FLAG_IGNORE_WORLD_COLLISION | ENEMY_FLAG_IGNORE_ENTITY_COLLISION | ENEMY_FLAG_FLYING | ENEMY_FLAG_NO_SHADOW_RAYCAST,
     .drops = NO_DROPS,
     .animations = TOAD_RED_ANIMS,
     .tattle = MSG_NpcTattle_MGM_JumpAttackGuide,

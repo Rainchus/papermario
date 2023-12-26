@@ -45,8 +45,8 @@ void action_update_land(void) {
         }
 
         suggest_player_anim_allow_backward(anim);
-        sfx_play_sound_at_player(SOUND_161 | SOUND_ID_STOP, SOUND_SPACE_MODE_0);
-        sfx_play_sound_at_player(SOUND_SOFT_LAND, SOUND_SPACE_MODE_0);
+        sfx_play_sound_at_player(SOUND_PLAYER_LONG_FALL | SOUND_ID_STOP, SOUND_SPACE_DEFAULT);
+        sfx_play_sound_at_player(SOUND_LAND_SOFTLY, SOUND_SPACE_DEFAULT);
 
         if (!(collisionStatus->curFloor & COLLISION_WITH_ENTITY_BIT)) {
             phys_adjust_cam_on_landing();
@@ -54,7 +54,7 @@ void action_update_land(void) {
 
         collisionStatus->lastTouchedFloor = -1;
         playerStatus->animFlags &= ~PA_FLAG_INTERRUPT_SPIN;
-        camera->moveFlags &= ~CAMERA_MOVE_FLAG_4;
+        camera->moveFlags &= ~CAMERA_MOVE_ACCEL_INTERP_Y;
     }
     playerStatus->actionSubstate++; // SUBSTATE_DONE
     playerStatus->curSpeed *= 0.6f;
@@ -133,7 +133,7 @@ void action_update_peach_land(void) {
         playerStatus->landPos.x = playerStatus->pos.x;
         playerStatus->landPos.z = playerStatus->pos.z;
 
-        sfx_play_sound_at_player(SOUND_SOFT_LAND, SOUND_SPACE_MODE_0);
+        sfx_play_sound_at_player(SOUND_LAND_SOFTLY, SOUND_SPACE_DEFAULT);
 
         if (!(collisionStatus->curFloor & COLLISION_WITH_ENTITY_BIT)) {
             phys_adjust_cam_on_landing();

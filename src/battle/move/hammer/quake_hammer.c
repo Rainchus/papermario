@@ -53,10 +53,10 @@ EvtScript N(EVS_802A3168) = {
         EVT_WAIT(2)
         EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 1, LVar0, LVar1, LVar2, 60, 8, 66, 30, 0, 0, 0, 0, 0)
     EVT_END_CHILD_THREAD
-    EVT_CALL(DidActionSucceed, LVar0)
+    EVT_CALL(GetPlayerActionSuccess, LVar0)
     EVT_SWITCH(LVar0)
         EVT_CASE_GT(FALSE)
-            EVT_CALL(StartRumble, 9)
+            EVT_CALL(StartRumble, BTL_RUMBLE_PLAYER_HEAVY)
             EVT_CHILD_THREAD
                 EVT_CALL(ShakeCam, CAM_BATTLE, 0, 2, EVT_FLOAT(0.2))
                 EVT_CALL(ShakeCam, CAM_BATTLE, 0, 5, EVT_FLOAT(1.0))
@@ -75,7 +75,7 @@ EvtScript N(EVS_802A3168) = {
                 EVT_PLAY_EFFECT(EFFECT_SMOKE_IMPACT, 0, LVar0, LVar1, LVar2, 72, 8, 24, 30, 0, 0, 0, 0, 0)
             EVT_END_CHILD_THREAD
         EVT_CASE_DEFAULT
-            EVT_CALL(StartRumble, 9)
+            EVT_CALL(StartRumble, BTL_RUMBLE_PLAYER_HEAVY)
             EVT_CHILD_THREAD
                 EVT_CALL(ShakeCam, CAM_BATTLE, 0, 2, EVT_FLOAT(0.1))
                 EVT_CALL(ShakeCam, CAM_BATTLE, 0, 5, EVT_FLOAT(0.5))
@@ -87,7 +87,7 @@ EvtScript N(EVS_802A3168) = {
                 EVT_CALL(ShakeCam, CAM_BATTLE, 0, 4, EVT_FLOAT(0.025390625))
             EVT_END_CHILD_THREAD
     EVT_END_SWITCH
-    EVT_CALL(DidActionSucceed, LVar0)
+    EVT_CALL(GetPlayerActionSuccess, LVar0)
     EVT_IF_GT(LVar0, FALSE)
         EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_46)
         EVT_CALL(MoveBattleCamOver, 5)
@@ -98,44 +98,44 @@ EvtScript N(EVS_802A3168) = {
     EVT_CALL(GetMenuSelection, LVar0, LVar1, LVar2)
     EVT_SWITCH(LVar1)
         EVT_CASE_EQ(0)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_211B)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_HAMMER_QUAKE_1)
         EVT_CASE_EQ(1)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_211C)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_HAMMER_QUAKE_2)
         EVT_CASE_EQ(2)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_211D)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_HAMMER_QUAKE_3)
     EVT_END_SWITCH
     EVT_WAIT(10)
     EVT_CALL(GetMenuSelection, LVar0, LVar1, LVar2)
     EVT_SWITCH(LVar1)
         EVT_CASE_EQ(0)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_2118)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_HAMMER_STRIKE_1)
         EVT_CASE_EQ(1)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_2119)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_HAMMER_STRIKE_2)
         EVT_CASE_EQ(2)
-            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_211A)
+            EVT_CALL(PlaySoundAtActor, ACTOR_PLAYER, SOUND_HAMMER_STRIKE_3)
     EVT_END_SWITCH
     EVT_SET(LVar9, 0)
     EVT_CALL(InitTargetIterator)
     EVT_LABEL(10)
-    EVT_CALL(SetGoalToTarget, ACTOR_PLAYER)
-    EVT_CALL(PlayerTestEnemy, LVar0, DAMAGE_TYPE_QUAKE_HAMMER, 29, 0, 0, 16)
-    EVT_IF_EQ(LVar0, HIT_RESULT_MISS)
-        EVT_GOTO(11)
-    EVT_END_IF
-    EVT_CALL(DidActionSucceed, LVar0)
-    EVT_SWITCH(LVar0)
-        EVT_CASE_GT(FALSE)
-            EVT_CALL(PlayerDamageEnemy, LVar0, DAMAGE_TYPE_QUAKE | DAMAGE_TYPE_QUAKE_HAMMER | DAMAGE_TYPE_IGNORE_DEFENSE | DAMAGE_TYPE_NO_CONTACT | DAMAGE_TYPE_MULTIPLE_POPUPS, 25, 0, LVarF, 112)
-        EVT_CASE_DEFAULT
-            EVT_CALL(PlayerDamageEnemy, LVar0, DAMAGE_TYPE_QUAKE | DAMAGE_TYPE_QUAKE_HAMMER | DAMAGE_TYPE_IGNORE_DEFENSE | DAMAGE_TYPE_NO_CONTACT | DAMAGE_TYPE_MULTIPLE_POPUPS, 25, 0, LVarE, 48)
-    EVT_END_SWITCH
-    EVT_LABEL(11)
-    EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar1)
-    EVT_ADD(LVar9, 1)
-    EVT_CALL(GetTargetListLength, LVar1)
-    EVT_IF_LT(LVar9, LVar1)
-        EVT_GOTO(10)
-    EVT_END_IF
+        EVT_CALL(SetGoalToTarget, ACTOR_PLAYER)
+        EVT_CALL(PlayerTestEnemy, LVar0, DAMAGE_TYPE_QUAKE_HAMMER, 29, 0, 0, 16)
+        EVT_IF_EQ(LVar0, HIT_RESULT_MISS)
+            EVT_GOTO(11)
+        EVT_END_IF
+        EVT_CALL(GetPlayerActionSuccess, LVar0)
+        EVT_SWITCH(LVar0)
+            EVT_CASE_GT(FALSE)
+                EVT_CALL(PlayerDamageEnemy, LVar0, DAMAGE_TYPE_QUAKE | DAMAGE_TYPE_QUAKE_HAMMER | DAMAGE_TYPE_IGNORE_DEFENSE | DAMAGE_TYPE_NO_CONTACT | DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENTS_HAMMER, 0, LVarF, BS_FLAGS1_TRIGGER_EVENTS | BS_FLAGS1_INCLUDE_POWER_UPS | BS_FLAGS1_NICE_HIT)
+            EVT_CASE_DEFAULT
+                EVT_CALL(PlayerDamageEnemy, LVar0, DAMAGE_TYPE_QUAKE | DAMAGE_TYPE_QUAKE_HAMMER | DAMAGE_TYPE_IGNORE_DEFENSE | DAMAGE_TYPE_NO_CONTACT | DAMAGE_TYPE_MULTIPLE_POPUPS, SUPPRESS_EVENTS_HAMMER, 0, LVarE, BS_FLAGS1_INCLUDE_POWER_UPS | BS_FLAGS1_TRIGGER_EVENTS)
+        EVT_END_SWITCH
+        EVT_LABEL(11)
+        EVT_CALL(ChooseNextTarget, ITER_NEXT, LVar1)
+        EVT_ADD(LVar9, 1)
+        EVT_CALL(GetTargetListLength, LVar1)
+        EVT_IF_LT(LVar9, LVar1)
+            EVT_GOTO(10)
+        EVT_END_IF
     EVT_THREAD
         EVT_WAIT(10)
         EVT_CALL(SetAnimation, ACTOR_PLAYER, 0, ANIM_Mario1_Idle)

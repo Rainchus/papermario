@@ -1,6 +1,7 @@
 #include "gv_01.h"
 #include "sprite.h"
 #include "hud_element.h"
+#include "game_modes.h"
 #include "sprite/player.h"
 
 #include "world/common/entity/Pipe.inc.c"
@@ -156,7 +157,7 @@ EvtScript N(EVS_E8CA04) = {
 
 EvtScript N(EVS_Main) = {
     EVT_CALL(DisablePlayerInput, TRUE)
-    EVT_CALL(ModifyGlobalOverrideFlags, 0, GLOBAL_OVERRIDES_20000)
+    EVT_CALL(ModifyGlobalOverrideFlags, 0, GLOBAL_OVERRIDES_DONT_RESUME_SONG_AFTER_BATTLE)
     EVT_SETUP_CAMERA_NO_LEAD()
     EVT_THREAD
         EVT_CALL(GetCurrentPartnerID, LVar0)
@@ -282,10 +283,10 @@ API_CALLABLE(N(FadeToTitleScreen)) {
 
 API_CALLABLE(N(ChangeStateToTitleScreen)) {
     gGameStatusPtr->isBattle = FALSE;
-    gGameStatusPtr->unk_76 = 0;
-    gGameStatusPtr->disableScripts = 0;
+    gGameStatusPtr->debugUnused1 = FALSE;
+    gGameStatusPtr->debugScripts = DEBUG_SCRIPTS_NONE;
     gGameStatusPtr->keepUsingPartnerOnMapChange = FALSE;
-    gOverrideFlags &= ~GLOBAL_OVERRIDES_8;
+    gOverrideFlags &= ~GLOBAL_OVERRIDES_DISABLE_DRAW_FRAME;
     general_heap_create();
     clear_render_tasks();
     clear_worker_list();
@@ -300,7 +301,7 @@ API_CALLABLE(N(ChangeStateToTitleScreen)) {
     hud_element_clear_cache();
     clear_trigger_data();
     clear_printers();
-    clear_entity_data(0);
+    clear_entity_data(FALSE);
     clear_screen_overlays();
     clear_player_status();
     clear_npcs();
@@ -311,8 +312,8 @@ API_CALLABLE(N(ChangeStateToTitleScreen)) {
     clear_item_entity_data();
     clear_saved_variables();
     initialize_collision();
-    intro_logos_set_fade_alpha(255);
-    intro_logos_set_fade_color(208);
+    startup_set_fade_screen_alpha(255);
+    startup_set_fade_screen_color(208);
     set_game_mode(GAME_MODE_TITLE_SCREEN);
     return ApiStatus_FINISH;
 }

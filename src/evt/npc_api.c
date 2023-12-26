@@ -888,7 +888,7 @@ ApiStatus PutPartnerAway(Evt* script, s32 isInitialCall) {
     if (isInitialCall) {
         if (wExtraPartnerID != 0) {
             partner->flags &= ~NPC_FLAG_GRAVITY;
-            partner->flags &= ~NPC_FLAG_8;
+            partner->flags &= ~NPC_FLAG_FLYING;
             targetX = playerStatus->pos.x;
             partner->moveToPos.x = targetX;
             partnerX = partner->pos.x;
@@ -1000,14 +1000,14 @@ ApiStatus SetNpcImgFXFlags(Evt* script, s32 isInitialCall) {
 ApiStatus SetNpcPaletteSwapMode(Evt* script, s32 isInitialCall) {
     Bytecode* args = script->ptrReadPos;
     s32 npcId = evt_get_variable(script, *args++);
-    Bytecode var1 = evt_get_variable(script, *args++);
+    Bytecode palAdjustMode = evt_get_variable(script, *args++);
     Npc* npc = resolve_npc(script, npcId);
 
     if (npc == NULL) {
         return ApiStatus_DONE2;
     }
 
-    npc_set_palswap_mode_A(npc, var1);
+    npc_set_palswap_mode_A(npc, palAdjustMode);
     return ApiStatus_DONE2;
 }
 
