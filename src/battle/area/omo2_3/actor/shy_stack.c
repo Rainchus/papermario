@@ -1282,6 +1282,7 @@ EvtScript N(EVS_SpinSmashLaunch) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1375,6 +1376,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_ShootRock) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVarF)
     EVT_IF_FLAG(LVarF, STATUS_FLAG_SHRINK)
         EVT_CALL(SetPartScale, ACTOR_SELF, PRT_ROCK_1, EVT_FLOAT(0.4), EVT_FLOAT(0.4), EVT_FLOAT(1.0))

@@ -706,6 +706,7 @@ EvtScript N(EVS_TakeTurn_Ceiling) = {
 };
 
 EvtScript N(EVS_TakeTurn_Ground) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_ToppleState, LVar0)

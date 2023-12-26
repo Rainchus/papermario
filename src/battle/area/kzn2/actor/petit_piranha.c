@@ -255,6 +255,7 @@ API_CALLABLE(N(SetFlamePosX)) {
 }
 
 EvtScript N(EVS_TakeTurn) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)

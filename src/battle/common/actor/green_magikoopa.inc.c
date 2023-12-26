@@ -541,6 +541,7 @@ EvtScript N(EVS_HandleEvent_Flying) = {
 };
 
 EvtScript N(EVS_Attack_MagicBlast) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -634,6 +635,7 @@ EvtScript N(EVS_Attack_MagicBlast) = {
 };
 
 EvtScript N(EVS_Attack_WandStrike) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

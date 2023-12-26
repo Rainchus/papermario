@@ -337,6 +337,7 @@ EvtScript N(EVS_HandleEvent) = {
 #include "common/SetBackgroundAlpha.inc.c"
 
 EvtScript N(EVS_TakeTurn) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_19)
     EVT_CALL(GetActorPos, ACTOR_PLAYER, LVar0, LVar1, LVar2)

@@ -991,6 +991,7 @@ EvtScript N(EVS_Move_HealAll) = {
 };
 
 EvtScript N(EVS_Attack_MagicBlast) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_LastMove, AVAL_LastMove_MagicBlast)
     EVT_SET(LFlag0, FALSE)
     EVT_SET(LFlag1, FALSE)

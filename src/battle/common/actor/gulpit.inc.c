@@ -259,6 +259,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_Attack_Lick) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -330,6 +331,7 @@ EvtScript N(EVS_Attack_Lick) = {
 };
 
 EvtScript N(EVS_Attack_SpitRock) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_SET(LVarA, LVar0)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)

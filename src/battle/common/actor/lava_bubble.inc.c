@@ -361,6 +361,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_Attack_Tackle) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -486,6 +487,7 @@ EvtScript N(EVS_ShootFire) = {
 };
 
 EvtScript N(EVS_Attack_ShootPartner) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PARTNER)
@@ -570,6 +572,7 @@ EvtScript N(EVS_Attack_ShootPartner) = {
 };
 
 EvtScript N(EVS_Attack_ShootPlayer) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

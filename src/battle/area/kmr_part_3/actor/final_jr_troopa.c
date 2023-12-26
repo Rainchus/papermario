@@ -706,6 +706,7 @@ EvtScript N(EVS_Transform_Mage) = {
 };
 
 EvtScript N(EVS_Attack_Leap) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -852,6 +853,7 @@ EvtScript N(EVS_Attack_Leap) = {
 };
 
 EvtScript N(EVS_Attack_Swoop) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -947,6 +949,7 @@ EvtScript N(EVS_Attack_Swoop) = {
 };
 
 EvtScript N(EVS_Attack_SpikeDive) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1089,6 +1092,7 @@ EvtScript N(EVS_Attack_SpikeDive) = {
 #include "common/CalculateArcsinDeg.inc.c"
 
 EvtScript N(EVS_Attack_MagicSpell) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1194,6 +1198,7 @@ EvtScript N(EVS_Attack_MagicSpell) = {
 #include "common/SetBackgroundAlpha.inc.c"
 
 EvtScript N(EVS_Attack_LightningBolt) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1315,6 +1320,7 @@ EvtScript N(EVS_Attack_LightningBolt) = {
 };
 
 EvtScript N(EVS_Move_HealSelf) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

@@ -673,6 +673,7 @@ EvtScript N(EVS_Recover) = {
 };
 
 EvtScript N(EVS_TakeTurn_Inner) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(AddActorVar, ACTOR_SELF, AVAR_TurnCount, 1)
     EVT_CALL(AddActorVar, ACTOR_SELF, AVAR_TurnsSinceClawSwipe, 1)
     EVT_CALL(AddActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, 1)

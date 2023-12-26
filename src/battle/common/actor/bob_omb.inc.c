@@ -510,6 +510,7 @@ EvtScript N(EVS_HandleEvent_Ignited) = {
 };
 
 EvtScript N(EVS_Attack_Tackle) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
@@ -620,6 +621,7 @@ EvtScript N(EVS_Attack_Tackle) = {
 };
 
 EvtScript N(EVS_Attack_Blast) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)

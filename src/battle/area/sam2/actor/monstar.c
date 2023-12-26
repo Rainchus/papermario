@@ -353,6 +353,7 @@ EvtScript N(EVS_ChargeUp) = {
 };
 
 EvtScript N(EVS_Attack_StarStorm) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_HoverPaused, TRUE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

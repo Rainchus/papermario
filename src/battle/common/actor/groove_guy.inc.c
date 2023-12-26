@@ -260,6 +260,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_Attack_Tackle) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -352,6 +353,7 @@ EvtScript N(EVS_Attack_Tackle) = {
 };
 
 EvtScript N(EVS_Attack_SleepySpin) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -595,6 +597,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_RandomSummon) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_11)
     EVT_CALL(BattleCamTargetActor, ACTOR_SELF)
     EVT_CALL(RandInt, 2, LVar1)
@@ -633,6 +636,7 @@ API_CALLABLE(N(SpawnSpinFX)) {
 }
 
 EvtScript N(EVS_PerformSummonDance) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_THREAD
         EVT_WAIT(1)
         EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_CALL_FOR_BACKUP)
@@ -716,6 +720,7 @@ EvtScript N(EVS_PerformSummonDance) = {
 };
 
 EvtScript N(EVS_SummonShyGuy) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_EXEC_WAIT(N(EVS_PerformSummonDance))
@@ -744,6 +749,7 @@ EvtScript N(EVS_SummonShyGuy) = {
 };
 
 EvtScript N(EVS_SummonGrooveGuy) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_EXEC_WAIT(N(EVS_PerformSummonDance))
@@ -799,6 +805,7 @@ EvtScript N(EVS_SummonGrooveGuy) = {
 };
 
 EvtScript N(EVS_SummonMediGuy) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_EXEC_WAIT(N(EVS_PerformSummonDance))

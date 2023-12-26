@@ -610,6 +610,51 @@ void btl_draw_ui(void) {
                 break;
         }
     }
+    //patch start
+    {
+        s32 xPosTimeScale = 275;
+        s32 yPosTimeScale = 204;
+        char buffer[20];
+        s32 i;
+        if (gGameStatus.heldButtons[0] & R_TRIG) {
+            switch (gGameStatus.pressedButtons[0]) {
+            case U_JPAD:
+                gEnemyAttackTimescale += 1.0f;
+                break;
+            case D_JPAD:
+                gEnemyAttackTimescale -= 1.0f;
+                break;
+            }            
+        } else {
+            switch (gGameStatus.pressedButtons[0]) {
+            case U_JPAD:
+                gEnemyAttackTimescale += 0.01f;
+                break;
+            case D_JPAD:
+                gEnemyAttackTimescale -= 0.01f;
+                break;
+            case L_JPAD:
+                gEnemyAttackTimescale -= 0.10f;
+                break;
+            case R_JPAD:
+                gEnemyAttackTimescale += 0.10f;
+                break;
+            }
+        }
+        sprintf(buffer, "%.2f", gEnemyAttackTimescale);
+        for (i = 0; i < sizeof(buffer); i++) {
+            if (buffer[i] == 0) {
+                buffer[i] = 0xFD; //terminate string
+            } else if (buffer[i] == '.') {
+                buffer[i] = 0x0E; // '.' in pm64 string
+            } else {
+                buffer[i] -= 0x20; //value ascii to pm64 value string
+            }
+        }
+        draw_msg((s32)buffer, xPosTimeScale, yPosTimeScale, 255, 0, 0);
+    }
+    //patch end
+    
     btl_popup_messages_draw_ui();
     draw_status_ui();
 }

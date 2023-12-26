@@ -1093,4 +1093,6 @@ void restore_map_collision_data(void);
 void mdl_load_all_textures(struct ModelNode* model, s32 romOffset, s32 size);
 void mdl_calculate_model_sizes(void);
 
+ApiStatus SetAttackTimeScale(Evt* evt, s32 isInitialCall); //patch
+
 #endif

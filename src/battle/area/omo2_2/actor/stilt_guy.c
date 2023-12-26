@@ -666,6 +666,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_Leap) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -839,6 +840,7 @@ EvtScript N(EVS_Death) = {
 };
 
 EvtScript N(EVS_ShyGuy_SpinAround) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_SET(LVar0, 0)
     EVT_LABEL(0)
         EVT_SUB(LVar0, 30)
@@ -853,6 +855,7 @@ EvtScript N(EVS_ShyGuy_SpinAround) = {
 };
 
 EvtScript N(EVS_ShyGuy_SpinSmash) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_EXEC_GET_TID(N(EVS_ShyGuy_SpinAround), LVarE)
     EVT_CALL(GetPartEventFlags, ACTOR_SELF, LVar0, LVarA)
     EVT_CALL(SetAnimation, ACTOR_SELF, LVar0, LVar1)
@@ -972,6 +975,7 @@ EvtScript N(EVS_ShyGuy_Idle) = {
 };
 
 EvtScript N(EVS_ShyGuy_ReturnHome) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(ResetAllActorSounds, ACTOR_SELF)
     EVT_SET_CONST(LVar0, PRT_GUY)
     EVT_SET_CONST(LVar1, ANIM_ShyGuy_Red_Anim03)
@@ -1077,6 +1081,7 @@ EvtScript N(EVS_ShyGuy_HandleEvent) = {
 };
 
 EvtScript N(EVS_ShyGuy_Attack_Tackle) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1172,6 +1177,7 @@ EvtScript N(EVS_ShyGuy_Attack_Tackle) = {
 };
 
 EvtScript N(EVS_ShyGuy_Attack_Vault) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

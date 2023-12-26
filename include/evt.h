@@ -102,6 +102,7 @@ enum {
     EVT_OP_92,
     EVT_OP_93,
     EVT_OP_94,
+    EVT_OP_EXEC_WAIT_ENEMY, ///< Spawns a script and waits for it to return before continuing. Args: EvtScript*
 };
 
 #define MAKE_ENTITY_END      0x80000000

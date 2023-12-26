@@ -1147,6 +1147,7 @@ EvtScript N(EVS_HandleEvent_Koopa) = {
 };
 
 EvtScript N(EVS_Attack_ShellToss) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1260,6 +1261,7 @@ EvtScript N(EVS_Attack_ShellToss) = {
 };
 
 EvtScript N(EVS_Attack_Whirlwind) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_LABEL(10)
         EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_HasWhirlwind, LVar0)
         EVT_WAIT(1)

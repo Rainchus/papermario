@@ -737,6 +737,7 @@ s32 btl_main_menu_update(void) {
 }
 
 void btl_main_menu_draw(void) {
+    char buffer[20];
     s32 id;
     s32 opacity;
     f32 theta;

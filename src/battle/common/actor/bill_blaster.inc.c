@@ -215,6 +215,8 @@ API_CALLABLE(N(SetBulletInitVars)) {
 }
 
 EvtScript N(EVS_Move_FireBullet) = {
+    EVT_CALL(SetAttackTimeScale)
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_BillBlaster_Fire)
     EVT_WAIT(13)
     EVT_THREAD

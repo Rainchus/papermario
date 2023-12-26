@@ -1106,6 +1106,7 @@ EvtScript N(EVS_ManageCommandLoss) = {
 };
 
 EvtScript N(EVS_Attack_BodySlam) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, 0)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1311,6 +1312,7 @@ EvtScript N(EVS_Attack_BodySlam) = {
 };
 
 EvtScript N(EVS_AttackMissed) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_BattleBowser_Tantrum)
     EVT_THREAD
         EVT_WAIT(5)
@@ -1326,6 +1328,7 @@ EvtScript N(EVS_AttackMissed) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceClawSwipe, 0)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1559,6 +1562,7 @@ EvtScript N(EVS_UseDrainingShockwave) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar0)

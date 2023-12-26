@@ -384,6 +384,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_SpinSwipe) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(GetStatusFlags, ACTOR_SELF, LVar0)
     EVT_IF_NOT_FLAG(LVar0, STATUS_FLAG_SHRINK)
         EVT_CALL(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
@@ -480,6 +481,7 @@ EvtScript N(EVS_Attack_SpinSwipe) = {
 };
 
 EvtScript N(EVS_Attack_GroundStomp) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_15)
     EVT_CALL(BattleCamTargetActor, ACTOR_SELF)
     EVT_CALL(MoveBattleCamOver, 40)

@@ -317,6 +317,7 @@ EvtScript N(EVS_TakeTurn) = {
 #include "common/StartRumbleWithParams.inc.c"
 
 EvtScript N(EVS_Attack_WindBlast) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     EVT_CALL(SetGoalToTarget, ACTOR_SELF)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_13)
@@ -535,6 +536,7 @@ EvtScript N(EVS_Attack_WindBlast) = {
 };
 
 EvtScript N(EVS_Attack_FeatherFling) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -786,6 +788,7 @@ EvtScript N(EVS_LiftMario) = {
 };
 
 EvtScript N(EVS_Attack_GrappleDrop) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1035,6 +1038,7 @@ EvtScript N(EVS_Attack_GrappleDrop) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

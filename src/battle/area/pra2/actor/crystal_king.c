@@ -933,6 +933,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_IcyBreath) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1030,6 +1031,7 @@ EvtScript N(EVS_Attack_IcyBreath) = {
 };
 
 EvtScript N(EVS_Attack_IceBolt) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1224,6 +1226,7 @@ Formation N(CloneFormation) = {
 };
 
 EvtScript N(EVS_Move_MakeClones) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_14)
     EVT_CALL(BattleCamTargetActor, ACTOR_SELF)
@@ -1484,6 +1487,7 @@ EvtScript N(EVS_SummonBit) = {
 };
 
 EvtScript N(EVS_Move_SummonBits) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(UseBattleCamPreset, BTL_CAM_PRESET_14)
@@ -1547,6 +1551,7 @@ EvtScript N(EVS_Move_SummonBits) = {
 };
 
 EvtScript N(EVS_Attack_CloneBreath) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Clone1_ID, LVarA)
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_Clone2_ID, LVarB)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
@@ -1850,6 +1855,7 @@ EvtScript N(EVS_SpitSingleBit) = {
 };
 
 EvtScript N(EVS_Attack_SpitBits) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(UseIdleAnimation, ACTOR_SELF, FALSE)
     EVT_CALL(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     EVT_CALL(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1976,6 +1982,7 @@ EvtScript N(EVS_Attack_SpitBits) = {
 };
 
 EvtScript N(EVS_Move_Recover) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_SET(LFlag0, FALSE)
     EVT_CALL(GetActorVar, ACTOR_SELF, AVAR_NextMove, LVar0)
     EVT_SWITCH(LVar0)

@@ -810,6 +810,7 @@ EvtScript N(extinguish) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_CALL(GetActorVar, ACTOR_SELF, N(VAR_LIGHT_BEAM_COUNTER), LVar0)
     EVT_IF_GT(LVar0, 0)
         EVT_SUB(LVar0, 1)

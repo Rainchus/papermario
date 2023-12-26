@@ -485,7 +485,7 @@
 /// Child threads are killed, suspended, and resumed as their parents are, for example, a different thread using
 /// EVT_KILL_THREAD to kill a parent thread would also kill its child thread(s) launched by this command.
 #define EVT_EXEC_WAIT(EVT_SOURCE)               EVT_CMD(EVT_OP_EXEC_WAIT, (Bytecode) EVT_SOURCE),
-
+#define EVT_EXEC_WAIT_ENEMY(EVT_SOURCE)               EVT_CMD(EVT_OP_EXEC_WAIT, (Bytecode) EVT_SOURCE),
 /// Sets up a script to launch when a particular event is triggered.
 ///
 /// Valid triggers:

@@ -210,6 +210,7 @@ EvtScript N(EVS_JrTroopa_Death) = {
 };
 
 EvtScript N(EVS_ReenterEgg) = {
+    EVT_CALL(SetAttackTimeScale)
     EVT_WAIT(10)
     EVT_CALL(PlaySoundAtActor, ACTOR_SELF, SOUND_CLOSE_SHELL)
     EVT_CALL(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)

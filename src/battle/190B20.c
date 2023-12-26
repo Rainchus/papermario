@@ -1986,6 +1986,7 @@ Actor* create_actor(Formation formation) {
     actor->healthFraction = 25;
     actor->actorID = actor->enemyIndex | ACTOR_CLASS_ENEMY;
     takeTurnScript = start_script(actor->takeTurnSource, EVT_PRIORITY_A, 0);
+    takeTurnScript->timeScale = gEnemyAttackTimescale; //patch
     actor->takeTurnScriptID = takeTurnScript->id;
     takeTurnScript->owner1.enemyID = actor->enemyIndex | ACTOR_CLASS_ENEMY;
     actor->shadow.id = create_shadow_type(SHADOW_VARYING_CIRCLE, actor->curPos.x, actor->curPos.y, actor->curPos.z);

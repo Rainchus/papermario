@@ -7,6 +7,8 @@
 #include "macros.h"
 #include "enums.h"
 
+extern f32 gEnemyAttackTimescale; //patch
+
 extern PlayerStatus* gPlayerStatusPtr;
 extern CollisionStatus gCollisionStatus;
 extern GameStatus gGameStatus;

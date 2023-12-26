@@ -6,6 +6,8 @@
 #include "overlay.h"
 #include "game_modes.h"
 
+f32 gEnemyAttackTimescale = 1.0f;
+
 SHIFT_BSS s32 gOverrideFlags;
 SHIFT_BSS s32 timeFreezeMode;
 SHIFT_BSS u16** nuGfxCfb;
@@ -48,9 +50,23 @@ s32 D_800741FC = 0;
 void gfx_init_state(void);
 void gfx_draw_background(void);
 
+void global_mod_per_frame(void) {
+    if (gPlayerData.curHP <= 1) {
+        gPlayerData.curHP = 1;
+    }
+    //gCurrentSaveFile.globalBytes[0] = 0x5F;
+}
+
+ApiStatus SetAttackTimeScale(Evt* evt, s32 isInitialCall) {
+    evt->timeScale = gEnemyAttackTimescale;
+    return ApiStatus_DONE2;
+}
+
 void step_game_loop(void) {
     PlayerData* playerData = &gPlayerData;
     const int MAX_GAME_TIME = 1000*60*60*60 - 1; // 1000 hours minus one frame at 60 fps
+
+    global_mod_per_frame();
 
 #if !VERSION_JP
     update_input();
