@@ -33,5 +33,4 @@ extern MapSettings tst_11_settings;
 extern MapSettings tst_12_settings;
 extern MapSettings tst_13_settings;
 extern MapSettings tst_20_settings;
-
 #endif

@@ -2988,6 +2988,7 @@ enum Areas {
     AREA_MGM,
     AREA_GV,
     AREA_TST,
+    AREA_ASH,
 };
 
 enum NpcPalSwapState {

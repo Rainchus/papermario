@@ -854,6 +854,14 @@ MapConfig tst_maps[] = {
 };
 
 /// Credits
+#include "area_ash/ash.h"
+MapConfig ash_maps[] = {
+    { MAP_WITH_INIT(ash_01), .bgName = "arn_bg" },
+    { MAP_WITH_INIT(ash_02), .bgName = "arn_bg" },
+    { MAP_WITH_INIT(ash_03), .bgName = "arn_bg" },
+};
+
+/// Credits
 #include "area_end/end.h"
 MapConfig end_maps[] = {
     { MAP_WITH_INIT(end_00) },
@@ -904,5 +912,6 @@ AreaConfig gAreas[] = {
     AREA(mgm, "ミニゲーム"),  // minige-mu [Minigames]
     AREA(gv, "ゲームオーバー"),  // ge-mu o-ba- [Game Over]
     AREA(tst, "テストマップ"),  // tesuto mappu [Test map]
+    AREA(ash, "テストマップ"),  // tesuto mappu [Test map]
     {},
 };
