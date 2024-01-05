@@ -9,4 +9,8 @@ extern MapSettings ash_02_settings;
 s32 ash_02_map_init(void);
 extern MapSettings ash_03_settings;
 s32 ash_03_map_init(void);
+extern MapSettings ash_04_settings;
+s32 ash_04_map_init(void);
+extern MapSettings ash_05_settings;
+s32 ash_05_map_init(void);
 #endif

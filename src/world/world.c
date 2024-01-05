@@ -853,12 +853,24 @@ MapConfig tst_maps[] = {
     { MAP(tst_20), .bgName = "nok_bg" },
 };
 
-/// Credits
+//custom area
 #include "area_ash/ash.h"
 MapConfig ash_maps[] = {
     { MAP_WITH_INIT(ash_01), .bgName = "arn_bg" },
     { MAP_WITH_INIT(ash_02), .bgName = "arn_bg" },
     { MAP_WITH_INIT(ash_03), .bgName = "arn_bg" },
+    { MAP_WITH_INIT(ash_04), .bgName = "nok_bg" },
+    { MAP_WITH_INIT(ash_05), .bgName = "nok_bg" },
+};
+
+//custom prologue area
+#include "area_don/don.h"
+MapConfig don_maps[] = {
+
+    { MAP_WITH_INIT(don_01), .bgName = "nok_bg" },
+    { MAP_WITH_INIT(don_02), .bgName = "nok_bg" },
+    { MAP_WITH_INIT(don_03), .bgName = "nok_bg" },
+    { MAP_WITH_INIT(don_06), .bgName = "nok_bg" },
 };
 
 /// Credits
@@ -913,5 +925,6 @@ AreaConfig gAreas[] = {
     AREA(gv, "ゲームオーバー"),  // ge-mu o-ba- [Game Over]
     AREA(tst, "テストマップ"),  // tesuto mappu [Test map]
     AREA(ash, "テストマップ"),  // tesuto mappu [Test map]
+    AREA(don, "テストマップ"),  // tesuto mappu [Test map]
     {},
 };

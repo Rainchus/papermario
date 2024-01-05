@@ -10818,6 +10818,48 @@ segments:
     subsegments:
     - [auto, c, ash_03_main]
     - [auto, c, ash_03_entrances]
+  - name: ash_04
+    dir: world/area_ash/ash_04
+    type: code
+    vram_class: map
+    subsegments:
+    - [auto, c, ash_04_main]
+    - [auto, c, ash_04_entrances]
+  - name: ash_05
+    dir: world/area_ash/ash_05
+    type: code
+    vram_class: map
+    subsegments:
+    - [auto, c, ash_05_main]
+    - [auto, c, ash_05_entrances]
+  - name: don_01
+    dir: world/area_don/don_01
+    type: code
+    vram_class: map
+    subsegments:
+    - [auto, c, don_01_main]
+    - [auto, c, don_01_entrances]
+  - name: don_02
+    dir: world/area_don/don_02
+    type: code
+    vram_class: map
+    subsegments:
+    - [auto, c, don_02_main]
+    - [auto, c, don_02_entrances]
+  - name: don_03
+    dir: world/area_don/don_03
+    type: code
+    vram_class: map
+    subsegments:
+    - [auto, c, don_03_main]
+    - [auto, c, don_03_entrances]
+  - name: don_06
+    dir: world/area_don/don_06
+    type: code
+    vram_class: map
+    subsegments:
+    - [auto, c, don_06_main]
+    - [auto, c, don_06_entrances]
   - name: jan_00
     dir: world/area_jan/jan_00
     type: code

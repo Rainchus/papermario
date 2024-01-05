@@ -2038,6 +2038,7 @@ void load_texture_impl(u32 romOffset, TextureHandle* handle, TextureHeader* head
 }
 
 void load_texture_by_name(ModelNodeProperty* propertyName, s32 romOffset, s32 size) {
+    char testTempBuffer[50];
     char* textureName = (char*)propertyName->data.p;
     u32 startOffset = romOffset;
     s32 textureIdx = 0;
@@ -2133,6 +2134,17 @@ void load_texture_by_name(ModelNodeProperty* propertyName, s32 romOffset, s32 si
             auxPaletteSize = 0;
             auxRasterSize = 0;
         }
+
+        //char* strcpy(char* dest, const char* src)
+
+        //add `don_` prefix and `tif` suffix or texture wont be found correctly
+        // {
+        //     s32 len = strlen(textureName);
+        //     char donStr[] = "don_";
+        //     strcpy(testTempBuffer, donStr);
+        //     strcpy(&testTempBuffer[4], textureName);
+        //     strcpy(&testTempBuffer[sizeof(donStr) - 1 + len], "tif");
+        // }
 
         if (strcmp(textureName, header->name) == 0) {
             // found the texture with `textureName`
