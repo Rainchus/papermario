@@ -1336,7 +1336,6 @@ enum {
     tst_12_ENTRY_0   = 0,
     tst_13_ENTRY_0   = 0,
     tst_20_ENTRY_0   = 0,
-    tst_21_ENTRY_0   = 0,
 };
 
 #endif

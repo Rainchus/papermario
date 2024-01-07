@@ -90,7 +90,7 @@ enum {
     RENDER_CLASS_2CYC_DEPTH     = 11,
 };
 
-#define WORLD_TEXTURE_MEMORY_SIZE 0x20000
+#define WORLD_TEXTURE_MEMORY_SIZE 0x30000
 #define BATTLE_TEXTURE_MEMORY_SIZE 0x8000
 
 SHIFT_BSS u8* gBackgroundTintModePtr; // NOTE: the type for this u8 is TintMode, as shown in SetModelTintMode
@@ -1341,7 +1341,7 @@ SHIFT_BSS RenderTask* RenderTaskLists[3];
 SHIFT_BSS s32 RenderTaskListIdx;
 SHIFT_BSS s32 RenderTaskCount;
 
-SHIFT_BSS TextureHandle TextureHandles[128];
+SHIFT_BSS TextureHandle TextureHandles[256];
 
 SHIFT_BSS u16 DepthCopyBuffer[16];
 
@@ -2038,7 +2038,6 @@ void load_texture_impl(u32 romOffset, TextureHandle* handle, TextureHeader* head
 }
 
 void load_texture_by_name(ModelNodeProperty* propertyName, s32 romOffset, s32 size) {
-    char testTempBuffer[50];
     char* textureName = (char*)propertyName->data.p;
     u32 startOffset = romOffset;
     s32 textureIdx = 0;
@@ -2134,17 +2133,6 @@ void load_texture_by_name(ModelNodeProperty* propertyName, s32 romOffset, s32 si
             auxPaletteSize = 0;
             auxRasterSize = 0;
         }
-
-        //char* strcpy(char* dest, const char* src)
-
-        //add `don_` prefix and `tif` suffix or texture wont be found correctly
-        // {
-        //     s32 len = strlen(textureName);
-        //     char donStr[] = "don_";
-        //     strcpy(testTempBuffer, donStr);
-        //     strcpy(&testTempBuffer[4], textureName);
-        //     strcpy(&testTempBuffer[sizeof(donStr) - 1 + len], "tif");
-        // }
 
         if (strcmp(textureName, header->name) == 0) {
             // found the texture with `textureName`

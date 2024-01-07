@@ -32,7 +32,7 @@ Vec3f gEntityColliderNormals[] = {
 
 //TODO data split here!
 s32 pad_map_table[] = { 0, 0 };
-
+#define SHIFT
 #ifdef SHIFT
 #define ASSET_TABLE_ROM_START (s32) mapfs_ROM_START
 #elif VERSION_JP
@@ -857,20 +857,12 @@ MapConfig tst_maps[] = {
 #include "area_ash/ash.h"
 MapConfig ash_maps[] = {
     { MAP_WITH_INIT(ash_01), .bgName = "arn_bg" },
-    { MAP_WITH_INIT(ash_02), .bgName = "arn_bg" },
-    { MAP_WITH_INIT(ash_03), .bgName = "arn_bg" },
-    { MAP_WITH_INIT(ash_04), .bgName = "nok_bg" },
-    { MAP_WITH_INIT(ash_05), .bgName = "nok_bg" },
 };
 
 //custom prologue area
 #include "area_don/don.h"
 MapConfig don_maps[] = {
-
     { MAP_WITH_INIT(don_01), .bgName = "nok_bg" },
-    { MAP_WITH_INIT(don_02), .bgName = "nok_bg" },
-    { MAP_WITH_INIT(don_03), .bgName = "nok_bg" },
-    { MAP_WITH_INIT(don_06), .bgName = "nok_bg" },
 };
 
 /// Credits

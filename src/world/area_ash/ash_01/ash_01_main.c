@@ -1,7 +1,7 @@
 #include "ash_01.h"
 
-#include "mapfs/ash_02_shape.h"
-#include "mapfs/ash_02_hit.h"
+// #include "mapfs/ash_02_shape.h"
+// #include "mapfs/ash_02_hit.h"
 
 extern EvtScript N(EVS_Main);
 
@@ -18,12 +18,12 @@ s32 N(map_init)(void) {
     return FALSE;
 }
 
-EvtScript N(EVS_ExitWalk_East_ash_01) = EVT_EXIT_WALK(60, ENTRY_ash_01_EntryEast, "ash_02", ENTRY_ash_02_EntryWest);
-EvtScript N(EVS_ExitWalk_West_ash_01) = EVT_EXIT_WALK(60, ENTRY_ash_01_EntryWest, "ash_01", ENTRY_ash_01_EntryWest);
+// EvtScript N(EVS_ExitWalk_East_ash_01) = EVT_EXIT_WALK(60, ENTRY_ash_01_EntryEast, "ash_02", ENTRY_ash_02_EntryWest);
+// EvtScript N(EVS_ExitWalk_West_ash_01) = EVT_EXIT_WALK(60, ENTRY_ash_01_EntryWest, "ash_01", ENTRY_ash_01_EntryWest);
 
 EvtScript N(EVS_BindExitTriggers) = {
-    EVT_BIND_TRIGGER(EVT_PTR(N(EVS_ExitWalk_East_ash_01)), TRIGGER_FLOOR_ABOVE, COLLIDER_ash_01_LZEast, 1, 0)
-    EVT_BIND_TRIGGER(EVT_PTR(N(EVS_ExitWalk_West_ash_01)), TRIGGER_FLOOR_ABOVE, COLLIDER_ash_01_LZWest, 1, 0)
+    // EVT_BIND_TRIGGER(EVT_PTR(N(EVS_ExitWalk_East_ash_01)), TRIGGER_FLOOR_ABOVE, COLLIDER_ash_01_LZEast, 1, 0)
+    // EVT_BIND_TRIGGER(EVT_PTR(N(EVS_ExitWalk_West_ash_01)), TRIGGER_FLOOR_ABOVE, COLLIDER_ash_01_LZWest, 1, 0)
     EVT_RETURN
     EVT_END
 };

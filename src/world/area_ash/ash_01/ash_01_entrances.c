@@ -3,8 +3,8 @@
 extern EvtScript N(EVS_Main);
 
 EntryList N(Entrances) = {
-    [ENTRY_ash_01_EntryEast]    { -65,0,0, 270.000000 },
-    [ENTRY_ash_01_EntryWest]    { -2403,-1,424, 45.000000 },
+    [ENTRY_ash_01_EntryEast]    { -50,0,0, 270.000000 },
+    [ENTRY_ash_01_EntryWest]    { -2415,0,435, 45.000000 },
 };
 
 MapSettings N(settings) = {

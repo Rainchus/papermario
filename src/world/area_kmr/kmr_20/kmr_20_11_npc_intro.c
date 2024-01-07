@@ -7,7 +7,7 @@
 #include "common/foliage.inc.c"
 #define NAME_SUFFIX
 
-#define CUSTOM_DEBUG_MAP_ENTRY "ash_05"
+#define CUSTOM_DEBUG_MAP_ENTRY "don_01"
 
 API_CALLABLE(N(func_80241C9C_8EDABC)) {
     mdl_group_set_custom_gfx(MODEL_g62, CUSTOM_GFX_NONE, ENV_TINT_SHROUD, TRUE);
@@ -389,7 +389,7 @@ EvtScript N(EVS_Scene_BeginGame) = {
     EVT_CALL(SetMusicTrack, 0, SONG_PRISONER_PEACH_THEME, 0, 8)
     EVT_WAIT(5 * DT)
     EVT_CALL(ClearAmbientSounds, 250)
-    EVT_CALL(GotoMapSpecial, EVT_PTR("tst_21"), 0, TRANSITION_SLOW_FADE_TO_WHITE)
+    EVT_CALL(GotoMapSpecial, EVT_PTR("osr_00"), 0, TRANSITION_SLOW_FADE_TO_WHITE)
     EVT_WAIT(15 * DT)
     EVT_CALL(ClearAmbientSounds, 250)
     EVT_WAIT(100 * DT)
