@@ -477,6 +477,9 @@ void btl_update(void) {
     }
 }
 
+s32 boxWidth = 42;
+s32 boxHeight = 16;
+
 void btl_draw_ui(void) {
     s32 changed = FALSE;
     s32 state;
@@ -612,11 +615,13 @@ void btl_draw_ui(void) {
     }
     //patch start
     {
-        s32 xPosTimeScale = 275;
+        s32 xPosTimeScale = 265;
         s32 yPosTimeScale = 204;
+        s32 adjustableWidth = boxWidth;
+
         char buffer[20];
         s32 i;
-        if (gGameStatus.heldButtons[0] & R_TRIG) {
+        if (gGameStatus.curButtons[0] & R_TRIG) {
             switch (gGameStatus.pressedButtons[0]) {
             case U_JPAD:
                 gEnemyAttackTimescale += 1.0f;
@@ -651,6 +656,12 @@ void btl_draw_ui(void) {
                 buffer[i] -= 0x20; //value ascii to pm64 value string
             }
         }
+
+        if (gEnemyAttackTimescale >= 10.0f) {
+            adjustableWidth += 6; //increase width for extra digit
+        }
+        draw_box(0, WINDOW_STYLE_4, xPosTimeScale - 6, yPosTimeScale, 0, adjustableWidth, boxHeight, 255, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, NULL, NULL,
+                    NULL, SCREEN_WIDTH, SCREEN_HEIGHT, NULL);
         draw_msg((s32)buffer, xPosTimeScale, yPosTimeScale, 255, 0, 0);
     }
     //patch end

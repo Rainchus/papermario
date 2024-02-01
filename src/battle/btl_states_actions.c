@@ -3796,6 +3796,7 @@ void btl_state_update_enemy_move(void) {
     if (gBattleSubState == BTL_SUBSTATE_ENEMY_MOVE_DONE) {
         btl_set_state(BATTLE_STATE_NEXT_ENEMY);
     }
+    gEnemyAttackTimescale += 0.05f; //increase by 10%
 }
 
 void btl_state_draw_enemy_move(void) {

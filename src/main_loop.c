@@ -51,9 +51,9 @@ void gfx_init_state(void);
 void gfx_draw_background(void);
 
 void global_mod_per_frame(void) {
-    if (gPlayerData.curHP <= 1) {
-        gPlayerData.curHP = 1;
-    }
+    // if (gPlayerData.curHP <= 1) {
+    //     gPlayerData.curHP = 1;
+    // }
     //gCurrentSaveFile.globalBytes[0] = 0x5F;
 }
 
