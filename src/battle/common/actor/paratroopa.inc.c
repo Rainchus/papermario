@@ -440,6 +440,7 @@ EvtScript N(EVS_Flying_HandleEvent) = {
 };
 
 EvtScript N(EVS_Flying_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -582,6 +583,7 @@ EvtScript N(EVS_Flying_TakeTurn) = {
 };
 
 EvtScript N(EVS_KnockDown) = {
+    Call(SetAttackTimeScale)
     Call(SetPartDispOffset, ACTOR_SELF, PRT_FLYING, 0, 0, 0)
     Call(HideHealthBar, ACTOR_SELF)
     Call(SetPartFlags, ACTOR_SELF, PRT_FLYING, ACTOR_PART_FLAG_INVISIBLE | ACTOR_PART_FLAG_NO_SHADOW | ACTOR_PART_FLAG_NO_TARGET)
@@ -1006,6 +1008,7 @@ EvtScript N(EVS_Downed_HandleEvent) = {
 };
 
 EvtScript N(EVS_Downed_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

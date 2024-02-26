@@ -260,6 +260,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_Attack_Tackle) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -352,6 +353,7 @@ EvtScript N(EVS_Attack_Tackle) = {
 };
 
 EvtScript N(EVS_Attack_SleepySpin) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

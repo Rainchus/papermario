@@ -585,6 +585,7 @@ EvtScript N(EVS_LeaveHome) = {
 };
 
 EvtScript N(EVS_Attack_Leap) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -749,6 +750,7 @@ EvtScript N(EVS_ManageCommandLoss) = {
 };
 
 EvtScript N(EVS_Attack_DisableTackle) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -966,6 +968,7 @@ EvtScript N(EVS_Recover) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_CurrentHome, LVar0)
     Switch(LVar0)
         CaseOrEq(AVAL_Home_Crate)

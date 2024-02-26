@@ -389,6 +389,7 @@ EvtScript N(EVS_TryHitReaction) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(PlaySoundAtActor, ACTOR_SELF, SOUND_OPEN_SHELL)

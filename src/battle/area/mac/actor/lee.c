@@ -349,6 +349,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_Attack_FlyingTackle) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetActorVar, ACTOR_SELF, AVAR_State, AVAL_State_ReadyToCopy)
@@ -599,6 +600,7 @@ API_CALLABLE(N(AdjustFormationPriority)) {
 }
 
 EvtScript N(EVS_Move_CopyPartner) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_14)

@@ -400,6 +400,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_SlamFist) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     Call(SetBattleCamZoom, 150)
@@ -487,6 +488,7 @@ EvtScript N(EVS_Attack_SlamFist) = {
 };
 
 EvtScript N(EVS_Attack_BodySlam) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     Call(SetBattleCamZoom, 180)

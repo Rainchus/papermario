@@ -677,6 +677,7 @@ EvtScript N(EVS_Chomp_SpinSmashHit) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_EnableChainSounds, TRUE)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)

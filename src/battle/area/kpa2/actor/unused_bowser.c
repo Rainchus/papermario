@@ -254,6 +254,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_UseAttack) = {
+    Call(SetAttackTimeScale)
     Call(GetStatusFlags, ACTOR_PLAYER, LVar0)
     IfFlag(LVar0, STATUS_FLAG_STATIC)
         ExecWait(N(EVS_Attack_FireBreath))
@@ -276,6 +277,7 @@ EvtScript N(EVS_UseAttack) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
@@ -338,6 +340,7 @@ EvtScript N(EVS_Attack_ClawSwipe) = {
 };
 
 EvtScript N(EVS_Attack_BodySlam) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
@@ -432,6 +435,7 @@ EvtScript N(EVS_Attack_BodySlam) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
@@ -588,6 +592,7 @@ EvtScript N(EVS_UseDrainingShockwave) = {
 };
 
 EvtScript N(EVS_ReturnHome) = {
+    Call(SetAttackTimeScale)
     Set(LVar0, 1)
     Call(GetActorPos, ACTOR_SELF, LVarA, LVarB, LVarC)
     Call(SetGoalToHome, ACTOR_SELF)
@@ -608,6 +613,7 @@ EvtScript N(EVS_ReturnHome) = {
 };
 
 EvtScript N(EVS_Recover) = {
+    Call(SetAttackTimeScale)
     Call(GetActorPos, ACTOR_SELF, LVar1, LVar2, LVar3)
     Add(LVar2, 60)
     PlayEffect(EFFECT_SPARKLES, 0, LVar1, LVar2, LVar3, Float(1.0), 0)

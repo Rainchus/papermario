@@ -1037,6 +1037,7 @@ EvtScript N(EVS_SummonBackup) = {
 };
 
 EvtScript N(EVS_Attack_SinglePartLeap) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetActorSounds, ACTOR_SELF, ACTOR_SOUND_WALK, SOUND_POKEY_STEP, SOUND_POKEY_STEP)
@@ -1364,6 +1365,7 @@ EvtScript N(EVS_KnockPartAway) = {
 };
 
 EvtScript N(EVS_Pokey_Hit) = {
+    Call(SetAttackTimeScale)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
     IfNotFlag(LVar0, STATUS_FLAG_SHRINK)
         Call(SetPartScale, ACTOR_SELF, PRT_PROJECTILE, Float(1.0), Float(1.0), Float(1.0))

@@ -1467,6 +1467,7 @@ EvtScript N(EVS_FakeBowser_HandleEvent) = {
 };
 
 EvtScript N(EVS_FakeBowser_TakeTurn) = {
+    Call(SetAttackTimeScale)
     UseArray(FakeBowserAnimState)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -2415,6 +2416,7 @@ EvtScript N(EVS_UpdateTowerWithKoopa) = {
 };
 
 EvtScript N(EVS_TryFormingTower) = {
+    Call(SetAttackTimeScale)
     // count the number of standing koopa bros
     #define VAR_STANDING_COUNT LVarA
     Set(VAR_STANDING_COUNT, 0)
@@ -2503,6 +2505,7 @@ EvtScript N(EVS_TryFormingTower) = {
 
 // count the number of standing koopa bros
 EvtScript N(EVS_TryJoiningTower) = {
+    Call(SetAttackTimeScale)
     #define VAR_STANDING_COUNT LVarA
     Set(VAR_STANDING_COUNT, 0)
     Call(CreateCurrentPosTargetList, TARGET_FLAG_2 | TARGET_FLAG_PRIMARY_ONLY)
@@ -3005,6 +3008,7 @@ EvtScript N(EVS_KoopaBros_HandleEvent) = {
 };
 
 EvtScript N(EVS_KoopaBros_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     // reform stable tower if tipping
     Call(GetActorVar, ACTOR_SELF, AVAR_Boss_TowerState, LVar0)

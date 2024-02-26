@@ -431,6 +431,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_Flying_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -525,6 +526,7 @@ EvtScript N(EVS_Flying_TakeTurn) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_IsFlying, LVar0)
     IfEq(LVar0, 1)
         ExecWait(N(EVS_Flying_TakeTurn))

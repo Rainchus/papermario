@@ -340,6 +340,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     Call(SetBattleCamZoom, 200)
@@ -399,6 +400,7 @@ EvtScript N(EVS_Attack_ClawSwipe) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_19)

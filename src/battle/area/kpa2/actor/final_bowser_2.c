@@ -863,6 +863,7 @@ EvtScript N(EVS_PlayFootstepSounds) = {
 };
 
 EvtScript N(EVS_Recover) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_RecoversLeft, LVar0)
     Sub(LVar0, 1)
     Call(SetActorVar, ACTOR_SELF, AVAR_RecoversLeft, LVar0)
@@ -933,6 +934,7 @@ EvtScript N(EVS_Recover) = {
 };
 
 EvtScript N(EVS_TakeTurn_Inner) = {
+    Call(SetAttackTimeScale)
     Call(AddActorVar, ACTOR_SELF, AVAR_TurnCount, 1)
     Call(AddActorVar, ACTOR_SELF, AVAR_TurnsSinceClawSwipe, 1)
     Call(AddActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, 1)
@@ -999,6 +1001,7 @@ EvtScript N(EVS_TakeTurn_Inner) = {
 };
 
 EvtScript N(EVS_UseAttackOrShockwave) = {
+    Call(SetAttackTimeScale)
     // only use regular attacks for the first few turns
     Call(GetActorVar, ACTOR_SELF, AVAR_TurnCount, LVar0)
     IfLe(LVar0, 3)
@@ -1047,6 +1050,7 @@ EvtScript N(EVS_UseAttackOrShockwave) = {
 };
 
 EvtScript N(EVS_UseAttack) = {
+    Call(SetAttackTimeScale)
     Call(RandInt, 80, LVar0)
     IfLt(LVar0, 20)
         Call(GetActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, LVar0)
@@ -1106,6 +1110,7 @@ EvtScript N(EVS_ManageCommandLoss) = {
 };
 
 EvtScript N(EVS_Attack_BodySlam) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1326,6 +1331,7 @@ EvtScript N(EVS_AttackMissed) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceClawSwipe, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1411,6 +1417,7 @@ EvtScript N(EVS_Attack_ClawSwipe) = {
 };
 
 EvtScript N(EVS_UseDrainingShockwave) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceShockwave, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
@@ -1559,6 +1566,7 @@ EvtScript N(EVS_UseDrainingShockwave) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1774,6 +1782,7 @@ EvtScript N(EVS_BurnHit) = {
 };
 
 EvtScript N(EVS_Attack_LightningBlast) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_13)
     Call(BattleCamTargetActor, ACTOR_SELF)

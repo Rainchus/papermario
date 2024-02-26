@@ -192,6 +192,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(GetActorVar, ACTOR_SELF, AVAR_HasBullet, LVar0)
@@ -215,6 +216,8 @@ API_CALLABLE(N(SetBulletInitVars)) {
 }
 
 EvtScript N(EVS_Move_FireBullet) = {
+    Call(SetAttackTimeScale)
+    Call(SetAttackTimeScale)
     Call(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_BillBlaster_Fire)
     Wait(13)
     Thread

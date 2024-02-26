@@ -528,6 +528,7 @@ EvtScript N(EVS_TemporaryKnockout) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Label(0)
@@ -593,6 +594,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_ThrowShell) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetActorVar, ACTOR_SELF, AVAR_ShellsLeft, LVar0)
     // get actor part for the Nth remaining shell
@@ -696,6 +698,7 @@ EvtScript N(EVS_Attack_ThrowShell) = {
 };
 
 EvtScript N(EVS_Attack_DropDebris) = {
+    Call(SetAttackTimeScale)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_15)
     Call(SetBattleCamZoom, 350)
     Call(SetBattleCamOffsetZ, 0)
@@ -788,6 +791,7 @@ EvtScript N(EVS_Attack_DropDebris) = {
 };
 
 EvtScript N(EVS_DropDebris_Self) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_TUTANKOOPA)
     Call(SetGoalToTarget, ACTOR_SELF)
     Call(GetGoalPos, ACTOR_SELF, LVar0, LVar1, LVar2)
@@ -819,6 +823,7 @@ EvtScript N(EVS_DropDebris_Self) = {
 };
 
 EvtScript N(EVS_DropDebris_Players) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(EnemyTestTarget, ACTOR_SELF, LVarA, 0, 0, 1, BS_FLAGS1_INCLUDE_POWER_UPS)
     Switch(LVarA)
@@ -958,6 +963,7 @@ Formation N(SummonedChomp) = {
 };
 
 EvtScript N(EVS_Move_SummonChomp) = {
+    Call(SetAttackTimeScale)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
     Call(GetActorVar, ACTOR_SELF, AVAR_HasSummoned, LVar0)
     IfFalse(LVar0)
@@ -1119,6 +1125,7 @@ EvtScript N(EVS_Move_SummonChomp) = {
 };
 
 EvtScript N(EVS_SummonedChompHop) = {
+    Call(SetAttackTimeScale)
     Label(20)
     Call(GetActorPos, LVarB, LVar5, LVar6, LVar7)
     IfEq(LVar5, LVar0)
@@ -1149,6 +1156,7 @@ EvtScript N(EVS_SummonedChompHop) = {
 };
 
 EvtScript N(EVS_LevitateToHomePos) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_Unknown, 0)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_13)
     Call(BattleCamTargetActor, ACTOR_SELF)
@@ -1179,6 +1187,7 @@ EvtScript N(EVS_LevitateToHomePos) = {
 };
 
 EvtScript N(EVS_GetBackUp) = {
+    Call(SetAttackTimeScale)
     Call(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_Tutankoopa_Levitate)
     Call(SetActorJumpGravity, ACTOR_SELF, Float(1.0))
     Call(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)

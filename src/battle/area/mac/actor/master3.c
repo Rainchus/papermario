@@ -277,6 +277,7 @@ EvtScript N(EVS_HandleEvent_Inner) = {
 };
 
 EvtScript N(EVS_Attack_StrikeOnce) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     Call(BattleCamTargetActor, ACTOR_SELF)
@@ -380,6 +381,7 @@ EvtScript N(EVS_Attack_StrikeOnce) = {
 };
 
 EvtScript N(EVS_Attack_StrikeTwice) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_08)
     Call(BattleCamTargetActor, ACTOR_SELF)
@@ -510,6 +512,7 @@ EvtScript N(EVS_Attack_StrikeTwice) = {
 };
 
 EvtScript N(EVS_Attack_StrikeThrice) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_08)
     Call(BattleCamTargetActor, ACTOR_SELF)

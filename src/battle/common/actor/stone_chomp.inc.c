@@ -642,6 +642,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetActorVar, ACTOR_SELF, AVAR_EnableChainSounds, TRUE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

@@ -416,6 +416,7 @@ EvtScript N(EVS_HandleEvent_SmoothUpright) = {
 };
 
 EvtScript N(EVS_Attack_ShellToss) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -653,6 +654,7 @@ EvtScript N(EVS_HandleEvent_SpikyUpright) = {
 };
 
 EvtScript N(EVS_Attack_SpikeBounce) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

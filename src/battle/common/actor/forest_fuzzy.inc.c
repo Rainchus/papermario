@@ -306,6 +306,7 @@ EvtScript N(EVS_Move_Clone) = {
 #include "common/SpawnEnemyDrainFX.inc.c"
 
 EvtScript N(EVS_Attack_Leech) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)

@@ -8,6 +8,8 @@
 #include "stdlib/stdarg.h"
 #include "libc/xstdio.h"
 
+ApiStatus SetAttackTimeScale(Evt*, s32 isInitialCall);
+
 f32 fabsf(f32 f);
 f64 fabs(f64 f);
 f32 cosine(s16 arg0);

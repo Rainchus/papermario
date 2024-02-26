@@ -570,6 +570,7 @@ EvtScript N(EVS_HandleEvent) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_Form, LVar0)
     IfNe(LVar0, AVAL_Form_Mage)
         Call(GetActorHP, ACTOR_SELF, LVar1)
@@ -647,6 +648,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Transform_Flying) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_14)
@@ -675,6 +677,7 @@ EvtScript N(EVS_Transform_Flying) = {
 };
 
 EvtScript N(EVS_Transform_Mage) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_14)

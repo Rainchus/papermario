@@ -6,6 +6,8 @@
 #include "sprite.h"
 #include "effects.h"
 
+void AdjustAndPrintTimescale(void);
+
 f32 D_802809F0 = 0.0f;
 s8 D_802809F4 = 0;
 s8 D_802809F5 = 0;
@@ -611,6 +613,7 @@ void btl_draw_ui(void) {
                 break;
         }
     }
+    AdjustAndPrintTimescale();
     btl_popup_messages_draw_ui();
     draw_status_ui();
 }

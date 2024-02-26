@@ -204,6 +204,7 @@ API_CALLABLE(N(SetBulletInitVars)) {
 }
 
 EvtScript N(EVS_Move_FireBullet) = {
+    Call(SetAttackTimeScale)
     Call(SetAnimation, ACTOR_SELF, PRT_MAIN, ANIM_BillBlaster_Gold_Fire)
     Wait(13)
     Thread
@@ -227,6 +228,7 @@ EvtScript N(EVS_Move_FireBullet) = {
 };
 
 EvtScript N(EVS_Move_CheckForBullet) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_BulletID, LVar0)
     Call(ActorExists, LVar0, LVar1)
     IfEq(LVar1, 0)

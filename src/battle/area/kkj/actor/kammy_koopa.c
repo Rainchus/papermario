@@ -263,6 +263,7 @@ API_CALLABLE(N(DropBlock)) {
 }
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PARTNER)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_14)

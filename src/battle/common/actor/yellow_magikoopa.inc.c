@@ -539,6 +539,7 @@ EvtScript N(EVS_HandleEvent_Flying) = {
 };
 
 EvtScript N(EVS_Attack_MagicBlast) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)

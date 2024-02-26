@@ -1098,6 +1098,7 @@ EvtScript N(EVS_Flee) = {
 };
 
 EvtScript N(EVS_Attack_Swarm) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1221,6 +1222,7 @@ EvtScript N(EVS_Attack_Swarm) = {
 };
 
 EvtScript N(EVS_MoveSquadHome) = {
+    Call(SetAttackTimeScale)
     Set(LVar0, PRT_MEMBER_01)
     Set(LVar1, ANIM_TankGuy_Anim03)
     Loop(NUM_MEMBERS)

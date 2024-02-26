@@ -712,6 +712,7 @@ EvtScript N(EVS_CopyPartner) = {
 };
 
 EvtScript N(EVS_TakeTurn) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_State, LVar0)
     Switch(LVar0)
         CaseEq(AVAL_State_ReadyToCopy)

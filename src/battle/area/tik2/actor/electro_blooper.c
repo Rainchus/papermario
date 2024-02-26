@@ -528,6 +528,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Move_ChargeUp) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(GetActorPos, ACTOR_SELF, LVar0, LVar1, LVar2)
@@ -561,6 +562,7 @@ EvtScript N(EVS_Move_ChargeUp) = {
 };
 
 EvtScript N(EVS_Attack_SpinDrop) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -659,6 +661,7 @@ EvtScript N(EVS_Attack_SpinDrop) = {
 };
 
 EvtScript N(EVS_Attack_ChargedDrop) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -759,6 +762,7 @@ EvtScript N(EVS_Attack_ChargedDrop) = {
 };
 
 EvtScript N(EVS_Attack_InkBlast) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -861,6 +865,7 @@ EvtScript N(EVS_Attack_InkBlast) = {
 };
 
 EvtScript N(EVS_Charge) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_Charged, LVar0)
     IfNe(LVar0, 0)
         Return

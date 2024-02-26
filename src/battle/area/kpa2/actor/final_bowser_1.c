@@ -431,6 +431,7 @@ EvtScript N(EVS_Move_UseStarRod) = {
 };
 
 EvtScript N(EVS_ReturnHome) = {
+    Call(SetAttackTimeScale)
     Set(LVar0, 1)
     Call(GetActorPos, ACTOR_SELF, LVarA, LVarB, LVarC)
     Call(SetGoalToHome, ACTOR_SELF)
@@ -872,6 +873,7 @@ EvtScript N(EVS_ManageCommandLoss) = {
 };
 
 EvtScript N(EVS_Attack_BodySlam) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1092,6 +1094,7 @@ EvtScript N(EVS_AttackMissed) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceClawSwipe, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1177,6 +1180,7 @@ EvtScript N(EVS_Attack_ClawSwipe) = {
 };
 
 EvtScript N(EVS_UseDrainingShockwave) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceShockwave, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
@@ -1325,6 +1329,7 @@ EvtScript N(EVS_UseDrainingShockwave) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1540,6 +1545,7 @@ EvtScript N(EVS_BurnHit) = {
 };
 
 EvtScript N(EVS_Attack_LightningBlast) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_13)
     Call(BattleCamTargetActor, ACTOR_SELF)

@@ -468,6 +468,7 @@ EvtScript N(EVS_PlayIdleAnimation) = {
 };
 
 EvtScript N(EVS_Move_SummonPetit) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_Common_PiranhaState, LVar0)
     IfEq(LVar0, PIRANHA_STATE_DEAD)
         Return
@@ -806,6 +807,7 @@ API_CALLABLE(N(SetPetitFlameSize)) {
 }
 
 EvtScript N(EVS_Attack_SpitPetit) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Thread
         Wait(8)

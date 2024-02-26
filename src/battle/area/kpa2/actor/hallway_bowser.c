@@ -914,6 +914,7 @@ EvtScript N(EVS_TakeTurn_Inner) = {
 };
 
 EvtScript N(EVS_UseAttackOrShockwave) = {
+    Call(SetAttackTimeScale)
     // only use regular attacks for the first few turns
     Call(GetActorVar, ACTOR_SELF, AVAR_TurnCount, LVar0)
     IfLe(LVar0, 3)
@@ -1020,6 +1021,7 @@ EvtScript N(EVS_ManageCommandLoss) = {
 };
 
 EvtScript N(EVS_Attack_BodySlam) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceBodySlam, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1240,6 +1242,7 @@ EvtScript N(EVS_AttackMissed) = {
 };
 
 EvtScript N(EVS_Attack_ClawSwipe) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceClawSwipe, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
@@ -1327,6 +1330,7 @@ EvtScript N(EVS_Attack_ClawSwipe) = {
 };
 
 EvtScript N(EVS_UseDrainingShockwave) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, AVAR_TurnsSinceShockwave, 0)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
@@ -1475,6 +1479,7 @@ EvtScript N(EVS_UseDrainingShockwave) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(SetGoalToTarget, ACTOR_SELF)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)

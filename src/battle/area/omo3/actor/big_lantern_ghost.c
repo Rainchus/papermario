@@ -525,6 +525,7 @@ EvtScript N(checkExtinguish) = {
 };
 
 EvtScript N(attackHeavyJump) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, N(VAR_LANTERN_BRIGHTNESS), LVar0)
     IfGe(LVar0, 6)
         ExecWait(N(checkExtinguish))
@@ -637,6 +638,7 @@ EvtScript N(attackHeavyJump) = {
 };
 
 EvtScript N(attackLightBeam) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, N(VAR_MOVE_ID), N(MOVE_HEAVY_JUMP))
     Call(SetActorVar, ACTOR_SELF, N(VAR_LIGHT_BEAM_COUNTER), 3)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
@@ -741,6 +743,7 @@ EvtScript N(attackLightBeam) = {
 };
 
 EvtScript N(extinguish) = {
+    Call(SetAttackTimeScale)
     Call(SetActorVar, ACTOR_SELF, N(VAR_EXTINGUISHED_ONCE), 1)
     Call(SetActorVar, ACTOR_SELF, N(VAR_6), 1000)
     Call(SetActorVar, ACTOR_SELF, N(VAR_MOVE_ID), N(MOVE_LIGHT_BEAM))

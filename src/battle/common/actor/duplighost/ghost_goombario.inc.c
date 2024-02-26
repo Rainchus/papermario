@@ -274,6 +274,7 @@ EvtScript N(EVS_HeadbonkFollowthrough) = {
 };
 
 EvtScript N(EVS_ApproachPlayer) = {
+    Call(SetAttackTimeScale)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     Call(BattleCamTargetActor, ACTOR_SELF)
     Call(func_8024ECF8, BTL_CAM_MODEY_MINUS_1, BTL_CAM_MODEX_1, FALSE)
@@ -290,6 +291,7 @@ EvtScript N(EVS_ApproachPlayer) = {
 
 // copied from goombario.c and used, but result is discarded
 EvtScript N(EVS_CalculateJumpTime) = {
+    Call(SetAttackTimeScale)
     Call(SetGoalToTarget, ACTOR_SELF)
     Call(GetGoalPos, ACTOR_SELF, LVarB, LVarC, LVarD)
     Call(GetActorPos, ACTOR_SELF, LVarC, LVarD, LVarE)
@@ -308,6 +310,7 @@ EvtScript N(EVS_CalculateJumpTime) = {
 };
 
 EvtScript N(EVS_Attack_Headbonk) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     ExecWait(N(EVS_ApproachPlayer))

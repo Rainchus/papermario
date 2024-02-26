@@ -409,6 +409,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_Leap) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_ENEMY_APPROACH)
     Call(BattleCamTargetActor, ACTOR_SELF)
@@ -552,6 +553,7 @@ EvtScript N(EVS_Move_Charge) = {
 };
 
 EvtScript N(EVS_Attack_DarkSwarm) = {
+    Call(SetAttackTimeScale)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_19)
     Call(SetBattleCamTarget, 85, 50, 0)

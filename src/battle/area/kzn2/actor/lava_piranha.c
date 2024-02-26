@@ -1184,6 +1184,7 @@ Formation N(RightBudFormation) = {
 };
 
 EvtScript N(EVS_Attack_SpitFire) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Thread
@@ -1266,6 +1267,7 @@ EvtScript N(EVS_Attack_SpitFire) = {
 };
 
 EvtScript N(EVS_Attack_FireBreath) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
     Thread

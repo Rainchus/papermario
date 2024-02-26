@@ -331,6 +331,7 @@ API_CALLABLE(N(GetLastActorEventType)) {
 // respond to commands issued from BOSS_ACTOR
 // (in) LVarA : event
 EvtScript N(HandleCommand) = {
+    Call(SetAttackTimeScale)
     Call(SetOwnerID, THIS_ACTOR_ID)
     Call(GetStatusFlags, ACTOR_SELF, LVar0)
     IfNe(LVar0, 0)

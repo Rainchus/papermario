@@ -933,6 +933,7 @@ EvtScript N(EVS_TakeTurn) = {
 };
 
 EvtScript N(EVS_Attack_IcyBreath) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1030,6 +1031,7 @@ EvtScript N(EVS_Attack_IcyBreath) = {
 };
 
 EvtScript N(EVS_Attack_IceBolt) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1224,6 +1226,7 @@ Formation N(CloneFormation) = {
 };
 
 EvtScript N(EVS_Move_MakeClones) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_14)
     Call(BattleCamTargetActor, ACTOR_SELF)
@@ -1484,6 +1487,7 @@ EvtScript N(EVS_SummonBit) = {
 };
 
 EvtScript N(EVS_Move_SummonBits) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(UseBattleCamPreset, BTL_CAM_PRESET_14)
@@ -1547,6 +1551,7 @@ EvtScript N(EVS_Move_SummonBits) = {
 };
 
 EvtScript N(EVS_Attack_CloneBreath) = {
+    Call(SetAttackTimeScale)
     Call(GetActorVar, ACTOR_SELF, AVAR_Clone1_ID, LVarA)
     Call(GetActorVar, ACTOR_SELF, AVAR_Clone2_ID, LVarB)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
@@ -1850,6 +1855,7 @@ EvtScript N(EVS_SpitSingleBit) = {
 };
 
 EvtScript N(EVS_Attack_SpitBits) = {
+    Call(SetAttackTimeScale)
     Call(UseIdleAnimation, ACTOR_SELF, FALSE)
     Call(EnableIdleScript, ACTOR_SELF, IDLE_SCRIPT_DISABLE)
     Call(SetTargetActor, ACTOR_SELF, ACTOR_PLAYER)
@@ -1976,6 +1982,7 @@ EvtScript N(EVS_Attack_SpitBits) = {
 };
 
 EvtScript N(EVS_Move_Recover) = {
+    Call(SetAttackTimeScale)
     Set(LFlag0, FALSE)
     Call(GetActorVar, ACTOR_SELF, AVAR_NextMove, LVar0)
     Switch(LVar0)
