@@ -3453,7 +3453,8 @@ void btl_state_update_next_enemy(void) {
             if (i >= battleStatus->numEnemyActors) {
                 // all enemies have been exhausted
                 battleStatus->nextEnemyIndex = 0;
-                btl_set_state(BATTLE_STATE_END_TURN);
+                // btl_set_state(BATTLE_STATE_END_TURN);
+                incrementAttackTimescale(BATTLE_STATE_END_TURN);
                 return;
             }
 
