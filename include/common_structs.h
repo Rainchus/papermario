@@ -373,7 +373,8 @@ typedef struct PlayerData {
     /* 0x338 */ u32 smashGameTotal; /* all-time winnings, max = 99999 */
     /* 0x33C */ u16 smashGameRecord;
     /* 0x33E */ char pad_33E[2];
-    /* 0x340 */ char reserved[0xE8]; // unused
+    /* 0x340 */ s32 savedSpeedUp;
+    /* 0x344 */ char reserved[0xE4]; // unused
 } PlayerData; // size = 0x428
 
 typedef struct Trigger {

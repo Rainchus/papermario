@@ -363,7 +363,7 @@ s32 get_time_freeze_mode(void) {
 
 s32 boxWidth = 46;
 s32 boxHeight = 16;
-s32 gEnemyAttackTimescale = 100;
+// s32 gEnemyAttackTimescale = 100;
 
 Evt* custom_function(Actor* actor) {
     Evt* takeTurnScript;
@@ -378,7 +378,9 @@ Evt* custom_function(Actor* actor) {
 
 
 void incrementAttackTimescale(void) {
-    gEnemyAttackTimescale += 5; //increase by 5% every turn
+    //gEnemyAttackTimescale += 10; //increase by 10% every turn
+    //gPlayerData.savedSpeedUp = gEnemyAttackTimescale;
+    gPlayerData.savedSpeedUp += 10;
     btl_set_state(BATTLE_STATE_END_TURN);
 }
 
@@ -392,29 +394,29 @@ void AdjustAndPrintTimescale(void) {
     if (gGameStatus.curButtons[0] & R_TRIG) {
         switch (gGameStatus.pressedButtons[0]) {
         case U_JPAD:
-            gEnemyAttackTimescale += 100;
+            gPlayerData.savedSpeedUp += 100;
             break;
         case D_JPAD:
-            gEnemyAttackTimescale -= 100;
+            gPlayerData.savedSpeedUp -= 100;
             break;
         }            
     } else {
         switch (gGameStatus.pressedButtons[0]) {
         case U_JPAD:
-            gEnemyAttackTimescale += 1;
+            gPlayerData.savedSpeedUp += 1;
             break;
         case D_JPAD:
-            gEnemyAttackTimescale -= 1;
+            gPlayerData.savedSpeedUp -= 1;
             break;
         case L_JPAD:
-            gEnemyAttackTimescale -= 10;
+            gPlayerData.savedSpeedUp -= 10;
             break;
         case R_JPAD:
-            gEnemyAttackTimescale += 10;
+            gPlayerData.savedSpeedUp += 10;
             break;
         }
     }
-    sprintf(buffer, "%03d%%", gEnemyAttackTimescale);
+    sprintf(buffer, "%03d%%", gPlayerData.savedSpeedUp);
     for (i = 0; i < sizeof(buffer); i++) {
         if (buffer[i] == 0) {
             buffer[i] = 0xFD; //terminate string
@@ -427,7 +429,7 @@ void AdjustAndPrintTimescale(void) {
         }
     }
 
-    if (gEnemyAttackTimescale >= 100 * 10) {
+    if (gPlayerData.savedSpeedUp >= 100 * 10) {
         adjustableWidth += 6; //increase width for extra digit
     }
     draw_box(0, (WindowStyle)WINDOW_STYLE_4, xPosTimeScale - 6, yPosTimeScale, 0, adjustableWidth, boxHeight, 255, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, NULL, NULL,
@@ -436,7 +438,7 @@ void AdjustAndPrintTimescale(void) {
 }
 
 ApiStatus SetAttackTimeScale(Evt* evt, s32 isInitialCall) {
-    evt->timeScale = ((f32)gEnemyAttackTimescale / 100.0f);
+    evt->timeScale = ((f32)gPlayerData.savedSpeedUp / 100.0f);
     return ApiStatus_DONE2;
 }
 
