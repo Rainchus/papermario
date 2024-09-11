@@ -553,6 +553,8 @@ void status_bar_draw_stat(s32 id, s32 startX, s32 startY, s32 currentValue, s32 
     }
 }
 
+void PrintWorldHeapUsage(void);
+
 void update_status_bar(void) {
     StatusBar* statusBar = &gStatusBar;
     PlayerData* playerData = &gPlayerData;
@@ -1130,6 +1132,7 @@ void update_status_bar(void) {
 
     func_800F0D80();
     func_800F102C();
+    PrintWorldHeapUsage();
 }
 
 void coin_counter_draw_content(UNK_TYPE arg0, s32 posX, s32 posY) {
