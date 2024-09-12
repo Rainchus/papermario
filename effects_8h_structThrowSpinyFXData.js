@@ -1,0 +1,28 @@
+var effects_8h_structThrowSpinyFXData =
+[
+    [ "gravity", "effects_8h.html#a532fca60933a3e5430e309cd2a8b0b18", null ],
+    [ "life", "effects_8h.html#a7c43d176ef99a14e7e332605943bd681", null ],
+    [ "lifeDuration", "effects_8h.html#ab7a4bb94fd1e9bb0bbe694788fb19476", null ],
+    [ "pos", "effects_8h.html#a33504c23beae62707f0a3fb280c54551", null ],
+    [ "rgba", "effects_8h.html#a63c61c644c34716bbb26a6900306acd2", null ],
+    [ "rotSpeed", "effects_8h.html#a80b6f9576180e71a7a1213dda7f601cb", null ],
+    [ "state", "effects_8h.html#a19430a82cdc3736b36967464c922f0e8", null ],
+    [ "timeUntilFall", "effects_8h.html#a12dbbe28d8e54924f286f9b735ddfca6", null ],
+    [ "unk_00", "effects_8h.html#aa4805577543ab3bb130e23f1b11c61fb", null ],
+    [ "unk_10", "effects_8h.html#a0674e43481bfd9c4d040ea53b4cea4b1", null ],
+    [ "unk_14", "effects_8h.html#aaefff971631a0de5a0b8f8426cbdc29e", null ],
+    [ "unk_18", "effects_8h.html#a87ef0593ba53160565b46d09d14ea6c0", null ],
+    [ "unk_1C", "effects_8h.html#a2c6beb326e15b42ef8b5223dedfc3f75", null ],
+    [ "unk_20", "effects_8h.html#aba708d271697a381819266b0b511694e", null ],
+    [ "unk_24", "effects_8h.html#a6eb00330932539e0965ace2c8865b3b4", null ],
+    [ "unk_30", "effects_8h.html#aefbe3ef9a589e5f9703ee5bc10e606e5", null ],
+    [ "unk_34", "effects_8h.html#a25cde685b25c6b51f6ff6c80efb2c98c", null ],
+    [ "unk_38", "effects_8h.html#a5320d4861c42439f7015e010642e6e99", null ],
+    [ "unk_40", "effects_8h.html#ac5683ad458c1c91fd990fd1101450257", null ],
+    [ "unk_44", "effects_8h.html#a9e2c29459acbda37eb4345a0e97f03c6", null ],
+    [ "unk_4C", "effects_8h.html#a53903cdb9b8b2d3ee330d9bda1466a6a", null ],
+    [ "unk_64", "effects_8h.html#ad3f4e44c302496f15783ed811fe843d5", null ],
+    [ "xScale", "effects_8h.html#ae825ac030b5172bda1b9c684e8628064", null ],
+    [ "yaw", "effects_8h.html#acab9008a8632b3a1d31c081ddf0b61c6", null ],
+    [ "yScale", "effects_8h.html#acaf6edb9d8219433ea1f9d8162b686ea", null ]
+];

@@ -1,0 +1,26 @@
+var spirit__card_8c =
+[
+    [ "EFFECT_DEF_MISC_PARTICLES", "spirit__card_8c.html#af0ae4e7247b11fd3160584b26810b117", null ],
+    [ "EFFECT_DEF_RING_BLAST", "spirit__card_8c.html#a31648b2ddaca6778fa7245aa135d2c50", null ],
+    [ "func_E0112330", "spirit__card_8c.html#aeb484acd7bfad23a8378867a6d4481ff", null ],
+    [ "spirit_card_appendGfx", "spirit__card_8c.html#a118aa2ec9586f23d10c6a29c2c1c96ad", null ],
+    [ "spirit_card_init", "spirit__card_8c.html#aa438ea15d549fb23526cfd60b6eb1b97", null ],
+    [ "spirit_card_main", "spirit__card_8c.html#a5d0b4c9a3149c3a860be4c0b6252c24f", null ],
+    [ "spirit_card_render", "spirit__card_8c.html#a944499a25a0a87e30a8741b0206f9456", null ],
+    [ "spirit_card_update", "spirit__card_8c.html#a013f43ddcd3645394761d711a3026053", null ],
+    [ "D_09003F98_3FE448", "spirit__card_8c.html#a163e68b7f0982fa7b62e4caf8276fc6a", null ],
+    [ "D_09004010_3FE4C0", "spirit__card_8c.html#a1b273a94bcfd6d8daa65e89347134954", null ],
+    [ "D_09004088_3FE538", "spirit__card_8c.html#a6ad7386d1d5e174da874d9ba49b4ed1b", null ],
+    [ "D_09004100_3FE5B0", "spirit__card_8c.html#ab68bceb87dc72895ab23ca4678570a06", null ],
+    [ "D_09004178_3FE628", "spirit__card_8c.html#a1a2b57d6647d34a4231964465a0c4c37", null ],
+    [ "D_090041F0_3FE6A0", "spirit__card_8c.html#a1b0ea5be03d815948f3422a18b77a637", null ],
+    [ "D_09004268_3FE718", "spirit__card_8c.html#aa4ea415e478d0b7dcc49950e3476e0aa", null ],
+    [ "D_090042E0_3FE790", "spirit__card_8c.html#a3fd674f3c183e7e9b3eba544d4ea85cc", null ],
+    [ "D_09004360_3FE810", "spirit__card_8c.html#ae70b785b490c2adb623c9e79eef37b0e", null ],
+    [ "D_09004458_3FE908", "spirit__card_8c.html#a084defb990218c313d11d7132fa21eb4", null ],
+    [ "D_09004508_3FE9B8", "spirit__card_8c.html#abaf6e8d24d7daa9fbc496d8a029c9d9e", null ],
+    [ "D_09004600_3FEAB0", "spirit__card_8c.html#ab6604fb9613acee965c9f1c7c44722e5", null ],
+    [ "D_E0112630", "spirit__card_8c.html#ac7d759d56e4ea74ba8b6580f302b24b9", null ],
+    [ "D_E0112638", "spirit__card_8c.html#a477774692a641fda9aa02ffb8ba963c6", null ],
+    [ "D_E0112640", "spirit__card_8c.html#a3ffc3515cbd6766b097af16843e42103", null ]
+];

@@ -1,0 +1,38 @@
+var phonograph_8c =
+[
+    [ "PhonographData", "phonograph_8c.html#structPhonographData", [
+      [ "barFillWidth", "phonograph_8c.html#a88b2f550b42010adc596a685b7f8cb88", null ],
+      [ "crankRotation", "phonograph_8c.html#a49170fa108213cfc8126fa3406eaa9ef", null ],
+      [ "fillValue", "phonograph_8c.html#a2bc99a3985d3fa057611f480914eb781", null ],
+      [ "hudBaseX", "phonograph_8c.html#a934aaf362f292124b2710e6cca7a3c54", null ],
+      [ "hudBaseY", "phonograph_8c.html#a3d579c05824e922b2d01aede2d31e5f2", null ],
+      [ "hudElemAButton", "phonograph_8c.html#ab8aa7787858032688d6344eadbe6f1c9", null ],
+      [ "hudElemBlueMeter", "phonograph_8c.html#aa39fea32c1a163de16b902488d17ee6e", null ],
+      [ "hudElemOK", "phonograph_8c.html#a6e808b38abf955073bd1bd01252784bc", null ],
+      [ "hudWorker", "phonograph_8c.html#aae3d2ce298bc5325e2d44485ead9e5c3", null ],
+      [ "inputBuffer", "phonograph_8c.html#a79e2ddee5a6d449af08f6faae7164aae", null ],
+      [ "inputBufferPos", "phonograph_8c.html#ad23dab82473916d7369ca717dddceaa5", null ],
+      [ "mashMeterDividers", "phonograph_8c.html#adafe564ae1d8f5e0c546390aa9906803", null ],
+      [ "mashMeterIntervals", "phonograph_8c.html#a8379f97e07c2e2a0bc2ffa5c4282264a", null ],
+      [ "mashMeterSmoothDivisor", "phonograph_8c.html#ac61753dc147f92de9b3e8dc180ec1e4b", null ],
+      [ "meterFillAmount", "phonograph_8c.html#a4b3e223e2eaa8e15fb23d7250ab074ce", null ],
+      [ "modelScale", "phonograph_8c.html#a61806c70159cf7cca19591a0f0448816", null ],
+      [ "recordRotation", "phonograph_8c.html#a22822eaf071317b38608083308f9123d", null ],
+      [ "songName", "phonograph_8c.html#a833478b1025bc18efeaa872578fd7b78", null ],
+      [ "state", "phonograph_8c.html#af4f738bfcb2e0c4124f4ef18cd4e6d15", null ],
+      [ "timeScale", "phonograph_8c.html#a45bfd2abdac7ac42ca33071e32c5bd43", null ],
+      [ "unk_1D8", "phonograph_8c.html#af779ad312bc6d405407d0cb4184b6ae5", null ],
+      [ "unk_1DC", "phonograph_8c.html#acbb044256a931df5465c1c6b76b4d2c0", null ],
+      [ "unk_1DD", "phonograph_8c.html#ae1943763f1423ff1db9e8981866ac584", null ],
+      [ "unk_48", "phonograph_8c.html#a583963cdea84dd8a7c5253b437b5fa36", null ],
+      [ "updateCrankScriptID", "phonograph_8c.html#ac1c2582423b04e51d90598cb5947b77a", null ],
+      [ "updateRecordScriptID", "phonograph_8c.html#a30d92c892de4ee11f1f11f9941f81edd", null ],
+      [ "updateScaleScriptID", "phonograph_8c.html#a22f7a633238618ff3ede19a302c4ae96", null ]
+    ] ],
+    [ "DrawMashMeter", "phonograph_8c.html#a533fd1fec40cb09c5c46e50e3faa6e39", null ],
+    [ "DrawMashMeterWithDivisor", "phonograph_8c.html#a21fd63f153eb2630770fae2cb65b33ee", null ],
+    [ "GetPhonographData", "phonograph_8c.html#a811256a46d940a6a2cc59e41ad38e7d2", null ],
+    [ "worker_draw_phonograph_hud", "phonograph_8c.html#aa77d59956d4fc59bce2af5710891ef40", null ],
+    [ "worker_update_phonograph_hud", "phonograph_8c.html#a144f9e919142ab2cec6c7f75a394c597", null ],
+    [ "HES_SlowlyMashAButton", "phonograph_8c.html#a246f0d09c05112fc0ac75e6a24e80fa0", null ]
+];

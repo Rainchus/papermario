@@ -1,0 +1,26 @@
+var effects_8h_structFireBreathFXData =
+[
+    [ "alpha", "effects_8h.html#a0987cdd9a68f852ba936eb09f22ce5ea", null ],
+    [ "animTime", "effects_8h.html#a52921d5542074b68a2eee7411ab980c0", null ],
+    [ "duration", "effects_8h.html#a9f8bf6a92334a821c9b9fdb400df8d8e", null ],
+    [ "endPos", "effects_8h.html#ae740255a50da4e3ee407d7dc31f280da", null ],
+    [ "envB", "effects_8h.html#abb81e2495b7ba95013f5a1eccff9bbce", null ],
+    [ "envG", "effects_8h.html#a15dfaf34383e7e46f500bfbee83f62df", null ],
+    [ "envR", "effects_8h.html#a90805f031f78e0f4a6e887145ce2d3e2", null ],
+    [ "initialScale", "effects_8h.html#aa72f1eb3e7b0afda72a284c7e1f7c4f3", null ],
+    [ "initPos", "effects_8h.html#a090e7857aa42eafb5e2dfadf0b074781", null ],
+    [ "lifetime", "effects_8h.html#a82c77e5545b4896d76680e41462da11d", null ],
+    [ "numChildren", "effects_8h.html#ad175ef66d45d190ac06ff16447c98d85", null ],
+    [ "offsetPos", "effects_8h.html#a7bf087f9fdb4c6e3a296f4b285fa6388", null ],
+    [ "pos", "effects_8h.html#a5713ed7e05c37b0c1e609f5479739130", null ],
+    [ "primB", "effects_8h.html#a6ab6edcb12c22db232ab8a040f9b0536", null ],
+    [ "primG", "effects_8h.html#af83ec251f08d27e7a318d37b13b6bd50", null ],
+    [ "primR", "effects_8h.html#a3cff77a31d065ed7961199446fd56846", null ],
+    [ "scale", "effects_8h.html#a0cf00470f8218c411ffc383ff755c778", null ],
+    [ "scaleChangeRate", "effects_8h.html#a8469f7705dfdea9e7aaa9a38ad36f9f3", null ],
+    [ "spawnDelay", "effects_8h.html#a935afb79bcfcc32b4669748d5e5a29bf", null ],
+    [ "targetScale", "effects_8h.html#a0823a6b3f9eb855fd8d46c674d8e8f3c", null ],
+    [ "timeLeft", "effects_8h.html#a07d38d3eff57d8ccee5760f8a45a5a3c", null ],
+    [ "type", "effects_8h.html#a7a06a166fb140ba5ed7cc6bc56bb7a62", null ],
+    [ "velY", "effects_8h.html#afa5022851dd00edd572a737b0db17e1f", null ]
+];

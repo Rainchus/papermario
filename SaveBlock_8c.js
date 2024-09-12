@@ -1,0 +1,27 @@
+var SaveBlock_8c =
+[
+    [ "entity_SaveBlock_idle", "SaveBlock_8c.html#ac7466361e57aec20cdf07225ecffe787", null ],
+    [ "entity_SaveBlock_init", "SaveBlock_8c.html#a676e23bab040528ee927983db4eaffc6", null ],
+    [ "entity_SaveBlock_pause_game", "SaveBlock_8c.html#a487cc9420c286513beccf592f2349533", null ],
+    [ "entity_SaveBlock_resume_game", "SaveBlock_8c.html#a48b86cb983fec5102ecb61ac67aa9912", null ],
+    [ "entity_SaveBlock_save_data", "SaveBlock_8c.html#a44e174f76b429bacbb81170a90ede9b1", null ],
+    [ "entity_SaveBlock_setupGfx", "SaveBlock_8c.html#a4408b825672a6bdf8f0361df7f419ecc", null ],
+    [ "entity_SaveBlock_show_choice_message", "SaveBlock_8c.html#ad78fac8cf3b9f9dbbe02938354d2d7fb", null ],
+    [ "entity_SaveBlock_show_result_message", "SaveBlock_8c.html#ad0c1706ff20008836063a62bc9598043", null ],
+    [ "entity_SaveBlock_show_tutorial_message", "SaveBlock_8c.html#acdfa460be0b2d4f852787023aeb043df", null ],
+    [ "entity_SaveBlock_wait_for_close_choice", "SaveBlock_8c.html#a3033c4b413b29cdcf99887b168349379", null ],
+    [ "entity_SaveBlock_wait_for_close_result", "SaveBlock_8c.html#a556b85a3d06e99cc4d74b2bbc51045d7", null ],
+    [ "entity_SaveBlock_wait_for_close_tutorial", "SaveBlock_8c.html#a162d9067a9d846c425b4133be922ce31", null ],
+    [ "Entity_SaveBlock_Mtx", "SaveBlock_8c.html#a1d944a755e3704069886de88b8399b25", null ],
+    [ "Entity_SaveBlock_RenderBlock", "SaveBlock_8c.html#ab7812c905e14551a6a6b43b399b7027a", null ],
+    [ "Entity_SaveBlock_RenderContent", "SaveBlock_8c.html#a7008d5b1bfeacff64acb6fe6f65e2adf", null ],
+    [ "Entity_SaveBlock_RenderNone", "SaveBlock_8c.html#a3885c48fc9d1225265c08a7cf706200f", null ],
+    [ "Entity_SaveBlock_RenderScript", "SaveBlock_8c.html#a432c90a5de9c43e32c1861fe9926ea7e", null ],
+    [ "Entity_SaveBlock_Script", "SaveBlock_8c.html#a4b1ccf067c06d818c7b1f81fc8c41e7b", null ],
+    [ "Entity_SaveBlock_ScriptResume", "SaveBlock_8c.html#a300f0423dd484f7343925382d8490d35", null ],
+    [ "Entity_SavePoint", "SaveBlock_8c.html#a946ad7411f797222db0494b01e1d7136", null ],
+    [ "SaveBlockResultPrinter", "SaveBlock_8c.html#a1beb74b04d91ebf2836703d4d9f589c6", null ],
+    [ "SaveBlockResultPrinterClosed", "SaveBlock_8c.html#af6ba7a7fe12e0b1e3debc6e1612e8e40", null ],
+    [ "SaveBlockTutorialPrinter", "SaveBlock_8c.html#ad65ced8c051947f6a434c9a9526c7e60", null ],
+    [ "SaveBlockTutorialPrinterClosed", "SaveBlock_8c.html#af0af1f855df8f0f2f3e8adc25b0d7e16", null ]
+];

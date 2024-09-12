@@ -1,0 +1,27 @@
+var imgfx_8c_structImgFXState =
+[
+    [ "arrayIdx", "imgfx_8c.html#ac20cfcbf4b200349f343234a73f22e0d", null ],
+    [ "colorBuf", "imgfx_8c.html#aef3b00745f2ae537526b26074daed2fd", null ],
+    [ "colorBufCount", "imgfx_8c.html#a8cbc2c329f670353ebb37fcf87dd28c5", null ],
+    [ "curAnimOffset", "imgfx_8c.html#ac3e99711cc3dfe50910b06b5b324d972", null ],
+    [ "firstVtxIdx", "imgfx_8c.html#a12eee5ec0b936695146771c30c5d4003", null ],
+    [ "flags", "imgfx_8c.html#a256a7dc22263f8ec279b9e4c04ce9e36", null ],
+    [ "floats", "imgfx_8c.html#a9cc44bd46da4469fe3c85c3de7fe1e76", null ],
+    [ "gfxBufs", "imgfx_8c.html#a8992a78e830da3fa3625b48d4ef1c9c7", null ],
+    [ "ints", "imgfx_8c.html#a8b4632d4c0e31499bd0269d1b64567fa", null ],
+    [ "lastAnimCmd", "imgfx_8c.html#a04a947c9f346236cab89038303fb69c3", null ],
+    [ "lastColorCmd", "imgfx_8c.html#a78d5c473f03bedde17e0762f118c165d", null ],
+    [ "lastVtxIdx", "imgfx_8c.html#a44bc05be7e500fe4ce2183f4366962e4", null ],
+    [ "meshType", "imgfx_8c.html#a8edb7e6711039d65e2bf19547c667af2", null ],
+    [ "nextIdx", "imgfx_8c.html#ac31a7de7cf11397c1687a99e54bb6a92", null ],
+    [ "otherModeL", "imgfx_8c.html#a575f545a098ff4dcdb593295d91a8b91", null ],
+    [ "renderType", "imgfx_8c.html#a7dedc7b4a4a8d647a923344c5f62f667", null ],
+    [ "subdivX", "imgfx_8c.html#a243fe5de09146d1066998f8697ec5f6a", null ],
+    [ "subdivY", "imgfx_8c.html#a1c4fc8cde034a069c2abac1271c32fcc", null ],
+    [ "unk_07", "imgfx_8c.html#a9e454e6ecfd321d10aca736519bb77d9", null ],
+    [ "unk_0C", "imgfx_8c.html#a170309e8c6c5eaa2549e55b7c4ef9340", null ],
+    [ "unk_0E", "imgfx_8c.html#a60eebdde834f7671b283b898189d471a", null ],
+    [ "unk_18", "imgfx_8c.html#af13165e9986ff299f1f40cae5e79958f", null ],
+    [ "unk_62", "imgfx_8c.html#ae8adcf485e733bb9805357efd859d65d", null ],
+    [ "vtxBufs", "imgfx_8c.html#a1790ef6ad59b93a103ae55c56126faaf", null ]
+];

@@ -1,0 +1,27 @@
+var effects_8h_structGreenImpactFXData =
+[
+    [ "unk_00", "effects_8h.html#a5bdd9aa92ef1f2257531d621ae368746", null ],
+    [ "unk_02", "effects_8h.html#a38ea3538fcfaa4067b43a97e7e49a6fe", null ],
+    [ "unk_04", "effects_8h.html#a5195c7261c4e0863a9172e261681eae6", null ],
+    [ "unk_08", "effects_8h.html#affa8672ea7e32c78a8b5a68f27c2a095", null ],
+    [ "unk_0C", "effects_8h.html#a7ef09cef2589893c5067630a3056bc7e", null ],
+    [ "unk_10", "effects_8h.html#a8c35649e562d0ef09bf0c3b640cad1ce", null ],
+    [ "unk_14", "effects_8h.html#a26499fe8d783b536fde3439b3aa887fb", null ],
+    [ "unk_18", "effects_8h.html#a5b914766ddc56c7c2453e887ff08a313", null ],
+    [ "unk_1C", "effects_8h.html#a38c7afc0586cb75492e5f3bfdc3751a2", null ],
+    [ "unk_20", "effects_8h.html#ab2a4503366ec781599cbb570dcbd23a7", null ],
+    [ "unk_24", "effects_8h.html#a3bcfe9475bd24ceee84a491acbee9c6c", null ],
+    [ "unk_28", "effects_8h.html#a6ad0d82feeed560fb9454ef506c3f9f5", null ],
+    [ "unk_2C", "effects_8h.html#ad9afab8190091a5ee06fdab29bc8eaa5", null ],
+    [ "unk_30", "effects_8h.html#a66fbe6a29044a996d92a4cec0a3db953", null ],
+    [ "unk_34", "effects_8h.html#af4ab33f201b00248aa89500ece42ff32", null ],
+    [ "unk_38", "effects_8h.html#a7d86d8442c006ae9ff98598c576c605c", null ],
+    [ "unk_3C", "effects_8h.html#a1396d24cff60c93420b4c3511304cabd", null ],
+    [ "unk_40", "effects_8h.html#af1c5e952e93e6e1e05d5a88757544cf0", null ],
+    [ "unk_44", "effects_8h.html#ad0a8bdcdcd843315a0c9a5d8fb80c878", null ],
+    [ "unk_48", "effects_8h.html#a0c5d58e3040b2d0e1d89bf1cb2021f04", null ],
+    [ "unk_4C", "effects_8h.html#a08d31e6b32e102f0dfe532f4325c59e7", null ],
+    [ "unk_50", "effects_8h.html#aaebee92896b631c96fd371f81bae5454", null ],
+    [ "unk_53", "effects_8h.html#ad239b275241b019027373f8ddf77de99", null ],
+    [ "unk_56", "effects_8h.html#a08a2332a6af9bb278b903cefd8f5b287", null ]
+];

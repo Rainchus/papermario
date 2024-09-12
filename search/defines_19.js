@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['y_5fpickup_5fitem_5f1_0',['Y_PICKUP_ITEM_1',['../item__entity_8c.html#ad0f70d4c839fc2eeacfb04889b0b6f33',1,'item_entity.c']]],
+  ['y_5fpickup_5fitem_5f2_1',['Y_PICKUP_ITEM_2',['../item__entity_8c.html#ad66cf28f00d64fbfc0ba4cbfe9e74616',1,'item_entity.c']]],
+  ['y_5fpickup_5fthrew_2',['Y_PICKUP_THREW',['../item__entity_8c.html#a9247576f693e76697f647198e7393476',1,'item_entity.c']]],
+  ['y_5fvar_3',['Y_VAR',['../chapter__change_8c.html#a3a805e3bfaa660f85f6086bffda20505',1,'chapter_change.c']]],
+  ['y_5fvar1_4',['Y_VAR1',['../btl__states__menus_8c.html#a417a0e7e0a9e3b6524ce3c9bf280e5f2',1,'btl_states_menus.c']]],
+  ['y_5fvar2_5',['Y_VAR2',['../btl__states__menus_8c.html#a6a7a94a50fe8a3ba5f93ac73f17b002c',1,'btl_states_menus.c']]],
+  ['yakkey_5fanims_6',['YAKKEY_ANIMS',['../Yakkey_8h.html#aa742d368f20ef2ddf6e17b3c8d576004',1,'Yakkey.h']]],
+  ['yellow_5favoid_5fshy_5fguy_5fanims_7',['YELLOW_AVOID_SHY_GUY_ANIMS',['../ShyGuy_8h.html#a8196076931b30f898b505a1f1abdbca2',1,'ShyGuy.h']]],
+  ['yellow_5fkoopa_5fbros_5fanims_8',['YELLOW_KOOPA_BROS_ANIMS',['../KoopaBros_8h.html#a51e90f88ecff90f65ad5216f2585546e',1,'KoopaBros.h']]],
+  ['yellow_5fshy_5fguy_5fanims_9',['YELLOW_SHY_GUY_ANIMS',['../ShyGuy_8h.html#a62f8d78ec3defcbe45eef7a18ed21e2f',1,'ShyGuy.h']]],
+  ['yh_5fbase_10',['YH_BASE',['../state__title__screen_8c.html#a393fa66d965008dc582a9aa14ecb6d99',1,'state_title_screen.c']]],
+  ['yl_5fbase_11',['YL_BASE',['../state__title__screen_8c.html#a0b33cf94126c8b0b115dd92eae189b53',1,'state_title_screen.c']]],
+  ['yoshi_5fblue_5fanims_12',['YOSHI_BLUE_ANIMS',['../Yoshi_8h.html#a8212114e46df8d4cda8ec9827d01a19c',1,'Yoshi.h']]],
+  ['yoshi_5fcouncillor_5fanims_13',['YOSHI_COUNCILLOR_ANIMS',['../Yoshi_8h.html#a1b31dadf6cc4442d903db9618e9b563c',1,'Yoshi.h']]],
+  ['yoshi_5fgreen_5fanims_14',['YOSHI_GREEN_ANIMS',['../Yoshi_8h.html#aa2f20135919980945e939b15348c0c2d',1,'Yoshi.h']]],
+  ['yoshi_5fkid_5fblue_5fanims_15',['YOSHI_KID_BLUE_ANIMS',['../YoshiKid_8h.html#a74392d5eb20804413a769c377f8df893',1,'YoshiKid.h']]],
+  ['yoshi_5fkid_5fgreen_5fanims_16',['YOSHI_KID_GREEN_ANIMS',['../YoshiKid_8h.html#ab456d7148a9b432c0e1ca5b0e1415c1c',1,'YoshiKid.h']]],
+  ['yoshi_5fkid_5fpurple_5fanims_17',['YOSHI_KID_PURPLE_ANIMS',['../YoshiKid_8h.html#a556581968a5814e15e7f36491640cb5d',1,'YoshiKid.h']]],
+  ['yoshi_5fkid_5fred_5fanims_18',['YOSHI_KID_RED_ANIMS',['../YoshiKid_8h.html#a7c285db8de9ef2e5b3a2b4d9dc0f270a',1,'YoshiKid.h']]],
+  ['yoshi_5fkid_5fyellow_5fanims_19',['YOSHI_KID_YELLOW_ANIMS',['../YoshiKid_8h.html#a41741d5e0ec65d6f2327d580c61304db',1,'YoshiKid.h']]],
+  ['yoshi_5fleader_5fanims_20',['YOSHI_LEADER_ANIMS',['../Yoshi_8h.html#a82a319e6b27d598b3b31d63c0590efc1',1,'Yoshi.h']]],
+  ['yoshi_5fpurple_5fanims_21',['YOSHI_PURPLE_ANIMS',['../Yoshi_8h.html#ac84e80b74fd7bc805dfb2552678f0041',1,'Yoshi.h']]],
+  ['yoshi_5fred_5fanims_22',['YOSHI_RED_ANIMS',['../Yoshi_8h.html#a1f01a4f1558268a7d638e33fd7f1ed18',1,'Yoshi.h']]],
+  ['yoshi_5fyellow_5fanims_23',['YOSHI_YELLOW_ANIMS',['../Yoshi_8h.html#ab50c0d9ad5508131ec31e97fba027ed4',1,'Yoshi.h']]]
+];

@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['kalmar_5fanims_0',['KALMAR_ANIMS',['../StarSpirit_8h.html#ac2a04c502625f6cafc8389e3a8cadf78',1,'StarSpirit.h']]],
+  ['kammy_5fanims_1',['KAMMY_ANIMS',['../Kammy_8h.html#a281131ea80140ac13531f46ae22b1f05',1,'Kammy.h']]],
+  ['kammy_5fnpc_2',['KAMMY_NPC',['../world_2area__kmr_2kmr__02_2npc_8c.html#aaa458864058f85493842cb268b679f1e',1,'KAMMY_NPC:&#160;npc.c'],['../world_2area__kmr_2kmr__11_2npc_8c.html#aaa458864058f85493842cb268b679f1e',1,'KAMMY_NPC:&#160;npc.c'],['../area__omo_2omo__04_2scenes_8c.html#aaa458864058f85493842cb268b679f1e',1,'KAMMY_NPC:&#160;scenes.c'],['../area__omo_2omo__07_2scenes_8c.html#aaa458864058f85493842cb268b679f1e',1,'KAMMY_NPC:&#160;scenes.c'],['../area__omo_2omo__09_2scenes_8c.html#aaa458864058f85493842cb268b679f1e',1,'KAMMY_NPC:&#160;scenes.c'],['../GetKammyBroomEmitterPos_8inc_8c.html#aaa458864058f85493842cb268b679f1e',1,'KAMMY_NPC:&#160;GetKammyBroomEmitterPos.inc.c']]],
+  ['kent_5fc_5fkoopa_5fanims_3',['KENT_C_KOOPA_ANIMS',['../KentCKoopa_8h.html#aa1011246e08237d9603c207102cf196e',1,'KentCKoopa.h']]],
+  ['killthread_4',['KillThread',['../script__api_2macros_8h.html#a7d1e812b2919c6e8c742282d1f177d12',1,'macros.h']]],
+  ['klevar_5fanims_5',['KLEVAR_ANIMS',['../StarSpirit_8h.html#a9c6c0cdcb9d6e6418e75c06d0cb4cb75',1,'StarSpirit.h']]],
+  ['knock_5fdown_5fmap_5fvar_6',['KNOCK_DOWN_MAP_VAR',['../peach__free_8c.html#af5615a4af2a4eb80ce029887fffdc3ee',1,'KNOCK_DOWN_MAP_VAR:&#160;peach_free.c'],['../world_2area__mac_2mac__01_2npc_8c.html#af5615a4af2a4eb80ce029887fffdc3ee',1,'KNOCK_DOWN_MAP_VAR:&#160;npc.c'],['../cabinets_8c.html#af5615a4af2a4eb80ce029887fffdc3ee',1,'KNOCK_DOWN_MAP_VAR:&#160;cabinets.c']]],
+  ['kolorado_5fanims_7',['KOLORADO_ANIMS',['../Kolorado_8h.html#a3f1539fdc618c88e8ca1e045a2c38603',1,'Kolorado.h']]],
+  ['kolorado_5fwife_5fanims_8',['KOLORADO_WIFE_ANIMS',['../KoloradoWife_8h.html#a5f83f8c3dcf20686cd0b4f89056c35c3',1,'KoloradoWife.h']]],
+  ['koopa_5fanims_9',['KOOPA_ANIMS',['../Koopa_8h.html#aedcef166e404a3df3bbdb6f915e73c0b',1,'Koopa.h']]],
+  ['koopa_5fkoot_5fanims_10',['KOOPA_KOOT_ANIMS',['../KoopaKoot_8h.html#a2698a3ec546de1dbd70479344b1ce704',1,'KoopaKoot.h']]],
+  ['koopa_5ftroopa_5fanims_11',['KOOPA_TROOPA_ANIMS',['../KoopaTroopa_8h.html#a4e23e699d44f42d6555df60c25d411d8',1,'KoopaTroopa.h']]],
+  ['koopa_5ftroopa_5fnok_5fdrops_12',['KOOPA_TROOPA_NOK_DROPS',['../KoopaTroopa_8h.html#aaefe318ea8a0bb2935e9c5c69987453e',1,'KoopaTroopa.h']]],
+  ['koopa_5ftroopa_5ftrd_5fdrops_13',['KOOPA_TROOPA_TRD_DROPS',['../KoopaTroopa_8h.html#ab275ceaa2485ff5fbfb4b84d927369da',1,'KoopaTroopa.h']]],
+  ['koopa_5fwithout_5fshell_5fanims_14',['KOOPA_WITHOUT_SHELL_ANIMS',['../KoopaWithoutShell_8h.html#a69ae308322cbe3b1a1125e7448efedab',1,'KoopaWithoutShell.h']]],
+  ['koopatrol_5fanims_15',['KOOPATROL_ANIMS',['../Koopatrol_8h.html#a04f255235379d23609322cde5b3adf0c',1,'Koopatrol.h']]],
+  ['koopatrol_5fdrops_16',['KOOPATROL_DROPS',['../Koopatrol_8h.html#a36f4882ba10ca9c90749e77444cb8750',1,'Koopatrol.h']]],
+  ['kooper_5fanims_17',['KOOPER_ANIMS',['../Kooper_8h.html#a68e0b8c2c76ee3568d12df82749628f0',1,'Kooper.h']]]
+];

@@ -1,0 +1,27 @@
+var common__structs_8h_unionEntityData =
+[
+    [ "any", "common__structs_8h.html#a4977bb01770343455622c436319bd29c", null ],
+    [ "arrowSign", "common__structs_8h.html#abeb3100aea5956144d7e6ef6a6080dd7", null ],
+    [ "block", "common__structs_8h.html#a88fbea8ee650c95e6c9cc0a6876d7d49", null ],
+    [ "bluePipe", "common__structs_8h.html#afa8150e6d42bfa3d7f591f2b66c67c48", null ],
+    [ "boardedFloor", "common__structs_8h.html#a2cd1ddc29465636fc03d8c6092297944", null ],
+    [ "bombableRock", "common__structs_8h.html#a3bb1ad16832493e097656d245e006d5f", null ],
+    [ "chest", "common__structs_8h.html#ad8170e0d527f2c643cb90768a0d07b57", null ],
+    [ "crate", "common__structs_8h.html#a0e036ebeeb5b1b17e057c1ca04fbdbf4", null ],
+    [ "cymbalPlant", "common__structs_8h.html#a2b427ac10a0e105121fbb306c30546a7", null ],
+    [ "heartBlockContent", "common__structs_8h.html#a944eba06ef880abcd5c4e2c8af23cde1", null ],
+    [ "hiddenPanel", "common__structs_8h.html#a8a6b28eae58e6a738deba6e6451d9fbe", null ],
+    [ "munchlesia", "common__structs_8h.html#aed6fa4d2521973802afa358a2eb73fb8", null ],
+    [ "padlock", "common__structs_8h.html#a064d62e523943649cb7da2b1c64e9c2f", null ],
+    [ "pinkFlower", "common__structs_8h.html#ad15e5e3da9305eead7c93b28cb236de4", null ],
+    [ "saveBlock", "common__structs_8h.html#a7fcbd21169d1970931cca61077128994", null ],
+    [ "shatteringBlock", "common__structs_8h.html#aeffaa1fd054988026bfc4f51467b4c97", null ],
+    [ "signPost", "common__structs_8h.html#a960d49acef09ca3347528167a41bc5ff", null ],
+    [ "simpleSpring", "common__structs_8h.html#aedbd6a86d51fa78f684021026722258f", null ],
+    [ "spinningFlower", "common__structs_8h.html#aa239b6bd63becb5f4ee51e05d04c9b3c", null ],
+    [ "starBoxLauncher", "common__structs_8h.html#a0af6ad33293ccd099d4a0f4918ec2bec", null ],
+    [ "superBlockContent", "common__structs_8h.html#a7e0834e046fe9fe21d0846b036c6cb5e", null ],
+    [ "swtch", "common__structs_8h.html#a48d2c3b1380da340cefed3a472d03ce5", null ],
+    [ "trumpetPlant", "common__structs_8h.html#aaf097d4745d7c9cb0e97e2e47785a01c", null ],
+    [ "tweester", "common__structs_8h.html#ac79534c1255f67c8dc3f89011938fc20", null ]
+];

@@ -1,0 +1,28 @@
+var effects_8h_structStarSpiritData =
+[
+    [ "unk_00", "effects_8h.html#a74d6e47480d5af333b6bf05006e5acf8", null ],
+    [ "unk_04", "effects_8h.html#aeb53666ca59f6f9f6b2222fa9f5ec3f1", null ],
+    [ "unk_08", "effects_8h.html#a8a14a223e56f62231891a723ec8da179", null ],
+    [ "unk_0C", "effects_8h.html#a03e8907b1ae8e6a286df2ca5487e8ff2", null ],
+    [ "unk_10", "effects_8h.html#a74a7fa187dcc5d7c4726bee08303f509", null ],
+    [ "unk_14", "effects_8h.html#aebf5d62868fa7bbb5b36a1d38e7509f7", null ],
+    [ "unk_18", "effects_8h.html#a285b3168e8a14f3f0bffc3e21845368b", null ],
+    [ "unk_1C", "effects_8h.html#a5908d07e5f520b86766146a563fa93af", null ],
+    [ "unk_20", "effects_8h.html#a659ca9a3822962eb30f1655a0494a7f7", null ],
+    [ "unk_24", "effects_8h.html#a738767e64d5031e98e0b8ef7f647b35b", null ],
+    [ "unk_28", "effects_8h.html#aede326162691d92cc896fc57de20c11e", null ],
+    [ "unk_2C", "effects_8h.html#a8989ea7644a97ae1501237338e36e103", null ],
+    [ "unk_30", "effects_8h.html#a28cb2b10a1615aa035f78648b81dc978", null ],
+    [ "unk_34", "effects_8h.html#a0bd18f90ee8b333328e4802d339a9309", null ],
+    [ "unk_38", "effects_8h.html#a8653f468c995aa693b0aca3a648aac17", null ],
+    [ "unk_3C", "effects_8h.html#a0f17218ee5ec4193d21862630e7b8a84", null ],
+    [ "unk_40", "effects_8h.html#a4e92a265f06e10f8513053be4d0e3417", null ],
+    [ "unk_44", "effects_8h.html#af8d2516b803e9788e326ddd7e9771cf7", null ],
+    [ "unk_46", "effects_8h.html#ac3910729c151f14d552f32069cb4cb91", null ],
+    [ "unk_48", "effects_8h.html#acb268d64fd07ad7f7f00f4f5528770ca", null ],
+    [ "unk_4A", "effects_8h.html#a0c7154e641245ee1672b4d8cd72d90fe", null ],
+    [ "unk_4C", "effects_8h.html#aca2a5d515884a2f9a4ceaad58be11ea7", null ],
+    [ "unk_4E", "effects_8h.html#acb47b379feb748667a1d17756a81edc2", null ],
+    [ "unk_50", "effects_8h.html#aa678b5050c78401e3e27a46ea4484eb8", null ],
+    [ "unk_54", "effects_8h.html#a320f5291738f10f17149cda9adde4740", null ]
+];

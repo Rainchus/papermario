@@ -1,0 +1,26 @@
+var aura_8c =
+[
+    [ "aura_appendGfx", "aura_8c.html#a029c1a5313c1749aa746ea178a4728fa", null ],
+    [ "aura_init", "aura_8c.html#a7f43255a99e02942e5474fbf548b56c6", null ],
+    [ "aura_main", "aura_8c.html#acac141f62ce73135d85a972fc965691c", null ],
+    [ "aura_render", "aura_8c.html#a637ec230c234d3780665d25f9cfd47e4", null ],
+    [ "aura_update", "aura_8c.html#a9aab996466665ebfcb267e6195bdf788", null ],
+    [ "func_E007684C", "aura_8c.html#ab40e700ce34bea669c678436d226fb9b", null ],
+    [ "func_E0076854", "aura_8c.html#a7615b23a5e8d101f2d3ac05bf2774955", null ],
+    [ "D_09002000_379F80", "aura_8c.html#adfed0d99e503581747217f19cdcf5e1b", null ],
+    [ "D_090020E8_37A068", "aura_8c.html#afbd4ab282a7e991c11df821e0145b243", null ],
+    [ "D_090021D0_37A150", "aura_8c.html#a5f619338d5f55904fe676a914c1dfa00", null ],
+    [ "D_090023B0_37A330", "aura_8c.html#a3be6f6c43e90eb742674b10838aa9302", null ],
+    [ "D_090023C8_37A348", "aura_8c.html#aea3b2fa24ae28dc270585f681f700339", null ],
+    [ "D_090023E0_37A360", "aura_8c.html#a176acd76666beac6977260dba4527bd3", null ],
+    [ "D_090023F8_37A378", "aura_8c.html#ab2efeaf89f07dec8240ea016c88fd07c", null ],
+    [ "D_09002410_37A390", "aura_8c.html#af237622dc709ee69cffb4e12852fefa6", null ],
+    [ "D_09002428_37A3A8", "aura_8c.html#a2777827f88572d0dace6124798a0fe04", null ],
+    [ "D_09002440_37A3C0", "aura_8c.html#a1e7d7a707ccc96afc4bb0ff6140322c5", null ],
+    [ "D_09002458_37A3D8", "aura_8c.html#a51d0adcdd469470abb8efde1e9e69f85", null ],
+    [ "D_E0076E90", "aura_8c.html#a9102e8b0c53cc142bfdd08dbb84ee15d", null ],
+    [ "D_E0076EA0", "aura_8c.html#a1301e81a623150e5e87113b1c917e26d", null ],
+    [ "D_E0076EB0", "aura_8c.html#a391b606803430ced9cfe3217d113f3f9", null ],
+    [ "D_E0076EC0", "aura_8c.html#aea356d3f3f8cf3df9677882737363ec1", null ],
+    [ "D_E0076ED0", "aura_8c.html#a41d7f7fc9afce3eeb2ad35a13f52b658", null ]
+];

@@ -1,0 +1,27 @@
+var game__modes_8c =
+[
+    [ "GameModeIncomplete", "structGameModeIncomplete.html", "structGameModeIncomplete" ],
+    [ "get_game_mode", "game__modes_8c.html#a1f7cb16a134dbc2c74aa179165118da0", null ],
+    [ "set_game_mode", "game__modes_8c.html#a8cf6a8be40c95a7aec3095acecfb8379", null ],
+    [ "CurGameMode", "game__modes_8c.html#aa27e81d2b19918148d5ec22270ac675c", null ],
+    [ "D_80077420", "game__modes_8c.html#a09d258f895e27740e4ac5b262dbc4bed", null ],
+    [ "GameModeBattle", "game__modes_8c.html#a8e5eae4caa80012b57e55ecca0565ac0", null ],
+    [ "GameModeChangeMap", "game__modes_8c.html#a7cc4e64be180c6751fedea15f3c107ff", null ],
+    [ "GameModeDemo", "game__modes_8c.html#aa67c50e56116a07b3eac4e8f06897f8c", null ],
+    [ "GameModeEndBattle", "game__modes_8c.html#a88642abd107fd74ca1e39d2df015ac12", null ],
+    [ "GameModeEndFileSelect", "game__modes_8c.html#a42e7b9d3f413da5428b4130e53fbeccc", null ],
+    [ "GameModeEndLanguageSelect", "game__modes_8c.html#a101e748d4d21e1aae394497242efb80a", null ],
+    [ "GameModeEnterDemoWorld", "game__modes_8c.html#a7e53697e13ddef73a6ead3bbf0fbd35a", null ],
+    [ "GameModeEnterWorld", "game__modes_8c.html#a95daefb265ba849e85a2bfd57934b274", null ],
+    [ "GameModeFileSelect", "game__modes_8c.html#ad9f19756af8bd1e482179dd77688c8cf", null ],
+    [ "GameModeGameOver", "game__modes_8c.html#ac248d342652f4e92873080e798a394d6", null ],
+    [ "GameModeIntro", "game__modes_8c.html#a1bb70ccf1e617ecd2942ddac546ed749", null ],
+    [ "GameModeLanguageSelect", "game__modes_8c.html#ad67a59c79df9abd303575c8625d228c0", null ],
+    [ "GameModeLogos", "game__modes_8c.html#a5c0468e5730902043e5c259888294aa6", null ],
+    [ "gameModeMap", "game__modes_8c.html#a79f4c7de24706a1b7080f8c59eeaf209", null ],
+    [ "GameModePause", "game__modes_8c.html#a807e9f0eabaaf98b6cf00d31b914d7e1", null ],
+    [ "GameModeStartup", "game__modes_8c.html#a9427c494e3312c4db54d512f0eda581a", null ],
+    [ "GameModeTitleScreen", "game__modes_8c.html#ae0eddcbc8f7e4b0bd44d33fd0f0d536c", null ],
+    [ "GameModeUnpause", "game__modes_8c.html#ad531b83aa273a3bc4433f691197a7aef", null ],
+    [ "GameModeWorld", "game__modes_8c.html#ad686480805fd6710ef0e0e3c543a6065", null ]
+];

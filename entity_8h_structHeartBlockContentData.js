@@ -1,0 +1,25 @@
+var entity_8h_structHeartBlockContentData =
+[
+    [ "bouncePhase", "entity_8h.html#a700aea56d1d3e0516cf075e887e8d487", null ],
+    [ "heartbeatTimer", "entity_8h.html#a30c514f5757d4e4261e6a8c7e862deb8", null ],
+    [ "parentEntityIndex", "entity_8h.html#a7b6d1903a931a13b77d511b55807e9cd", null ],
+    [ "riseVel", "entity_8h.html#ac75216fd3454ae9b57c99ffdddc33a70", null ],
+    [ "rotRate", "entity_8h.html#a425ab02b581fc757f5404a1e64a61279", null ],
+    [ "sparkleEffectType", "entity_8h.html#ad578f6d589a86b9ebc25bd4030e28473", null ],
+    [ "sparkleTimer", "entity_8h.html#af05b345e5b51fa86d74db456d59c4ad0", null ],
+    [ "sparkleTrailAngle", "entity_8h.html#ad9f8e1e2cb0914949c5921945bcce300", null ],
+    [ "sparkleTrailPosY", "entity_8h.html#a71c20845d78bdc42f3ce0311111c98d2", null ],
+    [ "sparkleTrailRadius", "entity_8h.html#a1cf3975e28a7d1bcfb5a12f657f6458f", null ],
+    [ "sparkleTrailTimer", "entity_8h.html#a0bdfac74a51335278846b0a57ccadac5", null ],
+    [ "state", "entity_8h.html#a40da599e59249e878c33570932657f8e", null ],
+    [ "unk_09", "entity_8h.html#aba16af0dd5f3f50b32021bd4f5285d21", null ],
+    [ "unk_0B", "entity_8h.html#a448d6b2b80867d655a950492eecb39cc", null ],
+    [ "unk_0C", "entity_8h.html#af73f27b32a55cb220657e4d39d62bfd9", null ],
+    [ "unk_10", "entity_8h.html#a5f3f0e275c677cb8334d2600a82f67e5", null ],
+    [ "unk_26", "entity_8h.html#aac9ad56d0e8c97868968aa837c6e1b2c", null ],
+    [ "unk_50", "entity_8h.html#a5a8cbcc4f0a5c9e47df6dfc5b4fccca8", null ],
+    [ "unk_58", "entity_8h.html#af1835d4d87462470e1bc1484b2717f80", null ],
+    [ "unk_98", "entity_8h.html#a252cba0c21ab8a8b58ad61bf0344936d", null ],
+    [ "yawBuffer", "entity_8h.html#a853ab80ba349122189a83efd52e470a3", null ],
+    [ "yawBufferPos", "entity_8h.html#a276c4ca74ad0af0e92bc9803c6a62c43", null ]
+];

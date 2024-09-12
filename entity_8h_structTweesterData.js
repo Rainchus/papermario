@@ -1,0 +1,26 @@
+var entity_8h_structTweesterData =
+[
+    [ "curPath", "entity_8h.html#afdb06ccbec50639d35f8f4b440a13eff", null ],
+    [ "faceAnimState", "entity_8h.html#ace65a105c5be4a4c6f68862758d16379", null ],
+    [ "faceAnimTexOffset", "entity_8h.html#a382c7622b7a06683d550136c3a3f3d1a", null ],
+    [ "faceAnimTimer", "entity_8h.html#a9c20250b2a25db1d136b434a1c332c6b", null ],
+    [ "frameCounter", "entity_8h.html#ae51be934e7a8e985f94f7fb0c0e8720f", null ],
+    [ "innerWhirlRotY", "entity_8h.html#ab32160f0c1a0dc95d201d301eb0a612f", null ],
+    [ "innerWhirlTexOffsetX", "entity_8h.html#adf41d542d9c680316c885499424ff077", null ],
+    [ "innerWhirlTexOffsetY", "entity_8h.html#a6e06fa3c4a2581474dffb0240b572fae", null ],
+    [ "mtxInnerWhirl", "entity_8h.html#ae357cb0631d13908718861fced174958", null ],
+    [ "mtxOuterWhirl", "entity_8h.html#aa898f4707cbc299246e96a4781e2af2b", null ],
+    [ "outerWhirlRotY", "entity_8h.html#a6de71ab61ab5cc3048bd425f0174d63d", null ],
+    [ "outerWhirlTexOffsetX", "entity_8h.html#ae297fe02978eee80a061ec1f006a2035", null ],
+    [ "outerWhirlTexOffsetY", "entity_8h.html#a106a041e5881142b74aff409772fd308", null ],
+    [ "pathOffset", "entity_8h.html#ac4eb5f4199a064d58786fc4ec5cfe240", null ],
+    [ "paths", "entity_8h.html#a0165e04c0783b1c62690bf1b720f7f30", null ],
+    [ "rotSpeed", "entity_8h.html#a3e1cf9fd69bd7b212cf6701fbe605b7e", null ],
+    [ "targetX", "entity_8h.html#a6022a47d2d508e61ad1cf386f4815b6e", null ],
+    [ "targetY", "entity_8h.html#a61ed453f80c6862f449d4a3df967ceff", null ],
+    [ "targetZ", "entity_8h.html#a94c4b0394ab7eabb52ccfb35e235261c", null ],
+    [ "unk_00", "entity_8h.html#ac2bbe8ca80d00779ca4a5feccd6c8e98", null ],
+    [ "unk_AC", "entity_8h.html#ad731751596ff3f28b9e6be3f0f5e03c3", null ],
+    [ "unk_BC", "entity_8h.html#aa1a16aa6c2a9ea9b7f41061553aee77d", null ],
+    [ "yaw", "entity_8h.html#a0fb2b86f2c4a8da9c46c8c27f3cc918f", null ]
+];

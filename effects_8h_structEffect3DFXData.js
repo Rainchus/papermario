@@ -1,0 +1,27 @@
+var effects_8h_structEffect3DFXData =
+[
+    [ "pos", "effects_8h.html#a0ad7cfd15655dacc6b917520c0df9410", null ],
+    [ "unk_00", "effects_8h.html#a16252fad181832c6dd04812b553dfe36", null ],
+    [ "unk_04", "effects_8h.html#a0c9a351da397a99e6755543f05a48997", null ],
+    [ "unk_14", "effects_8h.html#aaf79a24f99c4664a2d24d28abf723e99", null ],
+    [ "unk_18", "effects_8h.html#aa38fb49cd5cf15745d005b3f6e399a16", null ],
+    [ "unk_1C", "effects_8h.html#a02a72cc493d07e9ea3f2fe1ce047f9f9", null ],
+    [ "unk_20", "effects_8h.html#aac209c89935380a63db4b6ae9f1e2d64", null ],
+    [ "unk_24", "effects_8h.html#a2b9b26eb2787251f7d4d2762a742c208", null ],
+    [ "unk_28", "effects_8h.html#a7c7dc7e583e3f97d295f419075beb6a1", null ],
+    [ "unk_2C", "effects_8h.html#a9a2a2bf1d483e3870a878d8ffc1bb3b8", null ],
+    [ "unk_30", "effects_8h.html#af24959363dc7f06f6ebd2ba8621012c1", null ],
+    [ "unk_34", "effects_8h.html#a51ec4d29870f8ea31a27fdd337362899", null ],
+    [ "unk_38", "effects_8h.html#aaaacdfecd9d64b5020b9f2031242e4db", null ],
+    [ "unk_3C", "effects_8h.html#a86a161ae300add8796cdf64e8d93315d", null ],
+    [ "unk_40", "effects_8h.html#adffc03fe57c2e6adff78b6166e43f138", null ],
+    [ "unk_44", "effects_8h.html#a7f3e0931db10703ce9277c520f4a6258", null ],
+    [ "unk_48", "effects_8h.html#a62abe6781c587d86d037570721132d20", null ],
+    [ "unk_4C", "effects_8h.html#aba6235d7085ec49d39c7122b9898c5de", null ],
+    [ "unk_50", "effects_8h.html#a070e935055848ad8ce60f184cb21b45e", null ],
+    [ "unk_54", "effects_8h.html#ae461cdd47346704d3512b92c0cec03b1", null ],
+    [ "unk_58", "effects_8h.html#a1d30b3405ed9efcd10cbf334b9d8a6cb", null ],
+    [ "unk_5C", "effects_8h.html#a414cae01723716c7aebf75e14e35b7e3", null ],
+    [ "unk_60", "effects_8h.html#ac278c0521b6054bfe85ac1f7d076d1c0", null ],
+    [ "unk_64", "effects_8h.html#a0608e656000365a7b0897e535fe0c730", null ]
+];

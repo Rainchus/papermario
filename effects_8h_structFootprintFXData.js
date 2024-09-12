@@ -1,0 +1,26 @@
+var effects_8h_structFootprintFXData =
+[
+    [ "alive", "effects_8h.html#a6018793cbe8c5bf8be1090e3ebecf65b", null ],
+    [ "alpha", "effects_8h.html#aa6166f1417347d2113a5dac2ac56043c", null ],
+    [ "lifetime", "effects_8h.html#a9f70ecb3bc6ce2afa6943bf4340c5572", null ],
+    [ "mtx", "effects_8h.html#ab5ea192f21e99e156d25021b646d9343", null ],
+    [ "unk_04", "effects_8h.html#a28f0e31d1f93c89fdeb7918c9638afc0", null ],
+    [ "unk_09", "effects_8h.html#a8fed9fce86d011df8a5dcb209c04715f", null ],
+    [ "unk_0C", "effects_8h.html#a668c691445f0eb9c0993d2f2a80b850f", null ],
+    [ "unk_10", "effects_8h.html#a00c4d51a4c97cc8bd41a47d486edca47", null ],
+    [ "unk_14", "effects_8h.html#ac2aa140e70d134bdf861962a8cd1e41c", null ],
+    [ "unk_18", "effects_8h.html#ac9951907b2c25eaf1444e81177c15a5e", null ],
+    [ "unk_1C", "effects_8h.html#a751d90e14118ae1fb41f169ae40f2567", null ],
+    [ "unk_20", "effects_8h.html#a3b4d167e4e6fdefde40f3e550e5fdd35", null ],
+    [ "unk_24", "effects_8h.html#a92acae3a259f5fc5e7f2177d81728326", null ],
+    [ "unk_28", "effects_8h.html#a2393141132c998e5dbfc9b0cb71c7919", null ],
+    [ "unk_2C", "effects_8h.html#a5c395ec3c8c1431c973ce8c09c7daa34", null ],
+    [ "unk_70", "effects_8h.html#a1952524dc0f437e5a68b4213d04e69db", null ],
+    [ "unk_74", "effects_8h.html#ae0ade8a43a7e1e4955d888b83ce5a546", null ],
+    [ "unk_7C", "effects_8h.html#ab592f5d2fc4193e9757a1a4ec17ec14d", null ],
+    [ "unk_80", "effects_8h.html#a350d5174dcc728ee4511ac612003a5f1", null ],
+    [ "unk_84", "effects_8h.html#aa4cdc7aab1db19440deec93e95959f02", null ],
+    [ "unk_88", "effects_8h.html#acab7446f6a8e9e960ac61490eae13f15", null ],
+    [ "unk_90", "effects_8h.html#a72828d28a759404fecd01555c617e227", null ],
+    [ "unk_94", "effects_8h.html#abf672c2fbba5548ac53c31756aa806fe", null ]
+];

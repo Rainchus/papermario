@@ -1,0 +1,27 @@
+var effects_8h_structSnowmanDollFXData =
+[
+    [ "unk_00", "effects_8h.html#aa46444f0ea1a4bbe3a44be3b6126f674", null ],
+    [ "unk_04", "effects_8h.html#a568496e3e20d5867f21c220c4406c7d0", null ],
+    [ "unk_08", "effects_8h.html#a47f6b208587f86eaaba9effe6ce2978b", null ],
+    [ "unk_0C", "effects_8h.html#a1106e299d9ec836c6a603944192126de", null ],
+    [ "unk_10", "effects_8h.html#ae30f25ece40d44cd58bb870e753b3c15", null ],
+    [ "unk_14", "effects_8h.html#a7f23b551751eb9966aefcf5b5c0a4556", null ],
+    [ "unk_18", "effects_8h.html#acdff00b4991bb619c68276a7419c7731", null ],
+    [ "unk_1C", "effects_8h.html#a0d28c22674ab76b2e7eb4155009647fc", null ],
+    [ "unk_20", "effects_8h.html#a2e007ae48e48d01fcf58bbfbe0e6083d", null ],
+    [ "unk_24", "effects_8h.html#a571bf45ddb6d8447a2578e4613f6b684", null ],
+    [ "unk_28", "effects_8h.html#a429ed0062a0a9d0e25ffe11a1e880143", null ],
+    [ "unk_2C", "effects_8h.html#a27b198d42e93248c54f1e6015382b5a8", null ],
+    [ "unk_30", "effects_8h.html#aec9b76480c272365aa154d7f23070678", null ],
+    [ "unk_34", "effects_8h.html#ac4c8813d5bd9c0be988a81a540f07ad8", null ],
+    [ "unk_38", "effects_8h.html#a04798f5db00420cdd59719ff773a6695", null ],
+    [ "unk_3C", "effects_8h.html#abc0a40fb8e589826079678b11a99123d", null ],
+    [ "unk_40", "effects_8h.html#ad9c66b43da92e0b8d6cc000dd0ec2158", null ],
+    [ "unk_44", "effects_8h.html#a4cf460f3442d28023e678a2b0927a2ad", null ],
+    [ "unk_48", "effects_8h.html#afcf1d8dabffddc94b29725e2ea3f18c9", null ],
+    [ "unk_4C", "effects_8h.html#a1e67e3c5dd21596ed9a7393a05009fad", null ],
+    [ "unk_50", "effects_8h.html#a2f79de581ab4a4818cf2c57da60aef9f", null ],
+    [ "unk_54", "effects_8h.html#aa0993f6cbf073126d7bb1fc9dbfccf19", null ],
+    [ "unk_58", "effects_8h.html#a221669c505581e2ce445d81f6eef7fab", null ],
+    [ "unk_5C", "effects_8h.html#a9cc305021d227b143f34bfc6853c4eea", null ]
+];

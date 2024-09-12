@@ -1,0 +1,38 @@
+var partners_8h =
+[
+    [ "WorldPartner", "partners_8h.html#structWorldPartner", [
+      [ "canPlayerOpenMenus", "partners_8h.html#a802646c721de936bbffca343d76cd92c", null ],
+      [ "canUseAbility", "partners_8h.html#a5309d173e6447b7dc281b496280b50c7", null ],
+      [ "dmaDest", "partners_8h.html#a26e42cfd680434f6cf0ab8eef71d5d32", null ],
+      [ "dmaEnd", "partners_8h.html#a17fd383e4a0c18232517a6874ded6e05", null ],
+      [ "dmaStart", "partners_8h.html#a15d9419b858e37a08e01fa1533ae1fb0", null ],
+      [ "idle", "partners_8h.html#a0cb6e072860e00190e8821b3d7ce36ba", null ],
+      [ "init", "partners_8h.html#afb18c5a5921d6d4bf6f9dd4010435a58", null ],
+      [ "isFlying", "partners_8h.html#a05f096e10f875c946a6ee5d65fea9ace", null ],
+      [ "onEnterMap", "partners_8h.html#a92571ab36d1a345a924002a6ef4a7fee", null ],
+      [ "postBattle", "partners_8h.html#a8a8296223e1a8b30086b5627b6e9597d", null ],
+      [ "preBattle", "partners_8h.html#a2e4a97aafb7cfb21fe87ab1077b21207", null ],
+      [ "putAway", "partners_8h.html#aa03fc221e9bfacc6b6ab7cda3a70c394", null ],
+      [ "takeOut", "partners_8h.html#a3a607b586f51a7bf6f807615f0eb9892", null ],
+      [ "testFirstStrike", "partners_8h.html#a53c6e43cfdcbb18c3aa1f5c8533c1199", null ],
+      [ "update", "partners_8h.html#a77b719ea33d43ea73f2ed57a4a0d712c", null ],
+      [ "useAbility", "partners_8h.html#a9e345a867c91fcdac7e0d62f8aa327c7", null ]
+    ] ],
+    [ "PartnerBoolFunc", "partners_8h.html#a9b51f1e314f2e061a98a2319e71088fc", null ],
+    [ "PartnerFunc", "partners_8h.html#a0ba7dc6e96001ebc82b2bc58a478e411", null ],
+    [ "PartnerTesHitFunc", "partners_8h.html#aab43829bd6d3abd1705531cb71cb1417", null ],
+    [ "func_800EA52C", "partners_8h.html#a5583dd380b8d801e9515467a1ef4a713", null ],
+    [ "partner_can_use_ability", "partners_8h.html#a09912c00fc0a1f76d333f429214d1da7", null ],
+    [ "partner_do_player_collision", "partners_8h.html#adf7f36a3fcf04812fe485455add26893", null ],
+    [ "partner_enable_input", "partners_8h.html#a77682efd4f8c70e542fb0ddb337449f9", null ],
+    [ "partner_force_player_flip_done", "partners_8h.html#aa7ba789c3a2127ade6b41c753297ba67", null ],
+    [ "partner_get_out", "partners_8h.html#a7484687dd98d76b5fb5ddc35c13e8e18", null ],
+    [ "partner_init_get_out", "partners_8h.html#aba4260a1983b7eaaaa1b80f4c378820b", null ],
+    [ "partner_init_put_away", "partners_8h.html#a79e88ce97df1780402296cfbf40fe6d2", null ],
+    [ "partner_put_away", "partners_8h.html#a98b0b8793ced21d87a0379b198d59a1d", null ],
+    [ "partner_resume_ability_script", "partners_8h.html#a3bf24c83d6333a3569c63e5a1f495f15", null ],
+    [ "partner_suspend_ability_script", "partners_8h.html#ae75d2db26fd6a42b1f8f405f8fb5bc2a", null ],
+    [ "partner_use_ability", "partners_8h.html#a7a6eca1d815f815011fdd1ef62fd1d9e", null ],
+    [ "partner_walking_follow_player", "partners_8h.html#a1f083772fcce6b9ae3c8903fa6545384", null ],
+    [ "wPartnerNpc", "partners_8h.html#aec62729deab3571e9709c2472bee3dba", null ]
+];

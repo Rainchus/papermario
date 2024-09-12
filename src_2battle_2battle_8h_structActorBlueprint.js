@@ -1,0 +1,25 @@
+var src_2battle_2battle_8h_structActorBlueprint =
+[
+    [ "airLiftChance", "src_2battle_2battle_8h.html#a7dda95aef49feb694e18b9b630fbdebb", null ],
+    [ "coinReward", "src_2battle_2battle_8h.html#a5ac5686c86945c9f32b96fcb7eb3948b", null ],
+    [ "escapeChance", "src_2battle_2battle_8h.html#aa7a641f44c278bd5655c48e1a19d3bd5", null ],
+    [ "flags", "src_2battle_2battle_8h.html#a17899fbf41d21d35dde98896cc4af72e", null ],
+    [ "healthBarOffset", "src_2battle_2battle_8h.html#aac96f372fe2f3e92a51690f859b86fe8", null ],
+    [ "hurricaneChance", "src_2battle_2battle_8h.html#a0e5b2892096df9ea29e35bb41c7e9570", null ],
+    [ "initScript", "src_2battle_2battle_8h.html#a89d7097f345a30ee55e64ab633fb4405", null ],
+    [ "level", "src_2battle_2battle_8h.html#ab6b595259da716cb1a1d9b4ea5276a34", null ],
+    [ "maxHP", "src_2battle_2battle_8h.html#af7a1bf789d514c91ed589350797e8c49", null ],
+    [ "partCount", "src_2battle_2battle_8h.html#a0b74946814b8db802d7bd8f9704ecfbf", null ],
+    [ "partsData", "src_2battle_2battle_8h.html#a5e861af26bd0986f24a3dae8d4479a8f", null ],
+    [ "powerBounceChance", "src_2battle_2battle_8h.html#ad4411a428ac1a81eeab685002611d628", null ],
+    [ "size", "src_2battle_2battle_8h.html#a89c592133438bf15d7de612bd1e40055", null ],
+    [ "spinSmashReq", "src_2battle_2battle_8h.html#a578a17e2b96cc4be8d1bc50a24d9e00a", null ],
+    [ "spookChance", "src_2battle_2battle_8h.html#a9da3ac429362f027ddb1baa0fa32bdee", null ],
+    [ "statusIconOffset", "src_2battle_2battle_8h.html#a241bcf97024a76fc3965793512d9164c", null ],
+    [ "statusTable", "src_2battle_2battle_8h.html#afb45d3ccfbb8b7b210f0e24ef8694517", null ],
+    [ "statusTextOffset", "src_2battle_2battle_8h.html#a47e388da58a890b2e58b9a8d41952b68", null ],
+    [ "type", "src_2battle_2battle_8h.html#a5de0ab3f612b9ef54a59cac941a2df4e", null ],
+    [ "unk_04", "src_2battle_2battle_8h.html#aadc9ca384fd255d5eb99ad754b355cba", null ],
+    [ "unk_0A", "src_2battle_2battle_8h.html#ad55c8728f938b5b8587d7b5426c23e7f", null ],
+    [ "upAndAwayChance", "src_2battle_2battle_8h.html#a70646b702bbbda775ede2bcafe47e1e1", null ]
+];

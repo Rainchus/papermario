@@ -1,0 +1,25 @@
+var effects_8h_structEnergyShockwaveFXData =
+[
+    [ "unk_00", "effects_8h.html#acf924f41e5ccea101702029f833b592e", null ],
+    [ "unk_04", "effects_8h.html#a1a029098164cb3aba16f3900e7c4f47c", null ],
+    [ "unk_08", "effects_8h.html#acda617f5f1ca511446ec8cb74131aa59", null ],
+    [ "unk_0C", "effects_8h.html#a2bf39f677ed46ad11c50fd0279f4fa03", null ],
+    [ "unk_10", "effects_8h.html#ad746331e7ba59d50918a41a86ee3a9ea", null ],
+    [ "unk_1C", "effects_8h.html#ac981549b71ac9cc3c3c4201bc26f4e16", null ],
+    [ "unk_20", "effects_8h.html#ad4c9656ea2d9c1274bdb97321978499b", null ],
+    [ "unk_24", "effects_8h.html#a45fafbe92c42803f2a361e2d77a29188", null ],
+    [ "unk_28", "effects_8h.html#a619469719a926d94127873821bf6a764", null ],
+    [ "unk_2C", "effects_8h.html#ad314d80688e2c894dbca110ccea22bee", null ],
+    [ "unk_30", "effects_8h.html#addd0a996e5cec03f04c62108c4ab3b77", null ],
+    [ "unk_34", "effects_8h.html#a60c8b5b16411cb0ede469772e87371dc", null ],
+    [ "unk_38", "effects_8h.html#ac5600f2c3c50c70a3505be5f1daecb80", null ],
+    [ "unk_3C", "effects_8h.html#a955020e6cd758fad79e06a2f3bf8a83f", null ],
+    [ "unk_40", "effects_8h.html#a4427a06316df48f9e3019096d2c4381d", null ],
+    [ "unk_44", "effects_8h.html#ab9d4fe6d0151b20e77a4bb67c20e86fc", null ],
+    [ "unk_48", "effects_8h.html#ab9eeddd955ddd9b8de98920cd2966400", null ],
+    [ "unk_4C", "effects_8h.html#a3204310ec7699169cb1071b4556c400b", null ],
+    [ "unk_50", "effects_8h.html#a67f7b80a764164e869f274d51ff1f999", null ],
+    [ "unk_51", "effects_8h.html#a8521e2ed61f4cd58890020a759412567", null ],
+    [ "unk_52", "effects_8h.html#a9feac124ee3edec3b27347414c940587", null ],
+    [ "unk_53", "effects_8h.html#ab5767c7044d7b94e70c52ccb0ffbdf54", null ]
+];

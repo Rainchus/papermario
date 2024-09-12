@@ -1,0 +1,25 @@
+var effects_8h_structFireworkRocketFXData =
+[
+    [ "b", "effects_8h.html#a69f3b4b572811061b49ae74ab76585af", null ],
+    [ "g", "effects_8h.html#a7a5a4d37242e9192535507229c1c0169", null ],
+    [ "isExploded", "effects_8h.html#aec4efa7f085750f405e10a2da08d4e04", null ],
+    [ "lifeTime", "effects_8h.html#a362b3db38ab14c951d2869b63a06c09b", null ],
+    [ "maxRadius", "effects_8h.html#a06c03a30e481b0e5f1a9cffe6657606e", null ],
+    [ "minBlurAlpha", "effects_8h.html#a1bceb4e6074ce8ff998cdccf547984dc", null ],
+    [ "pos", "effects_8h.html#a0eacd42546644f69221b283a0534a2d0", null ],
+    [ "r", "effects_8h.html#aa53ccd547bb9eda49112374214639130", null ],
+    [ "radius", "effects_8h.html#af71fb56d72e8be6ab76c1ab8e95b2c08", null ],
+    [ "rocketVelX", "effects_8h.html#a4eec3fd5bb4590f3f2ce9a3ba12d3ec8", null ],
+    [ "rocketVelY", "effects_8h.html#a97d47f55b5e8a89e7d21fe75e747fcb0", null ],
+    [ "rocketVelZ", "effects_8h.html#aa1d0a0e9babd30c1759d8659b8c8e0a1", null ],
+    [ "rocketX", "effects_8h.html#a973e186687e587e7dfd57890f2ad689d", null ],
+    [ "rocketY", "effects_8h.html#a2980a48e0193f190dd34f19c1c081b6d", null ],
+    [ "rocketZ", "effects_8h.html#ad43ecb033ce7971e5537f54d77a952a3", null ],
+    [ "timeLeft", "effects_8h.html#ae2e79a3673d0c0b3ba6517f472156146", null ],
+    [ "unk_34", "effects_8h.html#a3045a26ccaac87af26daea41f037ea94", null ],
+    [ "unk_38", "effects_8h.html#ae72c5de010f5c2033f2b7194896b996f", null ],
+    [ "unk_3C", "effects_8h.html#a6737151bb4199f3df29b95dc6741bd34", null ],
+    [ "unk_40", "effects_8h.html#a8557be92e61da8edbb2ea7cb0b93ddb5", null ],
+    [ "variation", "effects_8h.html#ad5f6ba04d80844bedddd5de26a0391b9", null ],
+    [ "vel", "effects_8h.html#a8a3c965eeca08c550ccf76a021039381", null ]
+];

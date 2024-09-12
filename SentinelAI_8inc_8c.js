@@ -1,0 +1,35 @@
+var SentinelAI_8inc_8c =
+[
+    [ "AI_SENTINEL_FIRST_NPC", "SentinelAI_8inc_8c.html#a69fafe1d201703a78d91dd032a01b582", null ],
+    [ "AI_SENTINEL_LAST_NPC", "SentinelAI_8inc_8c.html#abde501489a22d1e3d271a96f764ae7fd", null ],
+    [ "SENTINEL_AI_DESCEND_RATE", "SentinelAI_8inc_8c.html#a5584f6c19be5425102a447e42c632006", null ],
+    [ "SENTINEL_AI_FLAG_CHASING", "SentinelAI_8inc_8c.html#a47df8da44938442830697473db18cdbc", null ],
+    [ "SENTINEL_AI_FLAG_PLAYING_SOUND", "SentinelAI_8inc_8c.html#a7207d45a34c424f71bbe88b822f60bf3", null ],
+    [ "AiStateSentinel", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99ec", [
+      [ "AI_STATE_SENTINEL_WANDER_INIT", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99ecac7f4c1df1ff85bd925618e20ccea95b7", null ],
+      [ "AI_STATE_SENTINEL_WANDER", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca76b1ba1404165e20939882e3a5fde042", null ],
+      [ "AI_STATE_SENTINEL_LOITER_INIT", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca858b317bc6f9d62f2ec4aea19e455361", null ],
+      [ "AI_STATE_SENTINEL_LOITER", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca10210f9e423a29980317fdbfe778d029", null ],
+      [ "AI_STATE_SENTINEL_CHASE_INIT", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca6b6a735588c23790890222ebc60d062d", null ],
+      [ "AI_STATE_SENTINEL_CHASE", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca76aad9940249b4952718af5265bd7837", null ],
+      [ "AI_STATE_SENTINEL_DESCEND_INIT", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca8966fa925a41989a58ce86e70d086cc1", null ],
+      [ "AI_STATE_SENTINEL_DESCEND", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca20c6d027e5874517063b76862c138929", null ],
+      [ "AI_STATE_SENTINEL_LOSE_PLAYER_INIT", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca5eea5b9cb64f8bc59db29fdb8bd3ec6f", null ],
+      [ "AI_STATE_SENTINEL_LOSE_PLAYER", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99ecab4a7060315a03c3533da93d60faecc38", null ],
+      [ "AI_STATE_SENTINEL_POST_LOSE_PLAYER", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca9290f504b8e71254882a63013d8f80c2", null ],
+      [ "AI_STATE_SENTINEL_GRAB_PLAYER", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca80ada8e3fd057fcd2023ac6d16d8003a", null ],
+      [ "AI_STATE_SENTINEL_RETURN_HOME_INIT", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99eca9edc930fa1878ef67a0b99968eecc999", null ],
+      [ "AI_STATE_SENTINEL_RETURN_HOME", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99ecab05dafa347a13fe59b7a42c30d2b9b98", null ],
+      [ "AI_STATE_SENTINEL_CAUGHT_PLAYER", "SentinelAI_8inc_8c.html#ae5815f5e49fee9e906b755ce09af99ecac21c9c063f8f4ac9d7f6cf12053430e1", null ]
+    ] ],
+    [ "SentinelAI_Chase", "SentinelAI_8inc_8c.html#aa76f21628a711e066834f144b8a6cd9d", null ],
+    [ "SentinelAI_ChaseInit", "SentinelAI_8inc_8c.html#a938636bb995a583885d7e550abb22575", null ],
+    [ "SentinelAI_Descend", "SentinelAI_8inc_8c.html#a210b6a1e762bda5e7447cb59a18bd106", null ],
+    [ "SentinelAI_DescendInit", "SentinelAI_8inc_8c.html#afa38b1eea77de65b05b8bbbe40c6b0fe", null ],
+    [ "SentinelAI_GrabPlayer", "SentinelAI_8inc_8c.html#a0b544e4e54b30c972604afab7c0601d6", null ],
+    [ "SentinelAI_LosePlayer", "SentinelAI_8inc_8c.html#ab83452b124374a858b04739c46488e1e", null ],
+    [ "SentinelAI_LosePlayerInit", "SentinelAI_8inc_8c.html#a8f4ef8312d96540c85a74161e7b345da", null ],
+    [ "SentinelAI_PostLosePlayer", "SentinelAI_8inc_8c.html#a327a570fbb4f4ccf32d05aa6743147ac", null ],
+    [ "SentinelAI_ReturnHome", "SentinelAI_8inc_8c.html#a7d8cee210ca105daf38ff6463824ac08", null ],
+    [ "SentinelAI_ReturnHomeInit", "SentinelAI_8inc_8c.html#adeb62c3dde4aa638001ec8477a9d517d", null ]
+];

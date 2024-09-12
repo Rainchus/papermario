@@ -1,0 +1,26 @@
+var area__hos_2hos__05_2intro_8c_structStoryGraphicData =
+[
+    [ "backImgPosX", "area__hos_2hos__05_2intro_8c.html#ad5ac23e4061964322591d77e2d3fd3b7", null ],
+    [ "backImgPosY", "area__hos_2hos__05_2intro_8c.html#aa79a9d590f0121c7e5e5329a02b2197c", null ],
+    [ "flipOrder", "area__hos_2hos__05_2intro_8c.html#a51779616a0dd80060bfdaa9e1d3e8bc1", null ],
+    [ "frontImgPosX", "area__hos_2hos__05_2intro_8c.html#a262a397a514cb9a8bda42f96460b31be", null ],
+    [ "frontImgPosY", "area__hos_2hos__05_2intro_8c.html#ac5cd3f1e61caca4d7f3f60157e6bd539", null ],
+    [ "imgBack", "area__hos_2hos__05_2intro_8c.html#a6c206832b8ae2e87bf44a3451d1bfb7b", null ],
+    [ "imgBowser", "area__hos_2hos__05_2intro_8c.html#a7cd2e4083df59ed3bdc863c34563ac17", null ],
+    [ "imgFront", "area__hos_2hos__05_2intro_8c.html#a3e084b1f5c5c0bf96fe2aa8f998150bd", null ],
+    [ "imgTape", "area__hos_2hos__05_2intro_8c.html#aaf339adb7949fd52b8de3c29ce8dc142", null ],
+    [ "palBack", "area__hos_2hos__05_2intro_8c.html#afb99fc2480994ac34173c62e02c15bcf", null ],
+    [ "palBowser", "area__hos_2hos__05_2intro_8c.html#aefc494b9640ce2ee57675c27cd12e4aa", null ],
+    [ "palFront", "area__hos_2hos__05_2intro_8c.html#a4e821e0a2c7bd1d778ce2ddf87991fd2", null ],
+    [ "silhouettePosX", "area__hos_2hos__05_2intro_8c.html#ad75fe75d43f03a0367482a2b06834f92", null ],
+    [ "silhouettePosY", "area__hos_2hos__05_2intro_8c.html#a473c140e8e0ef6b9c9a00b6cc1569946", null ],
+    [ "storyPageAlpha", "area__hos_2hos__05_2intro_8c.html#ade304d47fe151883078c91a865d0e8f9", null ],
+    [ "tapeAlpha", "area__hos_2hos__05_2intro_8c.html#a8bbdbe308a4183a36123d3ab09f32aab", null ],
+    [ "tapePosX", "area__hos_2hos__05_2intro_8c.html#ac2db10164a58f3aa698014c390b53eca", null ],
+    [ "tapePosY", "area__hos_2hos__05_2intro_8c.html#a1d2bafdf731bf90d700af8d8591873ac", null ],
+    [ "unk_14", "area__hos_2hos__05_2intro_8c.html#a6bee19ef3052262ff3fc6a2f3a53c201", null ],
+    [ "unk_24", "area__hos_2hos__05_2intro_8c.html#a054164787132953988f8704aed8f7b46", null ],
+    [ "unk_4C", "area__hos_2hos__05_2intro_8c.html#a91c5932703a0961687170e4f5fbaa460", null ],
+    [ "unk_6E", "area__hos_2hos__05_2intro_8c.html#a67104f25ec1bc55c444294c7b5d40db6", null ],
+    [ "workerID", "area__hos_2hos__05_2intro_8c.html#a7fd8e55a892463b805d21c3e0e47c6bd", null ]
+];

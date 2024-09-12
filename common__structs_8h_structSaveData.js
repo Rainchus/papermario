@@ -1,0 +1,27 @@
+var common__structs_8h_structSaveData =
+[
+    [ "areaBytes", "common__structs_8h.html#ac3a9b621af131a5143c37e859b79d800", null ],
+    [ "areaFlags", "common__structs_8h.html#a23e2011ff0a99e8eb470a9657c0a8c74", null ],
+    [ "areaID", "common__structs_8h.html#a32dacb3237754c71b6f14c2acaef13d8", null ],
+    [ "crc1", "common__structs_8h.html#a430ee6f31da02e4743aa9a379106817a", null ],
+    [ "crc2", "common__structs_8h.html#a5ed7cbeea2fde3fc962864083fc984eb", null ],
+    [ "debugEnemyContact", "common__structs_8h.html#a3a12890d6620332276c17fe3f051b7d5", null ],
+    [ "debugUnused1", "common__structs_8h.html#a7ac54ca57b7197db755c8dd63da9db0c", null ],
+    [ "debugUnused2", "common__structs_8h.html#a8a2de5116894009c679d8d5a0ad8f901", null ],
+    [ "enemyDefeatFlags", "common__structs_8h.html#a840e0fd3704d21bc36bea6b7c302e639", null ],
+    [ "entryID", "common__structs_8h.html#a9d17ae998e0126960301f06274087998", null ],
+    [ "globalBytes", "common__structs_8h.html#a7aeca7019e2d63c1cad4ab8b24cdd81d", null ],
+    [ "globalFlags", "common__structs_8h.html#a415ffe51c32f6a30e83a4be78536a7aa", null ],
+    [ "magicString", "common__structs_8h.html#a810482bf58face96ea5da4e0728c17b1", null ],
+    [ "mapID", "common__structs_8h.html#a5ab4bbdecc848e55434c13274458c264", null ],
+    [ "metadata", "common__structs_8h.html#af68dbee2a4f15dba67e2a2b72dfe8427", null ],
+    [ "musicEnabled", "common__structs_8h.html#ace0eadd00b386159678e5aae520a3858", null ],
+    [ "pad", "common__structs_8h.html#abc28336f57a033f74e239585003bacaf", null ],
+    [ "player", "common__structs_8h.html#a702cc0ff43c2629b868979774877ffef", null ],
+    [ "saveCount", "common__structs_8h.html#a87362cf8ecf06d3de387726c688fcdbf", null ],
+    [ "savePos", "common__structs_8h.html#a98c6e2bdb0e5e5ed456495d2b086b4da", null ],
+    [ "saveSlot", "common__structs_8h.html#a85a75a2d59ad143e866e86d406d81787", null ],
+    [ "unk_12E4", "common__structs_8h.html#a1a91dae9ad44a263a54ed4910a6726e9", null ],
+    [ "unk_1304", "common__structs_8h.html#aefb1fa6c008191db6cab5eab807ab728", null ],
+    [ "unk_46E", "common__structs_8h.html#a40d6a4a06257217f8929ecb08270a7e8", null ]
+];

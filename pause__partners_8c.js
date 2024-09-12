@@ -1,0 +1,38 @@
+var pause__partners_8c =
+[
+    [ "PartnerPosition", "pause__partners_8c.html#structPartnerPosition", [
+      [ "index", "pause__partners_8c.html#a6b166944a1dcd3edef51236d0220f901", null ],
+      [ "pos", "pause__partners_8c.html#a9a2f6ef01b5996ecf0e63746dc7b4259", null ]
+    ] ],
+    [ "pause_partners_cleanup", "pause__partners_8c.html#a2e41dd5cfcc178357142457301b32b71", null ],
+    [ "pause_partners_draw_contents", "pause__partners_8c.html#a97514f79ebe6baa42257dbccf3c674d7", null ],
+    [ "pause_partners_draw_movelist", "pause__partners_8c.html#a5a45e727e9415f1469653f811bdb3559", null ],
+    [ "pause_partners_draw_movelist_flower", "pause__partners_8c.html#af7ed2ccd7c23407b7c881260ca13f4ca", null ],
+    [ "pause_partners_draw_movelist_title", "pause__partners_8c.html#a4297d5bbfb463a9353638e5cc274a317", null ],
+    [ "pause_partners_draw_title", "pause__partners_8c.html#a301f2271658e0848dec789b13d865690", null ],
+    [ "pause_partners_handle_input", "pause__partners_8c.html#a6bfb102fddb1a04b174bb5ee9cbaf433", null ],
+    [ "pause_partners_init", "pause__partners_8c.html#a08119f8754caa7649c3f0432661f4c3c", null ],
+    [ "pause_partners_load_portrait", "pause__partners_8c.html#a3eac11983b7360a98ca2b3c3c0bbbac8", null ],
+    [ "pause_partners_update", "pause__partners_8c.html#abb1b0fe9338fbde17b4bb6774cb77b87", null ],
+    [ "D_8024F74C", "pause__partners_8c.html#a9d067c09666accf95acf81aa3c1de41b", null ],
+    [ "gPauseBufferImg1", "pause__partners_8c.html#ae9fe7d37bd847ac63438af46350dbf34", null ],
+    [ "gPauseBufferImg2", "pause__partners_8c.html#aa242aa9c5b8b9003dbc56718acb8f755", null ],
+    [ "gPauseBufferPal1", "pause__partners_8c.html#a931756e9d09c9a98f454af7fdf244ea9", null ],
+    [ "gPauseBufferPal2", "pause__partners_8c.html#ac94b0fb15581c5c5148292637f7b81cb", null ],
+    [ "gPausePanelPartners", "pause__partners_8c.html#abe61f9e47b7d348b87ea1dab5a12651f", null ],
+    [ "gPausePartnersAssetNames", "pause__partners_8c.html#a7da3ae8ad76b50ec14375268c0748c9c", null ],
+    [ "gPausePartnersCurrentPortraitIndex", "pause__partners_8c.html#a14dd07be7c484f81abfa882df4ffead4", null ],
+    [ "gPausePartnersDL", "pause__partners_8c.html#a266de860873ae9bc57750d7fc992c4e9", null ],
+    [ "gPausePartnersGridData", "pause__partners_8c.html#a62de04258ba171332829b4e1267f46b8", null ],
+    [ "gPausePartnersIconScripts", "pause__partners_8c.html#a513d6e1662347668c063b0cd515875af", null ],
+    [ "gPausePartnersImageBuffers", "pause__partners_8c.html#a4bd752375a9b46f51910fe5b3014913f", null ],
+    [ "gPausePartnersMessages", "pause__partners_8c.html#afca9817afa760fd70b17aa5a1f5c1440", null ],
+    [ "gPausePartnersMoveBase", "pause__partners_8c.html#a8e479a320f8d804277678ad28005c83a", null ],
+    [ "gPausePartnersNextPortraitIndex", "pause__partners_8c.html#a00db8b1b69824cc99fab8fb374101acd", null ],
+    [ "gPausePartnersPaletteBuffers", "pause__partners_8c.html#ac8cb4651e0b26072c94b060dc49e0508", null ],
+    [ "gPausePartnersPartnerIDs", "pause__partners_8c.html#a4531fbca4326b593546f44ecc23833db", null ],
+    [ "gPausePartnersPortraitScrollInterpTable", "pause__partners_8c.html#ac33fcbe53c6c74a9e30f44d3cbcb012e", null ],
+    [ "gPausePartnersSpriteAnims", "pause__partners_8c.html#a4662cdfd2cfbb54238b817e323be032c", null ],
+    [ "gPausePartnersViewport", "pause__partners_8c.html#a2bb67093940dc0c9f0f5d05d9cf970dc", null ],
+    [ "gPausePartnersWindowBPs", "pause__partners_8c.html#a3e5d7fd04dcd6aac30ba5b75ee32961b", null ]
+];

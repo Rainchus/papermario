@@ -1,0 +1,28 @@
+var effects_8h_structEffect65FXData =
+[
+    [ "alpha", "effects_8h.html#a1425f158741ce4d90b3047409f4ca41c", null ],
+    [ "envB", "effects_8h.html#aad9ab2874ce9a6a6459f79cc409614b5", null ],
+    [ "envG", "effects_8h.html#a536e5be99808128304977e5baf705540", null ],
+    [ "envR", "effects_8h.html#a66e565a0dacd17046162627be18ad024", null ],
+    [ "lastPointIndex", "effects_8h.html#ae0d7ede6cec30d32c47216dfcae891e8", null ],
+    [ "lifeTime", "effects_8h.html#a823ba736e5d3a9edd8efe9f12014f657", null ],
+    [ "pathJitterX", "effects_8h.html#ad0b5f20e3444f41af2e825ac14b922ad", null ],
+    [ "pathJitterY", "effects_8h.html#a51f8e2433b0b7ea5dd22bbee2819fe5f", null ],
+    [ "pathJitterZ", "effects_8h.html#adf74822593d63971a38c3abc8ba2904d", null ],
+    [ "pathLength", "effects_8h.html#abdbe21eb45a08d88517b9f63c8ce1cac", null ],
+    [ "pathPointEnabled", "effects_8h.html#ac482e46165dccd1a442862d59fc1d4f7", null ],
+    [ "pathTimestamp", "effects_8h.html#ab260285c93ac85cf1fcb8eef01c92b21", null ],
+    [ "pathX", "effects_8h.html#a86ade420edbceb1d1f58f826c0a911c6", null ],
+    [ "pathY", "effects_8h.html#a590d091b922d4aed657b42306a2927f1", null ],
+    [ "pathZ", "effects_8h.html#accc2a300a6e8b637b63dfd8a1762ef9b", null ],
+    [ "pos", "effects_8h.html#ab84125caba3887f806bda7729dad1b15", null ],
+    [ "primB", "effects_8h.html#a044bacc952ce543c6b529c7532aacbab", null ],
+    [ "primG", "effects_8h.html#a73c03d1af4b6fbf13bf52dc2c5959e68", null ],
+    [ "primR", "effects_8h.html#a10426f05875c4403defdd2724bd6c88a", null ],
+    [ "scale", "effects_8h.html#ad7d8ed1c81638dba1359ccc89144a334", null ],
+    [ "timeLeft", "effects_8h.html#ad30851e62040390fc3b0c4ccc5f68044", null ],
+    [ "unk_04", "effects_8h.html#a0599085ed4d6e74426a7d9039ee32501", null ],
+    [ "unk_08", "effects_8h.html#a35bca849bac0fe6dde053925ab6b7b17", null ],
+    [ "unk_0C", "effects_8h.html#a0e8a336b4284dfcbeb05771a3397733e", null ],
+    [ "variation", "effects_8h.html#addd7557b313e2bb6c1bf519dc7918587", null ]
+];
