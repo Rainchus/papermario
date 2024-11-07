@@ -1,5 +1,6 @@
 #include "common.h"
 #include "nu/nusys.h"
+#include "game_modes.h"
 
 // TODO move these somewhere else...
 u8 nuYieldBuf[NU_GFX_YIELD_BUF_SIZE] ALIGNED(16);
@@ -202,4 +203,120 @@ NOP_FIX
 void gfxPreNMI_Callback(void) {
     ResetGameState = RESET_STATE_INIT;
     nuContRmbForceStop();
+}
+
+typedef struct HeapInfo {
+	u32 bytesUsed;
+	u32 capacity;
+} HeapInfo;
+// typedef struct HeapNode {
+//     /* 0x00 */ struct HeapNode* next;
+//     /* 0x04 */ u32 length;
+//     /* 0x08 */ u16 allocated;
+//     /* 0x0A */ u16 entryID;
+//     /* 0x0C */ u32 capacity;
+// } HeapNode; // size = 0x10
+extern HeapNode heap_generalHead;
+void GetHeapUsage(HeapNode* heap, HeapInfo* heapInfo) {
+	u32 bytesAllocated = 0;
+    HeapNode* next;
+    HeapNode* cur = heap;
+    u32 length = 0;
+    u16 allocated;
+    if (heap == NULL) {
+        //debug_printf("Heap pointer passed to function was NULL\n");
+        heapInfo->bytesUsed = -1;
+        heapInfo->capacity = -1;
+        return;
+    }
+	//walk the nodes
+	while (1) {
+        bytesAllocated += sizeof(HeapNode); //account for header
+        next = cur->next;
+        length = cur->length;
+        allocated = cur->allocated;
+        if (allocated) {
+            bytesAllocated += length;
+        }
+        if (next == NULL) {
+            break;
+        }
+        cur = cur->next;
+    }
+    heapInfo->bytesUsed = bytesAllocated;
+    heapInfo->capacity = cur->capacity;
+}
+
+int style = 1;
+
+u8 dx_ascii_char_to_msg(u8 in) {
+    switch (in) {
+        case '\0': return MSG_CHAR_READ_END;
+        case ' ': case '\t': return MSG_CHAR_READ_SPACE;
+        case '\n': return MSG_CHAR_READ_ENDL;
+        default:
+            if (in < 0x20) {
+                return MSG_CHAR_NOTE;
+            }
+            return in - 0x20;
+    }
+}
+
+void ConvertAsciiToMesg(char* outputBuf, char* inputBuf) {
+    s32 i;
+    for (i = 0; inputBuf[i] != 0; i++) {
+        outputBuf[i] = dx_ascii_char_to_msg(inputBuf[i]);
+    }
+    outputBuf[i] = 0xFD;
+}
+
+void goto_map_custom(char* map, s32 entry) {
+    s16 mapID;
+    s16 areaID;
+    s16 mapTransitionEffect = TRANSITION_STANDARD;
+    get_map_IDs_by_name(map, &areaID, &mapID);
+    gGameStatusPtr->areaID = areaID;
+    gGameStatusPtr->mapID = mapID;
+    gGameStatusPtr->entryID = entry;
+    set_map_transition_effect(mapTransitionEffect);
+    set_game_mode(GAME_MODE_CHANGE_MAP);
+}
+
+int displayWorldHeapBar = FALSE;
+
+void PrintWorldHeapUsage(void) {
+    HeapInfo worldHeapInfo;
+    s32 posX = 15;
+    s32 posY = 25;
+    s32 baseWidth = 275;
+    s32 height = 15;
+    f32 heapPercentage;
+    char buf[20];
+    char buf2[20];
+    s32 i;
+    if (gGameStatus.pressedButtons[0] & U_JPAD) {
+        displayWorldHeapBar ^= 1;
+    }
+    if (gGameStatus.pressedButtons[0] & D_JPAD) {
+        goto_map_custom("kmr_03", 1);
+        gPlayerData.hammerLevel = 0;
+        gPlayerData.curPartner = 5;
+        gCurrentSaveFile.globalBytes[0] = STORY_CH0_LEFT_THE_PLAYGROUND;
+    }
+    if (displayWorldHeapBar) { 
+        GetHeapUsage(&heap_generalHead, &worldHeapInfo);
+        heapPercentage = ((f32)worldHeapInfo.bytesUsed / (f32)GENERAL_HEAP_SIZE) * 100;
+        sprintf(buf, "%.2f%%", heapPercentage);
+        ConvertAsciiToMesg(buf2, buf);
+        draw_msg((s32)buf2, 130, 40, 255, 0, 0);
+        bzero(buf, sizeof(buf));
+        bzero(buf2, sizeof(buf2));
+        sprintf(buf, "%d / %d", worldHeapInfo.bytesUsed, GENERAL_HEAP_SIZE);
+        ConvertAsciiToMesg(buf2, buf);
+        draw_msg((s32)buf2, 130, 54, 255, 0, 0);
+        draw_box(0, (WindowStyle)4, posX, posY, 0, baseWidth, height, 255, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, NULL, 0, NULL,
+                    SCREEN_WIDTH, SCREEN_HEIGHT, NULL);
+        draw_box(0, WINDOW_STYLE_20, posX, posY, 0, heapPercentage * 2.75, height, 255, 0, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, NULL, 0, NULL,
+                    SCREEN_WIDTH, SCREEN_HEIGHT, NULL);
+    }
 }

@@ -49,6 +49,7 @@ extern HudScript* SlashHudScript;
 
 void status_bar_start_blinking_coins(void);
 void status_bar_stop_blinking_coins(void);
+void PrintWorldHeapUsage(void);
 
 void clear_player_data(void) {
     PlayerData* playerData = &gPlayerData;
@@ -1138,6 +1139,7 @@ void update_status_bar(void) {
 
     star_power_shimmer_update();
     star_power_shimmer_draw();
+    PrintWorldHeapUsage();
 }
 
 void coin_counter_draw_content(UNK_TYPE arg0, s32 posX, s32 posY) {
