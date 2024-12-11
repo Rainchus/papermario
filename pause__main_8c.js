@@ -35,7 +35,7 @@ var pause__main_8c =
     [ "gPauseCommonWindowsBPs", "pause__main_8c.html#ae7867f9ff922cd82887d5e993390ed45", null ],
     [ "gPauseCurrentDescIconScript", "pause__main_8c.html#a4dcf06404a210b6ffee7272e66aa9047", null ],
     [ "gPauseCurrentDescMsg", "pause__main_8c.html#aadd9f6dab5f0bae5870ee3366a7d1e1c", null ],
-    [ "gPauseCursorIconID", "pause__main_8c.html#a59cfeb48715f910a90d9adb65811e5de", null ],
+    [ "gPauseCursorHID", "pause__main_8c.html#a3a76b3ff6abd1e509f567526d4673dd0", null ],
     [ "gPauseCursorOpacity", "pause__main_8c.html#a126204c4ebfb7c8c7301ba4b78aaee8b", null ],
     [ "gPauseCursorPosX", "pause__main_8c.html#a54367ca7a460b96ef0733624ef40fc17", null ],
     [ "gPauseCursorPosY", "pause__main_8c.html#a7ee20f564f089cb8666dad92335dfd31", null ],

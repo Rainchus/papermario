@@ -2,7 +2,7 @@ var npc_8h_structNpcData =
 [
     [ "aiDetectFlags", "npc_8h.html#a1fe5dc9b9eff1d350fcfc165dcc85650", null ],
     [ "aiFlags", "npc_8h.html#a37d25da3a9246cba3e7d73ac7c82eb91", null ],
-    [ "animations", "npc_8h.html#a8d99485bb7d299131bbfb2b2bfe59c66", null ],
+    [ "animations", "npc_8h.html#a79990187588f2ba2eb542180ce4126ca", null ],
     [ "drops", "npc_8h.html#a22d166f7ff237d7e8ac37762e53350ac", null ],
     [ "extraAnimations", "npc_8h.html#a8dea59efe4cf04dabf64c1efc129ed3e", null ],
     [ "flags", "npc_8h.html#a8f15bf19026681f4b82dafd5a4a0a5cd", null ],

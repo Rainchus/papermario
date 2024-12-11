@@ -2,7 +2,7 @@ var searchData=
 [
   ['walkingdustfxdata_0',['WalkingDustFXData',['../effects_8h.html#structWalkingDustFXData',1,'']]],
   ['waterblockfxdata_1',['WaterBlockFXData',['../effects_8h.html#structWaterBlockFXData',1,'']]],
-  ['waterblockvtxdata_2',['WaterBlockVtxData',['../effects_2water__block_8c.html#structWaterBlockVtxData',1,'']]],
+  ['waterblockvtxdata_2',['WaterBlockVtxData',['../water__block_8c.html#structWaterBlockVtxData',1,'']]],
   ['waterfallfxdata_3',['WaterfallFXData',['../effects_8h.html#structWaterfallFXData',1,'']]],
   ['waterfountainfxdata_4',['WaterFountainFXData',['../effects_8h.html#structWaterFountainFXData',1,'']]],
   ['watersplashfxdata_5',['WaterSplashFXData',['../effects_8h.html#structWaterSplashFXData',1,'']]],
@@ -18,6 +18,5 @@ var searchData=
   ['windyleavesfxdata_15',['WindyLeavesFXData',['../effects_8h.html#structWindyLeavesFXData',1,'']]],
   ['woodencratedata_16',['WoodenCrateData',['../entity_8h.html#structWoodenCrateData',1,'']]],
   ['worker_17',['Worker',['../structWorker.html',1,'']]],
-  ['worldargs_18',['WorldArgs',['../unionWorldArgs.html',1,'']]],
-  ['worldpartner_19',['WorldPartner',['../partners_8h.html#structWorldPartner',1,'']]]
+  ['worldpartner_18',['WorldPartner',['../partners_8h.html#structWorldPartner',1,'']]]
 ];

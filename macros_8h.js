@@ -6,6 +6,7 @@ var macros_8h =
     [ "_RDP_PACK_WHOLE", "macros_8h.html#ad4dc32eab505e00759507f15ed943cf9", null ],
     [ "_RDP_WHOLE", "macros_8h.html#afe72b326d9fef147fcb631ac89e4898d", null ],
     [ "A", "macros_8h.html#acece3419bbd73b13edac844f237547d8", null ],
+    [ "AC_DIFFICULTY_LEN", "macros_8h.html#ada259f2f78134ad73805bba41b9d8a81", null ],
     [ "AI_PATROL_GOAL_INDEX", "macros_8h.html#af4d1f3de3c3e36d16352e233447291b7", null ],
     [ "AI_PROJECTILE_AMMO_COUNT", "macros_8h.html#ac9f2603a55917a18d7fb2a4216d692d8", null ],
     [ "AI_TEMP_STATE", "macros_8h.html#a0f89fd231e647292c94a9ec30bf5ee46", null ],
@@ -253,5 +254,7 @@ var macros_8h =
     [ "VIRTUAL_TO_PHYSICAL", "macros_8h.html#af0a1d439c0dd0d6ceb64be64f1650bbc", null ],
     [ "VLA", "macros_8h.html#a117c0021ff60372f4f399b18f4847f79", null ],
     [ "WORLD_ENTITY_HEAP_SIZE", "macros_8h.html#a60d1341d2d6040d5435a05d7226f04fa", null ],
-    [ "X10", "macros_8h.html#aa1e8954d6d27ba7f9e177299a5d040cb", null ]
+    [ "X10", "macros_8h.html#aa1e8954d6d27ba7f9e177299a5d040cb", null ],
+    [ "Difficulty1D", "macros_8h.html#abcc6f51384e4fd9368229045dae97ab3", null ],
+    [ "Difficulty2D", "macros_8h.html#a84eb4d19ace242c476fb8ebfe298f0d5", null ]
 ];

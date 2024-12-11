@@ -10,7 +10,7 @@ var structMenuPanel =
     [ "numCols", "structMenuPanel.html#a0d8fbb605d6e2b33c94021b508cef2d7", null ],
     [ "numPages", "structMenuPanel.html#ac1f2a109898bd212884e40ed9fef08e3", null ],
     [ "numRows", "structMenuPanel.html#aeccbada0834f1d0cfdd794aea695ab32", null ],
-    [ "page", "structMenuPanel.html#a70751390e6660f3e6d4324dd84dca085", null ],
     [ "row", "structMenuPanel.html#a059d7d5db50e5192e472d7ad3f410a73", null ],
-    [ "selected", "structMenuPanel.html#afdf13b4f6669e8823b1d028933b28006", null ]
+    [ "selected", "structMenuPanel.html#afdf13b4f6669e8823b1d028933b28006", null ],
+    [ "state", "structMenuPanel.html#a871e4f239499de90bda5f9b0eb285982", null ]
 ];

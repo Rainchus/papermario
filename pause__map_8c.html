@@ -145,8 +145,8 @@ Variables</h2></td></tr>
 <tr class="separator:a626d3e2d79fba26d34dff09d70776fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afec0556e8bf5284bf591f81307cbdf29" id="r_afec0556e8bf5284bf591f81307cbdf29"><td class="memItemLeft" align="right" valign="top">u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec0556e8bf5284bf591f81307cbdf29">pause_world_map_png</a> []</td></tr>
 <tr class="separator:afec0556e8bf5284bf591f81307cbdf29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2696135b3cea24c1be515fbd66eed8ec" id="r_a2696135b3cea24c1be515fbd66eed8ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2696135b3cea24c1be515fbd66eed8ec">PauseMapIconScripts</a> [] = { &amp;<a class="el" href="menu__hud__scripts_8c.html#a8013d9a2beab4ff23be05e3ee23bb7b5">HES_MapWalk0</a> }</td></tr>
-<tr class="separator:a2696135b3cea24c1be515fbd66eed8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56638081ecb1ab396a41a20c727fce43" id="r_a56638081ecb1ab396a41a20c727fce43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56638081ecb1ab396a41a20c727fce43">PauseMapHudScripts</a> [] = { &amp;<a class="el" href="menu__hud__scripts_8c.html#a8013d9a2beab4ff23be05e3ee23bb7b5">HES_MapWalk0</a> }</td></tr>
+<tr class="separator:a56638081ecb1ab396a41a20c727fce43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa36e5b0d9825cda1e9710d8de8b242ff" id="r_aa36e5b0d9825cda1e9710d8de8b242ff"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa36e5b0d9825cda1e9710d8de8b242ff">D_8024FA34</a> = -1</td></tr>
 <tr class="separator:aa36e5b0d9825cda1e9710d8de8b242ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d564fedfffc897130e811004f71ce7a" id="r_a5d564fedfffc897130e811004f71ce7a"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d564fedfffc897130e811004f71ce7a">PauseMapArrowWobble</a> [] = { 0, 2, 3, 3, 4, 4, 4, 4, 3, 2, 1, 0 }</td></tr>
@@ -422,7 +422,7 @@ Variables</h2></td></tr>
 <div class="line">    .col = 0,</div>
 <div class="line">    .row = 0,</div>
 <div class="line">    .selected = 0,</div>
-<div class="line">    .page = 0,</div>
+<div class="line">    .state = 0,</div>
 <div class="line">    .numCols = 0,</div>
 <div class="line">    .numRows = 0,</div>
 <div class="line">    .numPages = 0,</div>
@@ -432,10 +432,10 @@ Variables</h2></td></tr>
 <div class="line">    .fpUpdate = &amp;<a class="code hl_function" href="#a56efd763dd8f8a15ef45b2ae85c8a206">pause_map_update</a>,</div>
 <div class="line">    .fpCleanup = &amp;<a class="code hl_function" href="#aaa559d4794e7d9d3bf539957d4e001a7">pause_map_cleanup</a></div>
 <div class="line">}</div>
-<div class="ttc" id="apause__map_8c_html_a56efd763dd8f8a15ef45b2ae85c8a206"><div class="ttname"><a href="#a56efd763dd8f8a15ef45b2ae85c8a206">pause_map_update</a></div><div class="ttdeci">void pause_map_update(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:471</div></div>
-<div class="ttc" id="apause__map_8c_html_a5ecafb4a8e82ce47919af9052b2c3fec"><div class="ttname"><a href="#a5ecafb4a8e82ce47919af9052b2c3fec">pause_map_handle_input</a></div><div class="ttdeci">void pause_map_handle_input(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:379</div></div>
-<div class="ttc" id="apause__map_8c_html_aa9d8683e4e39f1cbd7e756f57c80d919"><div class="ttname"><a href="#aa9d8683e4e39f1cbd7e756f57c80d919">pause_map_init</a></div><div class="ttdeci">void pause_map_init(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:322</div></div>
-<div class="ttc" id="apause__map_8c_html_aaa559d4794e7d9d3bf539957d4e001a7"><div class="ttname"><a href="#aaa559d4794e7d9d3bf539957d4e001a7">pause_map_cleanup</a></div><div class="ttdeci">void pause_map_cleanup(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:501</div></div>
+<div class="ttc" id="apause__map_8c_html_a56efd763dd8f8a15ef45b2ae85c8a206"><div class="ttname"><a href="#a56efd763dd8f8a15ef45b2ae85c8a206">pause_map_update</a></div><div class="ttdeci">void pause_map_update(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:473</div></div>
+<div class="ttc" id="apause__map_8c_html_a5ecafb4a8e82ce47919af9052b2c3fec"><div class="ttname"><a href="#a5ecafb4a8e82ce47919af9052b2c3fec">pause_map_handle_input</a></div><div class="ttdeci">void pause_map_handle_input(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:381</div></div>
+<div class="ttc" id="apause__map_8c_html_aa9d8683e4e39f1cbd7e756f57c80d919"><div class="ttname"><a href="#aa9d8683e4e39f1cbd7e756f57c80d919">pause_map_init</a></div><div class="ttdeci">void pause_map_init(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:324</div></div>
+<div class="ttc" id="apause__map_8c_html_aaa559d4794e7d9d3bf539957d4e001a7"><div class="ttname"><a href="#aaa559d4794e7d9d3bf539957d4e001a7">pause_map_cleanup</a></div><div class="ttdeci">void pause_map_cleanup(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> pause_map.c:503</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -551,14 +551,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2696135b3cea24c1be515fbd66eed8ec" name="a2696135b3cea24c1be515fbd66eed8ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2696135b3cea24c1be515fbd66eed8ec">&#9670;&#160;</a></span>PauseMapIconScripts</h2>
+<a id="a56638081ecb1ab396a41a20c727fce43" name="a56638081ecb1ab396a41a20c727fce43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56638081ecb1ab396a41a20c727fce43">&#9670;&#160;</a></span>PauseMapHudScripts</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* PauseMapIconScripts[] = { &amp;<a class="el" href="menu__hud__scripts_8c.html#a8013d9a2beab4ff23be05e3ee23bb7b5">HES_MapWalk0</a> }</td>
+          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* PauseMapHudScripts[] = { &amp;<a class="el" href="menu__hud__scripts_8c.html#a8013d9a2beab4ff23be05e3ee23bb7b5">HES_MapWalk0</a> }</td>
         </tr>
       </table>
 </div><div class="memdoc">

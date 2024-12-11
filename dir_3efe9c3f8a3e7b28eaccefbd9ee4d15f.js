@@ -1,10 +1,6 @@
 var dir_3efe9c3f8a3e7b28eaccefbd9ee4d15f =
 [
     [ "common", "dir_b83a7a6c2b6bbe1ae744e63c71bcf6f4.html", "dir_b83a7a6c2b6bbe1ae744e63c71bcf6f4" ],
-    [ "07.c", "battle_2action__cmd_207_8c.html", "battle_2action__cmd_207_8c" ],
-    [ "07.h", "07_8h.html", "07_8h" ],
-    [ "0A.c", "battle_2action__cmd_20A_8c.html", "battle_2action__cmd_20A_8c" ],
-    [ "0A.h", "0A_8h.html", "0A_8h" ],
     [ "air_lift.c", "air__lift_8c.html", "air__lift_8c" ],
     [ "air_lift.h", "air__lift_8h.html", "air__lift_8h" ],
     [ "air_raid.c", "air__raid_8c.html", "air__raid_8c" ],
@@ -41,10 +37,14 @@ var dir_3efe9c3f8a3e7b28eaccefbd9ee4d15f =
     [ "squirt.h", "squirt_8h.html", "squirt_8h" ],
     [ "stop_leech.c", "stop__leech_8c.html", "stop__leech_8c" ],
     [ "stop_leech.h", "stop__leech_8h.html", "stop__leech_8h" ],
+    [ "three_chances.c", "three__chances_8c.html", "three__chances_8c" ],
+    [ "three_chances.h", "three__chances_8h.html", "three__chances_8h" ],
     [ "tidal_wave.c", "tidal__wave_8c.html", "tidal__wave_8c" ],
     [ "tidal_wave.h", "tidal__wave_8h.html", "tidal__wave_8h" ],
-    [ "water_block.c", "battle_2action__cmd_2water__block_8c.html", "battle_2action__cmd_2water__block_8c" ],
-    [ "water_block.h", "water__block_8h.html", "water__block_8h" ],
+    [ "unused_flee.c", "unused__flee_8c.html", "unused__flee_8c" ],
+    [ "unused_flee.h", "unused__flee_8h.html", "unused__flee_8h" ],
+    [ "unused_mash_a.c", "unused__mash__a_8c.html", "unused__mash__a_8c" ],
+    [ "unused_mash_a.h", "unused__mash__a_8h.html", "unused__mash__a_8h" ],
     [ "whirlwind.c", "battle_2action__cmd_2whirlwind_8c.html", "battle_2action__cmd_2whirlwind_8c" ],
     [ "whirlwind.h", "whirlwind_8h.html", "whirlwind_8h" ]
 ];

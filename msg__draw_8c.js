@@ -1,6 +1,8 @@
 var msg__draw_8c =
 [
     [ "MSG_EPILOGUE_TEXT_Y", "msg__draw_8c.html#a68ee94429202e4d03f8c13f41a3d3f63", null ],
+    [ "MSG_FADE_IN_DURATION", "msg__draw_8c.html#a6a2efe12f4828910587364b87bdb51d3", null ],
+    [ "MSG_FADE_OUT_DURATION", "msg__draw_8c.html#a65637c2a079d75dd46941a45c9dde476", null ],
     [ "MSG_INSPECT_TEXT_Y", "msg__draw_8c.html#ad956ff53dfeb85be10cfedacc12f1984", null ],
     [ "MSG_NORMAL_ARROW_X", "msg__draw_8c.html#a958ce77a4b22df24cba211476274d2ff", null ],
     [ "MSG_NORMAL_ARROW_Y", "msg__draw_8c.html#ae66d38b1c51b1b86998fe277ecedc293", null ],

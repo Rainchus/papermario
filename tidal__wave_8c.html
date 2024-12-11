@@ -103,6 +103,7 @@ $(function(){initNavTree('tidal__wave_8c.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">tidal_wave.c File Reference</div></div>
@@ -113,6 +114,31 @@ $(function(){initNavTree('tidal__wave_8c.html',''); initResizable(); });
 Macros</h2></td></tr>
 <tr class="memitem:afa7779fe56b160955b535cd6a8aaf8f4" id="r_afa7779fe56b160955b535cd6a8aaf8f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa7779fe56b160955b535cd6a8aaf8f4">NAMESPACE</a>&#160;&#160;&#160;action_command_tidal_wave</td></tr>
 <tr class="separator:afa7779fe56b160955b535cd6a8aaf8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:acedc21792913cbec6ca54f6981c5eddd" id="r_acedc21792913cbec6ca54f6981c5eddd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#acedc21792913cbec6ca54f6981c5eddda14f8edd24d490c313f4c14445d36c50b">HIDX_METER</a> = 0
+, <a class="el" href="#acedc21792913cbec6ca54f6981c5edddab5b788224a4f1c4837903a7dc9cf43bf">HIDX_FIRST_BUTTON</a> = 1
+ }</td></tr>
+<tr class="separator:acedc21792913cbec6ca54f6981c5eddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e06e534e565b0e44afdf96c77951725" id="r_a1e06e534e565b0e44afdf96c77951725"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="#a1e06e534e565b0e44afdf96c77951725abdffe6d0b8e66f6da0c402a1cc8bf2c6">TIDAL_WAVE_STATE_INIT</a> = 0
+, <a class="el" href="#a1e06e534e565b0e44afdf96c77951725afe1eee7a6e31cefcb05494c4910127f6">TIDAL_WAVE_STATE_APPEAR</a> = 1
+, <a class="el" href="#a1e06e534e565b0e44afdf96c77951725a9f63decb0e2535ee24359d91c024dc65">TIDAL_WAVE_STATE_START</a> = 10
+, <a class="el" href="#a1e06e534e565b0e44afdf96c77951725a5fe431c0734670dca347c867149e5451">TIDAL_WAVE_STATE_NEXT_BUTTON</a> = 11
+, <br />
+&#160;&#160;<a class="el" href="#a1e06e534e565b0e44afdf96c77951725a2f69ec2c9519cc816c77e6c1f483b7a3">TIDAL_WAVE_STATE_AWAIT_INPUT</a> = 12
+, <a class="el" href="#a1e06e534e565b0e44afdf96c77951725a5448513011788bc97fff09da43e21d47">TIDAL_WAVE_STATE_WRAPUP</a> = 13
+, <a class="el" href="#a1e06e534e565b0e44afdf96c77951725ae3ee452e0909d36b7150699ed8915f7d">TIDAL_WAVE_STATE_DISPOSE</a> = 14
+<br />
+ }</td></tr>
+<tr class="separator:a1e06e534e565b0e44afdf96c77951725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38129fd1797a5cfd7d746065784a44f" id="r_af38129fd1797a5cfd7d746065784a44f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#af38129fd1797a5cfd7d746065784a44fa971903c0f951ece9f9d992f72088db40">TIDAL_WAVE_INPUT_A</a> = 0
+, <a class="el" href="#af38129fd1797a5cfd7d746065784a44fabd9e068cf905751b8a8957b7212c01e5">TIDAL_WAVE_INPUT_B</a> = 1
+, <a class="el" href="#af38129fd1797a5cfd7d746065784a44faa8a46b5ff18b446ba4ba826900427747">TIDAL_WAVE_INPUT_C_DOWN</a> = 2
+, <a class="el" href="#af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa">TIDAL_WAVE_INPUT_COUNT</a>
+ }</td></tr>
+<tr class="separator:af38129fd1797a5cfd7d746065784a44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -125,12 +151,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a53af629bb22a1b7bbac26f2b9ec2350e" id="r_a53af629bb22a1b7bbac26f2b9ec2350e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53af629bb22a1b7bbac26f2b9ec2350e">D_802A97C0_42CEB0</a> [3] = { &amp;<a class="el" href="action__cmd_8h.html#a9c05fe20b3f5b8864f673d36248bbab8">HES_PressAButton</a>, &amp;<a class="el" href="action__cmd_8h.html#ae923bfa165c7642f3b9bc2e6d28f3b25">HES_PressBButton</a>, &amp;<a class="el" href="action__cmd_8h.html#afe02c5b007f3a997e592c3db92c724a6">HES_PressCDownButton</a> }</td></tr>
-<tr class="separator:a53af629bb22a1b7bbac26f2b9ec2350e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad925c699653db559e1bccdc26a7ebc77" id="r_ad925c699653db559e1bccdc26a7ebc77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad925c699653db559e1bccdc26a7ebc77">D_802A97CC_42CEBC</a> [3] = { &amp;<a class="el" href="action__cmd_8h.html#ab6e65c5fee311e490c7116fc8b55b118">HES_AButtonDown</a>, &amp;<a class="el" href="action__cmd_8h.html#a853505251a0937d92a2f37e5f5ea9d89">HES_BButtonHeld</a>, &amp;<a class="el" href="action__cmd_8h.html#a404f3264faa40113016c723902a1a26e">HES_CDownButtonHeld</a> }</td></tr>
-<tr class="separator:ad925c699653db559e1bccdc26a7ebc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c9f0824ba6986748aa598a95838ac03" id="r_a5c9f0824ba6986748aa598a95838ac03"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c9f0824ba6986748aa598a95838ac03">actionCmdTableTidalWave</a> []</td></tr>
 <tr class="separator:a5c9f0824ba6986748aa598a95838ac03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3537b3df88ca361af24297cd641d10" id="r_a2d3537b3df88ca361af24297cd641d10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d3537b3df88ca361af24297cd641d10">HudButtonsUp</a> [<a class="el" href="#af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa">TIDAL_WAVE_INPUT_COUNT</a>] = { &amp;<a class="el" href="action__cmd_8h.html#a9c05fe20b3f5b8864f673d36248bbab8">HES_PressAButton</a>, &amp;<a class="el" href="action__cmd_8h.html#ae923bfa165c7642f3b9bc2e6d28f3b25">HES_PressBButton</a>, &amp;<a class="el" href="action__cmd_8h.html#afe02c5b007f3a997e592c3db92c724a6">HES_PressCDownButton</a> }</td></tr>
+<tr class="separator:a2d3537b3df88ca361af24297cd641d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7fcda1b7fdc8563ddc3d3936ee6a554" id="r_ab7fcda1b7fdc8563ddc3d3936ee6a554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7fcda1b7fdc8563ddc3d3936ee6a554">HudButtonsDown</a> [<a class="el" href="#af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa">TIDAL_WAVE_INPUT_COUNT</a>] = { &amp;<a class="el" href="action__cmd_8h.html#ab6e65c5fee311e490c7116fc8b55b118">HES_AButtonDown</a>, &amp;<a class="el" href="action__cmd_8h.html#a853505251a0937d92a2f37e5f5ea9d89">HES_BButtonHeld</a>, &amp;<a class="el" href="action__cmd_8h.html#a404f3264faa40113016c723902a1a26e">HES_CDownButtonHeld</a> }</td></tr>
+<tr class="separator:ab7fcda1b7fdc8563ddc3d3936ee6a554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="afa7779fe56b160955b535cd6a8aaf8f4" name="afa7779fe56b160955b535cd6a8aaf8f4"></a>
@@ -144,6 +170,68 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="acedc21792913cbec6ca54f6981c5eddd" name="acedc21792913cbec6ca54f6981c5eddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acedc21792913cbec6ca54f6981c5eddd">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acedc21792913cbec6ca54f6981c5eddda14f8edd24d490c313f4c14445d36c50b" name="acedc21792913cbec6ca54f6981c5eddda14f8edd24d490c313f4c14445d36c50b"></a>HIDX_METER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acedc21792913cbec6ca54f6981c5edddab5b788224a4f1c4837903a7dc9cf43bf" name="acedc21792913cbec6ca54f6981c5edddab5b788224a4f1c4837903a7dc9cf43bf"></a>HIDX_FIRST_BUTTON&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1e06e534e565b0e44afdf96c77951725" name="a1e06e534e565b0e44afdf96c77951725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e06e534e565b0e44afdf96c77951725">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725abdffe6d0b8e66f6da0c402a1cc8bf2c6" name="a1e06e534e565b0e44afdf96c77951725abdffe6d0b8e66f6da0c402a1cc8bf2c6"></a>TIDAL_WAVE_STATE_INIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725afe1eee7a6e31cefcb05494c4910127f6" name="a1e06e534e565b0e44afdf96c77951725afe1eee7a6e31cefcb05494c4910127f6"></a>TIDAL_WAVE_STATE_APPEAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725a9f63decb0e2535ee24359d91c024dc65" name="a1e06e534e565b0e44afdf96c77951725a9f63decb0e2535ee24359d91c024dc65"></a>TIDAL_WAVE_STATE_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725a5fe431c0734670dca347c867149e5451" name="a1e06e534e565b0e44afdf96c77951725a5fe431c0734670dca347c867149e5451"></a>TIDAL_WAVE_STATE_NEXT_BUTTON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725a2f69ec2c9519cc816c77e6c1f483b7a3" name="a1e06e534e565b0e44afdf96c77951725a2f69ec2c9519cc816c77e6c1f483b7a3"></a>TIDAL_WAVE_STATE_AWAIT_INPUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725a5448513011788bc97fff09da43e21d47" name="a1e06e534e565b0e44afdf96c77951725a5448513011788bc97fff09da43e21d47"></a>TIDAL_WAVE_STATE_WRAPUP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e06e534e565b0e44afdf96c77951725ae3ee452e0909d36b7150699ed8915f7d" name="a1e06e534e565b0e44afdf96c77951725ae3ee452e0909d36b7150699ed8915f7d"></a>TIDAL_WAVE_STATE_DISPOSE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="af38129fd1797a5cfd7d746065784a44f" name="af38129fd1797a5cfd7d746065784a44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af38129fd1797a5cfd7d746065784a44f">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af38129fd1797a5cfd7d746065784a44fa971903c0f951ece9f9d992f72088db40" name="af38129fd1797a5cfd7d746065784a44fa971903c0f951ece9f9d992f72088db40"></a>TIDAL_WAVE_INPUT_A&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af38129fd1797a5cfd7d746065784a44fabd9e068cf905751b8a8957b7212c01e5" name="af38129fd1797a5cfd7d746065784a44fabd9e068cf905751b8a8957b7212c01e5"></a>TIDAL_WAVE_INPUT_B&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af38129fd1797a5cfd7d746065784a44faa8a46b5ff18b446ba4ba826900427747" name="af38129fd1797a5cfd7d746065784a44faa8a46b5ff18b446ba4ba826900427747"></a>TIDAL_WAVE_INPUT_C_DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa" name="af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa"></a>TIDAL_WAVE_INPUT_COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -222,14 +310,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a53af629bb22a1b7bbac26f2b9ec2350e" name="a53af629bb22a1b7bbac26f2b9ec2350e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53af629bb22a1b7bbac26f2b9ec2350e">&#9670;&#160;</a></span>D_802A97C0_42CEB0</h2>
+<a id="ab7fcda1b7fdc8563ddc3d3936ee6a554" name="ab7fcda1b7fdc8563ddc3d3936ee6a554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7fcda1b7fdc8563ddc3d3936ee6a554">&#9670;&#160;</a></span>HudButtonsDown</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* D_802A97C0_42CEB0[3] = { &amp;<a class="el" href="action__cmd_8h.html#a9c05fe20b3f5b8864f673d36248bbab8">HES_PressAButton</a>, &amp;<a class="el" href="action__cmd_8h.html#ae923bfa165c7642f3b9bc2e6d28f3b25">HES_PressBButton</a>, &amp;<a class="el" href="action__cmd_8h.html#afe02c5b007f3a997e592c3db92c724a6">HES_PressCDownButton</a> }</td>
+          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* HudButtonsDown[<a class="el" href="#af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa">TIDAL_WAVE_INPUT_COUNT</a>] = { &amp;<a class="el" href="action__cmd_8h.html#ab6e65c5fee311e490c7116fc8b55b118">HES_AButtonDown</a>, &amp;<a class="el" href="action__cmd_8h.html#a853505251a0937d92a2f37e5f5ea9d89">HES_BButtonHeld</a>, &amp;<a class="el" href="action__cmd_8h.html#a404f3264faa40113016c723902a1a26e">HES_CDownButtonHeld</a> }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -238,14 +326,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad925c699653db559e1bccdc26a7ebc77" name="ad925c699653db559e1bccdc26a7ebc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad925c699653db559e1bccdc26a7ebc77">&#9670;&#160;</a></span>D_802A97CC_42CEBC</h2>
+<a id="a2d3537b3df88ca361af24297cd641d10" name="a2d3537b3df88ca361af24297cd641d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d3537b3df88ca361af24297cd641d10">&#9670;&#160;</a></span>HudButtonsUp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* D_802A97CC_42CEBC[3] = { &amp;<a class="el" href="action__cmd_8h.html#ab6e65c5fee311e490c7116fc8b55b118">HES_AButtonDown</a>, &amp;<a class="el" href="action__cmd_8h.html#a853505251a0937d92a2f37e5f5ea9d89">HES_BButtonHeld</a>, &amp;<a class="el" href="action__cmd_8h.html#a404f3264faa40113016c723902a1a26e">HES_CDownButtonHeld</a> }</td>
+          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* HudButtonsUp[<a class="el" href="#af38129fd1797a5cfd7d746065784a44fa26f62a0ee077d79029adc5f1dddf64fa">TIDAL_WAVE_INPUT_COUNT</a>] = { &amp;<a class="el" href="action__cmd_8h.html#a9c05fe20b3f5b8864f673d36248bbab8">HES_PressAButton</a>, &amp;<a class="el" href="action__cmd_8h.html#ae923bfa165c7642f3b9bc2e6d28f3b25">HES_PressBButton</a>, &amp;<a class="el" href="action__cmd_8h.html#afe02c5b007f3a997e592c3db92c724a6">HES_PressCDownButton</a> }</td>
         </tr>
       </table>
 </div><div class="memdoc">

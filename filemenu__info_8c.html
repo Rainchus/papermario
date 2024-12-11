@@ -320,7 +320,7 @@ Variables</h2></td></tr>
 <div class="line">    .col = 0,</div>
 <div class="line">    .row = 0,</div>
 <div class="line">    .selected = 0,</div>
-<div class="line">    .page = 0,</div>
+<div class="line">    .state = 0,</div>
 <div class="line">    .numCols = 1,</div>
 <div class="line">    .numRows = 1,</div>
 <div class="line">    .numPages = 0,</div>
@@ -331,10 +331,10 @@ Variables</h2></td></tr>
 <div class="line">    .fpCleanup = &amp;<a class="code hl_function" href="#a5bb6f598ee7d24dcb516681a95ad4054">filemenu_info_cleanup</a></div>
 <div class="line">}</div>
 <div class="ttc" id="afilemenu__info_8c_html_a02ed785e3f09e9fccb1477c256c497e0"><div class="ttname"><a href="#a02ed785e3f09e9fccb1477c256c497e0">filemenu_info_gridData</a></div><div class="ttdeci">u8 filemenu_info_gridData[]</div><div class="ttdef"><b>Definition</b> filemenu_info.c:22</div></div>
-<div class="ttc" id="afilemenu__info_8c_html_a0997f2c2e8657d10315d1f07f3642c12"><div class="ttname"><a href="#a0997f2c2e8657d10315d1f07f3642c12">filemenu_info_handle_input</a></div><div class="ttdeci">void filemenu_info_handle_input(MenuPanel *menu)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:153</div></div>
-<div class="ttc" id="afilemenu__info_8c_html_a5bb6f598ee7d24dcb516681a95ad4054"><div class="ttname"><a href="#a5bb6f598ee7d24dcb516681a95ad4054">filemenu_info_cleanup</a></div><div class="ttdeci">void filemenu_info_cleanup(MenuPanel *menu)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:190</div></div>
-<div class="ttc" id="afilemenu__info_8c_html_ab44bdeb6c7aecb0e917ef839093cb793"><div class="ttname"><a href="#ab44bdeb6c7aecb0e917ef839093cb793">filemenu_info_update</a></div><div class="ttdeci">void filemenu_info_update(MenuPanel *menu)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:187</div></div>
-<div class="ttc" id="afilemenu__info_8c_html_ad57aa15620a1588d4be48835fd070ce7"><div class="ttname"><a href="#ad57aa15620a1588d4be48835fd070ce7">filemenu_info_init</a></div><div class="ttdeci">void filemenu_info_init(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:142</div></div>
+<div class="ttc" id="afilemenu__info_8c_html_a0997f2c2e8657d10315d1f07f3642c12"><div class="ttname"><a href="#a0997f2c2e8657d10315d1f07f3642c12">filemenu_info_handle_input</a></div><div class="ttdeci">void filemenu_info_handle_input(MenuPanel *menu)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:152</div></div>
+<div class="ttc" id="afilemenu__info_8c_html_a5bb6f598ee7d24dcb516681a95ad4054"><div class="ttname"><a href="#a5bb6f598ee7d24dcb516681a95ad4054">filemenu_info_cleanup</a></div><div class="ttdeci">void filemenu_info_cleanup(MenuPanel *menu)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:189</div></div>
+<div class="ttc" id="afilemenu__info_8c_html_ab44bdeb6c7aecb0e917ef839093cb793"><div class="ttname"><a href="#ab44bdeb6c7aecb0e917ef839093cb793">filemenu_info_update</a></div><div class="ttdeci">void filemenu_info_update(MenuPanel *menu)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:186</div></div>
+<div class="ttc" id="afilemenu__info_8c_html_ad57aa15620a1588d4be48835fd070ce7"><div class="ttname"><a href="#ad57aa15620a1588d4be48835fd070ce7">filemenu_info_init</a></div><div class="ttdeci">void filemenu_info_init(MenuPanel *tab)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:141</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -351,7 +351,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    {</div>
-<div class="line">        .windowID = <a class="code hl_enumvalue" href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76a9709c484c4f0d79afd4aaefdd7f6ac51">WINDOW_ID_FILEMENU_INFO</a>,</div>
+<div class="line">        .windowID = <a class="code hl_enumvalue" href="enums_8h.html#afd488341f0bc83879003639774d73680a1a6defb0ba269cc15ddae4b2190a56cf">WIN_FILES_MESSAGE</a>,</div>
 <div class="line">        .unk_01 = 0,</div>
 <div class="line">        .pos = { .x = 0, .y = 0 },</div>
 <div class="line">        .width = 0,</div>
@@ -365,9 +365,9 @@ Variables</h2></td></tr>
 <div class="line">        .style = { .customStyle = &amp;<a class="code hl_variable" href="filemenu_8h.html#a085520a551c8f1967cdddfa6629ed2e4">filemenu_windowStyles</a>[20] }</div>
 <div class="line">    },</div>
 <div class="line">}</div>
-<div class="ttc" id="aenums_8h_html_a32be6dfcea8057f90deb69cb7c1ecb76a9709c484c4f0d79afd4aaefdd7f6ac51"><div class="ttname"><a href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76a9709c484c4f0d79afd4aaefdd7f6ac51">WINDOW_ID_FILEMENU_INFO</a></div><div class="ttdeci">@ WINDOW_ID_FILEMENU_INFO</div><div class="ttdef"><b>Definition</b> enums.h:5247</div></div>
 <div class="ttc" id="aenums_8h_html_a4758587b652636146b5b1b1a633a7f35a781abd6d65071b7fcdf76b2a88777a1e"><div class="ttname"><a href="enums_8h.html#a4758587b652636146b5b1b1a633a7f35a781abd6d65071b7fcdf76b2a88777a1e">WINDOW_PRIORITY_64</a></div><div class="ttdeci">@ WINDOW_PRIORITY_64</div><div class="ttdef"><b>Definition</b> enums.h:3189</div></div>
-<div class="ttc" id="aenums_8h_html_ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0"><div class="ttname"><a href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0">WINDOW_UPDATE_HIDE</a></div><div class="ttdeci">@ WINDOW_UPDATE_HIDE</div><div class="ttdef"><b>Definition</b> enums.h:5268</div></div>
+<div class="ttc" id="aenums_8h_html_ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0"><div class="ttname"><a href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0">WINDOW_UPDATE_HIDE</a></div><div class="ttdeci">@ WINDOW_UPDATE_HIDE</div><div class="ttdef"><b>Definition</b> enums.h:5312</div></div>
+<div class="ttc" id="aenums_8h_html_afd488341f0bc83879003639774d73680a1a6defb0ba269cc15ddae4b2190a56cf"><div class="ttname"><a href="enums_8h.html#afd488341f0bc83879003639774d73680a1a6defb0ba269cc15ddae4b2190a56cf">WIN_FILES_MESSAGE</a></div><div class="ttdeci">@ WIN_FILES_MESSAGE</div><div class="ttdef"><b>Definition</b> enums.h:5291</div></div>
 <div class="ttc" id="afilemenu_8h_html_a085520a551c8f1967cdddfa6629ed2e4"><div class="ttname"><a href="filemenu_8h.html#a085520a551c8f1967cdddfa6629ed2e4">filemenu_windowStyles</a></div><div class="ttdeci">WindowStyleCustom filemenu_windowStyles[]</div><div class="ttdef"><b>Definition</b> filemenu_styles.c:6</div></div>
 <div class="ttc" id="afilemenu__info_8c_html_a09eac348b0fe6c877ce6ba1e1c9ec025"><div class="ttname"><a href="#a09eac348b0fe6c877ce6ba1e1c9ec025">filemenu_info_draw_message_contents</a></div><div class="ttdeci">void filemenu_info_draw_message_contents(MenuPanel *menu, s32 baseX, s32 baseY, s32 width, s32 height, s32 opacity, s32 darkening)</div><div class="ttdef"><b>Definition</b> filemenu_info.c:59</div></div>
 </div><!-- fragment -->

@@ -35,7 +35,6 @@ var 190B20_8c =
     [ "func_8026324C", "190B20_8c.html#a1b9fad3c9cfc6bbbb50c0afeed2ed0a0", null ],
     [ "func_80263268", "190B20_8c.html#a1dcf5f4aa408e6ab2e219de3dcd2a160", null ],
     [ "func_80263300", "190B20_8c.html#a3ab5d9ea51eba8a10ebe82579131bdd3", null ],
-    [ "func_80263CC4", "190B20_8c.html#a329a80c56fd0abd5803c52afa26b2296", null ],
     [ "func_80266970", "190B20_8c.html#a5402179bc61ae2e19bf336047b4d2c62", null ],
     [ "get_actor_part", "190B20_8c.html#a8713d0e114eb3a36ef81710ccc2b5d75", null ],
     [ "get_defense", "190B20_8c.html#a91c7ea74c8d6170006555712467c282d", null ],
@@ -72,6 +71,7 @@ var 190B20_8c =
     [ "set_part_glow_pal", "190B20_8c.html#a9d137568ec12effaaf3b5ba74a962992", null ],
     [ "set_part_pal_adjustment", "190B20_8c.html#a4fc7301655991d4a0be6cbcc5a074e75", null ],
     [ "set_part_yaw", "190B20_8c.html#abc5c323a1aef3676d03638332a55247e", null ],
+    [ "shake_battle_cam_pitch", "190B20_8c.html#acf7d865e70b39738df82d2b8981b305d", null ],
     [ "show_action_rating", "190B20_8c.html#a9bbd23e9d24385777e1db356635569a0", null ],
     [ "show_actor_health_bar", "190B20_8c.html#ac82722ac44083ef24e64dc6837cd4872", null ],
     [ "show_damage_fx", "190B20_8c.html#a62a02226ea0bb7b35c0ed07c06689ce7", null ],
@@ -90,7 +90,6 @@ var 190B20_8c =
     [ "bPartnerDmaTable", "190B20_8c.html#a65f82bf2deb8f7d6ef15569915233f3a", null ],
     [ "bPlayerActorBlueprint", "190B20_8c.html#a9f1bb4b0c9656647ab9d85df344b7bde", null ],
     [ "bPlayerStatusTable", "190B20_8c.html#ae4aec5716a64a2086c2d4071c9605ffb", null ],
-    [ "D_80293820", "190B20_8c.html#a2ba60b7449bac77e3ff725da6a1d316b", null ],
     [ "D_802938A4", "190B20_8c.html#a1a50c4586407b0525542de72d18b5a84", null ],
     [ "D_802938A8", "190B20_8c.html#a8be7e9fa5e1f2ea81a138cc7490948d9", null ],
     [ "D_80293970", "190B20_8c.html#a2a80f5eefae00406b1c49f4785ac4df8", null ],
@@ -105,6 +104,7 @@ var 190B20_8c =
     [ "EVS_BattleRumble_PlayerLight", "190B20_8c.html#ac31bec4cb2589597375eacfba1ae1a4e", null ],
     [ "EVS_BattleRumble_PlayerMax", "190B20_8c.html#a9cfba16d988f18ba7e3e1c2faccc61e0", null ],
     [ "EVS_BattleRumble_PlayerMin", "190B20_8c.html#a8528a238662626b1255a0deefe828d19", null ],
+    [ "EVS_ShakeBattleCamPitch", "190B20_8c.html#a95a8b2e2dbe975f2af12235ed6863171", null ],
     [ "gDamageCountEffects", "190B20_8c.html#ae27f1d929c7f608f53b7e843b45801ff", null ],
     [ "gDamageCountTimers", "190B20_8c.html#a444e0ccce923a51a0f280c9a36ec2279", null ]
 ];

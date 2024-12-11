@@ -115,6 +115,8 @@ $(function(){initNavTree('state__title__screen_8c.html',''); initResizable(); })
 Data Structures</h2></td></tr>
 <tr class="memitem:structTitleDataStruct" id="r_structTitleDataStruct"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structTitleDataStruct">TitleDataStruct</a></td></tr>
 <tr class="separator:structTitleDataStruct"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structTitleMenuDataStruct" id="r_structTitleMenuDataStruct"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="titlemenu_8c.html#structTitleMenuDataStruct">TitleMenuDataStruct</a></td></tr>
+<tr class="separator:structTitleMenuDataStruct"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -134,6 +136,10 @@ Macros</h2></td></tr>
 <tr class="separator:a989f062cef93ae189f9c3ac66188ef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed4636b7076f475fecfb590a2f73022" id="r_a7ed4636b7076f475fecfb590a2f73022"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ed4636b7076f475fecfb590a2f73022">TITLE_TILE_PIXELS</a>&#160;&#160;&#160;(<a class="el" href="#a9e21b4de91cb50d48bca8482cbd710a0">TITLE_WIDTH</a> * <a class="el" href="#af481d0f6b7d56f7d3b8944b7e4f29371">TITLE_TILE_HEIGHT</a>)</td></tr>
 <tr class="separator:a7ed4636b7076f475fecfb590a2f73022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b23d9dd1792f9b2a64ff03dd4cfc30" id="r_ae8b23d9dd1792f9b2a64ff03dd4cfc30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8b23d9dd1792f9b2a64ff03dd4cfc30">TITLE_LOGO_YOFFSET</a>&#160;&#160;&#160;-100</td></tr>
+<tr class="separator:ae8b23d9dd1792f9b2a64ff03dd4cfc30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a169460671062145b4062ffee58a94cd3" id="r_a169460671062145b4062ffee58a94cd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a169460671062145b4062ffee58a94cd3">TITLE_START_TIME</a>&#160;&#160;&#160;480</td></tr>
+<tr class="separator:a169460671062145b4062ffee58a94cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273a4822cdc05d323eef5cc4e4501010" id="r_a273a4822cdc05d323eef5cc4e4501010"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a273a4822cdc05d323eef5cc4e4501010">COPYRIGHT_WIDTH</a>&#160;&#160;&#160;144</td></tr>
 <tr class="separator:a273a4822cdc05d323eef5cc4e4501010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da0212df0a10cb14995d1220bc4ff6e" id="r_a9da0212df0a10cb14995d1220bc4ff6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da0212df0a10cb14995d1220bc4ff6e">VAR_1</a>&#160;&#160;&#160;32</td></tr>
@@ -167,12 +173,16 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:aeb68d1a8edf71567f2e88e1cdfeca1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af59064efe753e6928fd91539a27503d1" id="r_af59064efe753e6928fd91539a27503d1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#af59064efe753e6928fd91539a27503d1a74983b0aa5add82074b5a433c42cce45">NEXT_STATE_DEMO</a> = 10
-, <a class="el" href="#af59064efe753e6928fd91539a27503d1a4609557998760518263c301a070f10ad">NEXT_STATE_INTRO</a> = 9
-, <a class="el" href="#af59064efe753e6928fd91539a27503d1a82b3107198888e5924ffdb40d56149ca">NEXT_STATE_FILE_SELECT</a> = 5
-, <a class="el" href="#af59064efe753e6928fd91539a27503d1aace1aeea928f7cfafeb5763b6bc0613b">NEXT_STATE_NONE</a> = 0
+<tr class="memitem:a26fcf1e7f9cc14c41c5a63f8be9e5631" id="r_a26fcf1e7f9cc14c41c5a63f8be9e5631"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a26fcf1e7f9cc14c41c5a63f8be9e5631a74983b0aa5add82074b5a433c42cce45">NEXT_STATE_DEMO</a> = 10
+, <a class="el" href="#a26fcf1e7f9cc14c41c5a63f8be9e5631a4609557998760518263c301a070f10ad">NEXT_STATE_INTRO</a> = 9
+, <a class="el" href="#a26fcf1e7f9cc14c41c5a63f8be9e5631a82b3107198888e5924ffdb40d56149ca">NEXT_STATE_FILE_SELECT</a> = 5
+, <a class="el" href="#a26fcf1e7f9cc14c41c5a63f8be9e5631aace1aeea928f7cfafeb5763b6bc0613b">NEXT_STATE_NONE</a> = 0
  }</td></tr>
-<tr class="separator:af59064efe753e6928fd91539a27503d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a26fcf1e7f9cc14c41c5a63f8be9e5631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee062a101c684447379b103fe45d1b7b" id="r_aee062a101c684447379b103fe45d1b7b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee062a101c684447379b103fe45d1b7b">TitleMenuVisibilityStates</a> { <a class="el" href="#aee062a101c684447379b103fe45d1b7baee21735959ca05ea91f3a9ecfe1b4836">TITLEMENU_STATE_FADE_IN</a>
+, <a class="el" href="#aee062a101c684447379b103fe45d1b7ba8c3d9b0f1f01afdcbced0f719ed8f118">TITLEMENU_STATE_FADE_OUT</a>
+ }</td></tr>
+<tr class="separator:aee062a101c684447379b103fe45d1b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -184,8 +194,8 @@ Functions</h2></td></tr>
 <tr class="separator:a5e7985c035157b5870a22f60cf5223ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf06f0fb303a44cf4e33d3bbb80fe521" id="r_abf06f0fb303a44cf4e33d3bbb80fe521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf06f0fb303a44cf4e33d3bbb80fe521">title_screen_draw_logo</a> (f32)</td></tr>
 <tr class="separator:abf06f0fb303a44cf4e33d3bbb80fe521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add07f7b613c3d6ea12fc407703827ca8" id="r_add07f7b613c3d6ea12fc407703827ca8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start</a> (void)</td></tr>
-<tr class="separator:add07f7b613c3d6ea12fc407703827ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9094f20fcbb68cd52c7f942df51a800" id="r_ab9094f20fcbb68cd52c7f942df51a800"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu</a> (void)</td></tr>
+<tr class="separator:ab9094f20fcbb68cd52c7f942df51a800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72fc44a65f4c5446819bf6c994cf7458" id="r_a72fc44a65f4c5446819bf6c994cf7458"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72fc44a65f4c5446819bf6c994cf7458">title_screen_draw_copyright</a> (f32)</td></tr>
 <tr class="separator:a72fc44a65f4c5446819bf6c994cf7458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd60663a15a876b66b8ca6a92517d459" id="r_acd60663a15a876b66b8ca6a92517d459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd60663a15a876b66b8ca6a92517d459">state_init_title_screen</a> (void)</td></tr>
@@ -197,18 +207,18 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0458051469f14a3eddbaef0d9537f2be" id="r_a0458051469f14a3eddbaef0d9537f2be"><td class="memItemLeft" align="right" valign="top">s16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0458051469f14a3eddbaef0d9537f2be">TitleScreenNextState</a> = <a class="el" href="#af59064efe753e6928fd91539a27503d1aace1aeea928f7cfafeb5763b6bc0613b">NEXT_STATE_NONE</a></td></tr>
+<tr class="memitem:a0458051469f14a3eddbaef0d9537f2be" id="r_a0458051469f14a3eddbaef0d9537f2be"><td class="memItemLeft" align="right" valign="top">s16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0458051469f14a3eddbaef0d9537f2be">TitleScreenNextState</a> = <a class="el" href="#a26fcf1e7f9cc14c41c5a63f8be9e5631aace1aeea928f7cfafeb5763b6bc0613b">NEXT_STATE_NONE</a></td></tr>
 <tr class="separator:a0458051469f14a3eddbaef0d9537f2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82eff174d993a50e21defc3d20498540" id="r_a82eff174d993a50e21defc3d20498540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__structs_8h.html#structSaveMetadata">SaveMetadata</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82eff174d993a50e21defc3d20498540">gSaveSlotMetadata</a> [4]</td></tr>
 <tr class="separator:a82eff174d993a50e21defc3d20498540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e4b5b9f8cde14e97b982f88ea921d76" id="r_a3e4b5b9f8cde14e97b982f88ea921d76"><td class="memItemLeft" align="right" valign="top">u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e4b5b9f8cde14e97b982f88ea921d76">gSaveSlotHasData</a> [4] = { TRUE, TRUE, TRUE, TRUE }</td></tr>
 <tr class="separator:a3e4b5b9f8cde14e97b982f88ea921d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a359843e1697fa24f03aedbc43e7c1486" id="r_a359843e1697fa24f03aedbc43e7c1486"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a359843e1697fa24f03aedbc43e7c1486">PressStart_Alpha</a> = 0</td></tr>
-<tr class="separator:a359843e1697fa24f03aedbc43e7c1486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a003173d8110ff66d792793c8cb26e335" id="r_a003173d8110ff66d792793c8cb26e335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__structs_8h.html#a8d2e4e903f7277916e7c1e2f36539d26">b32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a003173d8110ff66d792793c8cb26e335">PressStart_IsVisible</a> = FALSE</td></tr>
-<tr class="separator:a003173d8110ff66d792793c8cb26e335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a299061ad75fce119652b381ddadb8475" id="r_a299061ad75fce119652b381ddadb8475"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a299061ad75fce119652b381ddadb8475">PressStart_BlinkCounter</a> = 0</td></tr>
-<tr class="separator:a299061ad75fce119652b381ddadb8475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e3bc671715e8a92e2d622e2ff4ebaa" id="r_af9e3bc671715e8a92e2d622e2ff4ebaa"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9e3bc671715e8a92e2d622e2ff4ebaa">TitleMenu_Alpha</a> = 0</td></tr>
+<tr class="separator:af9e3bc671715e8a92e2d622e2ff4ebaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1ab61cb02d5f034e7f65ff98cd711e" id="r_a0a1ab61cb02d5f034e7f65ff98cd711e"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a1ab61cb02d5f034e7f65ff98cd711e">TitleMenu_Visibility</a> = <a class="el" href="#aee062a101c684447379b103fe45d1b7baee21735959ca05ea91f3a9ecfe1b4836">TITLEMENU_STATE_FADE_IN</a></td></tr>
+<tr class="separator:a0a1ab61cb02d5f034e7f65ff98cd711e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e4f44383d7aafb3294dd410b2ac14f" id="r_a46e4f44383d7aafb3294dd410b2ac14f"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46e4f44383d7aafb3294dd410b2ac14f">TitleMenu_BlinkCounter</a> = 0</td></tr>
+<tr class="separator:a46e4f44383d7aafb3294dd410b2ac14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e274167b3d5bb183d17530de99c7be" id="r_ab1e274167b3d5bb183d17530de99c7be"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1e274167b3d5bb183d17530de99c7be">PlayIntroNext</a> = FALSE</td></tr>
 <tr class="separator:ab1e274167b3d5bb183d17530de99c7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4720c4ddae5afd8625efd08bb8d4532" id="r_ae4720c4ddae5afd8625efd08bb8d4532"><td class="memItemLeft" align="right" valign="top">Lights1&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4720c4ddae5afd8625efd08bb8d4532">D_80077A38</a> = gdSPDefLights1(255, 255, 255, 0, 0, 0, 0, 0, 0)</td></tr>
@@ -266,6 +276,35 @@ logo</td>
 <a id="a45d2d7b48f76e66100ed09b758c5bf23" name="a45d2d7b48f76e66100ed09b758c5bf23"></a>s32</td>
 <td class="fieldname">
 pressStart</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structTitleMenuDataStruct" id="structTitleMenuDataStruct"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structTitleMenuDataStruct">&#9670;&#160;</a></span>TitleMenuDataStruct</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct TitleMenuDataStruct</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="aa1db6a45193c5de33bc548cc0108cf48" name="aa1db6a45193c5de33bc548cc0108cf48"></a><a class="el" href="common__structs_8h.html#a535c3da3dc78922a0715151910952943">IMG_BIN</a> *</td>
+<td class="fieldname">
+languages</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a96ceba954e004a3d7744a2cade120c5b" name="a96ceba954e004a3d7744a2cade120c5b"></a><a class="el" href="common__structs_8h.html#a535c3da3dc78922a0715151910952943">IMG_BIN</a> *</td>
+<td class="fieldname">
+startGame</td>
 <td class="fielddoc">
 </td></tr>
 </table>
@@ -388,6 +427,22 @@ pressStart</td>
 
 </div>
 </div>
+<a id="ae8b23d9dd1792f9b2a64ff03dd4cfc30" name="ae8b23d9dd1792f9b2a64ff03dd4cfc30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b23d9dd1792f9b2a64ff03dd4cfc30">&#9670;&#160;</a></span>TITLE_LOGO_YOFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TITLE_LOGO_YOFFSET&#160;&#160;&#160;-100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#abf06f0fb303a44cf4e33d3bbb80fe521">title_screen_draw_logo()</a>.</p>
+
+</div>
+</div>
 <a id="a989f062cef93ae189f9c3ac66188ef58" name="a989f062cef93ae189f9c3ac66188ef58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a989f062cef93ae189f9c3ac66188ef58">&#9670;&#160;</a></span>TITLE_NUM_TILES</h2>
 
@@ -433,6 +488,22 @@ pressStart</td>
 </div><div class="memdoc">
 
 <p class="reference">Referenced by <a class="el" href="#abf06f0fb303a44cf4e33d3bbb80fe521">title_screen_draw_logo()</a>.</p>
+
+</div>
+</div>
+<a id="a169460671062145b4062ffee58a94cd3" name="a169460671062145b4062ffee58a94cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a169460671062145b4062ffee58a94cd3">&#9670;&#160;</a></span>TITLE_START_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TITLE_START_TIME&#160;&#160;&#160;480</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#acd60663a15a876b66b8ca6a92517d459">state_init_title_screen()</a>.</p>
 
 </div>
 </div>
@@ -496,7 +567,7 @@ pressStart</td>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>
@@ -512,7 +583,7 @@ pressStart</td>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>
@@ -549,8 +620,8 @@ pressStart</td>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="af59064efe753e6928fd91539a27503d1" name="af59064efe753e6928fd91539a27503d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af59064efe753e6928fd91539a27503d1">&#9670;&#160;</a></span>anonymous enum</h2>
+<a id="a26fcf1e7f9cc14c41c5a63f8be9e5631" name="a26fcf1e7f9cc14c41c5a63f8be9e5631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fcf1e7f9cc14c41c5a63f8be9e5631">&#9670;&#160;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,10 +632,28 @@ pressStart</td>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af59064efe753e6928fd91539a27503d1a74983b0aa5add82074b5a433c42cce45" name="af59064efe753e6928fd91539a27503d1a74983b0aa5add82074b5a433c42cce45"></a>NEXT_STATE_DEMO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af59064efe753e6928fd91539a27503d1a4609557998760518263c301a070f10ad" name="af59064efe753e6928fd91539a27503d1a4609557998760518263c301a070f10ad"></a>NEXT_STATE_INTRO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af59064efe753e6928fd91539a27503d1a82b3107198888e5924ffdb40d56149ca" name="af59064efe753e6928fd91539a27503d1a82b3107198888e5924ffdb40d56149ca"></a>NEXT_STATE_FILE_SELECT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af59064efe753e6928fd91539a27503d1aace1aeea928f7cfafeb5763b6bc0613b" name="af59064efe753e6928fd91539a27503d1aace1aeea928f7cfafeb5763b6bc0613b"></a>NEXT_STATE_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a26fcf1e7f9cc14c41c5a63f8be9e5631a74983b0aa5add82074b5a433c42cce45" name="a26fcf1e7f9cc14c41c5a63f8be9e5631a74983b0aa5add82074b5a433c42cce45"></a>NEXT_STATE_DEMO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a26fcf1e7f9cc14c41c5a63f8be9e5631a4609557998760518263c301a070f10ad" name="a26fcf1e7f9cc14c41c5a63f8be9e5631a4609557998760518263c301a070f10ad"></a>NEXT_STATE_INTRO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a26fcf1e7f9cc14c41c5a63f8be9e5631a82b3107198888e5924ffdb40d56149ca" name="a26fcf1e7f9cc14c41c5a63f8be9e5631a82b3107198888e5924ffdb40d56149ca"></a>NEXT_STATE_FILE_SELECT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a26fcf1e7f9cc14c41c5a63f8be9e5631aace1aeea928f7cfafeb5763b6bc0613b" name="a26fcf1e7f9cc14c41c5a63f8be9e5631aace1aeea928f7cfafeb5763b6bc0613b"></a>NEXT_STATE_NONE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aee062a101c684447379b103fe45d1b7b" name="aee062a101c684447379b103fe45d1b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee062a101c684447379b103fe45d1b7b">&#9670;&#160;</a></span>TitleMenuVisibilityStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aee062a101c684447379b103fe45d1b7b">TitleMenuVisibilityStates</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aee062a101c684447379b103fe45d1b7baee21735959ca05ea91f3a9ecfe1b4836" name="aee062a101c684447379b103fe45d1b7baee21735959ca05ea91f3a9ecfe1b4836"></a>TITLEMENU_STATE_FADE_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aee062a101c684447379b103fe45d1b7ba8c3d9b0f1f01afdcbced0f719ed8f118" name="aee062a101c684447379b103fe45d1b7ba8c3d9b0f1f01afdcbced0f719ed8f118"></a>TITLEMENU_STATE_FADE_OUT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -743,14 +832,14 @@ pressStart</td>
 
 </div>
 </div>
-<a id="add07f7b613c3d6ea12fc407703827ca8" name="add07f7b613c3d6ea12fc407703827ca8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add07f7b613c3d6ea12fc407703827ca8">&#9670;&#160;</a></span>title_screen_draw_press_start()</h2>
+<a id="ab9094f20fcbb68cd52c7f942df51a800" name="ab9094f20fcbb68cd52c7f942df51a800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9094f20fcbb68cd52c7f942df51a800">&#9670;&#160;</a></span>title_screen_draw_menu()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void title_screen_draw_press_start </td>
+          <td class="memname">void title_screen_draw_menu </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -791,7 +880,7 @@ pressStart</td>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="filemenu__main_8c.html#a2015fefb6074d7c10b23abd1ea4dc74b">filemenu_draw_contents_file_info()</a>, <a class="el" href="filemenu__main_8c.html#a814b8254614c9ee345fbfa9bf972196c">filemenu_draw_contents_file_title()</a>, <a class="el" href="functions_8h.html#a22ecac054704343cc1bfd5252466c161">filemenu_init()</a>, <a class="el" href="filemenu_8h.html#a50950908b1dddbad0382105ea7a74a04">filemenu_main_handle_input()</a>, and <a class="el" href="filemenu_8h.html#a4b2bc30913b3480a4ad253648051725b">filemenu_yesno_handle_input()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="filemenu__main_8c.html#a2015fefb6074d7c10b23abd1ea4dc74b">filemenu_draw_contents_file_info()</a>, <a class="el" href="filemenu__main_8c.html#a814b8254614c9ee345fbfa9bf972196c">filemenu_draw_contents_file_title()</a>, <a class="el" href="functions_8h.html#aab8871fb3711c467048758f9d9ac3e44">filemenu_init()</a>, <a class="el" href="filemenu_8h.html#a50950908b1dddbad0382105ea7a74a04">filemenu_main_handle_input()</a>, and <a class="el" href="filemenu_8h.html#a4b2bc30913b3480a4ad253648051725b">filemenu_yesno_handle_input()</a>.</p>
 
 </div>
 </div>
@@ -813,7 +902,7 @@ pressStart</td>
 <div class="line">    { .filename = {  <span class="stringliteral">&quot;ERROR\xf7\xf7\xf7&quot;</span>  } },</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="filemenu__main_8c.html#a2015fefb6074d7c10b23abd1ea4dc74b">filemenu_draw_contents_file_info()</a>, <a class="el" href="filemenu__main_8c.html#a814b8254614c9ee345fbfa9bf972196c">filemenu_draw_contents_file_title()</a>, <a class="el" href="functions_8h.html#a22ecac054704343cc1bfd5252466c161">filemenu_init()</a>, <a class="el" href="filemenu_8h.html#a50950908b1dddbad0382105ea7a74a04">filemenu_main_handle_input()</a>, <a class="el" href="filemenu_8h.html#a4b2bc30913b3480a4ad253648051725b">filemenu_yesno_handle_input()</a>, <a class="el" href="fio_8c.html#a1da89c3ea46ad9b1e4289696b51fe58f">fio_deserialize_state()</a>, and <a class="el" href="fio_8c.html#a4b19fb7f7f2a3fecff6810b3c8c62e40">fio_serialize_state()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="filemenu__main_8c.html#a2015fefb6074d7c10b23abd1ea4dc74b">filemenu_draw_contents_file_info()</a>, <a class="el" href="filemenu__main_8c.html#a814b8254614c9ee345fbfa9bf972196c">filemenu_draw_contents_file_title()</a>, <a class="el" href="functions_8h.html#aab8871fb3711c467048758f9d9ac3e44">filemenu_init()</a>, <a class="el" href="filemenu_8h.html#a50950908b1dddbad0382105ea7a74a04">filemenu_main_handle_input()</a>, <a class="el" href="filemenu_8h.html#a4b2bc30913b3480a4ad253648051725b">filemenu_yesno_handle_input()</a>, <a class="el" href="fio_8c.html#a1da89c3ea46ad9b1e4289696b51fe58f">fio_deserialize_state()</a>, and <a class="el" href="fio_8c.html#a4b19fb7f7f2a3fecff6810b3c8c62e40">fio_serialize_state()</a>.</p>
 
 </div>
 </div>
@@ -833,51 +922,51 @@ pressStart</td>
 
 </div>
 </div>
-<a id="a359843e1697fa24f03aedbc43e7c1486" name="a359843e1697fa24f03aedbc43e7c1486"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a359843e1697fa24f03aedbc43e7c1486">&#9670;&#160;</a></span>PressStart_Alpha</h2>
+<a id="af9e3bc671715e8a92e2d622e2ff4ebaa" name="af9e3bc671715e8a92e2d622e2ff4ebaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e3bc671715e8a92e2d622e2ff4ebaa">&#9670;&#160;</a></span>TitleMenu_Alpha</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 PressStart_Alpha = 0</td>
+          <td class="memname">s32 TitleMenu_Alpha = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="functions_8h.html#a4afb9f33fb2f888868339f0d1440346b">state_drawUI_title_screen()</a>, and <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#a4afb9f33fb2f888868339f0d1440346b">state_drawUI_title_screen()</a>, and <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>
-<a id="a299061ad75fce119652b381ddadb8475" name="a299061ad75fce119652b381ddadb8475"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a299061ad75fce119652b381ddadb8475">&#9670;&#160;</a></span>PressStart_BlinkCounter</h2>
+<a id="a46e4f44383d7aafb3294dd410b2ac14f" name="a46e4f44383d7aafb3294dd410b2ac14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e4f44383d7aafb3294dd410b2ac14f">&#9670;&#160;</a></span>TitleMenu_BlinkCounter</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 PressStart_BlinkCounter = 0</td>
+          <td class="memname">s32 TitleMenu_BlinkCounter = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="functions_8h.html#a4afb9f33fb2f888868339f0d1440346b">state_drawUI_title_screen()</a>, and <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#a4afb9f33fb2f888868339f0d1440346b">state_drawUI_title_screen()</a>, and <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>
-<a id="a003173d8110ff66d792793c8cb26e335" name="a003173d8110ff66d792793c8cb26e335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a003173d8110ff66d792793c8cb26e335">&#9670;&#160;</a></span>PressStart_IsVisible</h2>
+<a id="a0a1ab61cb02d5f034e7f65ff98cd711e" name="a0a1ab61cb02d5f034e7f65ff98cd711e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a1ab61cb02d5f034e7f65ff98cd711e">&#9670;&#160;</a></span>TitleMenu_Visibility</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="common__structs_8h.html#a8d2e4e903f7277916e7c1e2f36539d26">b32</a> PressStart_IsVisible = FALSE</td>
+          <td class="memname">s32 TitleMenu_Visibility = <a class="el" href="#aee062a101c684447379b103fe45d1b7baee21735959ca05ea91f3a9ecfe1b4836">TITLEMENU_STATE_FADE_IN</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="functions_8h.html#a4afb9f33fb2f888868339f0d1440346b">state_drawUI_title_screen()</a>, and <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#a4afb9f33fb2f888868339f0d1440346b">state_drawUI_title_screen()</a>, and <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1062,7 @@ pressStart</td>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="functions_8h.html#acd60663a15a876b66b8ca6a92517d459">state_init_title_screen()</a>, and <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#acd60663a15a876b66b8ca6a92517d459">state_init_title_screen()</a>, and <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1089,7 @@ pressStart</td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s16 TitleScreenNextState = <a class="el" href="#af59064efe753e6928fd91539a27503d1aace1aeea928f7cfafeb5763b6bc0613b">NEXT_STATE_NONE</a></td>
+          <td class="memname">s16 TitleScreenNextState = <a class="el" href="#a26fcf1e7f9cc14c41c5a63f8be9e5631aace1aeea928f7cfafeb5763b6bc0613b">NEXT_STATE_NONE</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1040,10 +1129,10 @@ pressStart</td>
 <div class="line">    gsDPSetScissor(G_SC_NON_INTERLACE, 0, 0, <a class="code hl_define" href="macros_8h.html#a2cd109632a6dcccaa80b43561b1ab700">SCREEN_WIDTH</a>, <a class="code hl_define" href="macros_8h.html#a6974d08a74da681b3957b2fead2608b8">SCREEN_HEIGHT</a>),</div>
 <div class="line">    gsSPEndDisplayList(),</div>
 <div class="line">}</div>
-<div class="ttc" id="amacros_8h_html_a2cd109632a6dcccaa80b43561b1ab700"><div class="ttname"><a href="macros_8h.html#a2cd109632a6dcccaa80b43561b1ab700">SCREEN_WIDTH</a></div><div class="ttdeci">#define SCREEN_WIDTH</div><div class="ttdef"><b>Definition</b> macros.h:112</div></div>
-<div class="ttc" id="amacros_8h_html_a6974d08a74da681b3957b2fead2608b8"><div class="ttname"><a href="macros_8h.html#a6974d08a74da681b3957b2fead2608b8">SCREEN_HEIGHT</a></div><div class="ttdeci">#define SCREEN_HEIGHT</div><div class="ttdef"><b>Definition</b> macros.h:113</div></div>
+<div class="ttc" id="amacros_8h_html_a2cd109632a6dcccaa80b43561b1ab700"><div class="ttname"><a href="macros_8h.html#a2cd109632a6dcccaa80b43561b1ab700">SCREEN_WIDTH</a></div><div class="ttdeci">#define SCREEN_WIDTH</div><div class="ttdef"><b>Definition</b> macros.h:116</div></div>
+<div class="ttc" id="amacros_8h_html_a6974d08a74da681b3957b2fead2608b8"><div class="ttname"><a href="macros_8h.html#a6974d08a74da681b3957b2fead2608b8">SCREEN_HEIGHT</a></div><div class="ttdeci">#define SCREEN_HEIGHT</div><div class="ttdef"><b>Definition</b> macros.h:117</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#a72fc44a65f4c5446819bf6c994cf7458">title_screen_draw_copyright()</a>, <a class="el" href="#abf06f0fb303a44cf4e33d3bbb80fe521">title_screen_draw_logo()</a>, and <a class="el" href="#add07f7b613c3d6ea12fc407703827ca8">title_screen_draw_press_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="#a72fc44a65f4c5446819bf6c994cf7458">title_screen_draw_copyright()</a>, <a class="el" href="#abf06f0fb303a44cf4e33d3bbb80fe521">title_screen_draw_logo()</a>, and <a class="el" href="#ab9094f20fcbb68cd52c7f942df51a800">title_screen_draw_menu()</a>.</p>
 
 </div>
 </div>

@@ -122,7 +122,7 @@ var dir_191f852b87741474e2df76292b1f55c1 =
     [ "tubba_heart_attack.c", "tubba__heart__attack_8c.html", "tubba__heart__attack_8c" ],
     [ "underwater.c", "underwater_8c.html", "underwater_8c" ],
     [ "walking_dust.c", "walking__dust_8c.html", "walking__dust_8c" ],
-    [ "water_block.c", "effects_2water__block_8c.html", "effects_2water__block_8c" ],
+    [ "water_block.c", "water__block_8c.html", "water__block_8c" ],
     [ "water_fountain.c", "water__fountain_8c.html", "water__fountain_8c" ],
     [ "water_splash.c", "water__splash_8c.html", "water__splash_8c" ],
     [ "waterfall.c", "waterfall_8c.html", "waterfall_8c" ],

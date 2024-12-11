@@ -9,10 +9,10 @@ var searchData=
   ['quizmo_5faudience_5fpositionoffsets_6',['quizmo_audience_positionOffsets',['../quizmo__audience_8c.html#aae5944a860af4bc759e36fd231526756',1,'quizmo_audience.c']]],
   ['quizmo_5faudience_5frenderaudiencemember_7',['quizmo_audience_renderAudienceMember',['../quizmo__audience_8c.html#a7db2723d89ee7cd8ba010867620c549f',1,'quizmo_audience.c']]],
   ['quizmo_5faudience_5fverticalposoffsets_8',['quizmo_audience_verticalPosOffsets',['../quizmo__audience_8c.html#a31eefa0d608adcf78855675dd24426f0',1,'quizmo_audience.c']]],
-  ['quizmoanswer_9',['quizmoAnswer',['../effects_8h.html#ad53875f9eb2212acb1d54e144796ac02',1,'EffectData']]],
-  ['quizmoassistant_10',['quizmoAssistant',['../effects_8h.html#a800fb4912087fa574993e7623711a35f',1,'EffectData']]],
-  ['quizmoaudience_11',['quizmoAudience',['../effects_8h.html#a53a7a4d2b8ed695b218c50317c1a661e',1,'EffectData']]],
-  ['quizmostage_12',['quizmoStage',['../effects_8h.html#a6871d510656c493633fa18697f827813',1,'EffectData']]],
+  ['quizmoanswer_9',['quizmoAnswer',['../effects_8h.html#a40247e430ccf3bd39a26b148f3ff3ac6',1,'EffectInstanceDataPtr']]],
+  ['quizmoassistant_10',['quizmoAssistant',['../effects_8h.html#a619f06d466061f218914d5eef2e39d7a',1,'EffectInstanceDataPtr']]],
+  ['quizmoaudience_11',['quizmoAudience',['../effects_8h.html#af326b59140b81f7386c15bf5b4fee117',1,'EffectInstanceDataPtr']]],
+  ['quizmostage_12',['quizmoStage',['../effects_8h.html#acd00e0202b15a20a52494a2f4fe19636',1,'EffectInstanceDataPtr']]],
   ['quizzesanswered_13',['quizzesAnswered',['../common__structs_8h.html#a5def7a683fa0db59f9cb6bb57639b18e',1,'PlayerData']]],
   ['quizzescorrect_14',['quizzesCorrect',['../common__structs_8h.html#a51cc484be49c451b161da7bbbbe31efd',1,'PlayerData']]]
 ];

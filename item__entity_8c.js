@@ -83,7 +83,7 @@ var item__entity_8c =
     [ "ItemEntityLights", "item__entity_8c.html#aaa85ef4ac9c336f3ed93af94e9710159", null ],
     [ "ItemEntityRenderGroup", "item__entity_8c.html#ad67174d3695f8ae8e3258d2b86da2fce", null ],
     [ "ItemPickupGotOutline", "item__entity_8c.html#a96f74473749c7ae637ae1caa70a2abfd", null ],
-    [ "ItemPickupIconID", "item__entity_8c.html#aef7955b2881ffd47ebdb0d5d99eee708", null ],
+    [ "ItemPickupIconHID", "item__entity_8c.html#a5f905336cd40bfecc28ffffa18429c77", null ],
     [ "ItemPickupMenu", "item__entity_8c.html#a08eb5fce2c6a6e8f1713bbe2107f46a4", null ],
     [ "ItemPickupStateDelay", "item__entity_8c.html#acff815cc50345c51ae1c5933609bc26f", null ],
     [ "ItemSpawnWithinPlayerPickupDelay", "item__entity_8c.html#a6866eea99dddc214d318e4591981030d", null ],

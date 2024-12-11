@@ -9,7 +9,7 @@ var fio_8c =
     [ "fio_calc_file_checksum", "fio_8c.html#aa441e7a633416420a72663d2ac8e6ebc", null ],
     [ "fio_calc_globals_checksum", "fio_8c.html#a96c30a6f03c9480098e0350baefbf1ce", null ],
     [ "fio_deserialize_state", "fio_8c.html#a1da89c3ea46ad9b1e4289696b51fe58f", null ],
-    [ "fio_erase_flash", "fio_8c.html#a5aac7d4cc2674a94a3871f81b830d9f0", null ],
+    [ "fio_erase_flash", "fio_8c.html#a5831253783e4b462dafcc2abcde86a0c", null ],
     [ "fio_erase_game", "fio_8c.html#a61c296cc6a1cc6968680f6a64da24f41", null ],
     [ "fio_fetch_saved_file_info", "fio_8c.html#a7fba4b1dc1e003c880035b08ad6d8b25", null ],
     [ "fio_init_flash", "fio_8c.html#af65d4787651fd37d502110a565e7a3fb", null ],

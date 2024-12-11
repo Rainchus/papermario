@@ -246,8 +246,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:structAttackResultTextFXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSmallGoldSparkleFXData" id="r_structSmallGoldSparkleFXData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structSmallGoldSparkleFXData">SmallGoldSparkleFXData</a></td></tr>
 <tr class="separator:structSmallGoldSparkleFXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structFlashingBoxShockwaveFXData" id="r_structFlashingBoxShockwaveFXData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structFlashingBoxShockwaveFXData">FlashingBoxShockwaveFXData</a></td></tr>
-<tr class="separator:structFlashingBoxShockwaveFXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structShockOverlayFXData" id="r_structShockOverlayFXData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structShockOverlayFXData">ShockOverlayFXData</a></td></tr>
+<tr class="separator:structShockOverlayFXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structBalloonFXData" id="r_structBalloonFXData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structBalloonFXData">BalloonFXData</a></td></tr>
 <tr class="separator:structBalloonFXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structFloatingRockFXData" id="r_structFloatingRockFXData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structFloatingRockFXData">FloatingRockFXData</a></td></tr>
@@ -368,8 +368,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:structStarOutlineFXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structEffect86FXData" id="r_structEffect86FXData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structEffect86FXData">Effect86FXData</a></td></tr>
 <tr class="separator:structEffect86FXData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionEffectData" id="r_unionEffectData"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionEffectData">EffectData</a></td></tr>
-<tr class="separator:unionEffectData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionEffectInstanceDataPtr" id="r_unionEffectInstanceDataPtr"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionEffectInstanceDataPtr">EffectInstanceDataPtr</a></td></tr>
+<tr class="separator:unionEffectInstanceDataPtr"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structEffectInstance" id="r_structEffectInstance"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structEffectInstance">EffectInstance</a></td></tr>
 <tr class="separator:structEffectInstance"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structWattEffectData" id="r_structWattEffectData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structWattEffectData">WattEffectData</a></td></tr>
@@ -378,7 +378,7 @@ Data Structures</h2></td></tr>
 <tr class="separator:structStarSpiritData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEffectBlueprint.html">EffectBlueprint</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEffectGraphics.html">EffectGraphics</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEffectSharedData.html">EffectSharedData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structEffectTableEntry" id="r_structEffectTableEntry"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structEffectTableEntry">EffectTableEntry</a></td></tr>
 <tr class="separator:structEffectTableEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -440,6 +440,12 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a77cb0b825fb2e02fb8cb9082d8f0663aa1bd030e03c8a00111050bc9d7cdc630a">FX_AURA_GOLD</a> = 3
  }</td></tr>
 <tr class="separator:a77cb0b825fb2e02fb8cb9082d8f0663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c32c63af9eb202552f45678c639855a" id="r_a3c32c63af9eb202552f45678c639855a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c32c63af9eb202552f45678c639855a">ShockOverlayFXTypes</a> { <a class="el" href="#a3c32c63af9eb202552f45678c639855aa8fd2dcaffad6bdb8a439aa8e241200b6">FX_SHOCK_OVERLAY_SHOCK_HIT</a> = 0
+, <a class="el" href="#a3c32c63af9eb202552f45678c639855aa9f9505f38d58f869c32a2a4e9adb4716">FX_SHOCK_OVERLAY_LIGHTNING_WORLD</a> = 1
+, <a class="el" href="#a3c32c63af9eb202552f45678c639855aa53146ce47dbdd0da07d49168aa0cc35f">FX_SHOCK_OVERLAY_MEGA_SHOCK</a> = 2
+, <a class="el" href="#a3c32c63af9eb202552f45678c639855aaa00480bdb2b29d0b1ec964038113a5a9">FX_SHOCK_OVERLAY_LIGHTNING_BATTLE</a> = 3
+ }</td></tr>
+<tr class="separator:a3c32c63af9eb202552f45678c639855a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7785108bb6dba3a24a61ad599e9ac929" id="r_a7785108bb6dba3a24a61ad599e9ac929"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7785108bb6dba3a24a61ad599e9ac929">WaterBlockFXTypes</a> { <a class="el" href="#a7785108bb6dba3a24a61ad599e9ac929a2b60b48417b4f314a82b6834ce1702aa">FX_WATER_BLOCK_CREATE</a> = 0
 , <a class="el" href="#a7785108bb6dba3a24a61ad599e9ac929a25db2cd464e886249d7a2862f599084d">FX_WATER_BLOCK_DESTROY</a> = 1
  }</td></tr>
@@ -479,15 +485,15 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a961006aae965c1d56c25527072e4cd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7" id="r_adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#adf764cbdea00d65edcd07bb9953ad2b7af041529ba0c92c6607612e878229e77c">FX_BUFF_DATA_WATER_BLOCK</a> = 0
-, <a class="el" href="#adf764cbdea00d65edcd07bb9953ad2b7a8d17af352888b93471aec32145e36308">FX_BUFF_DATA_CLOUD_NINE</a> = 1
-, <a class="el" href="#adf764cbdea00d65edcd07bb9953ad2b7a8026b886e086b77f1d15dcd331dcd9e3">FX_BUFF_DATA_TURBO_CHARGE</a> = 2
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b" id="r_a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a06fc87d81c62e9abb8790b6e5713c55baf041529ba0c92c6607612e878229e77c">FX_BUFF_DATA_WATER_BLOCK</a> = 0
+, <a class="el" href="#a06fc87d81c62e9abb8790b6e5713c55ba8d17af352888b93471aec32145e36308">FX_BUFF_DATA_CLOUD_NINE</a> = 1
+, <a class="el" href="#a06fc87d81c62e9abb8790b6e5713c55ba8026b886e086b77f1d15dcd331dcd9e3">FX_BUFF_DATA_TURBO_CHARGE</a> = 2
+ }</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7" id="r_adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#adf764cbdea00d65edcd07bb9953ad2b7adfc5094f63ceb80ae2356070543799fa">FX_SUN_FROM_LEFT</a> = 0
+, <a class="el" href="#adf764cbdea00d65edcd07bb9953ad2b7afa56b15b771b4a32311a19c3e61629c8">FX_SUN_FROM_RIGHT</a> = 1
  }</td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99fb83031ce9923c84392b4e92f956b5" id="r_a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a99fb83031ce9923c84392b4e92f956b5adfc5094f63ceb80ae2356070543799fa">FX_SUN_FROM_LEFT</a> = 0
-, <a class="el" href="#a99fb83031ce9923c84392b4e92f956b5afa56b15b771b4a32311a19c3e61629c8">FX_SUN_FROM_RIGHT</a> = 1
- }</td></tr>
-<tr class="separator:a99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f0926edf76a5a5dde293214ef06101" id="r_a51f0926edf76a5a5dde293214ef06101"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51f0926edf76a5a5dde293214ef06101">FireBreathType</a> { <a class="el" href="#a51f0926edf76a5a5dde293214ef06101a5e455f34251a6d3532e1f8dff728f664">FIRE_BREATH_LARGE</a> = 0
 , <a class="el" href="#a51f0926edf76a5a5dde293214ef06101adc616ea16ddffa7fd2a845244669263f">FIRE_BREATH_SMALL</a> = 1
 , <a class="el" href="#a51f0926edf76a5a5dde293214ef06101a207fa2d94fa865230de8a4c0e7ec4be0">FIRE_BREATH_TINY</a> = 2
@@ -7789,113 +7795,89 @@ unk_20</td>
 
 </div>
 </div>
-<a name="structFlashingBoxShockwaveFXData" id="structFlashingBoxShockwaveFXData"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structFlashingBoxShockwaveFXData">&#9670;&#160;</a></span>FlashingBoxShockwaveFXData</h2>
+<a name="structShockOverlayFXData" id="structShockOverlayFXData"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structShockOverlayFXData">&#9670;&#160;</a></span>ShockOverlayFXData</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct FlashingBoxShockwaveFXData</td>
+          <td class="memname">struct ShockOverlayFXData</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="a8eb8f4d363ff17cf4916b014749c55fa" name="a8eb8f4d363ff17cf4916b014749c55fa"></a><a class="el" href="common__structs_8h.html#structVec3f">Vec3f</a></td>
+<a id="a5185413fdd817e4b31b64a1e2569c416" name="a5185413fdd817e4b31b64a1e2569c416"></a><a class="el" href="common__structs_8h.html#structColor3i">Color3i</a></td>
+<td class="fieldname">
+envCol</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ae7601b6626e539d1ab9285f73b208485" name="ae7601b6626e539d1ab9285f73b208485"></a>s32</td>
+<td class="fieldname">
+lifetime</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ad9e9e641f04108cb676d59bc3306c549" name="ad9e9e641f04108cb676d59bc3306c549"></a><a class="el" href="common__structs_8h.html#structVec3f">Vec3f</a></td>
 <td class="fieldname">
 pos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a63f0ca3aea8c9a27eff5e7a3c2384bdd" name="a63f0ca3aea8c9a27eff5e7a3c2384bdd"></a>s32</td>
+<a id="a18169b1dad8dbe5f139eb75c80246c2a" name="a18169b1dad8dbe5f139eb75c80246c2a"></a><a class="el" href="common__structs_8h.html#structColor3i">Color3i</a></td>
 <td class="fieldname">
-unk_00</td>
+primCol</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7e07eaa758cd02d7217385d8918f5b89" name="a7e07eaa758cd02d7217385d8918f5b89"></a>s32</td>
+<a id="a71f673e7130e7381a8137ca98f2d73bb" name="a71f673e7130e7381a8137ca98f2d73bb"></a>f32</td>
+<td class="fieldname">
+scaleX</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a16307a75ea5099e89869ee146a806594" name="a16307a75ea5099e89869ee146a806594"></a>f32</td>
+<td class="fieldname">
+scaleY</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ace5f4851f81e7056ac3dc1ecd1da682e" name="ace5f4851f81e7056ac3dc1ecd1da682e"></a>s32</td>
+<td class="fieldname">
+timeLeft</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4a0f698fa961c427aae10e50a5c03eaa" name="a4a0f698fa961c427aae10e50a5c03eaa"></a>s32</td>
+<td class="fieldname">
+type</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a2847636be1d308229d26e56223d438a7" name="a2847636be1d308229d26e56223d438a7"></a>s32</td>
 <td class="fieldname">
 unk_10</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7367ae75f7263236908a2545ca1184b4" name="a7367ae75f7263236908a2545ca1184b4"></a>s32</td>
+<a id="a9b3d7f82aae385df1c147a65ad9bb5ed" name="a9b3d7f82aae385df1c147a65ad9bb5ed"></a>s32</td>
 <td class="fieldname">
 unk_14</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5f742855dd5a933df780d4268ba4ccc9" name="a5f742855dd5a933df780d4268ba4ccc9"></a>s32</td>
+<a id="acb1dc3d00c67ed2da5af56822fb1a42b" name="acb1dc3d00c67ed2da5af56822fb1a42b"></a>s32</td>
 <td class="fieldname">
 unk_18</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad1edd9d178b48881888a99b2f87c8546" name="ad1edd9d178b48881888a99b2f87c8546"></a>s32</td>
-<td class="fieldname">
-unk_1C</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a2b39a2e56d58433c39a040a9fa521f5b" name="a2b39a2e56d58433c39a040a9fa521f5b"></a>s32</td>
-<td class="fieldname">
-unk_20</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a63eb2046e99b2ed3ea40ac3b9f42cbcf" name="a63eb2046e99b2ed3ea40ac3b9f42cbcf"></a>f32</td>
+<a id="a17f09a7d1d34fcc8f66135528f97543e" name="a17f09a7d1d34fcc8f66135528f97543e"></a>f32</td>
 <td class="fieldname">
 unk_24</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="aadf559446388793c59c78ae844c30830" name="aadf559446388793c59c78ae844c30830"></a>f32</td>
-<td class="fieldname">
-unk_28</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="abbc4515016489f806ba50425fe3c03ba" name="abbc4515016489f806ba50425fe3c03ba"></a>f32</td>
-<td class="fieldname">
-unk_2C</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="aa61da7e1018b7d366bc3993c5029f996" name="aa61da7e1018b7d366bc3993c5029f996"></a>s32</td>
-<td class="fieldname">
-unk_30</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="ad43ac9c5b20346fa89e2c79ea0054bd4" name="ad43ac9c5b20346fa89e2c79ea0054bd4"></a>s32</td>
-<td class="fieldname">
-unk_34</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a106937a4f5161f3dce37a811ca0c770e" name="a106937a4f5161f3dce37a811ca0c770e"></a>s32</td>
-<td class="fieldname">
-unk_38</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="af3a81de1ee709729e3c52b00443e4fd0" name="af3a81de1ee709729e3c52b00443e4fd0"></a>s32</td>
-<td class="fieldname">
-unk_3C</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a21586c8d264caf31810f8366c764f3e6" name="a21586c8d264caf31810f8366c764f3e6"></a>s32</td>
-<td class="fieldname">
-unk_40</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a83b0141811bbee7a0c8422c342c73941" name="a83b0141811bbee7a0c8422c342c73941"></a>s32</td>
-<td class="fieldname">
-unk_44</td>
 <td class="fielddoc">
 </td></tr>
 </table>
@@ -10771,25 +10753,25 @@ lifeTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad0b5f20e3444f41af2e825ac14b922ad" name="ad0b5f20e3444f41af2e825ac14b922ad"></a>f32</td>
+<a id="ad0b5f20e3444f41af2e825ac14b922ad" name="ad0b5f20e3444f41af2e825ac14b922ad"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathJitterX</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a51f8e2433b0b7ea5dd22bbee2819fe5f" name="a51f8e2433b0b7ea5dd22bbee2819fe5f"></a>f32</td>
+<a id="a51f8e2433b0b7ea5dd22bbee2819fe5f" name="a51f8e2433b0b7ea5dd22bbee2819fe5f"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathJitterY</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="adf74822593d63971a38c3abc8ba2904d" name="adf74822593d63971a38c3abc8ba2904d"></a>f32</td>
+<a id="adf74822593d63971a38c3abc8ba2904d" name="adf74822593d63971a38c3abc8ba2904d"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathJitterZ</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="abdbe21eb45a08d88517b9f63c8ce1cac" name="abdbe21eb45a08d88517b9f63c8ce1cac"></a>f32</td>
+<a id="abdbe21eb45a08d88517b9f63c8ce1cac" name="abdbe21eb45a08d88517b9f63c8ce1cac"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathLength[30]</td>
 <td class="fielddoc">
@@ -10807,19 +10789,19 @@ pathTimestamp[30]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a86ade420edbceb1d1f58f826c0a911c6" name="a86ade420edbceb1d1f58f826c0a911c6"></a>f32</td>
+<a id="a86ade420edbceb1d1f58f826c0a911c6" name="a86ade420edbceb1d1f58f826c0a911c6"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathX[30]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a590d091b922d4aed657b42306a2927f1" name="a590d091b922d4aed657b42306a2927f1"></a>f32</td>
+<a id="a590d091b922d4aed657b42306a2927f1" name="a590d091b922d4aed657b42306a2927f1"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathY[30]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="accc2a300a6e8b637b63dfd8a1762ef9b" name="accc2a300a6e8b637b63dfd8a1762ef9b"></a>f32</td>
+<a id="accc2a300a6e8b637b63dfd8a1762ef9b" name="accc2a300a6e8b637b63dfd8a1762ef9b"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 pathZ[30]</td>
 <td class="fielddoc">
@@ -10849,7 +10831,7 @@ primR</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad7d8ed1c81638dba1359ccc89144a334" name="ad7d8ed1c81638dba1359ccc89144a334"></a>f32</td>
+<a id="ad7d8ed1c81638dba1359ccc89144a334" name="ad7d8ed1c81638dba1359ccc89144a334"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 scale</td>
 <td class="fielddoc">
@@ -10861,19 +10843,19 @@ timeLeft</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0599085ed4d6e74426a7d9039ee32501" name="a0599085ed4d6e74426a7d9039ee32501"></a>f32</td>
+<a id="a0599085ed4d6e74426a7d9039ee32501" name="a0599085ed4d6e74426a7d9039ee32501"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 unk_04</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a35bca849bac0fe6dde053925ab6b7b17" name="a35bca849bac0fe6dde053925ab6b7b17"></a>f32</td>
+<a id="a35bca849bac0fe6dde053925ab6b7b17" name="a35bca849bac0fe6dde053925ab6b7b17"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 unk_08</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0e8a336b4284dfcbeb05771a3397733e" name="a0e8a336b4284dfcbeb05771a3397733e"></a>f32</td>
+<a id="a0e8a336b4284dfcbeb05771a3397733e" name="a0e8a336b4284dfcbeb05771a3397733e"></a><a class="el" href="#addd7557b313e2bb6c1bf519dc7918587">f32</a></td>
 <td class="fieldname">
 unk_0C</td>
 <td class="fielddoc">
@@ -12342,19 +12324,19 @@ pos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a982dd89bcff0d1736c0e85b747f42a6a" name="a982dd89bcff0d1736c0e85b747f42a6a"></a>f32</td>
+<a id="a982dd89bcff0d1736c0e85b747f42a6a" name="a982dd89bcff0d1736c0e85b747f42a6a"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 scale</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a69071e902d041a1c2076a9f5f635b148" name="a69071e902d041a1c2076a9f5f635b148"></a>f32</td>
+<a id="a69071e902d041a1c2076a9f5f635b148" name="a69071e902d041a1c2076a9f5f635b148"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 scaleX</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a8d90bd15bd7b90f88f78ac8d0a10b2d2" name="a8d90bd15bd7b90f88f78ac8d0a10b2d2"></a>f32</td>
+<a id="a8d90bd15bd7b90f88f78ac8d0a10b2d2" name="a8d90bd15bd7b90f88f78ac8d0a10b2d2"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 scaleY</td>
 <td class="fielddoc">
@@ -12366,43 +12348,43 @@ timeLeft</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab225404ae3ff6ff4a4452e5ec33db577" name="ab225404ae3ff6ff4a4452e5ec33db577"></a>f32</td>
+<a id="ab225404ae3ff6ff4a4452e5ec33db577" name="ab225404ae3ff6ff4a4452e5ec33db577"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 unk_18</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aaadca28bd0c47b8f1916d0048a2d5e9e" name="aaadca28bd0c47b8f1916d0048a2d5e9e"></a>f32</td>
+<a id="aaadca28bd0c47b8f1916d0048a2d5e9e" name="aaadca28bd0c47b8f1916d0048a2d5e9e"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 unk_1C</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a1e3c5dd8268fc97fb1ed713377efe7d0" name="a1e3c5dd8268fc97fb1ed713377efe7d0"></a>char</td>
+<a id="a1e3c5dd8268fc97fb1ed713377efe7d0" name="a1e3c5dd8268fc97fb1ed713377efe7d0"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">char</a></td>
 <td class="fieldname">
 unk_20[4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af20831c50d9f40666f8e42ee258f8e0c" name="af20831c50d9f40666f8e42ee258f8e0c"></a>f32</td>
+<a id="af20831c50d9f40666f8e42ee258f8e0c" name="af20831c50d9f40666f8e42ee258f8e0c"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 unk_24</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6d8ea54b78a11884668697c28931aefe" name="a6d8ea54b78a11884668697c28931aefe"></a>f32</td>
+<a id="a6d8ea54b78a11884668697c28931aefe" name="a6d8ea54b78a11884668697c28931aefe"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 unk_28</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="acf7a4b5664c83e4a94c335d3e5ffda68" name="acf7a4b5664c83e4a94c335d3e5ffda68"></a>f32</td>
+<a id="acf7a4b5664c83e4a94c335d3e5ffda68" name="acf7a4b5664c83e4a94c335d3e5ffda68"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 unk_5C</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a73a12957df2a4426dc3460f6855d1d3c" name="a73a12957df2a4426dc3460f6855d1d3c"></a>f32</td>
+<a id="a73a12957df2a4426dc3460f6855d1d3c" name="a73a12957df2a4426dc3460f6855d1d3c"></a><a class="el" href="#adfd18e3ea16fee766770a11f87394e34">f32</a></td>
 <td class="fieldname">
 unk_60</td>
 <td class="fielddoc">
@@ -12842,7 +12824,7 @@ lifeTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a06c03a30e481b0e5f1a9cffe6657606e" name="a06c03a30e481b0e5f1a9cffe6657606e"></a>f32</td>
+<a id="a06c03a30e481b0e5f1a9cffe6657606e" name="a06c03a30e481b0e5f1a9cffe6657606e"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 maxRadius</td>
 <td class="fielddoc">
@@ -12866,43 +12848,43 @@ r</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af71fb56d72e8be6ab76c1ab8e95b2c08" name="af71fb56d72e8be6ab76c1ab8e95b2c08"></a>f32</td>
+<a id="af71fb56d72e8be6ab76c1ab8e95b2c08" name="af71fb56d72e8be6ab76c1ab8e95b2c08"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 radius</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4eec3fd5bb4590f3f2ce9a3ba12d3ec8" name="a4eec3fd5bb4590f3f2ce9a3ba12d3ec8"></a>f32</td>
+<a id="a4eec3fd5bb4590f3f2ce9a3ba12d3ec8" name="a4eec3fd5bb4590f3f2ce9a3ba12d3ec8"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 rocketVelX[4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a97d47f55b5e8a89e7d21fe75e747fcb0" name="a97d47f55b5e8a89e7d21fe75e747fcb0"></a>f32</td>
+<a id="a97d47f55b5e8a89e7d21fe75e747fcb0" name="a97d47f55b5e8a89e7d21fe75e747fcb0"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 rocketVelY[4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa1d0a0e9babd30c1759d8659b8c8e0a1" name="aa1d0a0e9babd30c1759d8659b8c8e0a1"></a>f32</td>
+<a id="aa1d0a0e9babd30c1759d8659b8c8e0a1" name="aa1d0a0e9babd30c1759d8659b8c8e0a1"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 rocketVelZ[4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a973e186687e587e7dfd57890f2ad689d" name="a973e186687e587e7dfd57890f2ad689d"></a>f32</td>
+<a id="a973e186687e587e7dfd57890f2ad689d" name="a973e186687e587e7dfd57890f2ad689d"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 rocketX[4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a2980a48e0193f190dd34f19c1c081b6d" name="a2980a48e0193f190dd34f19c1c081b6d"></a>f32</td>
+<a id="a2980a48e0193f190dd34f19c1c081b6d" name="a2980a48e0193f190dd34f19c1c081b6d"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 rocketY[4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad43ecb033ce7971e5537f54d77a952a3" name="ad43ecb033ce7971e5537f54d77a952a3"></a>f32</td>
+<a id="ad43ecb033ce7971e5537f54d77a952a3" name="ad43ecb033ce7971e5537f54d77a952a3"></a><a class="el" href="#ad5f6ba04d80844bedddd5de26a0391b9">f32</a></td>
 <td class="fieldname">
 rocketZ[4]</td>
 <td class="fielddoc">
@@ -14526,831 +14508,831 @@ unk_34</td>
 
 </div>
 </div>
-<a name="unionEffectData" id="unionEffectData"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionEffectData">&#9670;&#160;</a></span>EffectData</h2>
+<a name="unionEffectInstanceDataPtr" id="unionEffectInstanceDataPtr"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionEffectInstanceDataPtr">&#9670;&#160;</a></span>EffectInstanceDataPtr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union EffectData</td>
+          <td class="memname">union EffectInstanceDataPtr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="ada5d89b81a6924d64a5226e7c7facf57" name="ada5d89b81a6924d64a5226e7c7facf57"></a>s32 *</td>
+<a id="addf1eb504bdb9ed6a8c2d1eab5a875b0" name="addf1eb504bdb9ed6a8c2d1eab5a875b0"></a>s32 *</td>
 <td class="fieldname">
 any</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a289bb6ea378bffa93d5b997a5c33522c" name="a289bb6ea378bffa93d5b997a5c33522c"></a>struct <a class="el" href="#structAttackResultTextFXData">AttackResultTextFXData</a> *</td>
+<a id="a1d645afda28e03885377ba44e883cee4" name="a1d645afda28e03885377ba44e883cee4"></a>struct <a class="el" href="#structAttackResultTextFXData">AttackResultTextFXData</a> *</td>
 <td class="fieldname">
 attackResultText</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa5ca855e773962fbd7c92d6098c9075c" name="aa5ca855e773962fbd7c92d6098c9075c"></a>struct <a class="el" href="#structAuraFXData">AuraFXData</a> *</td>
+<a id="ade5415a3bc7f6807f9485efc8a5fa89a" name="ade5415a3bc7f6807f9485efc8a5fa89a"></a>struct <a class="el" href="#structAuraFXData">AuraFXData</a> *</td>
 <td class="fieldname">
 aura</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a1aa279e38613bdf5c5809ff635027c5b" name="a1aa279e38613bdf5c5809ff635027c5b"></a>struct <a class="el" href="#structBalloonFXData">BalloonFXData</a> *</td>
+<a id="a5c0c2a8501753bef00c8953668d332f4" name="a5c0c2a8501753bef00c8953668d332f4"></a>struct <a class="el" href="#structBalloonFXData">BalloonFXData</a> *</td>
 <td class="fieldname">
 balloon</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aab02ae9b1a5a6910a820d4dc35654bb7" name="aab02ae9b1a5a6910a820d4dc35654bb7"></a>struct <a class="el" href="#structBigSmokePuffFXData">BigSmokePuffFXData</a> *</td>
+<a id="a0f5ed9364909f656c48d201cdcf7239c" name="a0f5ed9364909f656c48d201cdcf7239c"></a>struct <a class="el" href="#structBigSmokePuffFXData">BigSmokePuffFXData</a> *</td>
 <td class="fieldname">
 bigSmokePuff</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9b2d50f0503d0bc1ee609be7fe394a5a" name="a9b2d50f0503d0bc1ee609be7fe394a5a"></a>struct <a class="el" href="#structBigSnowflakesFXData">BigSnowflakesFXData</a> *</td>
+<a id="a7091d9e7236bf4df6eba26c5510995a7" name="a7091d9e7236bf4df6eba26c5510995a7"></a>struct <a class="el" href="#structBigSnowflakesFXData">BigSnowflakesFXData</a> *</td>
 <td class="fieldname">
 bigSnowflakes</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4e3bb20cfd39a5164af9187f27f6f526" name="a4e3bb20cfd39a5164af9187f27f6f526"></a>struct <a class="el" href="#structBlastFXData">BlastFXData</a> *</td>
+<a id="a9f8807b47efdb5f8ba3c2615d6b1db32" name="a9f8807b47efdb5f8ba3c2615d6b1db32"></a>struct <a class="el" href="#structBlastFXData">BlastFXData</a> *</td>
 <td class="fieldname">
 blast</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa0675118da40b369c046c2b5f790a0ed" name="aa0675118da40b369c046c2b5f790a0ed"></a>struct <a class="el" href="#structBombetteBreakingFXData">BombetteBreakingFXData</a> *</td>
+<a id="a80bd06db60cce2a2ebf246285ae3cad2" name="a80bd06db60cce2a2ebf246285ae3cad2"></a>struct <a class="el" href="#structBombetteBreakingFXData">BombetteBreakingFXData</a> *</td>
 <td class="fieldname">
 bombetteBreaking</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="abded308c73a5e24e088cf38219572f61" name="abded308c73a5e24e088cf38219572f61"></a>struct <a class="el" href="#structBreakingJunkFXData">BreakingJunkFXData</a> *</td>
+<a id="aa40343c3e424f1be44389e379a59e036" name="aa40343c3e424f1be44389e379a59e036"></a>struct <a class="el" href="#structBreakingJunkFXData">BreakingJunkFXData</a> *</td>
 <td class="fieldname">
 breakingJunk</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae2c1b5f91663b42c072a0f0c93bf20a9" name="ae2c1b5f91663b42c072a0f0c93bf20a9"></a>struct <a class="el" href="#structBulbGlowFXData">BulbGlowFXData</a> *</td>
+<a id="aeee8467e1a0f56650219a58b9239e6be" name="aeee8467e1a0f56650219a58b9239e6be"></a>struct <a class="el" href="#structBulbGlowFXData">BulbGlowFXData</a> *</td>
 <td class="fieldname">
 bulbGlow</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4468a621a46022990f7ae38634930f2d" name="a4468a621a46022990f7ae38634930f2d"></a>struct <a class="el" href="#structButterfliesFXData">ButterfliesFXData</a> *</td>
+<a id="a4d25aac2f1da4cf4211e4cbaaae04ab3" name="a4d25aac2f1da4cf4211e4cbaaae04ab3"></a>struct <a class="el" href="#structButterfliesFXData">ButterfliesFXData</a> *</td>
 <td class="fieldname">
 butterflies</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab11394bbcf41ccf2a133370c62ff9b5f" name="ab11394bbcf41ccf2a133370c62ff9b5f"></a>struct <a class="el" href="#structChapterChangeFXData">ChapterChangeFXData</a> *</td>
+<a id="a9fa2965716f41627b796c7ba098ec64a" name="a9fa2965716f41627b796c7ba098ec64a"></a>struct <a class="el" href="#structChapterChangeFXData">ChapterChangeFXData</a> *</td>
 <td class="fieldname">
 chapterChange</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac75fdc44d8b7a34d92803f5572e461dc" name="ac75fdc44d8b7a34d92803f5572e461dc"></a>struct <a class="el" href="#structChompDropFXData">ChompDropFXData</a> *</td>
+<a id="aaec10aad767a12be64d54c38872558e1" name="aaec10aad767a12be64d54c38872558e1"></a>struct <a class="el" href="#structChompDropFXData">ChompDropFXData</a> *</td>
 <td class="fieldname">
 chompDrop</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae643462b922fff348eb44d8cef57115b" name="ae643462b922fff348eb44d8cef57115b"></a>struct <a class="el" href="#structCloudPuffFXData">CloudPuffFXData</a> *</td>
+<a id="a1e58c98d602da42c677a45e0849589de" name="a1e58c98d602da42c677a45e0849589de"></a>struct <a class="el" href="#structCloudPuffFXData">CloudPuffFXData</a> *</td>
 <td class="fieldname">
 cloudPuff</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad0a5b80a263c7cca819765801a1a577f" name="ad0a5b80a263c7cca819765801a1a577f"></a>struct <a class="el" href="#structCloudTrailFXData">CloudTrailFXData</a> *</td>
+<a id="a609b5772d2385dbdf07afc019f121bd0" name="a609b5772d2385dbdf07afc019f121bd0"></a>struct <a class="el" href="#structCloudTrailFXData">CloudTrailFXData</a> *</td>
 <td class="fieldname">
 cloudTrail</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a2919ed97faf9f0590dc5c5e58132b63e" name="a2919ed97faf9f0590dc5c5e58132b63e"></a>struct <a class="el" href="#structColdBreathFXData">ColdBreathFXData</a> *</td>
+<a id="ae375ca821ea4623aa3c4118d847ee8ac" name="ae375ca821ea4623aa3c4118d847ee8ac"></a>struct <a class="el" href="#structColdBreathFXData">ColdBreathFXData</a> *</td>
 <td class="fieldname">
 coldBreath</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a47aa64155ddc0896aeef21fd55029ddb" name="a47aa64155ddc0896aeef21fd55029ddb"></a>struct <a class="el" href="#structConfettiFXData">ConfettiFXData</a> *</td>
+<a id="a727cb9531cf0228b217df513833e430e" name="a727cb9531cf0228b217df513833e430e"></a>struct <a class="el" href="#structConfettiFXData">ConfettiFXData</a> *</td>
 <td class="fieldname">
 confetti</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a8c68a6042050dd4fdaf01e3642abde1b" name="a8c68a6042050dd4fdaf01e3642abde1b"></a>struct <a class="el" href="#structDamageIndicatorFXData">DamageIndicatorFXData</a> *</td>
+<a id="a22ac0bd9bdbf65256c05372c8556a80e" name="a22ac0bd9bdbf65256c05372c8556a80e"></a>struct <a class="el" href="#structDamageIndicatorFXData">DamageIndicatorFXData</a> *</td>
 <td class="fieldname">
 damageIndicator</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afcfb9b4fcc5601b7da70fe0a62552869" name="afcfb9b4fcc5601b7da70fe0a62552869"></a>struct <a class="el" href="#structDamageStarsFXData">DamageStarsFXData</a> *</td>
+<a id="ac1d718bcf939467d6bbb23242804cc57" name="ac1d718bcf939467d6bbb23242804cc57"></a>struct <a class="el" href="#structDamageStarsFXData">DamageStarsFXData</a> *</td>
 <td class="fieldname">
 damageStars</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4f2704128ceb505254a525f3950da31e" name="a4f2704128ceb505254a525f3950da31e"></a>struct <a class="el" href="#structDebuffFXData">DebuffFXData</a> *</td>
+<a id="ad7e5de977e98a3a81b3e8e48a6cd3c4b" name="ad7e5de977e98a3a81b3e8e48a6cd3c4b"></a>struct <a class="el" href="#structDebuffFXData">DebuffFXData</a> *</td>
 <td class="fieldname">
 debuff</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a309cac573c6742837c8194292bd8756f" name="a309cac573c6742837c8194292bd8756f"></a>struct <a class="el" href="#structDisableXFXData">DisableXFXData</a> *</td>
+<a id="a06afa19940124477605d8973db88a8fc" name="a06afa19940124477605d8973db88a8fc"></a>struct <a class="el" href="#structDisableXFXData">DisableXFXData</a> *</td>
 <td class="fieldname">
 disableX</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0f6f10dce2ef3539dd39cd888534b0f5" name="a0f6f10dce2ef3539dd39cd888534b0f5"></a>struct <a class="el" href="#structDropLeavesFXData">DropLeavesFXData</a> *</td>
+<a id="a69a8cc01012e584ad4b74291633b5fc4" name="a69a8cc01012e584ad4b74291633b5fc4"></a>struct <a class="el" href="#structDropLeavesFXData">DropLeavesFXData</a> *</td>
 <td class="fieldname">
 dropLeaves</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a44808c4758b7c48b66f2ab0b34849c50" name="a44808c4758b7c48b66f2ab0b34849c50"></a>struct <a class="el" href="#structDustFXData">DustFXData</a> *</td>
+<a id="a0ed9d104edfb7199491a58afce0286f5" name="a0ed9d104edfb7199491a58afce0286f5"></a>struct <a class="el" href="#structDustFXData">DustFXData</a> *</td>
 <td class="fieldname">
 dust</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5a39d1210a5010bb9c3c394f9da290d9" name="a5a39d1210a5010bb9c3c394f9da290d9"></a>struct <a class="el" href="#structEmbersFXData">EmbersFXData</a> *</td>
+<a id="a5e01593f7b22def9d2633172c88f1231" name="a5e01593f7b22def9d2633172c88f1231"></a>struct <a class="el" href="#structEmbersFXData">EmbersFXData</a> *</td>
 <td class="fieldname">
 embers</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a18e5f24626df5c06a8b0bf12ca87bde3" name="a18e5f24626df5c06a8b0bf12ca87bde3"></a>struct <a class="el" href="#structEmoteFXData">EmoteFXData</a> *</td>
+<a id="af53e149d94641e284bf00f6acbe7107b" name="af53e149d94641e284bf00f6acbe7107b"></a>struct <a class="el" href="#structEmoteFXData">EmoteFXData</a> *</td>
 <td class="fieldname">
 emote</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac22560527429f2f08dbc393c3f0dfd3c" name="ac22560527429f2f08dbc393c3f0dfd3c"></a>struct <a class="el" href="#structEndingDecalsFXData">EndingDecalsFXData</a> *</td>
+<a id="ad7fa1a801efdffb8a6b3ce20a75c7c19" name="ad7fa1a801efdffb8a6b3ce20a75c7c19"></a>struct <a class="el" href="#structEndingDecalsFXData">EndingDecalsFXData</a> *</td>
 <td class="fieldname">
 endingDecals</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3f8aa124b3769ba54b8b686a6d060e57" name="a3f8aa124b3769ba54b8b686a6d060e57"></a>struct <a class="el" href="#structEnergyInOutFXData">EnergyInOutFXData</a> *</td>
+<a id="a5920ba867c837f80e235f2b86c289127" name="a5920ba867c837f80e235f2b86c289127"></a>struct <a class="el" href="#structEnergyInOutFXData">EnergyInOutFXData</a> *</td>
 <td class="fieldname">
 energyInOut</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="adbf39142f92b9798816afa4875d8d3c6" name="adbf39142f92b9798816afa4875d8d3c6"></a>struct <a class="el" href="#structEnergyOrbWaveFXData">EnergyOrbWaveFXData</a> *</td>
+<a id="a85fd46c8a8b51580a7b3e4fe3940d4c6" name="a85fd46c8a8b51580a7b3e4fe3940d4c6"></a>struct <a class="el" href="#structEnergyOrbWaveFXData">EnergyOrbWaveFXData</a> *</td>
 <td class="fieldname">
 energyOrbWave</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a025a7218b1dec6b87d74eb16fe6a0eae" name="a025a7218b1dec6b87d74eb16fe6a0eae"></a>struct <a class="el" href="#structEnergyShockwaveFXData">EnergyShockwaveFXData</a> *</td>
+<a id="a598d10d49f5024c438849caac1922cd8" name="a598d10d49f5024c438849caac1922cd8"></a>struct <a class="el" href="#structEnergyShockwaveFXData">EnergyShockwaveFXData</a> *</td>
 <td class="fieldname">
 energyShockwave</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7acf51915a9b1434a6998b5986133323" name="a7acf51915a9b1434a6998b5986133323"></a>struct <a class="el" href="#structExplosionFXData">ExplosionFXData</a> *</td>
+<a id="aba6a355344df22eb17a67ebb113bce4a" name="aba6a355344df22eb17a67ebb113bce4a"></a>struct <a class="el" href="#structExplosionFXData">ExplosionFXData</a> *</td>
 <td class="fieldname">
 explosion</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af3211d4deae64a4308a7fee3ba18ecb9" name="af3211d4deae64a4308a7fee3ba18ecb9"></a>struct <a class="el" href="#structFallingLeavesFXData">FallingLeavesFXData</a> *</td>
+<a id="af8b007939ab1f7563fd1002a0bb4cb2a" name="af8b007939ab1f7563fd1002a0bb4cb2a"></a>struct <a class="el" href="#structFallingLeavesFXData">FallingLeavesFXData</a> *</td>
 <td class="fieldname">
 fallingLeaves</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0cf1214073eb1fa26d1012f9255b5075" name="a0cf1214073eb1fa26d1012f9255b5075"></a>struct <a class="el" href="#structFireBreathFXData">FireBreathFXData</a> *</td>
+<a id="ae142d044838858e16fca5fe24e43dba6" name="ae142d044838858e16fca5fe24e43dba6"></a>struct <a class="el" href="#structFireBreathFXData">FireBreathFXData</a> *</td>
 <td class="fieldname">
 fireBreath</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac15d80b470bd2982c6631bce21703b81" name="ac15d80b470bd2982c6631bce21703b81"></a>struct <a class="el" href="#structFireFlowerFXData">FireFlowerFXData</a> *</td>
+<a id="abbf0851d8fd4a3ae144d3e8adb05a90c" name="abbf0851d8fd4a3ae144d3e8adb05a90c"></a>struct <a class="el" href="#structFireFlowerFXData">FireFlowerFXData</a> *</td>
 <td class="fieldname">
 fireFlower</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a67f150941f805678353f7f6dab7ac13a" name="a67f150941f805678353f7f6dab7ac13a"></a>struct <a class="el" href="#structFireworkFXData">FireworkFXData</a> *</td>
+<a id="aa77b1dbf5ae69135a38236ee4a7ad2ad" name="aa77b1dbf5ae69135a38236ee4a7ad2ad"></a>struct <a class="el" href="#structFireworkFXData">FireworkFXData</a> *</td>
 <td class="fieldname">
 firework</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="adfc81bbc0d05bbb7459c5aad4baad389" name="adfc81bbc0d05bbb7459c5aad4baad389"></a>struct <a class="el" href="#structFireworkRocketFXData">FireworkRocketFXData</a> *</td>
+<a id="af5e887c4a4a8cc3437d8a5c130d7d381" name="af5e887c4a4a8cc3437d8a5c130d7d381"></a>struct <a class="el" href="#structFireworkRocketFXData">FireworkRocketFXData</a> *</td>
 <td class="fieldname">
 fireworkRocket</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afa8f55f050b2d94b60774ca651fbf0d0" name="afa8f55f050b2d94b60774ca651fbf0d0"></a>struct <a class="el" href="#structFlameFXData">FlameFXData</a> *</td>
+<a id="a7714c8af4068c0e362883dbbb0c4f19f" name="a7714c8af4068c0e362883dbbb0c4f19f"></a>struct <a class="el" href="#structFlameFXData">FlameFXData</a> *</td>
 <td class="fieldname">
 flame</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a47562868a71a7cb2c8e855072fe5c66c" name="a47562868a71a7cb2c8e855072fe5c66c"></a>struct <a class="el" href="#structFlashingBoxShockwaveFXData">FlashingBoxShockwaveFXData</a> *</td>
+<a id="aa0d6e61c451726a55ac6dc4230d9e1bd" name="aa0d6e61c451726a55ac6dc4230d9e1bd"></a>struct <a class="el" href="#structShockOverlayFXData">ShockOverlayFXData</a> *</td>
 <td class="fieldname">
 flashingBoxShockwave</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae69e4d62a2d9863c1d56efbdd9f45583" name="ae69e4d62a2d9863c1d56efbdd9f45583"></a>struct <a class="el" href="#structFloatingCloudPuffFXData">FloatingCloudPuffFXData</a> *</td>
+<a id="a8b427f3f592cbbb15788ccfb0789aaa1" name="a8b427f3f592cbbb15788ccfb0789aaa1"></a>struct <a class="el" href="#structFloatingCloudPuffFXData">FloatingCloudPuffFXData</a> *</td>
 <td class="fieldname">
 floatingCloudPuff</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab9cc52e05ab35b348fad657de69fa40c" name="ab9cc52e05ab35b348fad657de69fa40c"></a>struct <a class="el" href="#structFloatingFlowerFXData">FloatingFlowerFXData</a> *</td>
+<a id="aa039b77a090966e17d3b79269166fa52" name="aa039b77a090966e17d3b79269166fa52"></a>struct <a class="el" href="#structFloatingFlowerFXData">FloatingFlowerFXData</a> *</td>
 <td class="fieldname">
 floatingFlower</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afba483e493a446639c6d0a47acc4e0fa" name="afba483e493a446639c6d0a47acc4e0fa"></a>struct <a class="el" href="#structFloatingRockFXData">FloatingRockFXData</a> *</td>
+<a id="a18ef4eb5614675d303047b1a4d217aae" name="a18ef4eb5614675d303047b1a4d217aae"></a>struct <a class="el" href="#structFloatingRockFXData">FloatingRockFXData</a> *</td>
 <td class="fieldname">
 floatingRock</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7c86459cff34c669037ad55bcf1581d5" name="a7c86459cff34c669037ad55bcf1581d5"></a>struct <a class="el" href="#structFlowerFXData">FlowerFXData</a> *</td>
+<a id="ad692e43d873b9e695a2ab07e3f9d39b9" name="ad692e43d873b9e695a2ab07e3f9d39b9"></a>struct <a class="el" href="#structFlowerFXData">FlowerFXData</a> *</td>
 <td class="fieldname">
 flowerSplash</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a46263a4c07844ffdcafefb49a1ce8865" name="a46263a4c07844ffdcafefb49a1ce8865"></a>struct <a class="el" href="#structFlowerFXData">FlowerFXData</a> *</td>
+<a id="abd8289bd7c8450c5c86de703e14bb073" name="abd8289bd7c8450c5c86de703e14bb073"></a>struct <a class="el" href="#structFlowerFXData">FlowerFXData</a> *</td>
 <td class="fieldname">
 flowerTrail</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a89afdc19a0063b94493b693f29a5f848" name="a89afdc19a0063b94493b693f29a5f848"></a>struct <a class="el" href="#structFootprintFXData">FootprintFXData</a> *</td>
+<a id="a3aa2afe20e08d1dc61e23e80a908c223" name="a3aa2afe20e08d1dc61e23e80a908c223"></a>struct <a class="el" href="#structFootprintFXData">FootprintFXData</a> *</td>
 <td class="fieldname">
 footprint</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a642e7621e9b2ddd372e92d1e3d09b035" name="a642e7621e9b2ddd372e92d1e3d09b035"></a>struct <a class="el" href="#structFrightJarFXData">FrightJarFXData</a> *</td>
+<a id="a832dd2faff056e21616ce7ec747dab5c" name="a832dd2faff056e21616ce7ec747dab5c"></a>struct <a class="el" href="#structFrightJarFXData">FrightJarFXData</a> *</td>
 <td class="fieldname">
 frightJar</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5daca7e79f9cebc634c1a25a47fb8a9f" name="a5daca7e79f9cebc634c1a25a47fb8a9f"></a>struct <a class="el" href="#structGatherEnergyPinkFXData">GatherEnergyPinkFXData</a> *</td>
+<a id="a85447e0dd235f2a6b5c4ffc97503fdb6" name="a85447e0dd235f2a6b5c4ffc97503fdb6"></a>struct <a class="el" href="#structGatherEnergyPinkFXData">GatherEnergyPinkFXData</a> *</td>
 <td class="fieldname">
 gatherEnergyPink</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a19ff55dd0294cedae2ef0e3efda95f8f" name="a19ff55dd0294cedae2ef0e3efda95f8f"></a>struct <a class="el" href="#structGatherMagicFXData">GatherMagicFXData</a> *</td>
+<a id="aeb8446ee03cd5b232172925ab370db4f" name="aeb8446ee03cd5b232172925ab370db4f"></a>struct <a class="el" href="#structGatherMagicFXData">GatherMagicFXData</a> *</td>
 <td class="fieldname">
 gatherMagic</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9132f1596c7a486e956c72d8d137965a" name="a9132f1596c7a486e956c72d8d137965a"></a>struct <a class="el" href="#structGotItemOutlineFXData">GotItemOutlineFXData</a> *</td>
+<a id="ac1f2873694c088160215df33ea6c5c8a" name="ac1f2873694c088160215df33ea6c5c8a"></a>struct <a class="el" href="#structGotItemOutlineFXData">GotItemOutlineFXData</a> *</td>
 <td class="fieldname">
 gotItemOutline</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a567e925cc62cab30c03c164f4b92b93c" name="a567e925cc62cab30c03c164f4b92b93c"></a>struct <a class="el" href="#structGreenImpactFXData">GreenImpactFXData</a> *</td>
+<a id="ae9787b7e79dcdbfdf7cbbab7ab52e372" name="ae9787b7e79dcdbfdf7cbbab7ab52e372"></a>struct <a class="el" href="#structGreenImpactFXData">GreenImpactFXData</a> *</td>
 <td class="fieldname">
 greenImpact</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae26d4b935deaf1b08d265c570c4acdd0" name="ae26d4b935deaf1b08d265c570c4acdd0"></a>struct <a class="el" href="#structHieroglyphsFXData">HieroglyphsFXData</a> *</td>
+<a id="ae7a2455944f424729fc7ebe393149e03" name="ae7a2455944f424729fc7ebe393149e03"></a>struct <a class="el" href="#structHieroglyphsFXData">HieroglyphsFXData</a> *</td>
 <td class="fieldname">
 hieroglyphs</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a752f95af4df1da5f4f2a64b70d7a305a" name="a752f95af4df1da5f4f2a64b70d7a305a"></a>struct <a class="el" href="#structHuffPuffBreathFXData">HuffPuffBreathFXData</a> *</td>
+<a id="aedfea8fa5930c85faee183ccbf8e9a64" name="aedfea8fa5930c85faee183ccbf8e9a64"></a>struct <a class="el" href="#structHuffPuffBreathFXData">HuffPuffBreathFXData</a> *</td>
 <td class="fieldname">
 huffPuffBreath</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a91fade4f26ee0244834184005a19a75d" name="a91fade4f26ee0244834184005a19a75d"></a>struct <a class="el" href="#structIcePillarFXData">IcePillarFXData</a> *</td>
+<a id="a5113b813bb366a8661218d3edc736974" name="a5113b813bb366a8661218d3edc736974"></a>struct <a class="el" href="#structIcePillarFXData">IcePillarFXData</a> *</td>
 <td class="fieldname">
 icePillar</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae62c7dea2e320b9e6044eb39073dc811" name="ae62c7dea2e320b9e6044eb39073dc811"></a>struct <a class="el" href="#structIceShardFXData">IceShardFXData</a> *</td>
+<a id="a58766dc174a2ec4fbf6a70f345c2b00e" name="a58766dc174a2ec4fbf6a70f345c2b00e"></a>struct <a class="el" href="#structIceShardFXData">IceShardFXData</a> *</td>
 <td class="fieldname">
 iceShard</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a583f4700b9cf9861dc1b778524f37fd0" name="a583f4700b9cf9861dc1b778524f37fd0"></a>struct <a class="el" href="#structLandingDustFXData">LandingDustFXData</a> *</td>
+<a id="a283437759ff3798f05d9b9f69753a95c" name="a283437759ff3798f05d9b9f69753a95c"></a>struct <a class="el" href="#structLandingDustFXData">LandingDustFXData</a> *</td>
 <td class="fieldname">
 landingDust</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3f49f5ca41dff0df7576a3c4a34abd3a" name="a3f49f5ca41dff0df7576a3c4a34abd3a"></a>struct <a class="el" href="#structLensFlareFXData">LensFlareFXData</a> *</td>
+<a id="a9d7cac567e3a23aae2e3d4b480812ca1" name="a9d7cac567e3a23aae2e3d4b480812ca1"></a>struct <a class="el" href="#structLensFlareFXData">LensFlareFXData</a> *</td>
 <td class="fieldname">
 lensFlare</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a1d52feb3b2b37952b51c85f826b7f7ba" name="a1d52feb3b2b37952b51c85f826b7f7ba"></a>struct <a class="el" href="#structLightningFXData">LightningFXData</a> *</td>
+<a id="a34dff2845282c98351e8905bdea9cd8e" name="a34dff2845282c98351e8905bdea9cd8e"></a>struct <a class="el" href="#structLightningFXData">LightningFXData</a> *</td>
 <td class="fieldname">
 lightning</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a22e08ddbe583ac803edb10d330a60204" name="a22e08ddbe583ac803edb10d330a60204"></a>struct <a class="el" href="#structLightningBoltFXData">LightningBoltFXData</a> *</td>
+<a id="a8c3028aa5cf9ea5ef8a395ea6786913b" name="a8c3028aa5cf9ea5ef8a395ea6786913b"></a>struct <a class="el" href="#structLightningBoltFXData">LightningBoltFXData</a> *</td>
 <td class="fieldname">
 lightningBolt</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6d6cc51b5f07be6f486ddbadc5ace97c" name="a6d6cc51b5f07be6f486ddbadc5ace97c"></a>struct <a class="el" href="#structLightRaysFXData">LightRaysFXData</a> *</td>
+<a id="a0baec70066904bb134b59eca27a8561c" name="a0baec70066904bb134b59eca27a8561c"></a>struct <a class="el" href="#structLightRaysFXData">LightRaysFXData</a> *</td>
 <td class="fieldname">
 lightRays</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a2a286b87c90e84dc20a735f2e071a850" name="a2a286b87c90e84dc20a735f2e071a850"></a>struct <a class="el" href="#structLilOinkFXData">LilOinkFXData</a> *</td>
+<a id="a80555f6922db9f11b3f3b72ec65753c9" name="a80555f6922db9f11b3f3b72ec65753c9"></a>struct <a class="el" href="#structLilOinkFXData">LilOinkFXData</a> *</td>
 <td class="fieldname">
 lilOink</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0c845e494dc0766d7277d15a99c93f6e" name="a0c845e494dc0766d7277d15a99c93f6e"></a>struct <a class="el" href="#structMerlinHouseStarsFXData">MerlinHouseStarsFXData</a> *</td>
+<a id="a6008589721533268389c4ee22a035652" name="a6008589721533268389c4ee22a035652"></a>struct <a class="el" href="#structMerlinHouseStarsFXData">MerlinHouseStarsFXData</a> *</td>
 <td class="fieldname">
 merlinHouseStars</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a726f12254b37b76c44e2368377942954" name="a726f12254b37b76c44e2368377942954"></a>struct <a class="el" href="#structMiscParticlesFXData">MiscParticlesFXData</a> *</td>
+<a id="a2822a602e6eabd04adcf4974f8f9cc2e" name="a2822a602e6eabd04adcf4974f8f9cc2e"></a>struct <a class="el" href="#structMiscParticlesFXData">MiscParticlesFXData</a> *</td>
 <td class="fieldname">
 miscParticles</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aacab857c4e19e9dcd0537f0d6bc46a05" name="aacab857c4e19e9dcd0537f0d6bc46a05"></a>struct <a class="el" href="#structMotionBlurFlameFXData">MotionBlurFlameFXData</a> *</td>
+<a id="abf323c6ebdaa1476970ed2f48c56b3c0" name="abf323c6ebdaa1476970ed2f48c56b3c0"></a>struct <a class="el" href="#structMotionBlurFlameFXData">MotionBlurFlameFXData</a> *</td>
 <td class="fieldname">
 motionBlurFlame</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aae42b861acd46a800748acfa7789ec89" name="aae42b861acd46a800748acfa7789ec89"></a>struct <a class="el" href="#structMovingCloudFXData">MovingCloudFXData</a> *</td>
+<a id="adc5061db2c1c6a459f644317071ddf4c" name="adc5061db2c1c6a459f644317071ddf4c"></a>struct <a class="el" href="#structMovingCloudFXData">MovingCloudFXData</a> *</td>
 <td class="fieldname">
 movingCloud</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5f74ca51bb923fdc517c5e65da937efa" name="a5f74ca51bb923fdc517c5e65da937efa"></a>struct <a class="el" href="#structMusicNoteFXData">MusicNoteFXData</a> *</td>
+<a id="ac95001729af6f9bda59c4249c74e4124" name="ac95001729af6f9bda59c4249c74e4124"></a>struct <a class="el" href="#structMusicNoteFXData">MusicNoteFXData</a> *</td>
 <td class="fieldname">
 musicNote</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a732eaf438029f048e37c74c38f2dcd43" name="a732eaf438029f048e37c74c38f2dcd43"></a>struct <a class="el" href="#structPartnerBuffFXData">PartnerBuffFXData</a> *</td>
+<a id="a7e2656c839bd12fdfa18871399fbb526" name="a7e2656c839bd12fdfa18871399fbb526"></a>struct <a class="el" href="#structPartnerBuffFXData">PartnerBuffFXData</a> *</td>
 <td class="fieldname">
 partnerBuff</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a77ccee692713f0bf2ebce5a570f884ab" name="a77ccee692713f0bf2ebce5a570f884ab"></a>struct <a class="el" href="#structPeachStarBeamFXData">PeachStarBeamFXData</a> *</td>
+<a id="af4c2e95aacb525f65328de19fa302f7b" name="af4c2e95aacb525f65328de19fa302f7b"></a>struct <a class="el" href="#structPeachStarBeamFXData">PeachStarBeamFXData</a> *</td>
 <td class="fieldname">
 peachStarBeam</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6da0e08e96370717e63cb3c944f41373" name="a6da0e08e96370717e63cb3c944f41373"></a>struct <a class="el" href="#structPinkSparklesFXData">PinkSparklesFXData</a> *</td>
+<a id="a8735db975c073a896754e3f29005a2e5" name="a8735db975c073a896754e3f29005a2e5"></a>struct <a class="el" href="#structPinkSparklesFXData">PinkSparklesFXData</a> *</td>
 <td class="fieldname">
 pinkSparkles</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a684e005c2fb4a0abca84203c6c5fe83b" name="a684e005c2fb4a0abca84203c6c5fe83b"></a>struct <a class="el" href="#structPurpleRingFXData">PurpleRingFXData</a> *</td>
+<a id="ac74372a45df4e77c5984bdb0810c3006" name="ac74372a45df4e77c5984bdb0810c3006"></a>struct <a class="el" href="#structPurpleRingFXData">PurpleRingFXData</a> *</td>
 <td class="fieldname">
 purpleRing</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad53875f9eb2212acb1d54e144796ac02" name="ad53875f9eb2212acb1d54e144796ac02"></a>void *</td>
+<a id="a40247e430ccf3bd39a26b148f3ff3ac6" name="a40247e430ccf3bd39a26b148f3ff3ac6"></a>void *</td>
 <td class="fieldname">
 quizmoAnswer</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a800fb4912087fa574993e7623711a35f" name="a800fb4912087fa574993e7623711a35f"></a>struct <a class="el" href="#structQuizmoAssistantFXData">QuizmoAssistantFXData</a> *</td>
+<a id="a619f06d466061f218914d5eef2e39d7a" name="a619f06d466061f218914d5eef2e39d7a"></a>struct <a class="el" href="#structQuizmoAssistantFXData">QuizmoAssistantFXData</a> *</td>
 <td class="fieldname">
 quizmoAssistant</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a53a7a4d2b8ed695b218c50317c1a661e" name="a53a7a4d2b8ed695b218c50317c1a661e"></a>struct <a class="el" href="#structQuizmoAudienceFXData">QuizmoAudienceFXData</a> *</td>
+<a id="af326b59140b81f7386c15bf5b4fee117" name="af326b59140b81f7386c15bf5b4fee117"></a>struct <a class="el" href="#structQuizmoAudienceFXData">QuizmoAudienceFXData</a> *</td>
 <td class="fieldname">
 quizmoAudience</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6871d510656c493633fa18697f827813" name="a6871d510656c493633fa18697f827813"></a>struct <a class="el" href="#structQuizmoStageFXData">QuizmoStageFXData</a> *</td>
+<a id="acd00e0202b15a20a52494a2f4fe19636" name="acd00e0202b15a20a52494a2f4fe19636"></a>struct <a class="el" href="#structQuizmoStageFXData">QuizmoStageFXData</a> *</td>
 <td class="fieldname">
 quizmoStage</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a87c7e1ce69a89ccf07f5958628a73bd1" name="a87c7e1ce69a89ccf07f5958628a73bd1"></a>struct <a class="el" href="#structRadialShimmerFXData">RadialShimmerFXData</a> *</td>
+<a id="a988b7754f6116fa14179ce3b0002d05d" name="a988b7754f6116fa14179ce3b0002d05d"></a>struct <a class="el" href="#structRadialShimmerFXData">RadialShimmerFXData</a> *</td>
 <td class="fieldname">
 radialShimmer</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a87db7ccba5ba0b8ed74afe1a9488e490" name="a87db7ccba5ba0b8ed74afe1a9488e490"></a>struct <a class="el" href="#structRadiatingEnergyOrbFXData">RadiatingEnergyOrbFXData</a> *</td>
+<a id="a154f7c3e09203ce33101661fff4034e3" name="a154f7c3e09203ce33101661fff4034e3"></a>struct <a class="el" href="#structRadiatingEnergyOrbFXData">RadiatingEnergyOrbFXData</a> *</td>
 <td class="fieldname">
 radiatingEnergyOrb</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afdaf00667dc3b932dadf5ee6131a5c6b" name="afdaf00667dc3b932dadf5ee6131a5c6b"></a>struct <a class="el" href="#structRecoverFXData">RecoverFXData</a> *</td>
+<a id="aa118bd9a4ca4c45d0140e64826936917" name="aa118bd9a4ca4c45d0140e64826936917"></a>struct <a class="el" href="#structRecoverFXData">RecoverFXData</a> *</td>
 <td class="fieldname">
 recover</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae3b01d96922ead6dc5e0de139f7d0693" name="ae3b01d96922ead6dc5e0de139f7d0693"></a>struct <a class="el" href="#structRedImpactFXData">RedImpactFXData</a> *</td>
+<a id="a5d74059710f21d58abbf2e3808616511" name="a5d74059710f21d58abbf2e3808616511"></a>struct <a class="el" href="#structRedImpactFXData">RedImpactFXData</a> *</td>
 <td class="fieldname">
 redImpact</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a420a7317957bcff325f21a7940290b1e" name="a420a7317957bcff325f21a7940290b1e"></a>struct <a class="el" href="#structRingBlastFXData">RingBlastFXData</a> *</td>
+<a id="ae940043d0ae9792d7cd2f815da631a91" name="ae940043d0ae9792d7cd2f815da631a91"></a>struct <a class="el" href="#structRingBlastFXData">RingBlastFXData</a> *</td>
 <td class="fieldname">
 ringBlast</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a637517a3831d217cf0feb0f51784ea54" name="a637517a3831d217cf0feb0f51784ea54"></a>struct <a class="el" href="#structRisingBubbleFXData">RisingBubbleFXData</a> *</td>
+<a id="afdf7d0d86b586a3437b6cb9ff4e2ed11" name="afdf7d0d86b586a3437b6cb9ff4e2ed11"></a>struct <a class="el" href="#structRisingBubbleFXData">RisingBubbleFXData</a> *</td>
 <td class="fieldname">
 risingBubble</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="abeaeed26cec40c05d37fa9a33b1ecc10" name="abeaeed26cec40c05d37fa9a33b1ecc10"></a>struct <a class="el" href="#structShapeSpellFXData">ShapeSpellFXData</a> *</td>
+<a id="a0710256b8b68b08c7e80427e6fd00bae" name="a0710256b8b68b08c7e80427e6fd00bae"></a>struct <a class="el" href="#structShapeSpellFXData">ShapeSpellFXData</a> *</td>
 <td class="fieldname">
 shapeSpell</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a2764546449ee119baa9e01b61cb2adce" name="a2764546449ee119baa9e01b61cb2adce"></a>struct <a class="el" href="#structShatteringStonesFXData">ShatteringStonesFXData</a> *</td>
+<a id="a2f87f7ea2cd0ba6dcaf8ee2a70e419c1" name="a2f87f7ea2cd0ba6dcaf8ee2a70e419c1"></a>struct <a class="el" href="#structShatteringStonesFXData">ShatteringStonesFXData</a> *</td>
 <td class="fieldname">
 shatteringStones</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a26a58df500a9b89aa4e645bfcbc65ada" name="a26a58df500a9b89aa4e645bfcbc65ada"></a>struct <a class="el" href="#structShimmerBurstFXData">ShimmerBurstFXData</a> *</td>
+<a id="ada44f5c1f1aed2df6816b5565ab53241" name="ada44f5c1f1aed2df6816b5565ab53241"></a>struct <a class="el" href="#structShimmerBurstFXData">ShimmerBurstFXData</a> *</td>
 <td class="fieldname">
 shimmerBurst</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a494c5a71b8b0be960691359e180ddd00" name="a494c5a71b8b0be960691359e180ddd00"></a>struct <a class="el" href="#structShimmerWaveFXData">ShimmerWaveFXData</a> *</td>
+<a id="a1069e1c2687980f4884a6a0a755632e6" name="a1069e1c2687980f4884a6a0a755632e6"></a>struct <a class="el" href="#structShimmerWaveFXData">ShimmerWaveFXData</a> *</td>
 <td class="fieldname">
 shimmerWave</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="acdacbd3377462837729860fb5e8398ac" name="acdacbd3377462837729860fb5e8398ac"></a>struct <a class="el" href="#structShinyFlareFXData">ShinyFlareFXData</a> *</td>
+<a id="a17a3b781837474bb26eb15d91275fef5" name="a17a3b781837474bb26eb15d91275fef5"></a>struct <a class="el" href="#structShinyFlareFXData">ShinyFlareFXData</a> *</td>
 <td class="fieldname">
 shinyFlare</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad3d833a365924d0d5a5be8db5e40815e" name="ad3d833a365924d0d5a5be8db5e40815e"></a>struct <a class="el" href="#structShockwaveFXData">ShockwaveFXData</a> *</td>
+<a id="ade6c24edbe0886571497b149717e115d" name="ade6c24edbe0886571497b149717e115d"></a>struct <a class="el" href="#structShockwaveFXData">ShockwaveFXData</a> *</td>
 <td class="fieldname">
 shockwave</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa692b14b79ab047387f48e90cc0beec7" name="aa692b14b79ab047387f48e90cc0beec7"></a>struct <a class="el" href="#structSleepBubbleFXData">SleepBubbleFXData</a> *</td>
+<a id="a566e0c0fb7abb364d709942be6e1abf9" name="a566e0c0fb7abb364d709942be6e1abf9"></a>struct <a class="el" href="#structSleepBubbleFXData">SleepBubbleFXData</a> *</td>
 <td class="fieldname">
 sleepBubble</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ada49c778f585a38d04d5d11ad7010a84" name="ada49c778f585a38d04d5d11ad7010a84"></a>struct <a class="el" href="#structSmallGoldSparkleFXData">SmallGoldSparkleFXData</a> *</td>
+<a id="a0d141fecee28420a43b6e8e0cc390404" name="a0d141fecee28420a43b6e8e0cc390404"></a>struct <a class="el" href="#structSmallGoldSparkleFXData">SmallGoldSparkleFXData</a> *</td>
 <td class="fieldname">
 smallGoldSparkle</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3a6ed5aac0711e64715d7cde6026fb6a" name="a3a6ed5aac0711e64715d7cde6026fb6a"></a>struct <a class="el" href="#structSmokeBurstFXData">SmokeBurstFXData</a> *</td>
+<a id="a393c7a5dbeeef73ba8bfdb6e3ee7dcec" name="a393c7a5dbeeef73ba8bfdb6e3ee7dcec"></a>struct <a class="el" href="#structSmokeBurstFXData">SmokeBurstFXData</a> *</td>
 <td class="fieldname">
 smokeBurst</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a73d4138950b03e1563b4b5a712ae6dbb" name="a73d4138950b03e1563b4b5a712ae6dbb"></a>struct <a class="el" href="#structSmokeImpactFXData">SmokeImpactFXData</a> *</td>
+<a id="abe5630162f62a85f7f3d85072290ca93" name="abe5630162f62a85f7f3d85072290ca93"></a>struct <a class="el" href="#structSmokeImpactFXData">SmokeImpactFXData</a> *</td>
 <td class="fieldname">
 smokeImpact</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad35c13304da169f24fbea46384437054" name="ad35c13304da169f24fbea46384437054"></a>struct <a class="el" href="#structSmokeRingFXData">SmokeRingFXData</a> *</td>
+<a id="a40cc3693fdfc3ab15bda3fa1270e6f5c" name="a40cc3693fdfc3ab15bda3fa1270e6f5c"></a>struct <a class="el" href="#structSmokeRingFXData">SmokeRingFXData</a> *</td>
 <td class="fieldname">
 smokeRing</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9a3c7ac8563ba29ecb0380392af36c9d" name="a9a3c7ac8563ba29ecb0380392af36c9d"></a>struct <a class="el" href="#structSnakingStaticFXData">SnakingStaticFXData</a> *</td>
+<a id="a43b38b7be20617b09efba9d581b66664" name="a43b38b7be20617b09efba9d581b66664"></a>struct <a class="el" href="#structSnakingStaticFXData">SnakingStaticFXData</a> *</td>
 <td class="fieldname">
 snakingStatic</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a40f4d74b6ce6871f4db6f2a77d8170ab" name="a40f4d74b6ce6871f4db6f2a77d8170ab"></a>struct <a class="el" href="#structSnowfallFXData">SnowfallFXData</a> *</td>
+<a id="a32622f720c16fc4eb96e203cd62ebc00" name="a32622f720c16fc4eb96e203cd62ebc00"></a>struct <a class="el" href="#structSnowfallFXData">SnowfallFXData</a> *</td>
 <td class="fieldname">
 snowfall</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3beb517aa8d5d26bef2414c76dd92691" name="a3beb517aa8d5d26bef2414c76dd92691"></a>struct <a class="el" href="#structSnowflakeFXData">SnowflakeFXData</a> *</td>
+<a id="a1522d4726d4d784baab893924bc20bb1" name="a1522d4726d4d784baab893924bc20bb1"></a>struct <a class="el" href="#structSnowflakeFXData">SnowflakeFXData</a> *</td>
 <td class="fieldname">
 snowflake</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a397624a8b704b1207922c4beeb1c3a28" name="a397624a8b704b1207922c4beeb1c3a28"></a>struct <a class="el" href="#structSnowmanDollFXData">SnowmanDollFXData</a> *</td>
+<a id="a82517822f0137f902a1ac45a08fffa30" name="a82517822f0137f902a1ac45a08fffa30"></a>struct <a class="el" href="#structSnowmanDollFXData">SnowmanDollFXData</a> *</td>
 <td class="fieldname">
 snowmanDoll</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a56bc43407519a90e24e59f7694631d3f" name="a56bc43407519a90e24e59f7694631d3f"></a>struct <a class="el" href="#structSomethingRotatingFXData">SomethingRotatingFXData</a> *</td>
+<a id="a42ae0a2a879a2da8cc7c63d2dd7437b7" name="a42ae0a2a879a2da8cc7c63d2dd7437b7"></a>struct <a class="el" href="#structSomethingRotatingFXData">SomethingRotatingFXData</a> *</td>
 <td class="fieldname">
 somethingRotating</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a1b02700b82c20e2bfde607d55ce19259" name="a1b02700b82c20e2bfde607d55ce19259"></a>struct <a class="el" href="#structSparklesFXData">SparklesFXData</a> *</td>
+<a id="addedd41a55d70c722aaa6147829fe46a" name="addedd41a55d70c722aaa6147829fe46a"></a>struct <a class="el" href="#structSparklesFXData">SparklesFXData</a> *</td>
 <td class="fieldname">
 sparkles</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5946b5a0588ca97ff84eaaaf263b30b3" name="a5946b5a0588ca97ff84eaaaf263b30b3"></a>struct <a class="el" href="#structSpikyWhiteAuraFXData">SpikyWhiteAuraFXData</a> *</td>
+<a id="a0612a994a08b13359a4da7702678473b" name="a0612a994a08b13359a4da7702678473b"></a>struct <a class="el" href="#structSpikyWhiteAuraFXData">SpikyWhiteAuraFXData</a> *</td>
 <td class="fieldname">
 spikyWhiteAura</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad9486bff9f989c63d288a62b7c83fe40" name="ad9486bff9f989c63d288a62b7c83fe40"></a>struct <a class="el" href="#structSpinFXData">SpinFXData</a> *</td>
+<a id="a3d722f61e5a03de7ec42621b7e30476a" name="a3d722f61e5a03de7ec42621b7e30476a"></a>struct <a class="el" href="#structSpinFXData">SpinFXData</a> *</td>
 <td class="fieldname">
 spin</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9878fe8abe35fdac16ac36f96bcf5d35" name="a9878fe8abe35fdac16ac36f96bcf5d35"></a>struct <a class="el" href="#structSpiritCardFXData">SpiritCardFXData</a> *</td>
+<a id="ad1fd90392648b0fb31dbd3f81d68cf0e" name="ad1fd90392648b0fb31dbd3f81d68cf0e"></a>struct <a class="el" href="#structSpiritCardFXData">SpiritCardFXData</a> *</td>
 <td class="fieldname">
 spiritCard</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab3aac59d79c579ff6c5d2c12f1a6804e" name="ab3aac59d79c579ff6c5d2c12f1a6804e"></a>struct <a class="el" href="#structSquirtFXData">SquirtFXData</a> *</td>
+<a id="ae96413cb24867e38e0de10f55fd6ea43" name="ae96413cb24867e38e0de10f55fd6ea43"></a>struct <a class="el" href="#structSquirtFXData">SquirtFXData</a> *</td>
 <td class="fieldname">
 squirt</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="acc1f8f950967cc9a8eab915ac81e4ee4" name="acc1f8f950967cc9a8eab915ac81e4ee4"></a>struct <a class="el" href="#structStarFXData">StarFXData</a> *</td>
+<a id="a9a4ca6ae36305a672b7a2e3aed7a5062" name="a9a4ca6ae36305a672b7a2e3aed7a5062"></a>struct <a class="el" href="#structStarFXData">StarFXData</a> *</td>
 <td class="fieldname">
 star</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab6b49a6ecd7b363dab76ab5cb3fa821f" name="ab6b49a6ecd7b363dab76ab5cb3fa821f"></a>struct <a class="el" href="#structStarOutlineFXData">StarOutlineFXData</a> *</td>
+<a id="aaf3813fb8af2f500ec54cbf3cbc446be" name="aaf3813fb8af2f500ec54cbf3cbc446be"></a>struct <a class="el" href="#structStarOutlineFXData">StarOutlineFXData</a> *</td>
 <td class="fieldname">
 starOutline</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7ab423ae4d960fec57e08edc80eb3a3d" name="a7ab423ae4d960fec57e08edc80eb3a3d"></a>struct <a class="el" href="#structStarsBurstFXData">StarsBurstFXData</a> *</td>
+<a id="ac997c29b53bd74bd69484c4baed8ca4f" name="ac997c29b53bd74bd69484c4baed8ca4f"></a>struct <a class="el" href="#structStarsBurstFXData">StarsBurstFXData</a> *</td>
 <td class="fieldname">
 starsBurst</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4c91a0ed38e14bbebb116dcd59a2d8c4" name="a4c91a0ed38e14bbebb116dcd59a2d8c4"></a>struct <a class="el" href="#structStarsOrbitingFXData">StarsOrbitingFXData</a> *</td>
+<a id="a2448324a502bb5c0086f249a53d64c67" name="a2448324a502bb5c0086f249a53d64c67"></a>struct <a class="el" href="#structStarsOrbitingFXData">StarsOrbitingFXData</a> *</td>
 <td class="fieldname">
 starsOrbiting</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad5b55b9b4c3f9879f3bebf02f46d80ce" name="ad5b55b9b4c3f9879f3bebf02f46d80ce"></a>struct <a class="el" href="#structStarSpiritsEnergyFXData">StarSpiritsEnergyFXData</a> *</td>
+<a id="a3345234448613708eab1dae64d9c1ea8" name="a3345234448613708eab1dae64d9c1ea8"></a>struct <a class="el" href="#structStarSpiritsEnergyFXData">StarSpiritsEnergyFXData</a> *</td>
 <td class="fieldname">
 starSpiritsEnergy</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a161b971fbedeaf81566cd7d7c1b4a759" name="a161b971fbedeaf81566cd7d7c1b4a759"></a>struct <a class="el" href="#structStarsShimmerFXData">StarsShimmerFXData</a> *</td>
+<a id="ab47c78b47caa2afe546c1dad61477a0a" name="ab47c78b47caa2afe546c1dad61477a0a"></a>struct <a class="el" href="#structStarsShimmerFXData">StarsShimmerFXData</a> *</td>
 <td class="fieldname">
 starsShimmer</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9772d042e51ea32264ae83e8c3227f37" name="a9772d042e51ea32264ae83e8c3227f37"></a>struct <a class="el" href="#structStarsSpreadFXData">StarsSpreadFXData</a> *</td>
+<a id="a2301deda55da6d4cb3c75b71a2569fa0" name="a2301deda55da6d4cb3c75b71a2569fa0"></a>struct <a class="el" href="#structStarsSpreadFXData">StarsSpreadFXData</a> *</td>
 <td class="fieldname">
 starsSpread</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a2c1472453f96cc0cecca6dc2c9f1b74d" name="a2c1472453f96cc0cecca6dc2c9f1b74d"></a>struct <a class="el" href="#structStatChangeFXData">StatChangeFXData</a> *</td>
+<a id="a983133bbfcd24fb09eef00a8a2832c4e" name="a983133bbfcd24fb09eef00a8a2832c4e"></a>struct <a class="el" href="#structStatChangeFXData">StatChangeFXData</a> *</td>
 <td class="fieldname">
 statChange</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aba7bc0b9f5f944380ce2900a49d84233" name="aba7bc0b9f5f944380ce2900a49d84233"></a>struct <a class="el" href="#structStaticStatusFXData">StaticStatusFXData</a> *</td>
+<a id="a7fb87b8e7e6d712fcbef24a5c048112f" name="a7fb87b8e7e6d712fcbef24a5c048112f"></a>struct <a class="el" href="#structStaticStatusFXData">StaticStatusFXData</a> *</td>
 <td class="fieldname">
 staticStatus</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a85ba9255c36668f0eb3ea4e59bb251f0" name="a85ba9255c36668f0eb3ea4e59bb251f0"></a>struct <a class="el" href="#structSteamBurstFXData">SteamBurstFXData</a> *</td>
+<a id="a697ef99e8475d1c8c2baefd57b2cebb6" name="a697ef99e8475d1c8c2baefd57b2cebb6"></a>struct <a class="el" href="#structSteamBurstFXData">SteamBurstFXData</a> *</td>
 <td class="fieldname">
 steamBurst</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a276a98c44be2ac169ef8a5ac520f5373" name="a276a98c44be2ac169ef8a5ac520f5373"></a>struct <a class="el" href="#structStopWatchFXData">StopWatchFXData</a> *</td>
+<a id="af676496c478062daf822df790bd78b80" name="af676496c478062daf822df790bd78b80"></a>struct <a class="el" href="#structStopWatchFXData">StopWatchFXData</a> *</td>
 <td class="fieldname">
 stopWatch</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a499b33ce7f88d0c0e62b63dfa50acb5a" name="a499b33ce7f88d0c0e62b63dfa50acb5a"></a>struct <a class="el" href="#structSunFXData">SunFXData</a> *</td>
+<a id="a385c8878701ecf3be8d2a839051d077b" name="a385c8878701ecf3be8d2a839051d077b"></a>struct <a class="el" href="#structSunFXData">SunFXData</a> *</td>
 <td class="fieldname">
 sun</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad202f5fd3e77dabbda5fc9450d4e5326" name="ad202f5fd3e77dabbda5fc9450d4e5326"></a>struct <a class="el" href="#structSweatFXData">SweatFXData</a> *</td>
+<a id="a9ae0ab0a61827a52af6fd12ed7c4c975" name="a9ae0ab0a61827a52af6fd12ed7c4c975"></a>struct <a class="el" href="#structSweatFXData">SweatFXData</a> *</td>
 <td class="fieldname">
 sweat</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a08277af25f4f6e0c8dd540cf0a14e435" name="a08277af25f4f6e0c8dd540cf0a14e435"></a>struct <a class="el" href="#structTattleWindowFXData">TattleWindowFXData</a> *</td>
+<a id="af8e06dda3299386995a5b0a4f8a2efe0" name="af8e06dda3299386995a5b0a4f8a2efe0"></a>struct <a class="el" href="#structTattleWindowFXData">TattleWindowFXData</a> *</td>
 <td class="fieldname">
 tattleWindow</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac7938d01df9256ab9e1e92051999ce40" name="ac7938d01df9256ab9e1e92051999ce40"></a>struct <a class="el" href="#structThrowSpinyFXData">ThrowSpinyFXData</a> *</td>
+<a id="a6765c5bdc6d0f83aeb787bf486659021" name="a6765c5bdc6d0f83aeb787bf486659021"></a>struct <a class="el" href="#structThrowSpinyFXData">ThrowSpinyFXData</a> *</td>
 <td class="fieldname">
 throwSpiny</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af3722a23c62b40a42b4c5f69309f3d4f" name="af3722a23c62b40a42b4c5f69309f3d4f"></a>struct <a class="el" href="#structThunderboltRingFXData">ThunderboltRingFXData</a> *</td>
+<a id="ac49f6f6e507edc9e47ded6e81f46d002" name="ac49f6f6e507edc9e47ded6e81f46d002"></a>struct <a class="el" href="#structThunderboltRingFXData">ThunderboltRingFXData</a> *</td>
 <td class="fieldname">
 thunderboltRing</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aab063130952bad310eec13bd4ba06dda" name="aab063130952bad310eec13bd4ba06dda"></a>struct <a class="el" href="#structTubbaHeartAttackFXData">TubbaHeartAttackFXData</a> *</td>
+<a id="ad2373a5ae525b7299a59c6720fb87a5d" name="ad2373a5ae525b7299a59c6720fb87a5d"></a>struct <a class="el" href="#structTubbaHeartAttackFXData">TubbaHeartAttackFXData</a> *</td>
 <td class="fieldname">
 tubbaHeartAttack</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aee6cf3a357c3c540e8b9376ba9c71c5b" name="aee6cf3a357c3c540e8b9376ba9c71c5b"></a>struct <a class="el" href="#structUnderwaterFXData">UnderwaterFXData</a> *</td>
+<a id="a98838765bde25f47425462d4fc655e91" name="a98838765bde25f47425462d4fc655e91"></a>struct <a class="el" href="#structUnderwaterFXData">UnderwaterFXData</a> *</td>
 <td class="fieldname">
 underwater</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa4d1645c4adc33fd17108ab6f8687837" name="aa4d1645c4adc33fd17108ab6f8687837"></a>struct Effect00FXData *</td>
+<a id="a36339bea8fac15c4d43f00dc1b4c5dcf" name="a36339bea8fac15c4d43f00dc1b4c5dcf"></a>struct Effect00FXData *</td>
 <td class="fieldname">
 unk_00</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab26926b71c456bf6013e249a996c894d" name="ab26926b71c456bf6013e249a996c894d"></a>struct Effect02FXData *</td>
+<a id="a6dfb92db94edb59c7c25de52da263fb6" name="a6dfb92db94edb59c7c25de52da263fb6"></a>struct Effect02FXData *</td>
 <td class="fieldname">
 unk_02</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="acec27ffde66e36d0a09dfd5ded738d82" name="acec27ffde66e36d0a09dfd5ded738d82"></a>struct Effect03FXData *</td>
+<a id="af88cdfb640dc55854b6a0c0fd10d7401" name="af88cdfb640dc55854b6a0c0fd10d7401"></a>struct Effect03FXData *</td>
 <td class="fieldname">
 unk_03</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4b8a99fef86320fcfeb79d27f6f9a4ed" name="a4b8a99fef86320fcfeb79d27f6f9a4ed"></a>struct Effect04FXData *</td>
+<a id="adc08d48c0254119000d402cb5cadd717" name="adc08d48c0254119000d402cb5cadd717"></a>struct Effect04FXData *</td>
 <td class="fieldname">
 unk_04</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a026c1311fc096808a8549a2c80967050" name="a026c1311fc096808a8549a2c80967050"></a>struct Effect05FXData *</td>
+<a id="ad9be6310b456a4264802fd166dfdbc26" name="ad9be6310b456a4264802fd166dfdbc26"></a>struct Effect05FXData *</td>
 <td class="fieldname">
 unk_05</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a06b73a287fdefc95f5eeea34cf69f7bd" name="a06b73a287fdefc95f5eeea34cf69f7bd"></a>struct Unk2AFXData *</td>
+<a id="aaaf8b800e2a11da6b58f6f5c1e57a09a" name="aaaf8b800e2a11da6b58f6f5c1e57a09a"></a>struct Unk2AFXData *</td>
 <td class="fieldname">
 unk_2A</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="acbda319eb31d32a9fe1551d3eff7c565" name="acbda319eb31d32a9fe1551d3eff7c565"></a>struct <a class="el" href="#structEffect3DFXData">Effect3DFXData</a> *</td>
+<a id="a8708d96d6a1766d70a7640adc0838a8f" name="a8708d96d6a1766d70a7640adc0838a8f"></a>struct <a class="el" href="#structEffect3DFXData">Effect3DFXData</a> *</td>
 <td class="fieldname">
 unk_3D</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a26d976d6bcf20045317fe852110fb62f" name="a26d976d6bcf20045317fe852110fb62f"></a>struct <a class="el" href="#structEffect63FXData">Effect63FXData</a> *</td>
+<a id="a8030c69324bd82a76328c69ef92fb07b" name="a8030c69324bd82a76328c69ef92fb07b"></a>struct <a class="el" href="#structEffect63FXData">Effect63FXData</a> *</td>
 <td class="fieldname">
 unk_63</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7f8ca75299f0464065ecd09f8efd7efd" name="a7f8ca75299f0464065ecd09f8efd7efd"></a>struct <a class="el" href="#structEffect65FXData">Effect65FXData</a> *</td>
+<a id="a78d18eea2e361ef160bb0c5d370551b6" name="a78d18eea2e361ef160bb0c5d370551b6"></a>struct <a class="el" href="#structEffect65FXData">Effect65FXData</a> *</td>
 <td class="fieldname">
 unk_65</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="adfa9a69d7d29e077ab75d5de80a104aa" name="adfa9a69d7d29e077ab75d5de80a104aa"></a>struct Effect6AFXData *</td>
+<a id="ab70c6e19b5a302108110b8ef3c1212a1" name="ab70c6e19b5a302108110b8ef3c1212a1"></a>struct Effect6AFXData *</td>
 <td class="fieldname">
 unk_6A</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="adf30b81958ac2f0f0109687785add36e" name="adf30b81958ac2f0f0109687785add36e"></a>struct <a class="el" href="#structEffect75FXData">Effect75FXData</a> *</td>
+<a id="a19a0afcaf1065cf70e6a968ab9b82fcb" name="a19a0afcaf1065cf70e6a968ab9b82fcb"></a>struct <a class="el" href="#structEffect75FXData">Effect75FXData</a> *</td>
 <td class="fieldname">
 unk_75</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afe8ed2136501c8f5057065f1dcf83100" name="afe8ed2136501c8f5057065f1dcf83100"></a>struct Effect76FXData *</td>
+<a id="a08a0ac7906f0fb330bc04c9540c403d4" name="a08a0ac7906f0fb330bc04c9540c403d4"></a>struct Effect76FXData *</td>
 <td class="fieldname">
 unk_76</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac81242094d4877da9ca2563640746ca6" name="ac81242094d4877da9ca2563640746ca6"></a>struct <a class="el" href="#structEffect86FXData">Effect86FXData</a> *</td>
+<a id="a5e8861c6e109a0fb2475cd5d9ba41fa4" name="a5e8861c6e109a0fb2475cd5d9ba41fa4"></a>struct <a class="el" href="#structEffect86FXData">Effect86FXData</a> *</td>
 <td class="fieldname">
 unk_86</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a52c3b355644681b8373808188c0f2b05" name="a52c3b355644681b8373808188c0f2b05"></a>struct <a class="el" href="#structWalkingDustFXData">WalkingDustFXData</a> *</td>
+<a id="a98a3ce8d5ae794b2042052fc6a3501fe" name="a98a3ce8d5ae794b2042052fc6a3501fe"></a>struct <a class="el" href="#structWalkingDustFXData">WalkingDustFXData</a> *</td>
 <td class="fieldname">
 walkingDust</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3f88d16d28c6e489848986b29f958ddb" name="a3f88d16d28c6e489848986b29f958ddb"></a>struct <a class="el" href="#structWaterBlockFXData">WaterBlockFXData</a> *</td>
+<a id="a0eebe99ff720b8931aaf293e7575d2f0" name="a0eebe99ff720b8931aaf293e7575d2f0"></a>struct <a class="el" href="#structWaterBlockFXData">WaterBlockFXData</a> *</td>
 <td class="fieldname">
 waterBlock</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7a32630ceb3626baafb0e71427a71492" name="a7a32630ceb3626baafb0e71427a71492"></a>struct <a class="el" href="#structWaterfallFXData">WaterfallFXData</a> *</td>
+<a id="a53e4b00b59e6addd2c62edbb2bb834f8" name="a53e4b00b59e6addd2c62edbb2bb834f8"></a>struct <a class="el" href="#structWaterfallFXData">WaterfallFXData</a> *</td>
 <td class="fieldname">
 waterfall</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5c12d2b1cc886ce31d98ea23d968f1b3" name="a5c12d2b1cc886ce31d98ea23d968f1b3"></a>struct <a class="el" href="#structWaterFountainFXData">WaterFountainFXData</a> *</td>
+<a id="aa971e500037d94b447dea334a7b1594b" name="aa971e500037d94b447dea334a7b1594b"></a>struct <a class="el" href="#structWaterFountainFXData">WaterFountainFXData</a> *</td>
 <td class="fieldname">
 waterFountain</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a69c7a2a3a544f75249ad0e3e02a0ea98" name="a69c7a2a3a544f75249ad0e3e02a0ea98"></a>struct <a class="el" href="#structWaterSplashFXData">WaterSplashFXData</a> *</td>
+<a id="a91e59a472a318db2ca09b5bfad2027f0" name="a91e59a472a318db2ca09b5bfad2027f0"></a>struct <a class="el" href="#structWaterSplashFXData">WaterSplashFXData</a> *</td>
 <td class="fieldname">
 waterSplash</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5d8ee31bf1d20641377faff8c8d46879" name="a5d8ee31bf1d20641377faff8c8d46879"></a>struct <a class="el" href="#structWhirlwindFXData">WhirlwindFXData</a> *</td>
+<a id="ae531aabc1ea7cab3b187a69ee10f8905" name="ae531aabc1ea7cab3b187a69ee10f8905"></a>struct <a class="el" href="#structWhirlwindFXData">WhirlwindFXData</a> *</td>
 <td class="fieldname">
 whirlwind</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af0ca76ca2e3d304dab2be43ffb1a8afb" name="af0ca76ca2e3d304dab2be43ffb1a8afb"></a>struct <a class="el" href="#structWindyLeavesFXData">WindyLeavesFXData</a> *</td>
+<a id="a8ea733d80971034fac620a5da689e7d4" name="a8ea733d80971034fac620a5da689e7d4"></a>struct <a class="el" href="#structWindyLeavesFXData">WindyLeavesFXData</a> *</td>
 <td class="fieldname">
 windyLeaves</td>
 <td class="fielddoc">
@@ -15373,15 +15355,15 @@ windyLeaves</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="af068073828fb50ae621d06d2bb0c59d9" name="af068073828fb50ae621d06d2bb0c59d9"></a><a class="el" href="#unionEffectData">EffectData</a></td>
+<a id="a5dd97c07df49135821ece96c16b16e69" name="a5dd97c07df49135821ece96c16b16e69"></a><a class="el" href="#unionEffectInstanceDataPtr">EffectInstanceDataPtr</a></td>
 <td class="fieldname">
 data</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a00c354539afc5861e34a0374d57a152c" name="a00c354539afc5861e34a0374d57a152c"></a>s32</td>
+<a id="a7d4365a6985734dc82d71ab8a0e11431" name="a7d4365a6985734dc82d71ab8a0e11431"></a>s32</td>
 <td class="fieldname">
-effectIndex</td>
+effectID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -15391,15 +15373,15 @@ flags</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9e78ef83ffa24f3946b8149fa9353995" name="a9e78ef83ffa24f3946b8149fa9353995"></a>struct <a class="el" href="structEffectGraphics.html">EffectGraphics</a> *</td>
-<td class="fieldname">
-graphics</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
 <a id="aaa0c0612061d4926decf14a9e52c6968" name="aaa0c0612061d4926decf14a9e52c6968"></a>s32</td>
 <td class="fieldname">
 numParts</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9b65c351be3f8f839b0e816859e16858" name="a9b65c351be3f8f839b0e816859e16858"></a>struct <a class="el" href="structEffectSharedData.html">EffectSharedData</a> *</td>
+<td class="fieldname">
+shared</td>
 <td class="fielddoc">
 </td></tr>
 </table>
@@ -15752,7 +15734,7 @@ graphicsDmaStart</td>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="effects_2water__block_8c.html#a6cf86505a632a2c9b34ca45bd3f7f668">water_block_appendGfx()</a>, <a class="el" href="effects_2water__block_8c.html#a47938cbbc5bb39ab25f5603ffa45ae2c">water_block_main()</a>, and <a class="el" href="effects_2water__block_8c.html#a4973c907281b61312bffd8ef77ad2673">water_block_update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="water__block_8c.html#a6cf86505a632a2c9b34ca45bd3f7f668">water_block_appendGfx()</a>, <a class="el" href="water__block_8c.html#a47938cbbc5bb39ab25f5603ffa45ae2c">water_block_main()</a>, and <a class="el" href="water__block_8c.html#a4973c907281b61312bffd8ef77ad2673">water_block_update()</a>.</p>
 
 </div>
 </div>
@@ -15805,6 +15787,25 @@ graphicsDmaStart</td>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b" name="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf041529ba0c92c6607612e878229e77c" name="a06fc87d81c62e9abb8790b6e5713c55baf041529ba0c92c6607612e878229e77c"></a>FX_BUFF_DATA_WATER_BLOCK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba8d17af352888b93471aec32145e36308" name="a06fc87d81c62e9abb8790b6e5713c55ba8d17af352888b93471aec32145e36308"></a>FX_BUFF_DATA_CLOUD_NINE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba8026b886e086b77f1d15dcd331dcd9e3" name="a06fc87d81c62e9abb8790b6e5713c55ba8026b886e086b77f1d15dcd331dcd9e3"></a>FX_BUFF_DATA_TURBO_CHARGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="adf764cbdea00d65edcd07bb9953ad2b7" name="adf764cbdea00d65edcd07bb9953ad2b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf764cbdea00d65edcd07bb9953ad2b7">&#9670;&#160;</a></span>anonymous enum</h2>
 
@@ -15817,27 +15818,8 @@ graphicsDmaStart</td>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7af041529ba0c92c6607612e878229e77c" name="adf764cbdea00d65edcd07bb9953ad2b7af041529ba0c92c6607612e878229e77c"></a>FX_BUFF_DATA_WATER_BLOCK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a8d17af352888b93471aec32145e36308" name="adf764cbdea00d65edcd07bb9953ad2b7a8d17af352888b93471aec32145e36308"></a>FX_BUFF_DATA_CLOUD_NINE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a8026b886e086b77f1d15dcd331dcd9e3" name="adf764cbdea00d65edcd07bb9953ad2b7a8026b886e086b77f1d15dcd331dcd9e3"></a>FX_BUFF_DATA_TURBO_CHARGE&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a99fb83031ce9923c84392b4e92f956b5" name="a99fb83031ce9923c84392b4e92f956b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99fb83031ce9923c84392b4e92f956b5">&#9670;&#160;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5adfc5094f63ceb80ae2356070543799fa" name="a99fb83031ce9923c84392b4e92f956b5adfc5094f63ceb80ae2356070543799fa"></a>FX_SUN_FROM_LEFT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5afa56b15b771b4a32311a19c3e61629c8" name="a99fb83031ce9923c84392b4e92f956b5afa56b15b771b4a32311a19c3e61629c8"></a>FX_SUN_FROM_RIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7adfc5094f63ceb80ae2356070543799fa" name="adf764cbdea00d65edcd07bb9953ad2b7adfc5094f63ceb80ae2356070543799fa"></a>FX_SUN_FROM_LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7afa56b15b771b4a32311a19c3e61629c8" name="adf764cbdea00d65edcd07bb9953ad2b7afa56b15b771b4a32311a19c3e61629c8"></a>FX_SUN_FROM_RIGHT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -16002,6 +15984,26 @@ graphicsDmaStart</td>
 <tr><td class="fieldname"><a id="a5ace136e541404a2bdcc3fe8140c23f3a7a54a490bd8408f8a115c4433472599c" name="a5ace136e541404a2bdcc3fe8140c23f3a7a54a490bd8408f8a115c4433472599c"></a>LIL_OINK_TYPE_QUESTION&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5ace136e541404a2bdcc3fe8140c23f3a4ef512a1a896831addacc0e50b7614a9" name="a5ace136e541404a2bdcc3fe8140c23f3a4ef512a1a896831addacc0e50b7614a9"></a>LIL_OINK_TYPE_SILVER&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a5ace136e541404a2bdcc3fe8140c23f3a79496356fcb2814a1cb452c32be350d7" name="a5ace136e541404a2bdcc3fe8140c23f3a79496356fcb2814a1cb452c32be350d7"></a>LIL_OINK_TYPE_GOLD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3c32c63af9eb202552f45678c639855a" name="a3c32c63af9eb202552f45678c639855a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c32c63af9eb202552f45678c639855a">&#9670;&#160;</a></span>ShockOverlayFXTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a3c32c63af9eb202552f45678c639855a">ShockOverlayFXTypes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3c32c63af9eb202552f45678c639855aa8fd2dcaffad6bdb8a439aa8e241200b6" name="a3c32c63af9eb202552f45678c639855aa8fd2dcaffad6bdb8a439aa8e241200b6"></a>FX_SHOCK_OVERLAY_SHOCK_HIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3c32c63af9eb202552f45678c639855aa9f9505f38d58f869c32a2a4e9adb4716" name="a3c32c63af9eb202552f45678c639855aa9f9505f38d58f869c32a2a4e9adb4716"></a>FX_SHOCK_OVERLAY_LIGHTNING_WORLD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3c32c63af9eb202552f45678c639855aa53146ce47dbdd0da07d49168aa0cc35f" name="a3c32c63af9eb202552f45678c639855aa53146ce47dbdd0da07d49168aa0cc35f"></a>FX_SHOCK_OVERLAY_MEGA_SHOCK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3c32c63af9eb202552f45678c639855aaa00480bdb2b29d0b1ec964038113a5a9" name="a3c32c63af9eb202552f45678c639855aaa00480bdb2b29d0b1ec964038113a5a9"></a>FX_SHOCK_OVERLAY_LIGHTNING_BATTLE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

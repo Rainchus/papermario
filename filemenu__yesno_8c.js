@@ -1,8 +1,12 @@
 var filemenu__yesno_8c =
 [
+    [ "COPY_FILE_MESSAGE_WIDTH", "filemenu__yesno_8c.html#a4d9785da78bf0a892374ebdc32001142", null ],
     [ "COPY_FILE_NUMBER_X", "filemenu__yesno_8c.html#af163531b7331a9174f6e286df3b1a31d", null ],
+    [ "CREATE_FILE_FILE_X", "filemenu__yesno_8c.html#a4b7ee868cd1468bb4da7b4a6a4346b50", null ],
+    [ "CREATE_FILE_MESSAGE_WIDTH", "filemenu__yesno_8c.html#a2cbec0c19de40968135161e406759b48", null ],
     [ "DELETE_FILE_DELETE_X", "filemenu__yesno_8c.html#aa3a43506a844d1103aff36e7bfd82187", null ],
     [ "DELETE_FILE_FILE_X", "filemenu__yesno_8c.html#aa8af0cb8e38e9710bd5ea63d4b9f0a94", null ],
+    [ "DELETE_FILE_MESSAGE_WIDTH", "filemenu__yesno_8c.html#a079bc8c34ee0df02370e6887d9ab7946", null ],
     [ "DELETE_FILE_NUMBER_X", "filemenu__yesno_8c.html#a0358710c3db2631db966adcb2c00356a", null ],
     [ "DELETE_FILE_QMARK_X", "filemenu__yesno_8c.html#a7f7cda4bdb2bff5220ba1bfc651bf435", null ],
     [ "NUMBER_OFFSET_Y", "filemenu__yesno_8c.html#a1d7bd7e685963dfdc007e2b213f697bb", null ],

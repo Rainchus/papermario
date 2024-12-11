@@ -1,5 +1,7 @@
 var filemenu_8h =
 [
+    [ "CENTER_WINDOW_X", "filemenu_8h.html#a57b7836e8637a23a3fa94d27b01dcb1f", null ],
+    [ "CENTER_WINDOW_Y", "filemenu_8h.html#ae4d7cce1c41289326f3a77dc067d6aad", null ],
     [ "WINDOW_UPDATE_FUNC", "filemenu_8h.html#a809b1e2913887ecb315cde01327d71d2", null ],
     [ "filemenu_choose_name_cleanup", "filemenu_8h.html#af515dc2c0f01abb48c7f8b360069f425", null ],
     [ "filemenu_choose_name_handle_input", "filemenu_8h.html#a4f26d68b12317fe7bcc57f15a41ca11b", null ],
@@ -61,16 +63,16 @@ var filemenu_8h =
     [ "filemenu_8024C09C", "filemenu_8h.html#a413d8dc6c1f46c23aa65e8e9ce45862f", null ],
     [ "filemenu_8024C0A4", "filemenu_8h.html#ad69a08cb0468dbffb52f71897754865d", null ],
     [ "filemenu_createfile_gridData", "filemenu_8h.html#ae0c5b0397e0564bec6020f183b6f6310", null ],
-    [ "filemenu_createfile_hudElems", "filemenu_8h.html#a891f5b328251bff5c95c8851c3c957c2", null ],
+    [ "filemenu_createfile_HIDs", "filemenu_8h.html#ad80026005f3367cfd1d1f0bb14ada19e", null ],
     [ "filemenu_currentMenu", "filemenu_8h.html#a3553be2b42ec20b36c723004b00610d3", null ],
-    [ "filemenu_cursorHudElem", "filemenu_8h.html#a932db0ba2d946eebe45e367fdabba733", null ],
-    [ "filemenu_cursorHudElemID", "filemenu_8h.html#a8351455dcd529a1ab7423dc763e48934", null ],
+    [ "filemenu_cursorHID", "filemenu_8h.html#ab450c0f73f2c83c369d267061e4b719a", null ],
+    [ "filemenu_cursorHIDs", "filemenu_8h.html#a6bbfcc5184265c4338b3fd11bf541f9f", null ],
     [ "filemenu_filename", "filemenu_8h.html#a8d49d514f068d4f4b81f7febb229ba00", null ],
     [ "filemenu_filename_pos", "filemenu_8h.html#ac6fdc6409dcbc5e0093ab5ee95b06732", null ],
     [ "filemenu_heldButtons", "filemenu_8h.html#a53a439fa4079b5a396a539bcd912c97c", null ],
-    [ "filemenu_hudElemIDs", "filemenu_8h.html#ae92d8667ba06e24e71e890963bc9e56e", null ],
     [ "filemenu_iterFileIdx", "filemenu_8h.html#a9ec1f3f20bcbad9ffdda9abc5fe455cf", null ],
     [ "filemenu_loadedFileIdx", "filemenu_8h.html#ad0885669ad488c2389850890dd8639d9", null ],
+    [ "filemenu_mainHIDs", "filemenu_8h.html#afa33cff70419d158c61c118adca7dab2", null ],
     [ "filemenu_menus", "filemenu_8h.html#a5fe22b04645e48a7ea32d784a34a17a0", null ],
     [ "filemenu_pressedButtons", "filemenu_8h.html#aff4d6edd259d274b8aed19e0fae11d70", null ],
     [ "filemenu_windowStyles", "filemenu_8h.html#a085520a551c8f1967cdddfa6629ed2e4", null ]

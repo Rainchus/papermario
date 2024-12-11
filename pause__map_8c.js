@@ -17,6 +17,6 @@ var pause__map_8c =
     [ "PauseGfxPathPoints", "pause__map_8c.html#a74abbb2b9f08f1a271138b7073cc4e14", null ],
     [ "PauseGfxWorldMap", "pause__map_8c.html#ae48004dbd1e812a2a52af866fe18de55", null ],
     [ "PauseMapArrowWobble", "pause__map_8c.html#a5d564fedfffc897130e811004f71ce7a", null ],
-    [ "PauseMapIconScripts", "pause__map_8c.html#a2696135b3cea24c1be515fbd66eed8ec", null ],
+    [ "PauseMapHudScripts", "pause__map_8c.html#a56638081ecb1ab396a41a20c727fce43", null ],
     [ "PauseMapWindowBPs", "pause__map_8c.html#ad155972304c0ce96d6ffd5c6f0b638d3", null ]
 ];

@@ -1,6 +1,6 @@
 var MontyMoleAI_8inc_8c =
 [
-    [ "MONTY_MOLE_UNK_NPC_FLAGS", "MontyMoleAI_8inc_8c.html#a301ff9b854396719d7950ef31764e598", null ],
+    [ "INTANGIBLE_MONTY_MOLE_NPC_FLAGS", "MontyMoleAI_8inc_8c.html#ac358e0f68d6387d493608adb39aa9f4a", null ],
     [ "AiStateMontyMole", "MontyMoleAI_8inc_8c.html#ad67805cf3580fda5ccda4432f37412dc", [
       [ "AI_STATE_MOLE_INIT", "MontyMoleAI_8inc_8c.html#ad67805cf3580fda5ccda4432f37412dca79fe3ce585cad2f2ff8edd2a6b420d63", null ],
       [ "AI_STATE_MOLE_WANDER", "MontyMoleAI_8inc_8c.html#ad67805cf3580fda5ccda4432f37412dca2d538f73cf7ee3ca386af6edf946b78a", null ],

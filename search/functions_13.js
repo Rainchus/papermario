@@ -41,7 +41,7 @@ var searchData=
   ['title_5fscreen_5fdraw_5fcopyright_38',['title_screen_draw_copyright',['../state__title__screen_8c.html#a72fc44a65f4c5446819bf6c994cf7458',1,'state_title_screen.c']]],
   ['title_5fscreen_5fdraw_5fimages_39',['title_screen_draw_images',['../state__title__screen_8c.html#a5e7985c035157b5870a22f60cf5223ec',1,'state_title_screen.c']]],
   ['title_5fscreen_5fdraw_5flogo_40',['title_screen_draw_logo',['../state__title__screen_8c.html#abf06f0fb303a44cf4e33d3bbb80fe521',1,'state_title_screen.c']]],
-  ['title_5fscreen_5fdraw_5fpress_5fstart_41',['title_screen_draw_press_start',['../state__title__screen_8c.html#add07f7b613c3d6ea12fc407703827ca8',1,'state_title_screen.c']]],
+  ['title_5fscreen_5fdraw_5fmenu_41',['title_screen_draw_menu',['../state__title__screen_8c.html#ab9094f20fcbb68cd52c7f942df51a800',1,'state_title_screen.c']]],
   ['transform_5fpoint_42',['transform_point',['../functions_8h.html#a27ae2edd7b7acea619a3231bf5f8fde8',1,'transform_point(Matrix4f mtx, f32 inX, f32 inY, f32 inZ, f32 inS, f32 *outX, f32 *outY, f32 *outZ, f32 *outW):&#160;43F0.c'],['../43F0_8c.html#a27ae2edd7b7acea619a3231bf5f8fde8',1,'transform_point(Matrix4f mtx, f32 inX, f32 inY, f32 inZ, f32 inS, f32 *outX, f32 *outY, f32 *outZ, f32 *outW):&#160;43F0.c']]],
   ['translategroup_43',['TranslateGroup',['../script__api_2common_8h.html#aa7afa1dfb44117dc8c4fd4225075c4b5',1,'common.h']]],
   ['translatemodel_44',['TranslateModel',['../script__api_2common_8h.html#a2944d47463add2e244d4722c63998966',1,'common.h']]],

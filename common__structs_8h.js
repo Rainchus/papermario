@@ -90,12 +90,12 @@ var common__structs_8h =
       [ "frac", "common__structs_8h.html#af0c98a685964f347fa8e955329460fb3", null ],
       [ "whole", "common__structs_8h.html#a319721908d812367d37a00678d2d137b", null ]
     ] ],
-    [ "CamConfiguration", "common__structs_8h.html#structCamConfiguration", [
-      [ "boomLength", "common__structs_8h.html#afdfe13c5449c0c84ae8053e6a3cff809", null ],
-      [ "boomPitch", "common__structs_8h.html#a762c655911e9b92305395b395c41ff36", null ],
-      [ "boomYaw", "common__structs_8h.html#ad1417e98168abfe270cb65cc78f41151", null ],
-      [ "targetPos", "common__structs_8h.html#ab1a99b50cfddd87fa043065efcf6caa7", null ],
-      [ "viewPitch", "common__structs_8h.html#a23620239768b69408305ec5add46e84d", null ]
+    [ "CameraRig", "common__structs_8h.html#structCameraRig", [
+      [ "boomLength", "common__structs_8h.html#ae4f27531793d4644c63fa26d78fa2783", null ],
+      [ "boomPitch", "common__structs_8h.html#a28981f262bd920ab83ae430c4313440e", null ],
+      [ "boomYaw", "common__structs_8h.html#a007236c29051bfa1faa38e7709c43b95", null ],
+      [ "targetPos", "common__structs_8h.html#a4391cebb4b482f427516316e5f817c73", null ],
+      [ "viewPitch", "common__structs_8h.html#a8dea63d5a14d450f11e557a4ed4d588d", null ]
     ] ],
     [ "DmaTable", "common__structs_8h.html#structDmaTable", [
       [ "dest", "common__structs_8h.html#aa835cedd280d1c8715918f8be6a21409", null ],
@@ -338,15 +338,16 @@ var common__structs_8h =
     ] ],
     [ "StatusBar", "common__structs_8h.html#structStatusBar", [
       [ "alwaysShown", "common__structs_8h.html#ad9935fdfaefab1dfef11d236f83f31d7", null ],
-      [ "coinCounterHideTime", "common__structs_8h.html#a6aa85fa4ea1c8ea9bed16e4ce1ee4dae", null ],
-      [ "coinCountIconHID", "common__structs_8h.html#af4188d9e8e3862fb0ac4ebde8c52d79a", null ],
-      [ "coinCountTimesHID", "common__structs_8h.html#a1aa349cf312690ef345ab6a99b52aa36", null ],
-      [ "coinIconHID", "common__structs_8h.html#a3b06058501b10c4c8bb5282c18653913", null ],
-      [ "coinsBlinkCounter", "common__structs_8h.html#a34c64fa8160b9a78d9c781ab8a4bfa52", null ],
-      [ "coinsBlinking", "common__structs_8h.html#aaa1c3c44b4430827174c4deff80ce08a", null ],
-      [ "coinsBlinkTimer", "common__structs_8h.html#ad95b55aa85f08077966cde9ac77ca3a8", null ],
-      [ "coinSparkleHID", "common__structs_8h.html#aa61768325649372c337bf966ce7023e4", null ],
-      [ "coinTimesHID", "common__structs_8h.html#a693ba801d2b338fe234d3b51b7fc8203", null ],
+      [ "coinCountDisposeTime", "common__structs_8h.html#a3d34be22e39b2adb139a738561ae90d9", null ],
+      [ "coinCounterHideDelay", "common__structs_8h.html#ae0eed4d8343a4eb2552e8cabe2663779", null ],
+      [ "coinCountIconHID", "common__structs_8h.html#a8fa4b2e296c5cb8cccb398c3e0ed3332", null ],
+      [ "coinCountTimesHID", "common__structs_8h.html#a505b240eb176c3cd19dee5efd3e7c4c3", null ],
+      [ "coinIconHID", "common__structs_8h.html#a7b4a70f0b01b953b56cd845178839f97", null ],
+      [ "coinsBlinkAnimTime", "common__structs_8h.html#a079b422db0e5c22c7a39cdcb31d4abb5", null ],
+      [ "coinsBlinking", "common__structs_8h.html#a177c46523732a3f8fc22a7502b1626e7", null ],
+      [ "coinsBlinkTimeLeft", "common__structs_8h.html#acc58005c80b88c837c85a135a7000565", null ],
+      [ "coinSparkleHID", "common__structs_8h.html#a9be687dd3f22cdb86996a0b9a0b7f529", null ],
+      [ "coinTimesHID", "common__structs_8h.html#a8d96f50dd96f77f511caaaf9ea6dbe8c", null ],
       [ "disabled", "common__structs_8h.html#a83a569a8d7e25c60efa55936639d3f20", null ],
       [ "displayCoins", "common__structs_8h.html#a282bbce408e67d448a972bff70dc0f5a", null ],
       [ "displayFP", "common__structs_8h.html#aec1fbc615ff69f3a66b4a6521bbe4f0b", null ],
@@ -355,41 +356,40 @@ var common__structs_8h =
       [ "displayStarPower", "common__structs_8h.html#a00a18f4a6946dcfe89c7fc7723695135", null ],
       [ "drawPosX", "common__structs_8h.html#adb0f27a29ce42b1ac92f30110cdcde55", null ],
       [ "drawPosY", "common__structs_8h.html#a78e4cd167e09a2cb6a0d17a8265a316d", null ],
-      [ "fpBlinkCounter", "common__structs_8h.html#ae4a79ef7a243f2f5b24e82b5629e4941", null ],
-      [ "fpBlinking", "common__structs_8h.html#ad05500f6387ac8e24c77b6d4f74e9787", null ],
-      [ "fpBlinkTimer", "common__structs_8h.html#a843d6b92c63b5d86b3e6ad440365b44b", null ],
-      [ "fpIconHIDs", "common__structs_8h.html#aeaabea72e5342031c408e25071f02a88", null ],
-      [ "fpTimesHID", "common__structs_8h.html#a483a3d59446bd5fb86432fd37971086b", null ],
+      [ "fpBlinkAnimTime", "common__structs_8h.html#af8e9ac390da7102e1e4e304733004b73", null ],
+      [ "fpBlinking", "common__structs_8h.html#a789d58d6275545cd67177a737139ed0a", null ],
+      [ "fpBlinkTimeLeft", "common__structs_8h.html#aaafcd1d3991c6ecd860b7f79e7607a7b", null ],
+      [ "fpIconHIDs", "common__structs_8h.html#abee5d5e4dfdb9d0bfc1cf9a273bd2b4d", null ],
+      [ "fpTimesHID", "common__structs_8h.html#ae7a6347e0d3810b8c7f0916c199796b1", null ],
       [ "hidden", "common__structs_8h.html#af390375c494b2db8585fafe2a5fe600b", null ],
-      [ "hpBlinkCounter", "common__structs_8h.html#a205fab08f7f863fe7c36abe23b685f42", null ],
-      [ "hpBlinking", "common__structs_8h.html#a6d4f2ed74335722ee5aa21b7be7cd46c", null ],
-      [ "hpBlinkTimer", "common__structs_8h.html#a94be5dc477faf61ba1dfbc0e46b4da97", null ],
-      [ "hpIconHIDs", "common__structs_8h.html#a93bcb89785501d569e36da96f03afd3e", null ],
-      [ "hpTimesHID", "common__structs_8h.html#a002652bb0c0a52a887eff547de4a0672", null ],
-      [ "iconIndex12", "common__structs_8h.html#a8dd6763f24351ac06144e7088eee436c", null ],
-      [ "iconIndex13", "common__structs_8h.html#ada280b84e158f15f289906aaac489b57", null ],
+      [ "hpBlinkAnimTime", "common__structs_8h.html#a674445a2eb5410275bef0386062bdcb9", null ],
+      [ "hpBlinking", "common__structs_8h.html#a1d707a0247857c1881ce14c5b106b642", null ],
+      [ "hpBlinkTimeLeft", "common__structs_8h.html#adc4907a0ebe6139582aafba719e731a3", null ],
+      [ "hpIconHIDs", "common__structs_8h.html#a6502771ca52010536f74a93fd4e505e9", null ],
+      [ "hpTimesHID", "common__structs_8h.html#a28d2535766b2973613b5b98a401c26bd", null ],
+      [ "iconIndex12", "common__structs_8h.html#abd27393dcfe35796e7f82216340cc43a", null ],
+      [ "iconIndex13", "common__structs_8h.html#a078fa0a353bd67ceb91481dca4f6cb81", null ],
       [ "ignoreChanges", "common__structs_8h.html#a887a6ea32c9f99483324e9432067127c", null ],
       [ "openInputDisabled", "common__structs_8h.html#aed9872b91cd5c86fdfd483c04d3b0248", null ],
+      [ "pad_3F", "common__structs_8h.html#af0705b708ccdf6f8683202e9e4004c6f", null ],
+      [ "pad_5B", "common__structs_8h.html#a2f3731f68f5d9222a686a7f11932302b", null ],
+      [ "pad_6F", "common__structs_8h.html#a80ffe0ff4b6d016169ba6c46d5ea832d", null ],
+      [ "powBarsToBlink", "common__structs_8h.html#add46efdbb417400aafcf1bdd94610371", null ],
+      [ "prevIgnoreChanges", "common__structs_8h.html#a262b8da10f49d74a4547103a7037347a", null ],
+      [ "shimmerLimit", "common__structs_8h.html#affd242a033cec758eb7d70a46b59c0bd", null ],
+      [ "shimmerState", "common__structs_8h.html#a4ef96e16f8996e986cbb3afd836e7624", null ],
+      [ "shimmerTime", "common__structs_8h.html#ac3cb6e87860716e25cfd929bb297b8aa", null ],
       [ "showTimer", "common__structs_8h.html#af2db6854aaed944e7040294bc977e8fd", null ],
-      [ "spBarsToBlink", "common__structs_8h.html#a606e4287b4309465576ad5c638bd97f6", null ],
-      [ "spBlinkCounter", "common__structs_8h.html#a32302ffe0ae957dbd0e8afd528dc9cf1", null ],
-      [ "spBlinking", "common__structs_8h.html#a50c4ebd416665a5129e025e000829654", null ],
-      [ "spIconHID", "common__structs_8h.html#a80c24f886c83cb8e18e20fdc5b59ffdd", null ],
-      [ "spShineHID", "common__structs_8h.html#a35e9fca79753cba2b5e18b152ffd822c", null ],
-      [ "spTimesHID", "common__structs_8h.html#afbd310e84fcd773ab28359c38ae942b1", null ],
-      [ "starIconHID", "common__structs_8h.html#a0c26e55b2c2ddba7979915f0f0224610", null ],
-      [ "starpointsBlinkCounter", "common__structs_8h.html#a627763f6b669c4a8ea58f1438ad2a9bf", null ],
-      [ "starpointsBlinking", "common__structs_8h.html#a8f8c2ab1ad92fdb419a98ba477950a87", null ],
+      [ "spIconHID", "common__structs_8h.html#ae43e34c9e3cc8a1bcc8e1206e67427cd", null ],
+      [ "spShineHID", "common__structs_8h.html#a00382236a4e00901ac193628e300dbc5", null ],
+      [ "spTimesHID", "common__structs_8h.html#a0b56af264cc3559065a2b3dc0b15ee8d", null ],
+      [ "starIconHID", "common__structs_8h.html#ab8d15537dd481093c04b81d8dba9b1b2", null ],
+      [ "starpointsBlinkAnimTime", "common__structs_8h.html#a33b452d7d317397f8c922a51f9199c90", null ],
+      [ "starpointsBlinking", "common__structs_8h.html#a407238b48744db138f9a904df2f52083", null ],
+      [ "starPowerBlinkCounter", "common__structs_8h.html#a2c6e12cb1074389bc86f2171e78d83fd", null ],
+      [ "starPowerBlinking", "common__structs_8h.html#aff40f4becd5efd2631180842f70cb8f8", null ],
       [ "unk_3B", "common__structs_8h.html#afdb3e3a51371e4c0404e15965105509b", null ],
-      [ "unk_3C", "common__structs_8h.html#aacf1aaac0dbf6e425349940a4823670e", null ],
-      [ "unk_3F", "common__structs_8h.html#a2432cf60900861a179d25a3d4889e318", null ],
-      [ "unk_57", "common__structs_8h.html#a824d6d4b5e65a41bf888a32a4242553a", null ],
-      [ "unk_58", "common__structs_8h.html#a25f82ca8b4c83105c568edeb0f0f771d", null ],
-      [ "unk_59", "common__structs_8h.html#adbac699d242fe73b6560dbab6d61d80b", null ],
-      [ "unk_5B", "common__structs_8h.html#a533dba678ead44dcd901e965a7c7ea41", null ],
-      [ "unk_6D", "common__structs_8h.html#a83615e1c1e452964844b93119e617004", null ],
-      [ "unk_6E", "common__structs_8h.html#a3cf671a615821a2239d4cea965be5c80", null ],
-      [ "unk_6F", "common__structs_8h.html#a4481d3c69f7f6a96b43ffdae994b8605", null ]
+      [ "unk_3C", "common__structs_8h.html#aacf1aaac0dbf6e425349940a4823670e", null ]
     ] ],
     [ "CameraInitData", "common__structs_8h.html#structCameraInitData", [
       [ "farClip", "common__structs_8h.html#a1c16bbe3acb4f4231716aa1b2491d1be", null ],
@@ -415,7 +415,7 @@ var common__structs_8h =
     [ "CameraControlSettings", "common__structs_8h.html#structCameraControlSettings", [
       [ "boomLength", "common__structs_8h.html#a31df96a97099beea323a2580a433a923", null ],
       [ "boomPitch", "common__structs_8h.html#a02e5fb63163388fe72e35a5d38a4eb6a", null ],
-      [ "flag", "common__structs_8h.html#ac597def19e0a922208b1765df88b3991", null ],
+      [ "flag", "common__structs_8h.html#a900057088cc5b670ceca3c69ae2f0bc4", null ],
       [ "points", "common__structs_8h.html#af413eb3838f9c5367df154f3e7c5e208", null ],
       [ "type", "common__structs_8h.html#a3ea030d81e37707c456ae661979ccda4", null ],
       [ "viewPitch", "common__structs_8h.html#a09379e5403b7a58d6aca98f21cc5d3e0", null ]
@@ -473,7 +473,7 @@ var common__structs_8h =
       [ "basePos", "common__structs_8h.html#a4fe5fa4151dfc6ce2309455a4d222b93", null ],
       [ "children", "common__structs_8h.html#aa55eedabc5d90f32e817f562deb7cb4c", null ],
       [ "displayList", "common__structs_8h.html#a7466a9414764359300fe68dcc49fb2ef", null ],
-      [ "fcData", "common__structs_8h.html#ac1598d0e6da34297555eca3b4674dd65", null ],
+      [ "fcData", "common__structs_8h.html#a6c99850e028c98f6e10599eae616a9db", null ],
       [ "flags", "common__structs_8h.html#a9e1eb3f0081e97dc66bf467277b80cae", null ],
       [ "mtx", "common__structs_8h.html#aea644ae5ca2e705713206f333632d303", null ],
       [ "pos", "common__structs_8h.html#a83c39c00be4b11ea5fe5c5703d389ae1", null ],
@@ -756,6 +756,7 @@ var common__structs_8h =
       [ "backgroundRaster", "common__structs_8h.html#aa8e37c15dd1aa94f8de0bb7b8c624224", null ],
       [ "backgroundXOffset", "common__structs_8h.html#a0e0c279523a1640e23c0611d31445a14", null ],
       [ "contBitPattern", "common__structs_8h.html#ac6ab6786c9a9ed9043f88c784672e7c7", null ],
+      [ "context", "common__structs_8h.html#a020ebc1120ef937e0810c55b1ad1cae4", null ],
       [ "curButtons", "common__structs_8h.html#a6a083422470645963ec5948c1acbbfcd", null ],
       [ "debugEnemyContact", "common__structs_8h.html#a1655d46b165bc8a436d89bb41928589e", null ],
       [ "debugQuizmo", "common__structs_8h.html#a7ec9a4b587f9c10f07463988359edd69", null ],
@@ -774,7 +775,6 @@ var common__structs_8h =
       [ "healthBarsEnabled", "common__structs_8h.html#a9b678e7a7c8d980a35f634b3ef50e1d5", null ],
       [ "heldButtons", "common__structs_8h.html#ae8f8c9986069dece39933c0a3c143c77", null ],
       [ "introPart", "common__structs_8h.html#ac36453fb6b60a8e130b872be9af30e86", null ],
-      [ "isBattle", "common__structs_8h.html#a27139533d7c1cea15e7f9e3f3cd13477", null ],
       [ "keepUsingPartnerOnMapChange", "common__structs_8h.html#a09741fb680620d935cbde3a20fb99310", null ],
       [ "loadType", "common__structs_8h.html#a0f33f43d6b1af2c4d09cbad056713d5e", null ],
       [ "logoTime", "common__structs_8h.html#a6d50ab0ed7f521296bb22199635d2edf", null ],
@@ -1201,7 +1201,7 @@ var common__structs_8h =
       [ "scaleModifier", "common__structs_8h.html#a7e1b06119d87e9779ff04055c81ee89a", null ],
       [ "scalingFactor", "common__structs_8h.html#a59b46326f0705305f7b8b3054c8209f2", null ],
       [ "selectedTargetIndex", "common__structs_8h.html#a4406e5a6419256ac2d6d4c5ed3014127", null ],
-      [ "shadow", "common__structs_8h.html#ad482bc307df4553f242e51e4691339c8", null ],
+      [ "shadow", "common__structs_8h.html#a5e45d98cf637e5950055f09f28b05076", null ],
       [ "shadowScale", "common__structs_8h.html#a398fa5ce92711c2a5e1b48f6e5c20b30", null ],
       [ "size", "common__structs_8h.html#a8f39f6c94b7c2a199d062d3830513be4", null ],
       [ "state", "common__structs_8h.html#a632bbd9b005611d0720e79bce77f506b", null ],
@@ -1335,10 +1335,11 @@ var common__structs_8h =
     [ "SaveGlobals", "common__structs_8h.html#structSaveGlobals", [
       [ "crc1", "common__structs_8h.html#ad3e037c1b12f39c3be0324cf05b092b1", null ],
       [ "crc2", "common__structs_8h.html#a36470f30755eac6a4440553af5490637", null ],
+      [ "language", "common__structs_8h.html#a5959bfd94d77871263be915a917a9fe7", null ],
       [ "lastFileSelected", "common__structs_8h.html#aaf53f979e1da814abdaabed9ed49d48f", null ],
       [ "magicString", "common__structs_8h.html#a1a046b6927f86a6ae65d61b47b3ac39b", null ],
       [ "pad", "common__structs_8h.html#a2a2f91943d5f9ac46c8148164f5b52c5", null ],
-      [ "reserved", "common__structs_8h.html#a7c555c6c787ef589b94012b5a2f6cb0c", null ],
+      [ "reserved", "common__structs_8h.html#a00a33a457cd88ee770d88e5b67623234", null ],
       [ "useMonoSound", "common__structs_8h.html#a5bf6a06747acdc23197d354026b12704", null ]
     ] ],
     [ "SaveMetadata", "common__structs_8h.html#structSaveMetadata", [
@@ -1780,16 +1781,61 @@ var common__structs_8h =
       [ "Cx", "common__structs_8h.html#ac0b860db238ef44d3675e73159bab154", null ],
       [ "Cz", "common__structs_8h.html#a8d12b8849fcf184f52144a1be05cf9cd", null ]
     ] ],
-    [ "BattleStatus.__unnamed18__", "common__structs_8h.html#unionBattleStatus_8____unnamed18____", [
+    [ "Camera.params", "common__structs_8h.html#unionCamera_8params", [
+      [ "basic", "common__structs_8h.html#af17aaabc20bfe045075927934fed52d2", null ],
+      [ "confined", "common__structs_8h.html#a9ae3f37b35ed8083c217fc82c55344a7", null ],
+      [ "interp", "common__structs_8h.html#a16734ccaa675a366a9df21d6975d9294", null ],
+      [ "radial", "common__structs_8h.html#a869836a44b607137a7e094cf8a308938", null ],
+      [ "world", "common__structs_8h.html#a7d793037a0760186574b0282f2f435e7", null ]
+    ] ],
+    [ "Camera.params.world", "common__structs_8h.html#structCamera_8params_8world", [
+      [ "camParam1", "common__structs_8h.html#a18cfe91c066992b9ab450d2c644c68a7", null ],
+      [ "camParam2", "common__structs_8h.html#aac84386290ed2d5bc8963a3da6ef5eb0", null ],
+      [ "camParam3", "common__structs_8h.html#af84de7cd1dd80a57cefa3b83a25b47ff", null ],
+      [ "camParam4", "common__structs_8h.html#a5fc49786a39bca5f765fda176dddb240", null ],
+      [ "camParam5", "common__structs_8h.html#a416f6f9952c83b943d3f2e7eea6d93ec", null ],
+      [ "camParam6", "common__structs_8h.html#a25a5c186b556ce486bb6c349feed97d6", null ],
+      [ "camParam7", "common__structs_8h.html#acd51ff26b4dfbcedc9e6d842218f13a6", null ],
+      [ "zoomPercent", "common__structs_8h.html#aac4309010a7bea450fa8f54e9ddfe9d1", null ]
+    ] ],
+    [ "Camera.params.basic", "common__structs_8h.html#structCamera_8params_8basic", [
+      [ "camParam7", "common__structs_8h.html#acd51ff26b4dfbcedc9e6d842218f13a6", null ],
+      [ "dist", "common__structs_8h.html#a2a6d07eef8b10b84129b42424ed99327", null ],
+      [ "fovScale", "common__structs_8h.html#a658643ae5ee3519cbe9a8c32df8383a2", null ],
+      [ "offsetY", "common__structs_8h.html#a8977a816320b57e617fcdb6e4ae875cf", null ],
+      [ "pitch", "common__structs_8h.html#a8ee0b79fb35b0efe85b44c0ee243f8d5", null ],
+      [ "skipRecalc", "common__structs_8h.html#af34d191550ea1b7bc78efb91227151f7", null ],
+      [ "yaw", "common__structs_8h.html#a92dda6448f3b313c16d01c8f17cdd6a3", null ],
+      [ "zoomPercent", "common__structs_8h.html#aac4309010a7bea450fa8f54e9ddfe9d1", null ]
+    ] ],
+    [ "Camera.params.interp", "common__structs_8h.html#structCamera_8params_8interp", [
+      [ "dist", "common__structs_8h.html#a2a6d07eef8b10b84129b42424ed99327", null ],
+      [ "offsetY", "common__structs_8h.html#a8977a816320b57e617fcdb6e4ae875cf", null ],
+      [ "pitch", "common__structs_8h.html#a8ee0b79fb35b0efe85b44c0ee243f8d5", null ],
+      [ "yaw", "common__structs_8h.html#a92dda6448f3b313c16d01c8f17cdd6a3", null ]
+    ] ],
+    [ "Camera.params.radial", "common__structs_8h.html#structCamera_8params_8radial", [
+      [ "dist", "common__structs_8h.html#a2a6d07eef8b10b84129b42424ed99327", null ],
+      [ "minRadius", "common__structs_8h.html#a1448f5a025a4b20b502965eb27e711be", null ],
+      [ "offsetY", "common__structs_8h.html#a8977a816320b57e617fcdb6e4ae875cf", null ],
+      [ "pitch", "common__structs_8h.html#a8ee0b79fb35b0efe85b44c0ee243f8d5", null ]
+    ] ],
+    [ "Camera.params.confined", "common__structs_8h.html#structCamera_8params_8confined", [
+      [ "dist", "common__structs_8h.html#a2a6d07eef8b10b84129b42424ed99327", null ],
+      [ "offsetY", "common__structs_8h.html#a8977a816320b57e617fcdb6e4ae875cf", null ],
+      [ "xLimit", "common__structs_8h.html#a15bb3d990999b53086c58c3e960a87a5", null ],
+      [ "zLimit", "common__structs_8h.html#aa3cd8862adec7208c8cfed645d481dca", null ]
+    ] ],
+    [ "BattleStatus.__unnamed24__", "common__structs_8h.html#unionBattleStatus_8____unnamed24____", [
       [ "varTable", "common__structs_8h.html#a93c302ad376e647b9a09d4610947f97b", null ],
       [ "varTableF", "common__structs_8h.html#a087efa785a677c1d328b5219661c7287", null ],
       [ "varTablePtr", "common__structs_8h.html#a82a27a7127b56d8f89a7d27491636376", null ]
     ] ],
-    [ "Collider.__unnamed20__", "common__structs_8h.html#unionCollider_8____unnamed20____", [
+    [ "Collider.__unnamed26__", "common__structs_8h.html#unionCollider_8____unnamed26____", [
       [ "aabb", "common__structs_8h.html#a5e394281dfac81c1e7dddcaf4d35d1f6", null ],
       [ "camSettings", "common__structs_8h.html#a8bc32d32153678cb029f36efdc08d333", null ]
     ] ],
-    [ "CollisionData.__unnamed22__", "common__structs_8h.html#unionCollisionData_8____unnamed22____", [
+    [ "CollisionData.__unnamed28__", "common__structs_8h.html#unionCollisionData_8____unnamed28____", [
       [ "aabbs", "common__structs_8h.html#a9f7cf42e0dad89e417c4df57fa80ba25", null ],
       [ "camSettings", "common__structs_8h.html#a8bc32d32153678cb029f36efdc08d333", null ]
     ] ],
@@ -1797,7 +1843,7 @@ var common__structs_8h =
       [ "modelID", "common__structs_8h.html#aea7422565234078eebab22ed3b2f57a1", null ],
       [ "vtxList", "common__structs_8h.html#a060e2c038132cee90180f4b7c707815e", null ]
     ] ],
-    [ "PartnerAnimations.__unnamed25__", "common__structs_8h.html#structPartnerAnimations_8____unnamed25____", [
+    [ "PartnerAnimations.__unnamed31__", "common__structs_8h.html#structPartnerAnimations_8____unnamed31____", [
       [ "fall", "common__structs_8h.html#a96f223040672ea79c655dceda08e0830", null ],
       [ "fly", "common__structs_8h.html#aaf17bc3b4a86a96a0f053a7e5f7c18ba", null ],
       [ "hurt", "common__structs_8h.html#ac0bb722d28c628d3066cc2264dcc7c87", null ],
@@ -1808,17 +1854,17 @@ var common__structs_8h =
       [ "talk", "common__structs_8h.html#a64b59718a47cf57a5e4f8443ff43d117", null ],
       [ "walk", "common__structs_8h.html#a46f9631576015f35f527af2bc67351a6", null ]
     ] ],
-    [ "ActorPartMovement.__unnamed27__", "common__structs_8h.html#unionActorPartMovement_8____unnamed27____", [
+    [ "ActorPartMovement.__unnamed33__", "common__structs_8h.html#unionActorPartMovement_8____unnamed33____", [
       [ "varTable", "common__structs_8h.html#a93c302ad376e647b9a09d4610947f97b", null ],
       [ "varTableF", "common__structs_8h.html#a087efa785a677c1d328b5219661c7287", null ],
       [ "varTablePtr", "common__structs_8h.html#a82a27a7127b56d8f89a7d27491636376", null ]
     ] ],
-    [ "ActorState.__unnamed29__", "common__structs_8h.html#unionActorState_8____unnamed29____", [
+    [ "ActorState.__unnamed35__", "common__structs_8h.html#unionActorState_8____unnamed35____", [
       [ "functionTemp", "common__structs_8h.html#a77bcd160e703ae33c22a7fad2694d1b5", null ],
       [ "functionTempF", "common__structs_8h.html#a4e3c02ac7fdb10440d0be1d233d09db9", null ],
       [ "functionTempPtr", "common__structs_8h.html#a14c2bd70a1d2a7759f61b3d08fe0524b", null ]
     ] ],
-    [ "ActorState.__unnamed31__", "common__structs_8h.html#unionActorState_8____unnamed31____", [
+    [ "ActorState.__unnamed37__", "common__structs_8h.html#unionActorState_8____unnamed37____", [
       [ "varTable", "common__structs_8h.html#a93c302ad376e647b9a09d4610947f97b", null ],
       [ "varTableF", "common__structs_8h.html#a087efa785a677c1d328b5219661c7287", null ],
       [ "varTablePtr", "common__structs_8h.html#a82a27a7127b56d8f89a7d27491636376", null ]
@@ -1832,6 +1878,7 @@ var common__structs_8h =
     [ "IMG_BIN", "common__structs_8h.html#a535c3da3dc78922a0715151910952943", null ],
     [ "IMG_PTR", "common__structs_8h.html#a834f416d5ff057ebffe262e7f7d15b9a", null ],
     [ "MAX_ACTOR_DECORATIONS", "common__structs_8h.html#a3937b5b3530e4e6842d410da97215cc9", null ],
+    [ "MAX_CREDITS_LINES", "common__structs_8h.html#af1f5470a926d84c26b024310ac751703", null ],
     [ "MAX_NPC_DECORATIONS", "common__structs_8h.html#a20e87001ccc88be6680bb1b8cdaf2ba8", null ],
     [ "MSG_BIN", "common__structs_8h.html#a02e36ecfef454ae1879810a71a2a3644", null ],
     [ "MSG_PTR", "common__structs_8h.html#a83e8353dd3388058292842bff51901c6", null ],
@@ -1850,6 +1897,7 @@ var common__structs_8h =
     [ "EntityList", "common__structs_8h.html#a0a28e86c8b317a799b6cc206babc40c0", null ],
     [ "EvtScript", "common__structs_8h.html#ac718b608783f254b030240252606fd0e", null ],
     [ "HitID", "common__structs_8h.html#ac4d29d1bd5d801a1592f9055188c7c74", null ],
+    [ "HudElemID", "common__structs_8h.html#a8c46c9af25c9d7ff77957b7753679b5a", null ],
     [ "Matrix4f", "common__structs_8h.html#a9587453a89fcbd13a2ba23c4b74fc0fd", null ],
     [ "MusicEventTrigger", "common__structs_8h.html#a50092da8eeff35dc912d3474b1f4658b", null ],
     [ "NoArgCallback", "common__structs_8h.html#aed2e3fe343db50fee9d1de45ffb99b4d", null ],

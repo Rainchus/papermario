@@ -18,10 +18,10 @@ var searchData=
   ['game_5fmode_5ftitle_5fscreen_15',['GAME_MODE_TITLE_SCREEN',['../game__modes_8h.html#a230f98a24f909e93ac62dd6b0670b3f5aef5708d5db23ae4e964df31beea9d081',1,'game_modes.h']]],
   ['game_5fmode_5funpause_16',['GAME_MODE_UNPAUSE',['../game__modes_8h.html#a230f98a24f909e93ac62dd6b0670b3f5a31075eabb0abf19e8f54ce1e96c58971',1,'game_modes.h']]],
   ['game_5fmode_5fworld_17',['GAME_MODE_WORLD',['../game__modes_8h.html#a230f98a24f909e93ac62dd6b0670b3f5a91b60a4059d84ddfefde37e2e2867687',1,'game_modes.h']]],
-  ['game_5fover_5fawait_5fmain_18',['GAME_OVER_AWAIT_MAIN',['../111f0__len__860_8c.html#a2604c22f547a55cbd8c0357bdff65d15acdeeaaafd9f761c19bfe1b68220d7752',1,'111f0_len_860.c']]],
-  ['game_5fover_5ffade_5fin_19',['GAME_OVER_FADE_IN',['../111f0__len__860_8c.html#a2604c22f547a55cbd8c0357bdff65d15ab45c5fb16a4767e12e5afb57dae7a26c',1,'111f0_len_860.c']]],
-  ['game_5fover_5finit_20',['GAME_OVER_INIT',['../111f0__len__860_8c.html#a2604c22f547a55cbd8c0357bdff65d15a0e89f94bb24ff314beac164782c454da',1,'111f0_len_860.c']]],
-  ['game_5fover_5fload_5fmap_21',['GAME_OVER_LOAD_MAP',['../111f0__len__860_8c.html#a2604c22f547a55cbd8c0357bdff65d15a3552033ffa777d8027b291b06d414a3f',1,'111f0_len_860.c']]],
+  ['game_5fover_5fawait_5fmain_18',['GAME_OVER_AWAIT_MAIN',['../state__map__transitions_8c.html#a2604c22f547a55cbd8c0357bdff65d15acdeeaaafd9f761c19bfe1b68220d7752',1,'state_map_transitions.c']]],
+  ['game_5fover_5ffade_5fin_19',['GAME_OVER_FADE_IN',['../state__map__transitions_8c.html#a2604c22f547a55cbd8c0357bdff65d15ab45c5fb16a4767e12e5afb57dae7a26c',1,'state_map_transitions.c']]],
+  ['game_5fover_5finit_20',['GAME_OVER_INIT',['../state__map__transitions_8c.html#a2604c22f547a55cbd8c0357bdff65d15a0e89f94bb24ff314beac164782c454da',1,'state_map_transitions.c']]],
+  ['game_5fover_5fload_5fmap_21',['GAME_OVER_LOAD_MAP',['../state__map__transitions_8c.html#a2604c22f547a55cbd8c0357bdff65d15a3552033ffa777d8027b291b06d414a3f',1,'state_map_transitions.c']]],
   ['gb_5farn_5ftubba_5fmapid_22',['GB_ARN_Tubba_MapID',['../saved__byte__names_8h.html#a33b4da87ac3eafb43f3dbae675553748adbc938f5b4543bbee02908c16e2154f5',1,'saved_byte_names.h']]],
   ['gb_5fchuckquizmo_5fmap_23',['GB_ChuckQuizmo_Map',['../saved__byte__names_8h.html#a33b4da87ac3eafb43f3dbae675553748a0b6ce0e076595de38f69e1916790d6d6',1,'saved_byte_names.h']]],
   ['gb_5fchuckquizmo_5ftown_24',['GB_ChuckQuizmo_Town',['../saved__byte__names_8h.html#a33b4da87ac3eafb43f3dbae675553748a1305388ee88b22cd0479016672e5d3a1',1,'saved_byte_names.h']]],
@@ -2605,5 +2605,5 @@ var searchData=
   ['glow_5fpal_5fon_2602',['GLOW_PAL_ON',['../enums_8h.html#a281d0ba7db4634740e33d7dbbec358aba688ad0e6c415c11666b609f55903511f',1,'enums.h']]],
   ['group_5ftype_5f0_2603',['GROUP_TYPE_0',['../model_8h.html#aff78a660ea8bf636cfbdf5d248b72345a9842db07b339d0539b721c5d74a9117c',1,'model.h']]],
   ['group_5ftype_5f1_2604',['GROUP_TYPE_1',['../model_8h.html#aff78a660ea8bf636cfbdf5d248b72345a12a5b50282c880605e4c9c1372249818',1,'model.h']]],
-  ['gv_5f01_5fentry_5f0_2605',['gv_01_ENTRY_0',['../entrances_8h.html#ad12132bb9a678532f1ab9d50c99c03b9a9618437646ff168ec595751e423a21ad',1,'entrances.h']]]
+  ['gv_5f01_5fentry_5f0_2605',['gv_01_ENTRY_0',['../entrances_8h.html#aa59f48318cfbd36639171234173ddf5fa9618437646ff168ec595751e423a21ad',1,'entrances.h']]]
 ];

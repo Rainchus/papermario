@@ -1,8 +1,11 @@
 var filemenu__main_8c =
 [
     [ "CENTER_CANCEL_X", "filemenu__main_8c.html#ae81cc75f019a93305fca700dec57b9b0", null ],
+    [ "COPY_CONFIRM_PROMPT_WIDTH", "filemenu__main_8c.html#afc65a4586c3322bbf6e1ad3a8c182b83", null ],
     [ "COPY_OFFSET_X", "filemenu__main_8c.html#acacb23dc086f0e5db6daca184f0b8887", null ],
+    [ "DELETE_CONFIRM_PROMPT_WIDTH", "filemenu__main_8c.html#aa95ed01639599124d15d9bc805b42a5a", null ],
     [ "DELETE_OFFSET_X", "filemenu__main_8c.html#a74b0cce6ebc7b7812c1621163504fa19", null ],
+    [ "FILE_COPIED_MESSAGE_WIDTH", "filemenu__main_8c.html#a1e00a6eb7a96d5c30020296142b96e99", null ],
     [ "FILE_NAME_X", "filemenu__main_8c.html#a532b72224c3d213de235b5e5946e9bc4", null ],
     [ "FILE_NUMBER_X", "filemenu__main_8c.html#a45c1cc895f576e660affee8063f24bf2", null ],
     [ "FILE_X", "filemenu__main_8c.html#ad108b89356555d09e616c1381e91962d", null ],
@@ -10,6 +13,7 @@ var filemenu__main_8c =
     [ "OFFSET_WIDTH", "filemenu__main_8c.html#a3d90d23e4148800e4482f014d1744ba8", null ],
     [ "RIGHT_CANCEL_X", "filemenu__main_8c.html#a43fc158086bbba6ee131b5857052a504", null ],
     [ "SAVE_OFFSET_X", "filemenu__main_8c.html#a594fe8293ac3347127ae3dc28639dcf5", null ],
+    [ "SELECT_CONFIRM_PROMPT_WIDTH", "filemenu__main_8c.html#ab084225d643f67526453cbedb9fed975", null ],
     [ "filemenu_draw_contents_file_0_info", "filemenu__main_8c.html#ac78916d0a73479e5fff84da6afc47a1c", null ],
     [ "filemenu_draw_contents_file_0_title", "filemenu__main_8c.html#a7406c23137e4b5483278662af4f7cf87", null ],
     [ "filemenu_draw_contents_file_1_info", "filemenu__main_8c.html#a553fe02d6105c9689f9c20d96b9b0bc0", null ],
@@ -32,7 +36,7 @@ var filemenu__main_8c =
     [ "filemenu_main_update", "filemenu__main_8c.html#adaaefa2a1d91e59c0c4985070f23022e", null ],
     [ "filemenu_filename", "filemenu__main_8c.html#ab0d38b62312a9f2c8412d2282a83918b", null ],
     [ "filemenu_main_gridData", "filemenu__main_8c.html#ae16ee790953b81b80876868cbf918545", null ],
-    [ "filemenu_main_hudElemScripts", "filemenu__main_8c.html#af527bfbd3fa24fe82d2f73f1833c9755", null ],
+    [ "filemenu_main_hudScripts", "filemenu__main_8c.html#a84311c149e928d55a9404a2917e11ec6", null ],
     [ "filemenu_main_menuBP", "filemenu__main_8c.html#a6a9f1f42b766dd52ae5ca48516d1daf4", null ],
     [ "filemenu_main_windowBPs", "filemenu__main_8c.html#abe0d744bad01eae64782673a0cbbc6ab", null ],
     [ "HES_JpFile", "filemenu__main_8c.html#a4ee2a81a06c6d302477bf2fb12afbf68", null ],

@@ -9,7 +9,7 @@ var map_8h_structMapSettings =
     [ "main", "map_8h.html#a82216c3f4ac636eb07b8f6496946630a", null ],
     [ "modelNameList", "map_8h.html#a406c0405edc4b73ca956379938ddb4b7", null ],
     [ "modelTreeRoot", "map_8h.html#afe185fd169473853903aa7b585967e8a", null ],
-    [ "tattle", "map_8h.html#a453dbc4fd825bbfb2cca637b408ef11a", null ],
+    [ "tattle", "map_8h.html#a83dc618efa214a70066b9f9d9f37bf43", null ],
     [ "unk_0C", "map_8h.html#adb795b60b324bb25f452726d850ecfa3", null ],
     [ "unk_1C", "map_8h.html#ab61222947114eb7881b7d17558289b78", null ],
     [ "unk_34", "map_8h.html#a8bad24879b07bacf698dee73a57b2f3f", null ],

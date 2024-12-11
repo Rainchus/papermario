@@ -7,7 +7,7 @@ var hud__element_8h =
     [ "PopupMenu", "hud__element_8h.html#structPopupMenu", [
       [ "descMsg", "hud__element_8h.html#affdb5116bfd4dfcaff243240c15b9007", null ],
       [ "dipMode", "hud__element_8h.html#af75edaa8f5b61ab533b89715ecc23793", null ],
-      [ "enabled", "hud__element_8h.html#ac1255dfe5b00e1e91b799ebf755cf948", null ],
+      [ "enabled", "hud__element_8h.html#abc59241bc87dbf8f2e699ba169c1014d", null ],
       [ "initialPos", "hud__element_8h.html#add833fa40683522d8564e0411c792e71", null ],
       [ "nameMsg", "hud__element_8h.html#a53fe684d84409d3e0f65fb38cff18f8f", null ],
       [ "numEntries", "hud__element_8h.html#adcc24bb9dddefe57823e2aaa05069025", null ],
@@ -26,7 +26,7 @@ var hud__element_8h =
       [ "value", "hud__element_8h.html#ac046800643952a25ba64732a0af1086a", null ]
     ] ],
     [ "Shop", "hud__element_8h.html#structShop", [
-      [ "costIconID", "hud__element_8h.html#ab3aec190bbf599808e32e0d172fe6f84", null ],
+      [ "costHID", "hud__element_8h.html#aa55e5c03c5062d7b4028970bf6319f97", null ],
       [ "curItemSlot", "hud__element_8h.html#a949d74d8835ce176d6a59a7440ece00e", null ],
       [ "flags", "hud__element_8h.html#ad426408243d715d90357286e1baac538", null ],
       [ "inventoryItemFlags", "hud__element_8h.html#a265ed08a5fb8a7ac2584944139907bce", null ],
@@ -135,7 +135,6 @@ var hud__element_8h =
     [ "hs_UseIA8", "hud__element_8h.html#ad377b033eba92c577a22c5cbe4f2cff7", null ],
     [ "HUD_ELEMENT_BATTLE_ID_MASK", "hud__element_8h.html#a3f398aec858e85df14e62013b059b5c3", null ],
     [ "HudElementList", "hud__element_8h.html#a542344c35825d4abd5a4a774802f4a27", null ],
-    [ "HudElemID", "hud__element_8h.html#a8c46c9af25c9d7ff77957b7753679b5a", null ],
     [ "HudScript", "hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336", null ],
     [ "HudElementFlags", "hud__element_8h.html#a6e690e95ff763c1db584cc67ae1c3bf9", [
       [ "HUD_ELEMENT_FLAG_INITIALIZED", "hud__element_8h.html#a6e690e95ff763c1db584cc67ae1c3bf9a706ec50f153ff4536390f110932d4e93", null ],

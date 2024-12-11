@@ -1,5 +1,9 @@
 var battle_2action__cmd_2whirlwind_8c =
 [
+    [ "BUZZAR_FILL_TICK", "battle_2action__cmd_2whirlwind_8c.html#ab0fde41646340616f928da49f0a89105", null ],
+    [ "GET_DRAIN_RATE_BUZZAR", "battle_2action__cmd_2whirlwind_8c.html#ad059567e5266a189682999c55aa0e84e", null ],
+    [ "GET_DRAIN_RATE_HUFF", "battle_2action__cmd_2whirlwind_8c.html#a50dea8629529300a72a2d1d3a29f8afc", null ],
+    [ "HUFF_FILL_TICK", "battle_2action__cmd_2whirlwind_8c.html#ae3d9e13f89a60be3ee2f999151afd37d", null ],
     [ "NAMESPACE", "battle_2action__cmd_2whirlwind_8c.html#afa7779fe56b160955b535cd6a8aaf8f4", null ],
     [ "draw", "battle_2action__cmd_2whirlwind_8c.html#ae8e589f4e02a52303c49157c03e87bc5", null ],
     [ "free", "battle_2action__cmd_2whirlwind_8c.html#a8a32d25946e38224f378cf499f5c4740", null ],
@@ -21,11 +25,6 @@ var battle_2action__cmd_2whirlwind_8c =
     [ "INCLUDE_PAL", "battle_2action__cmd_2whirlwind_8c.html#a885d6d84d4f587e43f45a7d1a2a015bc", null ],
     [ "update", "battle_2action__cmd_2whirlwind_8c.html#ad99b71be7d3a7a6825297eb250456b85", null ],
     [ "actionCmdTableWhirlwind", "battle_2action__cmd_2whirlwind_8c.html#a44fc5ebd63b708a4874fbc7a20f26444", null ],
-    [ "D_802AA844_4254B4", "battle_2action__cmd_2whirlwind_8c.html#aa62496e46f2b185e7f98f5c3c6ed89f6", null ],
-    [ "D_802AA85C_4254CC", "battle_2action__cmd_2whirlwind_8c.html#afb22b2ab7a2ef71359a74f1c297320e7", null ],
-    [ "D_802AA888_4254F8", "battle_2action__cmd_2whirlwind_8c.html#a12fb26d8e53c0cc1962c155cc7b4ff9b", null ],
-    [ "D_802AA8A0_425510", "battle_2action__cmd_2whirlwind_8c.html#a9d8b1b33d2b7f99ebf20c151aafb8acd", null ],
-    [ "D_802AA8B4_425524", "battle_2action__cmd_2whirlwind_8c.html#aa44a5b5b9f22c7a8978594fbb33e460a", null ],
     [ "HES_Whirlwind1", "battle_2action__cmd_2whirlwind_8c.html#a02c62dd5f34013826aaa9dc6bba705d7", null ],
     [ "HES_Whirlwind2", "battle_2action__cmd_2whirlwind_8c.html#a2fda3d6aa9cc90a4d462bc36c3918586", null ],
     [ "HES_Whirlwind3", "battle_2action__cmd_2whirlwind_8c.html#a816ce5c925da34c8d2197b6981b723ee", null ],

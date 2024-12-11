@@ -12,6 +12,13 @@ var scoreboard_8c =
     [ "FADE_OUT_TIME", "scoreboard_8c.html#a6ce57097d5320bdc26d576a9741f8218", null ],
     [ "MINIGAME_TYPE_JUMP", "scoreboard_8c.html#af42693b49518effe71a03f9eac278022", null ],
     [ "MINIGAME_TYPE_SMASH", "scoreboard_8c.html#adf57bfeb769f6375bc0a8c4b2da55200", null ],
+    [ "MSG_RESULT_JUMP_WIDTH", "scoreboard_8c.html#adbff7ea387b8b8f26d934cd0c4e5f5c3", null ],
+    [ "MSG_RESULT_SMASH_WIDTH", "scoreboard_8c.html#a7a98aa4225da3d61a5361010bb867cd5", null ],
+    [ "NUMBER_X_OFFSET", "scoreboard_8c.html#ad35bda9bb1f79994e15b5f3fd694b360", null ],
+    [ "RECORD_BOX_POSX", "scoreboard_8c.html#adae069b2df0a7ddeab2575924be2b547", null ],
+    [ "RECORD_BOX_WIDTH", "scoreboard_8c.html#a4fe0cbdbdc2f100b88511984d7470e52", null ],
+    [ "RESULT_COL1_X", "scoreboard_8c.html#a0863ac70e0bac84fe16bf24987bf12b8", null ],
+    [ "RESULT_COL2_X", "scoreboard_8c.html#ab1c09274a3a421d032f9a64d4d888030", null ],
     [ "RecordDisplayState", "scoreboard_8c.html#af59a2de03952e09f9cfbda629a2e3fbc", [
       [ "RECORD_START_SHOW", "scoreboard_8c.html#af59a2de03952e09f9cfbda629a2e3fbca3d44228dbbbdcddaee3e1603978a5024", null ],
       [ "RECORD_STATE_FADE_IN", "scoreboard_8c.html#af59a2de03952e09f9cfbda629a2e3fbca70f105cd9a3afc9a538cca217dc3dcc1", null ],

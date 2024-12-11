@@ -1,6 +1,9 @@
 var dir_12237804e0332a512b0526d80cf6826f =
 [
     [ "attack_result_text.c", "gfx_2attack__result__text_8c.html", "gfx_2attack__result__text_8c" ],
+    [ "attack_result_text_de.c", "attack__result__text__de_8c.html", "attack__result__text__de_8c" ],
+    [ "attack_result_text_es.c", "attack__result__text__es_8c.html", "attack__result__text__es_8c" ],
+    [ "attack_result_text_fr.c", "attack__result__text__fr_8c.html", "attack__result__text__fr_8c" ],
     [ "aura.c", "gfx_2aura_8c.html", "gfx_2aura_8c" ],
     [ "balloon.c", "gfx_2balloon_8c.html", "gfx_2balloon_8c" ],
     [ "big_smoke_puff.c", "gfx_2big__smoke__puff_8c.html", "gfx_2big__smoke__puff_8c" ],
@@ -10,6 +13,9 @@ var dir_12237804e0332a512b0526d80cf6826f =
     [ "bulb_glow.c", "gfx_2bulb__glow_8c.html", "gfx_2bulb__glow_8c" ],
     [ "butterflies.c", "gfx_2butterflies_8c.html", "gfx_2butterflies_8c" ],
     [ "chapter_change.c", "gfx_2chapter__change_8c.html", "gfx_2chapter__change_8c" ],
+    [ "chapter_change_de.c", "chapter__change__de_8c.html", "chapter__change__de_8c" ],
+    [ "chapter_change_es.c", "chapter__change__es_8c.html", "chapter__change__es_8c" ],
+    [ "chapter_change_fr.c", "chapter__change__fr_8c.html", "chapter__change__fr_8c" ],
     [ "chomp_drop.c", "gfx_2chomp__drop_8c.html", "gfx_2chomp__drop_8c" ],
     [ "cloud_puff_trail.c", "cloud__puff__trail_8c.html", "cloud__puff__trail_8c" ],
     [ "cold_breath.c", "gfx_2cold__breath_8c.html", "gfx_2cold__breath_8c" ],
@@ -107,7 +113,7 @@ var dir_12237804e0332a512b0526d80cf6826f =
     [ "thunderbolt_ring.c", "gfx_2thunderbolt__ring_8c.html", null ],
     [ "tubba_heart_attack.c", "gfx_2tubba__heart__attack_8c.html", "gfx_2tubba__heart__attack_8c" ],
     [ "underwater.c", "gfx_2underwater_8c.html", "gfx_2underwater_8c" ],
-    [ "water_block.c", "effects_2gfx_2water__block_8c.html", "effects_2gfx_2water__block_8c" ],
+    [ "water_block.c", "gfx_2water__block_8c.html", "gfx_2water__block_8c" ],
     [ "water_fountain.c", "gfx_2water__fountain_8c.html", "gfx_2water__fountain_8c" ],
     [ "water_splash.c", "gfx_2water__splash_8c.html", "gfx_2water__splash_8c" ],
     [ "waterfall.c", "gfx_2waterfall_8c.html", "gfx_2waterfall_8c" ],

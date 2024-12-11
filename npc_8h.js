@@ -137,7 +137,7 @@ var npc_8h =
     [ "NpcData", "npc_8h.html#structNpcData", [
       [ "aiDetectFlags", "npc_8h.html#a1fe5dc9b9eff1d350fcfc165dcc85650", null ],
       [ "aiFlags", "npc_8h.html#a37d25da3a9246cba3e7d73ac7c82eb91", null ],
-      [ "animations", "npc_8h.html#a8d99485bb7d299131bbfb2b2bfe59c66", null ],
+      [ "animations", "npc_8h.html#a79990187588f2ba2eb542180ce4126ca", null ],
       [ "drops", "npc_8h.html#a22d166f7ff237d7e8ac37762e53350ac", null ],
       [ "extraAnimations", "npc_8h.html#a8dea59efe4cf04dabf64c1efc129ed3e", null ],
       [ "flags", "npc_8h.html#a8f15bf19026681f4b82dafd5a4a0a5cd", null ],
@@ -224,7 +224,6 @@ var npc_8h =
       [ "status", "npc_8h.html#ab2763939e27d5194ccd648953ad4762f", null ]
     ] ],
     [ "EncounterStatus", "npc_8h.html#structEncounterStatus", [
-      [ "allowFleeing", "npc_8h.html#a0b558ad1d12eb507e509d5703c27c328", null ],
       [ "battleOutcome", "npc_8h.html#ac722173efa02dd797679822ba97d5aeb", null ],
       [ "battleStartCountdown", "npc_8h.html#adc56d41dc2563378dcef77b9d5f6aa75", null ],
       [ "battleTriggerCooldown", "npc_8h.html#a5213664ddab26de4a4e3b22d0c616ad6", null ],
@@ -243,7 +242,8 @@ var npc_8h =
       [ "fadeOutAmount", "npc_8h.html#aad09bc4effb34eab90e2077a481a87b3", null ],
       [ "firstStrikeType", "npc_8h.html#ae92869fcd18af29d17b99238d9ad7d66", null ],
       [ "flags", "npc_8h.html#a2ceaac7f1a87580969f1a6e073e408af", null ],
-      [ "hasMerleeCoinBonus", "npc_8h.html#a741bdbfef3c0f3c3f522c7a63c8e2095", null ],
+      [ "forbidFleeing", "npc_8h.html#a87bd49dd9d3330992fea6d8c0702b03c", null ],
+      [ "hasMerleeCoinBonus", "npc_8h.html#ac2680f519a0552c9732e66f693b28949", null ],
       [ "hitTier", "npc_8h.html#a067171758c0f92f3c3296247079a52c0", null ],
       [ "hitType", "npc_8h.html#a69f8d717b75cb22052dd17794c0ff190", null ],
       [ "instigatorValue", "npc_8h.html#ac3f7fb19836fc4956446570d8f69e1b9", null ],
@@ -254,12 +254,12 @@ var npc_8h =
       [ "resetMapEncounterFlags", "npc_8h.html#a0806be7a76e49812f9147432bed882b6", null ],
       [ "scriptedBattle", "npc_8h.html#a19890c11a2f1c2b993b3c4acc44839e0", null ],
       [ "songID", "npc_8h.html#a98c22fe94e43143a9441b7885182f117", null ],
+      [ "substateDelay", "npc_8h.html#af5f60e4a25c31af9babbb6e84b4dea42", null ],
       [ "unk_07", "npc_8h.html#a187abb2534f3c1d6ffbc2e0e318befc6", null ],
       [ "unk_08", "npc_8h.html#acc2e2a0fe6e6396fac11acb7e2572722", null ],
       [ "unk_0D", "npc_8h.html#a13e497adb2bf83a4bb03e030517426d7", null ],
       [ "unk_18", "npc_8h.html#a3f065be6f3200660388f0a479a00f168", null ],
       [ "unk_22", "npc_8h.html#ac774d716505544b93ef078120c06e731", null ],
-      [ "unk_94", "npc_8h.html#a4b2d4c6179ff8b4bac37ba2b5311b7a3", null ],
       [ "unusedAttack1", "npc_8h.html#a3d0efa34e578dd43039dfa5a40c8b22e", null ],
       [ "unusedAttack2", "npc_8h.html#ac1a922edeb7900c84bcdfd3a055d4ae5", null ],
       [ "unusedAttack3", "npc_8h.html#a39bfbd1eb7ee859d6502f0c8b0620c65", null ]
@@ -282,7 +282,7 @@ var npc_8h =
       [ "run", "npc_8h.html#aa53108f7543b75adbb34afc035d4cdf6", null ],
       [ "walk", "npc_8h.html#a46f9631576015f35f527af2bc67351a6", null ]
     ] ],
-    [ "Enemy.__unnamed45__", "npc_8h.html#unionEnemy_8____unnamed45____", [
+    [ "Enemy.__unnamed53__", "npc_8h.html#unionEnemy_8____unnamed53____", [
       [ "varTable", "npc_8h.html#a93c302ad376e647b9a09d4610947f97b", null ],
       [ "varTableF", "npc_8h.html#a087efa785a677c1d328b5219661c7287", null ],
       [ "varTablePtr", "npc_8h.html#a82a27a7127b56d8f89a7d27491636376", null ]
@@ -313,7 +313,7 @@ var npc_8h =
     ] ],
     [ "appendGfx_npc", "npc_8h.html#ad131038d53581244cf560f63e04e3b9b", null ],
     [ "appendGfx_npc_blur", "npc_8h.html#a0de4b670e85efa6d90c8c182916e9e78", null ],
-    [ "basic_ai_check_player_dist", "npc_8h.html#aa8505fa149304fb645bdb2750a55efa9", null ],
+    [ "basic_ai_check_player_dist", "npc_8h.html#a376f4a5f31f47f7954fac049b6b02387", null ],
     [ "bind_enemy_ai", "npc_8h.html#a2d841fec0614c99f3928b5e93eb5a586", null ],
     [ "bind_enemy_aux", "npc_8h.html#a2fbae7b6c8c85e55fbe9e9b3d7c23976", null ],
     [ "bind_enemy_interact", "npc_8h.html#afa22699a821ea589751f5850c3f1519d", null ],

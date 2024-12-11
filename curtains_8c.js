@@ -1,5 +1,6 @@
 var curtains_8c =
 [
+    [ "UI_NO_CONTROLLER_SIZE", "curtains_8c.html#ad296a98630192d18983018eb39a8a349", null ],
     [ "INCLUDE_IMG", "curtains_8c.html#abecb187f838a26be9cfeaef1863932f1", null ],
     [ "INCLUDE_IMG", "curtains_8c.html#a05bdbcca96fd0a3a91e96d11c18d6dea", null ],
     [ "INCLUDE_IMG", "curtains_8c.html#a2ce43d2f4344ad12c21853f1a06b85c7", null ],

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['imgfxinstancelist_0',['ImgFXInstanceList',['../imgfx_8c.html#a08dd4ebd14027b69a6948fc5cbc69481',1,'imgfx.c']]],
-  ['instrumentgroup_1',['InstrumentGroup',['../audio_8h.html#af39479c5db7cc4c64329f38d7ff3ccb7',1,'audio.h']]],
-  ['itemscript_2',['ItemScript',['../item__entity_8h.html#a73037ffee4d6aeb6f05251cd7896b88d',1,'item_entity.h']]]
+  ['hitid_0',['HitID',['../common__structs_8h.html#ac4d29d1bd5d801a1592f9055188c7c74',1,'common_structs.h']]],
+  ['hudelementlist_1',['HudElementList',['../hud__element_8h.html#a542344c35825d4abd5a4a774802f4a27',1,'hud_element.h']]],
+  ['hudelemid_2',['HudElemID',['../common__structs_8h.html#a8c46c9af25c9d7ff77957b7753679b5a',1,'common_structs.h']]],
+  ['hudscript_3',['HudScript',['../hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336',1,'hud_element.h']]]
 ];

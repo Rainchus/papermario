@@ -103,6 +103,7 @@ $(function(){initNavTree('battle_2action__cmd_2squirt_8c.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">squirt.c File Reference</div></div>
@@ -113,6 +114,19 @@ $(function(){initNavTree('battle_2action__cmd_2squirt_8c.html',''); initResizabl
 Macros</h2></td></tr>
 <tr class="memitem:afa7779fe56b160955b535cd6a8aaf8f4" id="r_afa7779fe56b160955b535cd6a8aaf8f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa7779fe56b160955b535cd6a8aaf8f4">NAMESPACE</a>&#160;&#160;&#160;action_command_squirt</td></tr>
 <tr class="separator:afa7779fe56b160955b535cd6a8aaf8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26915c3c02e9b97c4534474c2779b638" id="r_a26915c3c02e9b97c4534474c2779b638"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26915c3c02e9b97c4534474c2779b638">METER_DRAIN_RATE</a>&#160;&#160;&#160;250</td></tr>
+<tr class="separator:a26915c3c02e9b97c4534474c2779b638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29acae6a9bdfc4da81252dec32eae420" id="r_a29acae6a9bdfc4da81252dec32eae420"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29acae6a9bdfc4da81252dec32eae420">GET_DRAIN_RATE</a>(pct)&#160;&#160;&#160;(N(DrainRateTable)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 5))])</td></tr>
+<tr class="separator:a29acae6a9bdfc4da81252dec32eae420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572bbaa2adcda02a3bc5940357c15da8" id="r_a572bbaa2adcda02a3bc5940357c15da8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a572bbaa2adcda02a3bc5940357c15da8">GET_FILL_RATE</a>(pct)&#160;&#160;&#160;(N(FillRateTable)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 5))])</td></tr>
+<tr class="separator:a572bbaa2adcda02a3bc5940357c15da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a1e8054db89feba236b2235d16d0bd1ad" id="r_a1e8054db89feba236b2235d16d0bd1ad"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a1e8054db89feba236b2235d16d0bd1ada2538072b6d65381be84fb26181835a1b">HIDX_BUTTON</a> = 0
+, <a class="el" href="#a1e8054db89feba236b2235d16d0bd1ada14f8edd24d490c313f4c14445d36c50b">HIDX_METER</a> = 1
+ }</td></tr>
+<tr class="separator:a1e8054db89feba236b2235d16d0bd1ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -125,14 +139,64 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a488fa9eaa30d6e567ab128e5376e3a1b" id="r_a488fa9eaa30d6e567ab128e5376e3a1b"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a488fa9eaa30d6e567ab128e5376e3a1b">D_802A9760_42A480</a> [] = { 300, 300, 265, 220, 175, 175 }</td></tr>
-<tr class="separator:a488fa9eaa30d6e567ab128e5376e3a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0facb2f71e67f87dabf5c547be23b537" id="r_a0facb2f71e67f87dabf5c547be23b537"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0facb2f71e67f87dabf5c547be23b537">D_802A9778_42A498</a> [] = { 300, 300, 265, 220, 175, 175 }</td></tr>
-<tr class="separator:a0facb2f71e67f87dabf5c547be23b537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2272dfb2094e79a0448344a58f0b05" id="r_ade2272dfb2094e79a0448344a58f0b05"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade2272dfb2094e79a0448344a58f0b05">actionCmdTableSquirt</a> []</td></tr>
 <tr class="separator:ade2272dfb2094e79a0448344a58f0b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a29acae6a9bdfc4da81252dec32eae420" name="a29acae6a9bdfc4da81252dec32eae420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29acae6a9bdfc4da81252dec32eae420">&#9670;&#160;</a></span>GET_DRAIN_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_DRAIN_RATE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">pct</span></td><td>)</td>
+          <td>&#160;&#160;&#160;(N(DrainRateTable)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 5))])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
+<a id="a572bbaa2adcda02a3bc5940357c15da8" name="a572bbaa2adcda02a3bc5940357c15da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572bbaa2adcda02a3bc5940357c15da8">&#9670;&#160;</a></span>GET_FILL_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_FILL_RATE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">pct</span></td><td>)</td>
+          <td>&#160;&#160;&#160;(N(FillRateTable)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 5))])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
+<a id="a26915c3c02e9b97c4534474c2779b638" name="a26915c3c02e9b97c4534474c2779b638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26915c3c02e9b97c4534474c2779b638">&#9670;&#160;</a></span>METER_DRAIN_RATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define METER_DRAIN_RATE&#160;&#160;&#160;250</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
 <a id="afa7779fe56b160955b535cd6a8aaf8f4" name="afa7779fe56b160955b535cd6a8aaf8f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa7779fe56b160955b535cd6a8aaf8f4">&#9670;&#160;</a></span>NAMESPACE</h2>
 
@@ -144,6 +208,25 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a1e8054db89feba236b2235d16d0bd1ad" name="a1e8054db89feba236b2235d16d0bd1ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8054db89feba236b2235d16d0bd1ad">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1e8054db89feba236b2235d16d0bd1ada2538072b6d65381be84fb26181835a1b" name="a1e8054db89feba236b2235d16d0bd1ada2538072b6d65381be84fb26181835a1b"></a>HIDX_BUTTON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e8054db89feba236b2235d16d0bd1ada14f8edd24d490c313f4c14445d36c50b" name="a1e8054db89feba236b2235d16d0bd1ada14f8edd24d490c313f4c14445d36c50b"></a>HIDX_METER&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -219,38 +302,6 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a488fa9eaa30d6e567ab128e5376e3a1b" name="a488fa9eaa30d6e567ab128e5376e3a1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a488fa9eaa30d6e567ab128e5376e3a1b">&#9670;&#160;</a></span>D_802A9760_42A480</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_802A9760_42A480[] = { 300, 300, 265, 220, 175, 175 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
-
-</div>
-</div>
-<a id="a0facb2f71e67f87dabf5c547be23b537" name="a0facb2f71e67f87dabf5c547be23b537"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0facb2f71e67f87dabf5c547be23b537">&#9670;&#160;</a></span>D_802A9778_42A498</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_802A9778_42A498[] = { 300, 300, 265, 220, 175, 175 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
 
 </div>
 </div>

@@ -5,6 +5,7 @@ var dir_3a3400c844282bb641d6c07d3ebace53 =
     [ "intro.c", "area__hos_2hos__10_2intro_8c.html", "area__hos_2hos__10_2intro_8c" ],
     [ "main.c", "world_2area__hos_2hos__10_2main_8c.html", null ],
     [ "music.c", "area__hos_2hos__10_2music_8c.html", null ],
+    [ "narrator.c", "hos__10_2narrator_8c.html", "hos__10_2narrator_8c" ],
     [ "npc1.c", "area__hos_2hos__10_2npc1_8c.html", "area__hos_2hos__10_2npc1_8c" ],
     [ "npc2.c", "area__hos_2hos__10_2npc2_8c.html", "area__hos_2hos__10_2npc2_8c" ],
     [ "pre_title.c", "pre__title_8c.html", "pre__title_8c" ],

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['unk_5ftype_5f08_0',['UNK_TYPE_08',['../audio_8h.html#aa5e88f671017e2a9fe08cd550bf2ec4f',1,'audio.h']]],
-  ['unk_5ftype_5f16_1',['UNK_TYPE_16',['../audio_8h.html#a827ae2917ade512d376f9b5fb47377de',1,'audio.h']]],
-  ['unk_5ftype_5f32_2',['UNK_TYPE_32',['../audio_8h.html#a77132733dc833deff94fcedabbbce761',1,'audio.h']]],
-  ['unk_5ftype_5fptr_3',['UNK_TYPE_PTR',['../audio_8h.html#af322b43fb2630f197190768f0bdd5abf',1,'audio.h']]]
+  ['tlbentry_0',['TlbEntry',['../effects_8c.html#af1f09d13d9c412a6f505d479605df29e',1,'TlbEntry:&#160;effects.c'],['../heaps_8c.html#af1f09d13d9c412a6f505d479605df29e',1,'TlbEntry:&#160;heaps.c']]],
+  ['tlbmappablepage_1',['TlbMappablePage',['../effects_8c.html#a865cbcab0d89134c944c131175838832',1,'TlbMappablePage:&#160;effects.c'],['../heaps_8c.html#a865cbcab0d89134c944c131175838832',1,'TlbMappablePage:&#160;heaps.c']]],
+  ['triggerlist_2',['TriggerList',['../common__structs_8h.html#a9f199862bc976ca73183fd644599032b',1,'common_structs.h']]],
+  ['tweesterpath_3',['TweesterPath',['../entity_8h.html#a833caca8989b0caef24ad5815b128b9e',1,'entity.h']]]
 ];

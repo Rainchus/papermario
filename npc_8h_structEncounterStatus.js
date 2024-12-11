@@ -1,6 +1,5 @@
 var npc_8h_structEncounterStatus =
 [
-    [ "allowFleeing", "npc_8h.html#a0b558ad1d12eb507e509d5703c27c328", null ],
     [ "battleOutcome", "npc_8h.html#ac722173efa02dd797679822ba97d5aeb", null ],
     [ "battleStartCountdown", "npc_8h.html#adc56d41dc2563378dcef77b9d5f6aa75", null ],
     [ "battleTriggerCooldown", "npc_8h.html#a5213664ddab26de4a4e3b22d0c616ad6", null ],
@@ -19,7 +18,8 @@ var npc_8h_structEncounterStatus =
     [ "fadeOutAmount", "npc_8h.html#aad09bc4effb34eab90e2077a481a87b3", null ],
     [ "firstStrikeType", "npc_8h.html#ae92869fcd18af29d17b99238d9ad7d66", null ],
     [ "flags", "npc_8h.html#a2ceaac7f1a87580969f1a6e073e408af", null ],
-    [ "hasMerleeCoinBonus", "npc_8h.html#a741bdbfef3c0f3c3f522c7a63c8e2095", null ],
+    [ "forbidFleeing", "npc_8h.html#a87bd49dd9d3330992fea6d8c0702b03c", null ],
+    [ "hasMerleeCoinBonus", "npc_8h.html#ac2680f519a0552c9732e66f693b28949", null ],
     [ "hitTier", "npc_8h.html#a067171758c0f92f3c3296247079a52c0", null ],
     [ "hitType", "npc_8h.html#a69f8d717b75cb22052dd17794c0ff190", null ],
     [ "instigatorValue", "npc_8h.html#ac3f7fb19836fc4956446570d8f69e1b9", null ],
@@ -30,12 +30,12 @@ var npc_8h_structEncounterStatus =
     [ "resetMapEncounterFlags", "npc_8h.html#a0806be7a76e49812f9147432bed882b6", null ],
     [ "scriptedBattle", "npc_8h.html#a19890c11a2f1c2b993b3c4acc44839e0", null ],
     [ "songID", "npc_8h.html#a98c22fe94e43143a9441b7885182f117", null ],
+    [ "substateDelay", "npc_8h.html#af5f60e4a25c31af9babbb6e84b4dea42", null ],
     [ "unk_07", "npc_8h.html#a187abb2534f3c1d6ffbc2e0e318befc6", null ],
     [ "unk_08", "npc_8h.html#acc2e2a0fe6e6396fac11acb7e2572722", null ],
     [ "unk_0D", "npc_8h.html#a13e497adb2bf83a4bb03e030517426d7", null ],
     [ "unk_18", "npc_8h.html#a3f065be6f3200660388f0a479a00f168", null ],
     [ "unk_22", "npc_8h.html#ac774d716505544b93ef078120c06e731", null ],
-    [ "unk_94", "npc_8h.html#a4b2d4c6179ff8b4bac37ba2b5311b7a3", null ],
     [ "unusedAttack1", "npc_8h.html#a3d0efa34e578dd43039dfa5a40c8b22e", null ],
     [ "unusedAttack2", "npc_8h.html#ac1a922edeb7900c84bcdfd3a055d4ae5", null ],
     [ "unusedAttack3", "npc_8h.html#a39bfbd1eb7ee859d6502f0c8b0620c65", null ]

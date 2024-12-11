@@ -6,6 +6,10 @@ var state__title__screen_8c =
       [ "logo", "state__title__screen_8c.html#a57ef99e993a483cd1bffef19c398898d", null ],
       [ "pressStart", "state__title__screen_8c.html#a45d2d7b48f76e66100ed09b758c5bf23", null ]
     ] ],
+    [ "TitleMenuDataStruct", "titlemenu_8c.html#structTitleMenuDataStruct", [
+      [ "languages", "titlemenu_8c.html#aa1db6a45193c5de33bc548cc0108cf48", null ],
+      [ "startGame", "titlemenu_8c.html#a96ceba954e004a3d7744a2cade120c5b", null ]
+    ] ],
     [ "COPYRIGHT_IMG", "state__title__screen_8c.html#acaeca9afb8b7f727c7cc3249b90cde4f", null ],
     [ "COPYRIGHT_TEX_CHUNKS", "state__title__screen_8c.html#a733dbba1cd6e42e62a48957e40f1c9c7", null ],
     [ "COPYRIGHT_WIDTH", "state__title__screen_8c.html#a273a4822cdc05d323eef5cc4e4501010", null ],
@@ -13,9 +17,11 @@ var state__title__screen_8c =
     [ "LTT_LRT", "state__title__screen_8c.html#aa913a54482f68d8c189cf60784c4d29f", null ],
     [ "RECT_SIZE", "state__title__screen_8c.html#ab60773f9d8d75ec04602ffb878732850", null ],
     [ "TITLE_HEIGHT", "state__title__screen_8c.html#aca66aeea7d75b42b8f410023f648964c", null ],
+    [ "TITLE_LOGO_YOFFSET", "state__title__screen_8c.html#ae8b23d9dd1792f9b2a64ff03dd4cfc30", null ],
     [ "TITLE_NUM_TILES", "state__title__screen_8c.html#a989f062cef93ae189f9c3ac66188ef58", null ],
     [ "TITLE_POS_LEFT", "state__title__screen_8c.html#a70d3e6d7ed34e2723c34fbba3b558754", null ],
     [ "TITLE_POS_TOP", "state__title__screen_8c.html#a272d7f8f90768659c44ad4d24618cc23", null ],
+    [ "TITLE_START_TIME", "state__title__screen_8c.html#a169460671062145b4062ffee58a94cd3", null ],
     [ "TITLE_TILE_HEIGHT", "state__title__screen_8c.html#af481d0f6b7d56f7d3b8944b7e4f29371", null ],
     [ "TITLE_TILE_PIXELS", "state__title__screen_8c.html#a7ed4636b7076f475fecfb590a2f73022", null ],
     [ "TITLE_WIDTH", "state__title__screen_8c.html#a9e21b4de91cb50d48bca8482cbd710a0", null ],
@@ -23,6 +29,10 @@ var state__title__screen_8c =
     [ "VAR_2", "state__title__screen_8c.html#ad3aa91beaa25fac741787d05b1576e56", null ],
     [ "YH_BASE", "state__title__screen_8c.html#a393fa66d965008dc582a9aa14ecb6d99", null ],
     [ "YL_BASE", "state__title__screen_8c.html#a0b33cf94126c8b0b115dd92eae189b53", null ],
+    [ "TitleMenuVisibilityStates", "state__title__screen_8c.html#aee062a101c684447379b103fe45d1b7b", [
+      [ "TITLEMENU_STATE_FADE_IN", "state__title__screen_8c.html#aee062a101c684447379b103fe45d1b7baee21735959ca05ea91f3a9ecfe1b4836", null ],
+      [ "TITLEMENU_STATE_FADE_OUT", "state__title__screen_8c.html#aee062a101c684447379b103fe45d1b7ba8c3d9b0f1f01afdcbced0f719ed8f118", null ]
+    ] ],
     [ "TitleScreenStates", "state__title__screen_8c.html#aeb68d1a8edf71567f2e88e1cdfeca1b6", [
       [ "TITLE_STATE_INIT", "state__title__screen_8c.html#aeb68d1a8edf71567f2e88e1cdfeca1b6a7b04b41fe10ba60cbdced9d31a16716f", null ],
       [ "TITLE_STATE_APPEAR", "state__title__screen_8c.html#aeb68d1a8edf71567f2e88e1cdfeca1b6acc1784ac4dc0c9d48d59d5c32c3a4685", null ],
@@ -40,14 +50,14 @@ var state__title__screen_8c =
     [ "title_screen_draw_copyright", "state__title__screen_8c.html#a72fc44a65f4c5446819bf6c994cf7458", null ],
     [ "title_screen_draw_images", "state__title__screen_8c.html#a5e7985c035157b5870a22f60cf5223ec", null ],
     [ "title_screen_draw_logo", "state__title__screen_8c.html#abf06f0fb303a44cf4e33d3bbb80fe521", null ],
-    [ "title_screen_draw_press_start", "state__title__screen_8c.html#add07f7b613c3d6ea12fc407703827ca8", null ],
+    [ "title_screen_draw_menu", "state__title__screen_8c.html#ab9094f20fcbb68cd52c7f942df51a800", null ],
     [ "D_80077A38", "state__title__screen_8c.html#ae4720c4ddae5afd8625efd08bb8d4532", null ],
     [ "gSaveSlotHasData", "state__title__screen_8c.html#a3e4b5b9f8cde14e97b982f88ea921d76", null ],
     [ "gSaveSlotMetadata", "state__title__screen_8c.html#a82eff174d993a50e21defc3d20498540", null ],
     [ "PlayIntroNext", "state__title__screen_8c.html#ab1e274167b3d5bb183d17530de99c7be", null ],
-    [ "PressStart_Alpha", "state__title__screen_8c.html#a359843e1697fa24f03aedbc43e7c1486", null ],
-    [ "PressStart_BlinkCounter", "state__title__screen_8c.html#a299061ad75fce119652b381ddadb8475", null ],
-    [ "PressStart_IsVisible", "state__title__screen_8c.html#a003173d8110ff66d792793c8cb26e335", null ],
+    [ "TitleMenu_Alpha", "state__title__screen_8c.html#af9e3bc671715e8a92e2d622e2ff4ebaa", null ],
+    [ "TitleMenu_BlinkCounter", "state__title__screen_8c.html#a46e4f44383d7aafb3294dd410b2ac14f", null ],
+    [ "TitleMenu_Visibility", "state__title__screen_8c.html#a0a1ab61cb02d5f034e7f65ff98cd711e", null ],
     [ "TitleScreen_AppearDelay", "state__title__screen_8c.html#ae86bd2851b0de50ae8f447e9ad4f577b", null ],
     [ "TitleScreen_ImgList", "state__title__screen_8c.html#a816fea27e53e64b0359655f081f9b765", null ],
     [ "TitleScreen_ImgList_Copyright", "state__title__screen_8c.html#aa97106e0cc6f212c22550cfa3e3bed77", null ],

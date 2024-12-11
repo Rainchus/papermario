@@ -324,7 +324,7 @@ Variables</h2></td></tr>
 <div class="line">    .col = 2,</div>
 <div class="line">    .row = 0,</div>
 <div class="line">    .selected = 0,</div>
-<div class="line">    .page = 0,</div>
+<div class="line">    .state = 0,</div>
 <div class="line">    .numCols = 5,</div>
 <div class="line">    .numRows = 2,</div>
 <div class="line">    .numPages = 0,</div>
@@ -334,11 +334,11 @@ Variables</h2></td></tr>
 <div class="line">    .fpUpdate = &amp;<a class="code hl_function" href="#afb1bd553d284ab20a24b56bd0fb7996f">pause_spirits_update</a>,</div>
 <div class="line">    .fpCleanup = &amp;<a class="code hl_function" href="#ae7f62480a7af2b573c2f9d8459a233e4">pause_spirits_cleanup</a></div>
 <div class="line">}</div>
-<div class="ttc" id="apause__spirits_8c_html_a050a304d1d651cd67bc795b7fe924f05"><div class="ttname"><a href="#a050a304d1d651cd67bc795b7fe924f05">pause_spirits_init</a></div><div class="ttdeci">void pause_spirits_init(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:261</div></div>
-<div class="ttc" id="apause__spirits_8c_html_a15ce7c52718b9144e85e7689cf3bacad"><div class="ttname"><a href="#a15ce7c52718b9144e85e7689cf3bacad">pause_spirits_handle_input</a></div><div class="ttdeci">void pause_spirits_handle_input(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:283</div></div>
+<div class="ttc" id="apause__spirits_8c_html_a050a304d1d651cd67bc795b7fe924f05"><div class="ttname"><a href="#a050a304d1d651cd67bc795b7fe924f05">pause_spirits_init</a></div><div class="ttdeci">void pause_spirits_init(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:260</div></div>
+<div class="ttc" id="apause__spirits_8c_html_a15ce7c52718b9144e85e7689cf3bacad"><div class="ttname"><a href="#a15ce7c52718b9144e85e7689cf3bacad">pause_spirits_handle_input</a></div><div class="ttdeci">void pause_spirits_handle_input(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:282</div></div>
 <div class="ttc" id="apause__spirits_8c_html_a4b3d83f1480a6bf64c94ffa5d9703611"><div class="ttname"><a href="#a4b3d83f1480a6bf64c94ffa5d9703611">gPauseSpiritsGridData</a></div><div class="ttdeci">s8 gPauseSpiritsGridData[]</div><div class="ttdef"><b>Definition</b> pause_spirits.c:77</div></div>
-<div class="ttc" id="apause__spirits_8c_html_ae7f62480a7af2b573c2f9d8459a233e4"><div class="ttname"><a href="#ae7f62480a7af2b573c2f9d8459a233e4">pause_spirits_cleanup</a></div><div class="ttdeci">void pause_spirits_cleanup(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:396</div></div>
-<div class="ttc" id="apause__spirits_8c_html_afb1bd553d284ab20a24b56bd0fb7996f"><div class="ttname"><a href="#afb1bd553d284ab20a24b56bd0fb7996f">pause_spirits_update</a></div><div class="ttdeci">void pause_spirits_update(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:382</div></div>
+<div class="ttc" id="apause__spirits_8c_html_ae7f62480a7af2b573c2f9d8459a233e4"><div class="ttname"><a href="#ae7f62480a7af2b573c2f9d8459a233e4">pause_spirits_cleanup</a></div><div class="ttdeci">void pause_spirits_cleanup(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:395</div></div>
+<div class="ttc" id="apause__spirits_8c_html_afb1bd553d284ab20a24b56bd0fb7996f"><div class="ttname"><a href="#afb1bd553d284ab20a24b56bd0fb7996f">pause_spirits_update</a></div><div class="ttdeci">void pause_spirits_update(MenuPanel *panel)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:381</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -477,7 +477,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    {</div>
-<div class="line">        .windowID = <a class="code hl_enumvalue" href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76aa467be26d43162a6538aef9ca83ba8b5">WINDOW_ID_PAUSE_SPIRITS</a>,</div>
+<div class="line">        .windowID = <a class="code hl_enumvalue" href="enums_8h.html#afd488341f0bc83879003639774d73680ad001d80ef50ef7692aea48f96468ef9b">WIN_PAUSE_SPIRITS</a>,</div>
 <div class="line">        .unk_01 = 0,</div>
 <div class="line">        .pos = { .x = 3, .y = 16 },</div>
 <div class="line">        .width = 289,</div>
@@ -485,13 +485,13 @@ Variables</h2></td></tr>
 <div class="line">        .priority = <a class="code hl_enumvalue" href="enums_8h.html#a4758587b652636146b5b1b1a633a7f35a7e6a23c7d22a916a8ccb2fd0877dd600">WINDOW_PRIORITY_1</a>,</div>
 <div class="line">        .fpDrawContents = &amp;<a class="code hl_function" href="#ac3b64924c07c747e42c4fb4993b041d6">pause_spirits_draw_contents</a>,</div>
 <div class="line">        .tab = NULL,</div>
-<div class="line">        .parentID = <a class="code hl_enumvalue" href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76a4fa004271b89cc4f75b177ba197388bb">WINDOW_ID_PAUSE_MAIN</a>,</div>
+<div class="line">        .parentID = <a class="code hl_enumvalue" href="enums_8h.html#afd488341f0bc83879003639774d73680aaf7472c43cdd5f1f2c6dc826c50a986d">WIN_PAUSE_MAIN</a>,</div>
 <div class="line">        .fpUpdate = { <a class="code hl_enumvalue" href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0">WINDOW_UPDATE_HIDE</a> },</div>
 <div class="line">        .extraFlags = 0,</div>
 <div class="line">        .style = { .customStyle = &amp;<a class="code hl_variable" href="pause__common_8h.html#aa5c25625f32475a2f16b571215aa02f4">gPauseWS_23</a> }</div>
 <div class="line">    },</div>
 <div class="line">    {</div>
-<div class="line">        .windowID = <a class="code hl_enumvalue" href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76a6137741a9da98b30873fa7a8c5216636">WINDOW_ID_PAUSE_SPIRITS_TITLE</a>,</div>
+<div class="line">        .windowID = <a class="code hl_enumvalue" href="enums_8h.html#afd488341f0bc83879003639774d73680ae6183690b9c6ed54d8457a26c8269c1d">WIN_PAUSE_SPIRITS_TITLE</a>,</div>
 <div class="line">        .unk_01 = 0,</div>
 <div class="line">        .pos = { .x = 86, .y = 124 },</div>
 <div class="line">        .width = 120,</div>
@@ -499,22 +499,22 @@ Variables</h2></td></tr>
 <div class="line">        .priority = <a class="code hl_enumvalue" href="enums_8h.html#a4758587b652636146b5b1b1a633a7f35aaa6fa2cf45051b14708d6860100463cd">WINDOW_PRIORITY_0</a>,</div>
 <div class="line">        .fpDrawContents = &amp;<a class="code hl_function" href="#a99897f6002516438a828278d0eeb1700">pause_spirits_draw_title</a>,</div>
 <div class="line">        .tab = NULL,</div>
-<div class="line">        .parentID = <a class="code hl_enumvalue" href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76aa467be26d43162a6538aef9ca83ba8b5">WINDOW_ID_PAUSE_SPIRITS</a>,</div>
+<div class="line">        .parentID = <a class="code hl_enumvalue" href="enums_8h.html#afd488341f0bc83879003639774d73680ad001d80ef50ef7692aea48f96468ef9b">WIN_PAUSE_SPIRITS</a>,</div>
 <div class="line">        .fpUpdate = { <a class="code hl_enumvalue" href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3a24b97309a9c0b23c5ac5818e5c4e3c89">WINDOW_UPDATE_SHOW</a> },</div>
 <div class="line">        .extraFlags = 0,</div>
 <div class="line">        .style = { .customStyle = &amp;<a class="code hl_variable" href="pause__common_8h.html#ad88af989d071f7d17fa6d4393789849b">gPauseWS_24</a> }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aenums_8h_html_a32be6dfcea8057f90deb69cb7c1ecb76a4fa004271b89cc4f75b177ba197388bb"><div class="ttname"><a href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76a4fa004271b89cc4f75b177ba197388bb">WINDOW_ID_PAUSE_MAIN</a></div><div class="ttdeci">@ WINDOW_ID_PAUSE_MAIN</div><div class="ttdef"><b>Definition</b> enums.h:5219</div></div>
-<div class="ttc" id="aenums_8h_html_a32be6dfcea8057f90deb69cb7c1ecb76a6137741a9da98b30873fa7a8c5216636"><div class="ttname"><a href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76a6137741a9da98b30873fa7a8c5216636">WINDOW_ID_PAUSE_SPIRITS_TITLE</a></div><div class="ttdeci">@ WINDOW_ID_PAUSE_SPIRITS_TITLE</div><div class="ttdef"><b>Definition</b> enums.h:5239</div></div>
-<div class="ttc" id="aenums_8h_html_a32be6dfcea8057f90deb69cb7c1ecb76aa467be26d43162a6538aef9ca83ba8b5"><div class="ttname"><a href="enums_8h.html#a32be6dfcea8057f90deb69cb7c1ecb76aa467be26d43162a6538aef9ca83ba8b5">WINDOW_ID_PAUSE_SPIRITS</a></div><div class="ttdeci">@ WINDOW_ID_PAUSE_SPIRITS</div><div class="ttdef"><b>Definition</b> enums.h:5238</div></div>
 <div class="ttc" id="aenums_8h_html_a4758587b652636146b5b1b1a633a7f35a7e6a23c7d22a916a8ccb2fd0877dd600"><div class="ttname"><a href="enums_8h.html#a4758587b652636146b5b1b1a633a7f35a7e6a23c7d22a916a8ccb2fd0877dd600">WINDOW_PRIORITY_1</a></div><div class="ttdeci">@ WINDOW_PRIORITY_1</div><div class="ttdef"><b>Definition</b> enums.h:3184</div></div>
 <div class="ttc" id="aenums_8h_html_a4758587b652636146b5b1b1a633a7f35aaa6fa2cf45051b14708d6860100463cd"><div class="ttname"><a href="enums_8h.html#a4758587b652636146b5b1b1a633a7f35aaa6fa2cf45051b14708d6860100463cd">WINDOW_PRIORITY_0</a></div><div class="ttdeci">@ WINDOW_PRIORITY_0</div><div class="ttdef"><b>Definition</b> enums.h:3183</div></div>
-<div class="ttc" id="aenums_8h_html_ad94fc5d2a313ab5a7bc1f1597f2082c3a24b97309a9c0b23c5ac5818e5c4e3c89"><div class="ttname"><a href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3a24b97309a9c0b23c5ac5818e5c4e3c89">WINDOW_UPDATE_SHOW</a></div><div class="ttdeci">@ WINDOW_UPDATE_SHOW</div><div class="ttdef"><b>Definition</b> enums.h:5267</div></div>
-<div class="ttc" id="aenums_8h_html_ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0"><div class="ttname"><a href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0">WINDOW_UPDATE_HIDE</a></div><div class="ttdeci">@ WINDOW_UPDATE_HIDE</div><div class="ttdef"><b>Definition</b> enums.h:5268</div></div>
+<div class="ttc" id="aenums_8h_html_ad94fc5d2a313ab5a7bc1f1597f2082c3a24b97309a9c0b23c5ac5818e5c4e3c89"><div class="ttname"><a href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3a24b97309a9c0b23c5ac5818e5c4e3c89">WINDOW_UPDATE_SHOW</a></div><div class="ttdeci">@ WINDOW_UPDATE_SHOW</div><div class="ttdef"><b>Definition</b> enums.h:5311</div></div>
+<div class="ttc" id="aenums_8h_html_ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0"><div class="ttname"><a href="enums_8h.html#ad94fc5d2a313ab5a7bc1f1597f2082c3ac9fe3ec665991673f1b5741889abf2a0">WINDOW_UPDATE_HIDE</a></div><div class="ttdeci">@ WINDOW_UPDATE_HIDE</div><div class="ttdef"><b>Definition</b> enums.h:5312</div></div>
+<div class="ttc" id="aenums_8h_html_afd488341f0bc83879003639774d73680aaf7472c43cdd5f1f2c6dc826c50a986d"><div class="ttname"><a href="enums_8h.html#afd488341f0bc83879003639774d73680aaf7472c43cdd5f1f2c6dc826c50a986d">WIN_PAUSE_MAIN</a></div><div class="ttdeci">@ WIN_PAUSE_MAIN</div><div class="ttdef"><b>Definition</b> enums.h:5263</div></div>
+<div class="ttc" id="aenums_8h_html_afd488341f0bc83879003639774d73680ad001d80ef50ef7692aea48f96468ef9b"><div class="ttname"><a href="enums_8h.html#afd488341f0bc83879003639774d73680ad001d80ef50ef7692aea48f96468ef9b">WIN_PAUSE_SPIRITS</a></div><div class="ttdeci">@ WIN_PAUSE_SPIRITS</div><div class="ttdef"><b>Definition</b> enums.h:5282</div></div>
+<div class="ttc" id="aenums_8h_html_afd488341f0bc83879003639774d73680ae6183690b9c6ed54d8457a26c8269c1d"><div class="ttname"><a href="enums_8h.html#afd488341f0bc83879003639774d73680ae6183690b9c6ed54d8457a26c8269c1d">WIN_PAUSE_SPIRITS_TITLE</a></div><div class="ttdeci">@ WIN_PAUSE_SPIRITS_TITLE</div><div class="ttdef"><b>Definition</b> enums.h:5283</div></div>
 <div class="ttc" id="apause__common_8h_html_aa5c25625f32475a2f16b571215aa02f4"><div class="ttname"><a href="pause__common_8h.html#aa5c25625f32475a2f16b571215aa02f4">gPauseWS_23</a></div><div class="ttdeci">WindowStyleCustom gPauseWS_23</div><div class="ttdef"><b>Definition</b> pause_styles.c:608</div></div>
 <div class="ttc" id="apause__common_8h_html_ad88af989d071f7d17fa6d4393789849b"><div class="ttname"><a href="pause__common_8h.html#ad88af989d071f7d17fa6d4393789849b">gPauseWS_24</a></div><div class="ttdeci">WindowStyleCustom gPauseWS_24</div><div class="ttdef"><b>Definition</b> pause_styles.c:634</div></div>
-<div class="ttc" id="apause__spirits_8c_html_a99897f6002516438a828278d0eeb1700"><div class="ttname"><a href="#a99897f6002516438a828278d0eeb1700">pause_spirits_draw_title</a></div><div class="ttdeci">void pause_spirits_draw_title(MenuPanel *menu, s32 baseX, s32 baseY, s32 width, s32 height, s32 opacity, s32 darkening)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:247</div></div>
+<div class="ttc" id="apause__spirits_8c_html_a99897f6002516438a828278d0eeb1700"><div class="ttname"><a href="#a99897f6002516438a828278d0eeb1700">pause_spirits_draw_title</a></div><div class="ttdeci">void pause_spirits_draw_title(MenuPanel *menu, s32 baseX, s32 baseY, s32 width, s32 height, s32 opacity, s32 darkening)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:246</div></div>
 <div class="ttc" id="apause__spirits_8c_html_ac3b64924c07c747e42c4fb4993b041d6"><div class="ttname"><a href="#ac3b64924c07c747e42c4fb4993b041d6">pause_spirits_draw_contents</a></div><div class="ttdeci">void pause_spirits_draw_contents(MenuPanel *menu, s32 baseX, s32 baseY, s32 width, s32 height, s32 opacity, s32 darkening)</div><div class="ttdef"><b>Definition</b> pause_spirits.c:146</div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="#a050a304d1d651cd67bc795b7fe924f05">pause_spirits_init()</a>.</p>

@@ -104,12 +104,15 @@ var searchData=
   ['assault_2ec_101',['assault.c',['../assault_8c.html',1,'']]],
   ['attack_2ec_102',['attack.c',['../hammer_2attack_8c.html',1,'(Global Namespace)'],['../jump_2attack_8c.html',1,'(Global Namespace)']]],
   ['attack_5fresult_5ftext_2ec_103',['attack_result_text.c',['../attack__result__text_8c.html',1,'(Global Namespace)'],['../gfx_2attack__result__text_8c.html',1,'(Global Namespace)']]],
-  ['audio_2eh_104',['audio.h',['../audio_8h.html',1,'']]],
-  ['audio_5fapi_2ec_105',['audio_api.c',['../audio__api_8c.html',1,'']]],
-  ['aura_2ec_106',['aura.c',['../aura_8c.html',1,'(Global Namespace)'],['../gfx_2aura_8c.html',1,'(Global Namespace)']]],
-  ['auto_5fjump_2ec_107',['auto_jump.c',['../auto__jump_8c.html',1,'']]],
-  ['auto_5fmultibounce_2ec_108',['auto_multibounce.c',['../auto__multibounce_8c.html',1,'']]],
-  ['auto_5fsmash_2ec_109',['auto_smash.c',['../auto__smash_8c.html',1,'']]],
-  ['avoidplayerai_2einc_2ec_110',['AvoidPlayerAI.inc.c',['../AvoidPlayerAI_8inc_8c.html',1,'']]],
-  ['awaitplayernearnpc_2einc_2ec_111',['AwaitPlayerNearNpc.inc.c',['../AwaitPlayerNearNpc_8inc_8c.html',1,'']]]
+  ['attack_5fresult_5ftext_5fde_2ec_104',['attack_result_text_de.c',['../attack__result__text__de_8c.html',1,'']]],
+  ['attack_5fresult_5ftext_5fes_2ec_105',['attack_result_text_es.c',['../attack__result__text__es_8c.html',1,'']]],
+  ['attack_5fresult_5ftext_5ffr_2ec_106',['attack_result_text_fr.c',['../attack__result__text__fr_8c.html',1,'']]],
+  ['audio_2eh_107',['audio.h',['../audio_8h.html',1,'']]],
+  ['audio_5fapi_2ec_108',['audio_api.c',['../audio__api_8c.html',1,'']]],
+  ['aura_2ec_109',['aura.c',['../aura_8c.html',1,'(Global Namespace)'],['../gfx_2aura_8c.html',1,'(Global Namespace)']]],
+  ['auto_5fjump_2ec_110',['auto_jump.c',['../auto__jump_8c.html',1,'']]],
+  ['auto_5fmultibounce_2ec_111',['auto_multibounce.c',['../auto__multibounce_8c.html',1,'']]],
+  ['auto_5fsmash_2ec_112',['auto_smash.c',['../auto__smash_8c.html',1,'']]],
+  ['avoidplayerai_2einc_2ec_113',['AvoidPlayerAI.inc.c',['../AvoidPlayerAI_8inc_8c.html',1,'']]],
+  ['awaitplayernearnpc_2einc_2ec_114',['AwaitPlayerNearNpc.inc.c',['../AwaitPlayerNearNpc_8inc_8c.html',1,'']]]
 ];

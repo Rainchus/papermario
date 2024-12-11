@@ -2,7 +2,7 @@ var hud__element_8h_structPopupMenu =
 [
     [ "descMsg", "hud__element_8h.html#affdb5116bfd4dfcaff243240c15b9007", null ],
     [ "dipMode", "hud__element_8h.html#af75edaa8f5b61ab533b89715ecc23793", null ],
-    [ "enabled", "hud__element_8h.html#ac1255dfe5b00e1e91b799ebf755cf948", null ],
+    [ "enabled", "hud__element_8h.html#abc59241bc87dbf8f2e699ba169c1014d", null ],
     [ "initialPos", "hud__element_8h.html#add833fa40683522d8564e0411c792e71", null ],
     [ "nameMsg", "hud__element_8h.html#a53fe684d84409d3e0f65fb38cff18f8f", null ],
     [ "numEntries", "hud__element_8h.html#adcc24bb9dddefe57823e2aaa05069025", null ],

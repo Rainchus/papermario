@@ -53,6 +53,6 @@ var filemenu__msg_8c =
     [ "filemenu_msg_CA", "filemenu__msg_8c.html#a3c3781ddce5d050e4322cbe3b389253f", null ],
     [ "filemenu_savedGfxPos", "filemenu__msg_8c.html#a5984fa0a97cc832a6794cec29aabca84", null ],
     [ "filemenu_specialSymbols", "filemenu__msg_8c.html#a0b9a37e490e89162a53e1c5fb27306f9", null ],
-    [ "gFileMenuMessages", "filemenu__msg_8c.html#a6c2422a60a62f7b070cc14736e62c3be", null ],
+    [ "gFileMenuMessages", "filemenu__msg_8c.html#a37001f798c3f9efa33879f1e272da084", null ],
     [ "MsgCharsets", "filemenu__msg_8c.html#aeb51c478ef9afe11e26c217b2bc48e06", null ]
 ];

@@ -103,6 +103,7 @@ $(function(){initNavTree('stop__leech_8c.html',''); initResizable(); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">stop_leech.c File Reference</div></div>
@@ -112,7 +113,17 @@ $(function(){initNavTree('stop__leech_8c.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:afa7779fe56b160955b535cd6a8aaf8f4" id="r_afa7779fe56b160955b535cd6a8aaf8f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa7779fe56b160955b535cd6a8aaf8f4">NAMESPACE</a>&#160;&#160;&#160;action_command_stop_leech</td></tr>
+<tr class="memdesc:afa7779fe56b160955b535cd6a8aaf8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Differs from most mash commands by not having a fixed time limit and not having a rising sound effect as it fills.  <br /></td></tr>
 <tr class="separator:afa7779fe56b160955b535cd6a8aaf8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185c1f43157d5a6de53a94e48e0b6336" id="r_a185c1f43157d5a6de53a94e48e0b6336"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a185c1f43157d5a6de53a94e48e0b6336">METER_FILL_TICK</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a185c1f43157d5a6de53a94e48e0b6336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a4f79453548dc20926be4b5a000ecbd66" id="r_a4f79453548dc20926be4b5a000ecbd66"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a4f79453548dc20926be4b5a000ecbd66a2538072b6d65381be84fb26181835a1b">HIDX_BUTTON</a> = 0
+, <a class="el" href="#a4f79453548dc20926be4b5a000ecbd66a14f8edd24d490c313f4c14445d36c50b">HIDX_METER</a> = 1
+ }</td></tr>
+<tr class="separator:a4f79453548dc20926be4b5a000ecbd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -129,6 +140,22 @@ Variables</h2></td></tr>
 <tr class="separator:a9656b6c67d99996adcc8e7c6ad619c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a185c1f43157d5a6de53a94e48e0b6336" name="a185c1f43157d5a6de53a94e48e0b6336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185c1f43157d5a6de53a94e48e0b6336">&#9670;&#160;</a></span>METER_FILL_TICK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define METER_FILL_TICK&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
 <a id="afa7779fe56b160955b535cd6a8aaf8f4" name="afa7779fe56b160955b535cd6a8aaf8f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa7779fe56b160955b535cd6a8aaf8f4">&#9670;&#160;</a></span>NAMESPACE</h2>
 
@@ -140,6 +167,27 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Differs from most mash commands by not having a fixed time limit and not having a rising sound effect as it fills. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a4f79453548dc20926be4b5a000ecbd66" name="a4f79453548dc20926be4b5a000ecbd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f79453548dc20926be4b5a000ecbd66">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4f79453548dc20926be4b5a000ecbd66a2538072b6d65381be84fb26181835a1b" name="a4f79453548dc20926be4b5a000ecbd66a2538072b6d65381be84fb26181835a1b"></a>HIDX_BUTTON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a4f79453548dc20926be4b5a000ecbd66a14f8edd24d490c313f4c14445d36c50b" name="a4f79453548dc20926be4b5a000ecbd66a14f8edd24d490c313f4c14445d36c50b"></a>HIDX_METER&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>

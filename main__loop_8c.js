@@ -21,10 +21,10 @@ var main__loop_8c =
     [ "gMatrixListPos", "main__loop_8c.html#a6f8e997f68fc98d6e9dce84be28fde30", null ],
     [ "gOverrideFlags", "main__loop_8c.html#a091dc0469f07f19f0ff5ce59bad257ff", null ],
     [ "gPauseBackgroundFade", "main__loop_8c.html#a81fa956de97ea1199ad2a00d84642432", null ],
+    [ "gTimeFreezeMode", "main__loop_8c.html#ad88afb2805dd986c41239f16afa09e34", null ],
     [ "MasterIdentityMtx", "main__loop_8c.html#ae714b1f5407babd97524246e5ccfb64c", null ],
     [ "nuGfxCfb", "main__loop_8c.html#a4310ee0e31b208c6ff609e2150f76dc5", null ],
     [ "SoftResetDelay", "main__loop_8c.html#a2fea8fd56ff17f5210870bc3c1019117", null ],
     [ "SoftResetOverlayAlpha", "main__loop_8c.html#a0680a9b2e229e66a6f2c38d4540f6ec1", null ],
-    [ "SoftResetState", "main__loop_8c.html#a4f9ff84c4e2d6cc7d9e9656e533e62a9", null ],
-    [ "timeFreezeMode", "main__loop_8c.html#aa7b6022b2608f742655cf94ecdf1e1ba", null ]
+    [ "SoftResetState", "main__loop_8c.html#a4f9ff84c4e2d6cc7d9e9656e533e62a9", null ]
 ];

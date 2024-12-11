@@ -116,16 +116,16 @@ Functions</h2></td></tr>
 <tr class="separator:a85c2609d1b46c29a9ba37c2eeb35c8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4c4bac89268c7b7a8bb4c76b7a47342" id="r_ad4c4bac89268c7b7a8bb4c76b7a47342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4c4bac89268c7b7a8bb4c76b7a47342">init_worker_list</a> (void)</td></tr>
 <tr class="separator:ad4c4bac89268c7b7a8bb4c76b7a47342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac38a64cd83fdbad9e4e8a738f03bfc8" id="r_aac38a64cd83fdbad9e4e8a738f03bfc8"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac38a64cd83fdbad9e4e8a738f03bfc8">create_worker_world</a> (void(*updateFunc)(void), void(*drawFunc)(void))</td></tr>
-<tr class="separator:aac38a64cd83fdbad9e4e8a738f03bfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7aa0fee0a0f068740918a3a7329019" id="r_a6b7aa0fee0a0f068740918a3a7329019"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b7aa0fee0a0f068740918a3a7329019">create_worker_scene</a> (void(*updateFunc)(void), void(*renderFunc)(void))</td></tr>
+<tr class="separator:a6b7aa0fee0a0f068740918a3a7329019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace97cfb1a0dd86172c9a143acdb905c9" id="r_ace97cfb1a0dd86172c9a143acdb905c9"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace97cfb1a0dd86172c9a143acdb905c9">create_worker_frontUI</a> (void(*updateFunc)(void), void(*drawFunc)(void))</td></tr>
 <tr class="separator:ace97cfb1a0dd86172c9a143acdb905c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b262afc2345039ed326254a67632270" id="r_a2b262afc2345039ed326254a67632270"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b262afc2345039ed326254a67632270">create_worker_backUI</a> (void(*updateFunc)(void), void(*drawFunc)(void))</td></tr>
 <tr class="separator:a2b262afc2345039ed326254a67632270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e1541ad7081343d06319a8d6d1e784" id="r_ad3e1541ad7081343d06319a8d6d1e784"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e1541ad7081343d06319a8d6d1e784">update_workers</a> (void)</td></tr>
 <tr class="separator:ad3e1541ad7081343d06319a8d6d1e784"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70242b919dcb951c6a347bc5cfe63193" id="r_a70242b919dcb951c6a347bc5cfe63193"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70242b919dcb951c6a347bc5cfe63193">render_workers_world</a> (void)</td></tr>
-<tr class="separator:a70242b919dcb951c6a347bc5cfe63193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d6a8b65f3fd69aec7c1748f8c9a4e4" id="r_a69d6a8b65f3fd69aec7c1748f8c9a4e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69d6a8b65f3fd69aec7c1748f8c9a4e4">render_workers_scene</a> (void)</td></tr>
+<tr class="separator:a69d6a8b65f3fd69aec7c1748f8c9a4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e7be1697b1a4be869c24d81e8ce3685" id="r_a0e7be1697b1a4be869c24d81e8ce3685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e7be1697b1a4be869c24d81e8ce3685">render_workers_frontUI</a> (void)</td></tr>
 <tr class="separator:a0e7be1697b1a4be869c24d81e8ce3685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e454c13b2ee7dfd1b61ea16f270be9f" id="r_a4e454c13b2ee7dfd1b61ea16f270be9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e454c13b2ee7dfd1b61ea16f270be9f">render_workers_backUI</a> (void)</td></tr>
@@ -206,28 +206,30 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="functions_8h.html#a06956ea06b823706fa022fbabfe81a52">clear_item_entity_data()</a>, <a class="el" href="8a860__len__3f30_8c.html#a0609fd6e47b019c566e421b7918bb1ca">create_battle_popup_menu()</a>, <a class="el" href="8a860__len__3f30_8c.html#aca83be0f75a0f33584615300d3b56f81">create_shop_popup_menu()</a>, <a class="el" href="8a860__len__3f30_8c.html#a71c21f134b244e1199a5b49da428a6b1">create_standard_popup_menu()</a>, <a class="el" href="action__cmd_8c.html#a9f765d26306ee21d2ea15dd03bc9baa1">func_80268E88()</a>, <a class="el" href="Credits_8inc_8c.html#a89eb95557e7dc3fbae2ce11da3ed91f1">init_credits()</a>, and <a class="el" href="functions_8h.html#a235a15d0dc7b72ad86ac955f82c97d78">partner_reset_data()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#a06956ea06b823706fa022fbabfe81a52">clear_item_entity_data()</a>, <a class="el" href="action__cmd_8c.html#a0ab9a2a24285140ce88d54c9618a20ae">create_action_command_ui_worker()</a>, <a class="el" href="8a860__len__3f30_8c.html#a0609fd6e47b019c566e421b7918bb1ca">create_battle_popup_menu()</a>, <a class="el" href="8a860__len__3f30_8c.html#aca83be0f75a0f33584615300d3b56f81">create_shop_popup_menu()</a>, <a class="el" href="8a860__len__3f30_8c.html#a71c21f134b244e1199a5b49da428a6b1">create_standard_popup_menu()</a>, <a class="el" href="Credits_8inc_8c.html#a89eb95557e7dc3fbae2ce11da3ed91f1">init_credits()</a>, and <a class="el" href="functions_8h.html#a235a15d0dc7b72ad86ac955f82c97d78">partner_reset_data()</a>.</p>
 
 </div>
 </div>
-<a id="aac38a64cd83fdbad9e4e8a738f03bfc8" name="aac38a64cd83fdbad9e4e8a738f03bfc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac38a64cd83fdbad9e4e8a738f03bfc8">&#9670;&#160;</a></span>create_worker_world()</h2>
+<a id="a6b7aa0fee0a0f068740918a3a7329019" name="a6b7aa0fee0a0f068740918a3a7329019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7aa0fee0a0f068740918a3a7329019">&#9670;&#160;</a></span>create_worker_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 create_worker_world </td>
+          <td class="memname">s32 create_worker_scene </td>
           <td>(</td>
           <td class="paramtype">void(*)(void)</td>          <td class="paramname"><span class="paramname"><em>updateFunc</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(void)</td>          <td class="paramname"><span class="paramname"><em>drawFunc</em></span>&#160;)</td>
+          <td class="paramtype">void(*)(void)</td>          <td class="paramname"><span class="paramname"><em>renderFunc</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="npc_8h.html#ab3a8367d62c395e690c92a3c161d8cc2">clear_encounter_status()</a>, <a class="el" href="functions_8h.html#a06956ea06b823706fa022fbabfe81a52">clear_item_entity_data()</a>, <a class="el" href="functions_8h.html#a7df03808a56425a62039a3d8d3495608">clear_virtual_entity_list()</a>, <a class="el" href="functions_8h.html#a4bc648f85f94884d07a612d20111ecbd">func_80045AC0()</a>, <a class="el" href="npc_8h.html#ae818f579d9a8140fa82090e711168d47">init_encounter_status()</a>, <a class="el" href="functions_8h.html#adff86b7917c4ef87dd4aff4c2cea7617">initialize_battle()</a>, and <a class="el" href="functions_8h.html#ab12f1a34761d33bd91af4f232ae2f76c">reset_model_animators()</a>.</p>
 
 </div>
 </div>
@@ -326,14 +328,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a70242b919dcb951c6a347bc5cfe63193" name="a70242b919dcb951c6a347bc5cfe63193"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70242b919dcb951c6a347bc5cfe63193">&#9670;&#160;</a></span>render_workers_world()</h2>
+<a id="a69d6a8b65f3fd69aec7c1748f8c9a4e4" name="a69d6a8b65f3fd69aec7c1748f8c9a4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d6a8b65f3fd69aec7c1748f8c9a4e4">&#9670;&#160;</a></span>render_workers_scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void render_workers_world </td>
+          <td class="memname">void render_workers_scene </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -379,7 +381,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="virtual__entity_8c.html#a2b262afc2345039ed326254a67632270">create_worker_backUI()</a>, <a class="el" href="functions_8h.html#ace97cfb1a0dd86172c9a143acdb905c9">create_worker_frontUI()</a>, and <a class="el" href="#aac38a64cd83fdbad9e4e8a738f03bfc8">create_worker_world()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="virtual__entity_8c.html#a2b262afc2345039ed326254a67632270">create_worker_backUI()</a>, <a class="el" href="functions_8h.html#ace97cfb1a0dd86172c9a143acdb905c9">create_worker_frontUI()</a>, and <a class="el" href="functions_8h.html#a6b7aa0fee0a0f068740918a3a7329019">create_worker_scene()</a>.</p>
 
 </div>
 </div>

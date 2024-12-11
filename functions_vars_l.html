@@ -107,8 +107,10 @@ $(function(){initNavTree('functions_vars_l.html',''); initResizable(); });
 <li>labelIndices&#160;:&#160;<a class="el" href="common__structs_8h.html#a40f044b43dd6f18f9d84d57464575c8a">Evt</a></li>
 <li>labelPositions&#160;:&#160;<a class="el" href="common__structs_8h.html#a43dc35fceae81022f5b75054cfd31bf6">Evt</a></li>
 <li>land&#160;:&#160;<a class="el" href="common__structs_8h.html#aafc4eb5aac6b968945f5b8e5d2261ebd">FollowAnims</a></li>
-<li>landingDust&#160;:&#160;<a class="el" href="effects_8h.html#a583f4700b9cf9861dc1b778524f37fd0">EffectData</a></li>
+<li>landingDust&#160;:&#160;<a class="el" href="effects_8h.html#a283437759ff3798f05d9b9f69753a95c">EffectInstanceDataPtr</a></li>
 <li>landPos&#160;:&#160;<a class="el" href="common__structs_8h.html#a7a5e9fc28474a5c2b47beb31d0a6b734">PlayerStatus</a></li>
+<li>language&#160;:&#160;<a class="el" href="common__structs_8h.html#a5959bfd94d77871263be915a917a9fe7">SaveGlobals</a></li>
+<li>languages&#160;:&#160;<a class="el" href="titlemenu_8c.html#aa1db6a45193c5de33bc548cc0108cf48">TitleMenuDataStruct</a></li>
 <li>largeFlareAlpha&#160;:&#160;<a class="el" href="effects_8h.html#a70df204fb297faaa2db6d97459b95aa9">LensFlareFXData</a></li>
 <li>largeFlareRot&#160;:&#160;<a class="el" href="effects_8h.html#a92b2230f4270bfc8e7b52febfc48a689">LensFlareFXData</a></li>
 <li>largeFlareRotVel&#160;:&#160;<a class="el" href="effects_8h.html#a3aa221e4d2771af92db04d907b4e74bf">LensFlareFXData</a></li>
@@ -143,16 +145,15 @@ $(function(){initNavTree('functions_vars_l.html',''); initResizable(); });
 <li>layer&#160;:&#160;<a class="el" href="common__structs_8h.html#a0a9cc483ad4a38e187e46b5b90ac0e88">SelectableTarget</a></li>
 <li>lazyDeleteTime&#160;:&#160;<a class="el" href="sprite_8h.html#a28f5f470d64146b6828b5112b1e86f91">PlayerSpriteCacheEntry</a></li>
 <li>leadAmount&#160;:&#160;<a class="el" href="structCamera.html#a014404ecdc7ab90da19a1c5920a5dccd">Camera</a></li>
-<li>leadControlSettings&#160;:&#160;<a class="el" href="structCamera.html#aacb73211f166ddfac542f9eefb4caf13">Camera</a></li>
+<li>leadAmtScale&#160;:&#160;<a class="el" href="structCamera.html#af85ff9c01f16b751e1692a97d4046623">Camera</a></li>
+<li>leadConstrainDir&#160;:&#160;<a class="el" href="structCamera.html#a75aaec4188b51b15fc4fd99d7e0705c0">Camera</a></li>
 <li>leadInterpAlpha&#160;:&#160;<a class="el" href="structCamera.html#a480bf3d18c37ad29b5ed6d6b4b47c2e8">Camera</a></li>
-<li>leadUnkX&#160;:&#160;<a class="el" href="structCamera.html#aaf68089cfcd1d4882f6d6dcb424491e3">Camera</a></li>
-<li>leadUnkZ&#160;:&#160;<a class="el" href="structCamera.html#ae5e305d4dd5befc1f7a34cd12144c344">Camera</a></li>
 <li>leaves&#160;:&#160;<a class="el" href="FoliageTransform_8inc_8c.html#ab2d76b88ac58e6e3fbbae05cf4a9dbba">ShakeTreeConfig</a></li>
 <li>leftWallRaiseAmt&#160;:&#160;<a class="el" href="effects_8h.html#a0a3a9ea3bc19262019156f939f73fcdd">QuizmoStageFXData</a></li>
 <li>length&#160;:&#160;<a class="el" href="audio_8h.html#ae674710d63e16c0a53ed98e7656e3f7c">AuFX</a>, <a class="el" href="common__structs_8h.html#ad2f32fe05036c4231f7056050dc67882">HeapNode</a>, <a class="el" href="audio_8h.html#a2fa47f7c65fec19cc163b195725e3844">SeqArgs.Detour</a></li>
 <li>lengths&#160;:&#160;<a class="el" href="common__structs_8h.html#af9974bf75acd0d610218f1ce713bd74b">Path</a></li>
 <li>lengthStep&#160;:&#160;<a class="el" href="world_2area__nok_2nok__04_2npc_8c.html#a12927a2a7f0f2a5da8ad27254a3c539e">FuzzyThread</a></li>
-<li>lensFlare&#160;:&#160;<a class="el" href="effects_8h.html#a3f49f5ca41dff0df7576a3c4a34abd3a">EffectData</a></li>
+<li>lensFlare&#160;:&#160;<a class="el" href="effects_8h.html#a9d7cac567e3a23aae2e3d4b480812ca1">EffectInstanceDataPtr</a></li>
 <li>lerpDuration&#160;:&#160;<a class="el" href="world_2area__mgm_2mgm__01_2npc_8c.html#ad62c5e90555ddf5e8b1e13f0cf55f134">JumpGamePanel</a></li>
 <li>lerpElapsed&#160;:&#160;<a class="el" href="world_2area__mgm_2mgm__01_2npc_8c.html#ad76eda52ed45bd4c17d8d5c27e592d71">JumpGamePanel</a></li>
 <li>lerpTime&#160;:&#160;<a class="el" href="records_8c.html#af291aa8cc914a0d5692d6552a817ed67">GameRecords</a></li>
@@ -183,26 +184,30 @@ $(function(){initNavTree('functions_vars_l.html',''); initResizable(); });
 <li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#a7fece0246d1608a0095468ee11a9a3ec">QuizmoStageFXData</a></li>
 <li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a63d0274705776c5bcdb541ab7c429b5c">RadialShimmerFXData</a></li>
 <li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#a58d1e1dd95a72cd9b6d448503068c064">RecoverFXData</a></li>
-<li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a533669c99adc9d4d2d04e2a1031e5c1c">RingBlastFXData</a>, <a class="el" href="effects_8h.html#aefc083b3946c6a868bec1cb33cb74fb4">RisingBubbleFXData</a>, <a class="el" href="effects_8h.html#ab0abb6929c0757e10047eb0bee3aad10">ShinyFlareFXData</a>, <a class="el" href="effects_8h.html#a6417fe1c0c95de053693607881c1e56f">SmokeBurstFXData</a>, <a class="el" href="effects_8h.html#a92650bd005fed173200e1ca1ed4b457d">SnakingStaticFXData</a>, <a class="el" href="effects_8h.html#ae9bc16deaf7132ceee03d55fa1c6bcef">SnowfallFXData</a></li>
+<li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a533669c99adc9d4d2d04e2a1031e5c1c">RingBlastFXData</a>, <a class="el" href="effects_8h.html#aefc083b3946c6a868bec1cb33cb74fb4">RisingBubbleFXData</a></li>
+<li>lifetime&#160;:&#160;<a class="el" href="status__star__shimmer_8c.html#ab74f75884dfb97062be3e791f0575802">ShimmerParticle</a></li>
+<li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#ab0abb6929c0757e10047eb0bee3aad10">ShinyFlareFXData</a></li>
+<li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#ae7601b6626e539d1ab9285f73b208485">ShockOverlayFXData</a></li>
+<li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a6417fe1c0c95de053693607881c1e56f">SmokeBurstFXData</a>, <a class="el" href="effects_8h.html#a92650bd005fed173200e1ca1ed4b457d">SnakingStaticFXData</a>, <a class="el" href="effects_8h.html#ae9bc16deaf7132ceee03d55fa1c6bcef">SnowfallFXData</a></li>
 <li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#abae9935e999b6a9e23af6b8711f4e116">SpinFXData</a></li>
 <li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#ae6530615389c3e292836136e560cd059">StarOutlineFXData</a>, <a class="el" href="effects_8h.html#a9586870c55fc3770db9c74b7a5bcfc40">StarsShimmerFXData</a></li>
 <li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#a9305edd51ef1b34afe0c09f9f121028d">StaticStatusFXData</a></li>
 <li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a7234de5a5bbbd7177c6f9281eeb1201a">SunFXData</a>, <a class="el" href="effects_8h.html#a78e32a7a89d4febb0c6844c490401336">ThunderboltRingFXData</a></li>
 <li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#afa3e5b74a9489e574057f9f731248911">TubbaHeartAttackFXData</a></li>
 <li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a922237fbb22a8e383221bd0c6046166a">UnderwaterFXData</a></li>
-<li>lifetime&#160;:&#160;<a class="el" href="8a160__len__700_8c.html#add2655b495dea549dc8602eabae3b1a5">Unk8a160</a>, <a class="el" href="effects_8h.html#a9979150e5c54c906a139a954252ecb2f">WaterBlockFXData</a></li>
+<li>lifetime&#160;:&#160;<a class="el" href="effects_8h.html#a9979150e5c54c906a139a954252ecb2f">WaterBlockFXData</a></li>
 <li>lifeTime&#160;:&#160;<a class="el" href="effects_8h.html#a9791fbdb69d129602c0337f717cc2e43">WaterFountainFXData</a></li>
 <li>liftoffVelPhase&#160;:&#160;<a class="el" href="common__structs_8h.html#a825dfe58ac30f5a58174ad9eca1e9144">TweesterPhysics</a></li>
 <li>lightingGroup&#160;:&#160;<a class="el" href="model_8h.html#a8718bbfcae121162162825bd95c57190">ModelGroupData</a></li>
-<li>lightning&#160;:&#160;<a class="el" href="effects_8h.html#a1d52feb3b2b37952b51c85f826b7f7ba">EffectData</a></li>
-<li>lightningBolt&#160;:&#160;<a class="el" href="effects_8h.html#a22e08ddbe583ac803edb10d330a60204">EffectData</a></li>
-<li>lightRays&#160;:&#160;<a class="el" href="effects_8h.html#a6d6cc51b5f07be6f486ddbadc5ace97c">EffectData</a></li>
+<li>lightning&#160;:&#160;<a class="el" href="effects_8h.html#a34dff2845282c98351e8905bdea9cd8e">EffectInstanceDataPtr</a></li>
+<li>lightningBolt&#160;:&#160;<a class="el" href="effects_8h.html#a8c3028aa5cf9ea5ef8a395ea6786913b">EffectInstanceDataPtr</a></li>
+<li>lightRays&#160;:&#160;<a class="el" href="effects_8h.html#a0baec70066904bb134b59eca27a8561c">EffectInstanceDataPtr</a></li>
 <li>lightScrollAmt&#160;:&#160;<a class="el" href="effects_8h.html#a2fdffc970ab6e15632e8ff38a3b587be">QuizmoStageFXData</a></li>
 <li>lightScrollDelay&#160;:&#160;<a class="el" href="effects_8h.html#a09a3ce17c372b6b4d20d323de7f1fc24">QuizmoStageFXData</a></li>
 <li>lightScrollIncrement&#160;:&#160;<a class="el" href="effects_8h.html#a752c042b4ba3353bd8717d272deda4f0">QuizmoStageFXData</a></li>
-<li>lilOink&#160;:&#160;<a class="el" href="effects_8h.html#a2a286b87c90e84dc20a735f2e071a850">EffectData</a></li>
+<li>lilOink&#160;:&#160;<a class="el" href="effects_8h.html#a80555f6922db9f11b3f3b72ec65753c9">EffectInstanceDataPtr</a></li>
 <li>linearInterp&#160;:&#160;<a class="el" href="structCamera.html#ad5ea060c3bcfd6a710ab4baba41ad8c9">Camera</a></li>
-<li>linearInterpScale&#160;:&#160;<a class="el" href="structCamera.html#a7d79560e94c688de0e751511d1f051eb">Camera</a></li>
+<li>linearInterpRate&#160;:&#160;<a class="el" href="structCamera.html#a0c5c019bfeaa07f2fa8906f7870d89d2">Camera</a></li>
 <li>lineCount&#160;:&#160;<a class="el" href="common__structs_8h.html#a67c69da54cef583a34bb6f75d1b99c26">MessagePrintState</a></li>
 <li>lineEndPos&#160;:&#160;<a class="el" href="common__structs_8h.html#a00a785bc25026e004a88d5618dc33125">MessagePrintState</a></li>
 <li>lines&#160;:&#160;<a class="el" href="common__structs_8h.html#a38654f3bba40e20ee07f1df85f3b1593">CreditsData</a></li>
@@ -217,14 +222,14 @@ $(function(){initNavTree('functions_vars_l.html',''); initResizable(); });
 <li>loadType&#160;:&#160;<a class="el" href="common__structs_8h.html#a0f33f43d6b1af2c4d09cbad056713d5e">GameStatus</a></li>
 <li>location&#160;:&#160;<a class="el" href="structTrigger.html#acc5cd5bb631bf88dda4445200554fb4d">Trigger</a></li>
 <li>lockedPos&#160;:&#160;<a class="el" href="effects_8h.html#a65eb1a211e0f3f8af1ff9956b4a7d461">PeachStarBeamSpirit</a></li>
-<li>lodVal&#160;:&#160;<a class="el" href="8a160__len__700_8c.html#a407b455792efc3019a059cb285b60c96">Unk8a160</a></li>
 <li>logo&#160;:&#160;<a class="el" href="state__title__screen_8c.html#a57ef99e993a483cd1bffef19c398898d">TitleDataStruct</a></li>
 <li>logoTime&#160;:&#160;<a class="el" href="common__structs_8h.html#a6d50ab0ed7f521296bb22199635d2edf">GameStatus</a></li>
 <li>lookAt&#160;:&#160;<a class="el" href="common__structs_8h.html#af42c70376e046a4cebc72c7c30acf447">DisplayContext</a></li>
-<li>lookAt_dist&#160;:&#160;<a class="el" href="structCamera.html#a5e9cce705f91888d5f6baab43d6c5159">Camera</a></li>
 <li>lookAt_eye&#160;:&#160;<a class="el" href="structCamera.html#af15d2599523e5171bb6463386a5e9a48">Camera</a></li>
 <li>lookAt_obj&#160;:&#160;<a class="el" href="structCamera.html#a0a1d5554590756ed12aa5295c9716cb7">Camera</a></li>
 <li>lookAt_obj_target&#160;:&#160;<a class="el" href="structCamera.html#a2a2072d54df89b5525753e4901bc30a6">Camera</a></li>
+<li>lookAt_pitch&#160;:&#160;<a class="el" href="structCamera.html#a7ddc05ebc1326f2fef3d2a2e28aa7685">Camera</a></li>
+<li>lookAt_yaw&#160;:&#160;<a class="el" href="structCamera.html#a2c93d72c7e06885a3a71bf0544d6d805">Camera</a></li>
 <li>lookBackCounter&#160;:&#160;<a class="el" href="action__cmd_8h.html#af34190e2d7baf30ccf6e0d110f749145">ActionCommandStatus</a></li>
 <li>lookupPaletteIndex&#160;:&#160;<a class="el" href="common__structs_8h.html#af1e5d0d504f914cc81499d8a92fcf5dd">ItemEntity</a></li>
 <li>lookupRasterIndex&#160;:&#160;<a class="el" href="common__structs_8h.html#af2065a5bae3dde198a53db89cd5dfc4d">ItemEntity</a></li>

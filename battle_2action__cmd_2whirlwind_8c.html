@@ -103,6 +103,7 @@ $(function(){initNavTree('battle_2action__cmd_2whirlwind_8c.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">whirlwind.c File Reference</div></div>
@@ -113,6 +114,23 @@ $(function(){initNavTree('battle_2action__cmd_2whirlwind_8c.html',''); initResiz
 Macros</h2></td></tr>
 <tr class="memitem:afa7779fe56b160955b535cd6a8aaf8f4" id="r_afa7779fe56b160955b535cd6a8aaf8f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa7779fe56b160955b535cd6a8aaf8f4">NAMESPACE</a>&#160;&#160;&#160;action_command_whirlwind</td></tr>
 <tr class="separator:afa7779fe56b160955b535cd6a8aaf8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d9e13f89a60be3ee2f999151afd37d" id="r_ae3d9e13f89a60be3ee2f999151afd37d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3d9e13f89a60be3ee2f999151afd37d">HUFF_FILL_TICK</a>&#160;&#160;&#160;500</td></tr>
+<tr class="separator:ae3d9e13f89a60be3ee2f999151afd37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0fde41646340616f928da49f0a89105" id="r_ab0fde41646340616f928da49f0a89105"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0fde41646340616f928da49f0a89105">BUZZAR_FILL_TICK</a>&#160;&#160;&#160;600</td></tr>
+<tr class="separator:ab0fde41646340616f928da49f0a89105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50dea8629529300a72a2d1d3a29f8afc" id="r_a50dea8629529300a72a2d1d3a29f8afc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50dea8629529300a72a2d1d3a29f8afc">GET_DRAIN_RATE_HUFF</a>(pct)&#160;&#160;&#160;(N(DrainRateTable0)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 5))])</td></tr>
+<tr class="separator:a50dea8629529300a72a2d1d3a29f8afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad059567e5266a189682999c55aa0e84e" id="r_ad059567e5266a189682999c55aa0e84e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad059567e5266a189682999c55aa0e84e">GET_DRAIN_RATE_BUZZAR</a>(pct)&#160;&#160;&#160;(N(DrainRateTable1)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 10))])</td></tr>
+<tr class="separator:ad059567e5266a189682999c55aa0e84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a592aba11ab30da4dbf57e9736c8387a1" id="r_a592aba11ab30da4dbf57e9736c8387a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a592aba11ab30da4dbf57e9736c8387a1a2538072b6d65381be84fb26181835a1b">HIDX_BUTTON</a> = 0
+, <a class="el" href="#a592aba11ab30da4dbf57e9736c8387a1a14f8edd24d490c313f4c14445d36c50b">HIDX_METER</a> = 1
+, <a class="el" href="#a592aba11ab30da4dbf57e9736c8387a1acc0051de963df893c2cd34ab61910265">HIDX_DIGIT</a> = 2
+, <a class="el" href="#a592aba11ab30da4dbf57e9736c8387a1a37cea5dc8f7a0f7c23570f745a6d601a">HIDX_BUBBLE</a> = 3
+ }</td></tr>
+<tr class="separator:a592aba11ab30da4dbf57e9736c8387a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -157,6 +175,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a44fc5ebd63b708a4874fbc7a20f26444" id="r_a44fc5ebd63b708a4874fbc7a20f26444"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44fc5ebd63b708a4874fbc7a20f26444">actionCmdTableWhirlwind</a> []</td></tr>
+<tr class="separator:a44fc5ebd63b708a4874fbc7a20f26444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02c62dd5f34013826aaa9dc6bba705d7" id="r_a02c62dd5f34013826aaa9dc6bba705d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c62dd5f34013826aaa9dc6bba705d7">HES_Whirlwind1</a> = <a class="el" href="hud__element_8h.html#a9c7c83a5298d0026f44468d17f5d754a">HES_TEMPLATE_CI_ENUM_SIZE</a>(battle_action_cmd_whirlwind_1, 24, 24)</td></tr>
 <tr class="separator:a02c62dd5f34013826aaa9dc6bba705d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fda3d6aa9cc90a4d462bc36c3918586" id="r_a2fda3d6aa9cc90a4d462bc36c3918586"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fda3d6aa9cc90a4d462bc36c3918586">HES_Whirlwind2</a> = <a class="el" href="hud__element_8h.html#a9c7c83a5298d0026f44468d17f5d754a">HES_TEMPLATE_CI_ENUM_SIZE</a>(battle_action_cmd_whirlwind_2, 24, 24)</td></tr>
@@ -173,20 +193,78 @@ Variables</h2></td></tr>
 <tr class="separator:a59daeb14728901881e4d6430a7600656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade56b4febc4f175006537d0128be8332" id="r_ade56b4febc4f175006537d0128be8332"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade56b4febc4f175006537d0128be8332">HES_WhirlwindBubble</a></td></tr>
 <tr class="separator:ade56b4febc4f175006537d0128be8332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa62496e46f2b185e7f98f5c3c6ed89f6" id="r_aa62496e46f2b185e7f98f5c3c6ed89f6"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa62496e46f2b185e7f98f5c3c6ed89f6">D_802AA844_4254B4</a> [] = { 0, 25, 50, 75, 100, 100 }</td></tr>
-<tr class="separator:aa62496e46f2b185e7f98f5c3c6ed89f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb22b2ab7a2ef71359a74f1c297320e7" id="r_afb22b2ab7a2ef71359a74f1c297320e7"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb22b2ab7a2ef71359a74f1c297320e7">D_802AA85C_4254CC</a> [] = { 50, 50, 50, 50, 75, 75, 75, 100, 100, 100, 100 }</td></tr>
-<tr class="separator:afb22b2ab7a2ef71359a74f1c297320e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12fb26d8e53c0cc1962c155cc7b4ff9b" id="r_a12fb26d8e53c0cc1962c155cc7b4ff9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12fb26d8e53c0cc1962c155cc7b4ff9b">D_802AA888_4254F8</a> []</td></tr>
-<tr class="separator:a12fb26d8e53c0cc1962c155cc7b4ff9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d8b1b33d2b7f99ebf20c151aafb8acd" id="r_a9d8b1b33d2b7f99ebf20c151aafb8acd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d8b1b33d2b7f99ebf20c151aafb8acd">D_802AA8A0_425510</a> []</td></tr>
-<tr class="separator:a9d8b1b33d2b7f99ebf20c151aafb8acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa44a5b5b9f22c7a8978594fbb33e460a" id="r_aa44a5b5b9f22c7a8978594fbb33e460a"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa44a5b5b9f22c7a8978594fbb33e460a">D_802AA8B4_425524</a> [] = { 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1 }</td></tr>
-<tr class="separator:aa44a5b5b9f22c7a8978594fbb33e460a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44fc5ebd63b708a4874fbc7a20f26444" id="r_a44fc5ebd63b708a4874fbc7a20f26444"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44fc5ebd63b708a4874fbc7a20f26444">actionCmdTableWhirlwind</a> []</td></tr>
-<tr class="separator:a44fc5ebd63b708a4874fbc7a20f26444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ab0fde41646340616f928da49f0a89105" name="ab0fde41646340616f928da49f0a89105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fde41646340616f928da49f0a89105">&#9670;&#160;</a></span>BUZZAR_FILL_TICK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUZZAR_FILL_TICK&#160;&#160;&#160;600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
+<a id="ad059567e5266a189682999c55aa0e84e" name="ad059567e5266a189682999c55aa0e84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad059567e5266a189682999c55aa0e84e">&#9670;&#160;</a></span>GET_DRAIN_RATE_BUZZAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_DRAIN_RATE_BUZZAR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">pct</span></td><td>)</td>
+          <td>&#160;&#160;&#160;(N(DrainRateTable1)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 10))])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
+<a id="a50dea8629529300a72a2d1d3a29f8afc" name="a50dea8629529300a72a2d1d3a29f8afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50dea8629529300a72a2d1d3a29f8afc">&#9670;&#160;</a></span>GET_DRAIN_RATE_HUFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_DRAIN_RATE_HUFF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">pct</span></td><td>)</td>
+          <td>&#160;&#160;&#160;(N(DrainRateTable0)[((pct) / (<a class="el" href="action__cmd_8h.html#a754cc7f2d33414a929b39e684dc40ecc">ONE_PCT_MASH</a> / 5))])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
+<a id="ae3d9e13f89a60be3ee2f999151afd37d" name="ae3d9e13f89a60be3ee2f999151afd37d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d9e13f89a60be3ee2f999151afd37d">&#9670;&#160;</a></span>HUFF_FILL_TICK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HUFF_FILL_TICK&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
+
+</div>
+</div>
 <a id="afa7779fe56b160955b535cd6a8aaf8f4" name="afa7779fe56b160955b535cd6a8aaf8f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa7779fe56b160955b535cd6a8aaf8f4">&#9670;&#160;</a></span>NAMESPACE</h2>
 
@@ -198,6 +276,27 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a592aba11ab30da4dbf57e9736c8387a1" name="a592aba11ab30da4dbf57e9736c8387a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592aba11ab30da4dbf57e9736c8387a1">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a592aba11ab30da4dbf57e9736c8387a1a2538072b6d65381be84fb26181835a1b" name="a592aba11ab30da4dbf57e9736c8387a1a2538072b6d65381be84fb26181835a1b"></a>HIDX_BUTTON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a592aba11ab30da4dbf57e9736c8387a1a14f8edd24d490c313f4c14445d36c50b" name="a592aba11ab30da4dbf57e9736c8387a1a14f8edd24d490c313f4c14445d36c50b"></a>HIDX_METER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a592aba11ab30da4dbf57e9736c8387a1acc0051de963df893c2cd34ab61910265" name="a592aba11ab30da4dbf57e9736c8387a1acc0051de963df893c2cd34ab61910265"></a>HIDX_DIGIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a592aba11ab30da4dbf57e9736c8387a1a37cea5dc8f7a0f7c23570f745a6d601a" name="a592aba11ab30da4dbf57e9736c8387a1a37cea5dc8f7a0f7c23570f745a6d601a"></a>HIDX_BUBBLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -612,99 +711,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa62496e46f2b185e7f98f5c3c6ed89f6" name="aa62496e46f2b185e7f98f5c3c6ed89f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa62496e46f2b185e7f98f5c3c6ed89f6">&#9670;&#160;</a></span>D_802AA844_4254B4</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_802AA844_4254B4[] = { 0, 25, 50, 75, 100, 100 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
-
-</div>
-</div>
-<a id="afb22b2ab7a2ef71359a74f1c297320e7" name="afb22b2ab7a2ef71359a74f1c297320e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb22b2ab7a2ef71359a74f1c297320e7">&#9670;&#160;</a></span>D_802AA85C_4254CC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_802AA85C_4254CC[] = { 50, 50, 50, 50, 75, 75, 75, 100, 100, 100, 100 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
-
-</div>
-</div>
-<a id="a12fb26d8e53c0cc1962c155cc7b4ff9b" name="a12fb26d8e53c0cc1962c155cc7b4ff9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12fb26d8e53c0cc1962c155cc7b4ff9b">&#9670;&#160;</a></span>D_802AA888_4254F8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* D_802AA888_4254F8[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    &amp;<a class="code hl_variable" href="#a59daeb14728901881e4d6430a7600656">HES_Whirlwind7</a>, &amp;<a class="code hl_variable" href="#a1af4d9ef9fc479cd39f3a4499fcd97ed">HES_Whirlwind6</a>, &amp;<a class="code hl_variable" href="#af8b17e120a9b1bd52d4b85f448803572">HES_Whirlwind5</a>, &amp;<a class="code hl_variable" href="#a2c531448a4f7443bf234651cd673c2d3">HES_Whirlwind4</a>, &amp;<a class="code hl_variable" href="#a816ce5c925da34c8d2197b6981b723ee">HES_Whirlwind3</a>, &amp;<a class="code hl_variable" href="#a2fda3d6aa9cc90a4d462bc36c3918586">HES_Whirlwind2</a></div>
-<div class="line">}</div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_a1af4d9ef9fc479cd39f3a4499fcd97ed"><div class="ttname"><a href="#a1af4d9ef9fc479cd39f3a4499fcd97ed">HES_Whirlwind6</a></div><div class="ttdeci">HudScript HES_Whirlwind6</div><div class="ttdef"><b>Definition</b> whirlwind.c:42</div></div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_a2c531448a4f7443bf234651cd673c2d3"><div class="ttname"><a href="#a2c531448a4f7443bf234651cd673c2d3">HES_Whirlwind4</a></div><div class="ttdeci">HudScript HES_Whirlwind4</div><div class="ttdef"><b>Definition</b> whirlwind.c:38</div></div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_a2fda3d6aa9cc90a4d462bc36c3918586"><div class="ttname"><a href="#a2fda3d6aa9cc90a4d462bc36c3918586">HES_Whirlwind2</a></div><div class="ttdeci">HudScript HES_Whirlwind2</div><div class="ttdef"><b>Definition</b> whirlwind.c:34</div></div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_a59daeb14728901881e4d6430a7600656"><div class="ttname"><a href="#a59daeb14728901881e4d6430a7600656">HES_Whirlwind7</a></div><div class="ttdeci">HudScript HES_Whirlwind7</div><div class="ttdef"><b>Definition</b> whirlwind.c:44</div></div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_a816ce5c925da34c8d2197b6981b723ee"><div class="ttname"><a href="#a816ce5c925da34c8d2197b6981b723ee">HES_Whirlwind3</a></div><div class="ttdeci">HudScript HES_Whirlwind3</div><div class="ttdef"><b>Definition</b> whirlwind.c:36</div></div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_af8b17e120a9b1bd52d4b85f448803572"><div class="ttname"><a href="#af8b17e120a9b1bd52d4b85f448803572">HES_Whirlwind5</a></div><div class="ttdeci">HudScript HES_Whirlwind5</div><div class="ttdef"><b>Definition</b> whirlwind.c:40</div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#ae8e589f4e02a52303c49157c03e87bc5">draw()</a>.</p>
-
-</div>
-</div>
-<a id="a9d8b1b33d2b7f99ebf20c151aafb8acd" name="a9d8b1b33d2b7f99ebf20c151aafb8acd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d8b1b33d2b7f99ebf20c151aafb8acd">&#9670;&#160;</a></span>D_802AA8A0_425510</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* D_802AA8A0_425510[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    &amp;<a class="code hl_variable" href="#a02c62dd5f34013826aaa9dc6bba705d7">HES_Whirlwind1</a>, &amp;<a class="code hl_variable" href="#a02c62dd5f34013826aaa9dc6bba705d7">HES_Whirlwind1</a>, &amp;<a class="code hl_variable" href="#a2fda3d6aa9cc90a4d462bc36c3918586">HES_Whirlwind2</a>, &amp;<a class="code hl_variable" href="#a816ce5c925da34c8d2197b6981b723ee">HES_Whirlwind3</a>, &amp;<a class="code hl_variable" href="#a816ce5c925da34c8d2197b6981b723ee">HES_Whirlwind3</a></div>
-<div class="line">}</div>
-<div class="ttc" id="abattle_2action__cmd_2whirlwind_8c_html_a02c62dd5f34013826aaa9dc6bba705d7"><div class="ttname"><a href="#a02c62dd5f34013826aaa9dc6bba705d7">HES_Whirlwind1</a></div><div class="ttdeci">HudScript HES_Whirlwind1</div><div class="ttdef"><b>Definition</b> whirlwind.c:32</div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#ae8e589f4e02a52303c49157c03e87bc5">draw()</a>.</p>
-
-</div>
-</div>
-<a id="aa44a5b5b9f22c7a8978594fbb33e460a" name="aa44a5b5b9f22c7a8978594fbb33e460a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa44a5b5b9f22c7a8978594fbb33e460a">&#9670;&#160;</a></span>D_802AA8B4_425524</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">s32 D_802AA8B4_425524[] = { 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1 }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#ad99b71be7d3a7a6825297eb250456b85">update()</a>.</p>
-
-</div>
-</div>
 <a id="a02c62dd5f34013826aaa9dc6bba705d7" name="a02c62dd5f34013826aaa9dc6bba705d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02c62dd5f34013826aaa9dc6bba705d7">&#9670;&#160;</a></span>HES_Whirlwind1</h2>
 
@@ -816,7 +822,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <a class="code hl_define" href="hud__element_8h.html#a8051c5a2d927d4b97345a84de98e6e5f">HES_TEMPLATE_CI_CUSTOM_SIZE</a>(battle_action_cmd_whirlwind_bubble,</div>
 <div class="line">    battle_action_cmd_whirlwind_bubble_png_width, battle_action_cmd_whirlwind_bubble_png_height)</div>
-<div class="ttc" id="ahud__element_8h_html_a8051c5a2d927d4b97345a84de98e6e5f"><div class="ttname"><a href="hud__element_8h.html#a8051c5a2d927d4b97345a84de98e6e5f">HES_TEMPLATE_CI_CUSTOM_SIZE</a></div><div class="ttdeci">#define HES_TEMPLATE_CI_CUSTOM_SIZE(name, sizeX, sizeY)</div><div class="ttdoc">Basic HudScript used for static CI images, setting size with hs_SetCustomSize.</div><div class="ttdef"><b>Definition</b> hud_element.h:281</div></div>
+<div class="ttc" id="ahud__element_8h_html_a8051c5a2d927d4b97345a84de98e6e5f"><div class="ttname"><a href="hud__element_8h.html#a8051c5a2d927d4b97345a84de98e6e5f">HES_TEMPLATE_CI_CUSTOM_SIZE</a></div><div class="ttdeci">#define HES_TEMPLATE_CI_CUSTOM_SIZE(name, sizeX, sizeY)</div><div class="ttdoc">Basic HudScript used for static CI images, setting size with hs_SetCustomSize.</div><div class="ttdef"><b>Definition</b> hud_element.h:279</div></div>
 </div><!-- fragment -->
 </div>
 </div>

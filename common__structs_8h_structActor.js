@@ -60,7 +60,7 @@ var common__structs_8h_structActor =
     [ "scaleModifier", "common__structs_8h.html#a7e1b06119d87e9779ff04055c81ee89a", null ],
     [ "scalingFactor", "common__structs_8h.html#a59b46326f0705305f7b8b3054c8209f2", null ],
     [ "selectedTargetIndex", "common__structs_8h.html#a4406e5a6419256ac2d6d4c5ed3014127", null ],
-    [ "shadow", "common__structs_8h.html#ad482bc307df4553f242e51e4691339c8", null ],
+    [ "shadow", "common__structs_8h.html#a5e45d98cf637e5950055f09f28b05076", null ],
     [ "shadowScale", "common__structs_8h.html#a398fa5ce92711c2a5e1b48f6e5c20b30", null ],
     [ "size", "common__structs_8h.html#a8f39f6c94b7c2a199d062d3830513be4", null ],
     [ "state", "common__structs_8h.html#a632bbd9b005611d0720e79bce77f506b", null ],

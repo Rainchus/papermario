@@ -6,6 +6,11 @@ var inventory_8c =
       [ "BLINK_OFF", "inventory_8c.html#a4e8fc88e3fc8a2e9f4f736494c4620c8adceff521a69a25a9aad27779e7c8982b", null ],
       [ "BLINK_ON", "inventory_8c.html#a4e8fc88e3fc8a2e9f4f736494c4620c8a1b1305319186bfeb764692a97dbf6231", null ]
     ] ],
+    [ "ShimmerStates", "inventory_8c.html#ab102fe615f81cccdb294e7fd7f32b94a", [
+      [ "STATUS_SHIMMER_OFF", "inventory_8c.html#ab102fe615f81cccdb294e7fd7f32b94aabdcf61633a59d186b5282d42a3e95d89", null ],
+      [ "STATUS_SHIMMER_BEGIN", "inventory_8c.html#ab102fe615f81cccdb294e7fd7f32b94aaec28c4dd714ee83cb6c40fccabdba7d3", null ],
+      [ "STATUS_SHIMMER_ON", "inventory_8c.html#ab102fe615f81cccdb294e7fd7f32b94aafb102457c7596cae8ba2f162523dad73", null ]
+    ] ],
     [ "add_badge", "inventory_8c.html#a6b52c7b5bb85f6aee2354ceed3383e47", null ],
     [ "add_coins", "inventory_8c.html#adc48a590cae98d8b6d3d2bd06cb67ed4", null ],
     [ "add_fortress_keys", "inventory_8c.html#a7323deababbbc8922d34eb538c448a1b", null ],
@@ -74,8 +79,6 @@ var inventory_8c =
     [ "sync_status_bar", "inventory_8c.html#a45b19f2bc0a8ef857e482cb8a4b4b576", null ],
     [ "update_coin_counter", "inventory_8c.html#a4197375bd4844d2f85dea950a2dd5876", null ],
     [ "update_status_bar", "inventory_8c.html#a6470e986ca1a3a8728b440bb3c50eb4c", null ],
-    [ "D_8010CD10", "inventory_8c.html#a938819758e8aff7052ada56b1e4e3901", null ],
-    [ "D_8010CD12", "inventory_8c.html#aa72cd114f93ed57b809f6dc53c77c2e6", null ],
     [ "DigitHudScripts", "inventory_8c.html#a259616b2618fb0ec9903684c0e19c3de", null ],
     [ "gStatusBar", "inventory_8c.html#ac4b10f35a6017155de95e2576f2ca4e7", null ],
     [ "HES_Item_CoinSparkleRandom", "inventory_8c.html#a461c6ead6ee398fee004e503b6e3ff35", null ],
@@ -95,6 +98,8 @@ var inventory_8c =
     [ "HES_StatusStarEmpty", "inventory_8c.html#a52669c908bf03f34a7546f4cf6753ef6", null ],
     [ "HES_StatusStarPoint", "inventory_8c.html#a60c6f23f8b4c34ff9dc31d4ae8aee639", null ],
     [ "HES_StatusTimes", "inventory_8c.html#a9fc0c2189f44579ded97189d2a2307de", null ],
+    [ "HidingCoinCounter", "inventory_8c.html#a7f8afdeb1b4b88f35396af59a58add9d", null ],
+    [ "ShowingCoinCounter", "inventory_8c.html#aec2ca09e3452b46eae817af5c8471c1c", null ],
     [ "SlashHudScript", "inventory_8c.html#a2234e934685ea44239c63f4d17966064", null ],
     [ "SPIncrementHudScripts", "inventory_8c.html#a55ce48c5cb048ef54f7c39cec8b19a6f", null ],
     [ "SPStarHudScripts", "inventory_8c.html#a4f674265c3a6bf4ed96b05a259a3ce3a", null ],

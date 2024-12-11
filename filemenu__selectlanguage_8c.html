@@ -137,8 +137,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a99d6c815b1ce587a053542a0e944579d" id="r_a99d6c815b1ce587a053542a0e944579d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99d6c815b1ce587a053542a0e944579d">HES_Spirit1</a></td></tr>
 <tr class="separator:a99d6c815b1ce587a053542a0e944579d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbfaff873e9dad01315b81835e87ac36" id="r_acbfaff873e9dad01315b81835e87ac36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbfaff873e9dad01315b81835e87ac36">D_filemenu_8024F120</a> [] = { &amp;<a class="el" href="filemenu__main_8c.html#a99d6c815b1ce587a053542a0e944579d">HES_Spirit1</a> }</td></tr>
-<tr class="separator:acbfaff873e9dad01315b81835e87ac36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc84ef3bcb0efc6f52d4fe9fa61a1d8" id="r_a1cc84ef3bcb0efc6f52d4fe9fa61a1d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cc84ef3bcb0efc6f52d4fe9fa61a1d8">PauseLanguageHudScripts</a> [] = { &amp;<a class="el" href="filemenu__main_8c.html#a99d6c815b1ce587a053542a0e944579d">HES_Spirit1</a> }</td></tr>
+<tr class="separator:a1cc84ef3bcb0efc6f52d4fe9fa61a1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0c7ec44ee97bc6eab125ceba75df195" id="r_ac0c7ec44ee97bc6eab125ceba75df195"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c7ec44ee97bc6eab125ceba75df195">D_filemenu_8024F124</a> = 0x00000000</td></tr>
 <tr class="separator:ac0c7ec44ee97bc6eab125ceba75df195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacc7191fd8506852e031ba5b450913a8" id="r_aacc7191fd8506852e031ba5b450913a8"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacc7191fd8506852e031ba5b450913a8">D_filemenu_8024F128</a> = 0x00000000</td></tr>
@@ -580,22 +580,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="acbfaff873e9dad01315b81835e87ac36" name="acbfaff873e9dad01315b81835e87ac36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbfaff873e9dad01315b81835e87ac36">&#9670;&#160;</a></span>D_filemenu_8024F120</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* D_filemenu_8024F120[] = { &amp;<a class="el" href="filemenu__main_8c.html#a99d6c815b1ce587a053542a0e944579d">HES_Spirit1</a> }</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="#a9a315809a0bb9303386c1faab0bde44e">filemenu_selectlanguage_init()</a>.</p>
-
-</div>
-</div>
 <a id="ac0c7ec44ee97bc6eab125ceba75df195" name="ac0c7ec44ee97bc6eab125ceba75df195"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0c7ec44ee97bc6eab125ceba75df195">&#9670;&#160;</a></span>D_filemenu_8024F124</h2>
 
@@ -753,7 +737,7 @@ Variables</h2></td></tr>
 <div class="line">    .col = 0,</div>
 <div class="line">    .row = 0,</div>
 <div class="line">    .selected = 0,</div>
-<div class="line">    .page = 0,</div>
+<div class="line">    .state = 0,</div>
 <div class="line">    .numCols =1,</div>
 <div class="line">    .numRows = 4,</div>
 <div class="line">    .numPages = 0,</div>
@@ -790,6 +774,22 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cc84ef3bcb0efc6f52d4fe9fa61a1d8" name="a1cc84ef3bcb0efc6f52d4fe9fa61a1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc84ef3bcb0efc6f52d4fe9fa61a1d8">&#9670;&#160;</a></span>PauseLanguageHudScripts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="hud__element_8h.html#aea2a5c0eb9fb171b02c5de6b6fb43336">HudScript</a>* PauseLanguageHudScripts[] = { &amp;<a class="el" href="filemenu__main_8c.html#a99d6c815b1ce587a053542a0e944579d">HES_Spirit1</a> }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="#a9a315809a0bb9303386c1faab0bde44e">filemenu_selectlanguage_init()</a>.</p>
 
 </div>
 </div>

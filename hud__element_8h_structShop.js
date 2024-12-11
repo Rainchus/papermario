@@ -1,6 +1,6 @@
 var hud__element_8h_structShop =
 [
-    [ "costIconID", "hud__element_8h.html#ab3aec190bbf599808e32e0d172fe6f84", null ],
+    [ "costHID", "hud__element_8h.html#aa55e5c03c5062d7b4028970bf6319f97", null ],
     [ "curItemSlot", "hud__element_8h.html#a949d74d8835ce176d6a59a7440ece00e", null ],
     [ "flags", "hud__element_8h.html#ad426408243d715d90357286e1baac538", null ],
     [ "inventoryItemFlags", "hud__element_8h.html#a265ed08a5fb8a7ac2584944139907bce", null ],

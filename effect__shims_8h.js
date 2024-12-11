@@ -51,7 +51,7 @@ var effect__shims_8h =
     [ "shim_guScaleF", "effect__shims_8h.html#a8dc2bb2a51e83ae24fc383314f54e353", null ],
     [ "shim_guTranslate", "effect__shims_8h.html#a02655bb29d7f2cdf9853e8f14448c014", null ],
     [ "shim_guTranslateF", "effect__shims_8h.html#a997cf544e5a6d4307b06496916a93e42", null ],
-    [ "shim_is_point_visible", "effect__shims_8h.html#af6dc9c257a89318717886f866f8e5474", null ],
+    [ "shim_is_point_visible", "effect__shims_8h.html#aebad232c2d79dc4f1b65d19297db338e", null ],
     [ "shim_load_effect", "effect__shims_8h.html#a078991579d5463ccccacaf5b27f866ec", null ],
     [ "shim_mdl_draw_hidden_panel_surface", "effect__shims_8h.html#a8dd053e7c0a507e7d45beb7cd2c2fe2a", null ],
     [ "shim_mdl_get_shroud_tint_params", "effect__shims_8h.html#a05ecadfef55445ff8764731525593992", null ],

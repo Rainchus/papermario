@@ -29,7 +29,7 @@ var searchData=
   ['initsongentry_26',['InitSongEntry',['../audio_8h.html#structInitSongEntry',1,'']]],
   ['inspecticondata_27',['InspectIconData',['../inspect__icon_8c.html#structInspectIconData',1,'']]],
   ['instrument_28',['Instrument',['../audio_8h.html#structInstrument',1,'']]],
-  ['instrument_2e_5f_5funnamed79_5f_5f_29',['Instrument.__unnamed79__',['../audio_8h.html#unionInstrument_8____unnamed79____',1,'']]],
+  ['instrument_2e_5f_5funnamed87_5f_5f_29',['Instrument.__unnamed87__',['../audio_8h.html#unionInstrument_8____unnamed87____',1,'']]],
   ['intromessage_30',['IntroMessage',['../Narrator_8inc_8c.html#structIntroMessage',1,'']]],
   ['ispynotification_31',['ISpyNotification',['../i__spy_8c.html#structISpyNotification',1,'']]],
   ['isvdbg_32',['ISVDbg',['../is__debug_8c.html#structISVDbg',1,'']]],

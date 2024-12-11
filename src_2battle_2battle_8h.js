@@ -32,7 +32,7 @@ var src_2battle_2battle_8h =
     ] ],
     [ "FormationRow", "src_2battle_2battle_8h.html#structFormationRow", [
       [ "actor", "src_2battle_2battle_8h.html#a0335909d021a596c15d579ab946a9d33", null ],
-      [ "home", "src_2battle_2battle_8h.html#a2654d6adfe5802b5e1c99eb4c250b98d", null ],
+      [ "home", "src_2battle_2battle_8h.html#a4e06d8c5205df98556703ef006853faa", null ],
       [ "priority", "src_2battle_2battle_8h.html#a63c1c83e32b093cbfeb2117ac4a225e7", null ],
       [ "var0", "src_2battle_2battle_8h.html#a5c68d09b9e9b19e890adfd9dcad2ae7a", null ],
       [ "var1", "src_2battle_2battle_8h.html#aeb6d64ab5836f090a469e5cb203422ec", null ],
@@ -112,6 +112,8 @@ var src_2battle_2battle_8h =
     [ "DANGER_THRESHOLD", "src_2battle_2battle_8h.html#ae956056b50032240c65a951cd7229120", null ],
     [ "EXEC_DEATH_NO_SPINNING", "src_2battle_2battle_8h.html#a71ac44d4b079e8917df5d94db0347f7d", null ],
     [ "PERIL_THRESHOLD", "src_2battle_2battle_8h.html#a5bd1b19ea66ecea5d00b6c5bc00e3d14", null ],
+    [ "POPUP_MSG_OFF", "src_2battle_2battle_8h.html#a5c055872ad1370de1923323d0c0cc7e1", null ],
+    [ "POPUP_MSG_ON", "src_2battle_2battle_8h.html#ab74406d32c9c9f6f1ee6b395cc3ced8e", null ],
     [ "STAGE", "src_2battle_2battle_8h.html#addd2085b964aeea880d49f3e55a2748d", null ],
     [ "STAGE_MODEL_LIST_END", "src_2battle_2battle_8h.html#ab3d66b5a60941e4a00df8f67df5fa757", null ],
     [ "BattleList", "src_2battle_2battle_8h.html#a93186ede9881a6370ddc93e2a566597f", null ],

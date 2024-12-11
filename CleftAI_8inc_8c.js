@@ -28,7 +28,6 @@ var CleftAI_8inc_8c =
     [ "CleftAI_Hiding", "CleftAI_8inc_8c.html#abd0ca3ba53b5392f3ebd20503e8d7afc", null ],
     [ "CleftAI_HidingInit", "CleftAI_8inc_8c.html#af803ebd4c8f900fd358794526c5f942e", null ],
     [ "CleftAI_LosePlayer", "CleftAI_8inc_8c.html#a4cf7983efd45a13ddf592415acec14be", null ],
-    [ "CleftAI_Main", "CleftAI_8inc_8c.html#aa08210fcc036be3d60bf9473524ee2f1", null ],
     [ "CleftAI_PostDisguise", "CleftAI_8inc_8c.html#ab384f016829de245f175899eadfc5b36", null ],
     [ "CleftAI_PreAmbush", "CleftAI_8inc_8c.html#a962beabe5fbf71bddff7faa73c4e363c", null ],
     [ "CleftAI_ReturnHome", "CleftAI_8inc_8c.html#ad912d7da686b00ff6056ae43a4ce4a44", null ],

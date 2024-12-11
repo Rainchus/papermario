@@ -149,8 +149,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:structColor4i"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structMatrix4s" id="r_structMatrix4s"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structMatrix4s">Matrix4s</a></td></tr>
 <tr class="separator:structMatrix4s"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structCamConfiguration" id="r_structCamConfiguration"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCamConfiguration">CamConfiguration</a></td></tr>
-<tr class="separator:structCamConfiguration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structCameraRig" id="r_structCameraRig"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCameraRig">CameraRig</a></td></tr>
+<tr class="separator:structCameraRig"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structDmaTable" id="r_structDmaTable"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structDmaTable">DmaTable</a></td></tr>
 <tr class="separator:structDmaTable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structPartnerData" id="r_structPartnerData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structPartnerData">PartnerData</a></td></tr>
@@ -430,22 +430,34 @@ Data Structures</h2></td></tr>
 <tr class="separator:structCameraControlSettings_8points_8two"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structCameraControlSettings_8points_8three" id="r_structCameraControlSettings_8points_8three"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCameraControlSettings_8points_8three">CameraControlSettings.points.three</a></td></tr>
 <tr class="separator:structCameraControlSettings_8points_8three"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionBattleStatus_8____unnamed18____" id="r_unionBattleStatus_8____unnamed18____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionBattleStatus_8____unnamed18____">BattleStatus.__unnamed18__</a></td></tr>
-<tr class="separator:unionBattleStatus_8____unnamed18____"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionCollider_8____unnamed20____" id="r_unionCollider_8____unnamed20____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionCollider_8____unnamed20____">Collider.__unnamed20__</a></td></tr>
-<tr class="separator:unionCollider_8____unnamed20____"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionCollisionData_8____unnamed22____" id="r_unionCollisionData_8____unnamed22____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionCollisionData_8____unnamed22____">CollisionData.__unnamed22__</a></td></tr>
-<tr class="separator:unionCollisionData_8____unnamed22____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionCamera_8params" id="r_unionCamera_8params"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionCamera_8params">Camera.params</a></td></tr>
+<tr class="separator:unionCamera_8params"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structCamera_8params_8world" id="r_structCamera_8params_8world"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCamera_8params_8world">Camera.params.world</a></td></tr>
+<tr class="separator:structCamera_8params_8world"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structCamera_8params_8basic" id="r_structCamera_8params_8basic"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCamera_8params_8basic">Camera.params.basic</a></td></tr>
+<tr class="separator:structCamera_8params_8basic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structCamera_8params_8interp" id="r_structCamera_8params_8interp"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCamera_8params_8interp">Camera.params.interp</a></td></tr>
+<tr class="separator:structCamera_8params_8interp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structCamera_8params_8radial" id="r_structCamera_8params_8radial"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCamera_8params_8radial">Camera.params.radial</a></td></tr>
+<tr class="separator:structCamera_8params_8radial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structCamera_8params_8confined" id="r_structCamera_8params_8confined"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structCamera_8params_8confined">Camera.params.confined</a></td></tr>
+<tr class="separator:structCamera_8params_8confined"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionBattleStatus_8____unnamed24____" id="r_unionBattleStatus_8____unnamed24____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionBattleStatus_8____unnamed24____">BattleStatus.__unnamed24__</a></td></tr>
+<tr class="separator:unionBattleStatus_8____unnamed24____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionCollider_8____unnamed26____" id="r_unionCollider_8____unnamed26____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionCollider_8____unnamed26____">Collider.__unnamed26__</a></td></tr>
+<tr class="separator:unionCollider_8____unnamed26____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionCollisionData_8____unnamed28____" id="r_unionCollisionData_8____unnamed28____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionCollisionData_8____unnamed28____">CollisionData.__unnamed28__</a></td></tr>
+<tr class="separator:unionCollisionData_8____unnamed28____"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:unionAnimatorNode_8fcData" id="r_unionAnimatorNode_8fcData"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionAnimatorNode_8fcData">AnimatorNode.fcData</a></td></tr>
 <tr class="separator:unionAnimatorNode_8fcData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structPartnerAnimations_8____unnamed25____" id="r_structPartnerAnimations_8____unnamed25____"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structPartnerAnimations_8____unnamed25____">PartnerAnimations.__unnamed25__</a></td></tr>
-<tr class="separator:structPartnerAnimations_8____unnamed25____"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionActorPartMovement_8____unnamed27____" id="r_unionActorPartMovement_8____unnamed27____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActorPartMovement_8____unnamed27____">ActorPartMovement.__unnamed27__</a></td></tr>
-<tr class="separator:unionActorPartMovement_8____unnamed27____"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionActorState_8____unnamed29____" id="r_unionActorState_8____unnamed29____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActorState_8____unnamed29____">ActorState.__unnamed29__</a></td></tr>
-<tr class="separator:unionActorState_8____unnamed29____"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionActorState_8____unnamed31____" id="r_unionActorState_8____unnamed31____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActorState_8____unnamed31____">ActorState.__unnamed31__</a></td></tr>
-<tr class="separator:unionActorState_8____unnamed31____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structPartnerAnimations_8____unnamed31____" id="r_structPartnerAnimations_8____unnamed31____"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structPartnerAnimations_8____unnamed31____">PartnerAnimations.__unnamed31__</a></td></tr>
+<tr class="separator:structPartnerAnimations_8____unnamed31____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionActorPartMovement_8____unnamed33____" id="r_unionActorPartMovement_8____unnamed33____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActorPartMovement_8____unnamed33____">ActorPartMovement.__unnamed33__</a></td></tr>
+<tr class="separator:unionActorPartMovement_8____unnamed33____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionActorState_8____unnamed35____" id="r_unionActorState_8____unnamed35____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActorState_8____unnamed35____">ActorState.__unnamed35__</a></td></tr>
+<tr class="separator:unionActorState_8____unnamed35____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionActorState_8____unnamed37____" id="r_unionActorState_8____unnamed37____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActorState_8____unnamed37____">ActorState.__unnamed37__</a></td></tr>
+<tr class="separator:unionActorState_8____unnamed37____"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:unionActor_8shadow" id="r_unionActor_8shadow"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#unionActor_8shadow">Actor.shadow</a></td></tr>
 <tr class="separator:unionActor_8shadow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -475,6 +487,8 @@ Macros</h2></td></tr>
 <tr class="separator:a3e5f33860f21696dcc9b1a5792a15c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48e59b1a0287e6fc2c21f10d66dcb773" id="r_a48e59b1a0287e6fc2c21f10d66dcb773"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48e59b1a0287e6fc2c21f10d66dcb773">DISPLAYCONTEXT_GFX_COUNT</a>&#160;&#160;&#160;0x2080</td></tr>
 <tr class="separator:a48e59b1a0287e6fc2c21f10d66dcb773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f5470a926d84c26b024310ac751703" id="r_af1f5470a926d84c26b024310ac751703"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1f5470a926d84c26b024310ac751703">MAX_CREDITS_LINES</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:af1f5470a926d84c26b024310ac751703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -494,6 +508,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ac4d29d1bd5d801a1592f9055188c7c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af250d7e0529e8afdd2a419f09d0f5e45" id="r_af250d7e0529e8afdd2a419f09d0f5e45"><td class="memItemLeft" align="right" valign="top">typedef u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af250d7e0529e8afdd2a419f09d0f5e45">AnimID</a></td></tr>
 <tr class="separator:af250d7e0529e8afdd2a419f09d0f5e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c46c9af25c9d7ff77957b7753679b5a" id="r_a8c46c9af25c9d7ff77957b7753679b5a"><td class="memItemLeft" align="right" valign="top">typedef s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td></tr>
+<tr class="separator:a8c46c9af25c9d7ff77957b7753679b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9587453a89fcbd13a2ba23c4b74fc0fd" id="r_a9587453a89fcbd13a2ba23c4b74fc0fd"><td class="memItemLeft" align="right" valign="top">typedef f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9587453a89fcbd13a2ba23c4b74fc0fd">Matrix4f</a>[4][4]</td></tr>
 <tr class="separator:a9587453a89fcbd13a2ba23c4b74fc0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b8829b2f214e40ef91c50a162665ed4" id="r_a1b8829b2f214e40ef91c50a162665ed4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structNpc.html">Npc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b8829b2f214e40ef91c50a162665ed4">NpcList</a>[64]</td></tr>
@@ -1161,45 +1177,45 @@ whole[4][4]</td>
 
 </div>
 </div>
-<a name="structCamConfiguration" id="structCamConfiguration"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structCamConfiguration">&#9670;&#160;</a></span>CamConfiguration</h2>
+<a name="structCameraRig" id="structCameraRig"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structCameraRig">&#9670;&#160;</a></span>CameraRig</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct CamConfiguration</td>
+          <td class="memname">struct CameraRig</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="afdfe13c5449c0c84ae8053e6a3cff809" name="afdfe13c5449c0c84ae8053e6a3cff809"></a>f32</td>
+<a id="ae4f27531793d4644c63fa26d78fa2783" name="ae4f27531793d4644c63fa26d78fa2783"></a>f32</td>
 <td class="fieldname">
 boomLength</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a762c655911e9b92305395b395c41ff36" name="a762c655911e9b92305395b395c41ff36"></a>f32</td>
+<a id="a28981f262bd920ab83ae430c4313440e" name="a28981f262bd920ab83ae430c4313440e"></a>f32</td>
 <td class="fieldname">
 boomPitch</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad1417e98168abfe270cb65cc78f41151" name="ad1417e98168abfe270cb65cc78f41151"></a>f32</td>
+<a id="a007236c29051bfa1faa38e7709c43b95" name="a007236c29051bfa1faa38e7709c43b95"></a>f32</td>
 <td class="fieldname">
 boomYaw</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab1a99b50cfddd87fa043065efcf6caa7" name="ab1a99b50cfddd87fa043065efcf6caa7"></a><a class="el" href="#structVec3f">Vec3f</a></td>
+<a id="a4391cebb4b482f427516316e5f817c73" name="a4391cebb4b482f427516316e5f817c73"></a><a class="el" href="#structVec3f">Vec3f</a></td>
 <td class="fieldname">
 targetPos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a23620239768b69408305ec5add46e84d" name="a23620239768b69408305ec5add46e84d"></a>f32</td>
+<a id="a8dea63d5a14d450f11e557a4ed4d588d" name="a8dea63d5a14d450f11e557a4ed4d588d"></a>f32</td>
 <td class="fieldname">
 viewPitch</td>
 <td class="fielddoc">
@@ -2570,7 +2586,7 @@ battleVariation</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="adeec71b71a20b45e6a921d2d4ed814df" name="adeec71b71a20b45e6a921d2d4ed814df"></a>s16</td>
+<a id="adeec71b71a20b45e6a921d2d4ed814df" name="adeec71b71a20b45e6a921d2d4ed814df"></a><a class="el" href="#a9ddc968521277c809095a5d6954a6fc3">s16</a></td>
 <td class="fieldname">
 fadeEndVolume</td>
 <td class="fielddoc">
@@ -2588,7 +2604,7 @@ fadeOutTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a63b7457e2cdcd4475fa234c6ab77fef8" name="a63b7457e2cdcd4475fa234c6ab77fef8"></a>s16</td>
+<a id="a63b7457e2cdcd4475fa234c6ab77fef8" name="a63b7457e2cdcd4475fa234c6ab77fef8"></a><a class="el" href="#a9ddc968521277c809095a5d6954a6fc3">s16</a></td>
 <td class="fieldname">
 fadeStartVolume</td>
 <td class="fielddoc">
@@ -2630,7 +2646,7 @@ songName</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a02e052c223d4160178598114ee8c710e" name="a02e052c223d4160178598114ee8c710e"></a>s16</td>
+<a id="a02e052c223d4160178598114ee8c710e" name="a02e052c223d4160178598114ee8c710e"></a><a class="el" href="#a9ddc968521277c809095a5d6954a6fc3">s16</a></td>
 <td class="fieldname">
 state</td>
 <td class="fielddoc">
@@ -2712,55 +2728,61 @@ alwaysShown</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6aa85fa4ea1c8ea9bed16e4ce1ee4dae" name="a6aa85fa4ea1c8ea9bed16e4ce1ee4dae"></a>s8</td>
+<a id="a3d34be22e39b2adb139a738561ae90d9" name="a3d34be22e39b2adb139a738561ae90d9"></a>s8</td>
 <td class="fieldname">
-coinCounterHideTime</td>
+coinCountDisposeTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af4188d9e8e3862fb0ac4ebde8c52d79a" name="af4188d9e8e3862fb0ac4ebde8c52d79a"></a>s32</td>
+<a id="ae0eed4d8343a4eb2552e8cabe2663779" name="ae0eed4d8343a4eb2552e8cabe2663779"></a>s8</td>
+<td class="fieldname">
+coinCounterHideDelay</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8fa4b2e296c5cb8cccb398c3e0ed3332" name="a8fa4b2e296c5cb8cccb398c3e0ed3332"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 coinCountIconHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a1aa349cf312690ef345ab6a99b52aa36" name="a1aa349cf312690ef345ab6a99b52aa36"></a>s32</td>
+<a id="a505b240eb176c3cd19dee5efd3e7c4c3" name="a505b240eb176c3cd19dee5efd3e7c4c3"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 coinCountTimesHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3b06058501b10c4c8bb5282c18653913" name="a3b06058501b10c4c8bb5282c18653913"></a>s32</td>
+<a id="a7b4a70f0b01b953b56cd845178839f97" name="a7b4a70f0b01b953b56cd845178839f97"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 coinIconHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a34c64fa8160b9a78d9c781ab8a4bfa52" name="a34c64fa8160b9a78d9c781ab8a4bfa52"></a>s8</td>
+<a id="a079b422db0e5c22c7a39cdcb31d4abb5" name="a079b422db0e5c22c7a39cdcb31d4abb5"></a>s8</td>
 <td class="fieldname">
-coinsBlinkCounter</td>
+coinsBlinkAnimTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aaa1c3c44b4430827174c4deff80ce08a" name="aaa1c3c44b4430827174c4deff80ce08a"></a>s8</td>
+<a id="a177c46523732a3f8fc22a7502b1626e7" name="a177c46523732a3f8fc22a7502b1626e7"></a><a class="el" href="#ac805e9ac84b4ce4237c3278063da9d62">b8</a></td>
 <td class="fieldname">
 coinsBlinking</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad95b55aa85f08077966cde9ac77ca3a8" name="ad95b55aa85f08077966cde9ac77ca3a8"></a>s8</td>
+<a id="acc58005c80b88c837c85a135a7000565" name="acc58005c80b88c837c85a135a7000565"></a>s8</td>
 <td class="fieldname">
-coinsBlinkTimer</td>
+coinsBlinkTimeLeft</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aa61768325649372c337bf966ce7023e4" name="aa61768325649372c337bf966ce7023e4"></a>s32</td>
+<a id="a9be687dd3f22cdb86996a0b9a0b7f529" name="a9be687dd3f22cdb86996a0b9a0b7f529"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 coinSparkleHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a693ba801d2b338fe234d3b51b7fc8203" name="a693ba801d2b338fe234d3b51b7fc8203"></a>s32</td>
+<a id="a8d96f50dd96f77f511caaaf9ea6dbe8c" name="a8d96f50dd96f77f511caaaf9ea6dbe8c"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 coinTimesHID</td>
 <td class="fielddoc">
@@ -2814,31 +2836,31 @@ drawPosY</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ae4a79ef7a243f2f5b24e82b5629e4941" name="ae4a79ef7a243f2f5b24e82b5629e4941"></a>s8</td>
+<a id="af8e9ac390da7102e1e4e304733004b73" name="af8e9ac390da7102e1e4e304733004b73"></a>s8</td>
 <td class="fieldname">
-fpBlinkCounter</td>
+fpBlinkAnimTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad05500f6387ac8e24c77b6d4f74e9787" name="ad05500f6387ac8e24c77b6d4f74e9787"></a>s8</td>
+<a id="a789d58d6275545cd67177a737139ed0a" name="a789d58d6275545cd67177a737139ed0a"></a><a class="el" href="#ac805e9ac84b4ce4237c3278063da9d62">b8</a></td>
 <td class="fieldname">
 fpBlinking</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a843d6b92c63b5d86b3e6ad440365b44b" name="a843d6b92c63b5d86b3e6ad440365b44b"></a>s8</td>
+<a id="aaafcd1d3991c6ecd860b7f79e7607a7b" name="aaafcd1d3991c6ecd860b7f79e7607a7b"></a>s8</td>
 <td class="fieldname">
-fpBlinkTimer</td>
+fpBlinkTimeLeft</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aeaabea72e5342031c408e25071f02a88" name="aeaabea72e5342031c408e25071f02a88"></a>s32</td>
+<a id="abee5d5e4dfdb9d0bfc1cf9a273bd2b4d" name="abee5d5e4dfdb9d0bfc1cf9a273bd2b4d"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 fpIconHIDs[2]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a483a3d59446bd5fb86432fd37971086b" name="a483a3d59446bd5fb86432fd37971086b"></a>s32</td>
+<a id="ae7a6347e0d3810b8c7f0916c199796b1" name="ae7a6347e0d3810b8c7f0916c199796b1"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 fpTimesHID</td>
 <td class="fielddoc">
@@ -2850,43 +2872,43 @@ hidden</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a205fab08f7f863fe7c36abe23b685f42" name="a205fab08f7f863fe7c36abe23b685f42"></a>s8</td>
+<a id="a674445a2eb5410275bef0386062bdcb9" name="a674445a2eb5410275bef0386062bdcb9"></a>s8</td>
 <td class="fieldname">
-hpBlinkCounter</td>
+hpBlinkAnimTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6d4f2ed74335722ee5aa21b7be7cd46c" name="a6d4f2ed74335722ee5aa21b7be7cd46c"></a>s8</td>
+<a id="a1d707a0247857c1881ce14c5b106b642" name="a1d707a0247857c1881ce14c5b106b642"></a><a class="el" href="#ac805e9ac84b4ce4237c3278063da9d62">b8</a></td>
 <td class="fieldname">
 hpBlinking</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a94be5dc477faf61ba1dfbc0e46b4da97" name="a94be5dc477faf61ba1dfbc0e46b4da97"></a>s8</td>
+<a id="adc4907a0ebe6139582aafba719e731a3" name="adc4907a0ebe6139582aafba719e731a3"></a>s8</td>
 <td class="fieldname">
-hpBlinkTimer</td>
+hpBlinkTimeLeft</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a93bcb89785501d569e36da96f03afd3e" name="a93bcb89785501d569e36da96f03afd3e"></a>s32</td>
+<a id="a6502771ca52010536f74a93fd4e505e9" name="a6502771ca52010536f74a93fd4e505e9"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 hpIconHIDs[2]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a002652bb0c0a52a887eff547de4a0672" name="a002652bb0c0a52a887eff547de4a0672"></a>s32</td>
+<a id="a28d2535766b2973613b5b98a401c26bd" name="a28d2535766b2973613b5b98a401c26bd"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 hpTimesHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a8dd6763f24351ac06144e7088eee436c" name="a8dd6763f24351ac06144e7088eee436c"></a>s32</td>
+<a id="abd27393dcfe35796e7f82216340cc43a" name="abd27393dcfe35796e7f82216340cc43a"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 iconIndex12</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ada280b84e158f15f289906aaac489b57" name="ada280b84e158f15f289906aaac489b57"></a>s32</td>
+<a id="a078fa0a353bd67ceb91481dca4f6cb81" name="a078fa0a353bd67ceb91481dca4f6cb81"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 iconIndex13</td>
 <td class="fielddoc">
@@ -2904,63 +2926,105 @@ openInputDisabled</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
+<a id="af0705b708ccdf6f8683202e9e4004c6f" name="af0705b708ccdf6f8683202e9e4004c6f"></a>char</td>
+<td class="fieldname">
+pad_3F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a2f3731f68f5d9222a686a7f11932302b" name="a2f3731f68f5d9222a686a7f11932302b"></a>char</td>
+<td class="fieldname">
+pad_5B</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a80ffe0ff4b6d016169ba6c46d5ea832d" name="a80ffe0ff4b6d016169ba6c46d5ea832d"></a>char</td>
+<td class="fieldname">
+pad_6F</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="add46efdbb417400aafcf1bdd94610371" name="add46efdbb417400aafcf1bdd94610371"></a>s8</td>
+<td class="fieldname">
+powBarsToBlink</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a262b8da10f49d74a4547103a7037347a" name="a262b8da10f49d74a4547103a7037347a"></a>s8</td>
+<td class="fieldname">
+prevIgnoreChanges</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="affd242a033cec758eb7d70a46b59c0bd" name="affd242a033cec758eb7d70a46b59c0bd"></a>s8</td>
+<td class="fieldname">
+shimmerLimit</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a4ef96e16f8996e986cbb3afd836e7624" name="a4ef96e16f8996e986cbb3afd836e7624"></a>s8</td>
+<td class="fieldname">
+shimmerState</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ac3cb6e87860716e25cfd929bb297b8aa" name="ac3cb6e87860716e25cfd929bb297b8aa"></a>s8</td>
+<td class="fieldname">
+shimmerTime</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
 <a id="af2db6854aaed944e7040294bc977e8fd" name="af2db6854aaed944e7040294bc977e8fd"></a>s16</td>
 <td class="fieldname">
 showTimer</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a606e4287b4309465576ad5c638bd97f6" name="a606e4287b4309465576ad5c638bd97f6"></a>s8</td>
-<td class="fieldname">
-spBarsToBlink</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a32302ffe0ae957dbd0e8afd528dc9cf1" name="a32302ffe0ae957dbd0e8afd528dc9cf1"></a>s8</td>
-<td class="fieldname">
-spBlinkCounter</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a50c4ebd416665a5129e025e000829654" name="a50c4ebd416665a5129e025e000829654"></a>s8</td>
-<td class="fieldname">
-spBlinking</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a80c24f886c83cb8e18e20fdc5b59ffdd" name="a80c24f886c83cb8e18e20fdc5b59ffdd"></a>s32</td>
+<a id="ae43e34c9e3cc8a1bcc8e1206e67427cd" name="ae43e34c9e3cc8a1bcc8e1206e67427cd"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 spIconHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a35e9fca79753cba2b5e18b152ffd822c" name="a35e9fca79753cba2b5e18b152ffd822c"></a>s32</td>
+<a id="a00382236a4e00901ac193628e300dbc5" name="a00382236a4e00901ac193628e300dbc5"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 spShineHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afbd310e84fcd773ab28359c38ae942b1" name="afbd310e84fcd773ab28359c38ae942b1"></a>s32</td>
+<a id="a0b56af264cc3559065a2b3dc0b15ee8d" name="a0b56af264cc3559065a2b3dc0b15ee8d"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 spTimesHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0c26e55b2c2ddba7979915f0f0224610" name="a0c26e55b2c2ddba7979915f0f0224610"></a>s32</td>
+<a id="ab8d15537dd481093c04b81d8dba9b1b2" name="ab8d15537dd481093c04b81d8dba9b1b2"></a><a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
 <td class="fieldname">
 starIconHID</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a627763f6b669c4a8ea58f1438ad2a9bf" name="a627763f6b669c4a8ea58f1438ad2a9bf"></a>s8</td>
+<a id="a33b452d7d317397f8c922a51f9199c90" name="a33b452d7d317397f8c922a51f9199c90"></a>s8</td>
 <td class="fieldname">
-starpointsBlinkCounter</td>
+starpointsBlinkAnimTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a8f8c2ab1ad92fdb419a98ba477950a87" name="a8f8c2ab1ad92fdb419a98ba477950a87"></a>s8</td>
+<a id="a407238b48744db138f9a904df2f52083" name="a407238b48744db138f9a904df2f52083"></a><a class="el" href="#ac805e9ac84b4ce4237c3278063da9d62">b8</a></td>
 <td class="fieldname">
 starpointsBlinking</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a2c6e12cb1074389bc86f2171e78d83fd" name="a2c6e12cb1074389bc86f2171e78d83fd"></a>s8</td>
+<td class="fieldname">
+starPowerBlinkCounter</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aff40f4becd5efd2631180842f70cb8f8" name="aff40f4becd5efd2631180842f70cb8f8"></a><a class="el" href="#ac805e9ac84b4ce4237c3278063da9d62">b8</a></td>
+<td class="fieldname">
+starPowerBlinking</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -2973,54 +3037,6 @@ unk_3B</td>
 <a id="aacf1aaac0dbf6e425349940a4823670e" name="aacf1aaac0dbf6e425349940a4823670e"></a><a class="el" href="#ac805e9ac84b4ce4237c3278063da9d62">b8</a></td>
 <td class="fieldname">
 unk_3C</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a2432cf60900861a179d25a3d4889e318" name="a2432cf60900861a179d25a3d4889e318"></a>char</td>
-<td class="fieldname">
-unk_3F</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a824d6d4b5e65a41bf888a32a4242553a" name="a824d6d4b5e65a41bf888a32a4242553a"></a>s8</td>
-<td class="fieldname">
-unk_57</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a25f82ca8b4c83105c568edeb0f0f771d" name="a25f82ca8b4c83105c568edeb0f0f771d"></a>s8</td>
-<td class="fieldname">
-unk_58</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="adbac699d242fe73b6560dbab6d61d80b" name="adbac699d242fe73b6560dbab6d61d80b"></a>s8</td>
-<td class="fieldname">
-unk_59</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a533dba678ead44dcd901e965a7c7ea41" name="a533dba678ead44dcd901e965a7c7ea41"></a>char</td>
-<td class="fieldname">
-unk_5B</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a83615e1c1e452964844b93119e617004" name="a83615e1c1e452964844b93119e617004"></a>s8</td>
-<td class="fieldname">
-unk_6D</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a3cf671a615821a2239d4cea965be5c80" name="a3cf671a615821a2239d4cea965be5c80"></a>s8</td>
-<td class="fieldname">
-unk_6E</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a4481d3c69f7f6a96b43ffdae994b8605" name="a4481d3c69f7f6a96b43ffdae994b8605"></a>char</td>
-<td class="fieldname">
-unk_6F</td>
 <td class="fielddoc">
 </td></tr>
 </table>
@@ -3189,7 +3205,7 @@ boomPitch</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac597def19e0a922208b1765df88b3991" name="ac597def19e0a922208b1765df88b3991"></a>s32</td>
+<a id="a900057088cc5b670ceca3c69ae2f0bc4" name="a900057088cc5b670ceca3c69ae2f0bc4"></a><a class="el" href="#a8d2e4e903f7277916e7c1e2f36539d26">b32</a></td>
 <td class="fieldname">
 flag</td>
 <td class="fielddoc">
@@ -3421,7 +3437,7 @@ shortDescMsg</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="af26f731d6fc2e860322295b7a2dd4ee0" name="af26f731d6fc2e860322295b7a2dd4ee0"></a>union <a class="el" href="#unionCollider_8____unnamed20____">Collider.__unnamed20__</a></td>
+<a id="ad9c6069c3146e26d0d3472801f2e9f0f" name="ad9c6069c3146e26d0d3472801f2e9f0f"></a>union <a class="el" href="#unionCollider_8____unnamed26____">Collider.__unnamed26__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
@@ -3498,7 +3514,7 @@ vertexTable</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="a1c7071c9481fd018a2aa16b43eed0096" name="a1c7071c9481fd018a2aa16b43eed0096"></a>union <a class="el" href="#unionCollisionData_8____unnamed22____">CollisionData.__unnamed22__</a></td>
+<a id="aa27b9bfa88198512cb3d768b1ef21b96" name="aa27b9bfa88198512cb3d768b1ef21b96"></a>union <a class="el" href="#unionCollisionData_8____unnamed28____">CollisionData.__unnamed28__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
@@ -3563,7 +3579,7 @@ displayList</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ac1598d0e6da34297555eca3b4674dd65" name="ac1598d0e6da34297555eca3b4674dd65"></a>union <a class="el" href="#unionAnimatorNode_8fcData">AnimatorNode.fcData</a></td>
+<a id="a6c99850e028c98f6e10599eae616a9db" name="a6c99850e028c98f6e10599eae616a9db"></a>union <a class="el" href="#unionAnimatorNode_8fcData">AnimatorNode.fcData</a></td>
 <td class="fieldname">
 fcData</td>
 <td class="fielddoc">
@@ -5345,6 +5361,12 @@ contBitPattern</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
+<a id="a020ebc1120ef937e0810c55b1ad1cae4" name="a020ebc1120ef937e0810c55b1ad1cae4"></a>s8</td>
+<td class="fieldname">
+context</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
 <a id="a6a083422470645963ec5948c1acbbfcd" name="a6a083422470645963ec5948c1acbbfcd"></a>u32</td>
 <td class="fieldname">
 curButtons[4]</td>
@@ -5450,12 +5472,6 @@ heldButtons[4]</td>
 <a id="ac36453fb6b60a8e130b872be9af30e86" name="ac36453fb6b60a8e130b872be9af30e86"></a>s8</td>
 <td class="fieldname">
 introPart</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a27139533d7c1cea15e7f9e3f3cd13477" name="a27139533d7c1cea15e7f9e3f3cd13477"></a>s8</td>
-<td class="fieldname">
-isBattle</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -5807,7 +5823,7 @@ unk_BE[94]</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="ae7929b430148062400f445fdcfa17e41" name="ae7929b430148062400f445fdcfa17e41"></a>struct <a class="el" href="#structPartnerAnimations_8____unnamed25____">PartnerAnimations.__unnamed25__</a></td>
+<a id="a225a39656962503d756c4ebf28e4f9ba" name="a225a39656962503d756c4ebf28e4f9ba"></a>struct <a class="el" href="#structPartnerAnimations_8____unnamed31____">PartnerAnimations.__unnamed31__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
@@ -5972,7 +5988,7 @@ truePos</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="ad4172408db1a054fae0ebf4392bcbadb" name="ad4172408db1a054fae0ebf4392bcbadb"></a>union <a class="el" href="#unionActorPartMovement_8____unnamed27____">ActorPartMovement.__unnamed27__</a></td>
+<a id="a56a726c63348221912c37c9a88678d4b" name="a56a726c63348221912c37c9a88678d4b"></a>union <a class="el" href="#unionActorPartMovement_8____unnamed33____">ActorPartMovement.__unnamed33__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
@@ -5984,7 +6000,7 @@ absolutePos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7056bad4e5c411b19d48f858d73d7b3b" name="a7056bad4e5c411b19d48f858d73d7b3b"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">f32</a></td>
+<a id="a7056bad4e5c411b19d48f858d73d7b3b" name="a7056bad4e5c411b19d48f858d73d7b3b"></a>f32</td>
 <td class="fieldname">
 angle</td>
 <td class="fielddoc">
@@ -6002,19 +6018,19 @@ goalPos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0d14d48a57604e78bf53d0526da886ec" name="a0d14d48a57604e78bf53d0526da886ec"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">f32</a></td>
+<a id="a0d14d48a57604e78bf53d0526da886ec" name="a0d14d48a57604e78bf53d0526da886ec"></a>f32</td>
 <td class="fieldname">
 jumpScale</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a318c43b45a2ad58a5aa0b9619efbdd6d" name="a318c43b45a2ad58a5aa0b9619efbdd6d"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">f32</a></td>
+<a id="a318c43b45a2ad58a5aa0b9619efbdd6d" name="a318c43b45a2ad58a5aa0b9619efbdd6d"></a>f32</td>
 <td class="fieldname">
 moveSpeed</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aab0561155eeddf36bfec5d0904957bb0" name="aab0561155eeddf36bfec5d0904957bb0"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">s16</a></td>
+<a id="aab0561155eeddf36bfec5d0904957bb0" name="aab0561155eeddf36bfec5d0904957bb0"></a>s16</td>
 <td class="fieldname">
 moveTime</td>
 <td class="fielddoc">
@@ -6026,13 +6042,13 @@ unk_18</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a67498d8a8f689aa821670e5c09bb4b8d" name="a67498d8a8f689aa821670e5c09bb4b8d"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">f32</a></td>
+<a id="a67498d8a8f689aa821670e5c09bb4b8d" name="a67498d8a8f689aa821670e5c09bb4b8d"></a>f32</td>
 <td class="fieldname">
 unk_2C</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5afa5b8ea6bbf7634fdc9b8411b21538" name="a5afa5b8ea6bbf7634fdc9b8411b21538"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">s16</a></td>
+<a id="a5afa5b8ea6bbf7634fdc9b8411b21538" name="a5afa5b8ea6bbf7634fdc9b8411b21538"></a>s16</td>
 <td class="fieldname">
 unk_3A</td>
 <td class="fielddoc">
@@ -6044,7 +6060,7 @@ unk_3C</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3fce14a9671788bfedb4fec7ebfb78cd" name="a3fce14a9671788bfedb4fec7ebfb78cd"></a><a class="el" href="#ae9a19c6a3422201f160916f9cf3b49c1">char</a></td>
+<a id="a3fce14a9671788bfedb4fec7ebfb78cd" name="a3fce14a9671788bfedb4fec7ebfb78cd"></a>char</td>
 <td class="fieldname">
 unk_40[0xC]</td>
 <td class="fielddoc">
@@ -7471,13 +7487,13 @@ unk_18[8]</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="aae38362e9f2ab6d3576d7713337f6ebb" name="aae38362e9f2ab6d3576d7713337f6ebb"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">f32</a></td>
+<a id="aae38362e9f2ab6d3576d7713337f6ebb" name="aae38362e9f2ab6d3576d7713337f6ebb"></a>f32</td>
 <td class="fieldname">
 acceleration</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a828d30827eee355dfcfd8909a7236744" name="a828d30827eee355dfcfd8909a7236744"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">f32</a></td>
+<a id="a828d30827eee355dfcfd8909a7236744" name="a828d30827eee355dfcfd8909a7236744"></a>f32</td>
 <td class="fieldname">
 angle</td>
 <td class="fielddoc">
@@ -7495,19 +7511,19 @@ dist</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aea184323be5a8cd8838637990a70e0a8" name="aea184323be5a8cd8838637990a70e0a8"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">s16</a></td>
+<a id="aea184323be5a8cd8838637990a70e0a8" name="aea184323be5a8cd8838637990a70e0a8"></a>s16</td>
 <td class="fieldname">
 flyArcAmplitude</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="afa5555e3a46cd1effd389170028495df" name="afa5555e3a46cd1effd389170028495df"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">f32</a></td>
+<a id="afa5555e3a46cd1effd389170028495df" name="afa5555e3a46cd1effd389170028495df"></a>f32</td>
 <td class="fieldname">
 flyElapsed</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="aab8b0c5b0901cf8a7a2d48b131b2ebd9" name="aab8b0c5b0901cf8a7a2d48b131b2ebd9"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">s16</a></td>
+<a id="aab8b0c5b0901cf8a7a2d48b131b2ebd9" name="aab8b0c5b0901cf8a7a2d48b131b2ebd9"></a>s16</td>
 <td class="fieldname">
 flyTime</td>
 <td class="fielddoc">
@@ -7519,13 +7535,13 @@ goalPos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a05f9995537ef5e8e6a3fca6b6c3d2192" name="a05f9995537ef5e8e6a3fca6b6c3d2192"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">f32</a></td>
+<a id="a05f9995537ef5e8e6a3fca6b6c3d2192" name="a05f9995537ef5e8e6a3fca6b6c3d2192"></a>f32</td>
 <td class="fieldname">
 speed</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a1bb05c7cd6fc3a64a77754fe23e0a6fe" name="a1bb05c7cd6fc3a64a77754fe23e0a6fe"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">char</a></td>
+<a id="a1bb05c7cd6fc3a64a77754fe23e0a6fe" name="a1bb05c7cd6fc3a64a77754fe23e0a6fe"></a>char</td>
 <td class="fieldname">
 unk_11C[4]</td>
 <td class="fielddoc">
@@ -7537,13 +7553,13 @@ unk_18</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a62f45dbe53ee187bcb30290208bb0115" name="a62f45dbe53ee187bcb30290208bb0115"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">char</a></td>
+<a id="a62f45dbe53ee187bcb30290208bb0115" name="a62f45dbe53ee187bcb30290208bb0115"></a>char</td>
 <td class="fieldname">
 unk_24[0x18]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ade7bcdb81b0e211b1e82086cb6c2a06d" name="ade7bcdb81b0e211b1e82086cb6c2a06d"></a><a class="el" href="#ad1d96c4cc7f9c0fd349bc20c492dc462">f32</a></td>
+<a id="ade7bcdb81b0e211b1e82086cb6c2a06d" name="ade7bcdb81b0e211b1e82086cb6c2a06d"></a>f32</td>
 <td class="fieldname">
 vel</td>
 <td class="fielddoc">
@@ -7643,25 +7659,25 @@ velY</td>
 <table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="a581a40773bb8d76642cd0e880c79436f" name="a581a40773bb8d76642cd0e880c79436f"></a>union <a class="el" href="#unionActorState_8____unnamed29____">ActorState.__unnamed29__</a></td>
+<a id="a5e36f51639f129c4723d253c0357d20b" name="a5e36f51639f129c4723d253c0357d20b"></a>union <a class="el" href="#unionActorState_8____unnamed35____">ActorState.__unnamed35__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a72b9523507484187e82bbc0d62b0d95c" name="a72b9523507484187e82bbc0d62b0d95c"></a>union <a class="el" href="#unionActorState_8____unnamed31____">ActorState.__unnamed31__</a></td>
+<a id="aa3fc784606ea834b98330f9d791f88d1" name="aa3fc784606ea834b98330f9d791f88d1"></a>union <a class="el" href="#unionActorState_8____unnamed37____">ActorState.__unnamed37__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ab0e1713b654f33b29e377c1dda85c2bf" name="ab0e1713b654f33b29e377c1dda85c2bf"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="ab0e1713b654f33b29e377c1dda85c2bf" name="ab0e1713b654f33b29e377c1dda85c2bf"></a>f32</td>
 <td class="fieldname">
 acceleration</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="af98db77c667c85af51d752545f344008" name="af98db77c667c85af51d752545f344008"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="af98db77c667c85af51d752545f344008" name="af98db77c667c85af51d752545f344008"></a>f32</td>
 <td class="fieldname">
 angle</td>
 <td class="fielddoc">
@@ -7685,7 +7701,7 @@ animJumpRise</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a5cb5046737fd90529fae41e604c54880" name="a5cb5046737fd90529fae41e604c54880"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="a5cb5046737fd90529fae41e604c54880" name="a5cb5046737fd90529fae41e604c54880"></a>f32</td>
 <td class="fieldname">
 bounceDivisor</td>
 <td class="fielddoc">
@@ -7709,25 +7725,25 @@ goalPos</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a199b31507c34c9cb95a34d6bf7d3162b" name="a199b31507c34c9cb95a34d6bf7d3162b"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">u8</a></td>
+<a id="a199b31507c34c9cb95a34d6bf7d3162b" name="a199b31507c34c9cb95a34d6bf7d3162b"></a>u8</td>
 <td class="fieldname">
 jumpPartIndex</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a253ae01557e522cd5f4799c635825943" name="a253ae01557e522cd5f4799c635825943"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">s16</a></td>
+<a id="a253ae01557e522cd5f4799c635825943" name="a253ae01557e522cd5f4799c635825943"></a>s16</td>
 <td class="fieldname">
 moveArcAmplitude</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a426148bb25d7f662f28cc0758e465868" name="a426148bb25d7f662f28cc0758e465868"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">s16</a></td>
+<a id="a426148bb25d7f662f28cc0758e465868" name="a426148bb25d7f662f28cc0758e465868"></a>s16</td>
 <td class="fieldname">
 moveTime</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="abdf357d79a296483403972503b3ef08e" name="abdf357d79a296483403972503b3ef08e"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="abdf357d79a296483403972503b3ef08e" name="abdf357d79a296483403972503b3ef08e"></a>f32</td>
 <td class="fieldname">
 speed</td>
 <td class="fielddoc">
@@ -7739,37 +7755,37 @@ unk_18</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a2f118ebec60610165d04cb658d67e446" name="a2f118ebec60610165d04cb658d67e446"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="a2f118ebec60610165d04cb658d67e446" name="a2f118ebec60610165d04cb658d67e446"></a>f32</td>
 <td class="fieldname">
 unk_24</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="acec36cca909b4833587e7ae314a8f203" name="acec36cca909b4833587e7ae314a8f203"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="acec36cca909b4833587e7ae314a8f203" name="acec36cca909b4833587e7ae314a8f203"></a>f32</td>
 <td class="fieldname">
 unk_28</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3d3b2ce33bbd7fa0eb34170d4c15aa95" name="a3d3b2ce33bbd7fa0eb34170d4c15aa95"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="a3d3b2ce33bbd7fa0eb34170d4c15aa95" name="a3d3b2ce33bbd7fa0eb34170d4c15aa95"></a>f32</td>
 <td class="fieldname">
 unk_2C</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a49c86ce80a26ab5335a1dc5b5f0b355b" name="a49c86ce80a26ab5335a1dc5b5f0b355b"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">char</a></td>
+<a id="a49c86ce80a26ab5335a1dc5b5f0b355b" name="a49c86ce80a26ab5335a1dc5b5f0b355b"></a>char</td>
 <td class="fieldname">
 unk_54[0x4]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a4e1c65baf17784c94e427303052a7b3a" name="a4e1c65baf17784c94e427303052a7b3a"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">char</a></td>
+<a id="a4e1c65baf17784c94e427303052a7b3a" name="a4e1c65baf17784c94e427303052a7b3a"></a>char</td>
 <td class="fieldname">
 unk_68[3]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a90bcfc15e914ec87e68b22d289e7e8ee" name="a90bcfc15e914ec87e68b22d289e7e8ee"></a><a class="el" href="#a26f61171054f53501397af8afc81e9ca">f32</a></td>
+<a id="a90bcfc15e914ec87e68b22d289e7e8ee" name="a90bcfc15e914ec87e68b22d289e7e8ee"></a>f32</td>
 <td class="fieldname">
 vel</td>
 <td class="fielddoc">
@@ -8158,7 +8174,7 @@ selectedTargetIndex</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="ad482bc307df4553f242e51e4691339c8" name="ad482bc307df4553f242e51e4691339c8"></a>union <a class="el" href="#unionActor_8shadow">Actor.shadow</a></td>
+<a id="a5e45d98cf637e5950055f09f28b05076" name="a5e45d98cf637e5950055f09f28b05076"></a>union <a class="el" href="#unionActor_8shadow">Actor.shadow</a></td>
 <td class="fieldname">
 shadow</td>
 <td class="fielddoc">
@@ -8987,6 +9003,12 @@ crc2</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
+<a id="a5959bfd94d77871263be915a917a9fe7" name="a5959bfd94d77871263be915a917a9fe7"></a>u32</td>
+<td class="fieldname">
+language</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
 <a id="aaf53f979e1da814abdaabed9ed49d48f" name="aaf53f979e1da814abdaabed9ed49d48f"></a>u32</td>
 <td class="fieldname">
 lastFileSelected</td>
@@ -9005,9 +9027,9 @@ pad[32]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a7c555c6c787ef589b94012b5a2f6cb0c" name="a7c555c6c787ef589b94012b5a2f6cb0c"></a>s8</td>
+<a id="a00a33a457cd88ee770d88e5b67623234" name="a00a33a457cd88ee770d88e5b67623234"></a>s8</td>
 <td class="fieldname">
-reserved[64]</td>
+reserved[60]</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -11484,7 +11506,7 @@ keepAwayStarted</td>
 <td class="fieldname">
 motion</td>
 <td class="fielddoc">
-Null unless flag 0x100000 is set. </td></tr>
+Null unless flag NPC_FLAG_MOTION_BLUR is set. </td></tr>
 <tr><td class="fieldtype">
 <a id="a2d62810cceba03d6c9e59d37822373f7" name="a2d62810cceba03d6c9e59d37822373f7"></a><a class="el" href="#structNpcQuizmoBlur">NpcQuizmoBlur</a> *</td>
 <td class="fieldname">
@@ -11875,14 +11897,314 @@ Cz</td>
 
 </div>
 </div>
-<a name="unionBattleStatus_8____unnamed18____" id="unionBattleStatus_8____unnamed18____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionBattleStatus_8____unnamed18____">&#9670;&#160;</a></span>BattleStatus.__unnamed18__</h2>
+<a name="unionCamera_8params" id="unionCamera_8params"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionCamera_8params">&#9670;&#160;</a></span>Camera.params</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union BattleStatus.__unnamed18__</td>
+          <td class="memname">union Camera.params</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="af17aaabc20bfe045075927934fed52d2" name="af17aaabc20bfe045075927934fed52d2"></a>struct <a class="el" href="#structCamera_8params_8basic">Camera.params.basic</a></td>
+<td class="fieldname">
+basic</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9ae3f37b35ed8083c217fc82c55344a7" name="a9ae3f37b35ed8083c217fc82c55344a7"></a>struct <a class="el" href="#structCamera_8params_8confined">Camera.params.confined</a></td>
+<td class="fieldname">
+confined</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a16734ccaa675a366a9df21d6975d9294" name="a16734ccaa675a366a9df21d6975d9294"></a>struct <a class="el" href="#structCamera_8params_8interp">Camera.params.interp</a></td>
+<td class="fieldname">
+interp</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a869836a44b607137a7e094cf8a308938" name="a869836a44b607137a7e094cf8a308938"></a>struct <a class="el" href="#structCamera_8params_8radial">Camera.params.radial</a></td>
+<td class="fieldname">
+radial</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a7d793037a0760186574b0282f2f435e7" name="a7d793037a0760186574b0282f2f435e7"></a>struct <a class="el" href="#structCamera_8params_8world">Camera.params.world</a></td>
+<td class="fieldname">
+world</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structCamera_8params_8world" id="structCamera_8params_8world"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structCamera_8params_8world">&#9670;&#160;</a></span>Camera.params.world</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Camera.params.world</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a18cfe91c066992b9ab450d2c644c68a7" name="a18cfe91c066992b9ab450d2c644c68a7"></a>s16</td>
+<td class="fieldname">
+camParam1</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aac84386290ed2d5bc8963a3da6ef5eb0" name="aac84386290ed2d5bc8963a3da6ef5eb0"></a>s16</td>
+<td class="fieldname">
+camParam2</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="af84de7cd1dd80a57cefa3b83a25b47ff" name="af84de7cd1dd80a57cefa3b83a25b47ff"></a>s16</td>
+<td class="fieldname">
+camParam3</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a5fc49786a39bca5f765fda176dddb240" name="a5fc49786a39bca5f765fda176dddb240"></a>s16</td>
+<td class="fieldname">
+camParam4</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a416f6f9952c83b943d3f2e7eea6d93ec" name="a416f6f9952c83b943d3f2e7eea6d93ec"></a>s16</td>
+<td class="fieldname">
+camParam5</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a25a5c186b556ce486bb6c349feed97d6" name="a25a5c186b556ce486bb6c349feed97d6"></a>s16</td>
+<td class="fieldname">
+camParam6</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="acd51ff26b4dfbcedc9e6d842218f13a6" name="acd51ff26b4dfbcedc9e6d842218f13a6"></a>s16</td>
+<td class="fieldname">
+camParam7</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aac4309010a7bea450fa8f54e9ddfe9d1" name="aac4309010a7bea450fa8f54e9ddfe9d1"></a>s16</td>
+<td class="fieldname">
+zoomPercent</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structCamera_8params_8basic" id="structCamera_8params_8basic"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structCamera_8params_8basic">&#9670;&#160;</a></span>Camera.params.basic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Camera.params.basic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="acd51ff26b4dfbcedc9e6d842218f13a6" name="acd51ff26b4dfbcedc9e6d842218f13a6"></a>s16</td>
+<td class="fieldname">
+camParam7</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a2a6d07eef8b10b84129b42424ed99327" name="a2a6d07eef8b10b84129b42424ed99327"></a>s16</td>
+<td class="fieldname">
+dist</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a658643ae5ee3519cbe9a8c32df8383a2" name="a658643ae5ee3519cbe9a8c32df8383a2"></a>s16</td>
+<td class="fieldname">
+fovScale</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8977a816320b57e617fcdb6e4ae875cf" name="a8977a816320b57e617fcdb6e4ae875cf"></a>s16</td>
+<td class="fieldname">
+offsetY</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8ee0b79fb35b0efe85b44c0ee243f8d5" name="a8ee0b79fb35b0efe85b44c0ee243f8d5"></a>s16</td>
+<td class="fieldname">
+pitch</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="af34d191550ea1b7bc78efb91227151f7" name="af34d191550ea1b7bc78efb91227151f7"></a><a class="el" href="#aa79ecdc271510d27618f5780dda28fd7">b16</a></td>
+<td class="fieldname">
+skipRecalc</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a92dda6448f3b313c16d01c8f17cdd6a3" name="a92dda6448f3b313c16d01c8f17cdd6a3"></a>s16</td>
+<td class="fieldname">
+yaw</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aac4309010a7bea450fa8f54e9ddfe9d1" name="aac4309010a7bea450fa8f54e9ddfe9d1"></a>s16</td>
+<td class="fieldname">
+zoomPercent</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structCamera_8params_8interp" id="structCamera_8params_8interp"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structCamera_8params_8interp">&#9670;&#160;</a></span>Camera.params.interp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Camera.params.interp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a2a6d07eef8b10b84129b42424ed99327" name="a2a6d07eef8b10b84129b42424ed99327"></a>s16</td>
+<td class="fieldname">
+dist</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8977a816320b57e617fcdb6e4ae875cf" name="a8977a816320b57e617fcdb6e4ae875cf"></a>s16</td>
+<td class="fieldname">
+offsetY</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8ee0b79fb35b0efe85b44c0ee243f8d5" name="a8ee0b79fb35b0efe85b44c0ee243f8d5"></a>s16</td>
+<td class="fieldname">
+pitch</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a92dda6448f3b313c16d01c8f17cdd6a3" name="a92dda6448f3b313c16d01c8f17cdd6a3"></a>s16</td>
+<td class="fieldname">
+yaw</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structCamera_8params_8radial" id="structCamera_8params_8radial"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structCamera_8params_8radial">&#9670;&#160;</a></span>Camera.params.radial</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Camera.params.radial</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a2a6d07eef8b10b84129b42424ed99327" name="a2a6d07eef8b10b84129b42424ed99327"></a>s16</td>
+<td class="fieldname">
+dist</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a1448f5a025a4b20b502965eb27e711be" name="a1448f5a025a4b20b502965eb27e711be"></a>s16</td>
+<td class="fieldname">
+minRadius</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8977a816320b57e617fcdb6e4ae875cf" name="a8977a816320b57e617fcdb6e4ae875cf"></a>s16</td>
+<td class="fieldname">
+offsetY</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8ee0b79fb35b0efe85b44c0ee243f8d5" name="a8ee0b79fb35b0efe85b44c0ee243f8d5"></a>s16</td>
+<td class="fieldname">
+pitch</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structCamera_8params_8confined" id="structCamera_8params_8confined"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structCamera_8params_8confined">&#9670;&#160;</a></span>Camera.params.confined</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct Camera.params.confined</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a2a6d07eef8b10b84129b42424ed99327" name="a2a6d07eef8b10b84129b42424ed99327"></a>s16</td>
+<td class="fieldname">
+dist</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a8977a816320b57e617fcdb6e4ae875cf" name="a8977a816320b57e617fcdb6e4ae875cf"></a>s16</td>
+<td class="fieldname">
+offsetY</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a15bb3d990999b53086c58c3e960a87a5" name="a15bb3d990999b53086c58c3e960a87a5"></a>s16</td>
+<td class="fieldname">
+xLimit</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="aa3cd8862adec7208c8cfed645d481dca" name="aa3cd8862adec7208c8cfed645d481dca"></a>s16</td>
+<td class="fieldname">
+zLimit</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="unionBattleStatus_8____unnamed24____" id="unionBattleStatus_8____unnamed24____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionBattleStatus_8____unnamed24____">&#9670;&#160;</a></span>BattleStatus.__unnamed24__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union BattleStatus.__unnamed24__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -11910,14 +12232,14 @@ varTablePtr[16]</td>
 
 </div>
 </div>
-<a name="unionCollider_8____unnamed20____" id="unionCollider_8____unnamed20____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionCollider_8____unnamed20____">&#9670;&#160;</a></span>Collider.__unnamed20__</h2>
+<a name="unionCollider_8____unnamed26____" id="unionCollider_8____unnamed26____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionCollider_8____unnamed26____">&#9670;&#160;</a></span>Collider.__unnamed26__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union Collider.__unnamed20__</td>
+          <td class="memname">union Collider.__unnamed26__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -11939,14 +12261,14 @@ camSettings</td>
 
 </div>
 </div>
-<a name="unionCollisionData_8____unnamed22____" id="unionCollisionData_8____unnamed22____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionCollisionData_8____unnamed22____">&#9670;&#160;</a></span>CollisionData.__unnamed22__</h2>
+<a name="unionCollisionData_8____unnamed28____" id="unionCollisionData_8____unnamed28____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionCollisionData_8____unnamed28____">&#9670;&#160;</a></span>CollisionData.__unnamed28__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union CollisionData.__unnamed22__</td>
+          <td class="memname">union CollisionData.__unnamed28__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -11997,14 +12319,14 @@ vtxList</td>
 
 </div>
 </div>
-<a name="structPartnerAnimations_8____unnamed25____" id="structPartnerAnimations_8____unnamed25____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structPartnerAnimations_8____unnamed25____">&#9670;&#160;</a></span>PartnerAnimations.__unnamed25__</h2>
+<a name="structPartnerAnimations_8____unnamed31____" id="structPartnerAnimations_8____unnamed31____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structPartnerAnimations_8____unnamed31____">&#9670;&#160;</a></span>PartnerAnimations.__unnamed31__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct PartnerAnimations.__unnamed25__</td>
+          <td class="memname">struct PartnerAnimations.__unnamed31__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -12068,14 +12390,14 @@ walk</td>
 
 </div>
 </div>
-<a name="unionActorPartMovement_8____unnamed27____" id="unionActorPartMovement_8____unnamed27____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionActorPartMovement_8____unnamed27____">&#9670;&#160;</a></span>ActorPartMovement.__unnamed27__</h2>
+<a name="unionActorPartMovement_8____unnamed33____" id="unionActorPartMovement_8____unnamed33____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionActorPartMovement_8____unnamed33____">&#9670;&#160;</a></span>ActorPartMovement.__unnamed33__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union ActorPartMovement.__unnamed27__</td>
+          <td class="memname">union ActorPartMovement.__unnamed33__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -12103,14 +12425,14 @@ varTablePtr[16]</td>
 
 </div>
 </div>
-<a name="unionActorState_8____unnamed29____" id="unionActorState_8____unnamed29____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionActorState_8____unnamed29____">&#9670;&#160;</a></span>ActorState.__unnamed29__</h2>
+<a name="unionActorState_8____unnamed35____" id="unionActorState_8____unnamed35____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionActorState_8____unnamed35____">&#9670;&#160;</a></span>ActorState.__unnamed35__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union ActorState.__unnamed29__</td>
+          <td class="memname">union ActorState.__unnamed35__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -12138,14 +12460,14 @@ functionTempPtr[4]</td>
 
 </div>
 </div>
-<a name="unionActorState_8____unnamed31____" id="unionActorState_8____unnamed31____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionActorState_8____unnamed31____">&#9670;&#160;</a></span>ActorState.__unnamed31__</h2>
+<a name="unionActorState_8____unnamed37____" id="unionActorState_8____unnamed37____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionActorState_8____unnamed37____">&#9670;&#160;</a></span>ActorState.__unnamed37__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union ActorState.__unnamed31__</td>
+          <td class="memname">union ActorState.__unnamed37__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -12271,6 +12593,20 @@ ptr</td>
       <table class="memname">
         <tr>
           <td class="memname">#define MAX_ACTOR_DECORATIONS&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1f5470a926d84c26b024310ac751703" name="af1f5470a926d84c26b024310ac751703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f5470a926d84c26b024310ac751703">&#9670;&#160;</a></span>MAX_CREDITS_LINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_CREDITS_LINES&#160;&#160;&#160;32</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -12530,6 +12866,20 @@ ptr</td>
       <table class="memname">
         <tr>
           <td class="memname">typedef s32 <a class="el" href="#ac4d29d1bd5d801a1592f9055188c7c74">HitID</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c46c9af25c9d7ff77957b7753679b5a" name="a8c46c9af25c9d7ff77957b7753679b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c46c9af25c9d7ff77957b7753679b5a">&#9670;&#160;</a></span>HudElemID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef s32 <a class="el" href="#a8c46c9af25c9d7ff77957b7753679b5a">HudElemID</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -119,7 +119,7 @@ var pause__common_8h =
     [ "gItemHudScripts", "pause__common_8h.html#a1a832971b44b1e378e3bf8b69299ae06", null ],
     [ "gPauseCurrentDescIconScript", "pause__common_8h.html#a0e0937e600fd451d05788c6156a1931d", null ],
     [ "gPauseCurrentDescMsg", "pause__common_8h.html#afe4823959084ed1c1087618c04d8e8e1", null ],
-    [ "gPauseCursorIconID", "pause__common_8h.html#aa47ee0ee81b7940ef9a8bcafbec93f09", null ],
+    [ "gPauseCursorHID", "pause__common_8h.html#ae5eb2799629fe92a0849ebf6c7842702", null ],
     [ "gPauseHeldButtons", "pause__common_8h.html#aa70ba877f1d67a1969df436b6292adac", null ],
     [ "gPauseMenuCurrentTab", "pause__common_8h.html#ab06ffad3ee0c482de442581eec2ee0ba", null ],
     [ "gPausePressedButtons", "pause__common_8h.html#a0718f4cd17d1fe4ff23e689a060d6815", null ],

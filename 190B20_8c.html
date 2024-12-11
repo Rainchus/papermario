@@ -154,8 +154,8 @@ Functions</h2></td></tr>
 <tr class="separator:aabe43cd29c3f2d6c7bb086dafa293200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5713552df9c08b166442630775a64a75" id="r_a5713552df9c08b166442630775a64a75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5713552df9c08b166442630775a64a75">reset_actor_turn_info</a> (void)</td></tr>
 <tr class="separator:a5713552df9c08b166442630775a64a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a329a80c56fd0abd5803c52afa26b2296" id="r_a329a80c56fd0abd5803c52afa26b2296"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a329a80c56fd0abd5803c52afa26b2296">func_80263CC4</a> (s32 arg0)</td></tr>
-<tr class="separator:a329a80c56fd0abd5803c52afa26b2296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7d865e70b39738df82d2b8981b305d" id="r_acf7d865e70b39738df82d2b8981b305d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf7d865e70b39738df82d2b8981b305d">shake_battle_cam_pitch</a> (s32 initialDelay)</td></tr>
+<tr class="separator:acf7d865e70b39738df82d2b8981b305d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9353416904f922515526f031767eef58" id="r_a9353416904f922515526f031767eef58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9353416904f922515526f031767eef58">set_actor_anim</a> (s32 actorID, s32 partID, <a class="el" href="common__structs_8h.html#af250d7e0529e8afdd2a419f09d0f5e45">AnimID</a> animID)</td></tr>
 <tr class="separator:a9353416904f922515526f031767eef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ec7900b6f249056cae9fb9536414b9" id="r_a22ec7900b6f249056cae9fb9536414b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22ec7900b6f249056cae9fb9536414b9">set_actor_anim_by_ref</a> (<a class="el" href="common__structs_8h.html#structActor">Actor</a> *actor, <a class="el" href="common__structs_8h.html#structActorPart">ActorPart</a> *part, <a class="el" href="common__structs_8h.html#af250d7e0529e8afdd2a419f09d0f5e45">AnimID</a> anim)</td></tr>
@@ -285,8 +285,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2ba60b7449bac77e3ff725da6a1d316b" id="r_a2ba60b7449bac77e3ff725da6a1d316b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__structs_8h.html#ac718b608783f254b030240252606fd0e">EvtScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ba60b7449bac77e3ff725da6a1d316b">D_80293820</a></td></tr>
-<tr class="separator:a2ba60b7449bac77e3ff725da6a1d316b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a8b2e2dbe975f2af12235ed6863171" id="r_a95a8b2e2dbe975f2af12235ed6863171"><td class="memItemLeft" align="right" valign="top"><a class="el" href="common__structs_8h.html#ac718b608783f254b030240252606fd0e">EvtScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95a8b2e2dbe975f2af12235ed6863171">EVS_ShakeBattleCamPitch</a></td></tr>
+<tr class="separator:a95a8b2e2dbe975f2af12235ed6863171"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a50c4586407b0525542de72d18b5a84" id="r_a1a50c4586407b0525542de72d18b5a84"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a50c4586407b0525542de72d18b5a84">D_802938A4</a> = 0.0f</td></tr>
 <tr class="separator:a1a50c4586407b0525542de72d18b5a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8be7e9fa5e1f2ea81a138cc7490948d9" id="r_a8be7e9fa5e1f2ea81a138cc7490948d9"><td class="memItemLeft" align="right" valign="top">s16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8be7e9fa5e1f2ea81a138cc7490948d9">D_802938A8</a> = 4</td></tr>
@@ -353,7 +353,7 @@ Variables</h2></td></tr>
 <div class="line">                minDefense = elemDefense; \</div>
 <div class="line">            } \</div>
 <div class="line">        } \</div>
-<div class="ttc" id="a190B20_8c_html_af1608a5823ecf6c65b9a40cbc06b51ab"><div class="ttname"><a href="#af1608a5823ecf6c65b9a40cbc06b51ab">lookup_defense</a></div><div class="ttdeci">s32 lookup_defense(s32 *defenseTable, s32 elementKey)</div><div class="ttdef"><b>Definition</b> 190B20.c:2083</div></div>
+<div class="ttc" id="a190B20_8c_html_af1608a5823ecf6c65b9a40cbc06b51ab"><div class="ttname"><a href="#af1608a5823ecf6c65b9a40cbc06b51ab">lookup_defense</a></div><div class="ttdeci">s32 lookup_defense(s32 *defenseTable, s32 elementKey)</div><div class="ttdef"><b>Definition</b> 190B20.c:2101</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1131,23 +1131,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a329a80c56fd0abd5803c52afa26b2296" name="a329a80c56fd0abd5803c52afa26b2296"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a329a80c56fd0abd5803c52afa26b2296">&#9670;&#160;</a></span>func_80263CC4()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void func_80263CC4 </td>
-          <td>(</td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg0</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5402179bc61ae2e19bf336047b4d2c62" name="a5402179bc61ae2e19bf336047b4d2c62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5402179bc61ae2e19bf336047b4d2c62">&#9670;&#160;</a></span>func_80266970()</h2>
 
@@ -1186,7 +1169,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="functions_8h.html#a3823a3e6a0143a08280f6925da6a6038">btl_state_draw_select_target()</a>, <a class="el" href="functions_8h.html#aed193016ed5d4bc4ee61008f01207663">btl_state_update_select_target()</a>, <a class="el" href="1A5830_8c.html#ad189cc002aaeefac87665983b8c537af">calc_enemy_damage_target()</a>, <a class="el" href="1A5830_8c.html#a349a1e9653468a5966e0651e28389028">calc_enemy_test_target()</a>, <a class="el" href="dmg__item_8c.html#a1aa0642ac698059e567ee7cc25adf65d">calc_item_check_hit()</a>, <a class="el" href="dmg__item_8c.html#a1afebc490f25cf909dcafb3fa1bb8043">calc_item_damage_enemy()</a>, <a class="el" href="dmg__partner_8c.html#a7fa3f3698621f26575a26eb93705f957">calc_partner_damage_enemy()</a>, <a class="el" href="dmg__partner_8c.html#a06f3fea144231688cbb0e4de6c5c6543">calc_partner_test_enemy()</a>, <a class="el" href="dmg__player_8c.html#ab44161e34e2ae4a5e6e2fd7298af358d">calc_player_damage_enemy()</a>, <a class="el" href="dmg__player_8c.html#a092d7be7302160bf5f6c488c22fbc6df">calc_player_test_enemy()</a>, <a class="el" href="camera_8c.html#af6a43cf4ec6ca8da51311693f8060211">CamPresetUpdate_G()</a>, <a class="el" href="#aaed6e9dc037f4d7346d34db3aa9261b0">clear_part_flag_bits()</a>, <a class="el" href="functions_8h.html#affefab04b6d36c52e6074793835cd4d6">create_part_shadow()</a>, <a class="el" href="#a790404aa853a34f096d3a12d36745a82">create_target_list()</a>, <a class="el" href="functions_8h.html#ac4283c6b722a361db3a62e112bb6cf31">remove_part_shadow()</a>, <a class="el" href="functions_8h.html#a9353416904f922515526f031767eef58">set_actor_anim()</a>, <a class="el" href="functions_8h.html#a98a0798024ee581f02c6b7502899d317">set_actor_anim_rate()</a>, <a class="el" href="functions_8h.html#aa28c00267a77c1697fee8904c73455b9">set_goal_pos_to_part()</a>, <a class="el" href="actor__api_8c.html#a34474bd2d13901dc8d8081a2a3a63f34">set_part_absolute_position()</a>, <a class="el" href="#a016650b7e4b9d813815ce127b5b719a4">set_part_flag_bits()</a>, <a class="el" href="actor__api_8c.html#a68bdfd0123f7e5933b40ace817bb6a47">set_part_goal_to_actor_part()</a>, and <a class="el" href="functions_8h.html#abc5c323a1aef3676d03638332a55247e">set_part_yaw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="functions_8h.html#a3823a3e6a0143a08280f6925da6a6038">btl_state_draw_select_target()</a>, <a class="el" href="functions_8h.html#aed193016ed5d4bc4ee61008f01207663">btl_state_update_select_target()</a>, <a class="el" href="1A5830_8c.html#ad189cc002aaeefac87665983b8c537af">calc_enemy_damage_target()</a>, <a class="el" href="1A5830_8c.html#a349a1e9653468a5966e0651e28389028">calc_enemy_test_target()</a>, <a class="el" href="dmg__item_8c.html#a1aa0642ac698059e567ee7cc25adf65d">calc_item_check_hit()</a>, <a class="el" href="dmg__item_8c.html#a1afebc490f25cf909dcafb3fa1bb8043">calc_item_damage_enemy()</a>, <a class="el" href="dmg__partner_8c.html#a7fa3f3698621f26575a26eb93705f957">calc_partner_damage_enemy()</a>, <a class="el" href="dmg__partner_8c.html#a06f3fea144231688cbb0e4de6c5c6543">calc_partner_test_enemy()</a>, <a class="el" href="dmg__player_8c.html#ab44161e34e2ae4a5e6e2fd7298af358d">calc_player_damage_enemy()</a>, <a class="el" href="dmg__player_8c.html#a092d7be7302160bf5f6c488c22fbc6df">calc_player_test_enemy()</a>, <a class="el" href="#aaed6e9dc037f4d7346d34db3aa9261b0">clear_part_flag_bits()</a>, <a class="el" href="functions_8h.html#affefab04b6d36c52e6074793835cd4d6">create_part_shadow()</a>, <a class="el" href="#a790404aa853a34f096d3a12d36745a82">create_target_list()</a>, <a class="el" href="functions_8h.html#ac4283c6b722a361db3a62e112bb6cf31">remove_part_shadow()</a>, <a class="el" href="functions_8h.html#a9353416904f922515526f031767eef58">set_actor_anim()</a>, <a class="el" href="functions_8h.html#a98a0798024ee581f02c6b7502899d317">set_actor_anim_rate()</a>, <a class="el" href="functions_8h.html#aa28c00267a77c1697fee8904c73455b9">set_goal_pos_to_part()</a>, <a class="el" href="actor__api_8c.html#a34474bd2d13901dc8d8081a2a3a63f34">set_part_absolute_position()</a>, <a class="el" href="#a016650b7e4b9d813815ce127b5b719a4">set_part_flag_bits()</a>, <a class="el" href="actor__api_8c.html#a68bdfd0123f7e5933b40ace817bb6a47">set_part_goal_to_actor_part()</a>, and <a class="el" href="functions_8h.html#abc5c323a1aef3676d03638332a55247e">set_part_yaw()</a>.</p>
 
 </div>
 </div>
@@ -1981,6 +1964,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acf7d865e70b39738df82d2b8981b305d" name="acf7d865e70b39738df82d2b8981b305d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7d865e70b39738df82d2b8981b305d">&#9670;&#160;</a></span>shake_battle_cam_pitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shake_battle_cam_pitch </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>initialDelay</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9bbd23e9d24385777e1db356635569a0" name="a9bbd23e9d24385777e1db356635569a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bbd23e9d24385777e1db356635569a0">&#9670;&#160;</a></span>show_action_rating()</h2>
 
@@ -2427,41 +2427,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2ba60b7449bac77e3ff725da6a1d316b" name="a2ba60b7449bac77e3ff725da6a1d316b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ba60b7449bac77e3ff725da6a1d316b">&#9670;&#160;</a></span>D_80293820</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="common__structs_8h.html#ac718b608783f254b030240252606fd0e">EvtScript</a> D_80293820</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a>(<a class="code hl_define" href="script__api_2macros_8h.html#af7850f206b899ed1559a492acdb308c8">LVar0</a>)</div>
-<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#ae7b067a332dbc234d75397cafb71da68">Loop</a>(4)</div>
-<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a>(SetBattleCamParam, 4, 11)</div>
-<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a>(1)</div>
-<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a>(SetBattleCamParam, 4, 5)</div>
-<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a>(1)</div>
-<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#a3e321586bf9f186cb3be1164ab56dd89">EndLoop</a></div>
-<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a>(SetBattleCamParam, 4, 8)</div>
-<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#afdbecdc25961f69820cb0e396872f9fb">Return</a></div>
-<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#a342404d3b71fbd50588f779f1f1c59b3">End</a></div>
-<div class="line">}</div>
-<div class="ttc" id="ascript__api_2macros_8h_html_a342404d3b71fbd50588f779f1f1c59b3"><div class="ttname"><a href="script__api_2macros_8h.html#a342404d3b71fbd50588f779f1f1c59b3">End</a></div><div class="ttdeci">#define End</div><div class="ttdoc">Signals the end of EVT script data. A script missing this will likely crash on load.</div><div class="ttdef"><b>Definition</b> macros.h:225</div></div>
-<div class="ttc" id="ascript__api_2macros_8h_html_a3e321586bf9f186cb3be1164ab56dd89"><div class="ttname"><a href="script__api_2macros_8h.html#a3e321586bf9f186cb3be1164ab56dd89">EndLoop</a></div><div class="ttdeci">#define EndLoop</div><div class="ttdoc">Marks the end of a loop.</div><div class="ttdef"><b>Definition</b> macros.h:260</div></div>
-<div class="ttc" id="ascript__api_2macros_8h_html_aafbecd117f663dfc98c9d8a462f333bd"><div class="ttname"><a href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a></div><div class="ttdeci">#define Wait(NUM_FRAMES)</div><div class="ttdoc">Blocks for the given number of frames.</div><div class="ttdef"><b>Definition</b> macros.h:266</div></div>
-<div class="ttc" id="ascript__api_2macros_8h_html_adebe72a7dc0c86ea5913d44e43944cf2"><div class="ttname"><a href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a></div><div class="ttdeci">#define Call(FUNC, ARGS...)</div><div class="ttdoc">Calls a given C EVT API function with any number of arguments.</div><div class="ttdef"><b>Definition</b> macros.h:588</div></div>
-<div class="ttc" id="ascript__api_2macros_8h_html_ae7b067a332dbc234d75397cafb71da68"><div class="ttname"><a href="script__api_2macros_8h.html#ae7b067a332dbc234d75397cafb71da68">Loop</a></div><div class="ttdeci">#define Loop(TIMES)</div><div class="ttdoc">Marks the beginning of a loop.</div><div class="ttdef"><b>Definition</b> macros.h:257</div></div>
-<div class="ttc" id="ascript__api_2macros_8h_html_af7850f206b899ed1559a492acdb308c8"><div class="ttname"><a href="script__api_2macros_8h.html#af7850f206b899ed1559a492acdb308c8">LVar0</a></div><div class="ttdeci">#define LVar0</div><div class="ttdef"><b>Definition</b> macros.h:144</div></div>
-<div class="ttc" id="ascript__api_2macros_8h_html_afdbecdc25961f69820cb0e396872f9fb"><div class="ttname"><a href="script__api_2macros_8h.html#afdbecdc25961f69820cb0e396872f9fb">Return</a></div><div class="ttdeci">#define Return</div><div class="ttdoc">Kills the current EVT thread.</div><div class="ttdef"><b>Definition</b> macros.h:229</div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="#a329a80c56fd0abd5803c52afa26b2296">func_80263CC4()</a>.</p>
-
-</div>
-</div>
 <a id="a1a50c4586407b0525542de72d18b5a84" name="a1a50c4586407b0525542de72d18b5a84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a50c4586407b0525542de72d18b5a84">&#9670;&#160;</a></span>D_802938A4</h2>
 
@@ -2538,6 +2503,9 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#afdbecdc25961f69820cb0e396872f9fb">Return</a></div>
 <div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#a342404d3b71fbd50588f779f1f1c59b3">End</a></div>
 <div class="line">}</div>
+<div class="ttc" id="ascript__api_2macros_8h_html_a342404d3b71fbd50588f779f1f1c59b3"><div class="ttname"><a href="script__api_2macros_8h.html#a342404d3b71fbd50588f779f1f1c59b3">End</a></div><div class="ttdeci">#define End</div><div class="ttdoc">Signals the end of EVT script data. A script missing this will likely crash on load.</div><div class="ttdef"><b>Definition</b> macros.h:225</div></div>
+<div class="ttc" id="ascript__api_2macros_8h_html_adebe72a7dc0c86ea5913d44e43944cf2"><div class="ttname"><a href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a></div><div class="ttdeci">#define Call(FUNC, ARGS...)</div><div class="ttdoc">Calls a given C EVT API function with any number of arguments.</div><div class="ttdef"><b>Definition</b> macros.h:588</div></div>
+<div class="ttc" id="ascript__api_2macros_8h_html_afdbecdc25961f69820cb0e396872f9fb"><div class="ttname"><a href="script__api_2macros_8h.html#afdbecdc25961f69820cb0e396872f9fb">Return</a></div><div class="ttdeci">#define Return</div><div class="ttdoc">Kills the current EVT thread.</div><div class="ttdef"><b>Definition</b> macros.h:229</div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="functions_8h.html#a7f6f1869098e1cc3586c1c70a6beea9b">start_rumble_type()</a>.</p>
 
@@ -2744,6 +2712,38 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="functions_8h.html#a7f6f1869098e1cc3586c1c70a6beea9b">start_rumble_type()</a>.</p>
+
+</div>
+</div>
+<a id="a95a8b2e2dbe975f2af12235ed6863171" name="a95a8b2e2dbe975f2af12235ed6863171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a8b2e2dbe975f2af12235ed6863171">&#9670;&#160;</a></span>EVS_ShakeBattleCamPitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="common__structs_8h.html#ac718b608783f254b030240252606fd0e">EvtScript</a> EVS_ShakeBattleCamPitch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a>(<a class="code hl_define" href="script__api_2macros_8h.html#af7850f206b899ed1559a492acdb308c8">LVar0</a>)</div>
+<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#ae7b067a332dbc234d75397cafb71da68">Loop</a>(4)</div>
+<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a>(SetBattleCamParam, 4, 11)</div>
+<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a>(1)</div>
+<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a>(SetBattleCamParam, 4, 5)</div>
+<div class="line">        <a class="code hl_define" href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a>(1)</div>
+<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#a3e321586bf9f186cb3be1164ab56dd89">EndLoop</a></div>
+<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#adebe72a7dc0c86ea5913d44e43944cf2">Call</a>(SetBattleCamParam, 4, 8)</div>
+<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#afdbecdc25961f69820cb0e396872f9fb">Return</a></div>
+<div class="line">    <a class="code hl_define" href="script__api_2macros_8h.html#a342404d3b71fbd50588f779f1f1c59b3">End</a></div>
+<div class="line">}</div>
+<div class="ttc" id="ascript__api_2macros_8h_html_a3e321586bf9f186cb3be1164ab56dd89"><div class="ttname"><a href="script__api_2macros_8h.html#a3e321586bf9f186cb3be1164ab56dd89">EndLoop</a></div><div class="ttdeci">#define EndLoop</div><div class="ttdoc">Marks the end of a loop.</div><div class="ttdef"><b>Definition</b> macros.h:260</div></div>
+<div class="ttc" id="ascript__api_2macros_8h_html_aafbecd117f663dfc98c9d8a462f333bd"><div class="ttname"><a href="script__api_2macros_8h.html#aafbecd117f663dfc98c9d8a462f333bd">Wait</a></div><div class="ttdeci">#define Wait(NUM_FRAMES)</div><div class="ttdoc">Blocks for the given number of frames.</div><div class="ttdef"><b>Definition</b> macros.h:266</div></div>
+<div class="ttc" id="ascript__api_2macros_8h_html_ae7b067a332dbc234d75397cafb71da68"><div class="ttname"><a href="script__api_2macros_8h.html#ae7b067a332dbc234d75397cafb71da68">Loop</a></div><div class="ttdeci">#define Loop(TIMES)</div><div class="ttdoc">Marks the beginning of a loop.</div><div class="ttdef"><b>Definition</b> macros.h:257</div></div>
+<div class="ttc" id="ascript__api_2macros_8h_html_af7850f206b899ed1559a492acdb308c8"><div class="ttname"><a href="script__api_2macros_8h.html#af7850f206b899ed1559a492acdb308c8">LVar0</a></div><div class="ttdeci">#define LVar0</div><div class="ttdef"><b>Definition</b> macros.h:144</div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#acf7d865e70b39738df82d2b8981b305d">shake_battle_cam_pitch()</a>.</p>
 
 </div>
 </div>

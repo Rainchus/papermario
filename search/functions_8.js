@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handle_5ffloor_5fbehavior_0',['handle_floor_behavior',['../functions_8h.html#a0d69efec69bb46bb3960c91a7ee65014',1,'handle_floor_behavior(void):&#160;891b0_len_fb0.c'],['../891b0__len__fb0_8c.html#a0d69efec69bb46bb3960c91a7ee65014',1,'handle_floor_behavior(void):&#160;891b0_len_fb0.c']]],
+  ['handle_5ffloor_5fbehavior_0',['handle_floor_behavior',['../functions_8h.html#a0d69efec69bb46bb3960c91a7ee65014',1,'handle_floor_behavior(void):&#160;surfaces.c'],['../surfaces_8c.html#a0d69efec69bb46bb3960c91a7ee65014',1,'handle_floor_behavior(void):&#160;surfaces.c']]],
   ['handle_5fjumping_5fland_5fon_5fswitch_1',['handle_jumping_land_on_switch',['../7BB60_8c.html#a76f21367036f7460cc75d2f8cc205540',1,'7BB60.c']]],
   ['handle_5fjumping_5flaunch_2',['handle_jumping_launch',['../7BB60_8c.html#a3349ab1a20064866f7851d11ee474bf0',1,'7BB60.c']]],
   ['has_5fenchanted_5fpart_3',['has_enchanted_part',['../1A5830_8c.html#acf9cddf595bc99151077e39883a51f85',1,'1A5830.c']]],
@@ -60,11 +60,12 @@ var searchData=
   ['hud_5felement_5fset_5ftransform_5frotation_57',['hud_element_set_transform_rotation',['../hud__element_8c.html#a9f475623c1553c91ee9c3df51a453b77',1,'hud_element_set_transform_rotation(s32 id, f32 x, f32 y, f32 z):&#160;hud_element.c'],['../hud__element_8h.html#a9f475623c1553c91ee9c3df51a453b77',1,'hud_element_set_transform_rotation(s32 id, f32 x, f32 y, f32 z):&#160;hud_element.c']]],
   ['hud_5felement_5fset_5ftransform_5frotation_5fpivot_58',['hud_element_set_transform_rotation_pivot',['../hud__element_8c.html#ab990885199f9a2bcc25149e7802e1c7a',1,'hud_element_set_transform_rotation_pivot(s32 id, s32 dx, s32 dy):&#160;hud_element.c'],['../hud__element_8h.html#ab990885199f9a2bcc25149e7802e1c7a',1,'hud_element_set_transform_rotation_pivot(s32 id, s32 dx, s32 dy):&#160;hud_element.c']]],
   ['hud_5felement_5fset_5ftransform_5fscale_59',['hud_element_set_transform_scale',['../hud__element_8c.html#acd628dd9acf60208713fbb7684467971',1,'hud_element_set_transform_scale(s32 id, f32 x, f32 y, f32 z):&#160;hud_element.c'],['../hud__element_8h.html#acd628dd9acf60208713fbb7684467971',1,'hud_element_set_transform_scale(s32 id, f32 x, f32 y, f32 z):&#160;hud_element.c']]],
-  ['hud_5felement_5fupdate_60',['hud_element_update',['../hud__element_8c.html#a4c7d62e6b5c0f6a7ad3a6e9ed41e609a',1,'hud_element_update(HudElement *hudElement):&#160;hud_element.c'],['../hud__element_8h.html#a4c7d62e6b5c0f6a7ad3a6e9ed41e609a',1,'hud_element_update(HudElement *hudElement):&#160;hud_element.c']]],
-  ['hud_5felement_5fuse_5fpreset_5fsize_61',['hud_element_use_preset_size',['../hud__element_8c.html#aa37cb5a4d5629215cc0303669d021262',1,'hud_element_use_preset_size(s32 id, s8 sizePreset):&#160;hud_element.c'],['../hud__element_8h.html#a575a6817b9823acdfe9a2de76a5a5b11',1,'hud_element_use_preset_size(s32 id, s8 size):&#160;hud_element.c']]],
-  ['huff_5fpuff_5fbreath_5fappendgfx_62',['huff_puff_breath_appendGfx',['../huff__puff__breath_8c.html#ae4e0e100dada22596b100c5a2491b799',1,'huff_puff_breath.c']]],
-  ['huff_5fpuff_5fbreath_5finit_63',['huff_puff_breath_init',['../huff__puff__breath_8c.html#a063a50b09c89d28577e26e827494ee53',1,'huff_puff_breath.c']]],
-  ['huff_5fpuff_5fbreath_5fmain_64',['huff_puff_breath_main',['../huff__puff__breath_8c.html#ac498386094ab3932268feb12c85d9ea5',1,'huff_puff_breath.c']]],
-  ['huff_5fpuff_5fbreath_5frender_65',['huff_puff_breath_render',['../huff__puff__breath_8c.html#a6c3386be753587869680a6054f73473e',1,'huff_puff_breath.c']]],
-  ['huff_5fpuff_5fbreath_5fupdate_66',['huff_puff_breath_update',['../huff__puff__breath_8c.html#a287e71a62dd73ed7fc2a1640949ff6a3',1,'huff_puff_breath.c']]]
+  ['hud_5felement_5fsetup_5fcam_60',['hud_element_setup_cam',['../hud__element_8c.html#a17981155942b29ffb2f3fdd10021997e',1,'hud_element.c']]],
+  ['hud_5felement_5fupdate_61',['hud_element_update',['../hud__element_8c.html#a4c7d62e6b5c0f6a7ad3a6e9ed41e609a',1,'hud_element_update(HudElement *hudElement):&#160;hud_element.c'],['../hud__element_8h.html#a4c7d62e6b5c0f6a7ad3a6e9ed41e609a',1,'hud_element_update(HudElement *hudElement):&#160;hud_element.c']]],
+  ['hud_5felement_5fuse_5fpreset_5fsize_62',['hud_element_use_preset_size',['../hud__element_8c.html#aa37cb5a4d5629215cc0303669d021262',1,'hud_element_use_preset_size(s32 id, s8 sizePreset):&#160;hud_element.c'],['../hud__element_8h.html#a575a6817b9823acdfe9a2de76a5a5b11',1,'hud_element_use_preset_size(s32 id, s8 size):&#160;hud_element.c']]],
+  ['huff_5fpuff_5fbreath_5fappendgfx_63',['huff_puff_breath_appendGfx',['../huff__puff__breath_8c.html#ae4e0e100dada22596b100c5a2491b799',1,'huff_puff_breath.c']]],
+  ['huff_5fpuff_5fbreath_5finit_64',['huff_puff_breath_init',['../huff__puff__breath_8c.html#a063a50b09c89d28577e26e827494ee53',1,'huff_puff_breath.c']]],
+  ['huff_5fpuff_5fbreath_5fmain_65',['huff_puff_breath_main',['../huff__puff__breath_8c.html#ac498386094ab3932268feb12c85d9ea5',1,'huff_puff_breath.c']]],
+  ['huff_5fpuff_5fbreath_5frender_66',['huff_puff_breath_render',['../huff__puff__breath_8c.html#a6c3386be753587869680a6054f73473e',1,'huff_puff_breath.c']]],
+  ['huff_5fpuff_5fbreath_5fupdate_67',['huff_puff_breath_update',['../huff__puff__breath_8c.html#a287e71a62dd73ed7fc2a1640949ff6a3',1,'huff_puff_breath.c']]]
 ];

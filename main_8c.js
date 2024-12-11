@@ -1,6 +1,6 @@
 var main_8c =
 [
-    [ "ALIGNED", "main_8c.html#a55281efb74a5a2595dfea3c6761a0346", null ],
+    [ "ALIGNED", "main_8c.html#abbc23cb9b028d4b352f8b54cfd32b4e9", null ],
     [ "ALIGNED", "main_8c.html#ab53f6184dba79282b333516ffd80bbcd", null ],
     [ "appendGfx_reset_tile_pattern", "main_8c.html#a92d9bab1b9e57c9976ed155b876b018b", null ],
     [ "boot_main", "main_8c.html#a074f3a393dc4964345b1ac21846f2817", null ],
@@ -15,7 +15,6 @@ var main_8c =
     [ "D_80073E0A", "main_8c.html#a335d6c8c0af539ae0d6d03a329d4116a", null ],
     [ "D_80074010", "main_8c.html#aa1ff0710013aaee9475bf4f71311d52a", null ],
     [ "nuGfxZBuffer", "main_8c.html#a94ce99e901b1bdac7a3abbff625f5892", null ],
-    [ "nuYieldBuf", "main_8c.html#a7e7b5401ef9f60c96eef7cbb2641b785", null ],
     [ "ResetFrameBufferArray", "main_8c.html#ae3da46267169982835a73fa93b1bfdf9", null ],
     [ "ResetGameState", "main_8c.html#a73e12d251b206ad739a56d6d5bb9e7f4", null ],
     [ "ResetSavedFrameImg", "main_8c.html#ab9effdcb11277bb465e4616e5878e133", null ],
