@@ -1,4 +1,4 @@
-var common__structs_8h_unionBattleStatus_8____unnamed24____ =
+var common__structs_8h_unionActorPartMovement_8____unnamed31____ =
 [
     [ "varTable", "common__structs_8h.html#a93c302ad376e647b9a09d4610947f97b", null ],
     [ "varTableF", "common__structs_8h.html#a087efa785a677c1d328b5219661c7287", null ],

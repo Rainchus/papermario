@@ -180,7 +180,7 @@ var searchData=
   ['jr_5ftroopa_5fanims_177',['JR_TROOPA_ANIMS',['../JrTroopa_8h.html#a233660f84580b3d8de6abdf6307ba409',1,'JrTroopa.h']]],
   ['jrtroopa_2eh_178',['JrTroopa.h',['../JrTroopa_8h.html',1,'']]],
   ['jrtroopa_2einc_2ec_179',['JrTroopa.inc.c',['../JrTroopa_8inc_8c.html',1,'']]],
-  ['jump_180',['jump',['../common__structs_8h.html#a452e610022799d23580b0462400420bd',1,'FollowAnims::jump'],['../src_2battle_2battle_8h.html#a4e6a7bf6dc26e1181ad91e0c4e18e428',1,'ActorSounds::jump'],['../common__structs_8h.html#aba535ef5a9f7b8bc875812bb081286bb',1,'PartnerAnimations.__unnamed31__::jump']]],
+  ['jump_180',['jump',['../common__structs_8h.html#a452e610022799d23580b0462400420bd',1,'FollowAnims::jump'],['../src_2battle_2battle_8h.html#a4e6a7bf6dc26e1181ad91e0c4e18e428',1,'ActorSounds::jump'],['../common__structs_8h.html#aba535ef5a9f7b8bc875812bb081286bb',1,'PartnerAnimations.__unnamed29__::jump']]],
   ['jump_181',['Jump',['../audio_8h.html#a6c5193b4617f94e847b86d67163605ba',1,'SeqArgs::Jump'],['../script__api_2macros_8h.html#afdd4892f4fd0cb748f70847293dcd201',1,'Jump:&#160;macros.h']]],
   ['jump_2ec_182',['jump.c',['../battle_2action__cmd_2jump_8c.html',1,'(Global Namespace)'],['../world_2action_2jump_8c.html',1,'(Global Namespace)']]],
   ['jump_2eh_183',['jump.h',['../jump_8h.html',1,'']]],

@@ -3,7 +3,7 @@ var structTrigger =
     [ "flags", "structTrigger.html#ae3e8261ffdfd6c5acf05ce9d838d8e15", null ],
     [ "hasPlayerInteractPrompt", "structTrigger.html#a8686f40c5bbe687e11411bad62d74db9", null ],
     [ "itemList", "structTrigger.html#a69302601a9c66f7997e51f0e7b7cfcd8", null ],
-    [ "location", "structTrigger.html#acc5cd5bb631bf88dda4445200554fb4d", null ],
+    [ "location", "structTrigger.html#a513b30be9d0cc4c6840e54354df42691", null ],
     [ "onActivateFunc", "structTrigger.html#a5419c1e1a061963f6b2fcd07b57dc2f5", null ],
     [ "onTriggerEvt", "structTrigger.html#ad2c0ef31622398fcbac19590c64f00c5", null ],
     [ "priority", "structTrigger.html#aaea56e276520a4acc3a3423ba4792df7", null ],

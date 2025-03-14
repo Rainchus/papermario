@@ -387,7 +387,7 @@ var searchData=
   ['blockresult_384',['blockResult',['../structBattleStatus.html#adcd65f260c252da461c59ea264c84d47',1,'BattleStatus']]],
   ['bluepipe_385',['bluePipe',['../common__structs_8h.html#afa8150e6d42bfa3d7f591f2b66c67c48',1,'EntityData']]],
   ['blueprint_386',['blueprint',['../structEntity.html#a7d99e21ab05eea8f5729af459da7678a',1,'Entity']]],
-  ['blur_387',['blur',['../structNpc.html#adbb4b2ade732b902adf378e52d42015b',1,'Npc']]],
+  ['blur_387',['blur',['../structNpc.html#ae5e2f1ffa69c3ff629480a98183e3c1e',1,'Npc']]],
   ['blurbufferpos_388',['blurBufferPos',['../common__structs_8h.html#ac7f4196cbfdddfe02335d8d4c99368da',1,'DecorationTable']]],
   ['blurdisabledelay_389',['blurDisableDelay',['../common__structs_8h.html#a473a19cb5c4dc796edff9f88837df15e',1,'DecorationTable']]],
   ['blurdrawcount_390',['blurDrawCount',['../common__structs_8h.html#a1f8295d72ed737f48ed6b5397d9c0dd7',1,'DecorationTable']]],

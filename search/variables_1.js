@@ -1,8 +1,8 @@
 var searchData=
 [
   ['a_0',['a',['../common__structs_8h.html#a6e53f664902eb8109bee19d95f500da5',1,'Color_RGBA8::a'],['../common__structs_8h.html#afc14f1ba1e29b0cad19b577fbe7cb998',1,'Color4f::a'],['../common__structs_8h.html#a3b8e93fc3e1ad6c43e8adc80316d1f57',1,'Color4i::a'],['../imgfx_8c.html#a0cc175b9c0f1b6a831c399e269772661',1,'ImgFXIntVars.color::a']]],
-  ['aabb_1',['aabb',['../structEntity.html#a4ea3c41f0354abe35735c4440b24b425',1,'Entity::aabb'],['../common__structs_8h.html#a5e394281dfac81c1e7dddcaf4d35d1f6',1,'Collider.__unnamed26__::aabb']]],
-  ['aabbs_2',['aabbs',['../common__structs_8h.html#a9f7cf42e0dad89e417c4df57fa80ba25',1,'CollisionData.__unnamed28__']]],
+  ['aabb_1',['aabb',['../structEntity.html#a4ea3c41f0354abe35735c4440b24b425',1,'Entity::aabb'],['../common__structs_8h.html#a5e394281dfac81c1e7dddcaf4d35d1f6',1,'Collider.__unnamed24__::aabb']]],
+  ['aabbs_2',['aabbs',['../common__structs_8h.html#a9f7cf42e0dad89e417c4df57fa80ba25',1,'CollisionData.__unnamed26__']]],
   ['aabbsize_3',['aabbSize',['../structEntityBlueprint.html#a314ca9f9e81fe2b1d7d83e5cf501f74e',1,'EntityBlueprint::aabbSize'],['../structShadowBlueprint.html#a57ca5317e699cc1a18d6e9cf1c93270c',1,'ShadowBlueprint::aabbSize']]],
   ['absolutepos_4',['absolutePos',['../common__structs_8h.html#afeee643b560545d6ae52a44ffdaa83a3',1,'ActorPartMovement::absolutePos'],['../common__structs_8h.html#ad4296e5dfba4a30c2435e597b5e0e72f',1,'ActorPart::absolutePos']]],
   ['accel_5',['accel',['../common__structs_8h.html#a9d58e04c6afe0216e444ad88cbc90f28',1,'Message']]],

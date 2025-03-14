@@ -42,7 +42,7 @@ var structCamera =
     [ "needsReinit", "structCamera.html#a1563c60518c5d8be5ac8bddf8d83263b", null ],
     [ "nextRig", "structCamera.html#a03d510b6b4b28b94ddacb882bdf93562", null ],
     [ "panActive", "structCamera.html#a97e896c72119f641005d489950ff173d", null ],
-    [ "params", "structCamera.html#a8a609615003ec35c28c2a3ef47a60a52", null ],
+    [ "params", "structCamera.html#ab523ed14eb6e426f6a3397157b280155", null ],
     [ "perspNorm", "structCamera.html#a3aa2f36b9ae99bbcfaf30651473c341f", null ],
     [ "prevFollowPlayer", "structCamera.html#a9323a01d0d6871384dae4d479b5e0f35", null ],
     [ "prevLeadPosX", "structCamera.html#a4ca6a500ab1e1467adb3ef3d2f677be9", null ],

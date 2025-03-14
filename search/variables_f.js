@@ -109,6 +109,6 @@ var searchData=
   ['overshootanglevel_106',['overshootAngleVel',['../world_2area__nok_2nok__04_2npc_8c.html#a682e13aa348617aa1d6778a38e586423',1,'FuzzyThread']]],
   ['overshootvel_107',['overshootVel',['../world_2area__nok_2nok__04_2npc_8c.html#af0251e5a6576f2f063f9fc2832584e61',1,'FuzzyThread']]],
   ['owner_108',['owner',['../hud__element_8h.html#a8d6fb6d9ef95fd28922f53ed3a887b88',1,'Shop']]],
-  ['owner1_109',['owner1',['../common__structs_8h.html#af5dd142b2e1cbfea2cc4f87ee7b5bd6a',1,'Evt']]],
-  ['owner2_110',['owner2',['../common__structs_8h.html#a6a82dd1b06bed0d23f8fff1aec824007',1,'Evt']]]
+  ['owner1_109',['owner1',['../common__structs_8h.html#a9daba8b7c2a762030d1c73bda6776619',1,'Evt']]],
+  ['owner2_110',['owner2',['../common__structs_8h.html#ab664b580259ddc3e0a5aa980e938494e',1,'Evt']]]
 ];

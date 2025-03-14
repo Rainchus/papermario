@@ -4,7 +4,7 @@ var structEntityModel =
     [ "cmdListSavedPos", "structEntityModel.html#a1e809103209de8e27416288eb65ce5de", null ],
     [ "flags", "structEntityModel.html#a009140aea2c59f4390b80e6020e9a3d9", null ],
     [ "fpSetupGfxCallback", "structEntityModel.html#a3c32e0ad6a54f54938f1fbe457decdc9", null ],
-    [ "gfx", "structEntityModel.html#ae9138ea88be5401bf7c189c011f64ff0", null ],
+    [ "gfx", "structEntityModel.html#a1033af90586ac4db55210286381c3924", null ],
     [ "nextFrameTime", "structEntityModel.html#ae23e56e77c333ac43a2f99ead248e4af", null ],
     [ "renderMode", "structEntityModel.html#aea7524b54e632c7c2e403a5120d54fc7", null ],
     [ "setupGfxCallbackArg0", "structEntityModel.html#a6b26d5d61f71846c37ae2b9edf92ffc0", null ],

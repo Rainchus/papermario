@@ -24,7 +24,7 @@ var searchData=
   ['jan_5f23_5fsettings_21',['jan_23_settings',['../jan_8h.html#a493f71ca2b423cac20a69f08e4b7cd85',1,'jan.h']]],
   ['jan_5fmaps_22',['jan_maps',['../world_8c.html#a40f61241872c2b3dc5e7aaf0f4550984',1,'world.c']]],
   ['jerky_23',['jerkY',['../effects_8h.html#ac602db86f1979db6e6a0158ed30ac875',1,'FloatingFlowerFXData']]],
-  ['jump_24',['jump',['../common__structs_8h.html#a452e610022799d23580b0462400420bd',1,'FollowAnims::jump'],['../src_2battle_2battle_8h.html#a4e6a7bf6dc26e1181ad91e0c4e18e428',1,'ActorSounds::jump'],['../common__structs_8h.html#aba535ef5a9f7b8bc875812bb081286bb',1,'PartnerAnimations.__unnamed31__::jump']]],
+  ['jump_24',['jump',['../common__structs_8h.html#a452e610022799d23580b0462400420bd',1,'FollowAnims::jump'],['../src_2battle_2battle_8h.html#a4e6a7bf6dc26e1181ad91e0c4e18e428',1,'ActorSounds::jump'],['../common__structs_8h.html#aba535ef5a9f7b8bc875812bb081286bb',1,'PartnerAnimations.__unnamed29__::jump']]],
   ['jump_25',['Jump',['../audio_8h.html#a6c5193b4617f94e847b86d67163605ba',1,'SeqArgs']]],
   ['jumpapexheight_26',['jumpApexHeight',['../common__structs_8h.html#a75131d7603fb4f4b06d154202132846d',1,'PlayerStatus']]],
   ['jumpcharge_27',['jumpCharge',['../structBattleStatus.html#a6a5064610a58ee57d570c496cddcac22',1,'BattleStatus']]],

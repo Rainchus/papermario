@@ -8,7 +8,7 @@ var searchData=
   ['battlearea_5',['BattleArea',['../src_2battle_2battle_8h.html#structBattleArea',1,'']]],
   ['battlemoveentry_6',['BattleMoveEntry',['../src_2battle_2battle_8h.html#structBattleMoveEntry',1,'']]],
   ['battlestatus_7',['BattleStatus',['../structBattleStatus.html',1,'']]],
-  ['battlestatus_2e_5f_5funnamed24_5f_5f_8',['BattleStatus.__unnamed24__',['../common__structs_8h.html#unionBattleStatus_8____unnamed24____',1,'']]],
+  ['battlestatus_2e_5f_5funnamed22_5f_5f_8',['BattleStatus.__unnamed22__',['../common__structs_8h.html#unionBattleStatus_8____unnamed22____',1,'']]],
   ['bgmdruminfo_9',['BGMDrumInfo',['../audio_8h.html#structBGMDrumInfo',1,'']]],
   ['bgmfileinfo_10',['BGMFileInfo',['../audio_8h.html#structBGMFileInfo',1,'']]],
   ['bgmheader_11',['BGMHeader',['../audio_8h.html#structBGMHeader',1,'']]],

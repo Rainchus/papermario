@@ -149,7 +149,7 @@ var searchData=
   ['loaddescriptors_146',['loadDescriptors',['../sprite_8h.html#ac37d6895ce1a4fc2980eb9bb18b99b25',1,'PlayerRastersHeader']]],
   ['loadtracksfadeinfo_147',['loadTracksFadeInfo',['../audio_8h.html#a6f36d8721977de084642bb29959fb051',1,'AmbienceManager']]],
   ['loadtype_148',['loadType',['../common__structs_8h.html#a0f33f43d6b1af2c4d09cbad056713d5e',1,'GameStatus']]],
-  ['location_149',['location',['../structTrigger.html#acc5cd5bb631bf88dda4445200554fb4d',1,'Trigger']]],
+  ['location_149',['location',['../structTrigger.html#a513b30be9d0cc4c6840e54354df42691',1,'Trigger']]],
   ['lockedpos_150',['lockedPos',['../effects_8h.html#a65eb1a211e0f3f8af1ff9956b4a7d461',1,'PeachStarBeamSpirit']]],
   ['logicalsaveinfo_151',['LogicalSaveInfo',['../fio_8c.html#a0b457031f104e28cfc2382b8da4ef95b',1,'fio.c']]],
   ['logo_152',['logo',['../state__title__screen_8c.html#a57ef99e993a483cd1bffef19c398898d',1,'TitleDataStruct']]],

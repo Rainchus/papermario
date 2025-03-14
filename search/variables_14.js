@@ -7,7 +7,7 @@ var searchData=
   ['taketurnscript_4',['takeTurnScript',['../common__structs_8h.html#a1a292a0f39818411b05a9f6de3eeae9f',1,'Actor']]],
   ['taketurnscriptid_5',['takeTurnScriptID',['../common__structs_8h.html#a6f49a85a5b24ff0cc63f2e00d1ee2d64',1,'Actor']]],
   ['taketurnsource_6',['takeTurnSource',['../common__structs_8h.html#aa50ced4ae0063a81ec07b33ba74b9a11',1,'Actor']]],
-  ['talk_7',['talk',['../actions_8h.html#a0dac527061e9c893fa8d9e183431f2d4',1,'DisguiseAnims::talk'],['../common__structs_8h.html#a64b59718a47cf57a5e4f8443ff43d117',1,'PartnerAnimations.__unnamed31__::talk']]],
+  ['talk_7',['talk',['../actions_8h.html#a0dac527061e9c893fa8d9e183431f2d4',1,'DisguiseAnims::talk'],['../common__structs_8h.html#a64b59718a47cf57a5e4f8443ff43d117',1,'PartnerAnimations.__unnamed29__::talk']]],
   ['talkanim_8',['talkAnim',['../common__structs_8h.html#acc5a6a5d2e8aabc29318c5d3cbf4248a',1,'ShopOwner']]],
   ['talknotificationcallback_9',['TalkNotificationCallback',['../variables_8h.html#a666804afb727990e779499245b32e082',1,'variables.h']]],
   ['tallyposindex_10',['tallyPosIndex',['../world_2area__mgm_2mgm__01_2npc_8c.html#a30ee338b5b2610ae243c8e057e40a505',1,'JumpGamePanel']]],

@@ -157,7 +157,7 @@ var searchData=
   ['rumble_5funused_5f4_154',['Rumble_Unused_4',['../include_2script__api_2battle_8h.html#a9de1cf2f9d7edbbb5b9a47271e36a266',1,'battle.h']]],
   ['rumblebuttons_155',['rumbleButtons',['../rumble_8c.html#a1b3d90a838cb4205b9dcf9d21ba245f7',1,'rumble.c']]],
   ['rumblemaxduration_156',['rumbleMaxDuration',['../rumble_8c.html#a27c804940331f20f714ba16c4edac8e0',1,'rumble.c']]],
-  ['run_157',['run',['../common__structs_8h.html#ac2ae50a5d7d67318406093369d19bbe2',1,'FollowAnims::run'],['../actions_8h.html#a78f630370be9d1dcd63e1ff2bee04fca',1,'DisguiseAnims::run'],['../common__structs_8h.html#aa53108f7543b75adbb34afc035d4cdf6',1,'PartnerAnimations.__unnamed31__::run'],['../npc_8h.html#aa53108f7543b75adbb34afc035d4cdf6',1,'NpcData.animations::run']]],
+  ['run_157',['run',['../common__structs_8h.html#ac2ae50a5d7d67318406093369d19bbe2',1,'FollowAnims::run'],['../actions_8h.html#a78f630370be9d1dcd63e1ff2bee04fca',1,'DisguiseAnims::run'],['../common__structs_8h.html#aa53108f7543b75adbb34afc035d4cdf6',1,'PartnerAnimations.__unnamed29__::run'],['../npc_8h.html#aa53108f7543b75adbb34afc035d4cdf6',1,'NpcData.animations::run']]],
   ['runawayrewardincrement_158',['RunAwayRewardIncrement',['../btl__states__actions_8c.html#a321225a2245bfeef1eea64dce1fb2493',1,'btl_states_actions.c']]],
   ['runawayrewardstep_159',['RunAwayRewardStep',['../btl__states__actions_8c.html#a2c7bc0358f85ee3ac0464232c2e0523f',1,'btl_states_actions.c']]],
   ['runawayrewardtotal_160',['RunAwayRewardTotal',['../btl__states__actions_8c.html#aa568a5ddf03e8afc2218847c8294a054',1,'btl_states_actions.c']]],

@@ -8,7 +8,7 @@ var structNpc =
     [ "blendPalB", "structNpc.html#a27e309c1e315b6404b5b76840ad55d3b", null ],
     [ "blendPalC", "structNpc.html#a3a7a06b56857b360ac76572b64279809", null ],
     [ "blendPalD", "structNpc.html#ae4297f0d15a90961ea8ce3191bdd3de7", null ],
-    [ "blur", "structNpc.html#adbb4b2ade732b902adf378e52d42015b", null ],
+    [ "blur", "structNpc.html#ae5e2f1ffa69c3ff629480a98183e3c1e", null ],
     [ "changedDecoration", "structNpc.html#a3e8a9498a34b27630480e6eeb0806dd7", null ],
     [ "colliderPos", "structNpc.html#a91758ccb330d8b9d37df477149ca3d2f", null ],
     [ "collisionChannel", "structNpc.html#a66c445e1688beeaa7291668ef9616929", null ],

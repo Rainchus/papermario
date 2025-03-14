@@ -12,7 +12,7 @@ var searchData=
   ['waitforstate_9',['waitForState',['../structBattleStatus.html#a6d2c3a1473c5859636af8f9296ccebbe',1,'BattleStatus']]],
   ['waitsecs_10',['WaitSecs',['../script__api_2macros_8h.html#a26160fbf152e99b6699ba44a445b2f06',1,'macros.h']]],
   ['waittime_11',['waitTime',['../npc_8h.html#a05737d7f4a6d2803a8e510e5d02ec042',1,'MobileAISettings::waitTime'],['../sprite_8h.html#a3a15451cdd8abe45a2f29d42a73c6dc2',1,'SpriteComponent::waitTime']]],
-  ['walk_12',['walk',['../common__structs_8h.html#abee5056b46cafaa45fbc4c15d0beeec8',1,'FollowAnims::walk'],['../src_2battle_2battle_8h.html#a1459117337112d9d0330726d457aadc6',1,'ActorSounds::walk'],['../actions_8h.html#aa1543e23ad6f3dae2f67d53ec6f92042',1,'DisguiseAnims::walk'],['../common__structs_8h.html#a46f9631576015f35f527af2bc67351a6',1,'PartnerAnimations.__unnamed31__::walk'],['../npc_8h.html#a46f9631576015f35f527af2bc67351a6',1,'NpcData.animations::walk']]],
+  ['walk_12',['walk',['../common__structs_8h.html#abee5056b46cafaa45fbc4c15d0beeec8',1,'FollowAnims::walk'],['../src_2battle_2battle_8h.html#a1459117337112d9d0330726d457aadc6',1,'ActorSounds::walk'],['../actions_8h.html#aa1543e23ad6f3dae2f67d53ec6f92042',1,'DisguiseAnims::walk'],['../common__structs_8h.html#a46f9631576015f35f527af2bc67351a6',1,'PartnerAnimations.__unnamed29__::walk'],['../npc_8h.html#a46f9631576015f35f527af2bc67351a6',1,'NpcData.animations::walk']]],
   ['walk_2ec_13',['walk.c',['../walk_8c.html',1,'']]],
   ['walking_5fdust_2ec_14',['walking_dust.c',['../walking__dust_8c.html',1,'']]],
   ['walking_5fdust_5fappendgfx_15',['walking_dust_appendGfx',['../walking__dust_8c.html#a7a66dfa8be4689dbaff35fbe98518888',1,'walking_dust.c']]],

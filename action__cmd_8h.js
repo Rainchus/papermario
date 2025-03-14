@@ -93,14 +93,14 @@ var action__cmd_8h =
     [ "PCT_TO_TABLE_RATE", "action__cmd_8h.html#aad273ebac3b5991fea678fd8450d8c1d", null ],
     [ "SCALE_BY_PCT", "action__cmd_8h.html#a75dd8e4bae07a999bc8965deb8709d08", null ],
     [ "ActionCommandDifficulty", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6", [
-      [ "AC_DIFFICULTY_0", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a3f288d377d431472db68c0bffb102db7", null ],
-      [ "AC_DIFFICULTY_1", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a41d68faacacbb2e307d741ee69df2b22", null ],
-      [ "AC_DIFFICULTY_2", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a28ca75d89b5896b095c287170d86274f", null ],
-      [ "AC_DIFFICULTY_3", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a9b909882f3bc22829fb1488b39511536", null ],
-      [ "AC_DIFFICULTY_4", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6aa6a227f46daae9ad9b3de36c5134f147", null ],
-      [ "AC_DIFFICULTY_5", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6ab1ad5356e14ba76adef29fe304399c0c", null ],
-      [ "AC_DIFFICULTY_6", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6aa9894800bd4e3a1bc97a797e48097c76", null ],
-      [ "AC_DIFFICULTY_7", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a312cefd6b770d2dc9bb74dc929b0208b", null ]
+      [ "AC_DIFFICULTY_EASIEST", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a69acaa82420e19a1a37e33aa6972c5df", null ],
+      [ "AC_DIFFICULTY_VERY_EASY", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6af0109fdc2dda2eeaf019aadd2b17c13e", null ],
+      [ "AC_DIFFICULTY_EASY", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6af6f9a865091670c01e9cb3ffa0693282", null ],
+      [ "AC_DIFFICULTY_STANDARD", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a0a4a0d12fb6f1f9c3972d9d60e52498e", null ],
+      [ "AC_DIFFICULTY_HARDER", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6aad96bb1fe4f8adb134d254932362690d", null ],
+      [ "AC_DIFFICULTY_HARD", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a3b77ef8d187b650d54aca03041c1fcf6", null ],
+      [ "AC_DIFFICULTY_VERY_HARD", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6ae923b969f4dfb3adbd81d13031a716f7", null ],
+      [ "AC_DIFFICULTY_HARDEST", "action__cmd_8h.html#a27b10b92f74e2964130eecab8545c9a6a01ad65b1a952d1596911d8560a0d100a", null ]
     ] ],
     [ "ActionCommandModes", "action__cmd_8h.html#aea8bd12e5a52dc30b8802c20efc88e08", [
       [ "AC_MODE_TUTORIAL_BLOCK", "action__cmd_8h.html#aea8bd12e5a52dc30b8802c20efc88e08a746a63aea9b680d8bcdbd30d5d0d6449", null ],
