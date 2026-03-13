@@ -49,9 +49,9 @@ void clear_effect_data(void) {
         gEffectInstances[i] = nullptr;
     }
 
-    osUnmapTLBAll();
-    osMapTLB(EFFECT_GLOBALS_TLB_IDX, OS_PM_4K, effect_globals_VRAM, (s32)&gEffectGlobals & 0xFFFFFF, -1, -1);
-    DMA_COPY_SEGMENT(effect_globals);
+    // osUnmapTLBAll();
+    // osMapTLB(EFFECT_GLOBALS_TLB_IDX, OS_PM_4K, effect_globals_VRAM, (s32)&gEffectGlobals & 0xFFFFFF, -1, -1);
+    // DMA_COPY_SEGMENT(effect_globals);
 }
 
 void func_80059D48(void) {
@@ -105,7 +105,7 @@ void update_effects(void) {
                             sharedData->graphics = nullptr;
                         }
                         sharedData->flags = 0;
-                        osUnmapTLB(i);
+                        //osUnmapTLB(i);
                     }
                 }
             }
@@ -324,11 +324,11 @@ s32 load_effect(s32 effectIndex) {
     // If no empty space was found, panic
     ASSERT(i < ARRAY_COUNT(gEffectSharedData));
 
-    // Map space for the effect
-    osMapTLB(i, OS_PM_4K, effectEntry->dmaDest, (s32)(gEffectDataBuffer[i]) & 0xFFFFFF, -1, -1);
+    // // Map space for the effect
+    // osMapTLB(i, OS_PM_4K, effectEntry->dmaDest, (s32)(gEffectDataBuffer[i]) & 0xFFFFFF, -1, -1);
 
-    // Copy the effect into the newly mapped space
-    dma_copy(effectEntry->dmaStart, effectEntry->dmaEnd, effectEntry->dmaDest);
+    // // Copy the effect into the newly mapped space
+    // dma_copy(effectEntry->dmaStart, effectEntry->dmaEnd, effectEntry->dmaDest);
 
     // If there's graphics data for the effect, allocate space and copy into the new space
     if (effectEntry->graphicsDmaStart != nullptr) {
@@ -336,40 +336,40 @@ s32 load_effect(s32 effectIndex) {
         sharedData->graphics = graphics;
         ASSERT(graphics != nullptr);
 
-#if VERSION_PAL
-        if (effectEntry->graphicsDmaStart == effect_gfx_attack_result_text_ROM_START) {
-            switch (gCurrentLanguage) {
-                case LANGUAGE_EN:
-                    dma_copy(effectEntry->graphicsDmaStart, effectEntry->graphicsDmaEnd, sharedData->graphics);
-                    break;
-                case LANGUAGE_DE:
-                    dma_copy(effect_gfx_attack_result_text_de_ROM_START, effect_gfx_attack_result_text_de_ROM_END, sharedData->graphics);
-                    break;
-                case LANGUAGE_FR:
-                    dma_copy(effect_gfx_attack_result_text_fr_ROM_START, effect_gfx_attack_result_text_fr_ROM_END, sharedData->graphics);
-                    break;
-                default:
-                    dma_copy(effect_gfx_attack_result_text_es_ROM_START, effect_gfx_attack_result_text_es_ROM_END, sharedData->graphics);
-                    break;
-            }
-        } else if (effectEntry->graphicsDmaStart == effect_gfx_chapter_change_ROM_START) {
-            switch (gCurrentLanguage) {
-                case LANGUAGE_EN:
-                    dma_copy(effectEntry->graphicsDmaStart, effectEntry->graphicsDmaEnd, sharedData->graphics);
-                    break;
-                case LANGUAGE_DE:
-                    dma_copy(effect_chapter_change_gfx_de_ROM_START, effect_chapter_change_gfx_de_ROM_END, sharedData->graphics);
-                    break;
-                case LANGUAGE_FR:
-                    dma_copy(effect_chapter_change_gfx_fr_ROM_START, effect_chapter_change_gfx_fr_ROM_END, sharedData->graphics);
-                    break;
-                default:
-                    dma_copy(effect_chapter_change_gfx_es_ROM_START, effect_chapter_change_gfx_es_ROM_END, sharedData->graphics);
-                    break;
-            }
-        } else
-#endif
-            dma_copy(effectEntry->graphicsDmaStart, effectEntry->graphicsDmaEnd, sharedData->graphics);
+// #if VERSION_PAL
+//         if (effectEntry->graphicsDmaStart == effect_gfx_attack_result_text_ROM_START) {
+//             switch (gCurrentLanguage) {
+//                 case LANGUAGE_EN:
+//                     dma_copy(effectEntry->graphicsDmaStart, effectEntry->graphicsDmaEnd, sharedData->graphics);
+//                     break;
+//                 case LANGUAGE_DE:
+//                     dma_copy(effect_gfx_attack_result_text_de_ROM_START, effect_gfx_attack_result_text_de_ROM_END, sharedData->graphics);
+//                     break;
+//                 case LANGUAGE_FR:
+//                     dma_copy(effect_gfx_attack_result_text_fr_ROM_START, effect_gfx_attack_result_text_fr_ROM_END, sharedData->graphics);
+//                     break;
+//                 default:
+//                     dma_copy(effect_gfx_attack_result_text_es_ROM_START, effect_gfx_attack_result_text_es_ROM_END, sharedData->graphics);
+//                     break;
+//             }
+//         } else if (effectEntry->graphicsDmaStart == effect_gfx_chapter_change_ROM_START) {
+//             switch (gCurrentLanguage) {
+//                 case LANGUAGE_EN:
+//                     dma_copy(effectEntry->graphicsDmaStart, effectEntry->graphicsDmaEnd, sharedData->graphics);
+//                     break;
+//                 case LANGUAGE_DE:
+//                     dma_copy(effect_chapter_change_gfx_de_ROM_START, effect_chapter_change_gfx_de_ROM_END, sharedData->graphics);
+//                     break;
+//                 case LANGUAGE_FR:
+//                     dma_copy(effect_chapter_change_gfx_fr_ROM_START, effect_chapter_change_gfx_fr_ROM_END, sharedData->graphics);
+//                     break;
+//                 default:
+//                     dma_copy(effect_chapter_change_gfx_es_ROM_START, effect_chapter_change_gfx_es_ROM_END, sharedData->graphics);
+//                     break;
+//             }
+//         } else
+// #endif
+        dma_copy(effectEntry->graphicsDmaStart, effectEntry->graphicsDmaEnd, sharedData->graphics);
     }
 
     // Initialize the newly loaded effect data

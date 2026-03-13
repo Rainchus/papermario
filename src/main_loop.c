@@ -263,7 +263,8 @@ void load_engine_data(void) {
     DMA_COPY_SEGMENT(entity);
     DMA_COPY_SEGMENT(engine2);
     DMA_COPY_SEGMENT(font_width);
-
+    //dma in effect code
+    dma_copy(effect_globals_ROM_START, btl_states_menus_ROM_END, effect_globals_VRAM);
     gOverrideFlags = 0;
     gGameStatusPtr->unk_79 = 0;
     gGameStatusPtr->backgroundFlags = 0;

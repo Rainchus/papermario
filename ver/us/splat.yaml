@@ -1656,7 +1656,7 @@ segments:
   - name: effect_globals
     type: code
     start: 0x325AD0
-    vram: 0xE0200000
+    vram: 0x80700000
     subsegments:
     - [auto, c, effect_utils]
     - [0x325EE0, pm_effect_shims, effect_shims]
@@ -1701,14 +1701,14 @@ segments:
     dir: effects
     type: code
     start: 0x3278F0
-    vram: 0xE0002000
+    vram: 0x80701000
     subsegments:
     - [auto, c, big_smoke_puff]
   - name: effect_landing_dust
     dir: effects
     type: code
     start: 0x328110
-    vram: 0xE000C000
+    vram: 0x80702000
     subsegments:
     - [auto, c, landing_dust]
   - name: effect_gfx_landing_dust
@@ -1761,14 +1761,14 @@ segments:
     dir: effects
     type: code
     start: 0x32C110
-    vram: 0xE000E000
+    vram: 0x80703000
     subsegments:
     - [auto, c, walking_dust]
   - name: effect_flower_splash
     dir: effects
     type: code
     start: 0x32C7A0
-    vram: 0xE0010000
+    vram: 0x80704000
     subsegments:
     - [auto, c, flower_splash]
   - name: effect_gfx_flower_splash_trail
@@ -1806,14 +1806,14 @@ segments:
     dir: effects
     type: code
     start: 0x32DD10
-    vram: 0xE0012000
+    vram: 0x80705000
     subsegments:
     - [auto, c, flower_trail]
   - name: effect_cloud_puff
     dir: effects
     type: code
     start: 0x32E490
-    vram: 0xE0014000
+    vram: 0x80706000
     subsegments:
     - [auto, c, cloud_puff]
   - name: effect_gfx_cloud_puff_trail
@@ -1838,14 +1838,14 @@ segments:
     dir: effects
     type: code
     start: 0x32EE30
-    vram: 0xE0016000
+    vram: 0x80707000
     subsegments:
     - [auto, c, cloud_trail]
   - name: effect_footprint
     dir: effects
     type: code
     start: 0x32F580
-    vram: 0xE0018000
+    vram: 0x80708000
     subsegments:
     - [auto, c, footprint]
   - name: effect_gfx_footprint
@@ -1868,7 +1868,7 @@ segments:
     dir: effects
     type: code
     start: 0x32FE30
-    vram: 0xE001A000
+    vram: 0x80709000
     subsegments:
     - [auto, c, floating_flower]
   - name: effect_gfx_floating_flower
@@ -1895,7 +1895,7 @@ segments:
     dir: effects
     type: code
     start: 0x330910
-    vram: 0xE001C000
+    vram: 0x8070A000
     subsegments:
     - [auto, c, snowflake]
   - name: effect_gfx_snowflake
@@ -1922,7 +1922,7 @@ segments:
     dir: effects
     type: code
     start: 0x331940
-    vram: 0xE001E000
+    vram: 0x8070B000
     subsegments:
     - [auto, c, star]
   - name: effect_gfx_star
@@ -1951,7 +1951,7 @@ segments:
     dir: effects
     type: code
     start: 0x333EC0
-    vram: 0xE0020000
+    vram: 0x8070C000
     subsegments:
     - [auto, c, emote]
   - name: effect_gfx_emote
@@ -1991,7 +1991,7 @@ segments:
     dir: effects
     type: code
     start: 0x337240
-    vram: 0xE0022000
+    vram: 0x8070D000
     subsegments:
     - [auto, c, sparkles]
   - name: effect_gfx_sparkles
@@ -2029,7 +2029,7 @@ segments:
     dir: effects
     type: code
     start: 0x339250
-    vram: 0xE0024000
+    vram: 0x8070E000
     subsegments:
     - [auto, c, shape_spell]
   - name: effect_gfx_shape_spell
@@ -2059,7 +2059,7 @@ segments:
     dir: effects
     type: code
     start: 0x33B180
-    vram: 0xE0026000
+    vram: 0x8070F000
     subsegments:
     - [auto, c, gather_energy_pink]
   - name: effect_gfx_gather_energy_pink
@@ -2088,7 +2088,7 @@ segments:
     dir: effects
     type: code
     start: 0x33CDF0
-    vram: 0xE0028000
+    vram: 0x80710000
     subsegments:
     - [auto, c, drop_leaves]
   - name: effect_gfx_drop_leaves
@@ -2116,7 +2116,7 @@ segments:
     dir: effects
     type: code
     start: 0x33E8C0
-    vram: 0xE002A000
+    vram: 0x80711000
     subsegments:
     - [auto, c, dust]
   - name: effect_gfx_dust
@@ -2146,7 +2146,7 @@ segments:
     dir: effects
     type: code
     start: 0x33FE80
-    vram: 0xE002C000
+    vram: 0x80712000
     subsegments:
     - [auto, c, shattering_stones]
   - name: effect_gfx_shattering_stones
@@ -2186,14 +2186,14 @@ segments:
     dir: effects
     type: code
     start: 0x3419E0
-    vram: 0xE002E000
+    vram: 0x80713000
     subsegments:
     - [auto, c, smoke_ring]
   - name: effect_damage_stars
     dir: effects
     type: code
     start: 0x342140
-    vram: 0xE0030000
+    vram: 0x80714000
     subsegments:
     - [auto, c, damage_stars]
   - name: effect_gfx_damage_stars
@@ -2221,7 +2221,7 @@ segments:
     dir: effects
     type: code
     start: 0x343680
-    vram: 0xE0032000
+    vram: 0x80715000
     subsegments:
     - [auto, c, explosion]
   - name: effect_gfx_explosion
@@ -2252,7 +2252,7 @@ segments:
     dir: effects
     type: code
     start: 0x344A10
-    vram: 0xE0034000
+    vram: 0x80716000
     subsegments:
     - [auto, c, lens_flare]
   - name: effect_gfx_lens_flare
@@ -2275,7 +2275,7 @@ segments:
     dir: effects
     type: code
     start: 0x3454E0
-    vram: 0xE0036000
+    vram: 0x80717000
     subsegments:
     - [auto, c, got_item_outline]
   - name: effect_gfx_got_item_outline
@@ -2309,7 +2309,7 @@ segments:
     dir: effects
     type: code
     start: 0x34DD20
-    vram: 0xE0038000
+    vram: 0x80718000
     subsegments:
     - [auto, c, spiky_white_aura]
   - name: effect_gfx_spiky_white_aura
@@ -2333,14 +2333,14 @@ segments:
     dir: effects
     type: code
     start: 0x34EC80
-    vram: 0xE003A000
+    vram: 0x80719000
     subsegments:
     - [auto, c, smoke_impact]
   - name: effect_damage_indicator
     dir: effects
     type: code
     start: 0x34F4C0
-    vram: 0xE003C000
+    vram: 0x8071A000
     subsegments:
     - [auto, c, damage_indicator]
   - name: effect_gfx_damage_indicator
@@ -2403,7 +2403,7 @@ segments:
     dir: effects
     type: code
     start: 0x352440
-    vram: 0xE003E000
+    vram: 0x8071B000
     subsegments:
     - [auto, c, purple_ring]
   - name: effect_gfx_purple_ring
@@ -2430,7 +2430,7 @@ segments:
     dir: effects
     type: code
     start: 0x353300
-    vram: 0xE0040000
+    vram: 0x8071C000
     subsegments:
     - [auto, c, flame]
   - name: effect_gfx_flame
@@ -2458,21 +2458,21 @@ segments:
     dir: effects
     type: code
     start: 0x3547A0
-    vram: 0xE0042000
+    vram: 0x8071D000
     subsegments:
     - [auto, c, stars_burst]
   - name: effect_stars_shimmer
     dir: effects
     type: code
     start: 0x354F60
-    vram: 0xE0044000
+    vram: 0x8071E000
     subsegments:
     - [auto, c, stars_shimmer]
   - name: effect_rising_bubble
     dir: effects
     type: code
     start: 0x355EE0
-    vram: 0xE0046000
+    vram: 0x8071F000
     subsegments:
     - [auto, c, rising_bubble]
   - name: effect_gfx_rising_bubble
@@ -2503,7 +2503,7 @@ segments:
     dir: effects
     type: code
     start: 0x356980
-    vram: 0xE0048000
+    vram: 0x80720000
     subsegments:
     - [auto, c, ring_blast]
   - name: effect_gfx_ring_blast
@@ -2527,7 +2527,7 @@ segments:
     dir: effects
     type: code
     start: 0x3584C0
-    vram: 0xE004A000
+    vram: 0x80721000
     subsegments:
     - [auto, c, shockwave]
   - name: effect_gfx_shockwave
@@ -2554,7 +2554,7 @@ segments:
     dir: effects
     type: code
     start: 0x359F20
-    vram: 0xE004C000
+    vram: 0x80722000
     subsegments:
     - [auto, c, music_note]
   - name: effect_gfx_music_note
@@ -2596,14 +2596,14 @@ segments:
     dir: effects
     type: code
     start: 0x35B9D0
-    vram: 0xE004E000
+    vram: 0x80723000
     subsegments:
     - [auto, c, smoke_burst]
   - name: effect_sweat
     dir: effects
     type: code
     start: 0x35BFD0
-    vram: 0xE0050000
+    vram: 0x80724000
     subsegments:
     - [auto, c, sweat]
   - name: effect_gfx_sweat
@@ -2630,7 +2630,7 @@ segments:
     dir: effects
     type: code
     start: 0x35CA80
-    vram: 0xE0052000
+    vram: 0x80725000
     subsegments:
     - [auto, c, sleep_bubble]
   - name: effect_gfx_sleep_bubble
@@ -2656,14 +2656,14 @@ segments:
     dir: effects
     type: code
     start: 0x35DA00
-    vram: 0xE0056000
+    vram: 0x80726000
     subsegments:
     - [auto, c, windy_leaves]
   - name: effect_falling_leaves
     dir: effects
     type: code
     start: 0x35E920
-    vram: 0xE0058000
+    vram: 0x80727000
     subsegments:
     - [auto, c, falling_leaves]
   - name: effect_gfx_falling_leaves
@@ -2687,7 +2687,7 @@ segments:
     dir: effects
     type: code
     start: 0x3602C0
-    vram: 0xE005A000
+    vram: 0x80728000
     subsegments:
     - [auto, c, stars_spread]
   - name: effect_gfx_stars_spread
@@ -2710,7 +2710,7 @@ segments:
     dir: effects
     type: code
     start: 0x360F40
-    vram: 0xE005C000
+    vram: 0x80729000
     subsegments:
     - [auto, c, steam_burst]
   - name: effect_gfx_steam_burst
@@ -2733,7 +2733,7 @@ segments:
     dir: effects
     type: code
     start: 0x3625C0
-    vram: 0xE005E000
+    vram: 0x8072A000
     subsegments:
     - [auto, c, stars_orbiting]
   - name: effect_gfx_stars_orbiting
@@ -2756,7 +2756,7 @@ segments:
     dir: effects
     type: code
     start: 0x363160
-    vram: 0xE0060000
+    vram: 0x8072B000
     subsegments:
     - [auto, c, big_snowflakes]
   - name: effect_gfx_big_snowflakes
@@ -2783,7 +2783,7 @@ segments:
     dir: effects
     type: code
     start: 0x364300
-    vram: 0xE0062000
+    vram: 0x8072C000
     subsegments:
     - [auto, c, debuff]
   - name: effect_gfx_debuff
@@ -2807,7 +2807,7 @@ segments:
     dir: effects
     type: code
     start: 0x364F10
-    vram: 0xE0064000
+    vram: 0x8072D000
     subsegments:
     - [auto, c, green_impact]
   - name: effect_gfx_green_impact
@@ -2831,7 +2831,7 @@ segments:
     dir: effects
     type: code
     start: 0x366030
-    vram: 0xE0066000
+    vram: 0x8072E000
     subsegments:
     - [auto, c, radial_shimmer]
   - name: effect_gfx_radial_shimmer
@@ -2872,7 +2872,7 @@ segments:
     dir: effects
     type: code
     start: 0x36A8D0
-    vram: 0xE0068000
+    vram: 0x8072F000
     subsegments:
     - [auto, c, ending_decals]
   - name: effect_gfx_ending_decals
@@ -2906,7 +2906,7 @@ segments:
     dir: effects
     type: code
     start: 0x36D020
-    vram: 0xE006A000
+    vram: 0x80730000
     subsegments:
     - [auto, c, light_rays]
   - name: effect_gfx_light_rays
@@ -2932,7 +2932,7 @@ segments:
     dir: effects
     type: code
     start: 0x36E1D0
-    vram: 0xE006C000
+    vram: 0x80731000
     subsegments:
     - [auto, c, lightning]
   - name: effect_gfx_lightning
@@ -2990,7 +2990,7 @@ segments:
     dir: effects
     type: code
     start: 0x372790
-    vram: 0xE006E000
+    vram: 0x80732000
     subsegments:
     - [auto, c, fire_breath]
   - name: effect_gfx_fire_breath
@@ -3020,14 +3020,14 @@ segments:
     dir: effects
     type: code
     start: 0x3740B0
-    vram: 0xE0070000
+    vram: 0x80733000
     subsegments:
     - [auto, c, shimmer_burst]
   - name: effect_energy_shockwave
     dir: effects
     type: code
     start: 0x374E50
-    vram: 0xE0072000
+    vram: 0x80734000
     subsegments:
     - [auto, c, energy_shockwave]
   - name: effect_gfx_energy_shockwave
@@ -3053,14 +3053,14 @@ segments:
     dir: effects
     type: code
     start: 0x376460
-    vram: 0xE0074000
+    vram: 0x80735000
     subsegments:
     - [auto, c, shimmer_wave]
   - name: effect_aura
     dir: effects
     type: code
     start: 0x377070
-    vram: 0xE0076000
+    vram: 0x80736000
     subsegments:
     - [auto, c, aura]
   - name: effect_gfx_aura
@@ -3103,7 +3103,7 @@ segments:
     dir: effects
     type: code
     start: 0x37A3F0
-    vram: 0xE0078000
+    vram: 0x80737000
     subsegments:
     - [auto, c, bulb_glow]
   - name: effect_gfx_bulb_glow
@@ -3131,7 +3131,7 @@ segments:
     dir: effects
     type: code
     start: 0x37C540
-    vram: 0xE007A000
+    vram: 0x80738000
     subsegments:
     - [auto, c, effect_3D]
   - name: effect_gfx_effect_3D
@@ -3155,7 +3155,7 @@ segments:
     dir: effects
     type: code
     start: 0x37D490
-    vram: 0xE007C000
+    vram: 0x80739000
     subsegments:
     - [auto, c, blast]
   - name: effect_gfx_blast
@@ -3206,7 +3206,7 @@ segments:
     dir: effects
     type: code
     start: 0x37F720
-    vram: 0xE007E000
+    vram: 0x8073A000
     subsegments:
     - [auto, c, fire_flower]
   - name: effect_gfx_fire_flower
@@ -3243,7 +3243,7 @@ segments:
     dir: effects
     type: code
     start: 0x3812C0
-    vram: 0xE0080000
+    vram: 0x8073B000
     subsegments:
     - [auto, c, recover]
   - name: effect_gfx_recover
@@ -3309,7 +3309,7 @@ segments:
     dir: effects
     type: code
     start: 0x385640
-    vram: 0xE0082000
+    vram: 0x8073C000
     subsegments:
     - [auto, c, disable_x]
   - name: effect_gfx_disable_x
@@ -3364,14 +3364,14 @@ segments:
     dir: effects
     type: code
     start: 0x3889D0
-    vram: 0xE0084000
+    vram: 0x8073D000
     subsegments:
     - [auto, c, bombette_breaking]
   - name: effect_firework
     dir: effects
     type: code
     start: 0x389850
-    vram: 0xE0086000
+    vram: 0x8073E000
     subsegments:
     - [auto, c, firework]
   - name: effect_gfx_firework
@@ -3402,7 +3402,7 @@ segments:
     dir: effects
     type: code
     start: 0x38ADF0
-    vram: 0xE0088000
+    vram: 0x8073F000
     subsegments:
     - [auto, c, confetti]
   - name: effect_gfx_confetti
@@ -3430,7 +3430,7 @@ segments:
     dir: effects
     type: code
     start: 0x38C5F0
-    vram: 0xE008A000
+    vram: 0x80740000
     subsegments:
     - [auto, c, snowfall]
   - name: effect_gfx_snowfall
@@ -3459,7 +3459,7 @@ segments:
     dir: effects
     type: code
     start: 0x38DE00
-    vram: 0xE008C000
+    vram: 0x80741000
     subsegments:
     - [auto, c, effect_46]
   - name: effect_gfx_effect_46
@@ -3482,7 +3482,7 @@ segments:
     dir: effects
     type: code
     start: 0x38EE60
-    vram: 0xE008E000
+    vram: 0x80742000
     subsegments:
     - [auto, c, gather_magic]
   - name: effect_gfx_gather_magic
@@ -3508,7 +3508,7 @@ segments:
     dir: effects
     type: code
     start: 0x38F900
-    vram: 0xE0090000
+    vram: 0x80743000
     subsegments:
     - [auto, c, attack_result_text]
   - name: effect_gfx_attack_result_text
@@ -3551,7 +3551,7 @@ segments:
     dir: effects
     type: code
     start: 0x391D30
-    vram: 0xE0092000
+    vram: 0x80744000
     subsegments:
     - [auto, c, small_gold_sparkle]
   - name: effect_gfx_small_gold_sparkle
@@ -3583,7 +3583,7 @@ segments:
     dir: effects
     type: code
     start: 0x3928D0
-    vram: 0xE0094000
+    vram: 0x80745000
     subsegments:
     - [auto, c, flashing_box_shockwave]
   - name: effect_gfx_flashing_box_shockwave
@@ -3616,7 +3616,7 @@ segments:
     dir: effects
     type: code
     start: 0x394280
-    vram: 0xE0096000
+    vram: 0x80746000
     subsegments:
     - [auto, c, balloon]
   - name: effect_gfx_balloon
@@ -3652,7 +3652,7 @@ segments:
     dir: effects
     type: code
     start: 0x395BB0
-    vram: 0xE0098000
+    vram: 0x80747000
     subsegments:
     - [auto, c, floating_rock]
   - name: effect_gfx_floating_rock
@@ -3679,7 +3679,7 @@ segments:
     dir: effects
     type: code
     start: 0x3965B0
-    vram: 0xE009A000
+    vram: 0x80748000
     subsegments:
     - [auto, c, chomp_drop]
   - name: effect_gfx_chomp_drop
@@ -3704,7 +3704,7 @@ segments:
     dir: effects
     type: code
     start: 0x3981F0
-    vram: 0xE009C000
+    vram: 0x80749000
     subsegments:
     - [auto, c, quizmo_stage]
   - name: effect_gfx_quizmo_stage
@@ -3800,7 +3800,7 @@ segments:
     dir: effects
     type: code
     start: 0x39FF20
-    vram: 0xE009E000
+    vram: 0x8074A000
     subsegments:
     - [auto, c, radiating_energy_orb]
   - name: effect_gfx_radiating_energy_orb
@@ -3833,7 +3833,7 @@ segments:
     dir: effects
     type: code
     start: 0x3A2290
-    vram: 0xE00A0000
+    vram: 0x8074B000
     subsegments:
     - [auto, c, quizmo_answer]
   - name: effect_gfx_quizmo_answer
@@ -3856,7 +3856,7 @@ segments:
     dir: effects
     type: code
     start: 0x3A2990
-    vram: 0xE00A2000
+    vram: 0x8074C000
     subsegments:
     - [auto, c, motion_blur_flame]
   - name: effect_gfx_motion_blur_flame
@@ -3881,7 +3881,7 @@ segments:
     dir: effects
     type: code
     start: 0x3A37E0
-    vram: 0xE00A4000
+    vram: 0x8074D000
     subsegments:
     - [auto, c, energy_orb_wave]
   - name: effect_gfx_energy_orb_wave
@@ -3909,7 +3909,7 @@ segments:
     dir: effects
     type: code
     start: 0x3A5550
-    vram: 0xE00A6000
+    vram: 0x8074E000
     subsegments:
     - [auto, c, merlin_house_stars]
   - name: effect_gfx_merlin_house_stars
@@ -3939,7 +3939,7 @@ segments:
     dir: effects
     type: code
     start: 0x3A70F0
-    vram: 0xE00A8000
+    vram: 0x8074F000
     subsegments:
     - [auto, c, quizmo_audience]
   - name: effect_gfx_quizmo_audience
@@ -3999,7 +3999,7 @@ segments:
     dir: effects
     type: code
     start: 0x3AA920
-    vram: 0xE00AA000
+    vram: 0x80750000
     subsegments:
     - [auto, c, butterflies]
   - name: effect_gfx_butterflies
@@ -4055,7 +4055,7 @@ segments:
     dir: effects
     type: code
     start: 0x3AEE20
-    vram: 0xE00AC000
+    vram: 0x80751000
     subsegments:
     - [auto, c, stat_change]
   - name: effect_gfx_stat_change
@@ -4112,7 +4112,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B2350
-    vram: 0xE00AE000
+    vram: 0x80752000
     subsegments:
     - [auto, c, snaking_static]
   - name: effect_gfx_snaking_static
@@ -4136,7 +4136,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B3EB0
-    vram: 0xE00B0000
+    vram: 0x80753000
     subsegments:
     - [auto, c, thunderbolt_ring]
   - name: effect_gfx_thunderbolt_ring
@@ -4158,7 +4158,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B4790
-    vram: 0xE00B2000
+    vram: 0x80754000
     subsegments:
     - [auto, c, squirt]
   - name: effect_gfx_squirt
@@ -4183,7 +4183,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B5CF0
-    vram: 0xE00B4000
+    vram: 0x80755000
     subsegments:
     - [auto, c, water_block]
   - name: effect_gfx_water_block
@@ -4212,7 +4212,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B7160
-    vram: 0xE00B6000
+    vram: 0x80756000
     subsegments:
     - [auto, c, waterfall]
   - name: effect_gfx_waterfall
@@ -4234,7 +4234,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B7B80
-    vram: 0xE00B8000
+    vram: 0x80757000
     subsegments:
     - [auto, c, water_fountain]
   - name: effect_gfx_water_fountain
@@ -4260,7 +4260,7 @@ segments:
     dir: effects
     type: code
     start: 0x3B8BD0
-    vram: 0xE00BA000
+    vram: 0x80758000
     subsegments:
     - [auto, c, underwater]
   - name: effect_gfx_underwater
@@ -4293,7 +4293,7 @@ segments:
     dir: effects
     type: code
     start: 0x3BA030
-    vram: 0xE00BC000
+    vram: 0x80759000
     subsegments:
     - [auto, c, lightning_bolt]
   - name: effect_gfx_lightning_bolt
@@ -4315,7 +4315,7 @@ segments:
     dir: effects
     type: code
     start: 0x3BBF60
-    vram: 0xE00BE000
+    vram: 0x8075A000
     subsegments:
     - [auto, c, water_splash]
   - name: effect_gfx_water_splash
@@ -4343,7 +4343,7 @@ segments:
     dir: effects
     type: code
     start: 0x3BCD60
-    vram: 0xE00C0000
+    vram: 0x8075B000
     subsegments:
     - [auto, c, snowman_doll]
   - name: effect_gfx_snowman_doll
@@ -4469,7 +4469,7 @@ segments:
     dir: effects
     type: code
     start: 0x3C11D0
-    vram: 0xE00C2000
+    vram: 0x8075C000
     subsegments:
     - [auto, c, fright_jar]
   - name: effect_gfx_fright_jar
@@ -4499,7 +4499,7 @@ segments:
     dir: effects
     type: code
     start: 0x3CADF0
-    vram: 0xE00C4000
+    vram: 0x8075D000
     subsegments:
     - [auto, c, stop_watch]
   - name: effect_gfx_stop_watch
@@ -4524,7 +4524,7 @@ segments:
     dir: effects
     type: code
     start: 0x3CC9E0
-    vram: 0xE00C6000
+    vram: 0x8075E000
     subsegments:
     - [auto, c, effect_63]
   - name: effect_gfx_effect_63
@@ -4563,7 +4563,7 @@ segments:
     dir: effects
     type: code
     start: 0x3CF3A0
-    vram: 0xE00C8000
+    vram: 0x8075F000
     subsegments:
     - [auto, c, throw_spiny]
   - name: effect_gfx_throw_spiny
@@ -4592,7 +4592,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D0500
-    vram: 0xE00CA000
+    vram: 0x80760000
     subsegments:
     - [auto, c, effect_65]
   - name: effect_gfx_effect_65
@@ -4614,7 +4614,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D1690
-    vram: 0xE00CC000
+    vram: 0x80761000
     subsegments:
     - [auto, c, tubba_heart_attack]
   - name: effect_gfx_tubba_heart_attack
@@ -4640,7 +4640,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D2AC0
-    vram: 0xE00CE000
+    vram: 0x80762000
     subsegments:
     - [auto, c, whirlwind]
   - name: effect_gfx_whirlwind
@@ -4662,14 +4662,14 @@ segments:
     dir: effects
     type: code
     start: 0x3D3E20
-    vram: 0xE00D0000
+    vram: 0x80763000
     subsegments:
     - [auto, c, red_impact]
   - name: effect_floating_cloud_puff
     dir: effects
     type: code
     start: 0x3D4970
-    vram: 0xE00D2000
+    vram: 0x80764000
     subsegments:
     - [auto, c, floating_cloud_puff]
   - name: effect_gfx_floating_cloud_puff
@@ -4693,7 +4693,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D5020
-    vram: 0xE00D6000
+    vram: 0x80765000
     subsegments:
     - [auto, c, energy_in_out]
   - name: effect_gfx_energy_in_out
@@ -4747,7 +4747,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D67C0
-    vram: 0xE00D8000
+    vram: 0x80766000
     subsegments:
     - [auto, c, tattle_window]
   - name: effect_gfx_tattle_window
@@ -4767,7 +4767,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D7240
-    vram: 0xE00DA000
+    vram: 0x80767000
     subsegments:
     - [auto, c, shiny_flare]
   - name: effect_gfx_shiny_flare
@@ -4790,7 +4790,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D7A70
-    vram: 0xE00DC000
+    vram: 0x80768000
     subsegments:
     - [auto, c, huff_puff_breath]
   - name: effect_gfx_huff_puff_breath
@@ -4818,7 +4818,7 @@ segments:
     dir: effects
     type: code
     start: 0x3D8720
-    vram: 0xE00DE000
+    vram: 0x80769000
     subsegments:
     - [auto, c, cold_breath]
   - name: effect_gfx_cold_breath
@@ -4851,7 +4851,7 @@ segments:
     dir: effects
     type: code
     start: 0x3DB460
-    vram: 0xE00E0000
+    vram: 0x8076A000
     subsegments:
     - [auto, c, embers]
   - name: effect_gfx_embers
@@ -4875,7 +4875,7 @@ segments:
     dir: effects
     type: code
     start: 0x3DC310
-    vram: 0xE00E2000
+    vram: 0x8076B000
     subsegments:
     - [auto, c, hieroglyphs]
   - name: effect_gfx_hieroglyphs
@@ -4898,7 +4898,7 @@ segments:
     dir: effects
     type: code
     start: 0x3DE000
-    vram: 0xE00E4000
+    vram: 0x8076C000
     subsegments:
     - [auto, c, misc_particles]
   - name: effect_gfx_misc_particles
@@ -4935,7 +4935,7 @@ segments:
     dir: effects
     type: code
     start: 0x3E0930
-    vram: 0xE00E6000
+    vram: 0x8076D000
     subsegments:
     - [auto, c, static_status]
   - name: effect_gfx_static_status
@@ -4960,7 +4960,7 @@ segments:
     dir: effects
     type: code
     start: 0x3E1690
-    vram: 0xE00E8000
+    vram: 0x8076E000
     subsegments:
     - [auto, c, moving_cloud]
   - name: effect_gfx_moving_cloud
@@ -4984,7 +4984,7 @@ segments:
     dir: effects
     type: code
     start: 0x3E1EE0
-    vram: 0xE00EA000
+    vram: 0x8076F000
     subsegments:
     - [auto, c, effect_75]
   - name: effect_gfx_effect_75
@@ -5019,7 +5019,7 @@ segments:
     dir: effects
     type: code
     start: 0x3E43A0
-    vram: 0xE010A000
+    vram: 0x80770000
     subsegments:
     - [auto, c, firework_rocket]
   - name: effect_gfx_firework_rocket
@@ -5042,7 +5042,7 @@ segments:
     dir: effects
     type: code
     start: 0x3E54C0
-    vram: 0xE010C000
+    vram: 0x80771000
     subsegments:
     - [auto, c, peach_star_beam]
   - name: effect_gfx_peach_star_beam
@@ -5116,7 +5116,7 @@ segments:
     dir: effects
     type: code
     start: 0x3EB4E0
-    vram: 0xE010E000
+    vram: 0x80772000
     subsegments:
     - [auto, c, chapter_change]
   - name: effect_gfx_chapter_change
@@ -5170,7 +5170,7 @@ segments:
     dir: effects
     type: code
     start: 0x3F83F0
-    vram: 0xE0110000
+    vram: 0x80773000
     subsegments:
     - [auto, c, ice_shard]
   - name: effect_gfx_ice_shard
@@ -5195,7 +5195,7 @@ segments:
     dir: effects
     type: code
     start: 0x3F9E50
-    vram: 0xE0112000
+    vram: 0x80774000
     subsegments:
     - [auto, c, spirit_card]
   - name: effect_gfx_spirit_card # effect spirit_card, something_rotating gfx
@@ -5265,7 +5265,7 @@ segments:
     dir: effects
     type: code
     start: 0x3FEAE0
-    vram: 0xE0114000
+    vram: 0x80775000
     subsegments:
     - [auto, c, lil_oink]
   - name: effect_gfx_lil_oink
@@ -5389,14 +5389,14 @@ segments:
     dir: effects
     type: code
     start: 0x402640
-    vram: 0xE0116000
+    vram: 0x80776000
     subsegments:
     - [auto, c, something_rotating]
   - name: effect_breaking_junk
     dir: effects
     type: code
     start: 0x403400
-    vram: 0xE0118000
+    vram: 0x80777000
     subsegments:
     - [auto, c, breaking_junk]
   - name: effect_gfx_breaking_junk
@@ -5429,7 +5429,7 @@ segments:
     dir: effects
     type: code
     start: 0x404220
-    vram: 0xE011A000
+    vram: 0x80778000
     subsegments:
     - [auto, c, partner_buff]
   - name: effect_gfx_partner_buff
@@ -5471,7 +5471,7 @@ segments:
     dir: effects
     type: code
     start: 0x406B40
-    vram: 0xE011C000
+    vram: 0x80779000
     subsegments:
     - [auto, c, quizmo_assistant]
   - name: effect_gfx_quizmo_assistant
@@ -5512,7 +5512,7 @@ segments:
     dir: effects
     type: code
     start: 0x409990
-    vram: 0xE011E000
+    vram: 0x8077A000
     subsegments:
     - [auto, c, ice_pillar]
   - name: effect_gfx_ice_pillar
@@ -5546,7 +5546,7 @@ segments:
     dir: effects
     type: code
     start: 0x40B3F0
-    vram: 0xE0120000
+    vram: 0x8077B000
     subsegments:
     - [auto, c, sun]
   - name: effect_gfx_sun
@@ -5587,7 +5587,7 @@ segments:
     dir: effects
     type: code
     start: 0x40C5A0
-    vram: 0xE0122000
+    vram: 0x8077C000
     subsegments:
     - [auto, c, star_spirits_energy]
   - name: effect_gfx_star_spirits_energy
@@ -5632,14 +5632,14 @@ segments:
     dir: effects
     type: code
     start: 0x412730
-    vram: 0xE0124000
+    vram: 0x8077D000
     subsegments:
     - [auto, c, pink_sparkles]
   - name: effect_star_outline
     dir: effects
     type: code
     start: 0x413360
-    vram: 0xE0126000
+    vram: 0x8077E000
     subsegments:
     - [auto, c, star_outline]
   - name: effect_gfx_star_outline
@@ -5664,7 +5664,7 @@ segments:
     dir: effects
     type: code
     start: 0x414BA0
-    vram: 0xE0128000
+    vram: 0x8077F000
     subsegments:
     - [auto, c, effect_86]
   - name: effect_gfx_effect_86
