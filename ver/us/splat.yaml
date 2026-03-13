@@ -14483,297 +14483,298 @@ segments:
       - [0xE9E690, palette, BombableRock]
       - [0xE9E6B0]
 
-#################
-### Dead maps ###
-#################
-  - [0xE9ECD0, bin, dead_kzn_11_end] # tail of dead kzn_11
-  #- name: dead_kzn_11
-  #  dir: world/dead/area_kzn/kzn_11
-  #  type: code
-  #  start: 0xE9AFF0
-  #  vram_class: map
-  #  subsegments:
-  #  - [auto, c, settings]
-  #  - [auto, c, main]
-  #  - [auto, c, platforms]
-  #  - [auto, c, npc]
-  #  - [0xE9D650]
-  - name: dead_kzn_17
-    dir: world/dead/area_kzn/kzn_17
-    type: code
-    start: 0xEA0900
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, main]
-    - [auto, c, entity]
-    - [auto, c, npc]
-    - [auto, c, tromp]
-  - name: dead_kzn_18
-    dir: world/dead/area_kzn/kzn_18
-    type: code
-    start: 0xEA6FD0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, entity]
-  - name: dead_kzn_19
-    dir: world/dead/area_kzn/kzn_19
-    type: code
-    start: 0xEA8AE0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc_settings]
-    - [auto, c, npc]
-    - [auto, c, eruption]
-    - [auto, c, entity]
-    - start: 0xEABB20
-      type: .data
-      name: npc
-      subsegments:
-      - [0xEABB20]
-      - [0xEABFB8, ci4, ../../lava_piranha/vine, 64, 32]
-      - [0xEAC3B8, palette, ../../lava_piranha/vine]
-      - [0xEAC5B8, gfx_common, ../../lava_piranha/vine]
-      - [0xEAC698]
-  - name: dead_kzn_20
-    dir: world/dead/area_kzn/kzn_20
-    type: code
-    start: 0xEB0E60
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-  - name: dead_kzn_22
-    dir: world/dead/area_kzn/kzn_22
-    type: code
-    start: 0xEB5130
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, entity]
-    - [auto, c, npc]
-  - name: dead_kzn_23
-    dir: world/dead/area_kzn/kzn_23
-    type: code
-    start: 0xEB7230
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-  - name: dead_flo_00
-    dir: world/dead/area_flo/flo_00
-    type: code
-    start: 0xEB8E50
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, epilogue]
-    - [auto, c, beanstalk]
-    - [auto, c, entity]
-  - name: dead_flo_03
-    dir: world/dead/area_flo/flo_03
-    type: code
-    start: 0xEC2200
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, foliage]
-    - [auto, c, entity]
-  - name: dead_flo_07
-    dir: world/dead/area_flo/flo_07
-    type: code
-    start: 0xEC71B0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-  - name: dead_flo_08
-    dir: world/dead/area_flo/flo_08
-    type: code
-    start: 0xEC9D00
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, entity]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, foliage]
-    - [auto, c, vines]
-  - name: dead_flo_09
-    dir: world/dead/area_flo/flo_09
-    type: code
-    start: 0xECFFF0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, vines]
-    - [auto, c, foliage]
-    - [auto, c, npc]
-  - name: dead_flo_10
-    dir: world/dead/area_flo/flo_10
-    type: code
-    start: 0xED4220
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, entity]
-    - [auto, c, main]
-    - [auto, c, fountain]
-    - [auto, c, npc]
-    - [auto, c, waterfx]
-    - [auto, c, foliage]
-  - name: dead_flo_11
-    dir: world/dead/area_flo/flo_11
-    type: code
-    start: 0xED8E20
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, entity]
-  - name: dead_flo_12
-    dir: world/dead/area_flo/flo_12
-    type: code
-    start: 0xEDBFE0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-  - name: dead_flo_13
-    dir: world/dead/area_flo/flo_13
-    type: code
-    start: 0xEDE9C0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, entity]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, new_partner]
-  - name: dead_flo_14
-    dir: world/dead/area_flo/flo_14
-    type: code
-    start: 0xEE65B0
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, bubbles]
-    - [auto, c, npc]
-    - [auto, c, entity]
-    - [auto, c, logs]
-  - name: dead_flo_15
-    dir: world/dead/area_flo/flo_15
-    type: code
-    start: 0xEEB990
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, npc]
-    - [auto, c, entity]
-    - [auto, c, stairs]
-  - name: dead_flo_16
-    dir: world/dead/area_flo/flo_16
-    type: code
-    start: 0xEED100
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, vines]
-    - [auto, c, entity]
-    - [auto, c, npc]
-    - [auto, c, puzzle]
-  - name: dead_flo_17
-    dir: world/dead/area_flo/flo_17
-    type: code
-    start: 0xEF2610
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, logs]
-    - [auto, c, npc]
-    - [auto, c, entity]
-  - name: dead_flo_18
-    dir: world/dead/area_flo/flo_18
-    type: code
-    start: 0xEF7A80
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, main]
-    - [auto, c, machine]
-    - [auto, c, npc]
-    - [auto, c, foliage]
-  - name: dead_flo_19
-    dir: world/dead/area_flo/flo_19
-    type: code
-    start: 0xEFEB00
-    vram_class: map
-    dead_code: True
-    subsegments:
-    - [auto, c, settings]
-    - [auto, c, music]
-    - [auto, c, entity]
-    - [auto, c, main]
-    - [auto, c, clouds]
-    - [auto, c, beanstalk]
+    - [0xE9ECD0, bin] #bin all dead code so recompiler skips it
+# #################
+# ### Dead maps ###
+# #################
+#   #- [0xE9ECD0, bin, dead_kzn_11_end] # tail of dead kzn_11
+#   #- name: dead_kzn_11
+#   #  dir: world/dead/area_kzn/kzn_11
+#   #  type: code
+#   #  start: 0xE9AFF0
+#   #  vram_class: map
+#   #  subsegments:
+#   #  - [auto, c, settings]
+#   #  - [auto, c, main]
+#   #  - [auto, c, platforms]
+#   #  - [auto, c, npc]
+#   #  - [0xE9D650]
+#   - name: dead_kzn_17
+#     dir: world/dead/area_kzn/kzn_17
+#     type: code
+#     start: 0xEA0900
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, main]
+#     - [auto, c, entity]
+#     - [auto, c, npc]
+#     - [auto, c, tromp]
+#   - name: dead_kzn_18
+#     dir: world/dead/area_kzn/kzn_18
+#     type: code
+#     start: 0xEA6FD0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, entity]
+#   - name: dead_kzn_19
+#     dir: world/dead/area_kzn/kzn_19
+#     type: code
+#     start: 0xEA8AE0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc_settings]
+#     - [auto, c, npc]
+#     - [auto, c, eruption]
+#     - [auto, c, entity]
+#     - start: 0xEABB20
+#       type: .data
+#       name: npc
+#       subsegments:
+#       - [0xEABB20]
+#       - [0xEABFB8, ci4, ../../lava_piranha/vine, 64, 32]
+#       - [0xEAC3B8, palette, ../../lava_piranha/vine]
+#       - [0xEAC5B8, gfx_common, ../../lava_piranha/vine]
+#       - [0xEAC698]
+#   - name: dead_kzn_20
+#     dir: world/dead/area_kzn/kzn_20
+#     type: code
+#     start: 0xEB0E60
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#   - name: dead_kzn_22
+#     dir: world/dead/area_kzn/kzn_22
+#     type: code
+#     start: 0xEB5130
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, entity]
+#     - [auto, c, npc]
+#   - name: dead_kzn_23
+#     dir: world/dead/area_kzn/kzn_23
+#     type: code
+#     start: 0xEB7230
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#   - name: dead_flo_00
+#     dir: world/dead/area_flo/flo_00
+#     type: code
+#     start: 0xEB8E50
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, epilogue]
+#     - [auto, c, beanstalk]
+#     - [auto, c, entity]
+#   - name: dead_flo_03
+#     dir: world/dead/area_flo/flo_03
+#     type: code
+#     start: 0xEC2200
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, foliage]
+#     - [auto, c, entity]
+#   - name: dead_flo_07
+#     dir: world/dead/area_flo/flo_07
+#     type: code
+#     start: 0xEC71B0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#   - name: dead_flo_08
+#     dir: world/dead/area_flo/flo_08
+#     type: code
+#     start: 0xEC9D00
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, entity]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, foliage]
+#     - [auto, c, vines]
+#   - name: dead_flo_09
+#     dir: world/dead/area_flo/flo_09
+#     type: code
+#     start: 0xECFFF0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, vines]
+#     - [auto, c, foliage]
+#     - [auto, c, npc]
+#   - name: dead_flo_10
+#     dir: world/dead/area_flo/flo_10
+#     type: code
+#     start: 0xED4220
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, entity]
+#     - [auto, c, main]
+#     - [auto, c, fountain]
+#     - [auto, c, npc]
+#     - [auto, c, waterfx]
+#     - [auto, c, foliage]
+#   - name: dead_flo_11
+#     dir: world/dead/area_flo/flo_11
+#     type: code
+#     start: 0xED8E20
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, entity]
+#   - name: dead_flo_12
+#     dir: world/dead/area_flo/flo_12
+#     type: code
+#     start: 0xEDBFE0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#   - name: dead_flo_13
+#     dir: world/dead/area_flo/flo_13
+#     type: code
+#     start: 0xEDE9C0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, entity]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, new_partner]
+#   - name: dead_flo_14
+#     dir: world/dead/area_flo/flo_14
+#     type: code
+#     start: 0xEE65B0
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, bubbles]
+#     - [auto, c, npc]
+#     - [auto, c, entity]
+#     - [auto, c, logs]
+#   - name: dead_flo_15
+#     dir: world/dead/area_flo/flo_15
+#     type: code
+#     start: 0xEEB990
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, npc]
+#     - [auto, c, entity]
+#     - [auto, c, stairs]
+#   - name: dead_flo_16
+#     dir: world/dead/area_flo/flo_16
+#     type: code
+#     start: 0xEED100
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, vines]
+#     - [auto, c, entity]
+#     - [auto, c, npc]
+#     - [auto, c, puzzle]
+#   - name: dead_flo_17
+#     dir: world/dead/area_flo/flo_17
+#     type: code
+#     start: 0xEF2610
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, logs]
+#     - [auto, c, npc]
+#     - [auto, c, entity]
+#   - name: dead_flo_18
+#     dir: world/dead/area_flo/flo_18
+#     type: code
+#     start: 0xEF7A80
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, main]
+#     - [auto, c, machine]
+#     - [auto, c, npc]
+#     - [auto, c, foliage]
+#   - name: dead_flo_19
+#     dir: world/dead/area_flo/flo_19
+#     type: code
+#     start: 0xEFEB00
+#     vram_class: map
+#     dead_code: True
+#     subsegments:
+#     - [auto, c, settings]
+#     - [auto, c, music]
+#     - [auto, c, entity]
+#     - [auto, c, main]
+#     - [auto, c, clouds]
+#     - [auto, c, beanstalk]
 
   - [0xF00000, pm_sbn, audio]
   - [0x1942C40, bin, copy_1942C40] # copy of 0x1642C40 - 0x1643000
