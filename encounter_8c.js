@@ -1,6 +1,6 @@
 var encounter_8c =
 [
-    [ "check_conversation_trigger", "encounter_8c.html#a04f75757819eb0f98ab0c7a466fc4462", null ],
+    [ "check_conversation_trigger", "encounter_8c.html#addbaf68c0147607f46403de88fe24f09", null ],
     [ "create_encounters", "encounter_8c.html#a0076e01af86c41e208c1e38309494191", null ],
     [ "draw_encounters_conversation", "encounter_8c.html#ab2a71405c3c2aa7dc231eed4f72b4c45", null ],
     [ "draw_encounters_neutral", "encounter_8c.html#ac48ab3de60e0280f3b81aeae9c952c56", null ],
@@ -19,9 +19,9 @@ var encounter_8c =
     [ "update_encounters_neutral", "encounter_8c.html#a144887f92f000a8d4cf94d4f5c453d13", null ],
     [ "update_encounters_post_battle", "encounter_8c.html#a38d862ec1c4e834bef75a993e7583fbd", null ],
     [ "update_encounters_pre_battle", "encounter_8c.html#a67bae9b6d8d3bb6f09839b41bef20d70", null ],
-    [ "D_80077C40", "encounter_8c.html#aa14249d0ca42559c0d467ec33cbf4938", null ],
+    [ "D_80077C40", "encounter_8c.html#a623447636e03699de92861d61692028a", null ],
     [ "DefaultEnemyDrops", "encounter_8c.html#afa301de7f32f0656bc30eb99e942aafb", null ],
-    [ "EncounterStateChanged", "encounter_8c.html#abc14a7de4ec36c08ba7fa1342bd12634", null ],
+    [ "EncounterStateChanged", "encounter_8c.html#a3aec6e33bf6a37cc2ff88ed38cab3a65", null ],
     [ "EnemyNpcDefeat", "encounter_8c.html#a644aa0fd2e23365db1c5451c98e8e678", null ],
     [ "EnemyNpcHit", "encounter_8c.html#a8851a6020c30eb104483a5f30a72a892", null ],
     [ "EVS_FleeBattleDrops", "encounter_8c.html#ab765e0ec1ec747493acf5430dee7a257", null ],

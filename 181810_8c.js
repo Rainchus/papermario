@@ -24,6 +24,6 @@ var 181810_8c =
     [ "gSpeakingActorIdleAnim", "181810_8c.html#aed3cd4aeb11a632e1755411c4e5eaef0", null ],
     [ "gSpeakingActorPart", "181810_8c.html#a644587505de6927442dbed7e030e774c", null ],
     [ "gSpeakingActorPrintCtx", "181810_8c.html#a64988684b069ce658435bf96f003bf9a", null ],
-    [ "gSpeakingActorPrintIsDone", "181810_8c.html#aa4ca6964cdc291acd9eacc291189d5c4", null ],
+    [ "gSpeakingActorPrintIsDone", "181810_8c.html#a43601dfee0156c1fa35cc9c32edc3ef4", null ],
     [ "gSpeakingActorTalkAnim", "181810_8c.html#aee65279e598537c48c24d3d3719bd926", null ]
 ];

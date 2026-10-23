@@ -17,7 +17,7 @@ var engine2__post__bss_8c =
     [ "D_80164000", "engine2__post__bss_8c.html#a794d62bdc8654c5ed065ef79c60cc581", null ],
     [ "gCollisionStatus", "engine2__post__bss_8c.html#a41aad8f916c9d26d2f6b12984e94e93f", null ],
     [ "gCurrentHiddenPanels", "engine2__post__bss_8c.html#af104fa4b29f92ce43224e3b6a0ecfad0", null ],
-    [ "gMusicSettings", "engine2__post__bss_8c.html#a422366fd400edba66307e0cca08b2009", null ],
+    [ "gMusicControlData", "engine2__post__bss_8c.html#af8e7429da04fccb92d1f99e7324e28a4", null ],
     [ "gWindows", "engine2__post__bss_8c.html#aa291234a2b787c573aabc89e37a6bd48", null ],
     [ "ScreenOverlays", "engine2__post__bss_8c.html#a8f4b498d25b83557e6168aa9fb972b8c", null ],
     [ "TextureHandles", "engine2__post__bss_8c.html#a3686639fbf6f78fa82d9115b1ebbab75", null ]

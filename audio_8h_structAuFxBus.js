@@ -5,7 +5,7 @@ var audio_8h_structAuFxBus =
     [ "fxR", "audio_8h.html#a969cfaf6a10e3cfaffafad1267b6d3a8", null ],
     [ "gain", "audio_8h.html#a1819e6e156f8567a4e20ff62092065e7", null ],
     [ "head", "audio_8h.html#ab11c0ee89c99f6f93b8b767102aa1897", null ],
-    [ "tail", "audio_8h.html#aa7da1f2436409d0206064e91aad2a09c", null ],
-    [ "unk_02", "audio_8h.html#a017d661d36549dc5f60625538b0ff8f4", null ],
-    [ "unk_0D", "audio_8h.html#a8c224bbf09fb9b855b3f0e2f35b13f96", null ]
+    [ "pad_02", "audio_8h.html#a5a46a86ceef1e1ecc2ba1115ef1c6922", null ],
+    [ "pad_0D", "audio_8h.html#afcab4a3510109e24583d2a86f13f82e9", null ],
+    [ "tail", "audio_8h.html#aa7da1f2436409d0206064e91aad2a09c", null ]
 ];

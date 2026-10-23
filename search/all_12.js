@@ -181,7 +181,7 @@ var searchData=
   ['jrtroopa_2eh_178',['JrTroopa.h',['../JrTroopa_8h.html',1,'']]],
   ['jrtroopa_2einc_2ec_179',['JrTroopa.inc.c',['../JrTroopa_8inc_8c.html',1,'']]],
   ['jump_180',['jump',['../common__structs_8h.html#a452e610022799d23580b0462400420bd',1,'FollowAnims::jump'],['../src_2battle_2battle_8h.html#a4e6a7bf6dc26e1181ad91e0c4e18e428',1,'ActorSounds::jump'],['../common__structs_8h.html#aba535ef5a9f7b8bc875812bb081286bb',1,'PartnerAnimations.__unnamed29__::jump']]],
-  ['jump_181',['Jump',['../audio_8h.html#a6c5193b4617f94e847b86d67163605ba',1,'SeqArgs::Jump'],['../script__api_2macros_8h.html#afdd4892f4fd0cb748f70847293dcd201',1,'Jump:&#160;macros.h']]],
+  ['jump_181',['Jump',['../script__api_2macros_8h.html#afdd4892f4fd0cb748f70847293dcd201',1,'macros.h']]],
   ['jump_2ec_182',['jump.c',['../battle_2action__cmd_2jump_8c.html',1,'(Global Namespace)'],['../world_2action_2jump_8c.html',1,'(Global Namespace)']]],
   ['jump_2eh_183',['jump.h',['../jump_8h.html',1,'']]],
   ['jump_5fcharge_5f0_2ec_184',['jump_charge_0.c',['../jump__charge__0_8c.html',1,'']]],

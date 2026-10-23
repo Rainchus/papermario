@@ -1,6 +1,6 @@
 var screen__render__util_8c =
 [
-    [ "appendGfx_darkness_stencil", "screen__render__util_8c.html#aaa251ad1950fbb0731239d9490994d54", null ],
+    [ "appendGfx_darkness_stencil", "screen__render__util_8c.html#ad1cc2a91131ce9126b590a7a1359bf12", null ],
     [ "appendGfx_draw_prev_frame_buffer", "screen__render__util_8c.html#a6e489b3b36a8052d80a28f613a20dde1", null ],
     [ "appendGfx_screen_transition_stencil", "screen__render__util_8c.html#a465dc73b5b644da3f206d07ce71ae31e", null ],
     [ "draw_prev_frame_buffer_at_screen_pos", "screen__render__util_8c.html#a9b83bad41eae5f54dfc666e2f6ac3bc9", null ],

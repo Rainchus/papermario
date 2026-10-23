@@ -23,7 +23,7 @@ var 101b90__len__8f0_8c =
     [ "PlayerRasterLoadDescNumLoaded", "101b90__len__8f0_8c.html#ae771958f7ed415d1d1bd9ff4e0a7d6f5", null ],
     [ "PlayerRasterMaxSize", "101b90__len__8f0_8c.html#a60e9d82df9b544bd732cbae77f653515", null ],
     [ "PlayerSpriteRasterSets", "101b90__len__8f0_8c.html#ae1c37832ee1aec7e384efef790dfe9a3", null ],
-    [ "spr_allocateBtlComponentsOnWorldHeap", "101b90__len__8f0_8c.html#a69f9397b49975e41387edf24b15fc722", null ],
     [ "spr_asset_entry", "101b90__len__8f0_8c.html#a2969fea3e72567f5dea5a2482f5a5712", null ],
-    [ "SpriteDataHeader", "101b90__len__8f0_8c.html#aa8bca2d8cb561f75d4166d590b44fcc9", null ]
+    [ "SpriteDataHeader", "101b90__len__8f0_8c.html#aa8bca2d8cb561f75d4166d590b44fcc9", null ],
+    [ "SpriteUseGeneralHeap", "101b90__len__8f0_8c.html#abe03f48f5ecc5368d49b3aed53ba88d0", null ]
 ];

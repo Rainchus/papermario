@@ -31,7 +31,7 @@ var action__cmd_8h =
       [ "wrongButtonPressed", "action__cmd_8h.html#abb3c15ac99165b7c4c9b2f5bc1bb46e3", null ],
       [ "wrongInputFrameCounter", "action__cmd_8h.html#a0774fb6821fb5a9d5ea83bee2f5f5d4f", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__", "action__cmd_8h.html#unionActionCommandStatus_8____unnamed102____", [
+    [ "ActionCommandStatus.__unnamed100__", "action__cmd_8h.html#unionActionCommandStatus_8____unnamed100____", [
       [ "airRaid", "action__cmd_8h.html#a217626ca3fd488c8768295d0e0af4d53", null ],
       [ "any", "action__cmd_8h.html#a100b8cad7cf2a56f6df78f171f97a1ec", null ],
       [ "breakFree", "action__cmd_8h.html#a64eb5aa3f2a95727d1529acaac3eb825", null ],
@@ -44,44 +44,44 @@ var action__cmd_8h =
       [ "threeChances", "action__cmd_8h.html#a4f306dde92a8942b5ad7c302017e1db7", null ],
       [ "tidalWave", "action__cmd_8h.html#aeba90977c7f01c03356e265d14a0a4a9", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.any", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8any", [
+    [ "ActionCommandStatus.__unnamed100__.any", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8any", [
       [ "unk_5C", "action__cmd_8h.html#aa90e1492c75ce27e272cdb3eadfabe74", null ],
       [ "unk_5D", "action__cmd_8h.html#a4681c42e566eb74e635f71362faf6299", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.airRaid", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8airRaid", [
+    [ "ActionCommandStatus.__unnamed100__.airRaid", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8airRaid", [
       [ "holdingLeft", "action__cmd_8h.html#a97ec895dad1887ac211f3ecbc981bee0", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.breakFree", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8breakFree", [
+    [ "ActionCommandStatus.__unnamed100__.breakFree", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8breakFree", [
       [ "dir", "action__cmd_8h.html#a736007832d2167baaae763fd3a3f3cf1", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.fireShell", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8fireShell", [
+    [ "ActionCommandStatus.__unnamed100__.fireShell", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8fireShell", [
       [ "holdingLeft", "action__cmd_8h.html#a97ec895dad1887ac211f3ecbc981bee0", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.flee", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8flee", [
+    [ "ActionCommandStatus.__unnamed100__.flee", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8flee", [
       [ "dir", "action__cmd_8h.html#a736007832d2167baaae763fd3a3f3cf1", null ],
       [ "drainDelay", "action__cmd_8h.html#a1379016b475879ddf3d2ce6cc462c6ba", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.smack", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8smack", [
+    [ "ActionCommandStatus.__unnamed100__.smack", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8smack", [
       [ "holdingLeft", "action__cmd_8h.html#a97ec895dad1887ac211f3ecbc981bee0", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.spinySurge", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8spinySurge", [
+    [ "ActionCommandStatus.__unnamed100__.spinySurge", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8spinySurge", [
       [ "tossState", "action__cmd_8h.html#a6e65fc4e99e55751e9a5dd47fa19b578", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.spook", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8spook", [
+    [ "ActionCommandStatus.__unnamed100__.spook", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8spook", [
       [ "holdingLeft", "action__cmd_8h.html#a97ec895dad1887ac211f3ecbc981bee0", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.squirt", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8squirt", [
+    [ "ActionCommandStatus.__unnamed100__.squirt", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8squirt", [
       [ "draining", "action__cmd_8h.html#a5591c55cc1f76766490b4d83ba657c95", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.threeChances", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8threeChances", [
+    [ "ActionCommandStatus.__unnamed100__.threeChances", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8threeChances", [
       [ "hadCorrectTiming", "action__cmd_8h.html#aca62f50c01e67f6d850d8915028b7938", null ],
       [ "time", "action__cmd_8h.html#a07cc694b9b3fc636710fa08b6922c42b", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed102__.tidalWave", "action__cmd_8h.html#structActionCommandStatus_8____unnamed102_____8tidalWave", [
+    [ "ActionCommandStatus.__unnamed100__.tidalWave", "action__cmd_8h.html#structActionCommandStatus_8____unnamed100_____8tidalWave", [
       [ "inputCount", "action__cmd_8h.html#a2476191932897a325a00a9a6b6b0f32d", null ],
       [ "prevButton", "action__cmd_8h.html#a0d94204b3b220c99dd819e0e0188d654", null ]
     ] ],
-    [ "ActionCommandStatus.__unnamed104__", "action__cmd_8h.html#unionActionCommandStatus_8____unnamed104____", [
+    [ "ActionCommandStatus.__unnamed102__", "action__cmd_8h.html#unionActionCommandStatus_8____unnamed102____", [
       [ "statusChance", "action__cmd_8h.html#ac0402b60984614700dc5b0bb76674949", null ],
       [ "variation", "action__cmd_8h.html#a64037a31cae3aa224737c3dcdfb7bd46", null ]
     ] ],

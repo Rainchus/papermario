@@ -102,6 +102,7 @@ $(function(){initNavTree('sfx__player_8c.html',''); initResizable(); });
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
@@ -110,66 +111,71 @@ $(function(){initNavTree('sfx__player_8c.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structMusicTriggeredSound" id="r_structMusicTriggeredSound"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#structMusicTriggeredSound">MusicTriggeredSound</a></td></tr>
+<tr class="separator:structMusicTriggeredSound"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4dae1c073ec21afc62864ecaa1d02ed1" id="r_a4dae1c073ec21afc62864ecaa1d02ed1"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dae1c073ec21afc62864ecaa1d02ed1">SEC</a>(x)&#160;&#160;&#160;((s32)(x * 1000000) / <a class="el" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="el" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>)</td></tr>
+<tr class="memitem:a4dae1c073ec21afc62864ecaa1d02ed1" id="r_a4dae1c073ec21afc62864ecaa1d02ed1"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dae1c073ec21afc62864ecaa1d02ed1">SEC</a>(x)&#160;&#160;&#160;(((<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)(x * 1000000) / <a class="el" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="el" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>)</td></tr>
 <tr class="separator:a4dae1c073ec21afc62864ecaa1d02ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8782963bf1ae09a943186cd5280b9d5f" id="r_a8782963bf1ae09a943186cd5280b9d5f"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8782963bf1ae09a943186cd5280b9d5f">NEXT_CMD</a>&#160;&#160;&#160;<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a>--; <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">if</a> (<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a> &lt;= 0 ) { <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">break</a>; } cmdList += 2;</td></tr>
-<tr class="separator:a8782963bf1ae09a943186cd5280b9d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b165bda97fd9ec7536a57d472825847" id="r_a4b165bda97fd9ec7536a57d472825847"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b165bda97fd9ec7536a57d472825847">NEXT_POLY_TRACK</a>&#160;&#160;&#160;<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a>--; <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">if</a> (<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a> &lt;= 0 ) { <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">break</a>; } cmdList += 2;</td></tr>
+<tr class="separator:a4b165bda97fd9ec7536a57d472825847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ac8afe156ed2a4abce1d50b697a5d9288" id="r_ac8afe156ed2a4abce1d50b697a5d9288"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288">SoundEffectParamFlags</a> { <br />
-&#160;&#160;<a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a8441cbbf50ea9f2be96d33be11973fbb">SFX_PARAM_MODE_ADVANCED</a> = 0x00000000
+&#160;&#160;<a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288ab880ecab0407740fa0323e4bf751497c">SFX_PARAM_MODE_BASIC</a> = 0x00000000
 , <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a1f9505b04ec775c3d94ec8674cf5ce74">SFX_PARAM_MODE_SEQUENCE</a> = 0x00000001
-, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288ab880ecab0407740fa0323e4bf751497c">SFX_PARAM_MODE_BASIC</a> = 0x00000002
-, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a345b0fea51166294f4acb340431cdb09">SFX_PARAM_FLAG_MODE</a> = 0x00000003
+, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a05f7bfb8ced612c22a704c432b9d6056">SFX_PARAM_MODE_COMPACT</a> = 0x00000002
+, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a241512a5bfaea4224eac71db27b06b90">SFX_PARAM_MODE_MASK</a> = 0x00000003
 , <br />
-&#160;&#160;<a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288ac3a2a7035b08bebc603abb2ca667634d">SFX_PARAM_FLAG_VOLUME</a> = 0x00000004
-, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a7e61617eb039fd42fae368ac921bb2e8">SFX_PARAM_FLAG_PAN</a> = 0x00000008
-, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a4f59eac7a98823ef91551e8deea4c57d">SFX_PARAM_FLAG_PITCH</a> = 0x00000010
-, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a26462867f7919207cd505562c6a141b1">SFX_PARAM_FLAG_FIXED_REVERB</a> = 0x00000020
+&#160;&#160;<a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a5842a3d9594dfa0b8ef59fe89ebd354f">SFX_PARAM_LOCK_VOLUME</a> = 0x00000004
+, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a5aef943299ac74dae753b1f41f09afeb">SFX_PARAM_LOCK_PAN</a> = 0x00000008
+, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288a1ff19e957a05d779e54df721776021e1">SFX_PARAM_LOCK_PITCH</a> = 0x00000010
+, <a class="el" href="#ac8afe156ed2a4abce1d50b697a5d9288ac84904dce193ce6fd4ad17be64f229b3">SFX_PARAM_LOCK_REVERB</a> = 0x00000020
 <br />
  }</td></tr>
 <tr class="separator:ac8afe156ed2a4abce1d50b697a5d9288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ace063e3c1a2c657b59341f7845d407b1" id="r_ace063e3c1a2c657b59341f7845d407b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace063e3c1a2c657b59341f7845d407b1">au_sfx_init</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> priority, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> busId, <a class="el" href="audio_8h.html#structAuGlobals">AuGlobals</a> *globals, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">minVoiceIdx</a>)</td></tr>
-<tr class="separator:ace063e3c1a2c657b59341f7845d407b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486f6b09981f0568d717c7beb7757647" id="r_a486f6b09981f0568d717c7beb7757647"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a486f6b09981f0568d717c7beb7757647">au_sfx_init</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> priority, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> busID, <a class="el" href="audio_8h.html#structAuGlobals">AuGlobals</a> *globals, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">minVoiceIdx</a>)</td></tr>
+<tr class="separator:a486f6b09981f0568d717c7beb7757647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58af23e304c33519539528a13409523" id="r_af58af23e304c33519539528a13409523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af58af23e304c33519539528a13409523">au_sfx_load_groups_from_SEF</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>)</td></tr>
 <tr class="separator:af58af23e304c33519539528a13409523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc4ac0d23a0b688eb00d1d732bdebcc0" id="r_acc4ac0d23a0b688eb00d1d732bdebcc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc4ac0d23a0b688eb00d1d732bdebcc0">au_sfx_clear_queue</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>)</td></tr>
 <tr class="separator:acc4ac0d23a0b688eb00d1d732bdebcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a8695793f9b216108aae4aaafe41ff" id="r_ab1a8695793f9b216108aae4aaafe41ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1a8695793f9b216108aae4aaafe41ff">au_sfx_enqueue_event</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u32</a> soundID, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a> volume, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a> pitchShift, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> pan)</td></tr>
 <tr class="separator:ab1a8695793f9b216108aae4aaafe41ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8bd833b2d77f80ef7cb8be525ff60f0" id="r_aa8bd833b2d77f80ef7cb8be525ff60f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8bd833b2d77f80ef7cb8be525ff60f0">au_sfx_update_main</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>)</td></tr>
-<tr class="separator:aa8bd833b2d77f80ef7cb8be525ff60f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad45602caf48e979d2814e52a5ce6bc1f" id="r_ad45602caf48e979d2814e52a5ce6bc1f"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad45602caf48e979d2814e52a5ce6bc1f">au_sfx_set_reverb_type</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, s32 <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">arg1</a>)</td></tr>
+<tr class="memitem:afa66b9aded5d862402be38e0345970e4" id="r_afa66b9aded5d862402be38e0345970e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa66b9aded5d862402be38e0345970e4">au_sfx_begin_video_frame</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>)</td></tr>
+<tr class="separator:afa66b9aded5d862402be38e0345970e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45602caf48e979d2814e52a5ce6bc1f" id="r_ad45602caf48e979d2814e52a5ce6bc1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad45602caf48e979d2814e52a5ce6bc1f">au_sfx_set_reverb_type</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> arg1)</td></tr>
 <tr class="separator:ad45602caf48e979d2814e52a5ce6bc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29d213fa303e88a49b163c774c736dbf" id="r_a29d213fa303e88a49b163c774c736dbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d213fa303e88a49b163c774c736dbf">au_sfx_set_state</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, s32 state)</td></tr>
+<tr class="memitem:a29d213fa303e88a49b163c774c736dbf" id="r_a29d213fa303e88a49b163c774c736dbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d213fa303e88a49b163c774c736dbf">au_sfx_set_state</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> state)</td></tr>
 <tr class="separator:a29d213fa303e88a49b163c774c736dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76ba494e2862e33bc17a8937781ce8ac" id="r_a76ba494e2862e33bc17a8937781ce8ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76ba494e2862e33bc17a8937781ce8ac">au_sfx_load_sound</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="audio_8h.html#structSoundSFXEntry">SoundSFXEntry</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">entry</a>, <a class="el" href="audio_8h.html#structSoundManagerCustomCmdList">SoundManagerCustomCmdList</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">customSEF</a>)</td></tr>
-<tr class="separator:a76ba494e2862e33bc17a8937781ce8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8a975b92e489cd7eed65621624067c" id="r_a6f8a975b92e489cd7eed65621624067c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f8a975b92e489cd7eed65621624067c">au_sfx_manager_update</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>)</td></tr>
-<tr class="separator:a6f8a975b92e489cd7eed65621624067c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac716035c480d973177b7d519e16fa714" id="r_ac716035c480d973177b7d519e16fa714"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac716035c480d973177b7d519e16fa714">au_sfx_try_sound</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>, <a class="el" href="audio_8h.html#structSoundRequest">SoundRequest</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">request</a>, <a class="el" href="audio_8h.html#structSoundManagerCustomCmdList">SoundManagerCustomCmdList</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">customSEF</a>)</td></tr>
+<tr class="separator:ac716035c480d973177b7d519e16fa714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b9aeca720c199e4f82488b9913d36cf" id="r_a3b9aeca720c199e4f82488b9913d36cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b9aeca720c199e4f82488b9913d36cf">au_sfx_manager_audio_frame_update</a> (<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">manager</a>)</td></tr>
+<tr class="separator:a3b9aeca720c199e4f82488b9913d36cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9a24869070c931662ec4240d58409d2d" id="r_a9a24869070c931662ec4240d58409d2d"><td class="memItemLeft" align="right" valign="top">u16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a24869070c931662ec4240d58409d2d">DummyInstrumentPredictor</a> [32]</td></tr>
-<tr class="separator:a9a24869070c931662ec4240d58409d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cc3d6f395d8450642d7d7fbef856e98" id="r_a9cc3d6f395d8450642d7d7fbef856e98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cc3d6f395d8450642d7d7fbef856e98">DummyInstrumentBase</a> [190]</td></tr>
-<tr class="separator:a9cc3d6f395d8450642d7d7fbef856e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24384f221725d2b62b2bfe340784393f" id="r_a24384f221725d2b62b2bfe340784393f"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24384f221725d2b62b2bfe340784393f">CUSTOM_SMALL_ROOM_PARAMS</a> []</td></tr>
+<tr class="memitem:a59cd9ffe4dd467b74c8ece90fac3d04c" id="r_a59cd9ffe4dd467b74c8ece90fac3d04c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59cd9ffe4dd467b74c8ece90fac3d04c">DummyInstrumentCodebook</a> [32]</td></tr>
+<tr class="separator:a59cd9ffe4dd467b74c8ece90fac3d04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace61b6442f77fdbdc6e637b7c5c49c7a" id="r_ace61b6442f77fdbdc6e637b7c5c49c7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace61b6442f77fdbdc6e637b7c5c49c7a">DummyInstrumentWavData</a> [190]</td></tr>
+<tr class="separator:ace61b6442f77fdbdc6e637b7c5c49c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24384f221725d2b62b2bfe340784393f" id="r_a24384f221725d2b62b2bfe340784393f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24384f221725d2b62b2bfe340784393f">CUSTOM_SMALL_ROOM_PARAMS</a> []</td></tr>
 <tr class="separator:a24384f221725d2b62b2bfe340784393f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09d2dca330e28f672adc1fc70ffaec55" id="r_a09d2dca330e28f672adc1fc70ffaec55"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09d2dca330e28f672adc1fc70ffaec55">CUSTOM_ECHO_PARAMS_1</a> []</td></tr>
+<tr class="memitem:a09d2dca330e28f672adc1fc70ffaec55" id="r_a09d2dca330e28f672adc1fc70ffaec55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09d2dca330e28f672adc1fc70ffaec55">CUSTOM_ECHO_PARAMS_1</a> []</td></tr>
 <tr class="separator:a09d2dca330e28f672adc1fc70ffaec55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad8ed6349417df3a6d7a74e91a15d949" id="r_aad8ed6349417df3a6d7a74e91a15d949"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad8ed6349417df3a6d7a74e91a15d949">CUSTOM_ECHO_PARAMS_2</a> []</td></tr>
+<tr class="memitem:aad8ed6349417df3a6d7a74e91a15d949" id="r_aad8ed6349417df3a6d7a74e91a15d949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad8ed6349417df3a6d7a74e91a15d949">CUSTOM_ECHO_PARAMS_2</a> []</td></tr>
 <tr class="separator:aad8ed6349417df3a6d7a74e91a15d949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75e52419868bb76c0cc9ee052ecc55b7" id="r_a75e52419868bb76c0cc9ee052ecc55b7"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e52419868bb76c0cc9ee052ecc55b7">CUSTOM_ECHO_PARAMS_3</a> []</td></tr>
+<tr class="memitem:a75e52419868bb76c0cc9ee052ecc55b7" id="r_a75e52419868bb76c0cc9ee052ecc55b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75e52419868bb76c0cc9ee052ecc55b7">CUSTOM_ECHO_PARAMS_3</a> []</td></tr>
 <tr class="separator:a75e52419868bb76c0cc9ee052ecc55b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae03a42fced5b4d7df0c3dfececc4ec0e" id="r_ae03a42fced5b4d7df0c3dfececc4ec0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="audio_8h.html#structAlUnkGemini">AlUnkGemini</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae03a42fced5b4d7df0c3dfececc4ec0e">D_80078370</a> []</td></tr>
-<tr class="separator:ae03a42fced5b4d7df0c3dfececc4ec0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a383a4f97ecbbe77be2e6c01dc35f2793" id="r_a383a4f97ecbbe77be2e6c01dc35f2793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#structMusicTriggeredSound">MusicTriggeredSound</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383a4f97ecbbe77be2e6c01dc35f2793">MusicSounds</a> []</td></tr>
+<tr class="separator:a383a4f97ecbbe77be2e6c01dc35f2793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca859ef75da5fd651e51ba79f65aebb" id="r_a8ca859ef75da5fd651e51ba79f65aebb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="audio_8h.html#structEnvelopePreset">EnvelopePreset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ca859ef75da5fd651e51ba79f65aebb">SFXEnvelopeFast</a></td></tr>
 <tr class="separator:a8ca859ef75da5fd651e51ba79f65aebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a704ff3887cb7a37e9a77c07ca6f06a66" id="r_a704ff3887cb7a37e9a77c07ca6f06a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a704ff3887cb7a37e9a77c07ca6f06a66">SFXEnvelopeFastData</a> []</td></tr>
@@ -178,7 +184,7 @@ Variables</h2></td></tr>
 <tr class="separator:aabcac232f8d651937bdefb1b428fa872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ad2f16a9404bfc04ce79386ec724ada" id="r_a9ad2f16a9404bfc04ce79386ec724ada"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad2f16a9404bfc04ce79386ec724ada">SFXEnvelopeSlowData</a> []</td></tr>
 <tr class="separator:a9ad2f16a9404bfc04ce79386ec724ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac820af5f3fc6b537f34063ec419ff2fe" id="r_ac820af5f3fc6b537f34063ec419ff2fe"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac820af5f3fc6b537f34063ec419ff2fe">D_800783B0</a> []</td></tr>
+<tr class="memitem:ac820af5f3fc6b537f34063ec419ff2fe" id="r_ac820af5f3fc6b537f34063ec419ff2fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac820af5f3fc6b537f34063ec419ff2fe">D_800783B0</a> []</td></tr>
 <tr class="separator:ac820af5f3fc6b537f34063ec419ff2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a1dd3410f19de36a7b317982a96a5a9" id="r_a7a1dd3410f19de36a7b317982a96a5a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="audio_8h.html#structEnvelopePreset">EnvelopePreset</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a1dd3410f19de36a7b317982a96a5a9">SFXEnvelopePresets</a> []</td></tr>
 <tr class="separator:a7a1dd3410f19de36a7b317982a96a5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,12 +196,13 @@ Variables</h2></td></tr>
 <tr class="separator:ad657ca6fe00dce111cf24639050cc628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e90d196441ac775cac0af1b6db7a366" id="r_a8e90d196441ac775cac0af1b6db7a366"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e90d196441ac775cac0af1b6db7a366">SeqCmdArgCounts</a> []</td></tr>
 <tr class="separator:a8e90d196441ac775cac0af1b6db7a366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a464d4e8753d08c66a0790329be32399e" id="r_a464d4e8753d08c66a0790329be32399e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a464d4e8753d08c66a0790329be32399e">BgmDivisors</a> []</td></tr>
-<tr class="separator:a464d4e8753d08c66a0790329be32399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ad8dd12540f5659daef59650d80567" id="r_ac7ad8dd12540f5659daef59650d80567"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7ad8dd12540f5659daef59650d80567">BgmTicksRates</a> []</td></tr>
+<tr class="separator:ac7ad8dd12540f5659daef59650d80567"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac73e7a1cf7f6f2d859cbdf3524dbabf9" id="r_ac73e7a1cf7f6f2d859cbdf3524dbabf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac73e7a1cf7f6f2d859cbdf3524dbabf9">BlankMseqData</a> []</td></tr>
 <tr class="separator:ac73e7a1cf7f6f2d859cbdf3524dbabf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68c3b8329a3996a68dc2f4ea85a8ce64" id="r_a68c3b8329a3996a68dc2f4ea85a8ce64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c3b8329a3996a68dc2f4ea85a8ce64">D_80078530</a> []</td></tr>
-<tr class="separator:a68c3b8329a3996a68dc2f4ea85a8ce64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3bd3407a659d761f0b4910f30f3ad74" id="r_ac3bd3407a659d761f0b4910f30f3ad74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3bd3407a659d761f0b4910f30f3ad74">PerceptualVolumeLevels</a> []</td></tr>
+<tr class="memdesc:ac3bd3407a659d761f0b4910f30f3ad74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Volume steps use squared values so each level represents linear power increase, matching loudness perception.  <br /></td></tr>
+<tr class="separator:ac3bd3407a659d761f0b4910f30f3ad74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a324e541778e92950fe07aa03ed787980" id="r_a324e541778e92950fe07aa03ed787980"><td class="memItemLeft" align="right" valign="top"><a class="el" href="audio_8h.html#structEnvelopePreset">EnvelopePreset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a324e541778e92950fe07aa03ed787980">DummyInstrumentEnvelope</a></td></tr>
 <tr class="separator:a324e541778e92950fe07aa03ed787980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c70e2b266b98fcd3b425e283cd6a39a" id="r_a0c70e2b266b98fcd3b425e283cd6a39a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c70e2b266b98fcd3b425e283cd6a39a">EnvelopePressDefault</a> []</td></tr>
@@ -204,28 +211,64 @@ Variables</h2></td></tr>
 <tr class="separator:a0c1589ec27846c05ae2679883fb37995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a414e7c0a08cee9810a2c58d3d961fa40" id="r_a414e7c0a08cee9810a2c58d3d961fa40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a414e7c0a08cee9810a2c58d3d961fa40">EnvelopeReleaseDefaultFast</a> []</td></tr>
 <tr class="separator:a414e7c0a08cee9810a2c58d3d961fa40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08ba86dfe4c54d7d71f74b2fed186e63" id="r_a08ba86dfe4c54d7d71f74b2fed186e63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08ba86dfe4c54d7d71f74b2fed186e63">D_80078558</a> []</td></tr>
-<tr class="separator:a08ba86dfe4c54d7d71f74b2fed186e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0548fa06cd771adc6b06cb992c72a9" id="r_a9a0548fa06cd771adc6b06cb992c72a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a0548fa06cd771adc6b06cb992c72a9">BgmCustomEnvLookup</a> []</td></tr>
+<tr class="separator:a9a0548fa06cd771adc6b06cb992c72a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62051d01cf9e6998ccd8a09b1411dcfa" id="r_a62051d01cf9e6998ccd8a09b1411dcfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62051d01cf9e6998ccd8a09b1411dcfa">AmbientSoundIDtoMSEQFileIndex</a> []</td></tr>
 <tr class="separator:a62051d01cf9e6998ccd8a09b1411dcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3abe86041aacd34e84254ae369c4a12a" id="r_a3abe86041aacd34e84254ae369c4a12a"><td class="memItemLeft" align="right" valign="top">s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3abe86041aacd34e84254ae369c4a12a">AuEnvelopeIntervals</a> []</td></tr>
+<tr class="memitem:a3abe86041aacd34e84254ae369c4a12a" id="r_a3abe86041aacd34e84254ae369c4a12a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3abe86041aacd34e84254ae369c4a12a">AuEnvelopeIntervals</a> []</td></tr>
 <tr class="separator:a3abe86041aacd34e84254ae369c4a12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f183c6dd0c44ce0b2a787c227c9e2d7" id="r_a8f183c6dd0c44ce0b2a787c227c9e2d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f183c6dd0c44ce0b2a787c227c9e2d7">AlTuneScaling</a> []</td></tr>
 <tr class="separator:a8f183c6dd0c44ce0b2a787c227c9e2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92bf05073240b362f92daff62569a0ae" id="r_a92bf05073240b362f92daff62569a0ae"><td class="memItemLeft" align="right" valign="top">s32 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92bf05073240b362f92daff62569a0ae">AU_FX_CUSTOM_PARAMS</a> [0]</td></tr>
+<tr class="memitem:a92bf05073240b362f92daff62569a0ae" id="r_a92bf05073240b362f92daff62569a0ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92bf05073240b362f92daff62569a0ae">AU_FX_CUSTOM_PARAMS</a> [0]</td></tr>
 <tr class="separator:a92bf05073240b362f92daff62569a0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd91d4f89e551fdb9fad9b29190f3b0c" id="r_acd91d4f89e551fdb9fad9b29190f3b0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd91d4f89e551fdb9fad9b29190f3b0c">CurrentSefCmdHandler</a> )(<a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *, <a class="el" href="audio_8h.html#structSoundPlayer">SoundPlayer</a> *)</td></tr>
 <tr class="separator:acd91d4f89e551fdb9fad9b29190f3b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a8782963bf1ae09a943186cd5280b9d5f" name="a8782963bf1ae09a943186cd5280b9d5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8782963bf1ae09a943186cd5280b9d5f">&#9670;&#160;</a></span>NEXT_CMD</h2>
+<hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structMusicTriggeredSound" id="structMusicTriggeredSound"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structMusicTriggeredSound">&#9670;&#160;</a></span>MusicTriggeredSound</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a> NEXT_CMD&#160;&#160;&#160;<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a>--; <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">if</a> (<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a> &lt;= 0 ) { <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">break</a>; } cmdList += 2;</td>
+          <td class="memname">struct MusicTriggeredSound</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a53dee49adfcc62b9ce01959917527eb8" name="a53dee49adfcc62b9ce01959917527eb8"></a><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a></td>
+<td class="fieldname">
+flags</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="abbc179f1d88f4164501d660a60f8350b" name="abbc179f1d88f4164501d660a60f8350b"></a><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u16</a></td>
+<td class="fieldname">
+prereq</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a330c630a5d8aa1407df0d3f6dfae19af" name="a330c630a5d8aa1407df0d3f6dfae19af"></a><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u16</a></td>
+<td class="fieldname">
+sound</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a4b165bda97fd9ec7536a57d472825847" name="a4b165bda97fd9ec7536a57d472825847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b165bda97fd9ec7536a57d472825847">&#9670;&#160;</a></span>NEXT_POLY_TRACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a> NEXT_POLY_TRACK&#160;&#160;&#160;<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a>--; <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">if</a> (<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">trackCount</a> &lt;= 0 ) { <a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">break</a>; } cmdList += 2;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -242,7 +285,7 @@ Variables</h2></td></tr>
           <td class="memname">#<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">define</a> SEC</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname">x</span></td><td>)</td>
-          <td>&#160;&#160;&#160;((s32)(x * 1000000) / <a class="el" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="el" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>)</td>
+          <td>&#160;&#160;&#160;(((<a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)(x * 1000000) / <a class="el" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="el" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -262,19 +305,38 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a8441cbbf50ea9f2be96d33be11973fbb" name="ac8afe156ed2a4abce1d50b697a5d9288a8441cbbf50ea9f2be96d33be11973fbb"></a>SFX_PARAM_MODE_ADVANCED&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288ab880ecab0407740fa0323e4bf751497c" name="ac8afe156ed2a4abce1d50b697a5d9288ab880ecab0407740fa0323e4bf751497c"></a>SFX_PARAM_MODE_BASIC&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a1f9505b04ec775c3d94ec8674cf5ce74" name="ac8afe156ed2a4abce1d50b697a5d9288a1f9505b04ec775c3d94ec8674cf5ce74"></a>SFX_PARAM_MODE_SEQUENCE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288ab880ecab0407740fa0323e4bf751497c" name="ac8afe156ed2a4abce1d50b697a5d9288ab880ecab0407740fa0323e4bf751497c"></a>SFX_PARAM_MODE_BASIC&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a345b0fea51166294f4acb340431cdb09" name="ac8afe156ed2a4abce1d50b697a5d9288a345b0fea51166294f4acb340431cdb09"></a>SFX_PARAM_FLAG_MODE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288ac3a2a7035b08bebc603abb2ca667634d" name="ac8afe156ed2a4abce1d50b697a5d9288ac3a2a7035b08bebc603abb2ca667634d"></a>SFX_PARAM_FLAG_VOLUME&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a7e61617eb039fd42fae368ac921bb2e8" name="ac8afe156ed2a4abce1d50b697a5d9288a7e61617eb039fd42fae368ac921bb2e8"></a>SFX_PARAM_FLAG_PAN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a4f59eac7a98823ef91551e8deea4c57d" name="ac8afe156ed2a4abce1d50b697a5d9288a4f59eac7a98823ef91551e8deea4c57d"></a>SFX_PARAM_FLAG_PITCH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a26462867f7919207cd505562c6a141b1" name="ac8afe156ed2a4abce1d50b697a5d9288a26462867f7919207cd505562c6a141b1"></a>SFX_PARAM_FLAG_FIXED_REVERB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a05f7bfb8ced612c22a704c432b9d6056" name="ac8afe156ed2a4abce1d50b697a5d9288a05f7bfb8ced612c22a704c432b9d6056"></a>SFX_PARAM_MODE_COMPACT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a241512a5bfaea4224eac71db27b06b90" name="ac8afe156ed2a4abce1d50b697a5d9288a241512a5bfaea4224eac71db27b06b90"></a>SFX_PARAM_MODE_MASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a5842a3d9594dfa0b8ef59fe89ebd354f" name="ac8afe156ed2a4abce1d50b697a5d9288a5842a3d9594dfa0b8ef59fe89ebd354f"></a>SFX_PARAM_LOCK_VOLUME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a5aef943299ac74dae753b1f41f09afeb" name="ac8afe156ed2a4abce1d50b697a5d9288a5aef943299ac74dae753b1f41f09afeb"></a>SFX_PARAM_LOCK_PAN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288a1ff19e957a05d779e54df721776021e1" name="ac8afe156ed2a4abce1d50b697a5d9288a1ff19e957a05d779e54df721776021e1"></a>SFX_PARAM_LOCK_PITCH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac8afe156ed2a4abce1d50b697a5d9288ac84904dce193ce6fd4ad17be64f229b3" name="ac8afe156ed2a4abce1d50b697a5d9288ac84904dce193ce6fd4ad17be64f229b3"></a>SFX_PARAM_LOCK_REVERB&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="afa66b9aded5d862402be38e0345970e4" name="afa66b9aded5d862402be38e0345970e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa66b9aded5d862402be38e0345970e4">&#9670;&#160;</a></span>au_sfx_begin_video_frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a> au_sfx_begin_video_frame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *</td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a75b3fb7dddea0e7847b861dbc6d79364">au_update_clients_for_video_frame()</a>.</p>
+
+</div>
+</div>
 <a id="acc4ac0d23a0b688eb00d1d732bdebcc0" name="acc4ac0d23a0b688eb00d1d732bdebcc0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc4ac0d23a0b688eb00d1d732bdebcc0">&#9670;&#160;</a></span>au_sfx_clear_queue()</h2>
 
@@ -328,12 +390,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="30450_8c.html#ab8e9100c4f412eb35758b79f97e8e8de">snd_adjust_sound()</a>, <a class="el" href="30450_8c.html#a79174478bf2d6b6c3c63072ee769ae43">snd_adjust_sound_with_shift()</a>, <a class="el" href="30450_8c.html#a3a8ae874a85458acc80b0e1f7378f970">snd_start_sound()</a>, <a class="el" href="30450_8c.html#a482aa7c88d3be55e620518983b6a8325">snd_start_sound_raw()</a>, <a class="el" href="30450_8c.html#a049065e83abf7c1650f2bd9dcfb2d02b">snd_start_sound_with_shift()</a>, and <a class="el" href="30450_8c.html#a01788db9e814d2fd8a71f208e0ee440a">snd_stop_sound()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="public_8h.html#ab8e9100c4f412eb35758b79f97e8e8de">snd_adjust_sound()</a>, <a class="el" href="public_8h.html#a79174478bf2d6b6c3c63072ee769ae43">snd_adjust_sound_with_shift()</a>, <a class="el" href="public_8h.html#a3a8ae874a85458acc80b0e1f7378f970">snd_start_sound()</a>, <a class="el" href="public_8h.html#a482aa7c88d3be55e620518983b6a8325">snd_start_sound_raw()</a>, <a class="el" href="public_8h.html#a049065e83abf7c1650f2bd9dcfb2d02b">snd_start_sound_with_shift()</a>, and <a class="el" href="public_8h.html#a01788db9e814d2fd8a71f208e0ee440a">snd_stop_sound()</a>.</p>
 
 </div>
 </div>
-<a id="ace063e3c1a2c657b59341f7845d407b1" name="ace063e3c1a2c657b59341f7845d407b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace063e3c1a2c657b59341f7845d407b1">&#9670;&#160;</a></span>au_sfx_init()</h2>
+<a id="a486f6b09981f0568d717c7beb7757647" name="a486f6b09981f0568d717c7beb7757647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486f6b09981f0568d717c7beb7757647">&#9670;&#160;</a></span>au_sfx_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +413,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a></td>          <td class="paramname"><span class="paramname"><em>busId</em>, </span></td>
+          <td class="paramtype"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a></td>          <td class="paramname"><span class="paramname"><em>busID</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -366,7 +428,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#a48bb7c69edf9e392d5c2779df10c2c20">au_engine_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a48bb7c69edf9e392d5c2779df10c2c20">au_engine_init()</a>.</p>
 
 </div>
 </div>
@@ -385,46 +447,18 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#a48bb7c69edf9e392d5c2779df10c2c20">au_engine_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a48bb7c69edf9e392d5c2779df10c2c20">au_engine_init()</a>.</p>
 
 </div>
 </div>
-<a id="a76ba494e2862e33bc17a8937781ce8ac" name="a76ba494e2862e33bc17a8937781ce8ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76ba494e2862e33bc17a8937781ce8ac">&#9670;&#160;</a></span>au_sfx_load_sound()</h2>
+<a id="a3b9aeca720c199e4f82488b9913d36cf" name="a3b9aeca720c199e4f82488b9913d36cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b9aeca720c199e4f82488b9913d36cf">&#9670;&#160;</a></span>au_sfx_manager_audio_frame_update()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a> au_sfx_load_sound </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *</td>          <td class="paramname"><span class="paramname"><em>manager</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundSFXEntry">SoundSFXEntry</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManagerCustomCmdList">SoundManagerCustomCmdList</a> *</td>          <td class="paramname"><span class="paramname"><em>customSEF</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="reference">Referenced by <a class="el" href="private_8h.html#aa8bd833b2d77f80ef7cb8be525ff60f0">au_sfx_update_main()</a>.</p>
-
-</div>
-</div>
-<a id="a6f8a975b92e489cd7eed65621624067c" name="a6f8a975b92e489cd7eed65621624067c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f8a975b92e489cd7eed65621624067c">&#9670;&#160;</a></span>au_sfx_manager_update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a> au_sfx_manager_update </td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a> au_sfx_manager_audio_frame_update </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *</td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
           <td></td>
@@ -432,7 +466,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#ac3abc82ad48232af8f3885a66abc319d">au_update_clients_2()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#aa0acccdb2cee73a3850390580b0609b8">au_update_clients_for_audio_frame()</a>.</p>
 
 </div>
 </div>
@@ -443,19 +477,19 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 au_sfx_set_reverb_type </td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> au_sfx_set_reverb_type </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *</td>          <td class="paramname"><span class="paramname"><em>manager</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a></td>          <td class="paramname"><span class="paramname"><em>arg1</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="private_8h.html#af656976538817dc63f92af6153977f8d">au_sfx_init()</a>, and <a class="el" href="2e230__len__2190_8c.html#abbb5cf5e7e0562a29b567e0cfebe0341">func_80054D74()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#acacd5703e78d0cd3b80b7d0a1d9c3860">au_set_reverb_type()</a>, and <a class="el" href="private_8h.html#af656976538817dc63f92af6153977f8d">au_sfx_init()</a>.</p>
 
 </div>
 </div>
@@ -473,31 +507,40 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="private_8h.html#af656976538817dc63f92af6153977f8d">au_sfx_init()</a>, <a class="el" href="30450_8c.html#a26bc17d3dacbbec1ea1eb6fbf2c86c73">disable_sounds()</a>, and <a class="el" href="30450_8c.html#a8105de0982cf08af481dda4e011408c8">enable_sounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="private_8h.html#af656976538817dc63f92af6153977f8d">au_sfx_init()</a>, <a class="el" href="public_8h.html#a0a34f542684e0ceabdcaacad610a912b">snd_disable_sfx()</a>, and <a class="el" href="public_8h.html#a5c356181cd6ef7620e59128269379976">snd_enable_sfx()</a>.</p>
 
 </div>
 </div>
-<a id="aa8bd833b2d77f80ef7cb8be525ff60f0" name="aa8bd833b2d77f80ef7cb8be525ff60f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8bd833b2d77f80ef7cb8be525ff60f0">&#9670;&#160;</a></span>au_sfx_update_main()</h2>
+<a id="ac716035c480d973177b7d519e16fa714" name="ac716035c480d973177b7d519e16fa714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac716035c480d973177b7d519e16fa714">&#9670;&#160;</a></span>au_sfx_try_sound()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a> au_sfx_update_main </td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">void</a> au_sfx_try_sound </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *</td>          <td class="paramname"><span class="paramname"><em>manager</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManager">SoundManager</a> *</td>          <td class="paramname"><span class="paramname"><em>manager</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundRequest">SoundRequest</a> *</td>          <td class="paramname"><span class="paramname"><em>request</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="audio_8h.html#structSoundManagerCustomCmdList">SoundManagerCustomCmdList</a> *</td>          <td class="paramname"><span class="paramname"><em>customSEF</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#a6be6afa60e00eb897638f6b23ff619ae">au_update_players_main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="private_8h.html#afa66b9aded5d862402be38e0345970e4">au_sfx_begin_video_frame()</a>.</p>
 
 </div>
 </div>
@@ -514,7 +557,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#a7dd17e389355549c17630896ec1460f2">au_compute_pitch_ratio()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a58f70a5fadd322cf11e93306a5cf0d09">au_compute_pitch_ratio()</a>.</p>
 
 </div>
 </div>
@@ -548,7 +591,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">s32* AU_FX_CUSTOM_PARAMS[0]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>* AU_FX_CUSTOM_PARAMS[0]</td>
         </tr>
       </table>
   </td>
@@ -558,7 +601,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="private_8h.html#ad45602caf48e979d2814e52a5ce6bc1f">au_sfx_set_reverb_type()</a>, and <a class="el" href="private_8h.html#a2fd1875d4c4e01315e0e9a845b20049a">func_8005904C()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#ad62860787bf44384a695cff9cfeecb0c">au_fx_load_preset()</a>, and <a class="el" href="private_8h.html#ad45602caf48e979d2814e52a5ce6bc1f">au_sfx_set_reverb_type()</a>.</p>
 
 </div>
 </div>
@@ -569,37 +612,61 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 AuEnvelopeIntervals[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> AuEnvelopeIntervals[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    ((s32)( 60  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 55  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 50  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 45  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 40  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 35  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 30  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 27.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 25  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 22.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 20  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 19  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 18  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 17  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 16  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 15  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 14  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 13  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 12  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 11  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 10  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 9  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 8  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 7  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 6  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 4.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 4  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 3.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 3  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 2.75  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 2.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 2.25  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 2  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 1.9  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 1.8  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 1.7  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 1.6  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 1.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),   ((s32)( 1.4  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 1.3  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 1.2  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 1.1  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 1  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),    ((s32)( 0.95  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.9  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.85  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.8  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.75  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.7  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 0.65  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.6  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.55  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.45  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.4  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.375  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.35  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.325  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.3  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 0.29  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.28  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.27  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.26  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.25  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.24  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.23  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.22  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.21  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.2  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    ((s32)( 0.19  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.18  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.17  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.16  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.15  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.14  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.13  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.12  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>), ((s32)( 0.11  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),  ((s32)( 0.1  * 1000000) / <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a> * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>),</div>
-<div class="line">    16 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>, 14 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>, 12 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>, 11 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>, 10 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,</div>
-<div class="line">     9 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,  8 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,  7 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,  6 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>, 5 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,</div>
-<div class="line">     4 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,  3 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,  2 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>,  1 * <a class="code hl_define" href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a>, 0, 0, 0, 0, 0, 0,</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 60  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 55  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 50  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 45  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 40  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 35  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 30  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 27.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 25  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 22.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 20  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 19  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 18  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 17  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 16  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 15  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 14  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 13  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 12  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 11  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 10  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 9  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 8  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 7  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 6  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 4.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 4  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 3.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 3  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 2.75  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 2.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 2.25  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 2  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.9  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.8  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.7  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.6  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),   (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.4  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.3  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.2  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1.1  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 1  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.95  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.9  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.85  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.8  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.75  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.7  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.65  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.6  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.55  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.5  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.45  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.4  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.375  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.35  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.325  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.3  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.29  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.28  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.27  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.26  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.25  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.24  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.23  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.22  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.21  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.2  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.19  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.18  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.17  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.16  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.15  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.14  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.13  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.12  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>), (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.11  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),  (((<a class="code hl_variable" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a>)( 0.1  * 1000000) / <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>) * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>),</div>
+<div class="line">    16 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>, 14 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>, 12 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>, 11 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>, 10 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,</div>
+<div class="line">     9 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,  8 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,  7 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,  6 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>, 5 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,</div>
+<div class="line">     4 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,  3 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,  2 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>,  1 * <a class="code hl_define" href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a>, 0, 0, 0, 0, 0, 0,</div>
 <div class="line">}</div>
-<div class="ttc" id="aaudio_8h_html_acf4f645152d33e9069acbc67eb762fe8"><div class="ttname"><a href="audio_8h.html#acf4f645152d33e9069acbc67eb762fe8">AU_5750</a></div><div class="ttdeci">#define AU_5750</div><div class="ttdef"><b>Definition</b> audio.h:22</div></div>
+<div class="ttc" id="a8a860__len__3f30_8c_html_ad8c86ce808908b33858a59316263c571"><div class="ttname"><a href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">PopupMenu_SelectedIndex</a></div><div class="ttdeci">BSS s32 PopupMenu_SelectedIndex</div><div class="ttdef"><b>Definition</b> 8a860_len_3f30.c:84</div></div>
+<div class="ttc" id="aaudio_8h_html_aac6024783f137bd36f9a2566ccd93905"><div class="ttname"><a href="audio_8h.html#aac6024783f137bd36f9a2566ccd93905">AU_FRAME_USEC</a></div><div class="ttdeci">#define AU_FRAME_USEC</div><div class="ttdef"><b>Definition</b> audio.h:27</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="2d9a0__len__890_8c.html#a7bf2a61988654f48ae349de775f922bc">au_update_voices()</a>, and <a class="el" href="2d9a0__len__890_8c.html#aa82d5035772f915c0cb432995e8fd367">au_voice_start()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a7bf2a61988654f48ae349de775f922bc">au_update_voices()</a>, and <a class="el" href="core_8h.html#aa82d5035772f915c0cb432995e8fd367">au_voice_start()</a>.</p>
 
 </div>
 </div>
-<a id="a464d4e8753d08c66a0790329be32399e" name="a464d4e8753d08c66a0790329be32399e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a464d4e8753d08c66a0790329be32399e">&#9670;&#160;</a></span>BgmDivisors</h2>
+<a id="a9a0548fa06cd771adc6b06cb992c72a9" name="a9a0548fa06cd771adc6b06cb992c72a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0548fa06cd771adc6b06cb992c72a9">&#9670;&#160;</a></span>BgmCustomEnvLookup</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a> BgmDivisors[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a> BgmCustomEnvLookup[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5E, 0x5D, 0x5C, 0x5B, 0x5A, 0x58, 0x56, 0x53,</div>
+<div class="line">    0x51, 0x4F, 0x4A, 0x45, 0x40, 0x3B, 0x37, 0x35,</div>
+<div class="line">    0x33, 0x31, 0x2F, 0x2D, 0x2B, 0x29, 0x27, 0x26,</div>
+<div class="line">    0x25, 0x23, 0x21, 0x20, 0x1F, 0x1E, 0x1D, 0x1C,</div>
+<div class="line">    0x1B, 0x1A, 0x19, 0x18, 0x17, 0x16, 0x15, 0x14</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="bgm__player_8c.html#a14e702767bc2d282e5d330e91a8066c9">au_BGMCmd_FF_Special()</a>.</p>
+
+</div>
+</div>
+<a id="ac7ad8dd12540f5659daef59650d80567" name="ac7ad8dd12540f5659daef59650d80567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ad8dd12540f5659daef59650d80567">&#9670;&#160;</a></span>BgmTicksRates</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a> BgmTicksRates[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -608,7 +675,7 @@ Variables</h2></td></tr>
 <div class="line">     0,  0,  0,  0,  0,  0,  0,  0</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="28910__len__5090_8c.html#a15e44706fae0f3a29c818252fc4c0a26">au_bgm_dispatch_player_event()</a>, and <a class="el" href="28910__len__5090_8c.html#a4b6f6850b95c72724ce054a6c3799f31">au_bgm_update_main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bgm__player_8c.html#a7ed774a7ca0a79dd7cee8f87e306e1d9">au_bgm_begin_video_frame()</a>, and <a class="el" href="bgm__player_8c.html#ae3f24f3989c5d2d7a4fb97646357b231">au_bgm_process_init_song()</a>.</p>
 
 </div>
 </div>
@@ -630,7 +697,7 @@ Variables</h2></td></tr>
 <div class="line">    0x00, 0x00, 0x00, 0x00</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="2BF90_8c.html#a1928667a64ed2c387be49ef193211aa0">au_amb_player_update()</a>, and <a class="el" href="2BF90_8c.html#a319a40ef18556d7273b97debad559841">au_amb_stop_quick()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="mseq__player_8c.html#a1f2a530fea3b76a349a813483aa8b308">au_mseq_player_update()</a>, and <a class="el" href="mseq__player_8c.html#a8972c8ff6bef051c2261ad2b887d72eb">au_mseq_stop_quick()</a>.</p>
 
 </div>
 </div>
@@ -651,7 +718,7 @@ Variables</h2></td></tr>
 <div class="line">    0x00, 0x00, 0x00, 0x00</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="private_8h.html#a3830924d7fae7a57bbc9681e5852bb0e">au_sfx_load_sound()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="private_8h.html#ab2135941ed58c9150a786fc657918d92">au_sfx_try_sound()</a>.</p>
 
 </div>
 </div>
@@ -683,7 +750,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 CUSTOM_ECHO_PARAMS_1[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> CUSTOM_ECHO_PARAMS_1[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -705,7 +772,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 CUSTOM_ECHO_PARAMS_2[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> CUSTOM_ECHO_PARAMS_2[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -727,7 +794,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 CUSTOM_ECHO_PARAMS_3[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> CUSTOM_ECHO_PARAMS_3[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -749,7 +816,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 CUSTOM_SMALL_ROOM_PARAMS[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> CUSTOM_SMALL_ROOM_PARAMS[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -766,31 +833,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae03a42fced5b4d7df0c3dfececc4ec0e" name="ae03a42fced5b4d7df0c3dfececc4ec0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae03a42fced5b4d7df0c3dfececc4ec0e">&#9670;&#160;</a></span>D_80078370</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="audio_8h.html#structAlUnkGemini">AlUnkGemini</a> D_80078370[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    {</div>
-<div class="line">    .sound1 = <a class="code hl_enumvalue" href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a9876526fc5e5cffb46492bed8de7eb5a">SOUND_SHORT_CLAP</a>,</div>
-<div class="line">    .sound2 = <a class="code hl_enumvalue" href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a36e6f8224e5204e1b90d409f7ec825f6">SOUND_LRAW_CHEERING</a>,</div>
-<div class="line">    .flags = 1</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="ttc" id="aenums_8h_html_ac5d40ac44ef7d8c38c6c72a71348e360a36e6f8224e5204e1b90d409f7ec825f6"><div class="ttname"><a href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a36e6f8224e5204e1b90d409f7ec825f6">SOUND_LRAW_CHEERING</a></div><div class="ttdeci">@ SOUND_LRAW_CHEERING</div><div class="ttdef"><b>Definition</b> enums.h:1151</div></div>
-<div class="ttc" id="aenums_8h_html_ac5d40ac44ef7d8c38c6c72a71348e360a9876526fc5e5cffb46492bed8de7eb5a"><div class="ttname"><a href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a9876526fc5e5cffb46492bed8de7eb5a">SOUND_SHORT_CLAP</a></div><div class="ttdeci">@ SOUND_SHORT_CLAP</div><div class="ttdef"><b>Definition</b> enums.h:1152</div></div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="private_8h.html#aa8bd833b2d77f80ef7cb8be525ff60f0">au_sfx_update_main()</a>.</p>
-
-</div>
-</div>
 <a id="ac820af5f3fc6b537f34063ec419ff2fe" name="ac820af5f3fc6b537f34063ec419ff2fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac820af5f3fc6b537f34063ec419ff2fe">&#9670;&#160;</a></span>D_800783B0</h2>
 
@@ -798,7 +840,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">s32 D_800783B0[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s32</a> D_800783B0[]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -808,72 +850,22 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a68c3b8329a3996a68dc2f4ea85a8ce64" name="a68c3b8329a3996a68dc2f4ea85a8ce64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68c3b8329a3996a68dc2f4ea85a8ce64">&#9670;&#160;</a></span>D_80078530</h2>
+<a id="a59cd9ffe4dd467b74c8ece90fac3d04c" name="a59cd9ffe4dd467b74c8ece90fac3d04c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59cd9ffe4dd467b74c8ece90fac3d04c">&#9670;&#160;</a></span>DummyInstrumentCodebook</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a> D_80078530[]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s16</a> DummyInstrumentCodebook[32]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x0000, 0x0200, 0x0800, 0x1200, 0x2000, 0x3200, 0x4800, 0x6200, 0x8000</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#a0adf864e8d9024056551203612b59b57">func_80054CE0()</a>.</p>
-
-</div>
-</div>
-<a id="a08ba86dfe4c54d7d71f74b2fed186e63" name="a08ba86dfe4c54d7d71f74b2fed186e63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08ba86dfe4c54d7d71f74b2fed186e63">&#9670;&#160;</a></span>D_80078558</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">s8</a> D_80078558[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x5E, 0x5D, 0x5C, 0x5B, 0x5A, 0x58, 0x56, 0x53,</div>
-<div class="line">    0x51, 0x4F, 0x4A, 0x45, 0x40, 0x3B, 0x37, 0x35,</div>
-<div class="line">    0x33, 0x31, 0x2F, 0x2D, 0x2B, 0x29, 0x27, 0x26,</div>
-<div class="line">    0x25, 0x23, 0x21, 0x20, 0x1F, 0x1E, 0x1D, 0x1C,</div>
-<div class="line">    0x1B, 0x1A, 0x19, 0x18, 0x17, 0x16, 0x15, 0x14</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="28910__len__5090_8c.html#ad092ffcebec7f96a932c84372d806688">au_BGMCmd_FF()</a>.</p>
-
-</div>
-</div>
-<a id="a9cc3d6f395d8450642d7d7fbef856e98" name="a9cc3d6f395d8450642d7d7fbef856e98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cc3d6f395d8450642d7d7fbef856e98">&#9670;&#160;</a></span>DummyInstrumentBase</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> DummyInstrumentBase[190]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0xB1, 0x01, 0x11, 0x10, 0x00, 0xFF, 0xFE, 0x34, 0xBB, 0x90, 0xE2, 0x1E, 0x00, 0xFB, 0x10, 0xEF,</div>
-<div class="line">    0xF2, 0xD1, 0x80, 0xC4, 0xB3, 0xB1, 0xD3, 0xCF, 0xD1, 0xFD, 0xFE, 0x80, 0x1D, 0x2D, 0x3D, 0x3B,</div>
-<div class="line">    0x2C, 0x3B, 0xFC, 0x1D, 0x80, 0xDE, 0xF0, 0xD0, 0xD3, 0xD2, 0xB3, 0xD1, 0xF4, 0x80, 0xA2, 0x03,</div>
-<div class="line">    0xD0, 0x0D, 0xA9, 0xEA, 0xCB, 0x72, 0x90, 0x41, 0x4E, 0x1D, 0x2D, 0x0C, 0x1E, 0x10, 0x2F, 0x90,</div>
-<div class="line">    0xF2, 0x12, 0x03, 0xF0, 0xC2, 0xD1, 0xD4, 0xF3, 0x80, 0xB0, 0xA1, 0xBF, 0xD2, 0x1E, 0x12, 0x70,</div>
-<div class="line">    0x4D, 0x80, 0x4C, 0x39, 0x2C, 0x7E, 0x30, 0x6D, 0xB9, 0xCF, 0x90, 0xE1, 0xF2, 0xF3, 0xF2, 0xE1,</div>
-<div class="line">    0xE2, 0x16, 0x22, 0xC1, 0xE7, 0x28, 0xF4, 0xF0, 0x21, 0x10, 0x10, 0xFF, 0xA1, 0xED, 0x9F, 0x2F,</div>
-<div class="line">    0xF5, 0x61, 0x33, 0x3C, 0xD0, 0xA1, 0xDA, 0xC2, 0xFF, 0x14, 0x41, 0x22, 0x2D, 0xEF, 0xA1, 0xFA,</div>
-<div class="line">    0xE1, 0x0E, 0x23, 0x30, 0x32, 0x0E, 0xF0, 0x91, 0x9A, 0xF2, 0xCF, 0x55, 0x13, 0x61, 0xEE, 0x1C,</div>
-<div class="line">    0x91, 0x9D, 0x0F, 0xD2, 0x52, 0x06, 0x4D, 0xE1, 0x09, 0x91, 0xD0, 0x1B, 0x15, 0x2E, 0x36, 0xFD,</div>
-<div class="line">    0x12, 0xCB, 0x81, 0x22, 0xBC, 0x65, 0xF0, 0x73, 0xCE, 0x3F, 0xAE, 0x71, 0x4E, 0x93, 0x70, 0xF5,</div>
-<div class="line">    0x6E, 0xD2, 0x1B, 0xD1, 0x61, 0x0A, 0x5D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00</div>
+<div class="line">    0xF803, 0x0125, 0x07D0, 0xFDBC, 0xF886, 0x0355, 0x06FC, 0xFBAB,</div>
+<div class="line">    0xFEDA, 0xF82D, 0x0245, 0x077D, 0xFCA9, 0xF901, 0x0456, 0x065D,</div>
+<div class="line">    0xFC33, 0xFBB2, 0xFCEF, 0xFE94, 0xFFD8, 0x0080, 0x00A4, 0x007D,</div>
+<div class="line">    0x090E, 0x0673, 0x02FF, 0x0053, 0xFEF2, 0xFEA7, 0xFEF9, 0xFF7B</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -896,22 +888,30 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a9a24869070c931662ec4240d58409d2d" name="a9a24869070c931662ec4240d58409d2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a24869070c931662ec4240d58409d2d">&#9670;&#160;</a></span>DummyInstrumentPredictor</h2>
+<a id="ace61b6442f77fdbdc6e637b7c5c49c7a" name="ace61b6442f77fdbdc6e637b7c5c49c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace61b6442f77fdbdc6e637b7c5c49c7a">&#9670;&#160;</a></span>DummyInstrumentWavData</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">u16 DummyInstrumentPredictor[32]</td>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u8</a> DummyInstrumentWavData[190]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0xF803, 0x0125, 0x07D0, 0xFDBC, 0xF886, 0x0355, 0x06FC, 0xFBAB,</div>
-<div class="line">    0xFEDA, 0xF82D, 0x0245, 0x077D, 0xFCA9, 0xF901, 0x0456, 0x065D,</div>
-<div class="line">    0xFC33, 0xFBB2, 0xFCEF, 0xFE94, 0xFFD8, 0x0080, 0x00A4, 0x007D,</div>
-<div class="line">    0x090E, 0x0673, 0x02FF, 0x0053, 0xFEF2, 0xFEA7, 0xFEF9, 0xFF7B</div>
+<div class="line">    0xB1, 0x01, 0x11, 0x10, 0x00, 0xFF, 0xFE, 0x34, 0xBB, 0x90, 0xE2, 0x1E, 0x00, 0xFB, 0x10, 0xEF,</div>
+<div class="line">    0xF2, 0xD1, 0x80, 0xC4, 0xB3, 0xB1, 0xD3, 0xCF, 0xD1, 0xFD, 0xFE, 0x80, 0x1D, 0x2D, 0x3D, 0x3B,</div>
+<div class="line">    0x2C, 0x3B, 0xFC, 0x1D, 0x80, 0xDE, 0xF0, 0xD0, 0xD3, 0xD2, 0xB3, 0xD1, 0xF4, 0x80, 0xA2, 0x03,</div>
+<div class="line">    0xD0, 0x0D, 0xA9, 0xEA, 0xCB, 0x72, 0x90, 0x41, 0x4E, 0x1D, 0x2D, 0x0C, 0x1E, 0x10, 0x2F, 0x90,</div>
+<div class="line">    0xF2, 0x12, 0x03, 0xF0, 0xC2, 0xD1, 0xD4, 0xF3, 0x80, 0xB0, 0xA1, 0xBF, 0xD2, 0x1E, 0x12, 0x70,</div>
+<div class="line">    0x4D, 0x80, 0x4C, 0x39, 0x2C, 0x7E, 0x30, 0x6D, 0xB9, 0xCF, 0x90, 0xE1, 0xF2, 0xF3, 0xF2, 0xE1,</div>
+<div class="line">    0xE2, 0x16, 0x22, 0xC1, 0xE7, 0x28, 0xF4, 0xF0, 0x21, 0x10, 0x10, 0xFF, 0xA1, 0xED, 0x9F, 0x2F,</div>
+<div class="line">    0xF5, 0x61, 0x33, 0x3C, 0xD0, 0xA1, 0xDA, 0xC2, 0xFF, 0x14, 0x41, 0x22, 0x2D, 0xEF, 0xA1, 0xFA,</div>
+<div class="line">    0xE1, 0x0E, 0x23, 0x30, 0x32, 0x0E, 0xF0, 0x91, 0x9A, 0xF2, 0xCF, 0x55, 0x13, 0x61, 0xEE, 0x1C,</div>
+<div class="line">    0x91, 0x9D, 0x0F, 0xD2, 0x52, 0x06, 0x4D, 0xE1, 0x09, 0x91, 0xD0, 0x1B, 0x15, 0x2E, 0x36, 0xFD,</div>
+<div class="line">    0x12, 0xCB, 0x81, 0x22, 0xBC, 0x65, 0xF0, 0x73, 0xCE, 0x3F, 0xAE, 0x71, 0x4E, 0x93, 0x70, 0xF5,</div>
+<div class="line">    0x6E, 0xD2, 0x1B, 0xD1, 0x61, 0x0A, 0x5D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -931,10 +931,10 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a0dcd8a1da0742654554d00eed03aaf7c">ENV_TIME_280MS</a>, 127,</div>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a>, 0</div>
 <div class="line">}</div>
-<div class="ttc" id="aaudio_8h_html_a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32"><div class="ttname"><a href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a></div><div class="ttdeci">@ ENV_CMD_END</div><div class="ttdef"><b>Definition</b> audio.h:138</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a0dcd8a1da0742654554d00eed03aaf7c"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a0dcd8a1da0742654554d00eed03aaf7c">ENV_TIME_280MS</a></div><div class="ttdeci">@ ENV_TIME_280MS</div><div class="ttdef"><b>Definition</b> audio.h:203</div></div>
+<div class="ttc" id="aaudio_8h_html_a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32"><div class="ttname"><a href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a></div><div class="ttdeci">@ ENV_CMD_END</div><div class="ttdef"><b>Definition</b> audio.h:257</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a0dcd8a1da0742654554d00eed03aaf7c"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a0dcd8a1da0742654554d00eed03aaf7c">ENV_TIME_280MS</a></div><div class="ttdeci">@ ENV_TIME_280MS</div><div class="ttdef"><b>Definition</b> audio.h:322</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="2e230__len__2190_8c.html#a265685d885e9f520d56db910e191adda">au_get_instrument()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a697850a162ddee0db8d6e4ec96d7ca84">au_get_instrument()</a>.</p>
 
 </div>
 </div>
@@ -953,7 +953,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3aeb81107321fbc00c6174b1246c3a304f">ENV_TIME_550MS</a>, 0,</div>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a>, 0</div>
 <div class="line">}</div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3aeb81107321fbc00c6174b1246c3a304f"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3aeb81107321fbc00c6174b1246c3a304f">ENV_TIME_550MS</a></div><div class="ttdeci">@ ENV_TIME_550MS</div><div class="ttdef"><b>Definition</b> audio.h:194</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3aeb81107321fbc00c6174b1246c3a304f"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3aeb81107321fbc00c6174b1246c3a304f">ENV_TIME_550MS</a></div><div class="ttdeci">@ ENV_TIME_550MS</div><div class="ttdef"><b>Definition</b> audio.h:313</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -972,9 +972,75 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a6c24b16280eea86b817e617b351761f0">ENV_TIME_2UNITS</a>, 0,</div>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a>, 0</div>
 <div class="line">}</div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a6c24b16280eea86b817e617b351761f0"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a6c24b16280eea86b817e617b351761f0">ENV_TIME_2UNITS</a></div><div class="ttdeci">@ ENV_TIME_2UNITS</div><div class="ttdef"><b>Definition</b> audio.h:234</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a6c24b16280eea86b817e617b351761f0"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a6c24b16280eea86b817e617b351761f0">ENV_TIME_2UNITS</a></div><div class="ttdeci">@ ENV_TIME_2UNITS</div><div class="ttdef"><b>Definition</b> audio.h:353</div></div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="28910__len__5090_8c.html#acfca99c1cb0771cf60a847629ab1a77d">func_80050970()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bgm__player_8c.html#a23f07efc12c5dd578dc4cf6f864d531a">au_bgm_set_linked_tracks()</a>.</p>
+
+</div>
+</div>
+<a id="a383a4f97ecbbe77be2e6c01dc35f2793" name="a383a4f97ecbbe77be2e6c01dc35f2793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a383a4f97ecbbe77be2e6c01dc35f2793">&#9670;&#160;</a></span>MusicSounds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#structMusicTriggeredSound">MusicTriggeredSound</a> MusicSounds[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {</div>
+<div class="line">    .sound = <a class="code hl_enumvalue" href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a9876526fc5e5cffb46492bed8de7eb5a">SOUND_SHORT_CLAP</a>,</div>
+<div class="line">    .prereq = <a class="code hl_enumvalue" href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a36e6f8224e5204e1b90d409f7ec825f6">SOUND_LRAW_CHEERING</a>,</div>
+<div class="line">    .flags = 1</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aenums_8h_html_ac5d40ac44ef7d8c38c6c72a71348e360a36e6f8224e5204e1b90d409f7ec825f6"><div class="ttname"><a href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a36e6f8224e5204e1b90d409f7ec825f6">SOUND_LRAW_CHEERING</a></div><div class="ttdeci">@ SOUND_LRAW_CHEERING</div><div class="ttdef"><b>Definition</b> enums.h:1154</div></div>
+<div class="ttc" id="aenums_8h_html_ac5d40ac44ef7d8c38c6c72a71348e360a9876526fc5e5cffb46492bed8de7eb5a"><div class="ttname"><a href="enums_8h.html#ac5d40ac44ef7d8c38c6c72a71348e360a9876526fc5e5cffb46492bed8de7eb5a">SOUND_SHORT_CLAP</a></div><div class="ttdeci">@ SOUND_SHORT_CLAP</div><div class="ttdef"><b>Definition</b> enums.h:1155</div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="private_8h.html#afa66b9aded5d862402be38e0345970e4">au_sfx_begin_video_frame()</a>.</p>
+
+</div>
+</div>
+<a id="ac3bd3407a659d761f0b4910f30f3ad74" name="ac3bd3407a659d761f0b4910f30f3ad74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3bd3407a659d761f0b4910f30f3ad74">&#9670;&#160;</a></span>PerceptualVolumeLevels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="8a860__len__3f30_8c.html#ad8c86ce808908b33858a59316263c571">u16</a> PerceptualVolumeLevels[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a505fe94ad839267a51563274ef646b80">VOL_LEVEL_MUTE</a>] 0, </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3ab9b2c0e2dfaa63a9185aef1f608138a6">VOL_LEVEL_1</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.125), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a3e222f30e2733803ece41c9f6e0099f2">VOL_LEVEL_2</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.250), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a856601642854a9daeb8dc7834caecdd2">VOL_LEVEL_3</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.375), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a49c4cca690606ccb6b0a896beda849c2">VOL_LEVEL_4</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.500), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a25946f6a8e30c46714e9d11189757db0">VOL_LEVEL_5</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.625), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a595dfa9340db14da0a32fcedf64a1727">VOL_LEVEL_6</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.750), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a977b138457081303ad2ebe4ed8fc322f">VOL_LEVEL_7</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a> * <a class="code hl_define" href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a>(0.875), </div>
+<div class="line">    [<a class="code hl_enumvalue" href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a13aecffdf0b40590e54bd0834c5b595a">VOL_LEVEL_FULL</a>] <a class="code hl_define" href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a>, </div>
+<div class="line">}</div>
+<div class="ttc" id="aaudio_8h_html_adfcd0519261cb42ad72b6883a383f7ee"><div class="ttname"><a href="audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee">AU_MAX_BUS_VOLUME</a></div><div class="ttdeci">#define AU_MAX_BUS_VOLUME</div><div class="ttdef"><b>Definition</b> audio.h:40</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a13aecffdf0b40590e54bd0834c5b595a"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a13aecffdf0b40590e54bd0834c5b595a">VOL_LEVEL_FULL</a></div><div class="ttdeci">@ VOL_LEVEL_FULL</div><div class="ttdef"><b>Definition</b> enums.h:1822</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a25946f6a8e30c46714e9d11189757db0"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a25946f6a8e30c46714e9d11189757db0">VOL_LEVEL_5</a></div><div class="ttdeci">@ VOL_LEVEL_5</div><div class="ttdef"><b>Definition</b> enums.h:1819</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a3e222f30e2733803ece41c9f6e0099f2"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a3e222f30e2733803ece41c9f6e0099f2">VOL_LEVEL_2</a></div><div class="ttdeci">@ VOL_LEVEL_2</div><div class="ttdef"><b>Definition</b> enums.h:1816</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a49c4cca690606ccb6b0a896beda849c2"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a49c4cca690606ccb6b0a896beda849c2">VOL_LEVEL_4</a></div><div class="ttdeci">@ VOL_LEVEL_4</div><div class="ttdef"><b>Definition</b> enums.h:1818</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a505fe94ad839267a51563274ef646b80"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a505fe94ad839267a51563274ef646b80">VOL_LEVEL_MUTE</a></div><div class="ttdeci">@ VOL_LEVEL_MUTE</div><div class="ttdef"><b>Definition</b> enums.h:1814</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a595dfa9340db14da0a32fcedf64a1727"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a595dfa9340db14da0a32fcedf64a1727">VOL_LEVEL_6</a></div><div class="ttdeci">@ VOL_LEVEL_6</div><div class="ttdef"><b>Definition</b> enums.h:1820</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a856601642854a9daeb8dc7834caecdd2"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a856601642854a9daeb8dc7834caecdd2">VOL_LEVEL_3</a></div><div class="ttdeci">@ VOL_LEVEL_3</div><div class="ttdef"><b>Definition</b> enums.h:1817</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3a977b138457081303ad2ebe4ed8fc322f"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3a977b138457081303ad2ebe4ed8fc322f">VOL_LEVEL_7</a></div><div class="ttdeci">@ VOL_LEVEL_7</div><div class="ttdef"><b>Definition</b> enums.h:1821</div></div>
+<div class="ttc" id="aenums_8h_html_a6c159646898921d9b5fa2d882258fbc3ab9b2c0e2dfaa63a9185aef1f608138a6"><div class="ttname"><a href="enums_8h.html#a6c159646898921d9b5fa2d882258fbc3ab9b2c0e2dfaa63a9185aef1f608138a6">VOL_LEVEL_1</a></div><div class="ttdeci">@ VOL_LEVEL_1</div><div class="ttdef"><b>Definition</b> enums.h:1815</div></div>
+<div class="ttc" id="amacros_8h_html_ac3644f84794a8bfdacf39c4b2c2495fc"><div class="ttname"><a href="macros_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc">SQ</a></div><div class="ttdeci">#define SQ(x)</div><div class="ttdef"><b>Definition</b> macros.h:185</div></div>
+</div><!-- fragment -->
+<p>Volume steps use squared values so each level represents linear power increase, matching loudness perception. </p>
+<p>This makes each step sound evenly spaced. </p>
+
+<p class="reference">Referenced by <a class="el" href="core_8h.html#a32f402a4dc3c74bf94b072f8ed6ef85c">au_set_bus_volume_level()</a>.</p>
 
 </div>
 </div>
@@ -1018,7 +1084,7 @@ Variables</h2></td></tr>
 <div class="line">    au_SEFCmd_12_NOP,</div>
 <div class="line">    au_SEFCmd_13_SetRandomPitch,</div>
 <div class="line">    au_SEFCmd_14_SetRandomVelocity,</div>
-<div class="line">    au_SEFCmd_15_SetUnkA3,</div>
+<div class="line">    au_SEFCmd_15_SetRandomUnused,</div>
 <div class="line">    au_SEFCmd_16_SetEnvelopePress,</div>
 <div class="line">    au_SEFCmd_17_PlaySound,</div>
 <div class="line">    au_SEFCmd_18_SetAlternativeVolume</div>
@@ -1044,7 +1110,7 @@ Variables</h2></td></tr>
 <div class="line">    0, 0, 0, 0, 3, 3, 3, 3</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="28910__len__5090_8c.html#a5f489c097fec2ab47b469b51ac0b31d1">au_bgm_player_update_playing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bgm__player_8c.html#a5f489c097fec2ab47b469b51ac0b31d1">au_bgm_player_update_playing()</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1133,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="28910__len__5090_8c.html#a5f489c097fec2ab47b469b51ac0b31d1">au_bgm_player_update_playing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bgm__player_8c.html#a5f489c097fec2ab47b469b51ac0b31d1">au_bgm_player_update_playing()</a>.</p>
 
 </div>
 </div>
@@ -1111,11 +1177,11 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a8008a0fd27e112d5ec703b99936a4840">ENV_TIME_1400MS</a>,    0,</div>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a>,        0</div>
 <div class="line">}</div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a8008a0fd27e112d5ec703b99936a4840"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a8008a0fd27e112d5ec703b99936a4840">ENV_TIME_1400MS</a></div><div class="ttdeci">@ ENV_TIME_1400MS</div><div class="ttdef"><b>Definition</b> audio.h:181</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a8ddf93103e90d28200c9ea6ac889f91c"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a8ddf93103e90d28200c9ea6ac889f91c">ENV_TIME_3S</a></div><div class="ttdeci">@ ENV_TIME_3S</div><div class="ttdef"><b>Definition</b> audio.h:171</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a93909c675ff7824005dc6cdcb940b8a8"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a93909c675ff7824005dc6cdcb940b8a8">ENV_TIME_1S</a></div><div class="ttdeci">@ ENV_TIME_1S</div><div class="ttdef"><b>Definition</b> audio.h:185</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3ad266860d3418546577e027b07cc65d1a"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3ad266860d3418546577e027b07cc65d1a">ENV_TIME_900MS</a></div><div class="ttdeci">@ ENV_TIME_900MS</div><div class="ttdef"><b>Definition</b> audio.h:187</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3af690cf06742f3a02139c5e77cebb4e4b"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3af690cf06742f3a02139c5e77cebb4e4b">ENV_TIME_290MS</a></div><div class="ttdeci">@ ENV_TIME_290MS</div><div class="ttdef"><b>Definition</b> audio.h:202</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a8008a0fd27e112d5ec703b99936a4840"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a8008a0fd27e112d5ec703b99936a4840">ENV_TIME_1400MS</a></div><div class="ttdeci">@ ENV_TIME_1400MS</div><div class="ttdef"><b>Definition</b> audio.h:300</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a8ddf93103e90d28200c9ea6ac889f91c"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a8ddf93103e90d28200c9ea6ac889f91c">ENV_TIME_3S</a></div><div class="ttdeci">@ ENV_TIME_3S</div><div class="ttdef"><b>Definition</b> audio.h:290</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a93909c675ff7824005dc6cdcb940b8a8"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a93909c675ff7824005dc6cdcb940b8a8">ENV_TIME_1S</a></div><div class="ttdeci">@ ENV_TIME_1S</div><div class="ttdef"><b>Definition</b> audio.h:304</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3ad266860d3418546577e027b07cc65d1a"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3ad266860d3418546577e027b07cc65d1a">ENV_TIME_900MS</a></div><div class="ttdeci">@ ENV_TIME_900MS</div><div class="ttdef"><b>Definition</b> audio.h:306</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3af690cf06742f3a02139c5e77cebb4e4b"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3af690cf06742f3a02139c5e77cebb4e4b">ENV_TIME_290MS</a></div><div class="ttdeci">@ ENV_TIME_290MS</div><div class="ttdef"><b>Definition</b> audio.h:321</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1148,8 +1214,8 @@ Variables</h2></td></tr>
 <div class="line">    &amp;<a class="code hl_variable" href="#aabcac232f8d651937bdefb1b428fa872">SFXEnvelopeSlow</a>,</div>
 <div class="line">    &amp;<a class="code hl_variable" href="#aabcac232f8d651937bdefb1b428fa872">SFXEnvelopeSlow</a></div>
 <div class="line">}</div>
-<div class="ttc" id="asfx__player_8c_html_a8ca859ef75da5fd651e51ba79f65aebb"><div class="ttname"><a href="#a8ca859ef75da5fd651e51ba79f65aebb">SFXEnvelopeFast</a></div><div class="ttdeci">EnvelopePreset SFXEnvelopeFast</div><div class="ttdef"><b>Definition</b> sfx_player.c:130</div></div>
-<div class="ttc" id="asfx__player_8c_html_aabcac232f8d651937bdefb1b428fa872"><div class="ttname"><a href="#aabcac232f8d651937bdefb1b428fa872">SFXEnvelopeSlow</a></div><div class="ttdeci">EnvelopePreset SFXEnvelopeSlow</div><div class="ttdef"><b>Definition</b> sfx_player.c:147</div></div>
+<div class="ttc" id="asfx__player_8c_html_a8ca859ef75da5fd651e51ba79f65aebb"><div class="ttname"><a href="#a8ca859ef75da5fd651e51ba79f65aebb">SFXEnvelopeFast</a></div><div class="ttdeci">EnvelopePreset SFXEnvelopeFast</div><div class="ttdef"><b>Definition</b> sfx_player.c:138</div></div>
+<div class="ttc" id="asfx__player_8c_html_aabcac232f8d651937bdefb1b428fa872"><div class="ttname"><a href="#aabcac232f8d651937bdefb1b428fa872">SFXEnvelopeSlow</a></div><div class="ttdeci">EnvelopePreset SFXEnvelopeSlow</div><div class="ttdef"><b>Definition</b> sfx_player.c:155</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1197,9 +1263,9 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3aa9adb770467ed0520464f2032686b8eb">ENV_TIME_450MS</a>,     0,</div>
 <div class="line">    <a class="code hl_enumvalue" href="audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32">ENV_CMD_END</a>,        0,</div>
 <div class="line">}</div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a1baab704c31b2df767f4e7d4b4738809"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a1baab704c31b2df767f4e7d4b4738809">ENV_TIME_1100MS</a></div><div class="ttdeci">@ ENV_TIME_1100MS</div><div class="ttdef"><b>Definition</b> audio.h:184</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a4accdba0e59074a133da0bab558c80c2"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a4accdba0e59074a133da0bab558c80c2">ENV_TIME_1800MS</a></div><div class="ttdeci">@ ENV_TIME_1800MS</div><div class="ttdef"><b>Definition</b> audio.h:177</div></div>
-<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3aa9adb770467ed0520464f2032686b8eb"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3aa9adb770467ed0520464f2032686b8eb">ENV_TIME_450MS</a></div><div class="ttdeci">@ ENV_TIME_450MS</div><div class="ttdef"><b>Definition</b> audio.h:196</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a1baab704c31b2df767f4e7d4b4738809"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a1baab704c31b2df767f4e7d4b4738809">ENV_TIME_1100MS</a></div><div class="ttdeci">@ ENV_TIME_1100MS</div><div class="ttdef"><b>Definition</b> audio.h:303</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3a4accdba0e59074a133da0bab558c80c2"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3a4accdba0e59074a133da0bab558c80c2">ENV_TIME_1800MS</a></div><div class="ttdeci">@ ENV_TIME_1800MS</div><div class="ttdef"><b>Definition</b> audio.h:296</div></div>
+<div class="ttc" id="aaudio_8h_html_ae55745ca82386bafd879d95ac65cfcf3aa9adb770467ed0520464f2032686b8eb"><div class="ttname"><a href="audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3aa9adb770467ed0520464f2032686b8eb">ENV_TIME_450MS</a></div><div class="ttdeci">@ ENV_TIME_450MS</div><div class="ttdef"><b>Definition</b> audio.h:315</div></div>
 </div><!-- fragment -->
 </div>
 </div>

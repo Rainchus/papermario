@@ -1,8 +1,8 @@
 var 7E9D0_8c =
 [
     [ "PLAYER_ACTION_VRAM_DEF", "7E9D0_8c.html#a79727b51839513dbf2286f500ad0c071", null ],
-    [ "check_input_hammer", "7E9D0_8c.html#aad3fe566474498815584fb47509c8374", null ],
-    [ "check_input_jump", "7E9D0_8c.html#aca441897ef5b7b3f904eaaa4ae9294d2", null ],
+    [ "check_input_hammer", "7E9D0_8c.html#a550d2e19b9c90a3ea046131d31c6c39e", null ],
+    [ "check_input_jump", "7E9D0_8c.html#a37066dd740ebac8a7ac1be4488f782bb", null ],
     [ "check_input_spin", "7E9D0_8c.html#a4ba2677d3ec56bce3e7987ac54265413", null ],
     [ "func_800E5520", "7E9D0_8c.html#a36e3ecb5a700b6ffc63986801d021f1b", null ],
     [ "peach_check_for_parasol_input", "7E9D0_8c.html#aae7779c90e46ad18c37163d929593422", null ],

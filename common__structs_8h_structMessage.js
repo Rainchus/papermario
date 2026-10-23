@@ -9,7 +9,7 @@ var common__structs_8h_structMessage =
     [ "rotY", "common__structs_8h.html#aa44b443366b83b817fe24e050236d8e1", null ],
     [ "rotZ", "common__structs_8h.html#aa7ff6b5466965c2a1be31ed7e834b8e3", null ],
     [ "scale", "common__structs_8h.html#ace457db7e7a31112dc7ab67f8251c1e6", null ],
-    [ "unk_00", "common__structs_8h.html#a0dfe7051469b8585233620e8e845f90c", null ],
+    [ "unk_00", "common__structs_8h.html#a3af7acbbc7c77d3973fd166b81b3ee58", null ],
     [ "unk_24", "common__structs_8h.html#a3edf14bf9b525e1954e5da469ead2797", null ],
     [ "unk_48", "common__structs_8h.html#acf3a49c48ef1f24d6b7cc31a656dd518", null ],
     [ "vel", "common__structs_8h.html#a04580a8f0f85a405dc2f88ee4e395bc1", null ]

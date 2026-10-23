@@ -30,7 +30,6 @@ var engine2__pre__bss_8c =
     [ "gHudElementCacheSize", "engine2__pre__bss_8c.html#a019aea3085255d3e520fc73612bc939a", null ],
     [ "gHudElementCacheTablePalette", "engine2__pre__bss_8c.html#aa773e9fcc6d1c5b0d56ec9794c5ffda4", null ],
     [ "gHudElementCacheTableRaster", "engine2__pre__bss_8c.html#a5f25d10c87642c7f2d7f8b8c422c9d64", null ],
-    [ "gHudElementsNumber", "engine2__pre__bss_8c.html#ac2c12c7fc858aa01c1667249acddfc17", null ],
     [ "gLastCreatedEntityIndex", "engine2__pre__bss_8c.html#a1108285bf312ff5bcd8788a63dc1d0f4", null ],
     [ "gMsgBGScrollAmtX", "engine2__pre__bss_8c.html#a415796d51f6f96eb8890f29c07f5d69d", null ],
     [ "gMsgBGScrollAmtY", "engine2__pre__bss_8c.html#a05bea043efd9edd2069c5343e7df4c98", null ],
@@ -38,6 +37,7 @@ var engine2__pre__bss_8c =
     [ "gMsgVarImages", "engine2__pre__bss_8c.html#aa90a60a1b27dcb9a34a5fbc6e9c98807", null ],
     [ "gSpriteShadingProfile", "engine2__pre__bss_8c.html#a64a8ea5ecfe5c2e9b55d5cc1e247e6d3", null ],
     [ "gTriggerCount", "engine2__pre__bss_8c.html#a6894771517f3ee62e99c8e2e79e389c6", null ],
+    [ "HudElemCount", "engine2__pre__bss_8c.html#a96c5309fcb6325cdcbc270393fb25651", null ],
     [ "isAreaSpecificEntityDataLoaded", "engine2__pre__bss_8c.html#ad5b2068508d12104e8a5e81ff8bd01c4", null ],
     [ "ItemEntitiesCreated", "engine2__pre__bss_8c.html#ad95a503e6ba36082834485f7a8d0a7d8", null ]
 ];

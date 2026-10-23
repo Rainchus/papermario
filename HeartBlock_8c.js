@@ -33,5 +33,5 @@ var HeartBlock_8c =
     [ "Entity_HeartBlockContent_Script", "HeartBlock_8c.html#ad30d725e6993604dda978c699e103b5a", null ],
     [ "Entity_HeartBlockFrame", "HeartBlock_8c.html#a0c3e3506bc953b59df1d7e9ae933c558", null ],
     [ "Entity_InertBlock_Script", "HeartBlock_8c.html#a5967fd2429569f7c5b433c18169a4658", null ],
-    [ "HeartBlockPrinterClosed", "HeartBlock_8c.html#a85d5525fd857065d41faeaf52b98d06a", null ]
+    [ "HeartBlockPrinterClosed", "HeartBlock_8c.html#a0297fe8af56cbe9462d76281db997439", null ]
 ];

@@ -3,7 +3,7 @@ var common__structs_8h_structMessagePrintState =
     [ "animTimers", "common__structs_8h.html#a635d60a4764af4ac9a240407e8c1f10c", null ],
     [ "cancelOption", "common__structs_8h.html#ae7d8217e8dadcabee18300880ec752a8", null ],
     [ "charsPerChunk", "common__structs_8h.html#aff0a69dba09b89a9ffcc3e5435ec64d5", null ],
-    [ "closedWritebackBool", "common__structs_8h.html#a2857498ec822696c2c1df70dc0337382", null ],
+    [ "closedWritebackBool", "common__structs_8h.html#abe38cd7931987e7576d8bd14208482f6", null ],
     [ "curAnimFrame", "common__structs_8h.html#ad0930447ff8e9732bb34d2ac9ea740b7", null ],
     [ "curImageIndex", "common__structs_8h.html#a04ec6f2c21b17b0e13917e5fcecf0ef5", null ],
     [ "curLine", "common__structs_8h.html#adce49b0ec2b988c47ff22b1cf4000c6d", null ],

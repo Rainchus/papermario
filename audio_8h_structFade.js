@@ -1,11 +1,12 @@
 var audio_8h_structFade =
 [
-    [ "curVolume", "audio_8h.html#a0b44f1e1854b7a4b2480e90e5eb59cc1", null ],
-    [ "fadeStep", "audio_8h.html#a086236315d1b5fd3d374a84fed9df68f", null ],
-    [ "fadeTime", "audio_8h.html#a882eab38cfdc899b1fbedc4d2e610eb2", null ],
-    [ "targetVolScale", "audio_8h.html#a908e5888cf7cb96e79be2e1255ffd20f", null ],
-    [ "targetVolume", "audio_8h.html#af7d8bc52665f7f477ddcd843e0344a8c", null ],
-    [ "volScale", "audio_8h.html#a597150cfd5b4d62ca6d7694ab76f7bfd", null ],
-    [ "volScaleStep", "audio_8h.html#a21a7c23a349914e1dd4688c535d10ec0", null ],
-    [ "volScaleTime", "audio_8h.html#a5eaa0593692d24166b6de41f4eb3e945", null ]
+    [ "baseStep", "audio_8h.html#a3a61cd937a5437a901277cd21636d4aa", null ],
+    [ "baseTarget", "audio_8h.html#a7a16910dd2d74809e72f31075f4af998", null ],
+    [ "baseTicks", "audio_8h.html#a25fc93ea93b6fe75401fc7fc7ad84d38", null ],
+    [ "baseVolume", "audio_8h.html#ab3ef0f18cc591b98323ac4c013c271bd", null ],
+    [ "envelopeStep", "audio_8h.html#ac76ba37d413059280ae2c65983bf479d", null ],
+    [ "envelopeTarget", "audio_8h.html#a8d761dd1597e2e58989d1517d9c10bfc", null ],
+    [ "envelopeTicks", "audio_8h.html#a9e1d73dec148ffacdb32841ac70a1b19", null ],
+    [ "envelopeVolume", "audio_8h.html#a0fcd4808d2583807efa6704788d9ec89", null ],
+    [ "onCompleteCallback", "audio_8h.html#a374dbcc8b74f7d6f31aee61683ee845a", null ]
 ];

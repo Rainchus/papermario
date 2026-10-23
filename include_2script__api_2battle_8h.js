@@ -1,8 +1,8 @@
 var include_2script__api_2battle_8h =
 [
-    [ "BtlBringPartnerOut", "include_2script__api_2battle_8h.html#a84c2f1d638d291a641fdb111cb331d2b", null ],
-    [ "BtlPutPartnerAway", "include_2script__api_2battle_8h.html#a2e85d2ccbc1a0b399309d82d69d90b66", null ],
     [ "EVS_ApplyDizzyAttack", "include_2script__api_2battle_8h.html#a3481d05faa589699dedd2b52bd55e54c", null ],
+    [ "EVS_BtlBringPartnerOut", "include_2script__api_2battle_8h.html#ae088f32add9fda4db0b036aec4a76ae3", null ],
+    [ "EVS_BtlPutPartnerAway", "include_2script__api_2battle_8h.html#aaa1e1d0a6451cff5d987f0bc5d32bde0", null ],
     [ "EVS_Enemy_AirLift", "include_2script__api_2battle_8h.html#a84110f94feb1a05a585f0dd3a362599b", null ],
     [ "EVS_Enemy_BlowAway", "include_2script__api_2battle_8h.html#aac5063d61ae0432cab7e1983daad3ead", null ],
     [ "EVS_Enemy_BurnHit", "include_2script__api_2battle_8h.html#aba3be79323698d985299e16e6e2c7a82", null ],

@@ -6,9 +6,9 @@ var audio_8h_structAmbiencePlayer =
     [ "fadeSettingsInitial", "audio_8h.html#ac787aef1aa621eedcabe44ac5fa67f8f", null ],
     [ "fadeSettingsTime", "audio_8h.html#a3d933e8aa6189acf8791c80f54dae3a1", null ],
     [ "fadeSettingsType", "audio_8h.html#a0b806c088430070f9c5868c0ba562f14", null ],
-    [ "fadeStep", "audio_8h.html#ac6b86098afba9d3e0768bb2a4eab4e52", null ],
+    [ "fadeStep", "audio_8h.html#a0543e52aee5b3689d9ccd747f8682203", null ],
     [ "fadeTime", "audio_8h.html#a04242b57f1b9a53d25f4dc034ef38282", null ],
-    [ "fadeVolume", "audio_8h.html#a9b2a0a5ea5e24795b7b1374a2720f1db", null ],
+    [ "fadeVolume", "audio_8h.html#aba2ced430d2186bec01232bda8ac4023", null ],
     [ "firstVoiceIdx", "audio_8h.html#a093b5b63d34064eab745ba3cdf4c0ade", null ],
     [ "id", "audio_8h.html#a5d0a5b5e25a4abd5023629cd58d2b70f", null ],
     [ "lastVoiceIdx", "audio_8h.html#adb010d659aa5687533228679ef544c90", null ],
@@ -19,11 +19,11 @@ var audio_8h_structAmbiencePlayer =
     [ "mseqName", "audio_8h.html#ad7562b1944ef0ec332be45f48c4b7ed0", null ],
     [ "mseqReadPos", "audio_8h.html#a19e1c35ffa634d767d97e138e5c4c6ce", null ],
     [ "mseqReadStart", "audio_8h.html#a699d1edb7fe4be0f3d459be41a4d8aed", null ],
+    [ "pad_1C", "audio_8h.html#a70801afa2876b4728be84cbc65c99400", null ],
+    [ "pad_27", "audio_8h.html#a9fc3f064d02c308dfa26751441a4b95b", null ],
+    [ "pad_2E", "audio_8h.html#a36efd1ecb9befdb9da23009ce730406e", null ],
     [ "playState", "audio_8h.html#ae5099c95a52fd466e96ffaefe049fe86", null ],
     [ "resetRequired", "audio_8h.html#a54b28aae7f539ba032c0d342dc7fbc7e", null ],
     [ "savedVoices", "audio_8h.html#aa6774547580eca49f48d8ce515787f6e", null ],
-    [ "tracks", "audio_8h.html#a48265afc6c1a60a91cdc5ad64053cd04", null ],
-    [ "unk_1C", "audio_8h.html#aa5018c9181b6308fe5fd4a88e7e00169", null ],
-    [ "unk_27", "audio_8h.html#a186b835a40ebd8d3db794f4ef8f67406", null ],
-    [ "unk_2E", "audio_8h.html#a9cab331abc2b588431b74bb4d12c62bf", null ]
+    [ "tracks", "audio_8h.html#a48265afc6c1a60a91cdc5ad64053cd04", null ]
 ];

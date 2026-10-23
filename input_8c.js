@@ -1,12 +1,15 @@
 var input_8c =
 [
-    [ "func_800287F0", "input_8c.html#aeefd8c20bce7aeaad29f0a6b145e48d8", null ],
-    [ "func_80028838", "input_8c.html#a5fc01c44cfd637e96844bc4ba2aa8259", null ],
+    [ "STICK_BUTTON_THRESHOLD", "input_8c.html#a47745a1a17a518e7bbebfc9f980933f4", null ],
+    [ "STICK_DEADZONE_THRESHOLD", "input_8c.html#a93853ea083b2a2c5cdced0df68e5cd14", null ],
+    [ "STICK_RELEASE_THRESHOLD", "input_8c.html#a2c1ca821dea446eed544ecf82889da33", null ],
+    [ "clear_input", "input_8c.html#a1e3d40332968cc4f8d2e15017260c917", null ],
+    [ "reset_input_state", "input_8c.html#a674e7f9a81839535a7fb6017ce8fd17e", null ],
     [ "update_input", "input_8c.html#a84fbcdbd8373325d7a2b7045a80f19ad", null ],
-    [ "D_8009A5B8", "input_8c.html#aad52928e2635d35c3813522361b16c21", null ],
-    [ "D_8009A6A0", "input_8c.html#af617ff6d2a4ad8a9f7b7c778f68fd0a6", null ],
-    [ "D_8009A6A2", "input_8c.html#ad94c869cdb905c9e4247ce9263f3b056", null ],
-    [ "D_8009A6A4", "input_8c.html#a7e2100eae87be0162dc95d95ac24d5a7", null ],
-    [ "D_8009A6A6", "input_8c.html#af99442c671be9483a821d96c834614d6", null ],
-    [ "D_8009A6A8", "input_8c.html#ae815987f5ef85b201e5ebc87f3b13085", null ]
+    [ "ContPadData", "input_8c.html#a72e67d958a75576440a60d7ef1b799c4", null ],
+    [ "D_8009A6A8", "input_8c.html#ae815987f5ef85b201e5ebc87f3b13085", null ],
+    [ "StickExtremeX", "input_8c.html#afec1f7b43dc5d264f72da8842888c5a3", null ],
+    [ "StickExtremeY", "input_8c.html#aff37b947e0cef6ca630d03577decc845", null ],
+    [ "StickRetriggerStateX", "input_8c.html#a536fa6c6880371fc10ad97df9b311757", null ],
+    [ "StickRetriggerStateY", "input_8c.html#a4740503ce64c61ae238df6267b82bcee", null ]
 ];

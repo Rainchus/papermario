@@ -38,7 +38,7 @@ var structCamera =
     [ "mtxViewShaking", "structCamera.html#ae0ee6e5ad2eabaae1f4669be041acbec", null ],
     [ "nearClip", "structCamera.html#a6d017bc22be10828497baf2ec32aa782", null ],
     [ "needsInit", "structCamera.html#a6ba3e50815d399e2d29396c2319ef3cc", null ],
-    [ "needsInitialConstrainDir", "structCamera.html#a5094a78adea7693754ab18d398a66bf6", null ],
+    [ "needsInitialConstrainDir", "structCamera.html#a9b2315e920b78018d2ebf14d8e3ae893", null ],
     [ "needsReinit", "structCamera.html#a1563c60518c5d8be5ac8bddf8d83263b", null ],
     [ "nextRig", "structCamera.html#a03d510b6b4b28b94ddacb882bdf93562", null ],
     [ "panActive", "structCamera.html#a97e896c72119f641005d489950ff173d", null ],

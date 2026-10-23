@@ -10,5 +10,6 @@ var searchData=
   ['modellocalvertexcopylist_7',['ModelLocalVertexCopyList',['../model_8h.html#a2f473850ae09e03e8c5e6c4268895003',1,'model.h']]],
   ['modeltransformgrouplist_8',['ModelTransformGroupList',['../model_8h.html#ab76ece0781f28b588331d591411c5590',1,'model.h']]],
   ['modeltreeinfolist_9',['ModelTreeInfoList',['../model_8h.html#ae7b2c70512d39441c06638f19d74e30d',1,'model.h']]],
-  ['musiceventtrigger_10',['MusicEventTrigger',['../common__structs_8h.html#a50092da8eeff35dc912d3474b1f4658b',1,'common_structs.h']]]
+  ['msgid_10',['MsgID',['../common__structs_8h.html#af6f825e5415a8363be9b02eae7053e20',1,'common_structs.h']]],
+  ['musiceventtrigger_11',['MusicEventTrigger',['../common__structs_8h.html#a50092da8eeff35dc912d3474b1f4658b',1,'common_structs.h']]]
 ];

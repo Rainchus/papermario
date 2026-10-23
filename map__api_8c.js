@@ -1,6 +1,6 @@
 var map__api_8c =
 [
-    [ "apply_transform_to_children", "map__api_8c.html#a5f692b04aaa338eb876c73f18b214089", null ],
+    [ "apply_transform_to_children", "map__api_8c.html#aec7876af16f3b23b21d4917a2259fa94", null ],
     [ "get_lava_reset_pos", "map__api_8c.html#a2197b8cc92936d557a2add8f1194f2d5", null ],
     [ "goto_map", "map__api_8c.html#ae44097fe6ed72f4d1cb6fdaf246a665e", null ],
     [ "modify_collider_family_flags", "map__api_8c.html#afb76c5cfe6cd50b74ebb4ebeed013d01", null ],

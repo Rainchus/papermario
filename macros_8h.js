@@ -229,7 +229,13 @@ var macros_8h =
     [ "RDP_MATRIX", "macros_8h.html#a022adbb364ddffef49c0f83b209fa097", null ],
     [ "SCREEN_COPY_TILE_HEIGHT", "macros_8h.html#a95310b965900ef32d0609de6cbcc3790", null ],
     [ "SCREEN_HEIGHT", "macros_8h.html#a6974d08a74da681b3957b2fead2608b8", null ],
+    [ "SCREEN_INSET_X", "macros_8h.html#a436ef002339097d3d30d11125cbfa766", null ],
+    [ "SCREEN_INSET_Y", "macros_8h.html#a52aca73b7ed2a910a81a1f0a7250f359", null ],
     [ "SCREEN_WIDTH", "macros_8h.html#a2cd109632a6dcccaa80b43561b1ab700", null ],
+    [ "SCREEN_XMAX", "macros_8h.html#ad7d4a9f1ea19668586433d838d683a6c", null ],
+    [ "SCREEN_XMIN", "macros_8h.html#ad5bcd211d8466ad1253fa52056ad8495", null ],
+    [ "SCREEN_YMAX", "macros_8h.html#a266ce989cd7a120f0def0afcb4c567ec", null ],
+    [ "SCREEN_YMIN", "macros_8h.html#aa46a79af9943e5bee05ccfa2c77d435e", null ],
     [ "SHIFT_BSS", "macros_8h.html#a3298b8c5fb8fe7dcce47cb8e428a6209", null ],
     [ "SHT_MINV", "macros_8h.html#a22d701ba14812a9a0fea91e456b17b09", null ],
     [ "SP_PER_BAR", "macros_8h.html#abc0048685fced3208f8e813a97b72f8b", null ],
@@ -256,5 +262,9 @@ var macros_8h =
     [ "WORLD_ENTITY_HEAP_SIZE", "macros_8h.html#a60d1341d2d6040d5435a05d7226f04fa", null ],
     [ "X10", "macros_8h.html#aa1e8954d6d27ba7f9e177299a5d040cb", null ],
     [ "Difficulty1D", "macros_8h.html#abcc6f51384e4fd9368229045dae97ab3", null ],
-    [ "Difficulty2D", "macros_8h.html#a84eb4d19ace242c476fb8ebfe298f0d5", null ]
+    [ "Difficulty2D", "macros_8h.html#a84eb4d19ace242c476fb8ebfe298f0d5", null ],
+    [ "bool", "macros_8h.html#af6a258d8f3ee5206d682d799316314b1", [
+      [ "false", "macros_8h.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c", null ],
+      [ "true", "macros_8h.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b", null ]
+    ] ]
 ];

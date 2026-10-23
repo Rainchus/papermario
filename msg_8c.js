@@ -11,7 +11,7 @@ var msg_8c =
       [ "REWIND_ARROW_STATE_CHANGE_COLOR", "msg_8c.html#af7e5877895391a7748c10de6ffe658eca5675814595e73be4368582a20a078a8c", null ],
       [ "REWIND_ARROW_STATE_CHANGE_COLOR_BACK", "msg_8c.html#af7e5877895391a7748c10de6ffe658eca2737ef54451b9014947766fa43502a63", null ]
     ] ],
-    [ "_msg_get_printer_for_msg", "msg_8c.html#a1e10a0833a05168f4edfe1ba5d71d9ef", null ],
+    [ "_msg_get_printer_for_msg", "msg_8c.html#a169b25b54501001aa6d3e85af8104656", null ],
     [ "_update_message", "msg_8c.html#aea3775c2064314abf2597aed07ea58a9", null ],
     [ "appendGfx_message", "msg_8c.html#a4fdbe533b9c744b51798168db4195dc2", null ],
     [ "cancel_message", "msg_8c.html#a261c6047a018ba1d0ac7832276a2df03", null ],
@@ -36,7 +36,7 @@ var msg_8c =
     [ "msg_draw_rewind_arrow", "msg_8c.html#a11fb0dab7047281961fac90dec2ff209", null ],
     [ "msg_get_draw_char_width", "msg_8c.html#a8e8b90fcecca15272ea22c971a059535", null ],
     [ "msg_get_print_char_width", "msg_8c.html#a4b6261dcfb295e3bcde033207284a6da", null ],
-    [ "msg_get_printer_for_msg", "msg_8c.html#ab88a48c4a822281f500b2febf911594b", null ],
+    [ "msg_get_printer_for_msg", "msg_8c.html#a5b27c678e82aaffa4c4ca99c4aedb2cc", null ],
     [ "msg_play_speech_sound", "msg_8c.html#a92a678b548204c95b4092c0d4c435282", null ],
     [ "msg_printer_load_msg", "msg_8c.html#ae343ba26ac4a1fbfe8f881d049772af2", null ],
     [ "msg_printer_set_origin_pos", "msg_8c.html#a1d1d9570ec13a457c01552c17afa9108", null ],

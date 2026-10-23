@@ -11,6 +11,6 @@ var searchData=
   ['animscript_8',['AnimScript',['../animation__script_8h.html#a13e98e12546d9da6fe2eae0b6bb7ee8b',1,'animation_script.h']]],
   ['apifunc_9',['ApiFunc',['../common__structs_8h.html#abb2fe6792a00929cd514b03bb93f44d2',1,'common_structs.h']]],
   ['apistatus_10',['ApiStatus',['../evt_8h.html#a353709e4af3228665d8fbc5a4c6e25b4',1,'evt.h']]],
-  ['aucallback_11',['AuCallback',['../audio_8h.html#a9b09f3cbdafa71e59e6656d52a1f3251',1,'audio.h']]],
+  ['aucallback_11',['AuCallback',['../common__structs_8h.html#a9b09f3cbdafa71e59e6656d52a1f3251',1,'common_structs.h']]],
   ['aufilepos_12',['AuFilePos',['../audio_8h.html#addfcfc5227786fb3cfa8d34a683c064b',1,'audio.h']]]
 ];

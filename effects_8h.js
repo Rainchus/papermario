@@ -167,7 +167,7 @@ var effects_8h =
     ] ],
     [ "StarFXData", "effects_8h.html#structStarFXData", [
       [ "bounceTime", "effects_8h.html#a512954a1c1c156a4ff0f00ec7f941a99", null ],
-      [ "canBounce", "effects_8h.html#afc081a9f40ba6f2ad5cd70fbea8aef05", null ],
+      [ "canBounce", "effects_8h.html#a3d0b10bc8c184490271c039249264d31", null ],
       [ "pos", "effects_8h.html#a403338a0faf7fe31749101efbe5668a7", null ],
       [ "primB", "effects_8h.html#a712b477f1b5b04b2224bc7b3e2486fb3", null ],
       [ "primG", "effects_8h.html#a59e91f725b35c74869d809ad51e073f4", null ],
@@ -217,7 +217,7 @@ var effects_8h =
       [ "unk_2C", "effects_8h.html#ae27522543bf9ce744bba9b7a34aabda2", null ]
     ] ],
     [ "ShapeSpellFXData", "effects_8h.html#structShapeSpellFXData", [
-      [ "isChild", "effects_8h.html#aa9fde4701c73061f56053bc887c86a4e", null ],
+      [ "isChild", "effects_8h.html#a07ba125c3f5c0d67c7389875a9e1b954", null ],
       [ "pos", "effects_8h.html#a56d0da7b3f4aa069a408f2144c4835ff", null ],
       [ "timeLeft", "effects_8h.html#aca73736eb3aaade96515cd570a865c3a", null ],
       [ "unk_10", "effects_8h.html#a5ec69b30c9d1fd756a595a98415a1035", null ],
@@ -1136,7 +1136,7 @@ var effects_8h =
     ] ],
     [ "AttackResultTextFXData", "effects_8h.html#structAttackResultTextFXData", [
       [ "alpha", "effects_8h.html#a5a02b12ff5148ace3eefbda51002f8bb", null ],
-      [ "isVisible", "effects_8h.html#a9a234ed86165c355bd1423c782cb5035", null ],
+      [ "isVisible", "effects_8h.html#a33d7a5926a345e36ffff07e0aab3e93b", null ],
       [ "lifetime", "effects_8h.html#a710186cc164ef1493d6f513501832575", null ],
       [ "pos", "effects_8h.html#a3dca90d4aadeb020a5447c3f8f9d15fc", null ],
       [ "scale", "effects_8h.html#ab7881262e8cd868337d764c0e3cce1bc", null ],

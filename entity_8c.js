@@ -6,7 +6,7 @@ var entity_8c =
     [ "WORLD_ENTITY_HEAP_BASE", "entity_8c.html#a7efbd548755334b44885f0a8c7cf050d", null ],
     [ "WORLD_ENTITY_HEAP_BOTTOM", "entity_8c.html#a43fb6ca8c99437a3cd8fd5ba63ac543f", null ],
     [ "_delete_shadow", "entity_8c.html#a82fb6f325760fcf7b1cca22630cb9fcc", null ],
-    [ "clear_entity_data", "entity_8c.html#a6ce6230db7b4315ed83550648754b4a1", null ],
+    [ "clear_entity_data", "entity_8c.html#a5ff89d87c68cd46d1f8ee3c43dd2a36f", null ],
     [ "create_entity", "entity_8c.html#aeb4160e866ef91b063f0e9328bef1df2", null ],
     [ "create_entity_shadow", "entity_8c.html#a3154ac91a07b80618c4c1fe6cc67be16", null ],
     [ "create_shadow_from_data", "entity_8c.html#ad63fb8ff46826e1efd78a5f56a208236", null ],

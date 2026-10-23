@@ -32,7 +32,7 @@ var src_2battle_2battle_8h =
     ] ],
     [ "FormationRow", "src_2battle_2battle_8h.html#structFormationRow", [
       [ "actor", "src_2battle_2battle_8h.html#a0335909d021a596c15d579ab946a9d33", null ],
-      [ "home", "src_2battle_2battle_8h.html#a4e06d8c5205df98556703ef006853faa", null ],
+      [ "home", "src_2battle_2battle_8h.html#ad3e0aa8ba1882f1fb1a1e70a34322921", null ],
       [ "priority", "src_2battle_2battle_8h.html#a63c1c83e32b093cbfeb2117ac4a225e7", null ],
       [ "var0", "src_2battle_2battle_8h.html#a5c68d09b9e9b19e890adfd9dcad2ae7a", null ],
       [ "var1", "src_2battle_2battle_8h.html#aeb6d64ab5836f090a469e5cb203422ec", null ],

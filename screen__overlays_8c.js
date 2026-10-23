@@ -1,5 +1,6 @@
 var screen__overlays_8c =
 [
+    [ "OVERLAY_RENDER_OFF", "screen__overlays_8c.html#a15cd02089f7d8c3ecbe6526b69bf6929", null ],
     [ "ScreenFadeRates", "screen__overlays_8c.html#aff88adc2a30eac7ad7203cbd685e7ce4", [
       [ "VERY_SLOW_FADE_RATE", "screen__overlays_8c.html#aff88adc2a30eac7ad7203cbd685e7ce4ae7c58b78eddbaafd0cd0e0fa597cab43", null ],
       [ "SLOW_FADE_RATE", "screen__overlays_8c.html#aff88adc2a30eac7ad7203cbd685e7ce4a6e59435c954a9115fff784397f42e907", null ],
@@ -9,7 +10,6 @@ var screen__overlays_8c =
     ] ],
     [ "_render_transition_stencil", "screen__overlays_8c.html#a80c90d6481921bd5791b81974c6ca2d2", null ],
     [ "clear_screen_overlays", "screen__overlays_8c.html#a21acc449a8908df94628a0d811e3075b", null ],
-    [ "func_80138188", "screen__overlays_8c.html#abe515eb2207bbcd579e69d28d19e7674", null ],
     [ "func_80138198", "screen__overlays_8c.html#adf6cbe3df09a6ffbb703369cbe532eba", null ],
     [ "get_screen_overlay_params", "screen__overlays_8c.html#ad7a205978a4409af3c2d2f17da35e64e", null ],
     [ "INCLUDE_IMG", "screen__overlays_8c.html#a235406bdb7c4507d7f2bdee4682c8265", null ],
@@ -18,6 +18,7 @@ var screen__overlays_8c =
     [ "INCLUDE_IMG", "screen__overlays_8c.html#af688fbef823372c27ed398289b1f2312", null ],
     [ "render_screen_overlay_backUI", "screen__overlays_8c.html#a1305b4b03ca51fc019605b8cb93a38dc", null ],
     [ "render_screen_overlay_frontUI", "screen__overlays_8c.html#ac074f2023f2e6caeefde0091e792713d", null ],
+    [ "reset_back_screen_overlay_progress", "screen__overlays_8c.html#af363618f0b6c3325b9f3916e8b673ad8", null ],
     [ "set_map_transition_effect", "screen__overlays_8c.html#a5ab69cac4080c03c40a0ba03891359d5", null ],
     [ "set_screen_overlay_alpha", "screen__overlays_8c.html#af35095464d4e5e896c8274d7eca0e3f5", null ],
     [ "set_screen_overlay_center", "screen__overlays_8c.html#a54d11e0f7dd47248d25dd77ff8099d99", null ],
@@ -38,9 +39,9 @@ var screen__overlays_8c =
     [ "Gfx_LoadStencilTex_Mario", "screen__overlays_8c.html#ab1b811c4c32057df07e4fcc877aa3d6b", null ],
     [ "Gfx_LoadStencilTex_SharpCircle", "screen__overlays_8c.html#a5f254383db7abc63f34107d08710676d", null ],
     [ "Gfx_LoadStencilTex_Star", "screen__overlays_8c.html#a4d72cca412dfa68a358387f0ca8e8ee7", null ],
+    [ "screen_overlay_backProgress", "screen__overlays_8c.html#abaf5cfe4a2cd8b67bbd83b482a0a6cd4", null ],
     [ "screen_overlay_backType", "screen__overlays_8c.html#aab90911fa76ba12d063c48c20000d2e4", null ],
-    [ "screen_overlay_backZoom", "screen__overlays_8c.html#ace2a95d2938bd43797c4b73107ced885", null ],
+    [ "screen_overlay_frontProgress", "screen__overlays_8c.html#ae2d62e75fed7366378a4cfd43fdca163", null ],
     [ "screen_overlay_frontType", "screen__overlays_8c.html#a0da4ecaf74631ff85a6a5784534441d2", null ],
-    [ "screen_overlay_frontZoom", "screen__overlays_8c.html#a3ac3ee155e0fb368f333d88a63fac1cc", null ],
     [ "ScreenOverlays", "screen__overlays_8c.html#af1a2fc7bf71dda86b6b1c50f4b1d0c2a", null ]
 ];

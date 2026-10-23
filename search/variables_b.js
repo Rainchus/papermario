@@ -4,7 +4,7 @@ var searchData=
   ['keepawaystarted_1',['keepAwayStarted',['../common__structs_8h.html#a3dc8dbd9db5740e68cec51c4e416616e',1,'Npc.blur']]],
   ['keepusingpartneronmapchange_2',['keepUsingPartnerOnMapChange',['../common__structs_8h.html#a09741fb680620d935cbde3a20fb99310',1,'GameStatus']]],
   ['key_3',['key',['../model_8h.html#a4414ec5558dd25be7bfa7e1a0a137d8f',1,'ModelBoundingBox::key'],['../model_8h.html#ac516477e3323039fbcff395ec544849c',1,'ModelNodeProperty::key']]],
-  ['keybase_4',['keyBase',['../audio_8h.html#ac80640d7aa9b017f6e1847b46b0093f8',1,'Instrument::keyBase'],['../audio_8h.html#a3ad3596ed3c6ffc4a7944241ab0c41f6',1,'BGMDrumInfo::keyBase']]],
+  ['keybase_4',['keyBase',['../audio_8h.html#ac80640d7aa9b017f6e1847b46b0093f8',1,'Instrument::keyBase'],['../audio_8h.html#a57f7db33973ec432f7579288d0aaec8d',1,'BGMDrumInfo::keyBase']]],
   ['keycenter_5',['keyCenter',['../flame_8c.html#adcea71cfc96244dfe5f18ff12593622e',1,'FlamePreset']]],
   ['keyframescount_6',['keyframesCount',['../imgfx_8h.html#a36025a4ff79da5ad1ad17c1435f780a7',1,'ImgFXAnimHeader']]],
   ['keyframesoffset_7',['keyframesOffset',['../imgfx_8h.html#a3ee82205f719fc77c85a23ed60c31c21',1,'ImgFXAnimHeader']]],

@@ -18,7 +18,7 @@ var inventory_8c =
     [ "add_star_pieces", "inventory_8c.html#a1d3284684db118861985972148660aa5", null ],
     [ "add_star_points", "inventory_8c.html#a7a3a9e60fc263273f952e1ca85f6ed00", null ],
     [ "add_star_power", "inventory_8c.html#afe41957e4cc1d5995aa3bb1bfab1f6e2", null ],
-    [ "can_control_status_bar", "inventory_8c.html#a04fd6902d61da80e7a617c0ada95c1d8", null ],
+    [ "can_control_status_bar", "inventory_8c.html#afccb0402a2c5434ae73b77d3a1257866", null ],
     [ "clear_player_data", "inventory_8c.html#aaecd67c81c54d89a284edfee4913b7cc", null ],
     [ "close_status_bar", "inventory_8c.html#a5be4c11e857b1f6a8d70743120293b5b", null ],
     [ "coin_counter_draw_content", "inventory_8c.html#ae0c37cd53652e88680eebddb5bff16fd", null ],

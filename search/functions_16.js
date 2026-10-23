@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['waitforcam_0',['WaitForCam',['../script__api_2common_8h.html#ab07d8c3f898e355ffebeab253c60e82d',1,'common.h']]],
-  ['waitforplayerinputenabled_1',['WaitForPlayerInputEnabled',['../script__api_2common_8h.html#aaa901ad596072fc7e27abf111a301970',1,'common.h']]],
-  ['waitforplayermovetocomplete_2',['WaitForPlayerMoveToComplete',['../script__api_2common_8h.html#a945fede75d61a6aa766aa632958a4b8e',1,'common.h']]],
-  ['waitforplayertouchingfloor_3',['WaitForPlayerTouchingFloor',['../script__api_2common_8h.html#a961ed4e65466373b80b6186c0a613cb4',1,'common.h']]],
+  ['waitforcam_0',['WaitForCam',['../script__api_2common_8h.html#ae12f77f3575041f7bac6b7b67145c19e',1,'common.h']]],
+  ['waitforplayerinputenabled_1',['WaitForPlayerInputEnabled',['../script__api_2common_8h.html#a96f7550bc1f5ae9e933bfeb1f5caea3f',1,'common.h']]],
+  ['waitforplayermovetocomplete_2',['WaitForPlayerMoveToComplete',['../script__api_2common_8h.html#a607474d9617ef3f12ba23def00986e83',1,'common.h']]],
+  ['waitforplayertouchingfloor_3',['WaitForPlayerTouchingFloor',['../script__api_2common_8h.html#a3f9e72e011ddde0e3fb293a9e3940081',1,'common.h']]],
   ['walking_5fdust_5fappendgfx_4',['walking_dust_appendGfx',['../walking__dust_8c.html#a7a66dfa8be4689dbaff35fbe98518888',1,'walking_dust.c']]],
   ['walking_5fdust_5finit_5',['walking_dust_init',['../walking__dust_8c.html#a0451b0909795eb8af05819e95d810f24',1,'walking_dust.c']]],
   ['walking_5fdust_5fmain_6',['walking_dust_main',['../walking__dust_8c.html#a53c737bdc65c96e68a319bbf9cf139ed',1,'walking_dust.c']]],

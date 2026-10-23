@@ -40,8 +40,9 @@ var searchData=
   ['mseqtrackdata_37',['MSEQTrackData',['../audio_8h.html#structMSEQTrackData',1,'']]],
   ['msgvoice_38',['MsgVoice',['../common__structs_8h.html#structMsgVoice',1,'']]],
   ['munchlesiadata_39',['MunchlesiaData',['../entity_8h.html#structMunchlesiaData',1,'']]],
-  ['musicevent_40',['MusicEvent',['../common__structs_8h.html#structMusicEvent',1,'']]],
-  ['musicnotefxdata_41',['MusicNoteFXData',['../effects_8h.html#structMusicNoteFXData',1,'']]],
-  ['musicproximitytrigger_42',['MusicProximityTrigger',['../common__structs_8h.html#structMusicProximityTrigger',1,'']]],
-  ['musicsettings_43',['MusicSettings',['../common__structs_8h.html#structMusicSettings',1,'']]]
+  ['musiccontroldata_40',['MusicControlData',['../common__structs_8h.html#structMusicControlData',1,'']]],
+  ['musicevent_41',['MusicEvent',['../common__structs_8h.html#structMusicEvent',1,'']]],
+  ['musicnotefxdata_42',['MusicNoteFXData',['../effects_8h.html#structMusicNoteFXData',1,'']]],
+  ['musicproximitytrigger_43',['MusicProximityTrigger',['../common__structs_8h.html#structMusicProximityTrigger',1,'']]],
+  ['musictriggeredsound_44',['MusicTriggeredSound',['../sfx__player_8c.html#structMusicTriggeredSound',1,'']]]
 ];

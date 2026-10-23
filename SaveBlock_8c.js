@@ -21,7 +21,7 @@ var SaveBlock_8c =
     [ "Entity_SaveBlock_ScriptResume", "SaveBlock_8c.html#a300f0423dd484f7343925382d8490d35", null ],
     [ "Entity_SavePoint", "SaveBlock_8c.html#a946ad7411f797222db0494b01e1d7136", null ],
     [ "SaveBlockResultPrinter", "SaveBlock_8c.html#a1beb74b04d91ebf2836703d4d9f589c6", null ],
-    [ "SaveBlockResultPrinterClosed", "SaveBlock_8c.html#af6ba7a7fe12e0b1e3debc6e1612e8e40", null ],
+    [ "SaveBlockResultPrinterClosed", "SaveBlock_8c.html#adca01958b75293392833f7b7610fe7f2", null ],
     [ "SaveBlockTutorialPrinter", "SaveBlock_8c.html#ad65ced8c051947f6a434c9a9526c7e60", null ],
-    [ "SaveBlockTutorialPrinterClosed", "SaveBlock_8c.html#af0af1f855df8f0f2f3e8adc25b0d7e16", null ]
+    [ "SaveBlockTutorialPrinterClosed", "SaveBlock_8c.html#aaf70163d13b663cbf2a8af72ad90ea5e", null ]
 ];

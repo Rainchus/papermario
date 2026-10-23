@@ -30,11 +30,11 @@ var game__modes_8h =
       [ "GAME_MODE_INTRO", "game__modes_8h.html#a230f98a24f909e93ac62dd6b0670b3f5af1b7df075c9661464dd20450d3de0f2a", null ],
       [ "GAME_MODE_DEMO", "game__modes_8h.html#a230f98a24f909e93ac62dd6b0670b3f5a39d9c192a9de7e212b9b366aa84a894c", null ]
     ] ],
-    [ "clear_game_modes", "game__modes_8h.html#a66e0977683b0464b6a01fd4a1abe34f2", null ],
-    [ "game_mode_set_fpDrawAuxUI", "game__modes_8h.html#a58f715432b4fb183237d9e345201088f", null ],
+    [ "clear_game_mode", "game__modes_8h.html#a40e8983d691ab64b424b015956b2d081", null ],
+    [ "render_game_mode_backUI", "game__modes_8h.html#a26d2ea85f48207ca4aebf5c7b8cc7dd6", null ],
+    [ "render_game_mode_frontUI", "game__modes_8h.html#ae9fa7c630438f11be1bf153223847645", null ],
     [ "set_game_mode", "game__modes_8h.html#a8cf6a8be40c95a7aec3095acecfb8379", null ],
+    [ "set_game_mode_render_frontUI", "game__modes_8h.html#a5b64f88f3c26d3d978a0261a19ae30dc", null ],
     [ "set_game_mode_slot", "game__modes_8h.html#acfbc6a4eb050c46387339d24feae9081", null ],
-    [ "state_render_backUI", "game__modes_8h.html#a63befbbef820f89aff82b5f79ed37718", null ],
-    [ "state_render_frontUI", "game__modes_8h.html#a1d7111d66ba9faff37729f02a464ea48", null ],
-    [ "step_current_game_mode", "game__modes_8h.html#ad0e8db460dd3f6f029863e9e7a27d04c", null ]
+    [ "step_game_mode", "game__modes_8h.html#ac25ac6c3c16c95d2d2ecc044c393094f", null ]
 ];

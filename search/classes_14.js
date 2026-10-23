@@ -14,6 +14,5 @@ var searchData=
   ['vecxzf_11',['VecXZf',['../common__structs_8h.html#structVecXZf',1,'']]],
   ['vecxzi_12',['VecXZi',['../common__structs_8h.html#structVecXZi',1,'']]],
   ['virtualentity_13',['VirtualEntity',['../common__structs_8h.html#structVirtualEntity',1,'']]],
-  ['volumefield_14',['VolumeField',['../audio_8h.html#unionVolumeField',1,'']]],
-  ['vtxrect_15',['VtxRect',['../hud__element_8h.html#structVtxRect',1,'']]]
+  ['vtxrect_14',['VtxRect',['../hud__element_8h.html#structVtxRect',1,'']]]
 ];

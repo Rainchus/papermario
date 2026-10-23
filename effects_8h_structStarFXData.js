@@ -1,7 +1,7 @@
 var effects_8h_structStarFXData =
 [
     [ "bounceTime", "effects_8h.html#a512954a1c1c156a4ff0f00ec7f941a99", null ],
-    [ "canBounce", "effects_8h.html#afc081a9f40ba6f2ad5cd70fbea8aef05", null ],
+    [ "canBounce", "effects_8h.html#a3d0b10bc8c184490271c039249264d31", null ],
     [ "pos", "effects_8h.html#a403338a0faf7fe31749101efbe5668a7", null ],
     [ "primB", "effects_8h.html#a712b477f1b5b04b2224bc7b3e2486fb3", null ],
     [ "primG", "effects_8h.html#a59e91f725b35c74869d809ad51e073f4", null ],

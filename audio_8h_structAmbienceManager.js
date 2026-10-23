@@ -1,6 +1,6 @@
 var audio_8h_structAmbienceManager =
 [
-    [ "busId", "audio_8h.html#abe85227c02b13f35496b0791a952b49b", null ],
+    [ "busID", "audio_8h.html#acba8898aac91d91fa9b2d62ecc01b848", null ],
     [ "globals", "audio_8h.html#adae56343e6fa2c9f0a8877cba57260df", null ],
     [ "loadTracksFadeInfo", "audio_8h.html#a6f36d8721977de084642bb29959fb051", null ],
     [ "mseqFiles", "audio_8h.html#a03852521e91b397b10a8bdc7b7aecbf5", null ],

@@ -1,68 +1,56 @@
 var audio_8h =
 [
-    [ "AmbVoiceStateInfo", "audio_8h.html#unionAmbVoiceStateInfo", [
-      [ "all", "audio_8h.html#a4b830afa54e1fef3b1fcf74fd8d4be47", null ]
-    ] ],
     [ "SeqArgs", "audio_8h.html#unionSeqArgs", [
-      [ "Detour", "audio_8h.html#a63dacbc486c4cfa538bf88d5ca41008f", null ],
-      [ "EventTrigger", "audio_8h.html#ab3d377dc2f3ef693073398432d406fb0", null ],
-      [ "Jump", "audio_8h.html#a6c5193b4617f94e847b86d67163605ba", null ],
-      [ "MasterEffect", "audio_8h.html#af0069b1fdaf3c4457d11886f90d86358", null ],
-      [ "MasterPitchShift", "audio_8h.html#a47565cd600511c2f35defa487f9bbcde", null ],
-      [ "MasterTempo", "audio_8h.html#a4b67bf41e4301c66e08c31869d52472d", null ],
-      [ "MasterTempoFade", "audio_8h.html#a9c19a664c8c33b8880003a83725eeb20", null ],
-      [ "MasterVolume", "audio_8h.html#af3c3a43dfdb35d7490e874daa0422c7f", null ],
-      [ "MasterVolumeFade", "audio_8h.html#a4085f78a18224109a5187e9ef4bc4269", null ],
+      [ "Branch", "audio_8h.html#a45f50552a50d451e4839d562943c71b5", null ],
+      [ "Detour", "audio_8h.html#acb756b03a8323b4e6c09f0f32ed6b03b", null ],
+      [ "EventTrigger", "audio_8h.html#a3127defb87332bb925d1c88b37ad4934", null ],
+      [ "InstrumentCoarseTune", "audio_8h.html#a179eae3e2d2014da72ab898415b5a8bc", null ],
+      [ "InstrumentFineTune", "audio_8h.html#a5bc7a77f170838dc867e090c267639b1", null ],
+      [ "InstrumentPan", "audio_8h.html#a1049193a078679d97f0dff539d4f4949", null ],
+      [ "InstrumentReverb", "audio_8h.html#aa60275d419ea0858a1f7a23abf540c5b", null ],
+      [ "InstrumentVolume", "audio_8h.html#ac08943a650213a122e786f442b86e1f5", null ],
+      [ "MasterEffect", "audio_8h.html#adc7ee529c2d20dd142832385d092633e", null ],
+      [ "MasterPitchShift", "audio_8h.html#ae383dba6ce788c5db932996ed84cd9f8", null ],
+      [ "MasterTempo", "audio_8h.html#aeb31f1aa746ea2744f12ed743c984441", null ],
+      [ "MasterTempoFade", "audio_8h.html#af5f7b0cb66ba312cb7d8c009a6723e65", null ],
+      [ "MasterVolume", "audio_8h.html#ab743490362df40c55af1cd8f7fa36d37", null ],
+      [ "MasterVolumeFade", "audio_8h.html#a6dd7652bc2cde953a46f2ef4c956ff80", null ],
+      [ "OverridePatch", "audio_8h.html#aefe5f3bc0c458dbcf87702d6c16fcab2", null ],
+      [ "RandomPan", "audio_8h.html#a294dbbbf58f1b2c3f2e6122a7fd8c820", null ],
       [ "raw", "audio_8h.html#a49313400c223000f57f6ddd823012c86", null ],
-      [ "SegTrackTune", "audio_8h.html#a56b3b7daf2511021a647d987b7e9842f", null ],
-      [ "SegTrackVolume", "audio_8h.html#ae4eb2eac73c6d572da041154ef594e0d", null ],
-      [ "SetTrackVoice", "audio_8h.html#acb10fadc27073619d3b45dfde0fa4bb9", null ],
-      [ "SubTrackCoarseTune", "audio_8h.html#a25da18dd04aca1e6dd183cd03ac0262c", null ],
-      [ "SubTrackFineTune", "audio_8h.html#a018c99be56a9a92c71362f3553cf8a8f", null ],
-      [ "SubTrackPan", "audio_8h.html#a4b386152a247da63c898a063ac0194ab", null ],
-      [ "SubTrackReverb", "audio_8h.html#a24b4f955873322fc4bbe4ac303d754c9", null ],
-      [ "SubTrackReverbType", "audio_8h.html#aecce6d9cc713613f8792d95aca5fceec", null ],
-      [ "SubTrackVolume", "audio_8h.html#ae33a879d3ea18dcd3b74c0d1ee1d9593", null ],
-      [ "TrackOverridePatch", "audio_8h.html#a4dc0bbb8c4dc1f73d42d6528ad311489", null ],
-      [ "TrackTremolo", "audio_8h.html#a84d6691ee792f74fbad4d30f1b9fc924", null ],
-      [ "TrackTremoloSpeed", "audio_8h.html#a299d6c2078870db7dec4da331f95a7e5", null ],
-      [ "TrackTremoloTime", "audio_8h.html#aa82047dd8c6069fd67f7e8c3bb6b5e7a", null ],
-      [ "TrackVolumeFade", "audio_8h.html#a5e5ef49a3bea0e37dde750f528f5565f", null ],
-      [ "UnkCmdE3", "audio_8h.html#a9f4d195ead854ff9d0370f15b15dc41f", null ],
-      [ "UnkCmdF4", "audio_8h.html#a9e6c8ab4a215fb80b86ab61a85669176", null ],
-      [ "UnkCmdFF", "audio_8h.html#af330e59b3ebe14b6013a74061fb9101c", null ]
-    ] ],
-    [ "VolumeField", "audio_8h.html#unionVolumeField", [
-      [ "s32", "audio_8h.html#a26cd29bde12f58dd99434c6ea02a7b5d", null ],
-      [ "u16", "audio_8h.html#aa4e0b26f6cdcc86bcc9b3ed65a8785e0", null ]
+      [ "ReverbType", "audio_8h.html#a1a57c9df43b36d81a6c3db7e19613520", null ],
+      [ "Special", "audio_8h.html#a982f1b9cac8dc039696d049d0175a9b4", null ],
+      [ "TrackDetune", "audio_8h.html#a58927932c0523f992f393070935605d9", null ],
+      [ "TrackTremolo", "audio_8h.html#a086e4f06c2b44a5d876cee52a7c4e6e0", null ],
+      [ "TrackTremoloDepth", "audio_8h.html#a11ee280342fc957e031f022ca26394b8", null ],
+      [ "TrackTremoloRate", "audio_8h.html#a952afee5a301bb5d883376c4cfb3321c", null ],
+      [ "TrackVolume", "audio_8h.html#a0185ec75c829160729e27207145e6e3a", null ],
+      [ "TrackVolumeFade", "audio_8h.html#ae2c025c0a6c0d2e775995944724c85b7", null ],
+      [ "UnkCmdE3", "audio_8h.html#ad29496a33911774150fc42339e1db4ea", null ],
+      [ "UseInstrument", "audio_8h.html#a44fa25300a6ef8f78b21c6497e683181", null ]
     ] ],
     [ "Fade", "audio_8h.html#structFade", [
-      [ "curVolume", "audio_8h.html#a0b44f1e1854b7a4b2480e90e5eb59cc1", null ],
-      [ "fadeStep", "audio_8h.html#a086236315d1b5fd3d374a84fed9df68f", null ],
-      [ "fadeTime", "audio_8h.html#a882eab38cfdc899b1fbedc4d2e610eb2", null ],
-      [ "targetVolScale", "audio_8h.html#a908e5888cf7cb96e79be2e1255ffd20f", null ],
-      [ "targetVolume", "audio_8h.html#af7d8bc52665f7f477ddcd843e0344a8c", null ],
-      [ "volScale", "audio_8h.html#a597150cfd5b4d62ca6d7694ab76f7bfd", null ],
-      [ "volScaleStep", "audio_8h.html#a21a7c23a349914e1dd4688c535d10ec0", null ],
-      [ "volScaleTime", "audio_8h.html#a5eaa0593692d24166b6de41f4eb3e945", null ]
-    ] ],
-    [ "AlUnkPi", "audio_8h.html#structAlUnkPi", [
-      [ "unk_00", "audio_8h.html#ab44fc6761413bfd2924f1ee07932e351", null ],
-      [ "unk_08", "audio_8h.html#a6205d9545b9f55a0828e05cf17e593d5", null ],
-      [ "unk_0C", "audio_8h.html#aef6e258363a53b6c091acf90a2d005a6", null ],
-      [ "unk__04", "audio_8h.html#a13e5aa7e3147caee35b105858442ea8a", null ]
+      [ "baseStep", "audio_8h.html#a3a61cd937a5437a901277cd21636d4aa", null ],
+      [ "baseTarget", "audio_8h.html#a7a16910dd2d74809e72f31075f4af998", null ],
+      [ "baseTicks", "audio_8h.html#a25fc93ea93b6fe75401fc7fc7ad84d38", null ],
+      [ "baseVolume", "audio_8h.html#ab3ef0f18cc591b98323ac4c013c271bd", null ],
+      [ "envelopeStep", "audio_8h.html#ac76ba37d413059280ae2c65983bf479d", null ],
+      [ "envelopeTarget", "audio_8h.html#a8d761dd1597e2e58989d1517d9c10bfc", null ],
+      [ "envelopeTicks", "audio_8h.html#a9e1d73dec148ffacdb32841ac70a1b19", null ],
+      [ "envelopeVolume", "audio_8h.html#a0fcd4808d2583807efa6704788d9ec89", null ],
+      [ "onCompleteCallback", "audio_8h.html#a374dbcc8b74f7d6f31aee61683ee845a", null ]
     ] ],
     [ "AuDelay", "audio_8h.html#structAuDelay", [
+      [ "activeLowpass", "audio_8h.html#afee67952bb76aad76fafb7e9af2c373a", null ],
+      [ "activeResampler", "audio_8h.html#ab5737c3723dccc26bb6cbdf12278a7e5", null ],
       [ "fbcoef", "audio_8h.html#a510d45d415fdcf60edbb7182c5086a37", null ],
       [ "ffcoef", "audio_8h.html#a541314dc944396acdb66ddfe7a9f7b2a", null ],
       [ "gain", "audio_8h.html#ac83156cabc2c6ffe11a9c44806ad7687", null ],
       [ "input", "audio_8h.html#abea42bf5deb34f618e172b9b989a0e51", null ],
-      [ "lowpass_20", "audio_8h.html#a82f276cd790acf7475b0bbf4ebf6bf41", null ],
-      [ "lowpass_24", "audio_8h.html#a312412fbce7eefcfc88c61bfb01ed301", null ],
+      [ "lowpassTemplate", "audio_8h.html#ade16f0ba1e6d73d8786f6d0d856ef879", null ],
       [ "output", "audio_8h.html#a4117a0875d6f3675ff65bdf4a17e0cfe", null ],
       [ "pad_0E", "audio_8h.html#a6ea33c4abef3937dc2e54daa6c128d24", null ],
-      [ "resampler_28", "audio_8h.html#a29dbb4c967f0c6083cd0cd4a14138503", null ],
-      [ "resampler_2C", "audio_8h.html#ab94a16b0b115c09178fb8152e864a938", null ],
+      [ "resamplerTemplate", "audio_8h.html#a2ed216ee1c1c02910c59bb720b1e5df7", null ],
       [ "rsdelta", "audio_8h.html#a18fdc29699ff2782aa9c27a87aaeb9ad", null ],
       [ "rsgain", "audio_8h.html#a787f0e7e8b897d6a9ee7c0956d4e97bd", null ],
       [ "rsinc", "audio_8h.html#ab9d33cd1a6025e248fea32a12bd100ef", null ],
@@ -83,14 +71,14 @@ var audio_8h =
       [ "fstate", "audio_8h.html#ac7e73c9a3e4b02ad05bbaa368382afaa", null ],
       [ "pad_04", "audio_8h.html#ae8f326ec140db449213533a0b54fa494", null ]
     ] ],
-    [ "AlUnkKappa", "audio_8h.html#structAlUnkKappa", [
-      [ "lowpass_0C", "audio_8h.html#a9dac1d4e8587635e776e426b6729cbc7", null ],
-      [ "lowpass_10", "audio_8h.html#a7bc3bb9a5d5cc92abe8f5993b17337e4", null ],
-      [ "unk_00", "audio_8h.html#a18f078be131504020124f1bc1ce99cce", null ],
-      [ "unk_06", "audio_8h.html#ac0cbe9dc59f0f988370bb52e5ece8f0e", null ],
-      [ "unk_08", "audio_8h.html#ae1452b01d045483fd3b00e1beead4c7e", null ],
-      [ "unk__04", "audio_8h.html#a4aba9bb78b625ec5b9406b4ce0184bc4", null ],
-      [ "unk__0A", "audio_8h.html#a6fda5a07b8e59bd4d05283dd3822886e", null ]
+    [ "AuFilter", "audio_8h.html#structAuFilter", [
+      [ "activeLowpass", "audio_8h.html#a6342ec2b487d512dfb1e44a257ed58f2", null ],
+      [ "base", "audio_8h.html#ae055c4ed46d54b518be582f08f6f83e9", null ],
+      [ "lowpassTemplate", "audio_8h.html#af1c98d2225bd008aec88209b7790cae9", null ],
+      [ "pad_04", "audio_8h.html#aeba1e641107904a5b70fe580b85d9ac6", null ],
+      [ "pad_0A", "audio_8h.html#a537e3d4e811495f1e7d03fb3f3802bfe", null ],
+      [ "unused_06", "audio_8h.html#a3716e9615935aa9adad6c81e76874996", null ],
+      [ "unused_08", "audio_8h.html#adeac79425e3446099c5a8940de373843", null ]
     ] ],
     [ "AuFxBus", "audio_8h.html#structAuFxBus", [
       [ "curEffectType", "audio_8h.html#a4234735004c23ec00a7edec64afec24d", null ],
@@ -98,9 +86,9 @@ var audio_8h =
       [ "fxR", "audio_8h.html#a969cfaf6a10e3cfaffafad1267b6d3a8", null ],
       [ "gain", "audio_8h.html#a1819e6e156f8567a4e20ff62092065e7", null ],
       [ "head", "audio_8h.html#ab11c0ee89c99f6f93b8b767102aa1897", null ],
-      [ "tail", "audio_8h.html#aa7da1f2436409d0206064e91aad2a09c", null ],
-      [ "unk_02", "audio_8h.html#a017d661d36549dc5f60625538b0ff8f4", null ],
-      [ "unk_0D", "audio_8h.html#a8c224bbf09fb9b855b3f0e2f35b13f96", null ]
+      [ "pad_02", "audio_8h.html#a5a46a86ceef1e1ecc2ba1115ef1c6922", null ],
+      [ "pad_0D", "audio_8h.html#afcab4a3510109e24583d2a86f13f82e9", null ],
+      [ "tail", "audio_8h.html#aa7da1f2436409d0206064e91aad2a09c", null ]
     ] ],
     [ "AuLoadFilter", "audio_8h.html#structAuLoadFilter", [
       [ "bookSize", "audio_8h.html#a4497fe5f3e00f396ef276fa7504bbc4f", null ],
@@ -117,7 +105,7 @@ var audio_8h =
     ] ],
     [ "AuResampler", "audio_8h.html#structAuResampler", [
       [ "delta", "audio_8h.html#a11b20d8f0de3a6295358f832c576d358", null ],
-      [ "first", "audio_8h.html#a62e917a112952598f95829fbe6ebeb38", null ],
+      [ "first", "audio_8h.html#a15a8f6be040151eec8996aabab824989", null ],
       [ "ratio", "audio_8h.html#a211219957d8a2158a28478e4ef9a19a9", null ],
       [ "state", "audio_8h.html#ae3b97aa76601e54eb99314d6e0874aa5", null ]
     ] ],
@@ -125,8 +113,8 @@ var audio_8h =
       [ "cvolL", "audio_8h.html#a8e48b83c7f1a0a272f1ddd03344f636e", null ],
       [ "cvolR", "audio_8h.html#a39e6edfc54399f93b753295e19f71b86", null ],
       [ "delta", "audio_8h.html#a7d1607fbf885e38eb24083a3b385dbb7", null ],
+      [ "dirty", "audio_8h.html#af8a5e1f8bdbf528bfd95b635b6da59b3", null ],
       [ "dryamt", "audio_8h.html#a172173f46d1a00864d6d6b15294d031f", null ],
-      [ "first", "audio_8h.html#aaeb9edee37a389b865e024b0b5c6afc3", null ],
       [ "lratl", "audio_8h.html#a99c4b7c547b651a1d809a5ca734f0341", null ],
       [ "lratm", "audio_8h.html#a43a0163d2bc75820f1e962ae671c963d", null ],
       [ "ltgt", "audio_8h.html#af0802c423b89e965590796d62de29225", null ],
@@ -141,36 +129,36 @@ var audio_8h =
       [ "wetamt", "audio_8h.html#a2b8dd251803b79e79a2b1a0931039c7b", null ]
     ] ],
     [ "AuPVoice", "audio_8h.html#structAuPVoice", [
-      [ "busId", "audio_8h.html#ab48faba4ab09a183bd539b075844ad5f", null ],
+      [ "busID", "audio_8h.html#a1028bfc4e508283b77432ae63b5ec233", null ],
       [ "decoder", "audio_8h.html#a4f68e6a19dfa9e62cf8e26870596cac6", null ],
       [ "envMixer", "audio_8h.html#adb12fe1084028c49d7529fa33f0c2350", null ],
       [ "index", "audio_8h.html#a9b807738e46677fd7a1d611855f2c979", null ],
       [ "next", "audio_8h.html#a234136be658f5943c5d13d2eb8098e86", null ],
+      [ "pad_76", "audio_8h.html#a161e04596c1b1544fb37508dfcc219e3", null ],
+      [ "pad_7A", "audio_8h.html#a28311283f6612fc9887a31b96d5022a2", null ],
       [ "resampler", "audio_8h.html#a8a5ba82e4a1564b47b8eef66adaee45d", null ],
-      [ "unk_74", "audio_8h.html#a3fc8dc932952a8b2cdcaed7327f197f9", null ],
-      [ "unk_76", "audio_8h.html#ae246d6a78e2f3134a5260c920f83dc0a", null ],
-      [ "unk_7A", "audio_8h.html#ab02fc9ecf4e3820c7f433f51e3a613e8", null ]
+      [ "unused_74", "audio_8h.html#a24783b08ec296923410762f45a5fe4bf", null ]
     ] ],
     [ "AuSynDriver", "audio_8h.html#structAuSynDriver", [
       [ "curSamples", "audio_8h.html#a334f6aed80ef3c3b7250b64f10b6ac1f", null ],
       [ "dmaNew", "audio_8h.html#a3c6ea6c827e7e2f0712fae28aaded15e", null ],
+      [ "dryAccumBuffer", "audio_8h.html#a217149ed1ae2fe3feaa3e552f8593a53", null ],
       [ "fxBus", "audio_8h.html#a88415de0263c76a730a8f15c6a62ebab", null ],
       [ "heap", "audio_8h.html#a8cca8ee8f2e3716aa4408054b98b3b0f", null ],
       [ "num_bus", "audio_8h.html#ad4e174126ef4c74a8797c57e906f73ce", null ],
       [ "num_pvoice", "audio_8h.html#a9052bf4b2fc62da053c369d0aed5c9b7", null ],
       [ "outputRate", "audio_8h.html#a401fd1dce0f9b688dec0f91490430a63", null ],
       [ "pvoices", "audio_8h.html#a79b0601bdceb7f149db972ae32f6a309", null ],
-      [ "savedAuxOut", "audio_8h.html#a4d3e42181ad5eabdb50dad00bb07d1dd", null ],
-      [ "savedMainOut", "audio_8h.html#a160039ae500fada5d4ffcc34436a3834", null ],
-      [ "unk_04", "audio_8h.html#a11a69b73603d67aa480ecebf99384efb", null ]
+      [ "unused_04", "audio_8h.html#a1122bbbd87fc90425a96935a4e267852", null ],
+      [ "wetAccumBuffer", "audio_8h.html#ace7e028f645b80299c0dfc73b3abd0f2", null ]
     ] ],
-    [ "SoundSFXEntry", "audio_8h.html#structSoundSFXEntry", [
-      [ "pan", "audio_8h.html#a0af85fe42060ede0a083c881bb475498", null ],
-      [ "pitchShift", "audio_8h.html#a2b42f4214dffbba01451f81ec2d85151", null ],
-      [ "soundID", "audio_8h.html#a16650899b57a9a22a95bbac376a33a94", null ],
-      [ "unk_9", "audio_8h.html#a6069cacd7afa2adf69168a7d6b5cea28", null ],
-      [ "upperSoundID", "audio_8h.html#ad61c9907feb064b43b1494ce12008c7a", null ],
-      [ "volume", "audio_8h.html#a08e3c7bb7040dfa2482017b819e82a46", null ]
+    [ "SoundRequest", "audio_8h.html#structSoundRequest", [
+      [ "pad_9", "audio_8h.html#a575c3ccd943a261732f6280579c03d3f", null ],
+      [ "pan", "audio_8h.html#ac02a529142b0d371627d39c670c1a6ae", null ],
+      [ "pitchShift", "audio_8h.html#a9170043c549d693b796efed3bbe71601", null ],
+      [ "soundID", "audio_8h.html#a9e99afaaca6167a3cca13759f17e3e82", null ],
+      [ "toReplaceID", "audio_8h.html#a4a11082d34ffd2fa66795d78e9ce8214", null ],
+      [ "volume", "audio_8h.html#a10bbf7150c36539cfb967ebf9453353c", null ]
     ] ],
     [ "EnvelopeData", "audio_8h.html#structEnvelopeData", [
       [ "cmdListPress", "audio_8h.html#a08796c68939a1ab3497faa9d780d087e", null ],
@@ -183,32 +171,32 @@ var audio_8h =
     [ "EnvelopePreset", "audio_8h.html#structEnvelopePreset", [
       [ "count", "audio_8h.html#a60253d37aa93479349655368ca302fcc", null ],
       [ "offsets", "audio_8h.html#a492680fb5b125f3d1557619d51e1758d", null ],
-      [ "unk_01", "audio_8h.html#a53b33677ee5715dc54b0d73707d9e8db", null ]
+      [ "pad_01", "audio_8h.html#a1c9c896ca533d0da89228c4e192b5300", null ]
     ] ],
     [ "Instrument", "audio_8h.html#structInstrument", [
-      [ "base", "audio_8h.html#a7f08df7c89fc77a711d49bb61c24cf15", null ],
-      [ "dc_bookSize", "audio_8h.html#a6bba4c78c65c45f4586dafe85eda13ab", null ],
+      [ "codebookSize", "audio_8h.html#acb7bc390b8b23dfb539c895e4f3fed02", null ],
       [ "envelopes", "audio_8h.html#ab99e9b9d6b949d74fc017e0a7be8076b", null ],
       [ "keyBase", "audio_8h.html#ac80640d7aa9b017f6e1847b46b0093f8", null ],
       [ "loopCount", "audio_8h.html#a6764bd9c4dae0cb7482a67c84776469f", null ],
       [ "loopEnd", "audio_8h.html#a40f2b0b2ee85c86392aec3840af675cc", null ],
-      [ "loopPredictor", "audio_8h.html#ab191a253393776c79f977628b3480f83", null ],
       [ "loopStart", "audio_8h.html#a823fed10964e37dbef1e98bbaf1fec8c", null ],
-      [ "predictor", "audio_8h.html#a0cf983469308e8e687f97c873fd78010", null ],
+      [ "loopState", "audio_8h.html#a08a89c4c15bc9f24bbd4894080e50153", null ],
+      [ "predictor", "audio_8h.html#a0eb23a35ab157a9d0d05931500c34c91", null ],
       [ "type", "audio_8h.html#af0919766c62c0eb32d01715d44cbcf30", null ],
-      [ "unk_25", "audio_8h.html#ad2c68158b1f09f320ea1f20850f3a863", null ],
-      [ "unk_26", "audio_8h.html#a96ee1da24ac8e34b07bbcc041395a434", null ],
-      [ "unk_27", "audio_8h.html#a4063f68ba9f5a810a45fdac1b1d93a9c", null ],
-      [ "unk_28", "audio_8h.html#a60d8f53b91fce4fd6209821a3e2a2fc1", null ],
-      [ "unk_29", "audio_8h.html#a00dd7600a8ba51978acd50abcc712240", null ],
-      [ "unk_2A", "audio_8h.html#adab0053a1766a0b51f347202d118159f", null ],
-      [ "unk_2B", "audio_8h.html#a1ec61420b2f5591d64f9c8050231fa6c", null ],
+      [ "unused_26", "audio_8h.html#ac6d1abe9d638c53de23bb4fa21c26142", null ],
+      [ "unused_27", "audio_8h.html#ac605fddb5e158b131f5245d534fe34aa", null ],
+      [ "unused_28", "audio_8h.html#ad4a85cce5860c14fb04a8e03a4a1ff80", null ],
+      [ "unused_29", "audio_8h.html#adce82a5f95bb188777ebe9d2833e0f09", null ],
+      [ "unused_2A", "audio_8h.html#a6aacacdf9fe24c40b9420eb914bbe036", null ],
+      [ "unused_2B", "audio_8h.html#a844da670cfd076d91ecb1f61030226f4", null ],
+      [ "useDma", "audio_8h.html#a2cb3c34833b970e2de29eb4dcee3e08d", null ],
+      [ "wavData", "audio_8h.html#aa9c88305f2af2c4b8cd854fe67eb6d78", null ],
       [ "wavDataLength", "audio_8h.html#a63e1d321210e57b5ce2843f52c1d3115", null ]
     ] ],
     [ "SoundLerp", "audio_8h.html#structSoundLerp", [
-      [ "current", "audio_8h.html#a4e0f6bdd867de51e95dce9f16f0c95e0", null ],
+      [ "current", "audio_8h.html#a1b68c434f59d62a5e4c04f5413f974e0", null ],
       [ "goal", "audio_8h.html#ad3284cd00046b807211e025477e13b14", null ],
-      [ "step", "audio_8h.html#a46ca6b509538e6758b7de80816a98ca8", null ],
+      [ "step", "audio_8h.html#a0d4fc3fbec480ae7818cea652fc76558", null ],
       [ "time", "audio_8h.html#a91d78d2f580281997ea42d57025cb566", null ]
     ] ],
     [ "SoundPlayChange", "audio_8h.html#structSoundPlayChange", null ],
@@ -217,7 +205,7 @@ var audio_8h =
       [ "alternativeType", "audio_8h.html#a25b67f76232c4568a7486e5bc942f7cf", null ],
       [ "alternativeVolume", "audio_8h.html#a548fe112ff431d6d8bee9826e568d7d9", null ],
       [ "changed", "audio_8h.html#a42937d143daac3a819e12be171bfd3cc", null ],
-      [ "cmdList_mode2", "audio_8h.html#a6cd8015eee5206d9cd04e5a1c96483d3", null ],
+      [ "cmdListOneShot", "audio_8h.html#a0305e4e6b9f374442f362343bba840c5", null ],
       [ "coarseTune", "audio_8h.html#a3cc14db255151f88d2cd81fd5a7c1ed1", null ],
       [ "curSoundID", "audio_8h.html#ab21e00f7bfb9b39e800592cf367aa2ed", null ],
       [ "delay", "audio_8h.html#acfc1bf164499f27a009434c71c7d64fd", null ],
@@ -232,12 +220,17 @@ var audio_8h =
       [ "masterPan", "audio_8h.html#a424f69cbc2c0d44a8a70d11080b471d9", null ],
       [ "masterPitchShift", "audio_8h.html#a420669ddedc848b7af9063dcb3b4affb", null ],
       [ "masterVolume", "audio_8h.html#a6bd95695e1dd8bb40da5f77382fe9fb1", null ],
-      [ "pad4", "audio_8h.html#ac6242f9764b3b36c16f4d5aa3cdce105", null ],
+      [ "pad_4", "audio_8h.html#a49b06d70b8bee438beef8d952287f8f2", null ],
+      [ "pad_86", "audio_8h.html#aac5b85f1825cd887d46e9e40e38fc604", null ],
+      [ "pad_8D", "audio_8h.html#a54cf7c3ad7486bcd3da6e457c3735e9d", null ],
+      [ "pad_95", "audio_8h.html#a63a8737ef3ed036a166157d84b3a93a8", null ],
+      [ "pad_AA", "audio_8h.html#a160b9c8e4ab539505d4ed9f52af5dd1b", null ],
       [ "pitchRatio", "audio_8h.html#a07464d2c206b5beeb12013eb753a36dd", null ],
       [ "playLength", "audio_8h.html#a16e5f3bd425153cbe84ed9d2c0a80f52", null ],
       [ "playVelocity", "audio_8h.html#ae8f6dd8f1a083a48e1672321aa79ea20", null ],
       [ "priority", "audio_8h.html#a8b0044d6591a3d8ec11bc3e37d2fa6f1", null ],
       [ "randomPitch", "audio_8h.html#a348c25250dd0b7e4bc8e772a02bd14b2", null ],
+      [ "randomUnused", "audio_8h.html#aaf43b4587139f0627f18b0c0826c2298", null ],
       [ "randomVelocity", "audio_8h.html#a047bace094811a8bd8ad8401297078a0", null ],
       [ "reverb", "audio_8h.html#a51d157ddc3570d237c7da252819eaa26", null ],
       [ "sefDataReadPos", "audio_8h.html#a1a18337a168890b0f7fa1bec42d71cb6", null ],
@@ -250,22 +243,17 @@ var audio_8h =
       [ "state", "audio_8h.html#ab1b870bdaa0d3042ab361213bb7ab0dd", null ],
       [ "triggers", "audio_8h.html#a9b6a73bd287f22d584b0f8e44e57d885", null ],
       [ "tuneLerp", "audio_8h.html#a468e45326cce79f68c00dc03611ba3c1", null ],
-      [ "unk_05", "audio_8h.html#a5ec2cfd5354a4b150a1ecbf9108dde73", null ],
-      [ "unk_86", "audio_8h.html#a9fd06538474abebfe5c582b9d7931629", null ],
-      [ "unk_8D", "audio_8h.html#a0eb22aedb3be2f175cc97f7a82411e3b", null ],
-      [ "unk_A0", "audio_8h.html#addb0dd2beaee636b5190ae8143f1e7fd", null ],
-      [ "unk_A3", "audio_8h.html#ac275287dc4b5521d0f41ade22f515866", null ],
-      [ "unk_AA", "audio_8h.html#a7e9c4ff34840819a725d46f3b9104b67", null ],
+      [ "unused_A0", "audio_8h.html#ad78632986d855521cf5e50fa75f6d700", null ],
       [ "volumeLerp", "audio_8h.html#a31a7f856e9803a02d989d08be7211b06", null ]
     ] ],
-    [ "SoundManager90", "audio_8h.html#structSoundManager90", null ],
+    [ "SoundManagerMusicEvent", "audio_8h.html#structSoundManagerMusicEvent", null ],
     [ "SoundManagerCustomCmdList", "audio_8h.html#structSoundManagerCustomCmdList", [
       [ "data", "audio_8h.html#a6c4038ee8e3b30bee1f5956d76b15c6f", null ]
     ] ],
     [ "SoundManager", "audio_8h.html#structSoundManager", [
       [ "baseVolume", "audio_8h.html#a493112826a72ef6a70013dcc5fee05f9", null ],
-      [ "bgmSounds", "audio_8h.html#a454c13f23211fc25bb7722e894001b29", null ],
-      [ "busId", "audio_8h.html#aa8683ffe8b1e87abdcb298a2b16da92a", null ],
+      [ "bgmSounds", "audio_8h.html#a08ce98c08de77c124ad93045a6f97e9c", null ],
+      [ "busID", "audio_8h.html#a0c242cc21664586392add2742d920a35", null ],
       [ "busVolume", "audio_8h.html#a746c414744dfa469c5a0f34807d202f4", null ],
       [ "curVoice", "audio_8h.html#af540fcc6926af00c8b4fc9decd66ff23", null ],
       [ "curVoiceIndex", "audio_8h.html#a0d986ef95bd2a0360c90bd8d8f9a2e08", null ],
@@ -274,30 +262,30 @@ var audio_8h =
       [ "customReverbParams", "audio_8h.html#a1057ac5192afc652c2bd6b94b7c402f9", null ],
       [ "defaultReverbAmt", "audio_8h.html#aea4e2e0c362e5604b3e276d4f699ae39", null ],
       [ "extraSounds", "audio_8h.html#a000bd8741e9738083f9c16b40d41c6f1", null ],
-      [ "fadeInfo", "audio_8h.html#a35183f44e3d66279eda1df4f0ea5cd9c", null ],
+      [ "fadeInfo", "audio_8h.html#a6f5390c9a6a52f13681d26ca92e26a83", null ],
+      [ "firstVoice", "audio_8h.html#a20df446b5991055fbaec7d6f20d5bfea", null ],
+      [ "frameCounter", "audio_8h.html#a268b0e78434c1dca85dae9dc911d69e0", null ],
       [ "globals", "audio_8h.html#a336002c2cf41e1ae47f72682499ca5b0", null ],
       [ "lastCustomEffectIdx", "audio_8h.html#a109f94f9d543503fefec8c0e3005d31b", null ],
       [ "nextUpdateCounter", "audio_8h.html#ac0a98bf4cb861162b1cfe848fd77b490", null ],
       [ "nextUpdateInterval", "audio_8h.html#a34a963bb9a5af7838562424268f1585b", null ],
       [ "nextUpdateStep", "audio_8h.html#a808a6fa7990827ed5fd2633af83df63e", null ],
       [ "normalSounds", "audio_8h.html#a56422d914782117b772bcb48bf123c6b", null ],
-      [ "playCounter", "audio_8h.html#a604267de07e30c83cea09d252ced0440", null ],
+      [ "pad_166", "audio_8h.html#af2334192d82250457308f313970e4f02", null ],
+      [ "pad_8E", "audio_8h.html#ad0c9a487ea09d6439edc8d6a55679a14", null ],
+      [ "pad_C1", "audio_8h.html#a977599880e3acfffc7f60226aeff9754", null ],
       [ "players", "audio_8h.html#a5f07ffd79639babce8bfc70b61295a6d", null ],
+      [ "prevUpdateResult", "audio_8h.html#a3d213d8f8d17d744295e59f69cc4a04e", null ],
       [ "priority", "audio_8h.html#ad3ce6ce77270cccb37b8151321f14acf", null ],
       [ "randomValue", "audio_8h.html#a647c5e66193c7741839d0a2306892a65", null ],
       [ "resetPending", "audio_8h.html#ad83df98f1224d8901316c9fb4f46c8f3", null ],
       [ "sefData", "audio_8h.html#a077632ff4d38fdd927ee5d21784b6adb", null ],
-      [ "sfxPlayerSelector", "audio_8h.html#aa33269e6925ff9d38f9d7e9113302771", null ],
-      [ "sfxQueueNextPos", "audio_8h.html#a93b001955170a7d320c625a9ad05f11a", null ],
-      [ "sfxQueuePosOffset", "audio_8h.html#ac7aba26415a245f85026949f1f9301de", null ],
-      [ "soundQueue", "audio_8h.html#acce7b83628101e5e36d43631567a2789", null ],
+      [ "sfxQueueReadPos", "audio_8h.html#ace852dc6c35b6638a9a155cf5663c6cd", null ],
+      [ "sfxQueueWritePos", "audio_8h.html#adb7f537f953c1a5f20f8a4ea2ae729ab", null ],
+      [ "soundQueue", "audio_8h.html#a461bbdd5f452527d86c7faa15e9fb988", null ],
       [ "state", "audio_8h.html#a5d24685734b48c2fd3575b95ee88d949", null ],
-      [ "unk_162", "audio_8h.html#a8612d5f7a183b797668646c857622dbd", null ],
-      [ "unk_165", "audio_8h.html#ab57aabc6070b278d624081cc6ff3cfe4", null ],
-      [ "unk_166", "audio_8h.html#a09c8d52c603278f260c70d9be3992d90", null ],
-      [ "unk_8E", "audio_8h.html#a4c1e10d2d79db0e92735949018b6d999", null ],
-      [ "unk_BA", "audio_8h.html#aab4db300186cd1ef10ca5003caf5d4d0", null ],
-      [ "unk_C1", "audio_8h.html#a68a0e03935df32a72d9d04cbefa1aa80", null ]
+      [ "unused_162", "audio_8h.html#a0a326f233d59e836adc82327c92be4e1", null ],
+      [ "unused_165", "audio_8h.html#a8c8be10e20b926cd634e21aa05ffbc40", null ]
     ] ],
     [ "SoundInstance", "audio_8h.html#structSoundInstance", [
       [ "flags", "audio_8h.html#ad095721e54411644f96b0148df2bff30", null ],
@@ -314,45 +302,45 @@ var audio_8h =
       [ "sounds", "audio_8h.html#a0c08fd0524321f82d3e9ed229c4e7713", null ]
     ] ],
     [ "AuVoice", "audio_8h.html#structAuVoice", [
-      [ "busId", "audio_8h.html#adeb41907f102f03c8cc288223817c6ac", null ],
+      [ "busID", "audio_8h.html#ae9045b908c69f0dacd927d434cd6cf40", null ],
       [ "clientPriority", "audio_8h.html#a8056f83dcb9d22ac5801feafeafdded0", null ],
       [ "clientVolume", "audio_8h.html#a84afdfce00fbdaa7b91d9ea07959fd43", null ],
       [ "cmdPtr", "audio_8h.html#af646770893262aa50d1e3c5b247a3a70", null ],
       [ "delta", "audio_8h.html#ad2b5cf14ff7e9636419accc3c132d732", null ],
+      [ "donePending", "audio_8h.html#a050537574386bcd9a724fec9fd2b214d", null ],
+      [ "envDelta", "audio_8h.html#af38958f446c90cfcc1af581ee3f40743", null ],
+      [ "envDuration", "audio_8h.html#aaf10a5fa8e6f01b4bfde913d8d2f6b0e", null ],
       [ "envelope", "audio_8h.html#a263828bedeb1fdbd56ba9a673ebf4b95", null ],
       [ "envelopeFlags", "audio_8h.html#abaf821f296da38f2f6cd87a58ae76f7e", null ],
-      [ "initialAmp", "audio_8h.html#ac48fcfe8302474d8f5ecfbd2d51a1075", null ],
+      [ "envInitial", "audio_8h.html#a5198d9d07a02c98223514bd3325760df", null ],
+      [ "envIntervalIndex", "audio_8h.html#ae8386b0ccc5358087fc8769965417915", null ],
+      [ "envRelativeStart", "audio_8h.html#aff637e45507e9995f9160f16ff681e97", null ],
+      [ "envScale", "audio_8h.html#a46c6f4bfe3504647d661672aac6dea67", null ],
+      [ "envTarget", "audio_8h.html#a41e7fea5a5f7bae5df5836b05bee6017", null ],
+      [ "envTimeLeft", "audio_8h.html#aa57c8367a190e09943c0187d26db4e04", null ],
       [ "instrument", "audio_8h.html#ab579fb0bdaac835616ba6a9269392742", null ],
+      [ "isRelativeRelease", "audio_8h.html#a81017bac2d17092415956a11c1b1ff40", null ],
       [ "loopCounter", "audio_8h.html#a5b0f9cd61c258269f69db04216055737", null ],
       [ "loopStart", "audio_8h.html#aed489ad22fd4653bc47bd4fd9f760dc6", null ],
-      [ "p_volume", "audio_8h.html#ad1c0799ccda122a10199cde31dcc87c0", null ],
+      [ "pad_11", "audio_8h.html#ac5d94c98cda561d3b2c04a6d93c50033", null ],
+      [ "pad_46", "audio_8h.html#a7611053b86a8b06fa4780ea29a1a8413", null ],
       [ "pan", "audio_8h.html#a8d5cd83a4eedb2f3749e4e9178c54b3c", null ],
       [ "pitchRatio", "audio_8h.html#a5e1ac37229ea364095ae63e2fd9ea9bc", null ],
       [ "priority", "audio_8h.html#af24b9175f6b045565fcac94c04d9d57e", null ],
-      [ "rate", "audio_8h.html#a7f1a0849d78aab6ae3a9d94f78cee3df", null ],
-      [ "relativeReleaseVolumes", "audio_8h.html#a5741cf2879895858f443d47547dad391", null ],
-      [ "releaseVolumeMult", "audio_8h.html#aaa0e455f8776e6fc6b4529d6a7da7052", null ],
       [ "reverb", "audio_8h.html#ac57cea425c96503edbcf4c6339883daa", null ],
-      [ "stopPending", "audio_8h.html#ab401d8669af948f628c67dabf2d15a62", null ],
       [ "syncFlags", "audio_8h.html#aa2a26019a5050291606b6378a2578cd6", null ],
-      [ "targetAmp", "audio_8h.html#af50531286c796831727329efb950ff4d", null ],
-      [ "timeIntervalIndex", "audio_8h.html#a6b97c4e6d38ef98c5f55762c40753868", null ],
-      [ "timeLeft", "audio_8h.html#af9920e93f2bf14a8628b322492f57ed2", null ],
-      [ "unk_11", "audio_8h.html#ad00b7ccc1cc9e4b8b613ec38f893078f", null ],
-      [ "unk_20", "audio_8h.html#af11bab91bbf3696df515e305e0bd069f", null ],
-      [ "unk_3C", "audio_8h.html#aa8a9fe5e09f5692e618e4ae6f2434b39", null ],
-      [ "unk_46", "audio_8h.html#ab813da16e4c24ae612c8a58b3e72425b", null ],
-      [ "volChangeTime", "audio_8h.html#a9339d04ca0f54a208f4daf35f5339e83", null ],
-      [ "volMult", "audio_8h.html#a5ed7f4896539d9bcf9188aa349e901d8", null ]
+      [ "unused_20", "audio_8h.html#a075ac1414d01280659e1dcceb74cadc7", null ],
+      [ "unused_3C", "audio_8h.html#aba5cc56b6c85e7f0b1553db4b9640122", null ],
+      [ "volume", "audio_8h.html#a62a7f97218e80dfa3529ae75b96775d9", null ]
     ] ],
     [ "BGMFileInfo", "audio_8h.html#structBGMFileInfo", [
+      [ "compositions", "audio_8h.html#aed42113b248734a0b2074b35d45d41de", null ],
       [ "drumCount", "audio_8h.html#a01cb8f42cbcd0916501a09c84e149bb4", null ],
       [ "drums", "audio_8h.html#a6f8ed85006fb08da520b338710405cfe", null ],
       [ "instrumentCount", "audio_8h.html#a2bbbb4561c0a66f0010ce939fd43f6ca", null ],
       [ "instruments", "audio_8h.html#a93200fb11ccefcf6896fad69541694f3", null ],
-      [ "numSegments", "audio_8h.html#a8008818fdaf8187c65595a744a142101", null ],
       [ "pad_11", "audio_8h.html#a8ab527c09439a93333df55b4b9e264ff", null ],
-      [ "segments", "audio_8h.html#a71bcd3598bfe4ebb584cbb061861dc5a", null ]
+      [ "timingPreset", "audio_8h.html#a37762f7ea48f24016d8328c3804ef576", null ]
     ] ],
     [ "BGMHeader", "audio_8h.html#structBGMHeader", [
       [ "info", "audio_8h.html#a6ccd9e6f902e12cf836b5a9d602432b4", null ],
@@ -362,15 +350,15 @@ var audio_8h =
       [ "size", "audio_8h.html#aaec2331e5cc2cf37606c47caf8be586d", null ]
     ] ],
     [ "BGMDrumInfo", "audio_8h.html#structBGMDrumInfo", [
-      [ "bankPatch", "audio_8h.html#a76f025e9fc5b5324af655251fc603b67", null ],
-      [ "keyBase", "audio_8h.html#a3ad3596ed3c6ffc4a7944241ab0c41f6", null ],
+      [ "bankPatch", "audio_8h.html#a16ddeff1a1cbbcb445d6da70a6671757", null ],
+      [ "keyBase", "audio_8h.html#a57f7db33973ec432f7579288d0aaec8d", null ],
       [ "pad_B", "audio_8h.html#a0ca56bda56fd7b5fd285c06290dc1e2d", null ],
       [ "pan", "audio_8h.html#acd68508147aecda2bc471904f9fdc2c1", null ],
       [ "randPan", "audio_8h.html#a7390343f302e880136f40329d422f9a0", null ],
       [ "randReverb", "audio_8h.html#ad2207f23bc944dfbc01384a93a2d71cd", null ],
       [ "randTune", "audio_8h.html#ad73258f07b4d959251abd83ae3978c07", null ],
       [ "randVolume", "audio_8h.html#a0ef99cabbb6794268afbe937d751ad4c", null ],
-      [ "reverb", "audio_8h.html#ac1806801a35661cd7a6433c667378ca9", null ],
+      [ "reverb", "audio_8h.html#a31be9f60bde0e593121cbaf9c58512ee", null ],
       [ "volume", "audio_8h.html#aa0c278fde8e5dc48d9ba5a3f0c794f36", null ]
     ] ],
     [ "BGMInstrumentInfo", "audio_8h.html#structBGMInstrumentInfo", [
@@ -379,197 +367,201 @@ var audio_8h =
       [ "fineTune", "audio_8h.html#a9df853be4ff87bb68efeb3b99284bd1c", null ],
       [ "pad_7", "audio_8h.html#acd705273baa074e0ef67ac0455a211fe", null ],
       [ "pan", "audio_8h.html#a664da0e9e0d1dac88ab582254bde882e", null ],
-      [ "reverb", "audio_8h.html#a7511793eaa380b56d4e1b86613c1f7e7", null ],
+      [ "reverb", "audio_8h.html#a21e96bdaa26f868e35b3483fdd56f7b2", null ],
       [ "volume", "audio_8h.html#aa9b35bcb4e08036e8f5588afdfd2ec60", null ]
     ] ],
     [ "AUFileMetadata", "audio_8h.html#structAUFileMetadata", [
       [ "signature", "audio_8h.html#aca45658232246af1a5b35ad56ccd1642", null ],
       [ "size", "audio_8h.html#a7d5813980da25db4b424d45559406072", null ]
     ] ],
+    [ "SBNFileEntry", "audio_8h.html#structSBNFileEntry", [
+      [ "offset", "audio_8h.html#ac6eb9de24e3e5e5f685a3f729595e60a", null ]
+    ] ],
     [ "SBNHeader", "audio_8h.html#structSBNHeader", [
-      [ "fileSize", "audio_8h.html#a6ee8a8d2533e20861689d22cb41485b8", null ],
+      [ "entries", "audio_8h.html#a2602f68e487913475f63ba681c502374", null ],
+      [ "fileListOffset", "audio_8h.html#a964dc459e54a378417a18c4132f45789", null ],
+      [ "fullFileSize", "audio_8h.html#a0693eab4e2660f6261081324d6e6d04f", null ],
       [ "INIToffset", "audio_8h.html#aa0b3ad57f74d2deefb3ef50d7767faa6", null ],
       [ "mdata", "audio_8h.html#a03df90105659f1aac7d98b406e5e125b", null ],
       [ "numEntries", "audio_8h.html#a1c74247bf913dbc2244f6023d601c4b7", null ],
-      [ "reserved", "audio_8h.html#ac3fe351c8622dfaa28a2ae4fdeb6f736", null ],
-      [ "tableOffset", "audio_8h.html#aa42937e5cf4a9239bc001a99f2114669", null ],
       [ "unused_04", "audio_8h.html#a7cbe1913daa547bc7baec0df3c2624a2", null ],
       [ "unused_08", "audio_8h.html#aeab2dafd7641ac17168e26680c9c1b18", null ],
+      [ "unused_28", "audio_8h.html#a9702400bf0b3b37e3f1e4ed26f8b2f72", null ],
       [ "versionOffset", "audio_8h.html#a180c74c4c8655a8a9922a147a065d004", null ]
     ] ],
     [ "SEFHeader", "audio_8h.html#structSEFHeader", [
       [ "hasExtraSection", "audio_8h.html#af63409909f4390c47e996891bcd6b824", null ],
       [ "mdata", "audio_8h.html#a61df7087608e79d35cb51f40074ce671", null ],
+      [ "name", "audio_8h.html#a15eb38b239d7cf5bcf6fa36d57d01697", null ],
       [ "section2000", "audio_8h.html#abe0c5d1b16b69e1597091df312b5dbe9", null ],
       [ "sections", "audio_8h.html#ab4187c54ea1ecb5881e7559a3178c42e", null ],
-      [ "unk8", "audio_8h.html#ae66bae4cce2f6857480749a6d22c11e0", null ],
-      [ "unkC", "audio_8h.html#a66b2181381b75e536bb166f82dd0bef3", null ],
-      [ "unkD", "audio_8h.html#aa4b8dee9e66a43121e9a9f211a3edafb", null ],
-      [ "unkF", "audio_8h.html#abbac676b146c17def6b59d7c66796dae", null ]
+      [ "unused_0C", "audio_8h.html#af1053c06d2f3c7ee015d74a00ae9dfa4", null ],
+      [ "unused_0F", "audio_8h.html#a714e62c5b38877310cdf7aafb519c7cf", null ]
     ] ],
     [ "INITHeader", "audio_8h.html#structINITHeader", [
-      [ "entriesOffset", "audio_8h.html#afb863ce89da355972b4f286cb8edb85d", null ],
-      [ "entriesSize", "audio_8h.html#af8353610d981de131703bcb06d7271fd", null ],
+      [ "bankListOffset", "audio_8h.html#afbebf67a7e8c0d49622f9922de7a0de4", null ],
+      [ "bankListSize", "audio_8h.html#a65ddb0c64a37af7716e4b099bff959d4", null ],
       [ "mdata", "audio_8h.html#a37c66c89177567b75f394df537de5fdb", null ],
-      [ "shortsOffset", "audio_8h.html#a41a7bbc3c1271237ea9cddf93722d67e", null ],
-      [ "shortsSize", "audio_8h.html#a1224ac571543af1df52c3463909c8982", null ],
-      [ "tblOffset", "audio_8h.html#afe2b60ef80adf67800c0ca458363ca5b", null ],
-      [ "tblSize", "audio_8h.html#a76640d1d6fc406f3277219076d4b441d", null ],
-      [ "unk_14", "audio_8h.html#aaa5a94eb710bc0f73d6f77972a2064b3", null ]
-    ] ],
-    [ "PERHeader", "audio_8h.html#structPERHeader", [
-      [ "mdata", "audio_8h.html#af2d0b5d5b60a5ba1c89ad0d44852869f", null ],
-      [ "unk_08", "audio_8h.html#ae7b6c20329d980ec7d6628b73e782577", null ]
-    ] ],
-    [ "PEREntry", "audio_8h.html#structPEREntry", [
-      [ "drums", "audio_8h.html#a5db871b252c80f98731b84ee35216088", null ]
-    ] ],
-    [ "SBNFileEntry", "audio_8h.html#structSBNFileEntry", [
-      [ "offset", "audio_8h.html#ac6eb9de24e3e5e5f685a3f729595e60a", null ]
-    ] ],
-    [ "BKHeader", "audio_8h.html#structBKHeader", [
-      [ "format", "audio_8h.html#a00ece13b8791568d095a6c516e7f3ba7", null ],
-      [ "instruments", "audio_8h.html#ae74f88349a1249ec4667df187e00338a", null ],
-      [ "instrumetsSize", "audio_8h.html#a68b719ccb53fe8bf8ebb2eae06345f51", null ],
-      [ "name", "audio_8h.html#a8e8244620e56904c4c6b031a2ea85c6a", null ],
-      [ "predictorsSize", "audio_8h.html#a09a3824be509625f483f55e563086bf6", null ],
-      [ "predictorsStart", "audio_8h.html#a1c4ee59a8b71e61dd73deff21b44bc44", null ],
-      [ "signature", "audio_8h.html#a3cf507d4b5aa758c88568b2c5e692dc8", null ],
-      [ "size", "audio_8h.html#ae31c3aac22ed52c98d71b0ca1fe534ca", null ],
-      [ "unk_02", "audio_8h.html#ad01c924538ad2f0eafcc3405e14176be", null ],
-      [ "unk_0E", "audio_8h.html#a5fc8cc3d2015d3f1e29626caebb11415", null ],
-      [ "unk_10", "audio_8h.html#a808e408415938024fbdec7185096010b", null ],
-      [ "unkSizeA", "audio_8h.html#a55b01cebca6e0044f011fd5cb7896d65", null ],
-      [ "unkSizeB", "audio_8h.html#adeca2802a7dc755bb5a0f38b21c3caed", null ],
-      [ "unkStartA", "audio_8h.html#a11d478b1a3dc34815fea3feff826a437", null ],
-      [ "unkStartB", "audio_8h.html#abbd19192cad635b81abf0238b98573bd", null ]
+      [ "mseqListOffset", "audio_8h.html#a33142df1acc69a063139f80fb4fc3e65", null ],
+      [ "mseqListSize", "audio_8h.html#a577b361e69bdf27d0a719662bc26c8a7", null ],
+      [ "pad_14", "audio_8h.html#a626fa300cc00dc457c337fa007b52b63", null ],
+      [ "songListOffset", "audio_8h.html#ad3e275acd5e4a607815dea7b37e6afbc", null ],
+      [ "songListSize", "audio_8h.html#ac046209a9522fd71b5a680aca94c9151", null ]
     ] ],
     [ "InitSongEntry", "audio_8h.html#structInitSongEntry", [
       [ "bgmFileIndex", "audio_8h.html#a8d22acf68943b7265bbc91b519d987ed", null ],
       [ "bkFileIndex", "audio_8h.html#a056ca89472f8766475fd603709a61e96", null ]
     ] ],
-    [ "SoundBank", "audio_8h.html#structSoundBank", [
-      [ "swizzled", "audio_8h.html#ae321a4d26153bfc7c8073666cc60df30", null ],
-      [ "unk_00", "audio_8h.html#a80f049f068527b5df17b3f4477b9fa98", null ],
-      [ "unk_0F", "audio_8h.html#a42a1e2c45e0080d2e8fd7ce5a8f2085b", null ]
+    [ "InitBankEntry", "audio_8h.html#structInitBankEntry", [
+      [ "bankIndex", "audio_8h.html#a567dba90d4ab6dc81cc0f884cc239622", null ],
+      [ "bankSet", "audio_8h.html#a4769e3476235763893f0a00f9eb6c6df", null ],
+      [ "fileIndex", "audio_8h.html#a79b065b47f2ac1532e21f10758c7f346", null ]
+    ] ],
+    [ "PERHeader", "audio_8h.html#structPERHeader", [
+      [ "mdata", "audio_8h.html#af2d0b5d5b60a5ba1c89ad0d44852869f", null ],
+      [ "pad_08", "audio_8h.html#af901065e4633c61c6674af63dbf933a7", null ]
+    ] ],
+    [ "PEREntry", "audio_8h.html#structPEREntry", [
+      [ "drums", "audio_8h.html#a5db871b252c80f98731b84ee35216088", null ]
+    ] ],
+    [ "BKHeader", "audio_8h.html#structBKHeader", [
+      [ "envelopesLength", "audio_8h.html#ac4193a80abc88c64a1f07cd8ff20428a", null ],
+      [ "envelopesStart", "audio_8h.html#ac98052baa3c242815359c294df708c95", null ],
+      [ "format", "audio_8h.html#a00ece13b8791568d095a6c516e7f3ba7", null ],
+      [ "instruments", "audio_8h.html#ae74f88349a1249ec4667df187e00338a", null ],
+      [ "instrumetsLength", "audio_8h.html#aa14dc5a4cc640950ab57797e08ecfd05", null ],
+      [ "loopStatesLength", "audio_8h.html#a2264f8a534a6076a39d2c54d2baf8f9f", null ],
+      [ "loopStatesStart", "audio_8h.html#ab7228ed8c213643ed8ae2612d4a6c147", null ],
+      [ "name", "audio_8h.html#a8e8244620e56904c4c6b031a2ea85c6a", null ],
+      [ "pad_02", "audio_8h.html#ad4496cba449fa365c301411f9e689a81", null ],
+      [ "pad_0E", "audio_8h.html#adedcccdb1c7a0107d7cc53101cac676f", null ],
+      [ "predictorsLength", "audio_8h.html#a43f87b0d4d394b879a7b984855a6fa3f", null ],
+      [ "predictorsStart", "audio_8h.html#a1c4ee59a8b71e61dd73deff21b44bc44", null ],
+      [ "signature", "audio_8h.html#a3cf507d4b5aa758c88568b2c5e692dc8", null ],
+      [ "size", "audio_8h.html#ae31c3aac22ed52c98d71b0ca1fe534ca", null ],
+      [ "swizzled", "audio_8h.html#a5ef18c500ba258949513c4abe8e1d575", null ]
+    ] ],
+    [ "BKFileBuffer", "audio_8h.html#structBKFileBuffer", [
+      [ "data", "audio_8h.html#abf6cf1fb97dae66c83fe05d5cf11ca11", null ],
+      [ "header", "audio_8h.html#a4b00969a77a188a9cfeda0bdc7c0096c", null ]
     ] ],
     [ "AuEffectChange", "audio_8h.html#structAuEffectChange", [
       [ "changed", "audio_8h.html#ae069f0cea1b58800614afe0ace1d1bc5", null ],
-      [ "type", "audio_8h.html#ab24709fd1025f0d063e747494e977932", null ],
-      [ "unk_02", "audio_8h.html#afdd945813cd608e20adf091a4b5bf181", null ]
+      [ "pad_02", "audio_8h.html#a5c9e942d58e744c050718c2f8104e891", null ],
+      [ "type", "audio_8h.html#ab24709fd1025f0d063e747494e977932", null ]
     ] ],
-    [ "SndGlobalsSub6C", "audio_8h.html#structSndGlobalsSub6C", [
-      [ "bgmPlayer", "audio_8h.html#abe60470e97df27f5cb8b1e00834f0140", null ],
-      [ "unk_4", "audio_8h.html#ab1bf4c96b67d13f99e89ab35b5abbaeb", null ],
-      [ "unk_5", "audio_8h.html#a61f20b24ee0d0010268330aff1dd3fa1", null ]
+    [ "BGMPlayerSnapshot", "audio_8h.html#structBGMPlayerSnapshot", [
+      [ "assigned", "audio_8h.html#a2a78f5a142ce1b0fba7f31aa2c876756", null ],
+      [ "bgmPlayer", "audio_8h.html#acaf244d919d440a844d8c3289fced93f", null ],
+      [ "priority", "audio_8h.html#abf3e73944f582716cccabf045024ccb7", null ]
     ] ],
     [ "AuGlobals", "audio_8h.html#structAuGlobals", [
       [ "audioThreadCallbacks", "audio_8h.html#a4e5ab0aa2f3a6a1e29ba3b1be4f17a27", null ],
-      [ "banks", "audio_8h.html#ab11089d9037dc4a046fde717195d926d", null ],
+      [ "auxBanks", "audio_8h.html#a33825fcda42e23d762dbfa1f12739323", null ],
+      [ "auxBankSet", "audio_8h.html#a5cf0ab8bf1ca4660b1b746a92d09aad3", null ],
+      [ "bankSet2", "audio_8h.html#a211d79ea4b17a554065a780436610c05", null ],
+      [ "bankSet4", "audio_8h.html#a80f53f7d07cb40ad79259202d84b7521", null ],
+      [ "bankSet5", "audio_8h.html#a08ffc1d4f593150ab32f38241728e463", null ],
+      [ "bankSet6", "audio_8h.html#a6c58b0379cca077f528fb0743f030acc", null ],
+      [ "bankSets", "audio_8h.html#ad0a2ec9aa1a0f52ffe89034a20b997bc", null ],
       [ "baseRomOffset", "audio_8h.html#a0fe59215b0f2300bf111793be511c6b2", null ],
       [ "bkFileListOffset", "audio_8h.html#a5c60dd4b244098aa3f71a8f826153898", null ],
       [ "bkListLength", "audio_8h.html#a5f47afece907f98ce2227d63c4625164", null ],
-      [ "channelDelayBusId", "audio_8h.html#aacd46981f0bcdff8065619b434138f04", null ],
+      [ "channelDelayBusID", "audio_8h.html#a5ffa506b940158ddb6dcaa7238d1e41b", null ],
       [ "channelDelayPending", "audio_8h.html#a0337022ff69da8dc7c4a1cbedfbbc0ef", null ],
       [ "channelDelaySide", "audio_8h.html#ab04add0c59cceb302845e5ef2f64eef0", null ],
+      [ "channelDelayState", "audio_8h.html#accb684b4fa966bf2ae876378c2ac0895", null ],
       [ "channelDelayTime", "audio_8h.html#afb2e49ae1e9c21c4d4a100b3a082c957", null ],
       [ "dataBGM", "audio_8h.html#ab5bbb498f9169edc264a76878f88c7ed", null ],
       [ "dataMSEQ", "audio_8h.html#a445ddd6ce487793aca7b15e95a96a7bb", null ],
       [ "dataPER", "audio_8h.html#abaefaf0021df2dfaedf471cd59e3fbc0", null ],
       [ "dataPRG", "audio_8h.html#a65a9aedae82e3a4c9c86791e390396b8", null ],
       [ "dataSEF", "audio_8h.html#af25c84f35acc3831893e04561b1556ed", null ],
+      [ "defaultBankSet", "audio_8h.html#a053f313d4bdeb392679bb20c9b8973b5", null ],
       [ "defaultDrumEntry", "audio_8h.html#aff76bbe2bf9c979f43e27605836ce7b4", null ],
       [ "defaultInstrument", "audio_8h.html#a288e279411832cb1f82e99b15635e3c1", null ],
       [ "defaultPRGEntry", "audio_8h.html#abd3bcbebbe25c9d46da9356db40153a4", null ],
       [ "effectChanges", "audio_8h.html#ad8f6a835a618c0ad08dde4859550831b", null ],
+      [ "extraFileList", "audio_8h.html#afa8b0b61350b6955757da332f887a3e0", null ],
       [ "fileListLength", "audio_8h.html#a7fca04a493590f8156012eba8185e885", null ],
       [ "flushMusicEventQueue", "audio_8h.html#a48247f7f564ee3b44f1f2a9db830fde3", null ],
-      [ "instrumentGroup1", "audio_8h.html#a5f0be213323b846c22befda7aa7a64e7", null ],
-      [ "instrumentGroup2", "audio_8h.html#aa34f37d647e86fa5d30e33edf86ab767", null ],
-      [ "instrumentGroup3", "audio_8h.html#a4d60ef0e7de11fe813be87b70985875e", null ],
-      [ "instrumentGroup4", "audio_8h.html#ae805e4724dae164f27b9663e370fe23b", null ],
-      [ "instrumentGroup5", "audio_8h.html#af6a58188b8bd08b46fe1661413730cf0", null ],
-      [ "instrumentGroup6", "audio_8h.html#a2bde8846fa81e93ac82411eb165415e8", null ],
-      [ "instrumentGroups", "audio_8h.html#ad8f6a7bd43f94de3a57575e08051746d", null ],
-      [ "instrumentGroupX", "audio_8h.html#acf00bfee494f430b3e516fd0a472d3db", null ],
-      [ "mseqFileList", "audio_8h.html#aee0bd104770bf17b2c847ea6f54dfde0", null ],
+      [ "musicBankSet", "audio_8h.html#afad2da808b7bc0e2fcf3ffff567f7455", null ],
       [ "musicEventQueue", "audio_8h.html#a3749e4279de882dd02032074c667f54e", null ],
       [ "musicEventQueueCount", "audio_8h.html#ae81bb1a2ffe8491ed3c711a8e73fe0eb", null ],
       [ "musicEventQueuePos", "audio_8h.html#aea9cf07258423684cb90c8f42f457184", null ],
       [ "outputRate", "audio_8h.html#a01b726eb3d6524071287fceb0e93d528", null ],
+      [ "pad_130D", "audio_8h.html#afe36e9aaa70013ae2c7f72468fcfb064", null ],
+      [ "pad_131C", "audio_8h.html#adcde686286241c92ca12920c80eb5616", null ],
+      [ "pad_28", "audio_8h.html#a0bde559255dd064c6bbfb7f30fd9bf98", null ],
+      [ "resumeCopyFrom", "audio_8h.html#a6f643b62d55d9a54383c8ce669c4a9a7", null ],
+      [ "resumeCopyTo", "audio_8h.html#a5af5427af9e612a054a5b9890f41975d", null ],
+      [ "resumeFadeEnd", "audio_8h.html#aa637e9901d398a432cfbc8980319ccc3", null ],
+      [ "resumeFadeStart", "audio_8h.html#ac6a8fcef1deb74fadbaf8858468d0d27", null ],
+      [ "resumeFadeTime", "audio_8h.html#ad5b63ef45e1a007e839a582a9959ee0c", null ],
+      [ "resumeRequested", "audio_8h.html#a937963063f08c03deb4a17182a2f4325", null ],
+      [ "resumeSongName", "audio_8h.html#ac9454b2d3a219bc663e27484b2ba124a", null ],
       [ "sbnFileList", "audio_8h.html#a68da000ad7be47135586710ce7cf6d51", null ],
+      [ "snapshots", "audio_8h.html#a896a3abc5cdd8468e3e6288871464041", null ],
       [ "songList", "audio_8h.html#a27d0a78ab7a6be551fdd8be389089469", null ],
       [ "songListLength", "audio_8h.html#aa48488bbd9a1370c3a2f435615c58eb0", null ],
-      [ "unk_130C", "audio_8h.html#aa2fb04e79cf440ff6bc9369473a0b6e3", null ],
-      [ "unk_130D", "audio_8h.html#a22af53cb17242099fd8748bb6ace0aaf", null ],
-      [ "unk_131C", "audio_8h.html#ae0ff7863b26a807011c3a891e460e41d", null ],
-      [ "unk_28", "audio_8h.html#a2783da65845fe8fff1ce383645603eb9", null ],
-      [ "unk_74", "audio_8h.html#a68c022242b241a2628809fbefd6f74f4", null ],
-      [ "unk_78", "audio_8h.html#abdcc88b0582da8ee98b811c444783f01", null ],
-      [ "unk_80", "audio_8h.html#a854a7922e6694c466d2b2b3ee1ff283e", null ],
-      [ "unk_globals_6C", "audio_8h.html#ad723e358b39cd79b89190c90978265cb", null ],
-      [ "unkFadeEnd", "audio_8h.html#a6af8011d1119c7e266708e32d7dfdf0a", null ],
-      [ "unkFadeStart", "audio_8h.html#ab124f2758875203159478ebe9ce9c7d7", null ],
-      [ "unkFadeTime", "audio_8h.html#a0279934d0ec2a56ab7a7453c0f398f48", null ],
-      [ "unkSongName", "audio_8h.html#a36faefd13a96642d0d4f262049b2272d", null ],
       [ "voices", "audio_8h.html#a1774b7c31becb4d6bc7afaea3021f0a7", null ]
     ] ],
     [ "BGMPlayerTrack", "audio_8h.html#structBGMPlayerTrack", [
       [ "bgmReadPos", "audio_8h.html#accac5b8242d09adbe4bbea51e33d47d1", null ],
+      [ "busID", "audio_8h.html#a51b2362904c7785064ac8ddda0812b1f", null ],
       [ "changed", "audio_8h.html#a200c57da9e176955ee932575fd3e5610", null ],
       [ "delayTime", "audio_8h.html#a8da3ac8e6a643b26ff70e774b98b297e", null ],
       [ "detourLength", "audio_8h.html#a8d3b83863837c1408a0a90fafa9648ca", null ],
+      [ "detune", "audio_8h.html#a4bf1b193ecda074c161ce6a441cf4bdf", null ],
       [ "envelope", "audio_8h.html#aca5e0cdd444f6cabba9d12f4dff1a743", null ],
+      [ "firstVoice", "audio_8h.html#a15e26b1259a7b1ff31ffa1c37c7bb4f8", null ],
       [ "index", "audio_8h.html#a95d971b3743e593f914bb5db27139776", null ],
+      [ "insCoarseDetune", "audio_8h.html#af0df2109a06901b9416670e5c925b4ad", null ],
+      [ "insFineDetune", "audio_8h.html#af1f66b6a822de41e6bc3affd959de168", null ],
+      [ "insPan", "audio_8h.html#a595825acff1b187b841794f0e8927a16", null ],
+      [ "insReverb", "audio_8h.html#a6353e4f087f0156396d8af5d1c8fa7cb", null ],
       [ "instrument", "audio_8h.html#aed4b7dcad444579fde566a3fcfae6e73", null ],
+      [ "insVolume", "audio_8h.html#a5b024ce15f95446fa049f33fd970497f", null ],
+      [ "insVolumeStep", "audio_8h.html#aa43c78658746450e38f2a9074d836eea", null ],
+      [ "insVolumeTarget", "audio_8h.html#a6b484c59e84423ecc738efbe87285ebd", null ],
+      [ "insVolumeTicks", "audio_8h.html#a4917beb84836acda6e58f1c496c70f41", null ],
       [ "isDrumTrack", "audio_8h.html#aafcf6a31fca37a1d4e39db1c8881b590", null ],
-      [ "parentTrackIdx", "audio_8h.html#ab30d9dadb7046cc3a015dc5faaa72da5", null ],
+      [ "lastVoice", "audio_8h.html#a8a1820a66b05e67ec0f11510f2f5d6e8", null ],
+      [ "linkedTrackID", "audio_8h.html#a5bb98539072b6a5aaeca4d9d331eb14e", null ],
+      [ "muted", "audio_8h.html#ab2dc94d7750f2b23cf14905ba605f920", null ],
+      [ "pad_3C", "audio_8h.html#ae0edfc282f6775983d2d6e7e05678b58", null ],
+      [ "pad_5D", "audio_8h.html#aad0a2bcc860e15c0a087956c4c23e528", null ],
       [ "patch", "audio_8h.html#adecb8cb93a854b56e9c5b74dfc960d0e", null ],
       [ "polyphonicIdx", "audio_8h.html#a6b5efdbc23d52917cc3743124ca1a8e0", null ],
+      [ "polyVoiceCount", "audio_8h.html#a7a80e269c32cc5f5356179955fd57a2f", null ],
+      [ "pressOverride", "audio_8h.html#a829e8f84e2233eb5dac10121466bc85e", null ],
       [ "prevReadPos", "audio_8h.html#ad82225381c21f979ed22f93d3f3011bd", null ],
+      [ "proxMixSetChanged", "audio_8h.html#a1e848ccdc365a40d46129625e37471ec", null ],
+      [ "proxMixValChanged", "audio_8h.html#a34ba3fc8979481ecb852a4aa473c45d8", null ],
+      [ "proxVol1", "audio_8h.html#a936f4d3ca8af79e103f8607a6674322a", null ],
+      [ "proxVol2", "audio_8h.html#a2248d810732d4d419da21dbf73f8cc98", null ],
+      [ "proxVolume", "audio_8h.html#a4270bfc8b00ef81a259ecad13cab73a0", null ],
+      [ "proxVolumeStep", "audio_8h.html#af47592da575fc544fda75fd53ecceec8", null ],
+      [ "proxVolumeTarget", "audio_8h.html#a8e84a05afff19dd2f7e9475d3432e7bf", null ],
+      [ "proxVolumeTicks", "audio_8h.html#a2c41760fa89906d9b7809f80754816b7", null ],
+      [ "randomPanAmount", "audio_8h.html#a7c8e8443851d9980656fa05db5bec093", null ],
       [ "savedPos", "audio_8h.html#aaee74adfc92455c884c0007767b98ab7", null ],
-      [ "segTrackTune", "audio_8h.html#ad22c515460ca455e87dc2b347634c4fe", null ],
-      [ "segTrackVolume", "audio_8h.html#a157b1f2286ef69d8583117ec32615408", null ],
-      [ "subtrackBusId", "audio_8h.html#a028d644a087d23edaa04b007f1e63f99", null ],
-      [ "subTrackCoarseTune", "audio_8h.html#a7c6632424bbebbdafd8354611c1f5a9a", null ],
-      [ "subTrackFineTune", "audio_8h.html#adc7eae98bb6a238f9063999183945a9a", null ],
-      [ "subTrackPan", "audio_8h.html#af82f7f3f630022e16a883abd8279e1c6", null ],
-      [ "subTrackReverb", "audio_8h.html#afa9ddc429c6863078a0c230e13c1c2ba", null ],
-      [ "subTrackVolume", "audio_8h.html#a7535b43f35a0d85113604d9b03e20142", null ],
-      [ "subTrackVolumeStep", "audio_8h.html#a6be6272f97f1a45436451ab745b815d3", null ],
-      [ "subTrackVolumeTarget", "audio_8h.html#ac5eeb1ae22c11954a02e2a1fecbe7153", null ],
-      [ "subTrackVolumeTime", "audio_8h.html#a93dd2ef274e962bb00f72e94fb79e8bd", null ],
-      [ "trackTremoloAmount", "audio_8h.html#a72023269288ddab86cb44a4a2b9274b6", null ],
-      [ "trackTremoloSpeed", "audio_8h.html#a7053eae5e1a87c08031678aad394456c", null ],
-      [ "trackTremoloTime", "audio_8h.html#a56cc94638e9a8a14284d2de26b05c4c6", null ],
-      [ "unk_3C", "audio_8h.html#af1cb599497c2da01eb8a2685c4556671", null ],
-      [ "unk_4C", "audio_8h.html#a06a1c8daca1f0635dd712dd5a205b770", null ],
-      [ "unk_4D", "audio_8h.html#aac40f974048be30900966b93b98b66f8", null ],
-      [ "unk_4E", "audio_8h.html#a1fc204837e6ddd3a4230cff966048d34", null ],
-      [ "unk_4F", "audio_8h.html#a51a62261fa36f55079127ba830944f20", null ],
-      [ "unk_50", "audio_8h.html#a3f4be1ac9135de9a569bf804bbdcca4c", null ],
-      [ "unk_51", "audio_8h.html#ab7d61ec950ccf6c47531850a332981dd", null ],
-      [ "unk_52", "audio_8h.html#a14d25e0eb744956aa3576450f76a27c0", null ],
-      [ "unk_53", "audio_8h.html#abdf613ecffd4d5b1377308e5ea7da4d2", null ],
-      [ "unk_57", "audio_8h.html#a20ccf6545db11c3b29a8457e863d0a38", null ],
-      [ "unk_5A", "audio_8h.html#ab30bac22485fdfad408078a8b15ed780", null ],
-      [ "unk_5D", "audio_8h.html#a571936212dadae1dda1d6053b2576c3b", null ],
-      [ "unkVolume", "audio_8h.html#ac49c375f59d96bf513526ba7c712c40a", null ],
-      [ "unkVolumeStep", "audio_8h.html#a497faa99d162c5ff5c55f30d8527192b", null ],
-      [ "unkVolumeTarget", "audio_8h.html#aaa5d7197d575243a4600bec2354266e4", null ],
-      [ "unkVolumeTime", "audio_8h.html#a8012072c3ba4ebed4ff42b81720de230", null ]
+      [ "tremoloDelay", "audio_8h.html#a8ec5e7da7fd2e2e2e0a7c0138dbaaba8", null ],
+      [ "tremoloDepth", "audio_8h.html#a883aeb756ad5b6fdc6ecba6ebc6fec87", null ],
+      [ "tremoloRate", "audio_8h.html#a8eadac0d429e9f064855426e847aa97b", null ],
+      [ "volume", "audio_8h.html#aea9304865674c3988b5bc3309b1de266", null ]
     ] ],
     [ "SeqNote", "audio_8h.html#structSeqNote", [
-      [ "adjustedPitch", "audio_8h.html#a97a041bf5a30090d203891d9b03d2c7e", null ],
+      [ "detune", "audio_8h.html#ac175258acbbd005da12d37f7e3ed4806", null ],
       [ "ins", "audio_8h.html#ae22be71e65f5674e62429c1b1ae34911", null ],
-      [ "noteLength", "audio_8h.html#ac28dd06d7d6a0617dc0c7d51481da773", null ],
-      [ "noteVelocity", "audio_8h.html#a8be514294f85dbad1c71ac7e4d311742", null ],
+      [ "length", "audio_8h.html#ae7b4ddb5afbaddaefa43cf29079c9a7d", null ],
+      [ "pendingTick", "audio_8h.html#a986114fe05f676380b1c93edec3719d1", null ],
       [ "pitchRatio", "audio_8h.html#ad3d93ef971d5da3835b61321fd9fb991", null ],
-      [ "tremoloAmount", "audio_8h.html#aa5a4b494e0cfde7a588b85ea4e69efab", null ],
-      [ "tremoloTime", "audio_8h.html#a2f2687b8b815574b368517f5986939fc", null ],
-      [ "unk_13", "audio_8h.html#a873c931eb16eacb6bcc14dc3d2a1cb96", null ],
-      [ "unk_14", "audio_8h.html#ae7f049e30a14cfdfc3490de35451b235", null ],
-      [ "unk_note_17", "audio_8h.html#a89f7c04310f82b84a6c32627bf23e31d", null ],
+      [ "randDetune", "audio_8h.html#adbdf556a2e10ff7d42680a2eaac84b49", null ],
+      [ "tremoloDelay", "audio_8h.html#a08e3da8cfaaaad25ca59000273a20f4a", null ],
+      [ "tremoloDepth", "audio_8h.html#aac85b0f35953ba0fa66ffe756f9559ce", null ],
+      [ "tremoloPhase", "audio_8h.html#a64a2469ea45417ae75bfd9afa1349feb", null ],
+      [ "velocity", "audio_8h.html#ae2e516044d067cdc77944deb10607d4b", null ],
       [ "volume", "audio_8h.html#a92b751818e84bc85e9e934f8aee6e6e8", null ]
     ] ],
     [ "BGMPlayer", "audio_8h.html#structBGMPlayer", [
@@ -578,17 +570,32 @@ var audio_8h =
       [ "bgmFile", "audio_8h.html#a0542167d5e37fc4f370ed6f7d41f33e2", null ],
       [ "bgmFileIndex", "audio_8h.html#afa75fd2bd48f101ea5621974616eb0dd", null ],
       [ "bgmInstrumentCount", "audio_8h.html#a887a6e0d88840b8a01387d78cb36f79f", null ],
-      [ "busId", "audio_8h.html#a08fcf2cc068a03185620634539c7a1ee", null ],
+      [ "busID", "audio_8h.html#a557d60e30647d9ca098b2df77d5164f9", null ],
       [ "busVolume", "audio_8h.html#aa4fba1d0dec4f84ac86cff1e3520fd60", null ],
-      [ "curSegmentID", "audio_8h.html#af3de57392da94fe86d700b9fe203a370", null ],
+      [ "cmdBufData", "audio_8h.html#aa5f33fb1ba4375a4734c50728de28a93", null ],
+      [ "cmdBufOverflows", "audio_8h.html#ac0ec4f0413ad9f0e30a521d6ad272aa5", null ],
+      [ "cmdBufPending", "audio_8h.html#a0ef9738008c1222b9458332c5f6690ad", null ],
+      [ "cmdBufReadPos", "audio_8h.html#abb80b6ccd59a44f89d43e4fce727a7a1", null ],
+      [ "cmdBufWritePos", "audio_8h.html#ab2e5a93cbc35374ecfc60117418b0abb", null ],
+      [ "compActiveLoopEndPos", "audio_8h.html#ad29c26b4948ca227c6bf5ccf60ca5a5c", null ],
+      [ "compLoopCounters", "audio_8h.html#ae5fba8a0ad4ad9284b6eea66fcd74f40", null ],
+      [ "compLoopDepth", "audio_8h.html#ae2a5a766c7d9b0cd080be3e1797eb146", null ],
+      [ "compLoopStartLabels", "audio_8h.html#ad394949841cd2a31925f01c3bedc0ad7", null ],
+      [ "compReadPos", "audio_8h.html#a20e20b0bf1e08b5f85fe826787def152", null ],
+      [ "compStartPos", "audio_8h.html#a7a00cd69b6008a70651cc888878b88eb", null ],
+      [ "conditionalLoopFlags", "audio_8h.html#ab7306678e28515835645b9d3d3fc205d", null ],
+      [ "curVariation", "audio_8h.html#aeff44c70dc0f6d3cae2d775fad50e3db", null ],
+      [ "customEnvelopeWritePos", "audio_8h.html#a9914b050b092788edca77616ca7b1822", null ],
+      [ "customPressEnvelopes", "audio_8h.html#a27d9f97a345747a2e815f53f2ae276ca", null ],
       [ "detune", "audio_8h.html#af9a9a75fba8965c70230252e605431cc", null ],
       [ "drums", "audio_8h.html#a744e763a583a46797fe4a85f42929815", null ],
       [ "drumsInfo", "audio_8h.html#a3d870572bdeae529af1973d1b0c76b59", null ],
       [ "effectIndices", "audio_8h.html#a62ba5eced1d89ea70a3b302761ecf97d", null ],
       [ "effectValues", "audio_8h.html#a8e70a420562ddf5d36d1d6a7ee51d33b", null ],
       [ "fadeInfo", "audio_8h.html#aa7a8d6deabc0a4f1c21acd0f67084ff7", null ],
-      [ "fadeSongName", "audio_8h.html#ab6c1d7d3f50bec692f114271b292f26f", null ],
+      [ "frameCounter", "audio_8h.html#a3c72eaf513662a6ed23cdcbaf6abcf34", null ],
       [ "globals", "audio_8h.html#a43e8bbab0f6b45c64234a99e55dee772", null ],
+      [ "initLinkMute", "audio_8h.html#a289380e9608d34ca245d19750a1113ba", null ],
       [ "instrumentsInfo", "audio_8h.html#a03a4958229212fed8cfd85b447e1e3ba", null ],
       [ "masterPitchShift", "audio_8h.html#a92c3dc5da4542fb147cb051e5561e7f0", null ],
       [ "masterState", "audio_8h.html#adad738333c8c6dc371f37a44f9469e4b", null ],
@@ -596,67 +603,96 @@ var audio_8h =
       [ "masterTempoBPM", "audio_8h.html#a571a6a83587727ebf99627442ed7adb2", null ],
       [ "masterTempoStep", "audio_8h.html#a5c1cfe7696fafc2157d5304a29c0d83b", null ],
       [ "masterTempoTarget", "audio_8h.html#a6480afe774cd2e649671cc05819dfbf8", null ],
-      [ "masterTempoTime", "audio_8h.html#a7c8167fb1a3913861dd26268dd35d5e3", null ],
-      [ "masterVolume", "audio_8h.html#a969a6cb9b5358356c0c3d73d4e67cd43", null ],
+      [ "masterTempoTicks", "audio_8h.html#ab8ca1e16e737a9b46ec6f05d6294e794", null ],
+      [ "masterVolume", "audio_8h.html#a59267472aa7c0fc1854a29f3f7f2b09b", null ],
       [ "masterVolumeStep", "audio_8h.html#aca2e135ba0f80c39696bc1054cd8e48e", null ],
       [ "masterVolumeTarget", "audio_8h.html#a501bd2f2e65ab9baaa484ac45b9f0624", null ],
-      [ "masterVolumeTime", "audio_8h.html#a9f1b2da438ddae1a09fb8ff1501fafda", null ],
+      [ "masterVolumeTicks", "audio_8h.html#a2a15b398905ed0841526da813a2d89e9", null ],
       [ "maxTempo", "audio_8h.html#a757543a69b3d0fd9da20386fb14b1ecd", null ],
       [ "nextUpdateCounter", "audio_8h.html#a537e8a8375b9a415d4ad1f044a2a3587", null ],
-      [ "nextUpdateInterval", "audio_8h.html#a4106360f7231d2353800f1b0f8fd15fb", null ],
       [ "nextUpdateStep", "audio_8h.html#a821dba2c362a1395063e82b574e5135b", null ],
       [ "notes", "audio_8h.html#a5b8a59f42cf87bc0fbb00c945482fb34", null ],
-      [ "pad5E", "audio_8h.html#af61bd95656061803f1a6b014b5b2a9b6", null ],
+      [ "pad_172", "audio_8h.html#a1760781386c233800ac7a3b54c0d0332", null ],
+      [ "pad_21F", "audio_8h.html#a7f1f2ad1af94321483f24b0c5f15cf1d", null ],
+      [ "pad_228", "audio_8h.html#a06951bafd5c0b1a2d2dff5558b747ed3", null ],
+      [ "pad_236", "audio_8h.html#aa9141b1e6cedb266689b1d663b5d92d2", null ],
+      [ "pad_5E", "audio_8h.html#adcf4728069eaa503bc0d22c0f957f876", null ],
+      [ "paused", "audio_8h.html#a75fb65467250ec7517329750dadbf90b", null ],
+      [ "phraseStartPos", "audio_8h.html#a7820115d7af047e1238d1e8751cdaba4", null ],
       [ "playbackRate", "audio_8h.html#add2473dc6e64e0c23b4095d082938a12", null ],
+      [ "polyphonyCounts", "audio_8h.html#af009747267c2b9ab1f1ebf669b0c8749", null ],
+      [ "prevUpdateResult", "audio_8h.html#aecd8b6cdc4338f94fe7464bc87aa5b78", null ],
       [ "priority", "audio_8h.html#ac36947504c042ae3b43f1eae1bde46d3", null ],
       [ "proxMixID", "audio_8h.html#a4a486616c494641a035946a8528aa601", null ],
       [ "proxMixValue", "audio_8h.html#afc1d195345f938f36ab8d2453f8c0ece", null ],
       [ "proxMixVolume", "audio_8h.html#afe690a5dce8d46f14b8bdf2c5f32b19c", null ],
+      [ "pushSongName", "audio_8h.html#a93154ebd303024cdcdb0382f8ad87ff6", null ],
       [ "randomValue1", "audio_8h.html#a4ba38eeb520ff530400e40aae10c0e68", null ],
       [ "randomValue2", "audio_8h.html#a01adae538564426254ca88a63e4ef3a4", null ],
-      [ "segActiveLoopEndPos", "audio_8h.html#ac66c399148d6f2b3b64eb4ad52ca643b", null ],
-      [ "segLoopCounters", "audio_8h.html#ace932d4e2eda51a89707b7158331b8d4", null ],
-      [ "segLoopDepth", "audio_8h.html#a1e11b86ba9b67b94b2807b338d74b913", null ],
-      [ "segLoopStartLabels", "audio_8h.html#ae786bee33507c1331a7722f004b4e453", null ],
-      [ "segmentReadPos", "audio_8h.html#a8e1ee0c5efbf582ba9060160efb355e9", null ],
-      [ "segmentStartPos", "audio_8h.html#ad117978223fcc0d47869ab32f8dff513", null ],
       [ "seqCmdArgs", "audio_8h.html#a6ab8332d1db186124c4935c2fa094e62", null ],
       [ "songID", "audio_8h.html#a43e6e958ec3f134caf3ed8052689295f", null ],
       [ "songName", "audio_8h.html#a3108aea8632ec6f12b835ef9ca95314a", null ],
       [ "songPlayingCounter", "audio_8h.html#a1c47859df3fed031272fbd6144daecfe", null ],
       [ "soundManager", "audio_8h.html#a12aa3bbd09ee6a7ee97601812b03af9d", null ],
-      [ "subSegmentStartPos", "audio_8h.html#a59e1aea381aa326e7d5ce5a3142d922d", null ],
+      [ "tickRatePtr", "audio_8h.html#a1878d456388838e5bb557bf57b2c3b4b", null ],
+      [ "tickUpdateInterval", "audio_8h.html#a9fe6a197698bf6d0b41ea2b5685e8d00", null ],
+      [ "totalVoices", "audio_8h.html#af2257518d1b0532eb73de5b0fe5f436f", null ],
       [ "tracks", "audio_8h.html#acb1f0d61c39e78749851da956f6013fe", null ],
       [ "trackVolsConfig", "audio_8h.html#a7aa03317aa488ea543889c26ce00dfaa", null ],
-      [ "unk_172", "audio_8h.html#aad7954fd96a27c66e5513a29a0ab3631", null ],
-      [ "unk_174", "audio_8h.html#a6c539f33440a9c6f66f2612c036a27f3", null ],
-      [ "unk_211", "audio_8h.html#a2a9ec902fb93904d01fb29d70841d831", null ],
-      [ "unk_212", "audio_8h.html#a029f03c07b7706a10c64b8f380d72cd0", null ],
-      [ "unk_21B", "audio_8h.html#a945e9264453314f2864c60e4dde9fa62", null ],
-      [ "unk_21E", "audio_8h.html#a4f342935c777779e0b8c472912bc682d", null ],
-      [ "unk_21F", "audio_8h.html#a1e3112b739b22e2fbd38357d25d10e86", null ],
-      [ "unk_220", "audio_8h.html#ae82c1aaa05e85e1ec307a10294798cdb", null ],
-      [ "unk_222", "audio_8h.html#a707b5460dbac12a21277f0e2db24af30", null ],
-      [ "unk_223", "audio_8h.html#a7ea6ae6a15c87bd2100451f4d91ef4fe", null ],
-      [ "unk_228", "audio_8h.html#a27237e4e6803b81df1346656af9aab9c", null ],
-      [ "unk_22A", "audio_8h.html#abd46bf21188375151136abec1788d8e5", null ],
-      [ "unk_233", "audio_8h.html#abd13852e36dbac86cbfa14cf3f82c418", null ],
-      [ "unk_236", "audio_8h.html#a6e4c935df7511bb04a9791e989e5ade3", null ],
-      [ "unk_238", "audio_8h.html#ab5a6828af893c93f020227658082e280", null ],
-      [ "unk_258", "audio_8h.html#a32a7728dc39bbae0864d7bd0f6e21a39", null ],
-      [ "unk_259", "audio_8h.html#a5b981e24b62e1df76cb7cf54ad3d8b48", null ],
-      [ "unk_25A", "audio_8h.html#a2fd6320aefd709ded0136d0d5bfc58df", null ],
-      [ "unk_25B", "audio_8h.html#a2d00836d2d924f0181cd137df03b3c2c", null ],
       [ "unk_58", "audio_8h.html#a1a827239694a29168a37f4d5aba4d4a4", null ],
-      [ "unk_5A", "audio_8h.html#a5afb8a1b73a1050f2f3a8811e943f055", null ],
-      [ "unk_5C", "audio_8h.html#a9da2b1dff1b632b9baa71497d1d81e92", null ],
-      [ "unk_74", "audio_8h.html#a4fe1c59c591087b08e62fbcfb82b050e", null ],
-      [ "updateCounter", "audio_8h.html#aac43797ca773bd23080aa22b74716714", null ],
-      [ "volumeChanged", "audio_8h.html#a09abe0df54d3728abfb9969661eac1b8", null ]
+      [ "unk_5A", "audio_8h.html#a04125504933e93ac6888f0da64c71004", null ],
+      [ "unused_21E", "audio_8h.html#a3d49ccad3dc0e8541d4729190262b2bd", null ],
+      [ "unused_222", "audio_8h.html#a5af31e278e24c05f845f98009291e747", null ],
+      [ "volumeChanged", "audio_8h.html#a09abe0df54d3728abfb9969661eac1b8", null ],
+      [ "writingCustomEnvelope", "audio_8h.html#ab7c00eca025c6aa501678ea1f0d67fc9", null ]
+    ] ],
+    [ "SongStartRequest", "audio_8h.html#structSongStartRequest", [
+      [ "duration", "audio_8h.html#ab2770355b0569bc0dca17d3b83168c4e", null ],
+      [ "finalVolume", "audio_8h.html#a8a9026e2180408831b1070f1ef48cf41", null ],
+      [ "pad_18", "audio_8h.html#a4426f64caa88e4c3dc94efbc6733924e", null ],
+      [ "songName", "audio_8h.html#adf40d13557234513e9b526d82b89f88a", null ],
+      [ "startVolume", "audio_8h.html#a0e4b096fd0c953cac0ecf4c2e9eb5679", null ],
+      [ "unused_14", "audio_8h.html#a6a932a9b8d96a002dcccdc39ef4ddfb6", null ],
+      [ "variation", "audio_8h.html#ac7333bf034c9eed53996729f61d4b5d2", null ]
+    ] ],
+    [ "SongFadeOutRequest", "audio_8h.html#structSongFadeOutRequest", [
+      [ "doneCallback", "audio_8h.html#a2a81c4c05264790cb855f6fc19622824", null ],
+      [ "duration", "audio_8h.html#ae3efdae705797816f9cfdbc193e833a8", null ],
+      [ "finalVolume", "audio_8h.html#a500b4fc78ed1f952ccdac31fb8eb1efe", null ],
+      [ "onPush", "audio_8h.html#a4cf41c2a1167f54797e3bbd5844cf6bb", null ],
+      [ "pad_18", "audio_8h.html#a613157aec32f5af452e641139a36a131", null ],
+      [ "songName", "audio_8h.html#a28e091f9aeac85df38300e3f6727f5b9", null ],
+      [ "unused_08", "audio_8h.html#a0830d5f8681e4a051ed89c57ebf2f5da", null ]
+    ] ],
+    [ "SongSuspendRequest", "audio_8h.html#structSongSuspendRequest", [
+      [ "duration", "audio_8h.html#ab26871bef65b66f32fd6ae07acffb456", null ],
+      [ "finalVolume", "audio_8h.html#a5f1608d8d988404dc9431992a5827f59", null ],
+      [ "index", "audio_8h.html#ad5b87adf1465de75f69e2955d7c96b67", null ],
+      [ "pad_18", "audio_8h.html#ad7abd620e45b0ac2b304a5a87f780b8a", null ],
+      [ "pauseMode", "audio_8h.html#a7acd607c3418b7afd2e57ce9d7c271ed", null ],
+      [ "songName", "audio_8h.html#ab262f386f122400c510b8717a165b37b", null ],
+      [ "startVolume", "audio_8h.html#a870cdd3f649246bcf1762d36419f44dd", null ]
+    ] ],
+    [ "SongResumeRequest", "audio_8h.html#structSongResumeRequest", [
+      [ "duration", "audio_8h.html#a2cd27c3d414511e99a4325118a81b4a6", null ],
+      [ "finalVolume", "audio_8h.html#aba6193c31646e1b8d92a4304aa749d8b", null ],
+      [ "index", "audio_8h.html#aa0cfe1a04b4271bd01273d12856eb651", null ],
+      [ "pad_18", "audio_8h.html#a6b60903592f72860b73325ef9fe26aea", null ],
+      [ "pauseMode", "audio_8h.html#a87bce4d1cea5810e723d73a2ecf68f37", null ],
+      [ "songName", "audio_8h.html#ad13bf561817937d7f4d24b2bed437241", null ],
+      [ "startVolume", "audio_8h.html#ab67ee8574ee6d00959e77fed72d9cf26", null ]
+    ] ],
+    [ "SongSwapLinkedRequest", "audio_8h.html#structSongSwapLinkedRequest", [
+      [ "enabled", "audio_8h.html#abb890b643505e66328f2fb91811cc05c", null ],
+      [ "pad_14", "audio_8h.html#a9f0e6971081f7323bcf129e725791264", null ],
+      [ "songName", "audio_8h.html#a5c2fba9418d0b4b19aa4b55705a234ee", null ],
+      [ "unused_04", "audio_8h.html#a1ddba7adf675f954493cb1d233244a43", null ],
+      [ "unused_08", "audio_8h.html#ad1f617fe0c30eac21be5c2e0fcf085b7", null ],
+      [ "unused_0C", "audio_8h.html#a32c9f90612946391e5111022ae097d67", null ]
     ] ],
     [ "MSEQTrackData", "audio_8h.html#structMSEQTrackData", [
       [ "delta", "audio_8h.html#a147a99c291afc18b879f3fd423d1e791", null ],
-      [ "goal", "audio_8h.html#a3956400be9d7e81195c3ea3cf2e8ca93", null ],
+      [ "goal", "audio_8h.html#a95cc1f7c3f9b68f341e0af83a4401804", null ],
       [ "time", "audio_8h.html#ae7a1309305fa47ee9801b002870dd209", null ],
       [ "trackIndex", "audio_8h.html#abcece86c24213ae1f4946333fb77b2c9", null ],
       [ "type", "audio_8h.html#a710eac8fc07eef9518c6d6909f1730a6", null ]
@@ -665,6 +701,7 @@ var audio_8h =
       [ "dataStart", "audio_8h.html#a433830942cc3face1c87f68c8ac87790", null ],
       [ "firstVoiceIdx", "audio_8h.html#ac60e82032ae589bc4beb54432b320a27", null ],
       [ "name", "audio_8h.html#a8500de04f4f211795cd449f6e08c6b40", null ],
+      [ "pad_12", "audio_8h.html#a31b5ad676b0540f1f038e3bc07f07b59", null ],
       [ "signature", "audio_8h.html#a2173cabf6509683cf0a5a5584a2aa25f", null ],
       [ "size", "audio_8h.html#a78f193718cb1948aac1f665aee013d7d", null ],
       [ "trackSettingsCount", "audio_8h.html#a0d05ee94b68c61b30573830659108135", null ],
@@ -674,17 +711,20 @@ var audio_8h =
       [ "envelope", "audio_8h.html#ad47029cc1456e8affb92855279e350ca", null ],
       [ "flags", "audio_8h.html#a438c8c2abf058a2c0c26e4e9598bd246", null ],
       [ "instrument", "audio_8h.html#a3a4e0c22982cfe3133f8eb17b8f0be65", null ],
+      [ "pad_27", "audio_8h.html#a18d3e323a24fdd63fe8b4f99ada6d346", null ],
       [ "pan", "audio_8h.html#af0868e3def6a18c8ea117be8246ff40f", null ],
       [ "reverb", "audio_8h.html#ab8d20ea4b78eb08de187858554d36cec", null ],
       [ "tuneLerp", "audio_8h.html#a5a73d41b93a2e6e9ad67755d5c3ecfee", null ],
-      [ "unk_27", "audio_8h.html#ac19c6894dec1b588a9a87b267d3ac69a", null ],
       [ "volumeLerp", "audio_8h.html#a6d71680438789661a4ca7b1d4cc96106", null ]
     ] ],
     [ "AmbienceSavedVoice", "audio_8h.html#structAmbienceSavedVoice", [
+      [ "pad_03", "audio_8h.html#a8537fc5631f9bb86129d121cad69e241", null ],
       [ "trackIndex", "audio_8h.html#a411aea49b4a2a361b4d04f196aa49bf9", null ],
       [ "tune", "audio_8h.html#aa04fec7559bf082b86ee7925a6028831", null ],
-      [ "unk_03", "audio_8h.html#a8c2122d54350502ece999b90bd4e510d", null ],
       [ "volume", "audio_8h.html#a72329a19474ddf8dda27e64671e092c2", null ]
+    ] ],
+    [ "AmbVoiceStateInfo", "audio_8h.html#unionAmbVoiceStateInfo", [
+      [ "all", "audio_8h.html#a4b830afa54e1fef3b1fcf74fd8d4be47", null ]
     ] ],
     [ "AmbienceVoiceState", "audio_8h.html#structAmbienceVoiceState", [
       [ "info", "audio_8h.html#a0950746493cef522bd6d4ec11cacbfbc", null ],
@@ -699,9 +739,9 @@ var audio_8h =
       [ "fadeSettingsInitial", "audio_8h.html#ac787aef1aa621eedcabe44ac5fa67f8f", null ],
       [ "fadeSettingsTime", "audio_8h.html#a3d933e8aa6189acf8791c80f54dae3a1", null ],
       [ "fadeSettingsType", "audio_8h.html#a0b806c088430070f9c5868c0ba562f14", null ],
-      [ "fadeStep", "audio_8h.html#ac6b86098afba9d3e0768bb2a4eab4e52", null ],
+      [ "fadeStep", "audio_8h.html#a0543e52aee5b3689d9ccd747f8682203", null ],
       [ "fadeTime", "audio_8h.html#a04242b57f1b9a53d25f4dc034ef38282", null ],
-      [ "fadeVolume", "audio_8h.html#a9b2a0a5ea5e24795b7b1374a2720f1db", null ],
+      [ "fadeVolume", "audio_8h.html#aba2ced430d2186bec01232bda8ac4023", null ],
       [ "firstVoiceIdx", "audio_8h.html#a093b5b63d34064eab745ba3cdf4c0ade", null ],
       [ "id", "audio_8h.html#a5d0a5b5e25a4abd5023629cd58d2b70f", null ],
       [ "lastVoiceIdx", "audio_8h.html#adb010d659aa5687533228679ef544c90", null ],
@@ -712,16 +752,16 @@ var audio_8h =
       [ "mseqName", "audio_8h.html#ad7562b1944ef0ec332be45f48c4b7ed0", null ],
       [ "mseqReadPos", "audio_8h.html#a19e1c35ffa634d767d97e138e5c4c6ce", null ],
       [ "mseqReadStart", "audio_8h.html#a699d1edb7fe4be0f3d459be41a4d8aed", null ],
+      [ "pad_1C", "audio_8h.html#a70801afa2876b4728be84cbc65c99400", null ],
+      [ "pad_27", "audio_8h.html#a9fc3f064d02c308dfa26751441a4b95b", null ],
+      [ "pad_2E", "audio_8h.html#a36efd1ecb9befdb9da23009ce730406e", null ],
       [ "playState", "audio_8h.html#ae5099c95a52fd466e96ffaefe049fe86", null ],
       [ "resetRequired", "audio_8h.html#a54b28aae7f539ba032c0d342dc7fbc7e", null ],
       [ "savedVoices", "audio_8h.html#aa6774547580eca49f48d8ce515787f6e", null ],
-      [ "tracks", "audio_8h.html#a48265afc6c1a60a91cdc5ad64053cd04", null ],
-      [ "unk_1C", "audio_8h.html#aa5018c9181b6308fe5fd4a88e7e00169", null ],
-      [ "unk_27", "audio_8h.html#a186b835a40ebd8d3db794f4ef8f67406", null ],
-      [ "unk_2E", "audio_8h.html#a9cab331abc2b588431b74bb4d12c62bf", null ]
+      [ "tracks", "audio_8h.html#a48265afc6c1a60a91cdc5ad64053cd04", null ]
     ] ],
     [ "AmbienceManager", "audio_8h.html#structAmbienceManager", [
-      [ "busId", "audio_8h.html#abe85227c02b13f35496b0791a952b49b", null ],
+      [ "busID", "audio_8h.html#acba8898aac91d91fa9b2d62ecc01b848", null ],
       [ "globals", "audio_8h.html#adae56343e6fa2c9f0a8877cba57260df", null ],
       [ "loadTracksFadeInfo", "audio_8h.html#a6f36d8721977de084642bb29959fb051", null ],
       [ "mseqFiles", "audio_8h.html#a03852521e91b397b10a8bdc7b7aecbf5", null ],
@@ -733,25 +773,14 @@ var audio_8h =
       [ "priority", "audio_8h.html#af732826554888685d5183eff9d4a55a0", null ],
       [ "voiceStates", "audio_8h.html#a87ef3bdb45cfc70aa443f1e11922e6fb", null ]
     ] ],
-    [ "AlUnkGemini", "audio_8h.html#structAlUnkGemini", [
-      [ "flags", "audio_8h.html#a6531e622b2009c4a04b97649fe8b145e", null ],
-      [ "sound1", "audio_8h.html#a3a6333c503f4492d92e47131ba9e0595", null ],
-      [ "sound2", "audio_8h.html#afb24b82413b227493e2245dd7e9360fc", null ]
-    ] ],
     [ "ALConfig", "audio_8h.html#structALConfig", [
       [ "dmaNew", "audio_8h.html#a549a942a7eca342dc2d9e2b0da8900f4", null ],
       [ "heap", "audio_8h.html#a0c2291d3a75837372505f19653179e76", null ],
       [ "num_bus", "audio_8h.html#aee251b0f101511e6f70c3126dd18fc43", null ],
       [ "num_pvoice", "audio_8h.html#a222f50a94258f3b60c21ac5f4467f033", null ],
       [ "outputRate", "audio_8h.html#ad737d2db5e6eb13ae4719e352caf4f3d", null ],
-      [ "unk_0C", "audio_8h.html#a55aac1a9f69bd4811aba7a43b8df8543", null ],
-      [ "unk_0D", "audio_8h.html#a9af9cfabb9125292555ff888a6b2cb19", null ]
-    ] ],
-    [ "AmbVoiceStateInfo.__unnamed57__", "audio_8h.html#structAmbVoiceStateInfo_8____unnamed57____", [
-      [ "playerIndex", "audio_8h.html#a42ac3edaa6c23902dd63cb39fa717491", null ],
-      [ "released", "audio_8h.html#a23690fd759f17135ec9879b56ff2600c", null ],
-      [ "trackIndex", "audio_8h.html#a66b1eb646ef4a25a13b63b7cd454c424", null ],
-      [ "tune", "audio_8h.html#a7ce1689483acd43d5bc46598b11bd139", null ]
+      [ "pad_0D", "audio_8h.html#a84e24f2f76952adc2a0e455d0ffef4a7", null ],
+      [ "unused_0C", "audio_8h.html#a8de37a4f9719176393afb06c0c459b42", null ]
     ] ],
     [ "SeqArgs.MasterTempo", "audio_8h.html#structSeqArgs_8MasterTempo", [
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
@@ -777,59 +806,59 @@ var audio_8h =
       [ "index", "audio_8h.html#a6a992d5529f459a44fee58c733255e86", null ],
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.TrackOverridePatch", "audio_8h.html#structSeqArgs_8TrackOverridePatch", [
+    [ "SeqArgs.OverridePatch", "audio_8h.html#structSeqArgs_8OverridePatch", [
       [ "bank", "audio_8h.html#abd5af1f610a12434c9128e4a399cef8a", null ],
       [ "patch", "audio_8h.html#ae5c5e6dae38b284e8cf0bd1fb0efac03", null ]
     ] ],
-    [ "SeqArgs.SubTrackVolume", "audio_8h.html#structSeqArgs_8SubTrackVolume", [
+    [ "SeqArgs.InstrumentVolume", "audio_8h.html#structSeqArgs_8InstrumentVolume", [
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.SubTrackPan", "audio_8h.html#structSeqArgs_8SubTrackPan", [
+    [ "SeqArgs.InstrumentPan", "audio_8h.html#structSeqArgs_8InstrumentPan", [
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.SubTrackReverb", "audio_8h.html#structSeqArgs_8SubTrackReverb", [
+    [ "SeqArgs.InstrumentReverb", "audio_8h.html#structSeqArgs_8InstrumentReverb", [
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.SegTrackVolume", "audio_8h.html#structSeqArgs_8SegTrackVolume", [
+    [ "SeqArgs.TrackVolume", "audio_8h.html#structSeqArgs_8TrackVolume", [
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.SubTrackCoarseTune", "audio_8h.html#structSeqArgs_8SubTrackCoarseTune", [
+    [ "SeqArgs.InstrumentCoarseTune", "audio_8h.html#structSeqArgs_8InstrumentCoarseTune", [
+      [ "semitone", "audio_8h.html#a9ebea4df67376b30150bfc0ea01b5562", null ]
+    ] ],
+    [ "SeqArgs.InstrumentFineTune", "audio_8h.html#structSeqArgs_8InstrumentFineTune", [
       [ "cent", "audio_8h.html#a2d95b19b24f71bcabbc68e31afaff694", null ]
     ] ],
-    [ "SeqArgs.SubTrackFineTune", "audio_8h.html#structSeqArgs_8SubTrackFineTune", [
-      [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
-    ] ],
-    [ "SeqArgs.SegTrackTune", "audio_8h.html#structSeqArgs_8SegTrackTune", [
-      [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
+    [ "SeqArgs.TrackDetune", "audio_8h.html#structSeqArgs_8TrackDetune", [
+      [ "cents", "audio_8h.html#a5fe50dfd17ceb448190f3dd5d79bedf6", null ]
     ] ],
     [ "SeqArgs.TrackTremolo", "audio_8h.html#structSeqArgs_8TrackTremolo", [
-      [ "amount", "audio_8h.html#ae9f40e1f1d1658681dad2dac4ae0971e", null ],
-      [ "speed", "audio_8h.html#ace4ef3ec98443ed10da505114b58f153", null ],
-      [ "time", "audio_8h.html#a07cc694b9b3fc636710fa08b6922c42b", null ]
+      [ "delay", "audio_8h.html#a7243f8be75253afbadf7477867021f8b", null ],
+      [ "depth", "audio_8h.html#a12a055bf01a31369fe81ac35d85c7bc1", null ],
+      [ "speed", "audio_8h.html#ace4ef3ec98443ed10da505114b58f153", null ]
     ] ],
-    [ "SeqArgs.TrackTremoloSpeed", "audio_8h.html#structSeqArgs_8TrackTremoloSpeed", [
+    [ "SeqArgs.TrackTremoloRate", "audio_8h.html#structSeqArgs_8TrackTremoloRate", [
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.TrackTremoloTime", "audio_8h.html#structSeqArgs_8TrackTremoloTime", [
-      [ "time", "audio_8h.html#a07cc694b9b3fc636710fa08b6922c42b", null ]
+    [ "SeqArgs.TrackTremoloDepth", "audio_8h.html#structSeqArgs_8TrackTremoloDepth", [
+      [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.UnkCmdF4", "audio_8h.html#structSeqArgs_8UnkCmdF4", [
+    [ "SeqArgs.RandomPan", "audio_8h.html#structSeqArgs_8RandomPan", [
       [ "pan0", "audio_8h.html#ae7ebabd99366e7fd9bd5945950ef5b1d", null ],
       [ "pan1", "audio_8h.html#a07abe812dc14a1d1745561d0c3cee9e0", null ]
     ] ],
-    [ "SeqArgs.SetTrackVoice", "audio_8h.html#structSeqArgs_8SetTrackVoice", [
+    [ "SeqArgs.UseInstrument", "audio_8h.html#structSeqArgs_8UseInstrument", [
       [ "index", "audio_8h.html#a6a992d5529f459a44fee58c733255e86", null ]
     ] ],
     [ "SeqArgs.TrackVolumeFade", "audio_8h.html#structSeqArgs_8TrackVolumeFade", [
       [ "time", "audio_8h.html#a07cc694b9b3fc636710fa08b6922c42b", null ],
       [ "value", "audio_8h.html#a2063c1608d6e0baf80249c42e2be5804", null ]
     ] ],
-    [ "SeqArgs.SubTrackReverbType", "audio_8h.html#structSeqArgs_8SubTrackReverbType", [
+    [ "SeqArgs.ReverbType", "audio_8h.html#structSeqArgs_8ReverbType", [
       [ "index", "audio_8h.html#a6a992d5529f459a44fee58c733255e86", null ]
     ] ],
-    [ "SeqArgs.Jump", "audio_8h.html#structSeqArgs_8Jump", [
-      [ "unk_00", "audio_8h.html#a88b28faec4c096d572a03b9e5f8effb5", null ],
-      [ "unk_02", "audio_8h.html#a57f2d4bbaaf814c8eb957a9ad8cdfbb0", null ]
+    [ "SeqArgs.Branch", "audio_8h.html#structSeqArgs_8Branch", [
+      [ "offset", "audio_8h.html#a7a86c157ee9713c34fbd7a1ee40f0c5a", null ],
+      [ "tableCount", "audio_8h.html#a1747861303db6b8e677ce5480a35cf79", null ]
     ] ],
     [ "SeqArgs.EventTrigger", "audio_8h.html#structSeqArgs_8EventTrigger", [
       [ "eventInfo", "audio_8h.html#ace3280d763b11208823de6adaa1d80dd", null ]
@@ -838,61 +867,84 @@ var audio_8h =
       [ "length", "audio_8h.html#a2fa47f7c65fec19cc163b195725e3844", null ],
       [ "offset", "audio_8h.html#a7a86c157ee9713c34fbd7a1ee40f0c5a", null ]
     ] ],
-    [ "SeqArgs.UnkCmdFF", "audio_8h.html#structSeqArgs_8UnkCmdFF", [
-      [ "unk_00", "audio_8h.html#a88b28faec4c096d572a03b9e5f8effb5", null ],
-      [ "unk_01", "audio_8h.html#a62f7697e95f985d212c8c51be228cb66", null ],
-      [ "unk_02", "audio_8h.html#a57f2d4bbaaf814c8eb957a9ad8cdfbb0", null ]
+    [ "SeqArgs.Special", "audio_8h.html#structSeqArgs_8Special", [
+      [ "arg1", "audio_8h.html#ae866231598ed4cb18be5e493240a11b0", null ],
+      [ "arg2", "audio_8h.html#a80a26383e00e892c98ebd598edcc5dbb", null ],
+      [ "type", "audio_8h.html#a599dcce2998a6b40b1e38e8c6006cb0a", null ]
     ] ],
-    [ "Fade.__unnamed85__", "audio_8h.html#unionFade_8____unnamed85____", [
-      [ "onCompleteCallback", "audio_8h.html#a12d3b5dcac7e402e55f57c8e9d7445f1", null ],
-      [ "variation", "audio_8h.html#a64037a31cae3aa224737c3dcdfb7bd46", null ]
+    [ "Instrument.__unnamed83__", "audio_8h.html#unionInstrument_8____unnamed83____", [
+      [ "pitchRatio", "audio_8h.html#a39f15d4b075f7cf8a8ad725be0761674", null ],
+      [ "sampleRate", "audio_8h.html#a36dd98673670c8ee4cf5f9a92687dddc", null ]
     ] ],
-    [ "Instrument.__unnamed87__", "audio_8h.html#unionInstrument_8____unnamed87____", [
-      [ "outputRate", "audio_8h.html#a80c8e7c94a7d7fb289f353f1fafd42b3", null ],
-      [ "pitchRatio", "audio_8h.html#a39f15d4b075f7cf8a8ad725be0761674", null ]
-    ] ],
-    [ "SoundPlayChange.__unnamed89__", "audio_8h.html#unionSoundPlayChange_8____unnamed89____", [
+    [ "SoundPlayChange.__unnamed85__", "audio_8h.html#unionSoundPlayChange_8____unnamed85____", [
       [ "all", "audio_8h.html#aa181a603769c1f98ad927e7367c7aa51", null ]
     ] ],
-    [ "SoundPlayChange.__unnamed89__.__unnamed91__", "audio_8h.html#structSoundPlayChange_8____unnamed89_____8____unnamed91____", [
+    [ "SoundPlayChange.__unnamed85__.__unnamed87__", "audio_8h.html#structSoundPlayChange_8____unnamed85_____8____unnamed87____", [
       [ "pan", "audio_8h.html#a96ac0342a3ccf9553e3d4c9da9b821b0", null ],
       [ "reverb", "audio_8h.html#a84952299b74f7be4aeb1d4f6a9895cc4", null ],
       [ "tune", "audio_8h.html#a7ce1689483acd43d5bc46598b11bd139", null ],
       [ "volume", "audio_8h.html#a210ab9e731c9c36c2c38db15c28a8d1c", null ]
     ] ],
-    [ "SoundManager90.__unnamed93__", "audio_8h.html#unionSoundManager90_8____unnamed93____", [
-      [ "s32", "audio_8h.html#aa860868d23f3a68323a2e3f6563d7f31", null ]
+    [ "SoundManagerMusicEvent.__unnamed89__", "audio_8h.html#unionSoundManagerMusicEvent_8____unnamed89____", [
+      [ "raw", "audio_8h.html#abdd166af3a63f7be696dd17a218a6ffb", null ]
     ] ],
-    [ "SoundManager90.__unnamed93__.__unnamed95__", "audio_8h.html#structSoundManager90_8____unnamed93_____8____unnamed95____", [
-      [ "unk_0", "audio_8h.html#ae44987e57f217fd853ccb4822fb8e867", null ],
-      [ "unk_1", "audio_8h.html#a758fa9192d9be19f9f3f6bed07843598", null ],
-      [ "unk_2", "audio_8h.html#ad144d1d1a3465b2cd9b888f2dcdf7da7", null ],
+    [ "SoundManagerMusicEvent.__unnamed89__.__unnamed91__", "audio_8h.html#structSoundManagerMusicEvent_8____unnamed89_____8____unnamed91____", [
+      [ "index", "audio_8h.html#a6a992d5529f459a44fee58c733255e86", null ],
+      [ "pad_01", "audio_8h.html#a15c2108d41b4303845fce0409ce057c7", null ],
       [ "volume", "audio_8h.html#a210ab9e731c9c36c2c38db15c28a8d1c", null ]
     ] ],
-    [ "SBNFileEntry.__unnamed97__", "audio_8h.html#unionSBNFileEntry_8____unnamed97____", [
+    [ "SBNFileEntry.__unnamed93__", "audio_8h.html#unionSBNFileEntry_8____unnamed93____", [
       [ "data", "audio_8h.html#a8d777f385d3dfec8815d20f7496026dc", null ]
     ] ],
-    [ "SBNFileEntry.__unnamed97__.__unnamed99__", "audio_8h.html#structSBNFileEntry_8____unnamed97_____8____unnamed99____", [
+    [ "SBNFileEntry.__unnamed93__.__unnamed95__", "audio_8h.html#structSBNFileEntry_8____unnamed93_____8____unnamed95____", [
       [ "fmt", "audio_8h.html#a7631454338ff70b1a6b1262f5f36beac", null ],
-      [ "size", "audio_8h.html#af7bd60b75b29d79b660a2859395c1a24", null ],
-      [ "unk__05", "audio_8h.html#afa2042817e9c8d3cc06390028e841331", null ]
+      [ "pad_05", "audio_8h.html#ac8e12940bb5380d76666c19cefbd4bbc", null ],
+      [ "size", "audio_8h.html#af7bd60b75b29d79b660a2859395c1a24", null ]
+    ] ],
+    [ "AmbVoiceStateInfo.__unnamed97__", "audio_8h.html#structAmbVoiceStateInfo_8____unnamed97____", [
+      [ "playerIndex", "audio_8h.html#a42ac3edaa6c23902dd63cb39fa717491", null ],
+      [ "released", "audio_8h.html#a23690fd759f17135ec9879b56ff2600c", null ],
+      [ "trackIndex", "audio_8h.html#a66b1eb646ef4a25a13b63b7cd454c424", null ],
+      [ "tune", "audio_8h.html#a7ce1689483acd43d5bc46598b11bd139", null ]
     ] ],
     [ "ADPCMFBYTES", "audio_8h.html#a8b005f58dd2cfd23a961529b05bede5d", null ],
     [ "ALIGN16_", "audio_8h.html#a3f64a29393684a33392b63d4cf66bad8", null ],
-    [ "AU_5750", "audio_8h.html#acf4f645152d33e9069acbc67eb762fe8", null ],
     [ "AU_FILE_RELATIVE", "audio_8h.html#a5974245f32a67e23144d2a33b86009f8", null ],
-    [ "AU_FX_DELAY_COUNT", "audio_8h.html#ad0990a607e4eba004d45d9ccde06c500", null ],
+    [ "AU_FILTER_LENGTH", "audio_8h.html#ad33559f93c4a5889e70e9b8416b24c33", null ],
+    [ "AU_FRAME_USEC", "audio_8h.html#aac6024783f137bd36f9a2566ccd93905", null ],
     [ "AU_FX_LENGTH", "audio_8h.html#a1fde010b78c607c69fec4b9fb50edbe0", null ],
+    [ "AU_FX_MAX_TAPS", "audio_8h.html#aedde887017e7f924d1adfa0349ac927f", null ],
+    [ "AU_MAX_BUS_VOLUME", "audio_8h.html#adfcd0519261cb42ad72b6883a383f7ee", null ],
+    [ "AU_MAX_VOLUME_16", "audio_8h.html#adbcacedf630288441bd57d99a2a473c3", null ],
+    [ "AU_MAX_VOLUME_32", "audio_8h.html#ad1cf7373d7500b7df22b832f0debdc08", null ],
+    [ "AU_MAX_VOLUME_8", "audio_8h.html#a66b2f747cef3d7f330b404c38d355791", null ],
+    [ "AU_OCTAVE_CENTS", "audio_8h.html#abf443b426adbc8cee11b480ea405cbd7", null ],
+    [ "AU_PAN_MAX", "audio_8h.html#ab7b6955bfb88563ff3147bc4aa3a978f", null ],
+    [ "AU_PAN_MID", "audio_8h.html#a6007d1d732b7c67dd7c87a8b7c781679", null ],
+    [ "AU_PAN_MIN", "audio_8h.html#a3f248de72c226ab79880973304b99b85", null ],
+    [ "AU_SEMITONE_CENTS", "audio_8h.html#a2ab76fc94bb0ce96cf38361dac87b315", null ],
+    [ "AU_SONG_NONE", "audio_8h.html#aa1b8a57e9e3510b3209bc79bc4a71008", null ],
+    [ "AU_VOL_8_TO_16", "audio_8h.html#ae9ff54e6ee5e141e21873a63021d6852", null ],
+    [ "AU_VOL_8_TO_32", "audio_8h.html#aef09e313acb194632ad05b29815d212b", null ],
     [ "AUDIO_COMMAND_LIST_BUFFER_SIZE", "audio_8h.html#ae21b4ca9784cdc3629e701e21613caa2", null ],
-    [ "AUDIO_FRAMES_PER_SECOND", "audio_8h.html#a6acccd72cfae7d930f49ab8c974fa5a5", null ],
     [ "AUDIO_HEAP_SIZE", "audio_8h.html#a47ad0c17ca696e995e47dad8177b3def", null ],
     [ "AUDIO_MAX_SAMPLES", "audio_8h.html#aa3fceeaa541b55ebf2971194bad1721b", null ],
     [ "AUDIO_SAMPLES", "audio_8h.html#a58e80361cf95d18afbe8f25713f4cdc6", null ],
+    [ "BGM_DEFAULT_BPM", "audio_8h.html#a6ac2027f57495094dba79235937a93c2", null ],
     [ "BGM_DEFAULT_TEMPO", "audio_8h.html#a33632da8961d24106cb6cef23126e7b6", null ],
-    [ "BGM_MAX_VOLUME", "audio_8h.html#a811e494f94ef6806702e70d1f1db870e", null ],
-    [ "BGM_SAMPLE_RATE", "audio_8h.html#a074dc775152c71191ec7eb46e8d606b8", null ],
-    [ "BGM_SEGMENT_LABEL", "audio_8h.html#aa57dbb5ea34a143c55f24493649bd874", null ],
-    [ "FIXED_SAMPLE", "audio_8h.html#aced929518df1a2c05f0d0445920a5540", null ],
+    [ "BGM_DEFAULT_TICKS_PER_BEAT", "audio_8h.html#a224e855523615d2efa72cb08e463aff2", null ],
+    [ "BGM_DEFAULT_UPDATE_STEP", "audio_8h.html#aa0792127f47379667bcded3c3c6bb96d", null ],
+    [ "BGM_MAX_INSTRUMNETS", "audio_8h.html#ada66e2ccf230c99c4ff06804d1792268", null ],
+    [ "BGM_MFRAMES_PER_MINUTE", "audio_8h.html#a10caadc5c8155bccdc087ae549a389d7", null ],
+    [ "BGM_TEMPO_SCALE", "audio_8h.html#ab2c20a4d1ed9d2ac2099a50869c18e9e", null ],
+    [ "BGM_TEMPO_TO_UPDATE_UNITS", "audio_8h.html#a06d4d7bb405cb2a75b07c6bc4cd1da8a", null ],
+    [ "BGM_UPDATE_SCALE", "audio_8h.html#abd29f8fc44502e98f536b854e38fc04a", null ],
+    [ "DEFAULT_KEYBASE", "audio_8h.html#ab16f92c44cd5bd494cdc25174a378c1b", null ],
+    [ "ENV_VOL_MAX", "audio_8h.html#aab398950208cbe986cab17a1696d2287", null ],
+    [ "ENV_VOL_SHIFT", "audio_8h.html#a082dabefb59ff9603f0ab488754239b0", null ],
+    [ "HARDWARE_OUTPUT_RATE", "audio_8h.html#a9c01b2d25255e23f0c3ff4e05afa0d69", null ],
+    [ "INIT_BANK_BUFFER_SIZE", "audio_8h.html#aecae7bfc639d8b80112f8c9c87b91f3d", null ],
+    [ "MUS_QUEUE_SIZE", "audio_8h.html#a2652647a21c7430fdf678b8749b1c94e", null ],
     [ "N_AL_AUX_L_OUT", "audio_8h.html#ac120f8f177acb6605a5a902f3c1a8952", null ],
     [ "N_AL_AUX_R_OUT", "audio_8h.html#a266202e011dae8c9ef22dfd4991a24b1", null ],
     [ "N_AL_DECODER_IN", "audio_8h.html#acc95aa7715f5a2f586c1d903d844a676", null ],
@@ -904,23 +956,26 @@ var audio_8h =
     [ "N_AL_TEMP_1", "audio_8h.html#a7a36af9d64955f8c74610a3a3e10e828", null ],
     [ "N_AL_TEMP_2", "audio_8h.html#ae1ddf697a6e5bf2fd9693094b6f09fda", null ],
     [ "NO_INSTRUMENT", "audio_8h.html#a3d03d06ef887d7aa03ec3a831159f934", null ],
-    [ "SAMPLE184", "audio_8h.html#a0e7b887d2cee7b91b9ed3dcc9ac9f5a8", null ],
-    [ "SAMPLES", "audio_8h.html#ad0c329adebc27917fc0a4f51079acf6a", null ],
+    [ "PRG_MAX_COUNT", "audio_8h.html#aa6ea50fbf4aa93ab2e6a62367a63ffa4", null ],
+    [ "SFX_QUEUE_SIZE", "audio_8h.html#af5eff3f7d0c98470e1ee6a51ab2b3578", null ],
     [ "SND_MAX_DURATION", "audio_8h.html#ac4894cc28674bc4d3e44683eaefe1156", null ],
-    [ "SND_MAX_VOLUME_16", "audio_8h.html#aa788ca3d3701fd06cd26818ac2ab5ed9", null ],
-    [ "SND_MAX_VOLUME_8", "audio_8h.html#ae969206265aec940803c1b8361d1a8d9", null ],
     [ "SND_MIN_DURATION", "audio_8h.html#aa571aa945108e34a7c4eb5b87f1ca619", null ],
+    [ "VIDEO_FRAMES_PER_SECOND", "audio_8h.html#a7e799e7fab11b185e22dca2f04b2c4f8", null ],
+    [ "VOL_MULT_2", "audio_8h.html#a56968d71c85edeeb19f078bebbc270d0", null ],
+    [ "VOL_MULT_3", "audio_8h.html#a41d0712c5e791984ce6289f117f59706", null ],
+    [ "VOL_MULT_4", "audio_8h.html#a25399daf145551741557a5841d29da49", null ],
     [ "ALDMANew2", "audio_8h.html#aa6c9ee53e0a5a42ca792356f984308be", null ],
     [ "ALDMAproc2", "audio_8h.html#a7ab0c44d990fdb70f706c85e7dd07a50", null ],
-    [ "AuCallback", "audio_8h.html#a9b09f3cbdafa71e59e6656d52a1f3251", null ],
     [ "AuFilePos", "audio_8h.html#addfcfc5227786fb3cfa8d34a683c064b", null ],
-    [ "InstrumentGroup", "audio_8h.html#af39479c5db7cc4c64329f38d7ff3ccb7", null ],
+    [ "InstrumentBank", "audio_8h.html#abd52f1706f5c1086745670ac3e3af47b", null ],
+    [ "s16_16", "audio_8h.html#a26b94eea6236745694f6af07953267c7", null ],
+    [ "s8_24", "audio_8h.html#af2d5a39c5140f3ecdcdec3ae3e4c370b", null ],
     [ "SegData", "audio_8h.html#ad136c86b003e1af0ebfbe40ba6612cf9", null ],
-    [ "UNK_TYPE_08", "audio_8h.html#aa5e88f671017e2a9fe08cd550bf2ec4f", null ],
-    [ "UNK_TYPE_16", "audio_8h.html#a827ae2917ade512d376f9b5fb47377de", null ],
-    [ "UNK_TYPE_32", "audio_8h.html#a77132733dc833deff94fcedabbbce761", null ],
-    [ "UNK_TYPE_PTR", "audio_8h.html#af322b43fb2630f197190768f0bdd5abf", null ],
     [ "WaveData", "audio_8h.html#a792fbd05e36fc8da7f5c6a3bf988395f", null ],
+    [ "AudioType", "audio_8h.html#a5356e05a1ded2cb9e065e0203c4acbcf", [
+      [ "AUDIO_TYPE_BGM", "audio_8h.html#a5356e05a1ded2cb9e065e0203c4acbcfa24c6d54fbd0767024d7a315f0e10481b", null ],
+      [ "AUDIO_TYPE_SFX", "audio_8h.html#a5356e05a1ded2cb9e065e0203c4acbcfa3475e8da5cac26ef2b280bfb57832295", null ]
+    ] ],
     [ "AuEffectType", "audio_8h.html#a1d14b03b96e9c3fd91e2df6612686e62", [
       [ "AU_FX_NONE", "audio_8h.html#a1d14b03b96e9c3fd91e2df6612686e62aef65ef2566891460f89c092326578495", null ],
       [ "AU_FX_SMALLROOM", "audio_8h.html#a1d14b03b96e9c3fd91e2df6612686e62a99ab978e5325928e76db8a49b33d0139", null ],
@@ -942,7 +997,7 @@ var audio_8h =
       [ "AU_PRIORITY_MSEQ_MANAGER", "audio_8h.html#ad22684d424b99cd9ec4c57e0738b5590a70eb21f360be48a1c7437be01111148c", null ]
     ] ],
     [ "AuVoiceEnvelopeFlags", "audio_8h.html#ae34e06fb2d7ec70205da516191997459", [
-      [ "AU_VOICE_ENV_FLAG_STOP", "audio_8h.html#ae34e06fb2d7ec70205da516191997459a7d599a4cff1113955c249870a389d1a0", null ],
+      [ "AU_VOICE_ENV_FLAG_RELEASING", "audio_8h.html#ae34e06fb2d7ec70205da516191997459a292e760443c7640982f259d6623a17ce", null ],
       [ "AU_VOICE_ENV_FLAG_HANDLED_VOL_CHANGE", "audio_8h.html#ae34e06fb2d7ec70205da516191997459afb1dd6cae192dad6bcc971e395ad92bc", null ],
       [ "AU_VOICE_ENV_FLAG_KEY_RELEASED", "audio_8h.html#ae34e06fb2d7ec70205da516191997459a12ff2202897419b372d449d2996c971c", null ],
       [ "AU_VOICE_ENV_FLAG_VOL_CHANGED", "audio_8h.html#ae34e06fb2d7ec70205da516191997459ae0655c6684775635fe279389bdf14fdb", null ]
@@ -953,18 +1008,76 @@ var audio_8h =
       [ "AU_VOICE_SYNC_FLAG_PITCH", "audio_8h.html#a6fd840fc6be88468b29ac6baa7867486a36323bf19d9da246896ef2f213745ab9", null ],
       [ "AU_VOICE_SYNC_FLAG_PAN_FXMIX", "audio_8h.html#a6fd840fc6be88468b29ac6baa7867486a0ecf9782c45568a3a88d35fd16955c42", null ]
     ] ],
+    [ "BankSet", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05", [
+      [ "BANK_SET_AUX", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05a6a37d8a51f107d993a4ed6ac830a36e9", null ],
+      [ "BANK_SET_2", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05a09948dfc14b966a7b54714f4319ba081", null ],
+      [ "BANK_SET_MUSIC", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05ac23af669c5a2e4a80a0dfde85bfcc9a3", null ],
+      [ "BANK_SET_4", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05ae71661f154b17d7e3ae8c17fa1333036", null ],
+      [ "BANK_SET_5", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05ad6a36408023ad7ba4160f5fdaf1c6332", null ],
+      [ "BANK_SET_6", "audio_8h.html#a674b9f1d53951fe8d55f15fcacdf2e05acc5b792efa0fc89ec56d95c6c11bd4da", null ]
+    ] ],
+    [ "BankSetIndex", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883", [
+      [ "BANK_SET_IDX_0", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883a54e984e41e6ae5c88f0e99c8bb9b897e", null ],
+      [ "BANK_SET_IDX_1", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883a98aa0f2ee87c51b8a59c94ef42e3652d", null ],
+      [ "BANK_SET_IDX_2", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883aca1e7d15c1c6f11335a51a99d67d75b1", null ],
+      [ "BANK_SET_IDX_3", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883a914c0804eab58c0275bdde0fc8775c63", null ],
+      [ "BANK_SET_IDX_4", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883adcf1be0b8e79b7937193dc7502e65c9e", null ],
+      [ "BANK_SET_IDX_5", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883a190608dbab1d054e5cec00e80c45f3ce", null ],
+      [ "BANK_SET_IDX_6", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883a2a2d94e5dae6d50709135eaa80c2fc86", null ],
+      [ "BANK_SET_IDX_7", "audio_8h.html#a632d296ed2b1e8909d64552f6ec03883a45a34ff724c0ad14bd1fd9da38e69ff3", null ]
+    ] ],
+    [ "BGMCompositionCommands", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231f", [
+      [ "BGM_COMP_END", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fa197eebca8267f893141c3b3e6c932bbb", null ],
+      [ "BGM_COMP_PLAY_PHRASE", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fa03ec44dd6600c45d5c220642d98b5f26", null ],
+      [ "BGM_COMP_START_LOOP", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fa0898e46e3269daf65f8fec628cdf759a", null ],
+      [ "BGM_COMP_WAIT", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fac383a73784a97d464ff0a62455644527", null ],
+      [ "BGM_COMP_END_LOOP", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fac3e89d401c9ce9a55af33a08c5161b01", null ],
+      [ "BGM_COMP_END_COND_LOOP_FALSE", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fa550a7a5bd2eb1e683541137014cd65bc", null ],
+      [ "BGM_COMP_END_COND_LOOP_TRUE", "audio_8h.html#aafd7fbe68a634e1d220ee4244dd4231fa903db2028a52ebda22d4a003c8072558", null ]
+    ] ],
     [ "BGMPlayerState", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892af", [
       [ "BGM_PLAY_STATE_IDLE", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afa031c6eda59171ef5c86d1194583d8e30", null ],
-      [ "BGM_STATE_PLAY_SUBSEG", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afad658a46f2a85de3bf11965c4b75dd7b8", null ],
-      [ "BGM_PLAY_STATE_NEXT_SUBSEG", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afacdff5acb0b1ae87553bef9926474bc70", null ],
+      [ "BGM_PLAY_STATE_ACTIVE", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afae2d135ad3a672bfb88b27920ada3429a", null ],
+      [ "BGM_PLAY_STATE_FETCH", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afa314fceefeae5814a377348c4c46f9ae3", null ],
       [ "BGM_PLAY_STATE_INIT", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afae35df82713693a4dc6bd58b3d2cc4d6a", null ],
       [ "BGM_PLAY_STATE_STOP", "audio_8h.html#a7a7fe2ac8c7ce7fb5b265443eb8892afa326439b22c0e043957a0d5990ab37fc4", null ]
+    ] ],
+    [ "BGMPolyphony", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96", [
+      [ "BGM_POLYPHONY_0", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a7239928574f9ec09ea77054b32e41144", null ],
+      [ "BGM_POLYPHONY_1", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a39be2ac21fa812b4b4e040e82ea17673", null ],
+      [ "BGM_POLYPHONY_UNUSED_A", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a0009e2bcc28946b7bd8746e8c59ce22c", null ],
+      [ "BGM_POLYPHONY_UNUSED_B", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a8f91ddc320dba63c8e1bcc2cf5b8af76", null ],
+      [ "BGM_POLYPHONY_UNUSED_C", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a28e95c153d1d85c1be8beb516916ce98", null ],
+      [ "BGM_POLYPHONY_2", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a33570869ed50084a37afefccf326c437", null ],
+      [ "BGM_POLYPHONY_3", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96aa913d4928b787aba74432835632bbf1c", null ],
+      [ "BGM_POLYPHONY_4", "audio_8h.html#adaa2e1fd297c7b64c0771c7673e04c96a08cb9ef68588845965fa34271b124de8", null ]
+    ] ],
+    [ "BGMSnapshots", "audio_8h.html#aadf7e942358c4bfa6be410e614187f51", [
+      [ "BGM_SNAPSHOT_0", "audio_8h.html#aadf7e942358c4bfa6be410e614187f51aeaf5417b4b8d804c562efaa8adfdabd6", null ]
+    ] ],
+    [ "BGMSpecialSubops", "audio_8h.html#a63c31b3712d03ed46324af478f11adcf", [
+      [ "BGM_SPECIAL_SET_STEREO_DELAY", "audio_8h.html#a63c31b3712d03ed46324af478f11adcfad4a84d27a434b699822fdeb9de948000", null ],
+      [ "BGM_SPECIAL_SEEK_CUSTOM_ENV", "audio_8h.html#a63c31b3712d03ed46324af478f11adcfa1d413a7af99f2a03975bfa7de3101a31", null ],
+      [ "BGM_SPECIAL_WRITE_CUSTOM_ENV", "audio_8h.html#a63c31b3712d03ed46324af478f11adcfa36e55617f867277597fa86cda285ccff", null ],
+      [ "BGM_SPECIAL_USE_CUSTOM_ENV", "audio_8h.html#a63c31b3712d03ed46324af478f11adcfa2f95d38d5d09e25df3e938e1738f0310", null ],
+      [ "BGM_SPECIAL_TRIGGER_SOUND", "audio_8h.html#a63c31b3712d03ed46324af478f11adcfabb0e366e17452592670e42c7f0d7a70e", null ],
+      [ "BGM_SPECIAL_PROX_MIX_OVERRIDE", "audio_8h.html#a63c31b3712d03ed46324af478f11adcfa07052244df21eae412be4c0e5a72fd6f", null ]
+    ] ],
+    [ "DelayChannel", "audio_8h.html#a471dbedea5b53526c8b9579717d4a931", [
+      [ "AU_DELAY_CHANNEL_NONE", "audio_8h.html#a471dbedea5b53526c8b9579717d4a931ae989d2511e6638b94ef96f1dab15cc71", null ],
+      [ "AU_DELAY_CHANNEL_LEFT", "audio_8h.html#a471dbedea5b53526c8b9579717d4a931a3b747cc978ee6b6a5b9174c059c63fd4", null ],
+      [ "AU_DELAY_CHANNEL_RIGHT", "audio_8h.html#a471dbedea5b53526c8b9579717d4a931aaab265de7894629d58c9beea09833b79", null ]
+    ] ],
+    [ "DelayState", "audio_8h.html#ae1164641464714264017ac1c67694ed2", [
+      [ "AU_DELAY_STATE_ON", "audio_8h.html#ae1164641464714264017ac1c67694ed2a79a7d55736b64cd2c08a30987bc279a4", null ],
+      [ "AU_DELAY_STATE_OFF", "audio_8h.html#ae1164641464714264017ac1c67694ed2a526ae4bca8aabebe8e622b72e89a4fff", null ],
+      [ "AU_DELAY_STATE_REQUEST_OFF", "audio_8h.html#ae1164641464714264017ac1c67694ed2afbbcb7d7a9c65e70540c75de2193c880", null ]
     ] ],
     [ "EnvelopeCommand", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5", [
       [ "ENV_CMD_END_LOOP", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a9de54bbd3b4847cc0e91e373232eb4c9", null ],
       [ "ENV_CMD_START_LOOP", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a80073c8e22d043a21dee464430968fde", null ],
-      [ "ENV_CMD_ADD_MULTIPLIER", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a755d428eda29a486b2a64c1159ae5d78", null ],
-      [ "ENV_CMD_SET_MULTIPLIER", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a21a3c0390f2ec67b9a97b1bae9beaeee", null ],
+      [ "ENV_CMD_ADD_SCALE", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a106027448c4f200fbf6d5fc0fbe3f1df", null ],
+      [ "ENV_CMD_SET_SCALE", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a43b2c84804272a42b490b1e03595860d", null ],
       [ "ENV_CMD_END", "audio_8h.html#a27a51ac0c0d65000e7a5af045a814ce5a0606a8be37983de7d86ece5936672d32", null ]
     ] ],
     [ "EnvelopeTimeIntervals", "audio_8h.html#ae55745ca82386bafd879d95ac65cfcf3", [
@@ -1070,14 +1183,25 @@ var audio_8h =
       [ "FX_BUS_BGMB", "audio_8h.html#a8ccd4a4a9d8fe1150433f751b684d655aff009061ee847ce19aaa414468fa9854", null ],
       [ "FX_BUS_BGMA_AUX", "audio_8h.html#a8ccd4a4a9d8fe1150433f751b684d655a550716362634e53aec98378d4f136afe", null ]
     ] ],
-    [ "SegmentControlCommands", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5", [
-      [ "BGM_SEGMENT_END", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5a8ddabfae7f20edbf78c4ef4860e40d46", null ],
-      [ "BGM_SEGMENT_SUBSEG", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5a81de509d3b99fe0747ee37ecbbce74fd", null ],
-      [ "BGM_SEGMENT_START_LOOP", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5a1549fd238dfb9243162d624b484bcd74", null ],
-      [ "BGM_SEGMENT_WAIT", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5ae61736c0f68573e1e37ae97e053da29e", null ],
-      [ "BGM_SEGMENT_END_LOOP", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5a581ce8cde73afe9a0198aa8190431323", null ],
-      [ "BGM_SEGMENT_6", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5a52007253f73d50675c71734218ca4570", null ],
-      [ "BGM_SEGMENT_7", "audio_8h.html#a39be891e12ac7049ac882947bc574bb5ae1704cd5c4a5de9c68e703358d013a39", null ]
+    [ "MusicFlags", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594a", [
+      [ "MUSIC_FLAG_PLAYING", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594aa4eae3e42e273edee8cfba874b1ef5897", null ],
+      [ "MUSIC_FLAG_ENABLE_PROX_MIX", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594aae54611e4a130ce32883792650e9dcbbe", null ],
+      [ "MUSIC_FLAG_PUSHING", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594aa271382a9343a9db96d2e00b7a56b949f", null ],
+      [ "MUSIC_FLAG_POPPING", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594aa6ac8c61d11c27a1479b07b9e3ce56112", null ],
+      [ "MUSIC_FLAG_IGNORE_POP", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594aad31bb35188c13ef5656c4130eaa3db94", null ],
+      [ "MUSIC_FLAG_FADE_IN_NEXT", "audio_8h.html#aabf2ca9a530fcb28c472974c9237594aa76a258acd4662cb9f58221261a7ca4b9", null ]
+    ] ],
+    [ "MusicPlayer", "audio_8h.html#a5e03e77c7baa4e8ee7707e7c378ab54c", [
+      [ "MUSIC_PLAYER_MAIN", "audio_8h.html#a5e03e77c7baa4e8ee7707e7c378ab54ca0b3d2e6291152dc44ebe524d681dcd09", null ],
+      [ "MUSIC_PLAYER_AUX", "audio_8h.html#a5e03e77c7baa4e8ee7707e7c378ab54ca55f68e2a844c0d02fa159fccd34ca42f", null ]
+    ] ],
+    [ "MusicState", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9", [
+      [ "MUSIC_STATE_IDLE", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9a50a0b202d235f9d531cce07862e08ae0", null ],
+      [ "MUSIC_STATE_STOP_CURRENT", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9a617e562185a921d5d024dcf89ed38615", null ],
+      [ "MUSIC_STATE_AWAIT_FADEOUT", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9a73a1502c51cf54c0d9061c829f336435", null ],
+      [ "MUSIC_STATE_DELAY_2", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9a947795c4057dab8b30b61ddbdf134b34", null ],
+      [ "MUSIC_STATE_DELAY_1", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9af6e0e56f3051b43d0309edcdf87a81b7", null ],
+      [ "MUSIC_STATE_PLAY_NEXT", "audio_8h.html#a9cd2f7208097e5cdf04bb94d92a123a9a19cf44943cda20425a2efac42e686b47", null ]
     ] ],
     [ "SoundInstanceFlags", "audio_8h.html#ac02f0d8749ad2769092679a7674fc615", [
       [ "SOUND_INSTANCE_FLAG_ACTIVE", "audio_8h.html#ac02f0d8749ad2769092679a7674fc615a29ca52cc956beda875884de5ff4b9f8c", null ],
@@ -1091,8 +1215,8 @@ var audio_8h =
       [ "SND_PLAYER_STATE_CONTINUE", "audio_8h.html#ab8a44162e1f8984f5ac1a15b47437ac2a592193b243b7b9d5f83af5e57b363895", null ],
       [ "SND_PLAYER_STATE_INIT", "audio_8h.html#ab8a44162e1f8984f5ac1a15b47437ac2a1230f070e48420de9805e46ff22edf4d", null ]
     ] ],
+    [ "AmbienceRadioChannel", "audio_8h.html#a337a05f19000567d4622ccaa98d0cf90", null ],
     [ "AmbientSoundIDtoMSEQFileIndex", "audio_8h.html#a62051d01cf9e6998ccd8a09b1411dcfa", null ],
-    [ "AuAmbiencePlayOnlyIndex", "audio_8h.html#a42e5b46c6ae0d8b020e17919572bef34", null ],
     [ "AuEnvelopeIntervals", "audio_8h.html#a3abe86041aacd34e84254ae369c4a12a", null ],
     [ "AuGlobalVolume", "audio_8h.html#abab19372867e8e0ad8370ac4053e9d51", null ],
     [ "AuSynStereoDirty", "audio_8h.html#ae3713c2f96c4ecb7797327e7f1350441", null ],
@@ -1102,9 +1226,9 @@ var audio_8h =
     [ "CUSTOM_ECHO_PARAMS_2", "audio_8h.html#aad8ed6349417df3a6d7a74e91a15d949", null ],
     [ "CUSTOM_ECHO_PARAMS_3", "audio_8h.html#a75e52419868bb76c0cc9ee052ecc55b7", null ],
     [ "CUSTOM_SMALL_ROOM_PARAMS", "audio_8h.html#a24384f221725d2b62b2bfe340784393f", null ],
-    [ "DummyInstrumentBase", "audio_8h.html#a9cc3d6f395d8450642d7d7fbef856e98", null ],
+    [ "DummyInstrumentCodebook", "audio_8h.html#a59cd9ffe4dd467b74c8ece90fac3d04c", null ],
     [ "DummyInstrumentEnvelope", "audio_8h.html#a324e541778e92950fe07aa03ed787980", null ],
-    [ "DummyInstrumentPredictor", "audio_8h.html#a9a24869070c931662ec4240d58409d2d", null ],
+    [ "DummyInstrumentWavData", "audio_8h.html#ace61b6442f77fdbdc6e637b7c5c49c7a", null ],
     [ "gActiveSynDriverPtr", "audio_8h.html#a23de36dba3b0ced6785a69eca5a5640c", null ],
     [ "gAuAmbienceManager", "audio_8h.html#afa1d707f7b4958ac99b9365a5b0ad701", null ],
     [ "gBGMPlayerA", "audio_8h.html#a955c54fa9f8094f8bd5dd385318cd4dc", null ],

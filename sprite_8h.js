@@ -66,6 +66,9 @@ var sprite_8h =
     ] ],
     [ "SPR_PEACH_BTL_PAL_STRIDE", "sprite_8h.html#a77e8092dc5bc33f6ce642c1038213566", null ],
     [ "SPR_PLAYER_COLOR_VARIATIONS", "sprite_8h.html#a453115da1d37d2aa8aa0f3fd5369209d", null ],
+    [ "SPR_UNPACK_ANIM", "sprite_8h.html#a3c638aa61e5a417f27a826656d634984", null ],
+    [ "SPR_UNPACK_PAL", "sprite_8h.html#a32479246b660971257b444d4dfb3ba07", null ],
+    [ "SPR_UNPACK_SPR", "sprite_8h.html#abd199243ff531d6ae6acbcd9131bc18e", null ],
     [ "DrawSpriteOptions", "sprite_8h.html#aab8128784f13ad5a4cf727c922a7b8fd", [
       [ "DRAW_SPRITE_USE_PLAYER_RASTERS", "sprite_8h.html#aab8128784f13ad5a4cf727c922a7b8fdae403ab7a86147b6b0b613747501b23e1", null ],
       [ "DRAW_SPRITE_UPSIDE_DOWN", "sprite_8h.html#aab8128784f13ad5a4cf727c922a7b8fdac99384d9fdef9730c0c963b8af747598", null ],
@@ -81,6 +84,7 @@ var sprite_8h =
       [ "SPRITE_ID_TAIL_ALLOCATE", "sprite_8h.html#afd4bd5d59daee6ddefb2d17b8f83f801a6a16015391a0c5733632864cdc05d426", null ]
     ] ],
     [ "create_shading_palette", "sprite_8h.html#a60d7a201cbbaf734dcce31b19470329d", null ],
+    [ "func_801491E4", "sprite_8h.html#a46d8c7dd0061c7ad1fa32716743f1de2", null ],
     [ "func_802DDEC4", "sprite_8h.html#af5da5539d944403a17d5c8cebcf55908", null ],
     [ "get_npc_comp_imgfx_idx", "sprite_8h.html#a6df01a58c1be1fdcb666e89fd8dc4d7f", null ],
     [ "imgfx_init", "sprite_8h.html#aac2df68f42dd9135f0623001f190246f", null ],
@@ -88,11 +92,11 @@ var sprite_8h =
     [ "set_npc_imgfx_comp", "sprite_8h.html#a8d52823481ce04b3b82a9aec0f910cfd", null ],
     [ "set_player_imgfx_all", "sprite_8h.html#aa27111e18ada0873ae6263cea0470306", null ],
     [ "set_player_imgfx_comp", "sprite_8h.html#addcb6f3ba2f427a69e53b9d312c59236", null ],
-    [ "spr_draw_npc_sprite", "sprite_8h.html#a1d8052cadb0d5adccd82e3cb59c11fa7", null ],
+    [ "spr_draw_npc_sprite", "sprite_8h.html#ab7257a18dabf577d8f922a3e777f5481", null ],
     [ "spr_draw_player_sprite", "sprite_8h.html#a6980c442f6ae36c5b791c34c28f1f913", null ],
     [ "spr_free_sprite", "sprite_8h.html#a448abc4df3402205aeb386e37c028272", null ],
     [ "spr_get_comp_position", "sprite_8h.html#ac6ab632d531422c08e2cc6104fa04556", null ],
-    [ "spr_get_notify_value", "sprite_8h.html#a8aafbafc8d3986f413e25569668cc842", null ],
+    [ "spr_get_notify_value", "sprite_8h.html#a0f651c9f3fc1cd908b2960dfd510a65e", null ],
     [ "spr_get_npc_color_variations", "sprite_8h.html#a49a17cfbd1b91ae6bd5e42792878794b", null ],
     [ "spr_get_npc_palettes", "sprite_8h.html#ac21b8c62df2c621ee49887fbeb2ecb4b", null ],
     [ "spr_get_npc_raster_info", "sprite_8h.html#a81250e0c77c77bc0d992bb7f970f4e2c", null ],
@@ -105,14 +109,5 @@ var sprite_8h =
     [ "spr_render_init", "sprite_8h.html#a3adb390b2fdf1187c48dd9e30f822008", null ],
     [ "spr_update_player_raster_cache", "sprite_8h.html#a42183453b03d4d3fbed51eac799a24ef", null ],
     [ "spr_update_player_sprite", "sprite_8h.html#aa25a8e3c7c3d53ac99b8cb7e0266f43f", null ],
-    [ "spr_update_sprite", "sprite_8h.html#a40f925c183b7f8292d37acb6df194c06", null ],
-    [ "D_802DF3F0", "sprite_8h.html#a4c5c9d15e30875e50335cc8ed04082f8", null ],
-    [ "D_802DF428", "sprite_8h.html#a8b94b516c2553976c71908742052df75", null ],
-    [ "D_802DF460", "sprite_8h.html#af30f496c7b454a05ce90b5b4bd50434d", null ],
-    [ "D_802DF490", "sprite_8h.html#abf22af29f4ac77c3dd3b7e9700ffc150", null ],
-    [ "spr_animUpdateTimeScale", "sprite_8h.html#ad1b28edc6c9d4ed4e09cec62611f6dc7", null ],
-    [ "spr_defaultQuad", "sprite_8h.html#a9b967fab5118df49fcbb40a9ac225ed1", null ],
-    [ "spr_playerSpriteSets", "sprite_8h.html#a13410a9a59dbbd7c48043dd077581eaf", null ],
-    [ "SprPauseVp", "sprite_8h.html#a7ad2273013536c6a9292314f794d1a79", null ],
-    [ "SprPauseVpAlt", "sprite_8h.html#afe1259f4578729c005c38a8fd866f304", null ]
+    [ "spr_update_sprite", "sprite_8h.html#a40f925c183b7f8292d37acb6df194c06", null ]
 ];

@@ -12,5 +12,6 @@ var searchData=
   ['opcode_9',['OPCODE',['../mips_8h.html#ad53d337feac7203106555f2b6af076de',1,'mips.h']]],
   ['osaligned_10',['OSALIGNED',['../macros_8h.html#a4ce6d4a2dcd4fc50e128030c581ea028',1,'macros.h']]],
   ['output_5fparam_11',['OUTPUT_PARAM',['../reverb_8c.html#a71739774c2764266830b4958c3ca1496',1,'reverb.c']]],
-  ['override_5fmovement_5fspeed_12',['OVERRIDE_MOVEMENT_SPEED',['../npc_8h.html#a7cfcc617458312fb7daa9a0eca0efcc0',1,'npc.h']]]
+  ['overlay_5frender_5foff_12',['OVERLAY_RENDER_OFF',['../screen__overlays_8c.html#a15cd02089f7d8c3ecbe6526b69bf6929',1,'screen_overlays.c']]],
+  ['override_5fmovement_5fspeed_13',['OVERRIDE_MOVEMENT_SPEED',['../npc_8h.html#a7cfcc617458312fb7daa9a0eca0efcc0',1,'npc.h']]]
 ];

@@ -1,6 +1,6 @@
 var effects_8h_structShapeSpellFXData =
 [
-    [ "isChild", "effects_8h.html#aa9fde4701c73061f56053bc887c86a4e", null ],
+    [ "isChild", "effects_8h.html#a07ba125c3f5c0d67c7389875a9e1b954", null ],
     [ "pos", "effects_8h.html#a56d0da7b3f4aa069a408f2144c4835ff", null ],
     [ "timeLeft", "effects_8h.html#aca73736eb3aaade96515cd570a865c3a", null ],
     [ "unk_10", "effects_8h.html#a5ec69b30c9d1fd756a595a98415a1035", null ],

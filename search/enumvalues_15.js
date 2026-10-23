@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['watt_5fbrighter_0',['WATT_BRIGHTER',['../actor__rendering_8c.html#a5e8ce9967db697e85d5528dafee6b8dea4af2627dcceb7d985a222265dcc7fb06',1,'WATT_BRIGHTER:&#160;actor_rendering.c'],['../npc_8c.html#a441c033e3d3f086db9e3901c0d66bd3da4af2627dcceb7d985a222265dcc7fb06',1,'WATT_BRIGHTER:&#160;npc.c']]],
-  ['watt_5fbrightest_1',['WATT_BRIGHTEST',['../actor__rendering_8c.html#a5e8ce9967db697e85d5528dafee6b8deab83fdc1dc67be06c82f2a2daa3b01993',1,'WATT_BRIGHTEST:&#160;actor_rendering.c'],['../npc_8c.html#a441c033e3d3f086db9e3901c0d66bd3dab83fdc1dc67be06c82f2a2daa3b01993',1,'WATT_BRIGHTEST:&#160;npc.c']]],
-  ['watt_5fdefault_2',['WATT_DEFAULT',['../actor__rendering_8c.html#a5e8ce9967db697e85d5528dafee6b8dea4d3a6e52a6b8d992eb1de494e8b91b56',1,'WATT_DEFAULT:&#160;actor_rendering.c'],['../npc_8c.html#a441c033e3d3f086db9e3901c0d66bd3da4d3a6e52a6b8d992eb1de494e8b91b56',1,'WATT_DEFAULT:&#160;npc.c']]],
+  ['watt_5fbrighter_0',['WATT_BRIGHTER',['../actor__rendering_8c.html#aad1afd468cb4339144d0997ddcf04748a4af2627dcceb7d985a222265dcc7fb06',1,'WATT_BRIGHTER:&#160;actor_rendering.c'],['../npc_8c.html#a337d6b8d9f9cc2b4d207e433a70d3987a4af2627dcceb7d985a222265dcc7fb06',1,'WATT_BRIGHTER:&#160;npc.c']]],
+  ['watt_5fbrightest_1',['WATT_BRIGHTEST',['../actor__rendering_8c.html#aad1afd468cb4339144d0997ddcf04748ab83fdc1dc67be06c82f2a2daa3b01993',1,'WATT_BRIGHTEST:&#160;actor_rendering.c'],['../npc_8c.html#a337d6b8d9f9cc2b4d207e433a70d3987ab83fdc1dc67be06c82f2a2daa3b01993',1,'WATT_BRIGHTEST:&#160;npc.c']]],
+  ['watt_5fdefault_2',['WATT_DEFAULT',['../actor__rendering_8c.html#aad1afd468cb4339144d0997ddcf04748a4d3a6e52a6b8d992eb1de494e8b91b56',1,'WATT_DEFAULT:&#160;actor_rendering.c'],['../npc_8c.html#a337d6b8d9f9cc2b4d207e433a70d3987a4d3a6e52a6b8d992eb1de494e8b91b56',1,'WATT_DEFAULT:&#160;npc.c']]],
   ['win_5fbtl_5fdesc_5fbox_3',['WIN_BTL_DESC_BOX',['../enums_8h.html#afd488341f0bc83879003639774d73680ad639998014674513e35d8d57e796077d',1,'enums.h']]],
   ['win_5fbtl_5fmoves_5ficon_4',['WIN_BTL_MOVES_ICON',['../enums_8h.html#afd488341f0bc83879003639774d73680a025e1610cadddc6e7a22ab99f5e0d1d4',1,'enums.h']]],
   ['win_5fbtl_5fmoves_5fmenu_5',['WIN_BTL_MOVES_MENU',['../enums_8h.html#afd488341f0bc83879003639774d73680a1fb249e9e10af2fbc7446d3263c6e9fd',1,'enums.h']]],

@@ -1,11 +1,11 @@
 var audio_8h_structINITHeader =
 [
-    [ "entriesOffset", "audio_8h.html#afb863ce89da355972b4f286cb8edb85d", null ],
-    [ "entriesSize", "audio_8h.html#af8353610d981de131703bcb06d7271fd", null ],
+    [ "bankListOffset", "audio_8h.html#afbebf67a7e8c0d49622f9922de7a0de4", null ],
+    [ "bankListSize", "audio_8h.html#a65ddb0c64a37af7716e4b099bff959d4", null ],
     [ "mdata", "audio_8h.html#a37c66c89177567b75f394df537de5fdb", null ],
-    [ "shortsOffset", "audio_8h.html#a41a7bbc3c1271237ea9cddf93722d67e", null ],
-    [ "shortsSize", "audio_8h.html#a1224ac571543af1df52c3463909c8982", null ],
-    [ "tblOffset", "audio_8h.html#afe2b60ef80adf67800c0ca458363ca5b", null ],
-    [ "tblSize", "audio_8h.html#a76640d1d6fc406f3277219076d4b441d", null ],
-    [ "unk_14", "audio_8h.html#aaa5a94eb710bc0f73d6f77972a2064b3", null ]
+    [ "mseqListOffset", "audio_8h.html#a33142df1acc69a063139f80fb4fc3e65", null ],
+    [ "mseqListSize", "audio_8h.html#a577b361e69bdf27d0a719662bc26c8a7", null ],
+    [ "pad_14", "audio_8h.html#a626fa300cc00dc457c337fa007b52b63", null ],
+    [ "songListOffset", "audio_8h.html#ad3e275acd5e4a607815dea7b37e6afbc", null ],
+    [ "songListSize", "audio_8h.html#ac046209a9522fd71b5a680aca94c9151", null ]
 ];

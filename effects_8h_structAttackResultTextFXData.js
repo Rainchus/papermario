@@ -1,7 +1,7 @@
 var effects_8h_structAttackResultTextFXData =
 [
     [ "alpha", "effects_8h.html#a5a02b12ff5148ace3eefbda51002f8bb", null ],
-    [ "isVisible", "effects_8h.html#a9a234ed86165c355bd1423c782cb5035", null ],
+    [ "isVisible", "effects_8h.html#a33d7a5926a345e36ffff07e0aab3e93b", null ],
     [ "lifetime", "effects_8h.html#a710186cc164ef1493d6f513501832575", null ],
     [ "pos", "effects_8h.html#a3dca90d4aadeb020a5447c3f8f9d15fc", null ],
     [ "scale", "effects_8h.html#ab7881262e8cd868337d764c0e3cce1bc", null ],

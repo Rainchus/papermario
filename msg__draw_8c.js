@@ -38,7 +38,7 @@ var msg__draw_8c =
     [ "D_80159B50", "msg__draw_8c.html#a3f0c50008df7954f5559f2907d9dd933", null ],
     [ "D_8015C7E0", "msg__draw_8c.html#a317686afe9b59d4abc94fe6fb9c3b42c", null ],
     [ "D_802F4560", "msg__draw_8c.html#aa386eafb54f07a9f94a2d0ca0e20d259", null ],
-    [ "gMessageBoxFrameParts", "msg__draw_8c.html#a3bf2107671f3309d828a9597fe904085", null ],
+    [ "gMessageBoxFrameParts", "msg__draw_8c.html#a6b5ec2cdd2079cda39348b29e60b4ce2", null ],
     [ "gMsgArrowQuad1", "msg__draw_8c.html#a366fb92410ad47b0468d32db11d12abc", null ],
     [ "gMsgArrowQuad2", "msg__draw_8c.html#ab2c9182a88b6e40b264799fc88672668", null ],
     [ "gMsgBGScrollAmtX", "msg__draw_8c.html#afc451161f0d6058fcfa64d53e4f7a7e3", null ],
